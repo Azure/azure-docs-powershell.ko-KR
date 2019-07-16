@@ -74,7 +74,7 @@
       displayName: 'database, nosql, mongodb, couchdb'
 - name: 릴리스 정보
   items:
-    - name: Az 2.1.0 릴리스 정보
+    - name: 릴리스 정보
       href: release-notes-azureps.md
     - name: Az 2.0.0 주요 변경 내용
       href: migrate-az-2.0.0.md
