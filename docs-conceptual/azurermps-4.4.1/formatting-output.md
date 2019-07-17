@@ -7,29 +7,29 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
-ms.openlocfilehash: 0e94d30467c5a11bccfa71630f736bedf0d93112
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.openlocfilehash: 7f6cf61eef9c5549dfe78d2d801ab1278db40c17
+ms.sourcegitcommit: 0b644bfecf4224b2ea83520d1a6a956734d9fba4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65535047"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67863558"
 ---
-# <a name="formatting-query-results"></a><span data-ttu-id="1b406-103">쿼리 결과 서식 지정</span><span class="sxs-lookup"><span data-stu-id="1b406-103">Formatting query results</span></span>
+# <a name="formatting-query-results"></a><span data-ttu-id="49322-103">쿼리 결과 서식 지정</span><span class="sxs-lookup"><span data-stu-id="49322-103">Formatting query results</span></span>
 
 [!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
 
-<span data-ttu-id="1b406-104">기본적으로 각 PowerShell cmdlet은 미리 정의된 출력의 서식을 지정하여 쉽게 읽을 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="1b406-104">By default each PowerShell cmdlet has predefined formatting of output making it easy to read.</span></span>  <span data-ttu-id="1b406-105">또한 PowerShell은 출력을 조정하거나 cmdlet 출력을 다음 cmdlet을 가진 다른 형식으로 변환할 수 있는 유연성을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="1b406-105">PowerShell also provides the flexibility to adjust the output or convert the cmdlet output to a different format with the following cmdlets:</span></span>
+<span data-ttu-id="49322-104">기본적으로 각 PowerShell cmdlet은 미리 정의된 출력의 서식을 지정하여 쉽게 읽을 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="49322-104">By default each PowerShell cmdlet has predefined formatting of output making it easy to read.</span></span>  <span data-ttu-id="49322-105">또한 PowerShell은 출력을 조정하거나 cmdlet 출력을 다음 cmdlet을 가진 다른 형식으로 변환할 수 있는 유연성을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="49322-105">PowerShell also provides the flexibility to adjust the output or convert the cmdlet output to a different format with the following cmdlets:</span></span>
 
-| <span data-ttu-id="1b406-106">서식 지정</span><span class="sxs-lookup"><span data-stu-id="1b406-106">Formatting</span></span>      | <span data-ttu-id="1b406-107">변환</span><span class="sxs-lookup"><span data-stu-id="1b406-107">Conversion</span></span>       |
+| <span data-ttu-id="49322-106">서식 지정</span><span class="sxs-lookup"><span data-stu-id="49322-106">Formatting</span></span>      | <span data-ttu-id="49322-107">변환</span><span class="sxs-lookup"><span data-stu-id="49322-107">Conversion</span></span>       |
 |-----------------|------------------|
 | `Format-Custom` | `ConvertTo-Csv`  |
 | `Format-List`   | `ConvertTo-Html` |
 | `Format-Table`  | `ConvertTo-Json` |
 | `Format-Wide`   | `ConvertTo-Xml`  |
 
-## <a name="formatting-examples"></a><span data-ttu-id="1b406-108">서식 지정 예제</span><span class="sxs-lookup"><span data-stu-id="1b406-108">Formatting examples</span></span>
+## <a name="formatting-examples"></a><span data-ttu-id="49322-108">서식 지정 예제</span><span class="sxs-lookup"><span data-stu-id="49322-108">Formatting examples</span></span>
 
-<span data-ttu-id="1b406-109">이 예제에서는 기본 구독에 있는 Azure VM의 목록을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="1b406-109">In this example we get a list of Azure VMs in our default subscription.</span></span>  <span data-ttu-id="1b406-110">Get-AzureRmVM 명령은 출력을 기본적으로 테이블 형식으로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="1b406-110">The Get-AzureRmVM command defaults output into a table format.</span></span>
+<span data-ttu-id="49322-109">이 예제에서는 기본 구독에 있는 Azure VM의 목록을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="49322-109">In this example we get a list of Azure VMs in our default subscription.</span></span>  <span data-ttu-id="49322-110">Get-AzureRmVM 명령은 출력을 기본적으로 테이블 형식으로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="49322-110">The Get-AzureRmVM command defaults output into a table format.</span></span>
 
 ```powershell-interactive
 Get-AzureRmVM
@@ -42,7 +42,7 @@ MYWESTEURG        MyUnbuntu1610 westeurope Standard_DS1_v2   Linux myunbuntu1610
 MYWESTEURG          MyWin2016VM westeurope Standard_DS1_v2 Windows   mywin2016vm880         Succeeded
 ```
 
-<span data-ttu-id="1b406-111">반환되는 열을 제한하려는 경우 `Format-Table` cmdlet을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1b406-111">If you would like to limit the columns returned you can use the `Format-Table` cmdlet.</span></span> <span data-ttu-id="1b406-112">다음 예제에서는 가상 머신의 동일한 목록을 가져오지만 VM의 이름, 리소스 그룹 및 VM의 위치에 대한 출력을 제한합니다.</span><span class="sxs-lookup"><span data-stu-id="1b406-112">In the following example we get the same list of virtual machines but restrict the output to just the name of the VM, the resource group, and the location of the VM.</span></span>  <span data-ttu-id="1b406-113">`-Autosize` 매개 변수는 데이터의 크기에 따라 열 크기를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="1b406-113">The `-Autosize` parameter sizes the columns according to the size of the data.</span></span>
+<span data-ttu-id="49322-111">반환되는 열을 제한하려는 경우 `Format-Table` cmdlet을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="49322-111">If you would like to limit the columns returned you can use the `Format-Table` cmdlet.</span></span> <span data-ttu-id="49322-112">다음 예제에서는 가상 머신의 동일한 목록을 가져오지만 VM의 이름, 리소스 그룹 및 VM의 위치에 대한 출력을 제한합니다.</span><span class="sxs-lookup"><span data-stu-id="49322-112">In the following example we get the same list of virtual machines but restrict the output to just the name of the VM, the resource group, and the location of the VM.</span></span>  <span data-ttu-id="49322-113">`-Autosize` 매개 변수는 데이터의 크기에 따라 열 크기를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="49322-113">The `-Autosize` parameter sizes the columns according to the size of the data.</span></span>
 
 ```powershell-interactive
 Get-AzureRmVM | Format-Table Name,ResourceGroupName,Location -AutoSize
@@ -55,7 +55,7 @@ MyUnbuntu1610 MYWESTEURG        westeurope
 MyWin2016VM   MYWESTEURG        westeurope
 ```
 
-<span data-ttu-id="1b406-114">선호하는 목록 형식에서 정보를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1b406-114">If you would prefer you can view information in a list format.</span></span> <span data-ttu-id="1b406-115">다음 예제에서는 `Format-List` cmdlet을 사용하여 이를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1b406-115">The following example shows this using the`Format-List` cmdlet.</span></span>
+<span data-ttu-id="49322-114">선호하는 목록 형식에서 정보를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="49322-114">If you would prefer you can view information in a list format.</span></span> <span data-ttu-id="49322-115">다음 예제에서는 `Format-List` cmdlet을 사용하여 이를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="49322-115">The following example shows this using the`Format-List` cmdlet.</span></span>
 
 ```powershell-interactive
 Get-AzureRmVM | Format-List Name,VmId,Location,ResourceGroupName
@@ -73,9 +73,9 @@ Location          : westeurope
 ResourceGroupName : MYWESTEURG
 ```
 
-## <a name="converting-to-other-data-types"></a><span data-ttu-id="1b406-116">다른 데이터 형식으로 변환</span><span class="sxs-lookup"><span data-stu-id="1b406-116">Converting to other data types</span></span>
+## <a name="converting-to-other-data-types"></a><span data-ttu-id="49322-116">다른 데이터 형식으로 변환</span><span class="sxs-lookup"><span data-stu-id="49322-116">Converting to other data types</span></span>
 
-<span data-ttu-id="1b406-117">또한 PowerShell은 사용할 수 있는 여러 출력 형식을 제공하여 요구 사항을 충족합니다.</span><span class="sxs-lookup"><span data-stu-id="1b406-117">PowerShell also offers multiple output format you can use to meet your needs.</span></span>  <span data-ttu-id="1b406-118">다음 예제에서는 `Select-Object` cmdlet을 사용하여 구독에서 가상 머신의 특성을 사용하고 출력을 데이터베이스 또는 스프레드시트로 쉽게 가져오는 CSV 형식으로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="1b406-118">In the following example we use the `Select-Object` cmdlet to get attributes of the virtual machines in our subscription and and convert the output to CSV format for easy import into a database or spreadsheet.</span></span>
+<span data-ttu-id="49322-117">또한 PowerShell은 사용할 수 있는 여러 출력 형식을 제공하여 요구 사항을 충족합니다.</span><span class="sxs-lookup"><span data-stu-id="49322-117">PowerShell also offers multiple output format you can use to meet your needs.</span></span>  <span data-ttu-id="49322-118">다음 예제에서는 `Select-Object` cmdlet을 사용하여 구독에서 가상 머신의 특성을 가져오고, 출력을 CSV 형식으로 변환하여 데이터베이스 또는 스프레드시트로 쉽게 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="49322-118">In the following example we use the `Select-Object` cmdlet to get attributes of the virtual machines in our subscription and convert the output to CSV format for easy import into a database or spreadsheet.</span></span>
 
 ```powershell-interactive
 Get-AzureRmVM | Select-Object ResourceGroupName,Id,VmId,Name,Location,ProvisioningState | ConvertTo-Csv -NoTypeInformation
@@ -87,7 +87,7 @@ Get-AzureRmVM | Select-Object ResourceGroupName,Id,VmId,Name,Location,Provisioni
 "MYWESTUERG","/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MYWESTUERG/providers/Microsoft.Compute/virtualMachines/MyWin2016VM","4650c755-fc2b-4fc7-a5bc-298d5c00808f","MyWin2016VM","westeurope","Succeeded"
 ```
 
-<span data-ttu-id="1b406-119">출력을 JSON 형식으로 변환할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1b406-119">You can also convert the output into JSON format.</span></span>  <span data-ttu-id="1b406-120">다음 예제에서는 VM의 동일한 목록을 만들지만 출력 형식을 JSON으로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="1b406-120">The following example creates the same list of VMs but changes the output format to JSON.</span></span>
+<span data-ttu-id="49322-119">출력을 JSON 형식으로 변환할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="49322-119">You can also convert the output into JSON format.</span></span>  <span data-ttu-id="49322-120">다음 예제에서는 VM의 동일한 목록을 만들지만 출력 형식을 JSON으로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="49322-120">The following example creates the same list of VMs but changes the output format to JSON.</span></span>
 
 ```powershell-interactive
 Get-AzureRmVM | Select-Object ResourceGroupName,Id,VmId,Name,Location,ProvisioningState | ConvertTo-Json
