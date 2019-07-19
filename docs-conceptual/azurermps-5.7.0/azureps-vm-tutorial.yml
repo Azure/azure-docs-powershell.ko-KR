@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: <span data-ttu-id="1e355-101">Azure PowerShell로 가상 머신 만들기</span><span class="sxs-lookup"><span data-stu-id="1e355-101">Create virtual machines with the Azure PowerShell</span></span>
+title: <span data-ttu-id="abdd2-101">Azure PowerShell로 가상 머신 만들기</span><span class="sxs-lookup"><span data-stu-id="abdd2-101">Create virtual machines with the Azure PowerShell</span></span>
 metadata:
   title: Azure PowerShell로 가상 머신 만들기
   description: 가상 머신을 만들어서 Azure PowerShell을 시작합니다.
@@ -8,27 +8,27 @@ metadata:
   displayType: two-column
   interactive: azurepowershell
   ms.date: 02/08/2018
-  ms.author: sttramer
-  author: sptramer
+  ms.author: sewhee
+  author: sdwheeler
   manager: carmonm
   ms.devlang: azure-powershell
   ms.prod: powershell
   ms.technology: azure-powershell
-  ms.topic: tutorial
+  ms.service: virtual-machines
   clicktale: true
-  ms.openlocfilehash: 099418c1fe481ec6ab6262ebb164616612fb18c9
-  ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+  ms.openlocfilehash: 08fb135343979a7d1a9723223a2e673641c0090f
+  ms.sourcegitcommit: 0b644bfecf4224b2ea83520d1a6a956734d9fba4
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/11/2019
-  ms.locfileid: "65534569"
+  ms.lasthandoff: 07/13/2019
+  ms.locfileid: "67863685"
 items:
 - durationInMinutes: 1
-  content: "\n[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]\n\n<span data-ttu-id=\"1e355-104\">이 자습서에서는 Azure PowerShell에서 가상 머신을 설정하는 방법과 관련된 모든 단계를 알아봅니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-104\">In this tutorial, you learn all of the steps involved in setting up a virtual machine with Azure PowerShell.</span></span> <span data-ttu-id=\"1e355-105\">또한 이 자습서에는 출력 쿼리, Azure 리소스 재사용 및 리소스 정리가 포함됩니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-105\">The tutorial also covers output queries, Azure resource reuse, and resource cleanup.</span></span>\n\n<span data-ttu-id=\"1e355-106\">이 자습서는 Azure Cloud Shell을 통해 제공되는 대화형 환경을 사용해서 완료할 수 있으며, [Azure PowerShell을 로컬에서 설치](install-azurerm-ps.md)할 수도 있습니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-106\">This tutorial can be completed with the interactive experience offered through Azure Cloud Shell, or you may [install Azure PowerShell](install-azurerm-ps.md) locally.</span></span>\n\n<span data-ttu-id=\"1e355-107\">__Ctrl+Shift+V__(macOS의 경우 __Cmd+Shift+V__)를 사용하여 Azure Cloud Shell에 자습서 텍스트를 붙여넣습니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-107\">Use __ctrl-shift-v__ (__cmd-shift-v__ on macOS) to paste tutorial text into Azure Cloud Shell.</span></span>"
+  content: "\n[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]\n\n<span data-ttu-id=\"abdd2-104\">이 자습서에서는 Azure PowerShell에서 가상 머신을 설정하는 방법과 관련된 모든 단계를 알아봅니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-104\">In this tutorial, you learn all of the steps involved in setting up a virtual machine with Azure PowerShell.</span></span> <span data-ttu-id=\"abdd2-105\">또한 이 자습서에는 출력 쿼리, Azure 리소스 재사용 및 리소스 정리가 포함됩니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-105\">The tutorial also covers output queries, Azure resource reuse, and resource cleanup.</span></span>\n\n<span data-ttu-id=\"abdd2-106\">이 자습서는 Azure Cloud Shell을 통해 제공되는 대화형 환경을 사용해서 완료할 수 있으며, [Azure PowerShell을 로컬에서 설치](install-azurerm-ps.md)할 수도 있습니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-106\">This tutorial can be completed with the interactive experience offered through Azure Cloud Shell, or you may [install Azure PowerShell](install-azurerm-ps.md) locally.</span></span>\n\n<span data-ttu-id=\"abdd2-107\">__Ctrl+Shift+V__(macOS의 경우 __Cmd+Shift+V__)를 사용하여 Azure Cloud Shell에 자습서 텍스트를 붙여넣습니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-107\">Use __ctrl-shift-v__ (__cmd-shift-v__ on macOS) to paste tutorial text into Azure Cloud Shell.</span></span>"
 - durationInMinutes: 1
-  title: <span data-ttu-id="1e355-108">로그인</span><span class="sxs-lookup"><span data-stu-id="1e355-108">Sign in</span></span>
+  title: <span data-ttu-id="abdd2-108">로그인</span><span class="sxs-lookup"><span data-stu-id="abdd2-108">Sign in</span></span>
   content: >-
-    <span data-ttu-id="1e355-109">로컬 설치된 Azure PowerShell을 사용할 경우, 다른 단계를 수행하기 전에 로그인해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-109">If you're using a local install of the Azure PowerShell, you need to sign in before performing any other steps.</span></span>
+    <span data-ttu-id="abdd2-109">로컬 설치된 Azure PowerShell을 사용할 경우, 다른 단계를 수행하기 전에 로그인해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-109">If you're using a local install of the Azure PowerShell, you need to sign in before performing any other steps.</span></span>
 
 
     ```powershell-interactive
@@ -38,13 +38,13 @@ items:
     ```
 
 
-    <span data-ttu-id="1e355-110">터미널에 표시된 단계를 수행하여 로그인 프로세스를 완료하십시오.</span><span class="sxs-lookup"><span data-stu-id="1e355-110">Complete the sign in process by following the steps displayed in your terminal.</span></span>
+    <span data-ttu-id="abdd2-110">터미널에 표시된 단계를 수행하여 로그인 프로세스를 완료하십시오.</span><span class="sxs-lookup"><span data-stu-id="abdd2-110">Complete the sign in process by following the steps displayed in your terminal.</span></span>
 - durationInMinutes: 1
-  title: <span data-ttu-id="1e355-111">리소스 그룹 만들기</span><span class="sxs-lookup"><span data-stu-id="1e355-111">Create a resource group</span></span>
+  title: <span data-ttu-id="abdd2-111">리소스 그룹 만들기</span><span class="sxs-lookup"><span data-stu-id="abdd2-111">Create a resource group</span></span>
   content: >-
-    <span data-ttu-id="1e355-112">Azure에서 모든 리소스는 리소스 관리 그룹에 할당되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-112">In Azure, all resources are allocated in a resource management group.</span></span> <span data-ttu-id="1e355-113">리소스 그룹은 총체적으로 작업을 쉽게 수행할 수 있게 해주는 논리적인 리소스 그룹을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-113">Resource groups provide logical groupings of resources that make them easier to work with as a collection.</span></span>
+    <span data-ttu-id="abdd2-112">Azure에서 모든 리소스는 리소스 관리 그룹에 할당되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-112">In Azure, all resources are allocated in a resource management group.</span></span> <span data-ttu-id="abdd2-113">리소스 그룹은 총체적으로 작업을 쉽게 수행할 수 있게 해주는 논리적인 리소스 그룹을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-113">Resource groups provide logical groupings of resources that make them easier to work with as a collection.</span></span>
 
-    <span data-ttu-id="1e355-114">이 자습서에서 생성되는 모든 리소스는 이름이 `TutorialResources`인 단일 그룹에 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-114">For this tutorial, all of the created resources go into a single group named `TutorialResources`.</span></span>
+    <span data-ttu-id="abdd2-114">이 자습서에서 생성되는 모든 리소스는 이름이 `TutorialResources`인 단일 그룹에 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-114">For this tutorial, all of the created resources go into a single group named `TutorialResources`.</span></span>
 
 
     ```powershell-interactive
@@ -68,9 +68,9 @@ items:
 
     ```
 - durationInMinutes: 1
-  title: <span data-ttu-id="1e355-115">VM에 대한 관리자 자격 증명 만들기</span><span class="sxs-lookup"><span data-stu-id="1e355-115">Create admin credentials for the VM</span></span>
+  title: <span data-ttu-id="abdd2-115">VM에 대한 관리자 자격 증명 만들기</span><span class="sxs-lookup"><span data-stu-id="abdd2-115">Create admin credentials for the VM</span></span>
   content: >-
-    <span data-ttu-id="1e355-116">새 가상 머신을 만들기 전에 Windows VM의 관리자 계정에 대한 사용자 이름과 암호가 포함된 자격 증명 개체를 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-116">Before you can create a new virtual machine, you must create a credential object containing the username and password for the administrator account of the Windows VM.</span></span>
+    <span data-ttu-id="abdd2-116">새 가상 머신을 만들기 전에 Windows VM의 관리자 계정에 대한 사용자 이름과 암호가 포함된 자격 증명 개체를 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-116">Before you can create a new virtual machine, you must create a credential object containing the username and password for the administrator account of the Windows VM.</span></span>
 
 
     ```powershell-interactive
@@ -80,7 +80,7 @@ items:
     ```
 
 
-    <span data-ttu-id="1e355-117">메시지가 표시되면 사용자 이름 및 암호를 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-117">Enter the username and password when prompted.</span></span> <span data-ttu-id="1e355-118">결과로 생성된 자격 증명 개체는 다음 단계에서 매개 변수로 전달됩니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-118">The resulting credential object is passed as a parameter in the next step.</span></span>
+    <span data-ttu-id="abdd2-117">메시지가 표시되면 사용자 이름 및 암호를 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-117">Enter the username and password when prompted.</span></span> <span data-ttu-id="abdd2-118">결과로 생성된 자격 증명 개체는 다음 단계에서 매개 변수로 전달됩니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-118">The resulting credential object is passed as a parameter in the next step.</span></span>
 
 
     ```Output
@@ -95,12 +95,12 @@ items:
 
     ```
 - durationInMinutes: 4
-  title: <span data-ttu-id="1e355-119">가상 머신 만들기</span><span class="sxs-lookup"><span data-stu-id="1e355-119">Create a virtual machine</span></span>
+  title: <span data-ttu-id="abdd2-119">가상 머신 만들기</span><span class="sxs-lookup"><span data-stu-id="abdd2-119">Create a virtual machine</span></span>
   content: >-
-    <span data-ttu-id="1e355-120">Azure에서 가상 머신은 여러 종속성을 갖습니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-120">Virtual machines in Azure have a large number of dependencies.</span></span> <span data-ttu-id="1e355-121">Azure PowerShell은 사용자가 지정하는 명령줄 인수를 기준으로 이러한 리소스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-121">The Azure PowerShell creates these resources for you based on the command-line arguments you specify.</span></span> <span data-ttu-id="1e355-122">가독성을 위해 [PowerShell 스플랫](/powershell/module/microsoft.powershell.core/about/about_splatting)을 사용하여 Azure PowerShell cmdlet에 매개 변수를 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-122">For readability, we are using [PowerShell splatting](/powershell/module/microsoft.powershell.core/about/about_splatting) to pass parameters to the Azure PowerShell cmdlets.</span></span>
+    <span data-ttu-id="abdd2-120">Azure에서 가상 머신은 여러 종속성을 갖습니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-120">Virtual machines in Azure have a large number of dependencies.</span></span> <span data-ttu-id="abdd2-121">Azure PowerShell은 사용자가 지정하는 명령줄 인수를 기준으로 이러한 리소스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-121">The Azure PowerShell creates these resources for you based on the command-line arguments you specify.</span></span> <span data-ttu-id="abdd2-122">가독성을 위해 [PowerShell 스플랫](/powershell/module/microsoft.powershell.core/about/about_splatting)을 사용하여 Azure PowerShell cmdlet에 매개 변수를 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-122">For readability, we are using [PowerShell splatting](/powershell/module/microsoft.powershell.core/about/about_splatting) to pass parameters to the Azure PowerShell cmdlets.</span></span>
 
 
-    <span data-ttu-id="1e355-123">Windows를 실행하는 새 가상 머신을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-123">Create a new virtual machine running Windows.</span></span>
+    <span data-ttu-id="abdd2-123">Windows를 실행하는 새 가상 머신을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-123">Create a new virtual machine running Windows.</span></span>
 
 
     ```powershell-interactive
@@ -119,9 +119,9 @@ items:
 
     ```
 
-    <span data-ttu-id="1e355-124">VM이 생성될 때 사용된 매개 변수 값 및 생성된 Azure 리소스를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-124">As the VM is created, you see the parameter values used and Azure resources being created.</span></span>
+    <span data-ttu-id="abdd2-124">VM이 생성될 때 사용된 매개 변수 값 및 생성된 Azure 리소스를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-124">As the VM is created, you see the parameter values used and Azure resources being created.</span></span>
 
-    <span data-ttu-id="1e355-125">아래와 같이 PowerShell은 진행률 표시줄을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-125">PowerShell will displace a progress bar as shown below.</span></span>
+    <span data-ttu-id="abdd2-125">아래와 같이 PowerShell은 진행률 표시줄을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-125">PowerShell will displace a progress bar as shown below.</span></span>
 
 
     ```Output
@@ -133,7 +133,7 @@ items:
     ```
 
 
-    <span data-ttu-id="1e355-126">VM이 준비되면 Azure Portal에서 또는 \$newVM1 변수를 검사하여 결과를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-126">Once the VM is ready, we can view the results in the Azure Portal or by inspecting the \$newVM1 variable.</span></span>
+    <span data-ttu-id="abdd2-126">VM이 준비되면 Azure Portal에서 또는 \$newVM1 변수를 검사하여 결과를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-126">Once the VM is ready, we can view the results in the Azure Portal or by inspecting the \$newVM1 variable.</span></span>
 
 
     ```powershell-interactive
@@ -172,11 +172,11 @@ items:
     ```
 
 
-    <span data-ttu-id="1e355-127">중괄호 안에 나열된 속성 값은 중첩된 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-127">Property values listed inside of braces are nested objects.</span></span> <span data-ttu-id="1e355-128">다음 단계에서는 이러한 중첩된 개체에서 특정 값을 보는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-128">In the next step we will show you how to view specific values in these nested objects.</span></span>
+    <span data-ttu-id="abdd2-127">중괄호 안에 나열된 속성 값은 중첩된 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-127">Property values listed inside of braces are nested objects.</span></span> <span data-ttu-id="abdd2-128">다음 단계에서는 이러한 중첩된 개체에서 특정 값을 보는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-128">In the next step we will show you how to view specific values in these nested objects.</span></span>
 - durationInMinutes: 5
-  title: <span data-ttu-id="1e355-129">쿼리를 사용하여 가상 머신 정보 가져오기</span><span class="sxs-lookup"><span data-stu-id="1e355-129">Get VM information with queries</span></span>
+  title: <span data-ttu-id="abdd2-129">쿼리를 사용하여 가상 머신 정보 가져오기</span><span class="sxs-lookup"><span data-stu-id="abdd2-129">Get VM information with queries</span></span>
   content: >-
-    <span data-ttu-id="1e355-130">방금 만든 VM에서 몇 가지 자세한 정보를 가져오겠습니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-130">Let's get some more detailed information from the VM we just created.</span></span> <span data-ttu-id="1e355-131">이 예제에서는 만든 VM 및 관리자 계정 이름을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-131">In this example, we verify the Name of the VM and the admin account we created.</span></span>
+    <span data-ttu-id="abdd2-130">방금 만든 VM에서 몇 가지 자세한 정보를 가져오겠습니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-130">Let's get some more detailed information from the VM we just created.</span></span> <span data-ttu-id="abdd2-131">이 예제에서는 만든 VM 및 관리자 계정 이름을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-131">In this example, we verify the Name of the VM and the admin account we created.</span></span>
 
 
     ```powershell-interactive
@@ -197,7 +197,7 @@ items:
     ```
 
 
-    <span data-ttu-id="1e355-132">다른 Azure PowerShell 명령을 사용하여 네트워크 구성에 대한 특정 정보를 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-132">We can use other Azure PowerShell commands to get specific information about the network configuration.</span></span>
+    <span data-ttu-id="abdd2-132">다른 Azure PowerShell 명령을 사용하여 네트워크 구성에 대한 특정 정보를 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-132">We can use other Azure PowerShell commands to get specific information about the network configuration.</span></span>
 
 
     ```powershell-interactive
@@ -208,7 +208,7 @@ items:
     ```
 
 
-    <span data-ttu-id="1e355-133">이 예제에서는 PowerShell 파이프라인을 사용하여 \$newVM1 개체를 `Get-AzureRmNetworkInterface` cmdlet으로 전송합니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-133">In this example we are using the PowerShell pipeline to send the \$newVM1 object to the `Get-AzureRmNetworkInterface` cmdlet.</span></span> <span data-ttu-id="1e355-134">결과로 생성된 네트워크 인터페이스 개체에서 중첩된 IpConfigurations 개체를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-134">From the resulting network interface object we are selecting the nested IpConfigurations object.</span></span> <span data-ttu-id="1e355-135">IpConfigurations 개체에서 이름 및 PrivateIpAddress 속성을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-135">From the IpConfigurations object we are selecting the Name and PrivateIpAddress properties.</span></span>
+    <span data-ttu-id="abdd2-133">이 예제에서는 PowerShell 파이프라인을 사용하여 \$newVM1 개체를 `Get-AzureRmNetworkInterface` cmdlet으로 전송합니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-133">In this example we are using the PowerShell pipeline to send the \$newVM1 object to the `Get-AzureRmNetworkInterface` cmdlet.</span></span> <span data-ttu-id="abdd2-134">결과로 생성된 네트워크 인터페이스 개체에서 중첩된 IpConfigurations 개체를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-134">From the resulting network interface object we are selecting the nested IpConfigurations object.</span></span> <span data-ttu-id="abdd2-135">IpConfigurations 개체에서 이름 및 PrivateIpAddress 속성을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-135">From the IpConfigurations object we are selecting the Name and PrivateIpAddress properties.</span></span>
 
 
     ```Output
@@ -222,7 +222,7 @@ items:
     ```
 
 
-    <span data-ttu-id="1e355-136">VM이 실행되고 있는지 확인하려면 원격 데스크톱을 통해 연결해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-136">To confirm that the VM is running, we need to connect via Remote Desktop.</span></span> <span data-ttu-id="1e355-137">이를 위해 공용 IP 주소를 알고 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-137">For that, we need to know the Public IP address.</span></span>
+    <span data-ttu-id="abdd2-136">VM이 실행되고 있는지 확인하려면 원격 데스크톱을 통해 연결해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-136">To confirm that the VM is running, we need to connect via Remote Desktop.</span></span> <span data-ttu-id="abdd2-137">이를 위해 공용 IP 주소를 알고 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-137">For that, we need to know the Public IP address.</span></span>
 
 
     ```powershell-interactive
@@ -235,7 +235,7 @@ items:
     ```
 
 
-    <span data-ttu-id="1e355-138">이 예제에서는 `Get-AzureRmPublicIpAddress`를 사용하여 \$publicIp 변수에 결과를 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-138">In this example, we use the `Get-AzureRmPublicIpAddress` and store the results in the \$publicIp variable.</span></span> <span data-ttu-id="1e355-139">이 변수에서 속성을 선택하고 식을 사용하여 중첩된 Fqdn 속성을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-139">From this variable we are selecting properties and using an expression to retrieve the nested Fqdn property.</span></span>
+    <span data-ttu-id="abdd2-138">이 예제에서는 `Get-AzureRmPublicIpAddress`를 사용하여 \$publicIp 변수에 결과를 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-138">In this example, we use the `Get-AzureRmPublicIpAddress` and store the results in the \$publicIp variable.</span></span> <span data-ttu-id="abdd2-139">이 변수에서 속성을 선택하고 식을 사용하여 중첩된 Fqdn 속성을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-139">From this variable we are selecting properties and using an expression to retrieve the nested Fqdn property.</span></span>
 
 
     ```Output
@@ -249,7 +249,7 @@ items:
     ```
 
 
-    <span data-ttu-id="1e355-140">로컬 컴퓨터에서 원격 데스크톱을 통해 VM에 연결하려면 다음 명령을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-140">From your local machine you can run the following command to connect to the VM over Remote Desktop.</span></span>
+    <span data-ttu-id="abdd2-140">로컬 컴퓨터에서 원격 데스크톱을 통해 VM에 연결하려면 다음 명령을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-140">From your local machine you can run the following command to connect to the VM over Remote Desktop.</span></span>
 
 
     ```powershell-interactive
@@ -259,11 +259,11 @@ items:
     ```
 
 
-    <span data-ttu-id="1e355-141">개체 속성을 쿼리하는 방법에 대한 자세한 내용은 [Azure 리소스에 대한 쿼리](./queries-azureps.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1e355-141">For more information about querying for object properties, see [Querying for Azure resources](./queries-azureps.md).</span></span>
+    <span data-ttu-id="abdd2-141">개체 속성을 쿼리하는 방법에 대한 자세한 내용은 [Azure 리소스에 대한 쿼리](./queries-azureps.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="abdd2-141">For more information about querying for object properties, see [Querying for Azure resources](./queries-azureps.md).</span></span>
 - durationInMinutes: 4
-  title: <span data-ttu-id="1e355-142">기존 서브넷에 새 가상 머신 만들기</span><span class="sxs-lookup"><span data-stu-id="1e355-142">Creating a new VM on the existing subnet</span></span>
+  title: <span data-ttu-id="abdd2-142">기존 서브넷에 새 가상 머신 만들기</span><span class="sxs-lookup"><span data-stu-id="abdd2-142">Creating a new VM on the existing subnet</span></span>
   content: >-
-    <span data-ttu-id="1e355-143">두 번째 가상 머신은 기존 서브넷을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-143">The second VM uses the existing subnet.</span></span>
+    <span data-ttu-id="abdd2-143">두 번째 가상 머신은 기존 서브넷을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-143">The second VM uses the existing subnet.</span></span>
 
 
     ```powershell-interactive
@@ -318,7 +318,7 @@ items:
     ```
 
 
-    <span data-ttu-id="1e355-144">\$newVM2 개체의 FullyQualifiedDomainName 속성에 반환되기 때문에 새 VM의 공용 IP 주소를 가져오는 몇 가지 단계를 건너뛸 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-144">You can skip a few steps to get the public IP address of the new VM since it's returned in the FullyQualifiedDomainName property of the \$newVM2 object.</span></span> <span data-ttu-id="1e355-145">원격 데스크톱을 사용하여 연결하려면 다음 명령을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-145">Use the following command to connect using Remote Desktop.</span></span>
+    <span data-ttu-id="abdd2-144">\$newVM2 개체의 FullyQualifiedDomainName 속성에 반환되기 때문에 새 VM의 공용 IP 주소를 가져오는 몇 가지 단계를 건너뛸 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-144">You can skip a few steps to get the public IP address of the new VM since it's returned in the FullyQualifiedDomainName property of the \$newVM2 object.</span></span> <span data-ttu-id="abdd2-145">원격 데스크톱을 사용하여 연결하려면 다음 명령을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-145">Use the following command to connect using Remote Desktop.</span></span>
 
 
     ```powershell-interactive
@@ -327,9 +327,9 @@ items:
 
     ```
 - durationInMinutes: 4
-  title: <span data-ttu-id="1e355-146">정리</span><span class="sxs-lookup"><span data-stu-id="1e355-146">Cleanup</span></span>
+  title: <span data-ttu-id="abdd2-146">정리</span><span class="sxs-lookup"><span data-stu-id="abdd2-146">Cleanup</span></span>
   content: >-
-    <span data-ttu-id="1e355-147">이제 자습서가 완료되었으므로, 생성된 리소스를 정리해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-147">Now that the tutorial is complete, it's time to clean up the created resources.</span></span> <span data-ttu-id="1e355-148">`Remove-AzureRmResource` 명령을 사용하여 개별 리소스를 삭제할 수 있지만, 리소스 그룹에 있는 모든 리소스를 제거하는 가장 안전한 방법은 `Remove-AzureRmResourceGroup` 명령을 사용하여 그룹을 삭제하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-148">You can delete individual resources with the `Remove-AzureRmResource` command, but the safest way to remove all resources in a resource group is delete the group using the `Remove-AzureRmResourceGroup` command.</span></span>
+    <span data-ttu-id="abdd2-147">이제 자습서가 완료되었으므로, 생성된 리소스를 정리해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-147">Now that the tutorial is complete, it's time to clean up the created resources.</span></span> <span data-ttu-id="abdd2-148">`Remove-AzureRmResource` 명령을 사용하여 개별 리소스를 삭제할 수 있지만, 리소스 그룹에 있는 모든 리소스를 제거하는 가장 안전한 방법은 `Remove-AzureRmResourceGroup` 명령을 사용하여 그룹을 삭제하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-148">You can delete individual resources with the `Remove-AzureRmResource` command, but the safest way to remove all resources in a resource group is delete the group using the `Remove-AzureRmResourceGroup` command.</span></span>
 
 
     ```powershell-interactive
@@ -353,7 +353,7 @@ items:
     ```
 
 
-    <span data-ttu-id="1e355-149">이 명령은 자습서 진행 중 생성된 리소스를 삭제하며, 올바른 순서로 리소스 할당을 취소할 수 있도록 보장합니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-149">This command deletes the resources created during the tutorial, and is guaranteed to deallocate them in the correct order.</span></span> <span data-ttu-id="1e355-150">`-AsJob` 매개 변수는 삭제가 수행되는 동안 PowerShell이 차단되지 않도록 유지합니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-150">The `-AsJob` parameter keeps PowerShell from blocking while the deletion takes place.</span></span> <span data-ttu-id="1e355-151">삭제가 완료될 때까지 대기하려면 다음 명령을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-151">To wait until the deletion is complete, use the following command:</span></span>
+    <span data-ttu-id="abdd2-149">이 명령은 자습서 진행 중 생성된 리소스를 삭제하며, 올바른 순서로 리소스 할당을 취소할 수 있도록 보장합니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-149">This command deletes the resources created during the tutorial, and is guaranteed to deallocate them in the correct order.</span></span> <span data-ttu-id="abdd2-150">`-AsJob` 매개 변수는 삭제가 수행되는 동안 PowerShell이 차단되지 않도록 유지합니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-150">The `-AsJob` parameter keeps PowerShell from blocking while the deletion takes place.</span></span> <span data-ttu-id="abdd2-151">삭제가 완료될 때까지 대기하려면 다음 명령을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-151">To wait until the deletion is complete, use the following command:</span></span>
 
 
     ```powershell-interactive
@@ -363,7 +363,7 @@ items:
     ```
 
 
-    <span data-ttu-id="1e355-152">정리가 완료되면 자습서가 완료됩니다.</span><span class="sxs-lookup"><span data-stu-id="1e355-152">With cleanup completed, the tutorial is finished.</span></span> <span data-ttu-id="1e355-153">계속해서 학습한 모든 항목들에 대한 요약 내용을 살펴보고 다음 단계를 진행하는 데 도움이 되는 리소스 링크를 확인하십시오.</span><span class="sxs-lookup"><span data-stu-id="1e355-153">Continue on for a summary of everything you learned and links to resources that will help you with your next steps.</span></span>
+    <span data-ttu-id="abdd2-152">정리가 완료되면 자습서가 완료됩니다.</span><span class="sxs-lookup"><span data-stu-id="abdd2-152">With cleanup completed, the tutorial is finished.</span></span> <span data-ttu-id="abdd2-153">계속해서 학습한 모든 항목들에 대한 요약 내용을 살펴보고 다음 단계를 진행하는 데 도움이 되는 리소스 링크를 확인하십시오.</span><span class="sxs-lookup"><span data-stu-id="abdd2-153">Continue on for a summary of everything you learned and links to resources that will help you with your next steps.</span></span>
 - durationInMinutes: 1
-  title: <span data-ttu-id="1e355-154">요약</span><span class="sxs-lookup"><span data-stu-id="1e355-154">Summary</span></span>
-  content: "\n<span data-ttu-id=\"1e355-155\">축하합니다!</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-155\">Congratulations!</span></span> <span data-ttu-id=\"1e355-156\">새로운 또는 기존의 리소스, 사용된 식 및 Azure PowerShell 명령을 사용하여 VM을 만드는 방법을 알아보고, 셸 변수에 저장할 데이터를 캡처하고, Azure VM에 대해 생성되는 일부 리소스를 살펴보았습니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-156\">You learned how to create VMs with new or existing resources, used expressions and other Azure PowerShell commands to to capture data to be stored in shell variables, and looked at some of the resources that get created for Azure VMs.</span></span>\n\n<span data-ttu-id=\"1e355-157\">앞으로 진행할 내용은 Azure PowerShell을 사용하려는 방법에 따라 달라집니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-157\">Where you go from here depends on how you plan to use Azure PowerShell.</span></span> <span data-ttu-id=\"1e355-158\">이 자습서에 포함된 기능들에 대해서는 여러 자료를 통해 더 자세히 학습할 수 있습니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-158\">There are a variety of materials that go further in depth on the features covered in this tutorial.</span></span>\n\n### <a name=\"in-depth-azure-powershell-documentation\"></a><span data-ttu-id=\"1e355-159\">PowerShell 심층 설명서</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-159\">In-depth Azure PowerShell documentation</span></span>\n\n<span data-ttu-id=\"1e355-160\">전체 [Azure PowerShell 설명서](overview.md) 집합을 탐색하는 데 시간이 걸릴 수 있습니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-160\">You might want to take time to explore the complete [Azure PowerShell documentation](overview.md) set.</span></span>\n\n<span data-ttu-id=\"1e355-161\">이 자습서에서 사용한 명령에 대한 자세한 내용은 다음 아티클을 참조하세요.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-161\">For more information about the commands used in this tutorial, see the following articles.</span></span>\n\n- [<span data-ttu-id=\"1e355-162\">New-AzureRmResourceGroup</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-162\">New-AzureRmResourceGroup</span></span>](/powershell/module/azurerm.resources/new-azurermresourcegroup)\n- [<span data-ttu-id=\"1e355-163\">Get-Credential</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-163\">Get-Credential</span></span>](/powershell/module/microsoft.powershell.security/get-credential)\n- [<span data-ttu-id=\"1e355-164\">New-AzureRmVM</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-164\">New-AzureRmVM</span></span>](/powershell/module/azurerm.compute/new-azurermvm)\n- [<span data-ttu-id=\"1e355-165\">Select-Object</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-165\">Select-Object</span></span>](/powershell/module/microsoft.powershell.utility/select-object)\n- [<span data-ttu-id=\"1e355-166\">Get-AzureRmPublicIpAddress</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-166\">Get-AzureRmPublicIpAddress</span></span>](/powershell/module/azurerm.network/get-AzureRmPublicIpAddress)\n- [<span data-ttu-id=\"1e355-167\">Remove-AzureRmResourceGroup</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-167\">Remove-AzureRmResourceGroup</span></span>](/powershell/module/azurerm.resources/Remove-AzureRmResourceGroup)\n- [<span data-ttu-id=\"1e355-168\">Wait-Job</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-168\">Wait-Job</span></span>](/powershell/module/microsoft.powershell.core/wait-job)\n\n<span data-ttu-id=\"1e355-169\">또한 자습서에 표시된 기능에 대해 보다 자세한 아티클도 있습니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-169\">There are also articles that go deeper into the features that were shown in the tutorial.</span></span>\n\n- [<span data-ttu-id=\"1e355-170\">PowerShell 스플랫</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-170\">PowerShell splatting</span></span>](/powershell/module/microsoft.powershell.core/about/about_splatting)\n- [<span data-ttu-id=\"1e355-171\">쿼리</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-171\">Queries</span></span>](queries-azureps.md)\n- [<span data-ttu-id=\"1e355-172\">서식 지정</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-172\">Formatting</span></span>](formatting-output.md)\n- [<span data-ttu-id=\"1e355-173\">PowerShell 작업 사용</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-173\">Using PowerShell jobs</span></span>](using-psjobs.md)\n\n### <a name=\"sample-scripts\"></a><span data-ttu-id=\"1e355-174\">샘플 스크립트</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-174\">Sample scripts</span></span>\n\n<span data-ttu-id=\"1e355-175\">지금 바로 특정 작업을 시작하려면 해당 샘플 스크립트를 확인하십시오.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-175\">If you want to get started right away with specific tasks, look at some sample scripts.</span></span>\n\n- [<span data-ttu-id=\"1e355-176\">Linux Virtual Machines</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-176\">Linux Virtual Machines</span></span>](/azure/virtual-machines/linux/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [<span data-ttu-id=\"1e355-177\">Windows Virtual Machines</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-177\">Windows Virtual Machines</span></span>](/azure/virtual-machines/windows/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [<span data-ttu-id=\"1e355-178\">Web Apps</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-178\">Web Apps</span></span>](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [<span data-ttu-id=\"1e355-179\">SQL Databases</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-179\">SQL Databases</span></span>](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [<span data-ttu-id=\"1e355-180\">Cosmos DB</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-180\">Cosmos DB</span></span>](/azure/cosmos-db/powershell-samples?toc=%2fpowershell%2fmodules%2ftoc.json)\n\n### <a name=\"feedback\"></a><span data-ttu-id=\"1e355-181\">사용자 의견</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-181\">Feedback</span></span>\n\n<span data-ttu-id=\"1e355-182\">피드백, 제안 사항 또는 질문이 있는 경우 여러 방법을 통해 연락할 수 있습니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-182\">If you'd like to give feedback, suggestions, or ask questions, there are a number of ways for you to get in touch.</span></span>\n\n* <span data-ttu-id=\"1e355-183\">`Send-Feedback`은 팀에 자유 형식의 피드백을 제공할 수 있는 Azure PowerShell의 기본 제공 명령입니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-183\">`Send-Feedback` is a built-in command for Azure PowerShell that allows you to provide free-form feedback to the team.</span></span>\n* <span data-ttu-id=\"1e355-184\">[Azure PowerShell 리포지토리](https://github.com/Azure/azure-powershell/issues)에서 기능 요청 또는 버그 보고서를 작성합니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-184\">File a feature request or a bug report in the [Azure PowerShell repository](https://github.com/Azure/azure-powershell/issues).</span></span>\n* <span data-ttu-id=\"1e355-185\">질문 또는 설명이 필요한 경우에는 [Azure PowerShell 설명서 리포지토리](https://github.com/MicrosoftDocs/azure-docs-powershell/issues)에서 문제를 작성합니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-185\">Ask a question or get clarification by filing an issue in the [Azure PowerShell documentation repository](https://github.com/MicrosoftDocs/azure-docs-powershell/issues).</span></span>\n\n<span data-ttu-id=\"1e355-186\">Azure PowerShell을 마음껏 사용하세요!</span><span class=\"sxs-lookup\"><span data-stu-id=\"1e355-186\">We hope that you enjoy using the Azure PowerShell!</span></span>"
+  title: <span data-ttu-id="abdd2-154">요약</span><span class="sxs-lookup"><span data-stu-id="abdd2-154">Summary</span></span>
+  content: "\n<span data-ttu-id=\"abdd2-155\">축하합니다!</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-155\">Congratulations!</span></span> <span data-ttu-id=\"abdd2-156\">새로운 또는 기존의 리소스, 사용된 식 및 Azure PowerShell 명령을 사용하여 VM을 만드는 방법을 알아보고, 셸 변수에 저장할 데이터를 캡처하고, Azure VM에 대해 생성되는 일부 리소스를 살펴보았습니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-156\">You learned how to create VMs with new or existing resources, used expressions and other Azure PowerShell commands to capture data to be stored in shell variables, and looked at some of the resources that get created for Azure VMs.</span></span>\n\n<span data-ttu-id=\"abdd2-157\">앞으로 진행할 내용은 Azure PowerShell을 사용하려는 방법에 따라 달라집니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-157\">Where you go from here depends on how you plan to use Azure PowerShell.</span></span> <span data-ttu-id=\"abdd2-158\">이 자습서에 포함된 기능들에 대해서는 여러 자료를 통해 더 자세히 학습할 수 있습니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-158\">There are a variety of materials that go further in depth on the features covered in this tutorial.</span></span>\n\n### <a name=\"in-depth-azure-powershell-documentation\"></a><span data-ttu-id=\"abdd2-159\">PowerShell 심층 설명서</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-159\">In-depth Azure PowerShell documentation</span></span>\n\n<span data-ttu-id=\"abdd2-160\">전체 [Azure PowerShell 설명서](overview.md) 집합을 탐색하는 데 시간이 걸릴 수 있습니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-160\">You might want to take time to explore the complete [Azure PowerShell documentation](overview.md) set.</span></span>\n\n<span data-ttu-id=\"abdd2-161\">이 자습서에서 사용한 명령에 대한 자세한 내용은 다음 아티클을 참조하세요.</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-161\">For more information about the commands used in this tutorial, see the following articles.</span></span>\n\n- [<span data-ttu-id=\"abdd2-162\">New-AzureRmResourceGroup</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-162\">New-AzureRmResourceGroup</span></span>](/powershell/module/azurerm.resources/new-azurermresourcegroup)\n- [<span data-ttu-id=\"abdd2-163\">Get-Credential</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-163\">Get-Credential</span></span>](/powershell/module/microsoft.powershell.security/get-credential)\n- [<span data-ttu-id=\"abdd2-164\">New-AzureRmVM</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-164\">New-AzureRmVM</span></span>](/powershell/module/azurerm.compute/new-azurermvm)\n- [<span data-ttu-id=\"abdd2-165\">Select-Object</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-165\">Select-Object</span></span>](/powershell/module/microsoft.powershell.utility/select-object)\n- [<span data-ttu-id=\"abdd2-166\">Get-AzureRmPublicIpAddress</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-166\">Get-AzureRmPublicIpAddress</span></span>](/powershell/module/azurerm.network/get-AzureRmPublicIpAddress)\n- [<span data-ttu-id=\"abdd2-167\">Remove-AzureRmResourceGroup</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-167\">Remove-AzureRmResourceGroup</span></span>](/powershell/module/azurerm.resources/Remove-AzureRmResourceGroup)\n- [<span data-ttu-id=\"abdd2-168\">Wait-Job</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-168\">Wait-Job</span></span>](/powershell/module/microsoft.powershell.core/wait-job)\n\n<span data-ttu-id=\"abdd2-169\">또한 자습서에 표시된 기능에 대해 보다 자세한 아티클도 있습니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-169\">There are also articles that go deeper into the features that were shown in the tutorial.</span></span>\n\n- [<span data-ttu-id=\"abdd2-170\">PowerShell 스플랫</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-170\">PowerShell splatting</span></span>](/powershell/module/microsoft.powershell.core/about/about_splatting)\n- [<span data-ttu-id=\"abdd2-171\">쿼리</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-171\">Queries</span></span>](queries-azureps.md)\n- [<span data-ttu-id=\"abdd2-172\">서식 지정</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-172\">Formatting</span></span>](formatting-output.md)\n- [<span data-ttu-id=\"abdd2-173\">PowerShell 작업 사용</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-173\">Using PowerShell jobs</span></span>](using-psjobs.md)\n\n### <a name=\"sample-scripts\"></a><span data-ttu-id=\"abdd2-174\">샘플 스크립트</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-174\">Sample scripts</span></span>\n\n<span data-ttu-id=\"abdd2-175\">지금 바로 특정 작업을 시작하려면 해당 샘플 스크립트를 확인하십시오.</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-175\">If you want to get started right away with specific tasks, look at some sample scripts.</span></span>\n\n- [<span data-ttu-id=\"abdd2-176\">Linux Virtual Machines</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-176\">Linux Virtual Machines</span></span>](/azure/virtual-machines/linux/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [<span data-ttu-id=\"abdd2-177\">Windows Virtual Machines</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-177\">Windows Virtual Machines</span></span>](/azure/virtual-machines/windows/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [<span data-ttu-id=\"abdd2-178\">Web Apps</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-178\">Web Apps</span></span>](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [<span data-ttu-id=\"abdd2-179\">SQL Databases</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-179\">SQL Databases</span></span>](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [<span data-ttu-id=\"abdd2-180\">Cosmos DB</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-180\">Cosmos DB</span></span>](/azure/cosmos-db/powershell-samples?toc=%2fpowershell%2fmodules%2ftoc.json)\n\n### <a name=\"feedback\"></a><span data-ttu-id=\"abdd2-181\">사용자 의견</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-181\">Feedback</span></span>\n\n<span data-ttu-id=\"abdd2-182\">피드백, 제안 사항 또는 질문이 있는 경우 여러 방법을 통해 연락할 수 있습니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-182\">If you'd like to give feedback, suggestions, or ask questions, there are a number of ways for you to get in touch.</span></span>\n\n* <span data-ttu-id=\"abdd2-183\">`Send-Feedback`은 팀에 자유 형식의 피드백을 제공할 수 있는 Azure PowerShell의 기본 제공 명령입니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-183\">`Send-Feedback` is a built-in command for Azure PowerShell that allows you to provide free-form feedback to the team.</span></span>\n* <span data-ttu-id=\"abdd2-184\">[Azure PowerShell 리포지토리](https://github.com/Azure/azure-powershell/issues)에서 기능 요청 또는 버그 보고서를 작성합니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-184\">File a feature request or a bug report in the [Azure PowerShell repository](https://github.com/Azure/azure-powershell/issues).</span></span>\n* <span data-ttu-id=\"abdd2-185\">질문 또는 설명이 필요한 경우에는 [Azure PowerShell 설명서 리포지토리](https://github.com/MicrosoftDocs/azure-docs-powershell/issues)에서 문제를 작성합니다.</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-185\">Ask a question or get clarification by filing an issue in the [Azure PowerShell documentation repository](https://github.com/MicrosoftDocs/azure-docs-powershell/issues).</span></span>\n\n<span data-ttu-id=\"abdd2-186\">Azure PowerShell을 마음껏 사용하세요!</span><span class=\"sxs-lookup\"><span data-stu-id=\"abdd2-186\">We hope that you enjoy using the Azure PowerShell!</span></span>"
