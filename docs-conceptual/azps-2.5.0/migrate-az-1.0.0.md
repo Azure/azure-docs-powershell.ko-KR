@@ -121,7 +121,7 @@ Get-AzureRmStorageAccount | Get-AzureStorageContainer | Get-AzureStorageBlob
 | AzureRM.UsageAggregates | Az.Billing |
 | AzureRM.Consumption | Az.Billing |
 
-모듈 이름이 변경되면 `#Requires` 또는 `Import-Module`을 사용하여 특정 모듈을 로드하는 스크립트는 대신 새 모듈을 사용하도록 변경되어야 합니다. cmdlet 접미사가 변경되지 않은 모듈의 경우 이는 모듈 이름이 변경되었지만 작업 공간을 나타내는 접미사가 _변경되지 않았음_을 의미합니다.
+모듈 이름이 변경되면 `#Requires` 또는 `Import-Module`을 사용하여 특정 모듈을 로드하는 스크립트는 대신 새 모듈을 사용하도록 변경되어야 합니다. cmdlet 접미사가 변경되지 않은 모듈의 경우 이는 모듈 이름이 변경되었지만 작업 공간을 나타내는 접미사가 _변경되지 않았음_ 을 의미합니다.
 
 #### <a name="migrating-requires-and-import-module-statements"></a>#Requires 및 Import-Module 문 마이그레이션
 
