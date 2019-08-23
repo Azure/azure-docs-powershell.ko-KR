@@ -130,7 +130,7 @@ ms.locfileid: "68861185"
     - **Get-AzApiManagementSubscription**
         - 사용자 및 제품별 구독을 쿼리하기 위한 지원이 추가됨
         - 범위 '/', '/ api, '/ api/echo api'를 사용하여 쿼리하기 위한 지원이 추가됨
-* https://github.com/Azure/azure-powershell/issues/9307 및 https://github.com/Azure/azure-powershell/issues/8432 문제 수정
+* [https://github.com/Azure/azure-powershell/issues/9307](https://github.com/Azure/azure-powershell/issues/9307 ) 및 https://github.com/Azure/azure-powershell/issues/8432 문제 수정
     - **Import-AzApiManagementApi**
         - Apis를 가져올 때 'ApiVersion' 및 'ApiVersionSetId'를 지정하기 위한 지원이 추가됨
 
