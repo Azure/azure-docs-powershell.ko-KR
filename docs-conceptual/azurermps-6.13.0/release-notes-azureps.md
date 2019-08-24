@@ -220,7 +220,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 * 일부 백업 cmdlet이 현재 azure 구독을 인식하지 않는 문제 해결
 
 #### <a name="azurermstorage"></a>AzureRM.Storage
-* 특정 위치의 저장소 리소스 사용을 지원하고 글로벌 저장소 리소스 사용 가져오기는 더 이상 사용되지 않는다는 경고 메시지를 추가합니다.
+* 특정 위치의 스토리지 리소스 사용을 지원하고 글로벌 스토리지 리소스 사용 가져오기는 더 이상 사용되지 않는다는 경고 메시지를 추가합니다.
     - Get-AzureRmStorageUsage
 
 #### <a name="azurermwebsites"></a>AzureRM.Websites
@@ -232,12 +232,12 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 * AzureRM.SignalR이 AzureRM 롤업 모듈에 추가되었습니다.
 
 #### <a name="azurermprofile"></a>AzureRM.Profile
-* 저장소 일반 코드에 대한 약간의 변경
+* 스토리지 일반 코드에 대한 약간의 변경
 * 전체 매개 변수 형식을 포함하도록 도움말 파일이 업데이트되었습니다.
 * -ServicePrincipal을 필수가 아닌 것으로 ServicePrincipalCertificateWithSubscriptionId 매개변수 집합에서 변경 
 
 #### <a name="azurestorage"></a>Azure.Storage
-* OAuth를 사용하여 저장소 컨텍스트를 만드는 것을 지원합니다. 
+* OAuth를 사용하여 스토리지 컨텍스트를 만드는 것을 지원합니다. 
     - New-AzureStorageContext
 
 #### <a name="azurermcdn"></a>AzureRM.Cdn
@@ -390,7 +390,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 
 #### <a name="azurermcompute"></a>AzureRM.Compute
 * 오류 출력에 대상이 없는 문제를 해결했습니다.
-* 관리 디스크를 사용하는 VM에 대한 저장소 계정 유형 문제 해결
+* 관리 디스크를 사용하는 VM에 대한 스토리지 계정 유형 문제 해결
 * 기본 리소스 그룹이 설정되지 않는 문제를 해결했습니다.
 * 예를 들어 Azure 중국과 같이, 다른 환경에 대한 AEM 확장 cmdlet 수정
 
@@ -428,7 +428,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 
 #### <a name="azurermcompute"></a>AzureRM.Compute
 * 오류 출력에 대상이 없는 문제를 해결했습니다.
-* 관리 디스크를 사용하는 VM에 대한 저장소 계정 유형 문제 해결
+* 관리 디스크를 사용하는 VM에 대한 스토리지 계정 유형 문제 해결
 * 예를 들어 Azure 중국과 같이, 다른 환경에 대한 AEM 확장 cmdlet 수정
 
 #### <a name="azurermiothub"></a>AzureRM.IotHub
@@ -668,7 +668,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 * Common.Storage에 ps1xml 형식 추가
 
 #### <a name="azurestorage"></a>Azure.Storage
-* DefaultProfile에서 저장소 컨텍스트를 가져오기 위한 지원 추가
+* DefaultProfile에서 스토리지 컨텍스트를 가져오기 위한 지원 추가
 * Ps1XmlAttribute를 cmdlet 출력 형식 속성에 추가
 
 #### <a name="azurermapimanagement"></a>AzureRM.ApiManagement
@@ -680,7 +680,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
     - apiId에서 패턴 예외를 수정하는 4.0.3 Nuget 버전으로 업그레이드됨
 
 #### <a name="azurermcompute"></a>AzureRM.Compute
-* PremiumLRS 저장소 계정 형식 이름 바꾸기로 인해 New-AzureRmVm에서 DiskFileParameterSet를 사용하여 vm 생성 시 실패하는 문제를 해결합니다.
+* PremiumLRS 스토리지 계정 형식 이름 바꾸기로 인해 New-AzureRmVm에서 DiskFileParameterSet를 사용하여 vm 생성 시 실패하는 문제를 해결합니다.
 * Invoke-AzureRmVMRunCommand cmdlet 수정
 * Get-AzureRmAvailabilitySet를 업데이트하여 구독에서 모든 가용성 집합 리스트를 사용하도록 합니다.  (ResouceGroupName 매개 변수는 이제 선택적 요소입니다.)
 * vm 선별에 가속화된 네트워크를 사용하도록 'New-AzureRmVm'의 SimpleParameterSet를 업데이트합니다.

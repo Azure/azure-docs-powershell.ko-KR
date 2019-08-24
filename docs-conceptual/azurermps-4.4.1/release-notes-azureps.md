@@ -289,8 +289,8 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
       - Remove-AzureRmSqlDatabaseAuditing
       - Remove-AzureRmSqlServerAuditing
     * Update-AzureRmSqlSyncGroup을 위한 스키마 파일 구문 분석은 대/소문자를 구분하지 않습니다.
-* Storage
-    * 리소스 모드 저장소 계정 cmdlet에 NeworkRule 지원 추가
+* 스토리지
+    * 리소스 모드 스토리지 계정 cmdlet에 NeworkRule 지원 추가
       - New-AzureRmStorageAccount
       - Set-AzureRmStorageAccount
       - Get-AzureRmStorageAccountNetworkRuleSet
@@ -512,11 +512,11 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
         * 이제 사용자는 반환되는 roleassignments가 1000보다 큰 경우에도 Get-AzureRMRoleAssignment를 사용할 수 있습니다.
 * Sql
     * Restore-AzureRmSqlDatabase: 업데이트 설명서 예제
-* Storage
-    * AssignIdentity 설정 지원을 리소스 모드 저장소 계정 cmdlet에 추가합니다.
+* 스토리지
+    * AssignIdentity 설정 지원을 리소스 모드 스토리지 계정 cmdlet에 추가합니다.
         * New-AzureRmStorageAccount
         * Set-AzureRmStorageAccount
-    * 고객 키 지원을 리소스 모드 저장소 계정 cmdlet에 추가합니다.
+    * 고객 키 지원을 리소스 모드 스토리지 계정 cmdlet에 추가합니다.
         * Set-AzureRmStorageAccount
         * New-AzureRmStorageAccountEncryptionKeySource
 * TrafficManager
@@ -697,7 +697,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
   - 높은 유예 기간 값이 사용되는 정수 오버플로 버그 수정
   - 더 낮은 값이 제공될 경우 유예 기간을 최소값인 1시간으로 조정
   - Set-AzureRmSqlDatabaseThreatDetectionPolicy cmdlet 및 Set-AzureRmSqlServerThreatDetectionPolicy cmdlet의 "ExcludedDetectionType" 매개 변수에 대해 허용되는 값 중에서 "Usage_Anomaly" 제거
-* 저장소
+* 스토리지
   - SRP SDK를 6.3.0으로 업그레이드
   - New/Set-AzureRmStorageAccount: EnableHttpsTrafficOnly를 지원하기 위한 새 매개 변수 추가
   - New/Set/Get-AzureRmStorageAccount: 반환된 스토리지 계정에 새 특성인 EnableHttpsTrafficOnly가 포함되어 있음

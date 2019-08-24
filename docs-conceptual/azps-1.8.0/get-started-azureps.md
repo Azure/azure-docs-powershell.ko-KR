@@ -66,7 +66,7 @@ Get-Command -Verb Get -Noun AzVM* -Module Az.Compute
 |---------------|-------------------------|----------------|
 | [리소스 그룹](/azure/azure-resource-manager/resource-group-overview) | [Az.Resources](/powershell/module/az.resources#resources) | `AzResourceGroup` |
 | [가상 머신](/azure/virtual-machines) | [Az.Compute](/powershell/module/az.compute#virtual_machines) | `AzVM` |
-| [Storage 계정](/azure/storage/common/storage-introduction) | [Az.Storage](/powershell/module/az.storage/) | `AzStorageAccount` |
+| [스토리지 계정](/azure/storage/common/storage-introduction) | [Az.Storage](/powershell/module/az.storage/) | `AzStorageAccount` |
 | [Key Vault](/azure/key-vault/key-vault-whatis) | [Az.KeyVault](/powershell/module/az.keyvault) | `AzKeyVault` |
 | [웹 애플리케이션](/azure/app-service) | [Az.Websites](/powershell/module/az.websites) | `AzWebApp` |
 | [SQL 데이터베이스](/azure/sql-database) | [Az.Sql](/powershell/module/az.sql) | `AzSqlDatabase` |
@@ -82,7 +82,7 @@ Azure PowerShell을 시작하려면 가상 머신 설정 및 쿼리 방법에 �
 
 기타 인기 Azure 서비스에 대한 Azure PowerShell 빠른 시작도 있습니다.
 
-* [저장소 계정을 만드는](/azure/storage/common/storage-quickstart-create-account?tabs=azure-powershell)
+* [스토리지 계정을 만드는](/azure/storage/common/storage-quickstart-create-account?tabs=azure-powershell)
 * [Azure Blob Storage 간에 개체 전송](/azure/storage/blobs/storage-quickstart-blobs-powershell)
 * [Azure Key Vault에서 비밀을 만들고 검색](/azure/key-vault/quick-create-powershell)
 * [Azure SQL 데이터베이스 및 방화벽 만들기](/azure/sql-database/scripts/sql-database-create-and-configure-database-powershell)

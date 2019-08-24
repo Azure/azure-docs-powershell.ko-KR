@@ -47,7 +47,7 @@ ms.locfileid: "65534934"
 
 ### <a name="context-autosave-enabled-by-default"></a>기본적으로 사용되는 컨텍스트 자동 저장
 
-컨텍스트 자동 저장은 새 PowerShell 세션과 다른 PowerShell 세션 간에 사용할 수 있는 Azure 로그인 정보의 저장소입니다. 컨텍스트 자동 저장에 대한 자세한 내용은 [이 문서](https://docs.microsoft.com/powershell/azure/context-persistence)를 참조하세요.
+컨텍스트 자동 저장은 새 PowerShell 세션과 다른 PowerShell 세션 간에 사용할 수 있는 Azure 로그인 정보의 스토리지입니다. 컨텍스트 자동 저장에 대한 자세한 내용은 [이 문서](https://docs.microsoft.com/powershell/azure/context-persistence)를 참조하세요.
 
 이전에는 컨텍스트 자동 저장이 기본적으로 비활성화되었으므로 먼저 `Enable-AzureRmContextAutosave` cmdlet을 실행하여 컨텍스트 지속성을 설정해야 세션 간에 사용자의 Azure 인증 정보를 저장할 수 있었습니다. 앞으로 컨텍스트 자동 저장은 기본적으로 사용하도록 설정됩니다. 즉, _저장된 컨텍스트 자동 저장 설정이 없는_ 사용자는 다음에 로그인할 때 컨텍스트가 저장됩니다. 사용자는 `Disable-AzureRmContextAutosave` cmdlet을 사용하여 이 기능을 사용하지 않도록 선택할 수 있습니다.
 
@@ -109,7 +109,7 @@ $snapshot = Get-AzureRmSnapshot -ResourceGroupName "MyResourceGroup" -SnapshotNa
 $snapshot.Sku.Name   # This will now return Standard_LRS or Premium_LRS
 ```
 
-- `PSVirtualMachine`, `PSVirtualMachineScaleSet` 및 `PSImage` 형식에 중첩된 저장소 계정 유형 속성이 각각 `StandardLRS` 및 `PremiumLRS`에서 `Standard_LRS` 및 `Premium_LRS`로 변경되었습니다.
+- `PSVirtualMachine`, `PSVirtualMachineScaleSet` 및 `PSImage` 형식에 중첩된 스토리지 계정 유형 속성이 각각 `StandardLRS` 및 `PremiumLRS`에서 `Standard_LRS` 및 `Premium_LRS`로 변경되었습니다.
 
 ```powershell-interactive
 $vm = Get-AzureRmVM -ResourceGroupName "MyResourceGroup" -Name "MyVM"

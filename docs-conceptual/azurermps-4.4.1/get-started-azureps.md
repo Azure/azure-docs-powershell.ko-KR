@@ -28,11 +28,11 @@ Azure PowerShell은 명령줄에서 Azure 리소스를 관리하는 작업 및 A
 
    ![셸 아이콘](~/media/get-started-azureps/shell-icon.png)
 
-2. 사용하려는 구독을 선택하고 저장소 계정을 만듭니다.
+2. 사용하려는 구독을 선택하고 스토리지 계정을 만듭니다.
 
-   ![저장소 계정 만들기](~/media/get-started-azureps/storage-prompt.png)
+   ![스토리지 계정 만들기](~/media/get-started-azureps/storage-prompt.png)
 
-저장소를 만들면 Cloud Shell에서 PowerShell 세션을 브라우저에서 엽니다.
+스토리지를 만들면 Cloud Shell에서 PowerShell 세션을 브라우저에서 엽니다.
 
 ![PowerShell을 위한 Cloud Shell](~/media/get-started-azureps/cloud-powershell.png)
 
