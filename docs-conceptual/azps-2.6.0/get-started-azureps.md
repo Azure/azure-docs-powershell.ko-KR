@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 01/14/2019
-ms.openlocfilehash: c60036ba8be6282007aa34a0bb9c0d9e33197072
-ms.sourcegitcommit: abca342d8687ca638679c049792d0cef6045837d
+ms.openlocfilehash: a4c8792f2ff27e1b6d3cee97144c26455356b7fd
+ms.sourcegitcommit: e5b029312d17e12257b2b5351b808fdab0b4634c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70052926"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70386736"
 ---
 # <a name="get-started-with-azure-powershell"></a>Azure PowerShell 시작
 
@@ -43,7 +43,8 @@ Connect-AzAccount
 Connect-AzAccount -Environment AzureChinaCloud
 ```
 
-사용 하는 토큰을 얻게 https://microsoft.com/devicelogin 합니다. 브라우저에서 이 페이지를 열고 토큰을 입력하여 Azure 계정 자격 증명으로 로그인하고 Azure PowerShell을 승인하세요. 
+PowerShell 5.1 환경에서는 Azure 계정의 사용자 이름 및 암호를 제공하는 로그인 대화 상자가 표시됩니다. 다른 모든 버전의 PowerShell에서는 [https://microsoft.com/devicelogin ]에서 사용할 토큰이 제공됩니다.
+브라우저에서 이 페이지를 열고 토큰을 입력하여 Azure 계정 자격 증명으로 로그인하고 Azure PowerShell을 승인하세요.
 
 로그인하면 어떤 Azure 구독이 활성화되어 있는지 나타내는 정보가 나타납니다. 계정에 Azure 구독이 여러 개 있고 다른 항목을 선택하려면 [Get-AzSubscription](/powershell/module/az.accounts/get-azsubscription)을 사용하여 사용 가능한 구독을 가져오고 [Set-AzContext](/powershell/module/az.accounts/set-azcontext) cmdlet을 구독 ID와 함께 사용하세요.
 Azure PowerShell에서 Azure 구독을 관리하는 방법에 대한 자세한 내용은 [여러 Azure 구독 사용](manage-subscriptions-azureps.md)을 참조하세요.

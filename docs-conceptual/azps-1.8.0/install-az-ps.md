@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 12/13/2018
-ms.openlocfilehash: 21345445efc89ab54bb7483cfe81f439f0a887a3
-ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
+ms.openlocfilehash: e302e49d95b6bc15750366c9eb960a6fec80c1a4
+ms.sourcegitcommit: e5b029312d17e12257b2b5351b808fdab0b4634c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68861313"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70386799"
 ---
 # <a name="install-the-azure-powershell-module"></a>Azure PowerShell 모듈 설치
 
@@ -101,13 +101,14 @@ Connect-AzAccount
 
 > [!NOTE]
 >
-> 모듈 자동 로딩을 비활성화한 경우 `Import-Module Az`을 사용하여 모듈을 수동으로 가져와야 합니다. 모듈 구조화 방식으로 인해 몇 초 정도 걸릴 수 있습니다.
+> 모듈 자동 로딩을 비활성화한 경우 `Import-Module Az`을 사용하여 모듈을 수동으로 가져옵니다. 모듈 구조화 방식으로 인해 몇 초 정도 걸릴 수 있습니다.
 
 모든 새 PowerShell 세션에 대해 이러한 단계를 반복해야 합니다. PowerShell 세션 간에 Azure 로그인을 유지하는 방법을 보려면 [PowerShell 세션간에 사용자 자격 증명 유지](context-persistence.md)를 참조하세요.
 
 ## <a name="update-the-azure-powershell-module"></a>Azure PowerShell 모듈 업데이트
 
-Az 모듈의 패키지 방식으로 인해 [Update-Module](/powershell/module/powershellget/update-module) 명령에서 설치를 올바르게 업데이트하지 않습니다. Az는 기술적으로 Azure 서비스와 상호 작용하는 cmdlet이 포함된 모든 하위 모듈을 포함한 메타 모듈입니다. 즉, Azure PowerShell 모듈을 업데이트하려면 __업데이트__하는 대신 __다시 설치__해야 합니다. 이 작업은 설치와 동일한 방식으로 수행되지만 `-Force` 인수를 추가해야 할 수도 있습니다.
+Az 모듈의 패키지 방식으로 인해 [Update-Module](/powershell/module/powershellget/update-module) 명령에서 설치를 올바르게 업데이트하지 않습니다. Az 모듈을 설치하면 실제로 모든 종속 하위 모듈을 수집하고 설치하며, 각 서비스에 대한 cmdlet을 제공합니다.
+즉, Azure PowerShell 모듈을 업데이트하려면 __업데이트__ 하는 대신 __다시 설치__ 해야 합니다. 이 작업은 설치와 동일한 방식으로 수행되지만 `-Force` 인수를 추가해야 할 수도 있습니다.
 
 ```powershell
 Install-Module -Name Az -AllowClobber -Force

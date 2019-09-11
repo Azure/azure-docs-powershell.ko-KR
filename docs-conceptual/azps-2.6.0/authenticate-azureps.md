@@ -6,13 +6,13 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 02/20/2019
-ms.openlocfilehash: 0b7a6fa4278d95a69b21f570ac6fb22b70f073f6
-ms.sourcegitcommit: abca342d8687ca638679c049792d0cef6045837d
+ms.date: 09/04/2019
+ms.openlocfilehash: 44f5d5b44788a52db297a0d73697161eec2eedc2
+ms.sourcegitcommit: e5b029312d17e12257b2b5351b808fdab0b4634c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70052484"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70386754"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Azure PowerShell로 로그인
 
@@ -54,7 +54,7 @@ Azure PowerShell에 사용할 서비스 주체를 생성하는 방법을 보려�
 
 ```azurepowershell-interactive
 $pscredential = Get-Credential
-Connect-AzAccount -ServicePrincipal -Credential $pscredential -TenantId $tenantId
+Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
 ```
 
 자동화 시나리오의 경우 사용자 이름 및 보안 문자열에서 자격 증명을 만들어야 합니다.
@@ -62,7 +62,7 @@ Connect-AzAccount -ServicePrincipal -Credential $pscredential -TenantId $tenantI
 ```azurepowershell-interactive
 $passwd = ConvertTo-SecureString <use a secure password here> -AsPlainText -Force
 $pscredential = New-Object System.Management.Automation.PSCredential('service principal name/id', $passwd)
-Connect-AzAccount -ServicePrincipal -Credential $pscredential -TenantId $tenantId
+Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
 ```
 
 서비스 주체 연결을 자동화할 때 좋은 암호 스토리지 방법을 사용해야 합니다.
@@ -70,8 +70,15 @@ Connect-AzAccount -ServicePrincipal -Credential $pscredential -TenantId $tenantI
 ### <a name="certificate-based-authentication"></a>인증서 기반 인증
 
 인증서 기반 인증을 사용하려면 Azure PowerShell이 인증서 지문을 기반으로 로컬 인증서 저장소에서 정보를 검색할 수 있어야 합니다.
+
 ```azurepowershell-interactive
-Connect-AzAccount -ServicePrincipal -TenantId $tenantId -CertificateThumbprint <thumbprint>
+Connect-AzAccount -ApplicationId $appId -Tenant $tenantId -CertificateThumbprint <thumbprint>
+```
+
+등록된 애플리케이션 대신 서비스 주체를 사용하는 경우 `-ServicePrincipal` 인수를 추가하고 서비스 주체의 ID를 `-ApplicationId` 매개 변수 값으로 제공합니다.
+
+```azurepowershell-interactive
+Connect-AzAccount -ServicePrincipal -ApplicationId $servicePrincipalId -Tenant $tenantId -CertificateThumbprint <thumbprint>
 ```
 
 PowerShell 5.1에서 인증서 저장소는 [PKI](/powershell/module/pkiclient) 모듈을 사용하여 관리하고 검사할 수 있습니다. PowerShell Core 6.x 이상에서는 프로세스가 더 복잡합니다. 다음 스크립트는 기존 인증서를 PowerShell에서 액세스할 수 있는 인증서 저장소로 가져오는 방법을 보여줍니다.
@@ -100,7 +107,7 @@ $store.Add($Certificate)
 $store.Close()
 ```
 
-## <a name="sign-in-using-a-managed-identity"></a>관리 ID를 사용하여 로그인 
+## <a name="sign-in-using-a-managed-identity"></a>관리 ID를 사용하여 로그인
 
 관리 ID는 Azure Active Directory의 기능입니다. 관리 ID는 Azure에서 실행되는 리소스에 할당된 서비스 주체입니다. 로그인에 관리 ID 서비스 주체를 사용할 수 있으며, 다른 리소스에 액세스하려면 앱 전용 액세스 토큰이 필요합니다. 관리 ID는 Azure 클라우드에서 실행되는 리소스에서만 사용할 수 있습니다.
 
@@ -108,19 +115,19 @@ Azure 리소스의 관리 ID에 대한 자세한 내용은 [Azure VM에서 Azure
 
 ## <a name="sign-in-with-a-non-default-tenant-or-as-a-cloud-solution-provider-csp"></a>기본이 아닌 테넌트를 사용하여 로그인하거나 클라우드 솔루션 공급자(CSP)로 로그인
 
-계정이 둘 이상의 테넌트와 연결되어 있는 경우 로그인은 연결 시 `-TenantId` 매개 변수를 사용해야 합니다. 이 매개 변수는 다른 로그인 메서드를 사용하여 작동 합니다. 로그인할 때 이 매개 변수 값은 테넌트의 Azure 개체 ID(테넌트 ID) 또는 테넌트의 정규화된 도메인 이름이 될 수 있습니다.
+계정이 둘 이상의 테넌트와 연결되어 있는 경우 로그인은 연결 시 `-Tenant` 매개 변수를 사용해야 합니다. 이 매개 변수는 모든 로그인 메서드에서 작동합니다. 로그인할 때 이 매개 변수 값은 테넌트의 Azure 개체 ID(테넌트 ID) 또는 테넌트의 정규화된 도메인 이름이 될 수 있습니다.
 
-[클라우드 솔루션 공급자(CSP)](https://azure.microsoft.com/offers/ms-azr-0145p/)의 경우 `-TenantId` 값은 **반드시** 테넌트 ID여야 합니다.
+[클라우드 솔루션 공급자(CSP)](https://azure.microsoft.com/offers/ms-azr-0145p/)의 경우 `-Tenant` 값은 **반드시** 테넌트 ID여야 합니다.
 
 ```azurepowershell-interactive
-Connect-AzAccount -TenantId 'xxxx-xxxx-xxxx-xxxx'
+Connect-AzAccount -Tenant 'xxxx-xxxx-xxxx-xxxx'
 ```
 
 ## <a name="sign-in-to-another-cloud"></a>다른 클라우드로 로그인
 
 Azure 클라우드 서비스는 지역 데이터 처리법을 준수하는 환경을 제공합니다.
 지역별 클라우드의 계정에 대해 로그인할 때 `-Environment` 인수를 사용해서 환경을 설정합니다.
-예를 들어 계정이 중국 클라우드에 있는 경우:
+이 매개 변수는 모든 로그인 메서드에서 작동합니다. 예를 들어 계정이 중국 클라우드에 있는 경우:
 
 ```azurepowershell-interactive
 Connect-AzAccount -Environment AzureChinaCloud
