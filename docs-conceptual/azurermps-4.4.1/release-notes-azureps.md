@@ -251,7 +251,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
       - New-AzureRmApplicationGatewayBackendHttpSettings
       - Set-AzureRmApplicationGatewayBackendHttpSettings
 * 프로필
-    * 기본적으로 데이터 컬렉션은 사용하도록 설정되었습니다. 사용자 환경을 개선하기 위해 Microsoft에서 사용 현황 데이터를 수집합니다. 데이터는 익명이며 명령줄 인수 값을 포함하지 않습니다.
+    * 기본적으로 데이터 컬렉션은 사용하도록 설정되었습니다. 사용자 환경을 개선하기 위해 Microsoft에서 사용량 현황 데이터를 수집합니다. 데이터는 익명이며 명령줄 인수 값을 포함하지 않습니다.
       - Disable-AzureRmDataCollection cmdlet을 사용하여 기능 해제
       - Enable-AzureRmDataCollection cmdlet을 사용하여 이 기능 설정
 * 리소스
