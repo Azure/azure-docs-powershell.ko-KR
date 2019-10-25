@@ -4,7 +4,11 @@
   href: new-azureps-module-az.md
   displayName: 'intro, introduction, azurerm'
 - name: 설치
-  href: install-az-ps.md
+  items:
+    - name: PowerShell Get을 사용하여 설치
+      href: install-az-ps.md
+    - name: MSI를 사용하여 설치
+      href: install-az-ps-msi.md
 - name: 제거
   href: uninstall-az-ps.md
 - name: AzureRM에서 마이그레이션
