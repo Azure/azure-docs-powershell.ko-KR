@@ -6,13 +6,13 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 12/13/2018
-ms.openlocfilehash: e302e49d95b6bc15750366c9eb960a6fec80c1a4
-ms.sourcegitcommit: e5b029312d17e12257b2b5351b808fdab0b4634c
+ms.date: 10/22/2019
+ms.openlocfilehash: 7f22a420068db87fa2c3c007bd36f515384162fb
+ms.sourcegitcommit: ad7677d703a8512d371d3123dc7e541156b95cb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70386799"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72814375"
 ---
 # <a name="install-the-azure-powershell-module"></a>Azure PowerShell 모듈 설치
 
@@ -67,6 +67,18 @@ Are you sure you want to install the modules from 'PSGallery'?
 설치를 계속하려면 `Yes` 또는 `Yes to All`로 답변합니다.
 
 Az 모듈은 Azure PowerShell cmdlet의 롤업 모듈입니다. 설치하면 사용 가능한 모든 Azure Resource Manager 모듈이 다운로드되고 cmdlet을 사용할 수 있게 됩니다.
+
+## <a name="install-offline"></a>오프라인 설치
+
+일부 환경에서는 PowerShell 갤러리에 연결할 수 없습니다. 이러한 경우에도 다음 방법 중 하나를 사용하여 오프라인으로 설치할 수 있습니다.
+
+* 모듈을 다른 위치에 다운로드한 다음, 이 모듈을 네트워크의 설치 소스로 사용합니다. 다소 복잡해 보일 수도 있지만 이 프로세스를 사용하면 단일 서버 또는 파일 공유에서 PowerShell 모듈을 캐시하여 PowerShellGet으로 연결이 끊긴 시스템에 배포할 수 있습니다. [로컬 PowerShellGet 리포지토리로 작업](/powershell/scripting/gallery/how-to/working-with-local-psrepositories)을 통해 로컬 리포지토리를 설정하고 연결이 끊어진 시스템에 설치하는 방법을 알아봅니다.
+* 네트워크에 연결된 컴퓨터에 [Azure PowerShell MSI](install-az-ps-msi.md)를 다운로드한 다음, PowerShell 갤러리에 액세스하지 않고 설치 관리자를 시스템에 복사합니다. MSI 설치 관리자는 Windows의 PowerShell 5.1에서만 작동합니다.
+* [Save-Module](/powershell/module/PowershellGet/Save-Module)을 사용하여 모듈을 파일 공유에 저장하거나 다른 소스에 저장하고 다른 컴퓨터에 수동으로 복사합니다.
+  
+  ```powershell-interactive
+  Save-Module -Name Az -Path '\\someshare\PowerShell\modules' -Force
+  ```
 
 ## <a name="troubleshooting"></a>문제 해결
 

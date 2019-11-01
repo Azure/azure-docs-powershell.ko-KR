@@ -1,25 +1,36 @@
 ---
 title: Azure PowerShell 제거
 description: Azure PowerShell의 전체 제거를 수행하는 방법
-ms.date: 06/10/2019
+ms.date: 10/22/2019
 author: sptramer
 ms.author: sttramer
 ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: e71b4d0d662b29a32610fecb36351532040428e4
-ms.sourcegitcommit: 0b94b9566124331d0b15eb7f5a811305c254172e
+ms.openlocfilehash: 772667032d421e32c6cd63abbcb686b4eab308e2
+ms.sourcegitcommit: ad7677d703a8512d371d3123dc7e541156b95cb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72370187"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72814237"
 ---
 # <a name="uninstall-the-azure-powershell-module"></a>Azure PowerShell 모듈 제거
 
 이 문서에서는 Azure PowerShell의 이전 버전을 제거하거나 시스템에서 완전히 제거하는 방법을 알려줍니다. Azure PowerShell을 완전히 제거하기로 한 경우 [Send-Feedback](/powershell/module/az.accounts/send-feedback) cmdlet을 통해 몇 가지 피드백을 보내주세요.
 버그가 발생하면 해결을 위해 [GitHub 문제를 제출](https://github.com/azure/azure-powershell/issues)해 주시기 바랍니다.
 
-## <a name="uninstall-the-az-module"></a>Az 모듈 제거
+## <a name="uninstall-azure-powershell-from-msi"></a>MSI에서 Azure PowerShell 제거
+
+MSI 패키지를 사용하여 Azure PowerShell을 설치한 경우 PowerShell이 아닌 Windows 시스템을 통해 제거해야 합니다.
+
+| 플랫폼 | 지침 |
+|----------|--------------|
+| 윈도우 10 | 시작 > 설정 > 앱 |
+| Windows 7 </br>Windows 8 | 시작>제어판 > 프로그램 > 프로그램 제거 |
+
+이 화면을 띄우면 프로그램 목록에 __Azure PowerShell__ 이 보일 것입니다. 이 앱을 제거하면 됩니다. 이 프로그램이 나열되지 않으면 PowerShellGet을 통해 설치한 후 다음 지침을 따라야 합니다.
+
+## <a name="uninstall-azure-powershell-from-powershell-get"></a>PowerShell Get에서 Azure PowerShell 제거
 
 Az 모듈을 제거하려면 [Uninstall-Module](/powershell/module/powershellget/uninstall-module) cmdlet을 사용합니다. 그러나 `Uninstall-Module`은 모듈 중 하나만 제거합니다. Azure PowerShell을 완전히 제거하려면 각 모듈을 개별적으로 제거해야 합니다. 2개 이상의 Azure PowerShell 버전을 설치한 경우 제거가 복잡할 수 있습니다.
 
