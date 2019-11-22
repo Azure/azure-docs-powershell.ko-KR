@@ -7,12 +7,12 @@ ms.author: sttramer
 ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: 772667032d421e32c6cd63abbcb686b4eab308e2
-ms.sourcegitcommit: 05431341858d10eb9c345213275c3ccc24c83c9b
+ms.openlocfilehash: 319b2ad95aa867f5706f3cfec873bc58598b1272
+ms.sourcegitcommit: 9c5cd2c890615b48315af21fa0029cf4c114c3b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74062057"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200003"
 ---
 # <a name="uninstall-the-azure-powershell-module"></a>Azure PowerShell 모듈 제거
 
