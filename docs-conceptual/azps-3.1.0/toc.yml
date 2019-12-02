@@ -82,3 +82,5 @@
       href: release-notes-azureps.md
     - name: Az 2.0.0 주요 변경 내용
       href: migrate-az-2.0.0.md
+    - name: Az 3.0.0 주요 변경 내용
+      href: migrate-az-3.0.0.md
