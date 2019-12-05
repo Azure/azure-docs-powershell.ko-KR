@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/15/2019
-ms.openlocfilehash: 83e6039153bcc2b8ccb7ceddfa91609f0d6c7b3f
-ms.sourcegitcommit: b4ee3fbaaa2a329ea28308bd1902ae83a34db698
+ms.openlocfilehash: 8c1369cdedf8848f3c62ca6b6bc4eb3d2d78be95
+ms.sourcegitcommit: f9445d1525eac8c165637e1a80fbc92b1ab005c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72380192"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74656824"
 ---
 ## <a name="280---october-2019"></a>2.8.0 - 2019년 10월
 ### <a name="general"></a>일반
@@ -56,16 +56,16 @@ ms.locfileid: "72380192"
 * 사소한 버그 수정: Get-AzIothub에서 subscriptionId를 반환하지 않습니다. 
 
 #### <a name="azmonitor"></a>Az.Monitor
-* 작업 그룹에 대한 새 작업 그룹 수신기로 -ItsmReceiver, -VoiceReceiver, -ArmRoleReceiver, -AzureFunctionReceiver, -LogicAppReceiver, -AutomationRunbookReceiver, -AzureAppPushReceiver가 추가되었습니다.
+* New-AzActionGroupReceiver에 대한 새 작업 그룹 수신기로 -ItsmReceiver, -VoiceReceiver, -ArmRoleReceiver, -AzureFunctionReceiver, -LogicAppReceiver, -AutomationRunbookReceiver, -AzureAppPushReceiver가 추가되었습니다.
 * 수신기에 사용하도록 설정된 일반 경고 스키마가 사용됩니다. SMS, Azure 앱 푸시, ITSM 및 음성 수신기에는 적용되지 않습니다.
-* 웹후크에서 이제 Azure Active Directory 인증을 지원합니다.
+* 웹후크는 이제 Azure Active Directory 인증을 지원합니다.
 
 #### <a name="aznetwork"></a>Az.Network
 * 서비스 엔드포인트 정책에 사용할 수 있는 별칭을 가져오기 위해 호출할 수 있는 새 Get-AzAvailableServiceAlias cmdlet이 추가되었습니다.
 * 트래픽 선택기를 Virtual Network 게이트웨이 연결에 추가할 수 있는 지원이 추가되었습니다.
     - 추가된 새 cmdlet은 다음과 같습니다.
-        - New-AzureRmTrafficSelectorPolicy
-    - cmdlet이 선택적인 -TrafficSelectorPolicies, -New-AzureRmVirtualNetworkGatewayConnection, -Set-AzureRmVirtualNetworkGatewayConnection 매개 변수로 업데이트되었습니다.
+        - New-AzIpsecTrafficSelectorPolicy
+    - 이 cmdlet은 선택적인 -TrafficSelectorPolicies, -New-AzVirtualNetworkGatewayConnection, -Set-AzVirtualNetworkGatewayConnection 매개 변수로 업데이트되었습니다.
 * ESP 및 AH 프로토콜 지원이 네트워크 보안 규칙 구성에 추가되었습니다.
     - 다음 Cmdlet이 업데이트 되었습니다.
         - Add-AzNetworkSecurityRuleConfig
@@ -220,7 +220,7 @@ ms.locfileid: "72380192"
     -  Remove-AzRmStorageShare
 
 #### <a name="azwebsites"></a>Az.Websites
-* 앱을 새 ASP로 마이그레이션할 때 웹앱 태그가 삭제되는 이슈가 해결되었습니다.
+* 앱을 새 ASP로 마이그레이션할 때 웹앱 태그가 삭제되는 문제가 수정되었습니다.
 * Linux와 Windows에서 모두 작동하도록 Publish-AzureWebapp이 수정되었습니다.
 * 'Get-AzWebAppPublishingProfile' 참조 설명서의 예제가 업데이트되었습니다.
 
