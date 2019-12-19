@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2019
-ms.openlocfilehash: 04c520a3171d0b06ceaaa96f1c77bda6b03952ae
-ms.sourcegitcommit: 020c69430358b13cbd99fedd5d56607c9b10047b
+ms.openlocfilehash: ea7593cf2b753b210ff2955b7bd450030ad83596
+ms.sourcegitcommit: f9445d1525eac8c165637e1a80fbc92b1ab005c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365725"
+ms.lasthandoff: 12/16/2019
+ms.locfileid: "75035832"
 ---
 # <a name="breaking-changes-for-az-100"></a>Az 1.0.0의 호환성이 손상되는 변경
 
@@ -55,7 +55,7 @@ ms.locfileid: "66365725"
 
 ### <a name="cmdlet-noun-prefix-changes"></a>Cmdlet 명사 접두사 변경
 
-AzureRM 모듈에서 cmdlet은 `AzureRM` 또는 `Azure`를 명사 접두사로 사용했습니다.  Az는 cmdlet 이름을 간소화하고 정규화하여 모든 cmdlet에서 'Az'를 해당 cmdlet 명사 접두사로 사용합니다. 예:
+AzureRM 모듈에서 cmdlet은 `AzureRM` 또는 `Azure`를 명사 접두사로 사용했습니다.  Az는 cmdlet 이름을 간소화하고 정규화하여 모든 cmdlet에서 'Az'를 해당 cmdlet 명사 접두사로 사용합니다. 다음은 그 예입니다.
 
 ```azurepowershell-interactive
 Get-AzureRMVM
@@ -118,7 +118,7 @@ Get-AzureRmStorageAccount | Get-AzureStorageContainer | Get-AzureStorageBlob
 | AzureRM.UsageAggregates | Az.Billing |
 | AzureRM.Consumption | Az.Billing |
 
-모듈 이름이 변경되면 `#Requires` 또는 `Import-Module`을 사용하여 특정 모듈을 로드하는 스크립트는 대신 새 모듈을 사용하도록 변경되어야 합니다. cmdlet 접미사가 변경되지 않은 모듈의 경우 이는 모듈 이름이 변경되었지만 작업 공간을 나타내는 접미사가 _변경되지 않았음_을 의미합니다.
+모듈 이름이 변경되면 `#Requires` 또는 `Import-Module`을 사용하여 특정 모듈을 로드하는 스크립트는 대신 새 모듈을 사용하도록 변경되어야 합니다. cmdlet 접미사가 변경되지 않은 모듈의 경우 이는 모듈 이름이 변경되었지만 작업 공간을 나타내는 접미사가 _변경되지 않았음_ 을 의미합니다.
 
 #### <a name="migrating-requires-and-import-module-statements"></a>#Requires 및 Import-Module 문 마이그레이션
 
@@ -227,7 +227,7 @@ Windows용 PowerShell 5.1에서 Az를 사용하려면 .NET Framework 4.7.2를 �
 - `PSVirtualMachineScaleSetVM` 개체의 `InstanceView` 속성의 형식이 `VirtualMachineInstanceView`에서 `VirtualMachineScaleSetVMInstanceView`로 변경되었습니다.
 - `UpgradePolicy` 속성에서 `AutoOSUpgradePolicy` 및 `AutomaticOSUpgrade` 속성이 제거되었습니다.
 - `PSSnapshotUpdate` 개체의 `Sku` 속성의 형식이 `DiskSku`에서 `SnapshotSku`로 변경되었습니다.
-- `VmScaleSetVMParameterSet`이 `Add-AzVMDataDisk` cmdlet에서 제거되면 더 이상 ScaleSet VM에 개별적으로 데이터 디스크를 추가할 수 없습니다.
+- `VmScaleSetVMParameterSet`이 `Add-AzVMDataDisk` cmdlet에서 제거되어, 더 이상 ScaleSet VM에 개별적으로 데이터 디스크를 추가할 수 없습니다.
 
 ### <a name="azdatafactory-previously-azurermdatafactories-and-azurermdatafactoryv2"></a>Az.DataFactory(이전에는 AzureRM.DataFactories 및 AzureRM.DataFactoryV2)
 
@@ -272,7 +272,7 @@ Windows용 PowerShell 5.1에서 Az를 사용하려면 .NET Framework 4.7.2를 �
 
   다음과 같이 변경되어야 합니다.
   ```azurepowershell-interactive
-  New-AzMMediaService -Tag @{TagName="TagValue"}
+  New-AzMediaService -Tag @{TagName="TagValue"}
   ```
 
 ### <a name="azmonitor-previously-azurerminsights"></a>Az.Monitor(이전에는 AzureRM.Insights)
@@ -292,7 +292,7 @@ Windows용 PowerShell 5.1에서 Az를 사용하려면 .NET Framework 4.7.2를 �
 - 사용되지 않는 매개 변수 `ResourceId`를 `Get-AzServiceEndpointPolicyDefinition` cmdlet에서 제거
 - `PSVirtualNetwork` 개체에서 사용되지 않는 속성 `EnableVmProtection`을 제거했습니다.
 - 사용되지 않는 cmdlet 제거: `Set-AzVirtualNetworkGatewayVpnClientConfig`
-  
+
 스크립트는 더 이상 이 필드의 값에 따라 처리하도록 결정하지 않아야 합니다.
 
 ### <a name="azoperationalinsights-previously-azurermoperationalinsights"></a>Az.OperationalInsights(이전에는 AzureRM.OperationalInsights)

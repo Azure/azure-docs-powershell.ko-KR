@@ -7,13 +7,358 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/15/2019
-ms.openlocfilehash: 98a24c805fbf43dd899119d43301b4261c1f60dc
-ms.sourcegitcommit: f9445d1525eac8c165637e1a80fbc92b1ab005c2
+ms.openlocfilehash: f77d901169b0d98b2425a2e50d33a1789150b770
+ms.sourcegitcommit: e598dc45a26ff5a71112383252b350d750144a47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/16/2019
-ms.locfileid: "75035764"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75182556"
 ---
+## <a name="320---december-2019"></a>3.2.0 - 2019년 12월
+
+### <a name="general"></a>일반
+* 모든 모듈의 상대 경로를 사용하기 위해 .psd1의 참조 업데이트
+
+#### <a name="azaccounts"></a>Az.Accounts
+* Az 4.0 미리 보기를 위해 클라이언트 측 원격 분석에 대해 UserAgent를 올바르게 설정
+* Az 4.0 미리 보기에서 컨텍스트가 null인 경우 사용자에게 친숙한 오류 메시지로 표시
+
+#### <a name="azbatch"></a>Az.Batch
+* **New-AzBatchPool**이 'VirtualMachineConfiguration.ContainerConfiguration' 또는 'VirtualMachineConfiguration.DataDisks'를 서버로 제대로 보내지 않는 [#10602](https://github.com/Azure/azure-powershell/issues/10602) 문제 수정
+
+#### <a name="azdatafactory"></a>Az.DataFactory
+* ADF .Net SDK 버전을 4.5.0으로 업데이트
+
+#### <a name="azfrontdoor"></a>Az.FrontDoor
+* WAF 관리 규칙 제외 지원 추가됨
+* 자동 완성에 SocketAddr 추가
+
+#### <a name="azhealthcareapis"></a>Az.HealthcareApis
+* 예외 처리
+
+#### <a name="azkeyvault"></a>Az.KeyVault
+* 잠재적으로 설정되지 않은 오류 액세스 값 수정
+* 타원 곡선 암호화 인증서 관리
+    - 인증서 정책에 대한 곡선 지정을 위한 지원 추가됨
+
+#### <a name="azmonitor"></a>Az.Monitor
+* 진단 설정 추가 명령에 선택적 인수 추가 스위치 인수(있는 경우)는 Log Analytics로 내보내기가 고정 스키마(전용 데이터 유형)가 되어야 함을 나타냄
+
+#### <a name="aznetwork"></a>Az.Network
+* AzureFirewall 애플리케이션, NAT 및 네트워크 규칙에서 IpGroups 지원.
+
+#### <a name="azresources"></a>Az.Resources
+* 이름이 일부 내장 매개 변수 이름과 충돌하는 경우 템플릿 배포가 템플릿 매개 변수를 읽지 못하는 문제 수정.
+* 정책 세트 정의 내에 그룹화 지원을 도입하는 새로운 API 버전 2019-09-01을 사용하도록 정책 cmdlet 업데이트.
+
+#### <a name="azsql"></a>Az.Sql
+* 취약성 평가 자동 활성화에서 스토리지 생성을 StorageV2로 업그레이드
+
+#### <a name="azstorage"></a>Az.Storage
+* Oauth 인증을 기반으로 스토리지 컨텍스트를 사용하여 Blob/컨테이너 ID 기반 SAS 토큰 생성 지원
+    - New-AzStorageContainerSASToken
+    - New-AzStorageBlobSASToken
+* 모든 Idenity SAS 토큰을 해지할 수 있도록 스토리지 계정 사용자 위임 키 해지 지원
+    - Revoke-AzStorageAccountUserDelegationKeys
+* 새로운 API 버전 2019-06-01을 지원하기 위해 Microsoft.Azure.Management.Storage 14.2.0으로 업그레이드.
+* 관리 평면 파일 공유 cmdlet에서 5120 이상의 공유 QuotaGiB 지원, 그리고 매개 변수 'QuotaGiB'에 매개 변수 별칭 'Quota' 추가 
+    - New-AzRmStorageShare
+    - Update-AzRmStorageShare
+* 매개 변수 'Quota'에 매개 변수 별칭 'QuotaGiB' 추가
+    - Set-AzStorageShareQuota
+* Set-AzStorageContainerAcl가 저장된 액세스 정책을 정리할 수 있는 문제 수정
+    - Set-AzStorageContainerAcl
+
+## <a name="310---november-2019"></a>3.1.0 - 2019년 11월
+### <a name="highlights-since-the-last-major-release"></a>마지막 주 릴리스 이후의 주요 사항
+* Az.DataBoxEdge 1.0.0 릴리스됨
+* Az.SqlVirtualMachine 1.0.0 릴리스됨
+
+#### <a name="azcompute"></a>Az.Compute
+* VM Reapply 기능
+    - Set-AzVM cmdlet에 Reapply 매개 변수 추가
+* VM 확장 집합 AutomaticRepairs 기능:
+    - 다음 cmdlet에 EnableAutomaticRepair, AutomaticRepairGracePeriod 및 AutomaticRepairMaxInstanceRepairsPercent 매개 변수를 추가합니다.   New-AzVmssConfig   Update-AzVmss
+* New-AzVM에 대한 교차 테넌트 갤러리 이미지 지원
+* New-AzVM, New-AzVMConfig 및 New-AzVmss cmdlet의 Priority 매개 변수의 인수 완성자에 'Spot' 추가
+* Add-AzVmssDataDisk cmdlet에 DiskIOPSReadWrite 및 DiskMBpsReadWrite 매개 변수 추가
+* New-AzGalleryImageVersion cmdlet의 SourceImageId 매개 변수를 선택 사항으로 변경
+* New-AzGalleryImageVersion cmdlet에 OSDiskImage 및 DataDiskImage 매개 변수 추가
+* New-AzGalleryImageDefinition cmdlet에 HyperVGeneration 매개 변수 추가
+* New-AzVmss, New-AzVmssConfig 및 Update-AzVmss cmdlet에 SkipExtensionsOnOverprovisionedVMs 매개 변수 추가
+
+#### <a name="azdataboxedge"></a>Az.DataBoxEdge
+* cmdlet `Get-AzDataBoxEdgeOrder` 추가됨
+    - 주문 가져오기
+* cmdlet `New-AzDataBoxEdgeOrder` 추가됨
+    - 새 주문 만들기
+* cmdlet `Remove-AzDataBoxEdgeOrder` 추가됨
+    - 주문 제거
+* cmdlet `New-AzDataBoxEdgeShare` 변경
+    - 이제 로컬 공유를 만듬
+* cmdlet `Set-AzDataBoxEdgeRole` 추가됨
+    - 이제 IotRole을 공유에 매핑할 수 있음
+* cmdlet `Invoke-AzDataBoxEdgeDevice` 추가됨
+    - 스캔 업데이트 호출, 업데이트 다운로드, 디바이스에 업데이트 설치
+* cmdlet `Get-AzDataBoxEdgeTrigger` 추가됨
+    - 트리거에 대한 정보 가져오기
+* cmdlet `New-AzDataBoxEdgeTrigger` 추가됨
+    - 새 트리거 만들기
+* cmdlet `Remove-AzDataBoxEdgeTrigger` 추가됨
+    - 트리거 제거
+
+#### <a name="azdatafactory"></a>Az.DataFactory
+* ADF .Net SDK 버전을 4.4.0으로 업데이트
+* 'Set-AzureRmDataFactoryV2IntegrationRuntime' cmd에 'ExpressCustomSetup' 매개 변수를 추가하여 사용자 지정 설치 스크립트 없이 설치 구성 및 타사 구성 요소를 사용하도록 설정합니다.
+
+#### <a name="azdatalakestore"></a>Az.DataLakeStore
+* Get-AzDataLakeStoreDeletedItem 및 Restore-AzDataLakeStoreDeletedItem의 설명서 업데이트
+
+#### <a name="azeventhub"></a>Az.EventHub
+* 10301 문제 해결: SAS 토큰 날짜 형식 수정
+
+#### <a name="azfrontdoor"></a>Az.FrontDoor
+* Enable-AzFrontDoorCustomDomainHttps 및 New-AzFrontDoorFrontendEndpointObject에 MinimumTlsVersion 매개 변수 추가
+* New-AzFrontDoorHealthProbeSettingObject에 HealthProbeMethod 및 EnabledState 매개 변수 추가
+* BackendPoolsSettings 개체를 생성하여 Front Door 생성/업데이트에 전달하는 새 cmdlet 추가
+    - New-AzFrontDoorBackendPoolsSettingObject
+
+#### <a name="aznetwork"></a>Az.Network
+* 'Start-AzVirtualNetworkGatewayConnectionPacketCapture.md' 및 'Start-AzVirtualnetworkGatewayPacketCapture.md' FilterData 옵션 예제를 변경합니다.
+
+#### <a name="azprivatedns"></a>Az.PrivateDns
+* PrivateDns .net sdk를 버전 1.0.0으로 업데이트함
+
+#### <a name="azrecoveryservices"></a>Az.RecoveryServices
+* 보호를 사용하도록 설정할 때 디스크 유형을 선택하도록 Azure Site Recovery 지원
+* 복구 계획 동작 편집을 위한 Azure Site Recovery 버그 수정
+* 파일 스트림 DB를 허용하도록 Azure Backup SQL 복원 지원
+
+#### <a name="azrediscache"></a>Az.RedisCache
+* 'New-AzRedisCache' 및 'Set-AzRedisCache' cmdlet에 'MinimumTlsVersion' 매개 변수가 추가되었습니다. 'Get-AzRedisCache' cmdlet 출력에 'MinimumTlsVersion'도 추가되었습니다.
+* 'Set-AzRedisCache' 및 'New-AzRedisCache' cmdlet의 '-Size' 매개 변수에 대한 유효성 검사가 추가되었습니다.
+
+#### <a name="azresources"></a>Az.Resources
+- 정책 할당에 새로운 EnforcementMode 속성이 있는 새 api 버전 2019-06-01을 사용하도록 정책 cmdlet이 업데이트되었습니다.
+- 정책 정의 만들기 도움말 예제가 업데이트되었습니다.
+- Remove-AZADServicePrincipal -ServicePrincipalName 버그를 수정하고, 서비스 사용자 이름을 찾을 수 없으면 null 참조를 throw합니다.
+- New-AZADServicePrincipal 버그를 수정하고, 테넌트에 구독이 없으면 null 참조를 throw합니다.
+- 연결된 애플리케이션에만 자격 증명을 추가하도록 New-AzAdServicePrincipal을 변경합니다.
+
+#### <a name="azsql"></a>Az.Sql
+* 데이터베이스 ReadReplicaCount에 대한 지원이 추가되었습니다.
+* 영역 중복이 설정되지 않은 경우 Set-AzSqlDatabase가 수정되었습니다.
+
+## <a name="300---november-2019"></a>3.0.0 - 2019년 11월
+### <a name="general"></a>일반
+* Az.PrivateDns 1.0.0 릴리스
+
+#### <a name="azaccounts"></a>Az.Accounts
+* 'Resolve-Error' 별칭에 사용 중단 메시지를 추가합니다.
+
+#### <a name="azadvisor"></a>Az.Advisor
+* Get-AzAdvisorRecommendation cmdlet에 새로운 '운영 효율성' 범주가 추가되었습니다.
+
+#### <a name="azbatch"></a>Az.Batch
+* `BatchAccountContext`의 `CoreQuota` 이름이 `DedicatedCoreQuota`로 변경되었습니다. 또한 `LowPriorityCoreQuota`가 새로 추가되었습니다.
+  - 이 변경 사항은 **Get-AzBatchAccount**에 영향을 줍니다.
+* 이제 **New-AzBatchTask** `-ResourceFile` 매개 변수는 새로운 **New-AzBatchResourceFile** cmdlet을 사용하여 구성할 수 있는 `PSResourceFile` 개체의 컬렉션을 가져옵니다.
+* 새로운 **New-AzBatchResourceFile** cmdlet을 통해 `PSResourceFile` 개체를 만들 수 있습니다. 이들은 `-ResourceFile` 매개 변수의 **New-AzBatchTask**에 제공될 수 있습니다.
+  - 그에 따라 기존 `HttpUrl` 방법 외에도 두 가지 종류의 리소스 파일이 새롭게 지원됩니다.
+    - `AutoStorageContainerName` 기반 리소스 파일은 전체 자동 스토리지 컨테이너를 일괄 처리 노드에 다운로드합니다.
+    - `StorageContainerUrl` 기반 리소스 파일은 URL에 지정된 컨테이너를 일괄 처리 노드에 다운로드합니다.
+* **Get-AzBatchApplication**으로 반환되는 `PSApplication`의 `ApplicationPackages` 속성이 제거되었습니다.
+  - 이제 **Get-AzBatchApplicationPackage**를 사용하여 애플리케이션 내부의 특정 패키지를 검색할 수 있습니다. 예: `Get-AzBatchApplication -AccountName myaccount -ResourceGroupName myresourcegroup -ApplicationId myapplication`
+* **Get-AzBatchApplicationPackage**, **New-AzBatchApplicationPackage**, **Remove-AzBatchApplicationPackage**, **Get-AzBatchApplication**, **New-AzBatchApplication**, **Remove-AzBatchApplication** 및 **Set-AzBatchApplication**에서 `ApplicationId` 이름이 `ApplicationName`으로 변경되었습니다.
+  - 이제 `ApplicationId`는 `ApplicationName`의 별칭입니다.
+* 새로운 `PSWindowsUserConfiguration` 속성이 `PSUserAccount`에 추가되었습니다.
+* `PSApplicationPackage`에서 `Version` 이름이 `Name`으로 변경되었습니다.
+* `PSResourceFile`에서 `BlobSource` 이름이 `HttpUrl`로 변경되었습니다.
+* `PSVirtualMachineConfiguration`에서 `OSDisk` 속성이 제거되었습니다.
+* **Set-AzBatchPoolOSVersion**이 제거되었습니다. 이 작업은 더 이상 지원되지 않습니다.
+* `PSCloudServiceConfiguration`에서 `TargetOSVersion`이 제거되었습니다.
+* `PSCloudServiceConfiguration`에서 `CurrentOSVersion` 이름이 `OSVersion`으로 변경되었습니다.
+* `PSPoolUsageMetrics`에서 `DataEgressGiB` 및 `DataIngressGiB`가 제거되었습니다.
+* **Get-AzBatchNodeAgentSku**가 제거되고 **Get-AzBatchSupportedImage**로 대체되었습니다. 
+  - **Get-AzBatchSupportedImage**가 **Get-AzBatchNodeAgentSku**와 동일한 데이터를 반환하지만 더 친숙한 형식이 사용됩니다.
+  - 이제 확인되지 않은 이미지도 새롭게 반환됩니다. 각 이미지의 `Capabilities` 및 `BatchSupportEndOfLife`에 대한 추가 정보도 포함됩니다.
+* **New-AzBatchPool**의 새로운 `MountConfiguration` 매개 변수를 통해 풀의 각 노드에서 원격 파일 시스템을 마운트할 수 있는 기능이 추가되었습니다.
+* 이제 트래픽의 소스 포트를 기준으로 풀에 대한 네트워크 액세스를 차단하는 네트워크 보안 규칙이 지원됩니다. 이 작업은 `PSNetworkSecurityGroupRule`에서 `SourcePortRanges` 속성을 통해 수행됩니다.
+* 컨테이너를 실행할 때 Batch는 이제 컨테이너 작업 디렉터리 또는 일괄 처리 태스크 작업 디렉터리에서 작업 실행을 지원합니다. 이 작업은 `PSTaskContainerSettings`에서 `WorkingDirectory` 속성에 의해 제어됩니다.
+* 새로운 `PublicIPs` 속성을 통해 `PSNetworkConfiguration`에서 공용 IP의 컬렉션을 지정할 수 있는 기능이 추가되었습니다. 그 결과 사용자 제공 IP 목록의 IP가 풀에 있는 노드에 포함됩니다.
+* 지정하지 않은 경우 이제 `PSSTartTask`에서 `WaitForSuccess`의 기본값은 `$True`입니다(이전에는 `$False`).
+* 지정하지 않은 경우 이제 `PSAutoUserSpecification`에서 `Scope`의 기본값은 `Pool`입니다(이전에는 Windows의 경우 `Task`, Linux의 경우에는 `Pool`).
+
+#### <a name="azcdn"></a>Az.Cdn
+* RulesEngine에 UrlRewriteAction 및 CacheKeyQueryStringAction이 도입되었습니다.
+* New-AzDeliveryRuleCondition cmdlet에서 'Selector' 입력 누락과 같은 여러 버그가 수정되었습니다.
+
+#### <a name="azcompute"></a>Az.Compute
+* 디스크 암호화 집합 기능
+    - 새 cmdlet:   New-AzDiskEncryptionSetConfig   New-AzDiskEncryptionSet   Get-AzDiskEncryptionSet   Remove-AzDiskEncryptionSet
+    - DiskEncryptionSetId 매개 변수가 다음 cmdlet에 추가되었습니다. Set-AzImageOSDisk Set-AzVMOSDisk Set-AzVmssStorageProfile        
+        Add-AzImageDataDisk New-AzVMDataDisk Set-AzVMDataDisk Add-AzVMDataDisk Add-AzVmssDataDisk Add-AzVmssVMDataDisk
+    - DiskEncryptionSetId 및 EncryptionType 매개 변수가 다음 cmdlet에 추가되었습니다.   New-AzDiskConfig   New-AzSnapshotConfig
+* New-AzVmssIPConfig에 PublicIPAddressVersion 매개 변수 추가
+* 사용자 지정 스크립트 확장의 FileUris를 공용 설정에서 보호된 설정으로 이동
+* New-AzVmss, New-AzVmssConfig 및 Update-AzVmss cmdlet에 ScaleInPolicy 추가
+* 주요 변경 내용
+    - CreateOption이 업로드일 때 UploadSizeInBytes 매개 변수가 New-AzDiskConfig에 대해 DiskSizeGB 대신 사용됩니다.
+    - GalleryImageVersion 개체에서 PublishingProfile.Source.ManagedImage.Id가 StorageProfile.Source.Id로 바뀝니다.
+
+#### <a name="azdatafactory"></a>Az.DataFactory
+* ADF .Net SDK 버전을 4.3.0으로 업데이트
+
+#### <a name="azdatalakestore"></a>Az.DataLakeStore
+* ADLS SDK 버전 업데이트(https://github.com/Azure/azure-data-lake-store-net/blob/preview-alpha/CHANGELOG.md#version-123-alpha) , 다음 수정 사항 제공
+* 휴지통 또는 디렉터리 항목의 creationtime을 역직렬화할 수 없을 때 예외가 발생하지 않도록 방지합니다.
+* adlsclient에서 요청별 시간 제한 설정 노출
+* badoffset 복구를 위한 원본 syncflag 전달 수정
+* 응답이 확인된 후 연속 토큰을 검색하기 위한 EnumerateDirectory 수정
+* Concat 버그 수정
+
+#### <a name="azfrontdoor"></a>Az.FrontDoor
+* 모듈 간 기타 오타가 수정됨
+
+#### <a name="azhdinsight"></a>Az.HDInsight
+* ADLSGen1 스토리지가 포함된 클러스터를 가져오기 위해 Get-AzHDInsightCluster를 사용할 때 고객에게 '올바른 Base-64 문자열이 아닙니다' 오류가 표시되는 버그가 수정되었습니다.
+* 고객이 Azure Data Lake에 액세스하기 위해 서비스 주체 애플리케이션 ID를 제공할 수 있도록 세 가지 cmdlet Add-AzHDInsightClusterIdentity, New-AzHDInsightClusterConfig 및 New-AzHDInsightCluster에 이름이 'ApplicationId'인 매개 변수를 추가합니다.
+* Microsoft.Azure.Management.HDInsight가 2.1.0에서 5.1.0으로 변경됨
+* 다음 5가지 cmdlet이 제거되었습니다.
+    - Get-AzHDInsightOMS
+    - Enable-AzHDInsightOMS
+    - Disable-AzHDInsightOMS
+    - Grant-AzHDInsightRdpServicesAccess
+    - Revoke-AzHDInsightRdpServicesAccess
+* 다음 3가지 cmdlet이 추가되었습니다.
+    - Get-AzHDInsightOMS 대신 Get-AzHDInsightMonitoring
+    - Get-AzHDInsightOMS 대신 Get-AzHDInsightMonitoring
+    - Disable-AzHDInsightOMS 대신 Disable-AzHDInsightMonitoring
+* 특정 위치의 기능 정보 가져오기를 지원하도록 cmdlet Get-AzHDInsightProperties가 수정되었습니다.
+* Add-AzHDInsightConfigValue에서 매개 변수 집합('Spark1', 'Spark2')이 제거되었습니다.
+* cmdlet Add-AzHDInsightSecurityProfile의 도움말 문서에 예제를 추가합니다.
+* 다음 cmdlet의 출력 유형이 변경되었습니다.
+*  - Get-AzHDInsightProperties의 출력 유형이 CapabilitiesResponse에서 AzureHDInsightCapabilities로 변경되었습니다.
+*  - Remove-AzHDInsightCluster의 출력 유형이 ClusterGetResponse에서 bool로 변경되었습니다.
+*  - Set-AzHDInsightGatewaySettings의 출력 유형이 HttpConnectivitySettings에서 GatewaySettings로 변경되었습니다.
+* 몇 가지 시나리오 테스트 사례가 추가되었습니다.
+* 일부 별칭 제거: 'Add-AzHDInsightConfigValues', 'Get-AzHDInsightProperties'.
+
+#### <a name="aziothub"></a>Az.IotHub
+* 주요 변경 내용:
+    - 'Add-AzIotHubEventHubConsumerGroup' cmdlet이 'EventHubEndpointName' 매개 변수를 더 이상 지원하지 않으며 원래 매개 변수 이름에 대해 별칭을 찾을 수 없습니다.
+    - 'Add-AzIotHubEventHubConsumerGroup' cmdlet에 대한 매개 변수 집합 '__AllParameterSets'가 제거되었습니다.
+    - 'Get-AzIotHubEventHubConsumerGroup' cmdlet이 'EventHubEndpointName' 매개 변수를 더 이상 지원하지 않으며 원래 매개 변수 이름에 대해 별칭을 찾을 수 없습니다.
+    - 'Get-AzIotHubEventHubConsumerGroup' cmdlet에 대한 매개 변수 집합 '__AllParameterSets'가 제거되었습니다.
+    - 'Microsoft.Azure.Commands.Management.IotHub.Models.PSIotHubProperties' 유형의 'OperationsMonitoringProperties' 속성이 제거되었습니다.
+    - 'Microsoft.Azure.Commands.Management.IotHub.Models.PSIotHubInputProperties' 유형의 'OperationsMonitoringProperties' 속성이 제거되었습니다.
+    - 'New-AzIotHubExportDevice' cmdlet이 더 이상 'New-AzIotHubExportDevices' 별칭을 지원하지 않습니다.
+    - 'New-AzIotHubImportDevice' cmdlet이 더 이상 'New-AzIotHubImportDevices' 별칭을 지원하지 않습니다.
+    - 'Remove-AzIotHubEventHubConsumerGroup' cmdlet이 'EventHubEndpointName' 매개 변수를 더 이상 지원하지 않으며 원래 매개 변수 이름에 대해 별칭을 찾을 수 없습니다.
+    - 'Remove-AzIotHubEventHubConsumerGroup' cmdlet에 대한 매개 변수 집합 '__AllParameterSets'가 제거되었습니다.
+    - 'Set-AzIotHub' cmdlet이 'OperationsMonitoringProperties' 매개 변수를 더 이상 지원하지 않으며 원래 매개 변수 이름에 대해 별칭을 찾을 수 없습니다.
+    - 'Set-AzIotHub' cmdlet에 대한 매개 변수 집합 'UpdateOperationsMonitoringProperties'가 제거되었습니다.
+
+#### <a name="azrecoveryservices"></a>Az.RecoveryServices
+* Azure Site Recovery가 Azure-Azure를 위한 NSG, 공용 IP 및 내부 부하 분산 장치와 같은 네트워킹 리소스 구성을 지원합니다.
+* Azure Site Recovery가 vMWare-Azure를 위한 관리 디스크에 쓰기를 지원합니다.
+* Azure Site Recovery가 vMWare-Azure를 위한 NIC 감소를 지원합니다.
+* Azure Site Recovery가 Azure-Azure를 위한 가속 네트워킹을 지원합니다.
+* Azure Site Recovery가 Azure-Azure를 위한 에이전트 자동 업데이트를 지원합니다.
+* Azure Site Recovery가 Azure-Azure를 위한 표준 SSD를 지원합니다.
+* Azure Site Recovery가 Azure-Azure를 위한 두 가지 Azure 디스크 암호화 전달을 지원합니다.
+* Azure Site Recovery가 Azure-Azure를 위한 새로 추가된 디스크 보호를 지원합니다.
+* VM을 위한 SoftDelete 기능 및 softdelete를 위한 테스트가 추가되었습니다.
+
+#### <a name="azresources"></a>Az.Resources
+* 종속성 어셈블리 Microsoft.Extensions.Caching.Memory가 1.1.1에서 2.2로 업데이트되었습니다.
+
+#### <a name="aznetwork"></a>Az.Network
+* 일반 서비스 공급자 지원을 위해 PrivateEndpointConnection에 대한 모든 cmdlet이 변경되었습니다.
+    - 업데이트된 cmdlet:
+        - Approve-AzPrivateEndpointConnection
+        - Deny-AzPrivateEndpointConnection
+        - Get-AzPrivateEndpointConnection
+        - Remove-AzPrivateEndpointConnection
+        - Set-AzPrivateEndpointConnection
+* PrivateLinkResource에 대한 새 cmdlet이 추가되었고 일반 서비스 공급자도 지원합니다.
+    - 새 cmdlet:
+        - Get-AzPrivateLinkResource
+* Proxy Protocol V2 기능에 대한 새 필드 및 매개 변수가 추가되었습니다.
+    - PrivateLinkService에서 EnableProxyProtocol 속성 추가
+    - PrivateEndpointConnection에서 LinkIdentifier 속성 추가
+    - 새로운 선택적인 매개 변수인 EnableProxyProtocol을 추가하도록 New-AzPrivateLinkService가 업데이트되었습니다.
+* 'New-AzApplicationGatewaySku' 참조 설명서의 잘못된 매개 변수 설명 수정
+* Azure 방화벽 정책을 지원하는 새로운 cmdlet
+* VirtualHub의 자식 리소스 RouteTables에 대한 지원 추가
+    - 추가된 새 cmdlet은 다음과 같습니다.
+        - Add-AzVirtualHubRoute
+        - Add-AzVirtualHubRouteTable
+        - Get-AzVirtualHubRouteTable
+        - Remove-AzVirtualHubRouteTable
+        - Set-AzVirtualHub
+* VirtualHub의 새로운 속성 Sku 및 VirtualWan의 VirtualWANType에 대한 지원 추가
+    - 선택적 매개 변수로 다음 cmdlet이 업데이트되었습니다.
+        - New-AzVirtualHub: 추가된 매개 변수 Sku
+        - Update-AzVirtualHub: 추가된 매개 변수 Sku
+        - New-AzVirtualWan: 추가된 매개 변수 VirtualWANType
+        - Update-AzVirtualWan: 추가된 매개 변수 VirtualWANType
+* HubVnetConnection, VpnConnection 및 ExpressRouteConnection에 대한 EnableInternetSecurity 속성 지원 추가
+    - 추가된 새 cmdlet은 다음과 같습니다.
+        - Update-AzureRmVirtualHubVnetConnection
+    - 선택적 매개 변수로 다음 cmdlet이 업데이트되었습니다.
+        - New-AzureRmVirtualHubVnetConnection: 추가된 매개 변수 EnableInternetSecurity
+        - New-AzureRmVpnConnection: 추가된 매개 변수 EnableInternetSecurity
+        - Update-AzureRmVpnConnection: 추가된 매개 변수 EnableInternetSecurity
+        - New-AzureRmExpressRouteConnection: 추가된 매개 변수 EnableInternetSecurity
+        - Set-AzureRmExpressRouteConnection: 추가된 매개 변수 EnableInternetSecurity
+* TopLevel WebApplicationFirewall 정책 구성을 위한 지원 추가
+    - 추가된 새 cmdlet은 다음과 같습니다.
+        - New-AzApplicationGatewayFirewallPolicySetting
+        - New-AzApplicationGatewayFirewallPolicyExclusion
+        - New-AzApplicationGatewayFirewallPolicyManagedRuleGroupOverride
+        - New-AzApplicationGatewayFirewallPolicyManagedRuleOverride
+        - New-AzApplicationGatewayFirewallPolicyManagedRule
+        - New-AzApplicationGatewayFirewallPolicyManagedRuleSet
+    - 선택적 매개 변수로 다음 cmdlet이 업데이트되었습니다.
+        - New-AzApplicationGatewayFirewallPolicy: 추가된 매개 변수 PolicySetting, ManagedRule
+* CustomRule에서 Geo-Match 연산자를 위한 지원 추가됨
+    - FirewallCondition에서 연산자에 GeoMatch 추가됨
+* perListener 및 perSite 방화벽 규칙에 대한 지원 추가됨
+    - 선택적 매개 변수로 다음 cmdlet이 업데이트되었습니다.
+        - New-AzApplicationGatewayHttpListener: 추가된 매개 변수 FirewallPolicy, FirewallPolicyId
+        - New-AzApplicationGatewayPathRuleConfig: 추가된 매개 변수 FirewallPolicy, FirewallPolicyId
+* 'PSBastion'에서 이름이 AzureBastionSubnet인 필수 서브넷의 수정은 대소문자를 구분하지 않습니다.
+* Azure Firewall을 위한 네트워크 규칙의 대상 FQDN 및 NAT 규칙의 번역된 FQDN 지원
+* IpGroup의 최상위 리소스 RouteTables에 대한 지원 추가
+    - 추가된 새 cmdlet은 다음과 같습니다.
+        - New-AzIpGroup
+        - Remove-AzIpGroup
+        - Get-AzIpGroup
+        - Set-AzIpGroup
+
+#### <a name="azservicefabric"></a>Az.ServiceFabric
+* Add-AzVmssSecret에서 지원되기 때문에 Add-AzServiceFabricApplicationCertificate cmdlet이 제거되었습니다.
+
+#### <a name="azsql"></a>Az.Sql
+* Managed Instances에서 삭제된 데이터베이스의 복원을 위한 지원이 추가되었습니다.
+* 이전의 감사 cmdlet 코드가 사용되지 않습니다.
+* 사용되지 않는 별칭이 제거되었습니다.
+* Get-AzSqlDatabaseIndexRecommendations(대신 Get-AzSqlDatabaseIndexRecommendation 사용)
+* Get-AzSqlDatabaseRestorePoints(대신 Get-AzSqlDatabaseRestorePoint 사용)
+* Get-AzSqlDatabaseSecureConnectionPolicy cmdlet 제거
+* 사용되지 않는 취약성 평가 설정 cmdlet에 대한 별칭 제거
+* 지능형 위협 탐지 설정 cmdlet 사용 중단 
+* 데이터베이스의 열에 대한 민감도 권장 사항의 사용 여부를 제어하는 cmdlet이 추가되었습니다.
+
+#### <a name="azstorage"></a>Az.Storage
+* 스토리지 계정을 만들거나 업데이트할 때 큰 파일 공유 사용 지원
+    -  New-AzStorageAccount
+    -  Set-AzStorageAccount
+* 파일 핸들을 닫거나/가져올 때, DeletePending 상태의 개체로 인한 오류를 방지하기 위해 입력 경로가 파일 디렉터리인지 또는 파일인지를 확인하는 과정을 건너뜁니다.
+    -  Get-AzStorageFileHandle
+    -  Close-AzStorageFileHandle
+    
 ## <a name="280---october-2019"></a>2.8.0 - 2019년 10월
 ### <a name="general"></a>일반
 * Az.HealthcareApis 1.0.0 릴리스
@@ -56,18 +401,16 @@ ms.locfileid: "75035764"
 * 사소한 버그 수정: Get-AzIothub에서 subscriptionId를 반환하지 않습니다. 
 
 #### <a name="azmonitor"></a>Az.Monitor
-* New-AzActionGroupReceiver에 대한 새 작업 그룹 수신기로 -ItsmReceiver, -VoiceReceiver, -ArmRoleReceiver, -AzureFunctionReceiver, -LogicAppReceiver, -AutomationRunbookReceiver, -AzureAppPushReceiver가 추가되었습니다.
+* 작업 그룹에 대한 새 작업 그룹 수신기로 -ItsmReceiver, -VoiceReceiver, -ArmRoleReceiver, -AzureFunctionReceiver, -LogicAppReceiver, -AutomationRunbookReceiver, -AzureAppPushReceiver가 추가되었습니다.
 * 수신기에 사용하도록 설정된 일반 경고 스키마가 사용됩니다. SMS, Azure 앱 푸시, ITSM 및 음성 수신기에는 적용되지 않습니다.
-* 웹후크는 이제 Azure Active Directory 인증을 지원합니다.
+* 웹후크에서 이제 Azure Active Directory 인증을 지원합니다.
 
 #### <a name="aznetwork"></a>Az.Network
 * 서비스 엔드포인트 정책에 사용할 수 있는 별칭을 가져오기 위해 호출할 수 있는 새 Get-AzAvailableServiceAlias cmdlet이 추가되었습니다.
 * 트래픽 선택기를 Virtual Network 게이트웨이 연결에 추가할 수 있는 지원이 추가되었습니다.
     - 추가된 새 cmdlet은 다음과 같습니다.
-        - New-AzIpsecTrafficSelectorPolicy
-    - 선택적 매개 변수 -TrafficSelectorPolicies를 사용하여 cmdlet 업데이트
-        - New-AzVirtualNetworkGatewayConnection
-        - Set-AzVirtualNetworkGatewayConnection
+        - New-AzureRmTrafficSelectorPolicy
+    - cmdlet이 선택적인 -TrafficSelectorPolicies, -New-AzureRmVirtualNetworkGatewayConnection, -Set-AzureRmVirtualNetworkGatewayConnection 매개 변수로 업데이트되었습니다.
 * ESP 및 AH 프로토콜 지원이 네트워크 보안 규칙 구성에 추가되었습니다.
     - 다음 Cmdlet이 업데이트 되었습니다.
         - Add-AzNetworkSecurityRuleConfig
@@ -222,7 +565,7 @@ ms.locfileid: "75035764"
     -  Remove-AzRmStorageShare
 
 #### <a name="azwebsites"></a>Az.Websites
-* 앱을 새 ASP로 마이그레이션할 때 웹앱 태그가 삭제되는 문제가 수정되었습니다.
+* 앱을 새 ASP로 마이그레이션할 때 웹앱 태그가 삭제되는 이슈가 해결되었습니다.
 * Linux와 Windows에서 모두 작동하도록 Publish-AzureWebapp이 수정되었습니다.
 * 'Get-AzWebAppPublishingProfile' 참조 설명서의 예제가 업데이트되었습니다.
 

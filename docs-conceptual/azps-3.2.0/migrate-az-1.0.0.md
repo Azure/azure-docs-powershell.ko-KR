@@ -8,11 +8,11 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2019
 ms.openlocfilehash: e5121d61b0f5f68ff3e1f33d774e3533adfeb64f
-ms.sourcegitcommit: f9445d1525eac8c165637e1a80fbc92b1ab005c2
+ms.sourcegitcommit: e598dc45a26ff5a71112383252b350d750144a47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/16/2019
-ms.locfileid: "75035781"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75182199"
 ---
 # <a name="breaking-changes-for-az-100"></a>Az 1.0.0의 호환성이 손상되는 변경
 
