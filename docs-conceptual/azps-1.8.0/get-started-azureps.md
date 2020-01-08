@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 01/14/2019
-ms.openlocfilehash: a4c8792f2ff27e1b6d3cee97144c26455356b7fd
-ms.sourcegitcommit: e5b029312d17e12257b2b5351b808fdab0b4634c
+ms.openlocfilehash: c515fcbbe4dcb0b6578a56da137a77e3f843a2e6
+ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70386833"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75720543"
 ---
 # <a name="get-started-with-azure-powershell"></a>Azure PowerShell 시작
 
@@ -63,7 +63,7 @@ Get-Command -Verb Get -Noun AzVM* -Module Az.Compute
 
 일반 명령을 찾는 데 도움이 되도록 이 표에는 리소스 종류, 해당 Azure PowerShell 모듈 및 `Get-Command`와 함께 사용할 명사 접두사가 나열되어 있습니다.
 
-| 리소스 종류 | Azure PowerShell 모듈 | 명사 접두사 |
+| 리소스 유형 | Azure PowerShell 모듈 | 명사 접두사 |
 |---------------|-------------------------|----------------|
 | [리소스 그룹](/azure/azure-resource-manager/resource-group-overview) | [Az.Resources](/powershell/module/az.resources#resources) | `AzResourceGroup` |
 | [가상 머신](/azure/virtual-machines) | [Az.Compute](/powershell/module/az.compute#virtual_machines) | `AzVM` |
@@ -97,5 +97,5 @@ Azure PowerShell을 시작하려면 가상 머신 설정 및 쿼리 방법에 �
 * [Azure PowerShell을 사용하여 Azure 구독 관리](manage-subscriptions-azureps.md)
 * [Azure PowerShell로 서비스 주체 만들기](create-azure-service-principal-azureps.md)
 * 커뮤니티에서 도움말을 가져옵니다.
-  * [MSDN의 azure 포럼](http://go.microsoft.com/fwlink/p/?LinkId=320212)
-  * [스택 오버플로](http://go.microsoft.com/fwlink/?LinkId=320213)
+  * [MSDN의 azure 포럼](https://go.microsoft.com/fwlink/p/?LinkId=320212)
+  * [스택 오버플로](https://go.microsoft.com/fwlink/?LinkId=320213)

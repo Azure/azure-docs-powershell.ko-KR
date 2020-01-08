@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 11/15/2017
-ms.openlocfilehash: 77a66b3d218bbbfb230ed993b2a34eb3e845b1f1
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.openlocfilehash: 564a3e70e3f6d1803cdff9976bace119f6e20f48
+ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65534891"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75720398"
 ---
 # <a name="getting-started-with-azure-powershell"></a>Azure PowerShell 시작
 
@@ -50,7 +50,7 @@ Azure PowerShell은 명령줄에서 Azure 리소스를 관리하는 작업 및 A
 
 대화형으로 로그인합니다.
 
-1. `Login-AzureRmAccount`을 입력합니다. Azure 자격 증명을 묻는 대화 상자가 표시됩니다. '-EnvironmentName' 옵션을 사용하면 Azure China 또는 Azure Germany에 인증할 수 있습니다.
+1. `Login-AzureRmAccount`. Azure 자격 증명을 묻는 대화 상자가 표시됩니다. '-EnvironmentName' 옵션을 사용하면 Azure China 또는 Azure Germany에 인증할 수 있습니다.
 
    예: Login-AzureRmAccount -EnvironmentName AzureChinaCloud
 
@@ -358,7 +358,7 @@ Are you sure you want to remove resource group 'myResourceGroup'
 
 이 작업을 완료하는 데 몇 분 정도 걸릴 수 있습니다.
 
-## <a name="get-samples"></a>샘플 가져오기
+## <a name="get-samples"></a>샘플 받기
 
 Azure PowerShell을 사용하는 방법에 대해 자세히 알아보려면 [Linux VM](/azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json), [Windows VM](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json), [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json) 및 [SQL Database](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json)에 대한 가장 일반적인 스크립트를 확인하세요.
 
@@ -367,7 +367,7 @@ Azure PowerShell을 사용하는 방법에 대해 자세히 알아보려면 [Lin
 * [Azure PowerShell로 로그인](authenticate-azureps.md)
 * [Azure PowerShell을 사용하여 Azure 구독 관리](manage-subscriptions-azureps.md)
 * [Azure PowerShell을 사용하여 Azure에서 서비스 주체 만들기](create-azure-service-principal-azureps.md)
-* 이전 릴리스에서 마이그레이션하는 방법은 릴리스 노트를 참조합니다.[ https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes ](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes)
+* 이전 릴리스에서 마이그레이션하는 방법은 릴리스 노트를 참조합니다.[https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes)
 * 커뮤니티에서 도움말을 가져옵니다.
-  * [MSDN의 azure 포럼](http://go.microsoft.com/fwlink/p/?LinkId=320212)
-  * [stackoverflow](http://go.microsoft.com/fwlink/?LinkId=320213)
+  * [MSDN의 azure 포럼](https://go.microsoft.com/fwlink/p/?LinkId=320212)
+  * [stackoverflow](https://go.microsoft.com/fwlink/?LinkId=320213)

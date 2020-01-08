@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/11/2018
-ms.openlocfilehash: a6256bf17d9f94cf362138275c577e74a1210e99
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.openlocfilehash: 61d6d19336dd0e1885570c3a4e8874a849317fa3
+ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65534942"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75722427"
 ---
 # <a name="get-started-with-azure-powershell"></a>Azure PowerShell 시작
 
@@ -50,7 +50,7 @@ Azure PowerShell은 명령줄에서 Azure 리소스를 관리하는 작업 및 A
 
 대화형으로 로그인합니다.
 
-1. `Connect-AzureRmAccount`을 입력합니다. Azure 자격 증명을 묻는 대화 상자가 표시됩니다. '-Environment' 옵션을 사용하면 Azure China 또는 Azure Germany에 인증할 수 있습니다.
+1. `Connect-AzureRmAccount`. Azure 자격 증명을 묻는 대화 상자가 표시됩니다. '-Environment' 옵션을 사용하면 Azure China 또는 Azure Germany에 인증할 수 있습니다.
 
    예: Connect-AzureRmAccount -Environment AzureChinaCloud
 
@@ -372,7 +372,7 @@ Azure PowerShell을 사용하는 방법에 대해 자세히 알아보려면 [Lin
 * [Azure PowerShell로 로그인](authenticate-azureps.md)
 * [Azure PowerShell을 사용하여 Azure 구독 관리](manage-subscriptions-azureps.md)
 * [Azure PowerShell을 사용하여 Azure에서 서비스 주체 만들기](create-azure-service-principal-azureps.md)
-* 이전 릴리스에서 마이그레이션하는 방법은 릴리스 노트를 참조합니다.[ https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes ](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes)
+* 이전 릴리스에서 마이그레이션하는 방법은 릴리스 노트를 참조합니다.[https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes)
 * 커뮤니티에서 도움말을 가져옵니다.
-  * [MSDN의 azure 포럼](http://go.microsoft.com/fwlink/p/?LinkId=320212)
-  * [stackoverflow](http://go.microsoft.com/fwlink/?LinkId=320213)
+  * [MSDN의 azure 포럼](https://go.microsoft.com/fwlink/p/?LinkId=320212)
+  * [stackoverflow](https://go.microsoft.com/fwlink/?LinkId=320213)

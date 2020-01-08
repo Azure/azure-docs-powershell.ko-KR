@@ -12,7 +12,7 @@ ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
-ms.locfileid: "75720449"
+ms.locfileid: "75722043"
 ---
 # <a name="get-started-with-azure-powershell"></a>Azure PowerShell 시작
 

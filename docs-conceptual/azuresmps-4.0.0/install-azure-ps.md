@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/06/2017
-ms.openlocfilehash: 1f859dcbaca88e28ebc0814513b7f4ee35610dc2
-ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
+ms.openlocfilehash: a4911e72f687c07b31805c07fd23263a6b7f33b4
+ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68863225"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75718800"
 ---
 # <a name="installing-the-azure-powershell-service-management-module"></a>Azure PowerShell Service Management 모듈 설치
 
@@ -74,7 +74,7 @@ Azure PowerShell 모듈은 자주 업데이트됩니다. 모듈에 있지 않은
 
 Azure에서 일반적인 일부 작업을 자동화할 수 있는 샘플 스크립트는 [Windows Azure 스크립트 센터](http://www.windowsazure.com/documentation/scripts/)를 참조하세요.
 
-Windows PowerShell을 설치, 학습, 사용 및 사용자 지정하는 방법에 대한 일반적인 정보는 [Windows PowerShell을 사용하여 스크립팅](http://go.microsoft.com/fwlink/p/?linkid=320210)을 참조하세요.
+Windows PowerShell을 설치, 학습, 사용 및 사용자 지정하는 방법에 대한 일반적인 정보는 [Windows PowerShell을 사용하여 스크립팅](https://go.microsoft.com/fwlink/p/?linkid=320210)을 참조하세요.
 
 ### <a name="how-to-get-powershellget"></a>PowerShellGet을 가져오는 방법
 
@@ -82,7 +82,7 @@ Windows PowerShell을 설치, 학습, 사용 및 사용자 지정하는 방법�
 |---|---|
 |Windows 10 또는 Windows Server 2016을 사용합니다.|OS에 포함된 WMF(Windows Management Framework) 5.0으로 빌드됩니다.|
 |PowerShell 5로 업그레이드하려고 합니다.|[최신 버전의 WMF 설치](https://www.microsoft.com/download/details.aspx?id=54616)|
-|PowerShell 3 또는 PowerShell 4를 사용하는 Windows 버전에서 실행됩니다.|[PackageManagement 모듈 가져오기](http://go.microsoft.com/fwlink/?LinkID=746217)|
+|PowerShell 3 또는 PowerShell 4를 사용하는 Windows 버전에서 실행됩니다.|[PackageManagement 모듈 가져오기](https://go.microsoft.com/fwlink/?LinkID=746217)|
 
 <div id="helpmechoose"/>
 

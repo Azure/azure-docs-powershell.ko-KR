@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/06/2017
-ms.openlocfilehash: d41e7ce2faac6a82b63ed173b5b64b85b56577c0
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.openlocfilehash: c0ac4f6cfb803519b8dd711d3cca0d4a4f7e6f8b
+ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65535082"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75722461"
 ---
 # <a name="other-installation-methods"></a>다른 설치 방법
 
@@ -23,7 +23,7 @@ Azure PowerShell에는 여러 설치 방법이 있습니다. PowerShell 갤러�
 ## <a name="install-on-windows-using-the-web-platform-installer"></a>웹 플랫폼 설치 관리자를 사용하여 Windows에 설치
 
 WebPI에서 최신 Azure PowerShell을 설치하는 것은 이전 버전과 같습니다.
-[Azure PowerShell WebPI 패키지](http://aka.ms/webpi-azps)를 다운로드하고 설치를 시작합니다.
+[Azure PowerShell WebPI 패키지](https://aka.ms/webpi-azps)를 다운로드하고 설치를 시작합니다.
 
 > [!NOTE]
 > 이전에 PowerShell 갤러리에서 Azure 모듈을 설치한 경우에는 설치 관리자가 해당 모듈을 자동으로 제거합니다. 한 가지 버전의 Azure PowerShell을 설치하여 사용자 환경을 단순화합니다. 그러나 여러 버전이 동시에 설치된 시나리오가 있습니다.
@@ -56,7 +56,7 @@ At line:1 char:1
     + FullyQualifiedErrorId : CommandNotFoundException
 ```
 
-컴퓨터를 다시 시작하거나 정규화된 경로를 사용하는 모듈을 가져와서 이 오류를 해결할 수 있습니다. 예:
+컴퓨터를 다시 시작하거나 정규화된 경로를 사용하는 모듈을 가져와서 이 오류를 해결할 수 있습니다. 다음은 그 예입니다.
 
 ```powershell-interactive
 Import-Module "$env:ProgramFiles(x86)\Microsoft SDKs\Azure\PowerShell\AzureRM.psd1"

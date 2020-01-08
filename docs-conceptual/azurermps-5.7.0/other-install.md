@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/20/2018
-ms.openlocfilehash: fe35fccd7994d7c3c3587096263a50af598e8651
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.openlocfilehash: aaba0ce38129b96e3d691f1a9d9cfdc929188ffd
+ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65535034"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75722410"
 ---
 # <a name="install-azure-powershell-on-windows-with-msi-or-web-platform-installer"></a>MSI 또는 웹 플랫폼 설치 관리자를 사용하여 Windows에 Azure PowerShell 설치
 
@@ -42,7 +42,7 @@ Azure 로그인을 세션 간에 유지하는 방법을 알아보려면 [PowerSh
 
 ## <a name="install-or-update-on-windows-using-the-web-platform-installer"></a>웹 플랫폼 설치 관리자를 사용하여 Windows에 설치 및 업데이트
 
-[Azure PowerShell WebPI 패키지](http://aka.ms/webpi-azps)를 다운로드하고 설치를 시작합니다. 이전 버전의 Azure 모듈이 MSI로부터 또는 WebPI로 설치된 경우 설치 관리자에서 자동으로 제거합니다. 모듈이 `${env:ProgramFiles}\WindowsPowerShell\Modules`에 설치됩니다. `AzureRM` 및 `Azure` 모듈 모두 설치됩니다.
+[Azure PowerShell WebPI 패키지](https://aka.ms/webpi-azps)를 다운로드하고 설치를 시작합니다. 이전 버전의 Azure 모듈이 MSI로부터 또는 WebPI로 설치된 경우 설치 관리자에서 자동으로 제거합니다. 모듈이 `${env:ProgramFiles}\WindowsPowerShell\Modules`에 설치됩니다. `AzureRM` 및 `Azure` 모듈 모두 설치됩니다.
 
 > [!NOTE]
 > Azure 클래식 배포 모델을 사용하는 경우 `Azure` 모듈만 사용합니다.
