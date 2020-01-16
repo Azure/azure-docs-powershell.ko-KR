@@ -6,13 +6,13 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 10/15/2019
-ms.openlocfilehash: fb934ed0f8bef5e2aff715debe5d406d54abf24f
-ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
+ms.date: 01/09/2020
+ms.openlocfilehash: 3806a1c609a71c53c0bddc5bafd51d845c0c296e
+ms.sourcegitcommit: 16904e0a72c55fb81248e0252769defb86c50f36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75718987"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831647"
 ---
 # <a name="azure-powershell-release-notes"></a>Azure PowerShell 릴리스 정보
 
@@ -33,7 +33,7 @@ ms.locfileid: "75718987"
 * 'Get-AzDataBoxEdgeStorageContainer' cmdlet 추가됨
   - Edge 스토리지 컨테이너 가져오기
 * 'New-AzDataBoxEdgeStorageContainer' cmdlet 추가됨
-  - Edge 스토리지 컨테이너 만들기
+  - 새 Edge 스토리지 컨테이너 만들기
 * 'Remove-AzDataBoxEdgeStorageContainer' cmdlet 추가됨
   - Edge 스토리지 컨테이너 제거
 * 'Invoke-AzDataBoxEdgeStorageContainer' cmdlet 추가됨
