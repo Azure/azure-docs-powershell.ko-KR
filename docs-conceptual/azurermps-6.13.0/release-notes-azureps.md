@@ -141,7 +141,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 * 복구 서비스에 Azure 파일 공유 지원 추가.
 
 #### <a name="azurermresources"></a>AzureRM.Resources
-* [https://github.com/Azure/azure-powershell/issues/7402](https://github.com/Azure/azure-powershell/issues/7402 ) 에 대한 수정
+* https://github.com/Azure/azure-powershell/issues/7402 에 대한 수정
     - 'Get-AzureRmResource'에 대해 '-ResourceId' 매개 변수를 사용하여 리소스 나열 허용
 
 #### <a name="azurermservicebus"></a>AzureRM.ServiceBus
