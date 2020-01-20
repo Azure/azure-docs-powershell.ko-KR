@@ -15,1041 +15,1041 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 05/11/2019
 ms.locfileid: "65534448"
 ---
-# <a name="release-notes"></a><span data-ttu-id="195ef-103">릴리스 정보</span><span class="sxs-lookup"><span data-stu-id="195ef-103">Release notes</span></span>
+# <a name="release-notes"></a><span data-ttu-id="e709a-103">릴리스 정보</span><span class="sxs-lookup"><span data-stu-id="e709a-103">Release notes</span></span>
 
 [!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
 
-<span data-ttu-id="195ef-104">Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-104">This is a list of changes made to Azure PowerShell in this release.</span></span>
+<span data-ttu-id="e709a-104">Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-104">This is a list of changes made to Azure PowerShell in this release.</span></span>
 
 ---
-## <a name="6130---november-2018"></a><span data-ttu-id="195ef-105">6.13.0 - 2018년 11월</span><span class="sxs-lookup"><span data-stu-id="195ef-105">6.13.0 - November 2018</span></span>
-#### <a name="azurermprofile"></a><span data-ttu-id="195ef-106">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="195ef-106">AzureRM.Profile</span></span>
-* <span data-ttu-id="195ef-107">ClientRuntime의 최신 버전을 사용하도록 일반적인 코드를 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-107">Update common code to use latest version of ClientRuntime</span></span>
+## <a name="6130---november-2018"></a><span data-ttu-id="e709a-105">6.13.0 - 2018년 11월</span><span class="sxs-lookup"><span data-stu-id="e709a-105">6.13.0 - November 2018</span></span>
+#### <a name="azurermprofile"></a><span data-ttu-id="e709a-106">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="e709a-106">AzureRM.Profile</span></span>
+* <span data-ttu-id="e709a-107">ClientRuntime의 최신 버전을 사용하도록 일반적인 코드를 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-107">Update common code to use latest version of ClientRuntime</span></span>
 
-#### <a name="azurermapimanagement"></a><span data-ttu-id="195ef-108">AzureRM.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="195ef-108">AzureRM.ApiManagement</span></span>
-* <span data-ttu-id="195ef-109">형식 매핑 문제에 대한 종속성 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-109">Update dependencies for type mapping issue</span></span>
+#### <a name="azurermapimanagement"></a><span data-ttu-id="e709a-108">AzureRM.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="e709a-108">AzureRM.ApiManagement</span></span>
+* <span data-ttu-id="e709a-109">형식 매핑 문제에 대한 종속성 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-109">Update dependencies for type mapping issue</span></span>
 
-#### <a name="azurermautomation"></a><span data-ttu-id="195ef-110">AzureRM.Automation</span><span class="sxs-lookup"><span data-stu-id="195ef-110">AzureRM.Automation</span></span>
-* <span data-ttu-id="195ef-111">Azure Automation cmdlet 기반 Swagger</span><span class="sxs-lookup"><span data-stu-id="195ef-111">Swagger based Azure Automation cmdlets</span></span>
-* <span data-ttu-id="195ef-112">업데이트 관리 cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-112">Added Update Management cmdlets</span></span>
-* <span data-ttu-id="195ef-113">소스 제어 cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-113">Added Source Control cmdlets</span></span>
-* <span data-ttu-id="195ef-114">Remove-AzureRmAutomationHybridWorkerGroup cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-114">Added Remove-AzureRmAutomationHybridWorkerGroup cmdlet</span></span>
-* <span data-ttu-id="195ef-115">DSC 노드 등록 명령 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-115">Fixed the DSC Register Node command</span></span>
+#### <a name="azurermautomation"></a><span data-ttu-id="e709a-110">AzureRM.Automation</span><span class="sxs-lookup"><span data-stu-id="e709a-110">AzureRM.Automation</span></span>
+* <span data-ttu-id="e709a-111">Azure Automation cmdlet 기반 Swagger</span><span class="sxs-lookup"><span data-stu-id="e709a-111">Swagger based Azure Automation cmdlets</span></span>
+* <span data-ttu-id="e709a-112">업데이트 관리 cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-112">Added Update Management cmdlets</span></span>
+* <span data-ttu-id="e709a-113">소스 제어 cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-113">Added Source Control cmdlets</span></span>
+* <span data-ttu-id="e709a-114">Remove-AzureRmAutomationHybridWorkerGroup cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-114">Added Remove-AzureRmAutomationHybridWorkerGroup cmdlet</span></span>
+* <span data-ttu-id="e709a-115">DSC 노드 등록 명령 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-115">Fixed the DSC Register Node command</span></span>
 
-#### <a name="azurermcompute"></a><span data-ttu-id="195ef-116">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="195ef-116">AzureRM.Compute</span></span>
-* <span data-ttu-id="195ef-117">SystemAssigned ID에 대한 ID 문제 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-117">Fixed identity issue for SystemAssigned identity</span></span>
-* <span data-ttu-id="195ef-118">형식 매핑 문제에 대한 종속성 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-118">Update dependencies for type mapping issue</span></span>
+#### <a name="azurermcompute"></a><span data-ttu-id="e709a-116">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="e709a-116">AzureRM.Compute</span></span>
+* <span data-ttu-id="e709a-117">SystemAssigned ID에 대한 ID 문제 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-117">Fixed identity issue for SystemAssigned identity</span></span>
+* <span data-ttu-id="e709a-118">형식 매핑 문제에 대한 종속성 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-118">Update dependencies for type mapping issue</span></span>
 
-#### <a name="azurermcontainerinstance"></a><span data-ttu-id="195ef-119">AzureRM.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="195ef-119">AzureRM.ContainerInstance</span></span>
-* <span data-ttu-id="195ef-120">형식 매핑 문제에 대한 종속성 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-120">Update dependencies for type mapping issue</span></span>
+#### <a name="azurermcontainerinstance"></a><span data-ttu-id="e709a-119">AzureRM.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="e709a-119">AzureRM.ContainerInstance</span></span>
+* <span data-ttu-id="e709a-120">형식 매핑 문제에 대한 종속성 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-120">Update dependencies for type mapping issue</span></span>
 
-#### <a name="azurermmarketplaceordering"></a><span data-ttu-id="195ef-121">AzureRM.MarketplaceOrdering</span><span class="sxs-lookup"><span data-stu-id="195ef-121">AzureRM.MarketplaceOrdering</span></span>
-* <span data-ttu-id="195ef-122">마켓플레이스 cmdlet에 대한 예제 설명 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-122">update the examples description for marketplace cmdlets</span></span>
+#### <a name="azurermmarketplaceordering"></a><span data-ttu-id="e709a-121">AzureRM.MarketplaceOrdering</span><span class="sxs-lookup"><span data-stu-id="e709a-121">AzureRM.MarketplaceOrdering</span></span>
+* <span data-ttu-id="e709a-122">마켓플레이스 cmdlet에 대한 예제 설명 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-122">update the examples description for marketplace cmdlets</span></span>
 
-#### <a name="azurermnetwork"></a><span data-ttu-id="195ef-123">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="195ef-123">AzureRM.Network</span></span>
-* <span data-ttu-id="195ef-124">New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-124">Added cmdlet New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError</span></span>
-* <span data-ttu-id="195ef-125">지원되는 AzureFirewall 네트워크 프로토콜에 ICMP 다시 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-125">Added ICMP back to supported AzureFirewall Network Protocols</span></span>
-* <span data-ttu-id="195ef-126">Test-AzureRmNetworkWatcherConnectivity cmdlet을 업데이트하여 대상 ID, 주소 및 포트 유효성 검사를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-126">Update cmdlet Test-AzureRmNetworkWatcherConnectivity, add validation on destination id, address and port.</span></span> 
-* <span data-ttu-id="195ef-127">VirtualNetwork 맵의 메모리 사용 문제 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-127">Fix issues with memory usage in VirtualNetwork map</span></span>
+#### <a name="azurermnetwork"></a><span data-ttu-id="e709a-123">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="e709a-123">AzureRM.Network</span></span>
+* <span data-ttu-id="e709a-124">New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-124">Added cmdlet New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError</span></span>
+* <span data-ttu-id="e709a-125">지원되는 AzureFirewall 네트워크 프로토콜에 ICMP 다시 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-125">Added ICMP back to supported AzureFirewall Network Protocols</span></span>
+* <span data-ttu-id="e709a-126">Test-AzureRmNetworkWatcherConnectivity cmdlet을 업데이트하여 대상 ID, 주소 및 포트 유효성 검사를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-126">Update cmdlet Test-AzureRmNetworkWatcherConnectivity, add validation on destination id, address and port.</span></span> 
+* <span data-ttu-id="e709a-127">VirtualNetwork 맵의 메모리 사용 문제 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-127">Fix issues with memory usage in VirtualNetwork map</span></span>
 
-#### <a name="azurermrecoveryservicesbackup"></a><span data-ttu-id="195ef-128">AzureRM.RecoveryServices.Backup</span><span class="sxs-lookup"><span data-stu-id="195ef-128">AzureRM.RecoveryServices.Backup</span></span>
-* <span data-ttu-id="195ef-129">보호된 파일 공유에 대한 정책을 수정하는 것에 대해 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-129">Fix for modifying policy for a protected file share.</span></span>
-* <span data-ttu-id="195ef-130">정책 표준 시간대를 대문자로 변환했습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-130">Converted policy timezone to uppercase.</span></span>
+#### <a name="azurermrecoveryservicesbackup"></a><span data-ttu-id="e709a-128">AzureRM.RecoveryServices.Backup</span><span class="sxs-lookup"><span data-stu-id="e709a-128">AzureRM.RecoveryServices.Backup</span></span>
+* <span data-ttu-id="e709a-129">보호된 파일 공유에 대한 정책을 수정하는 것에 대해 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-129">Fix for modifying policy for a protected file share.</span></span>
+* <span data-ttu-id="e709a-130">정책 표준 시간대를 대문자로 변환했습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-130">Converted policy timezone to uppercase.</span></span>
 
-#### <a name="azurermrecoveryservicessiterecovery"></a><span data-ttu-id="195ef-131">AzureRM.RecoveryServices.SiteRecovery</span><span class="sxs-lookup"><span data-stu-id="195ef-131">AzureRM.RecoveryServices.SiteRecovery</span></span>
-* <span data-ttu-id="195ef-132">New-AzureRmRecoveryServicesAsrProtectableItem의 예제 정정</span><span class="sxs-lookup"><span data-stu-id="195ef-132">Corrected example in New-AzureRmRecoveryServicesAsrProtectableItem</span></span>
-* <span data-ttu-id="195ef-133">형식 매핑 문제에 대한 종속성 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-133">Update dependencies for type mapping issue</span></span>
+#### <a name="azurermrecoveryservicessiterecovery"></a><span data-ttu-id="e709a-131">AzureRM.RecoveryServices.SiteRecovery</span><span class="sxs-lookup"><span data-stu-id="e709a-131">AzureRM.RecoveryServices.SiteRecovery</span></span>
+* <span data-ttu-id="e709a-132">New-AzureRmRecoveryServicesAsrProtectableItem의 예제 정정</span><span class="sxs-lookup"><span data-stu-id="e709a-132">Corrected example in New-AzureRmRecoveryServicesAsrProtectableItem</span></span>
+* <span data-ttu-id="e709a-133">형식 매핑 문제에 대한 종속성 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-133">Update dependencies for type mapping issue</span></span>
 
-#### <a name="azurermrelay"></a><span data-ttu-id="195ef-134">AzureRM.Relay</span><span class="sxs-lookup"><span data-stu-id="195ef-134">AzureRM.Relay</span></span>
-* <span data-ttu-id="195ef-135">선택적 매개 변수 -KeyValue를 New-AzureRmRelayKey cmdlet에 추가하여 사용자가 KeyValue를 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-135">Added optional Parameter -KeyValue to New-AzureRmRelayKey cmdlet, which enables user to provide KeyValue.</span></span>
+#### <a name="azurermrelay"></a><span data-ttu-id="e709a-134">AzureRM.Relay</span><span class="sxs-lookup"><span data-stu-id="e709a-134">AzureRM.Relay</span></span>
+* <span data-ttu-id="e709a-135">선택적 매개 변수 -KeyValue를 New-AzureRmRelayKey cmdlet에 추가하여 사용자가 KeyValue를 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-135">Added optional Parameter -KeyValue to New-AzureRmRelayKey cmdlet, which enables user to provide KeyValue.</span></span>
 
-#### <a name="azurermresources"></a><span data-ttu-id="195ef-136">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="195ef-136">AzureRM.Resources</span></span>
-* <span data-ttu-id="195ef-137">`New-AzureRmPolicyAssignment` 및 `Set-AzureRmPolicyAssignment`의 자원 ID 관련 매개 변수에 대한 도움말 문서를 업데이트함</span><span class="sxs-lookup"><span data-stu-id="195ef-137">Update help documentation for resource identity related parameters in `New-AzureRmPolicyAssignment` and `Set-AzureRmPolicyAssignment`</span></span>
-* <span data-ttu-id="195ef-138">-Metadata를 사용하는 New-AzureRmPolicyDefinition에 대한 예제 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-138">Add an example for New-AzureRmPolicyDefinition that uses -Metadata</span></span>
-* <span data-ttu-id="195ef-139">NetStandard의 태그 키에서 대소문자 보존을 허용하도록 수정: #7678 #7703</span><span class="sxs-lookup"><span data-stu-id="195ef-139">Fix to allow case preservation in Tag keys in NetStandard: #7678 #7703</span></span>
+#### <a name="azurermresources"></a><span data-ttu-id="e709a-136">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="e709a-136">AzureRM.Resources</span></span>
+* <span data-ttu-id="e709a-137">`New-AzureRmPolicyAssignment` 및 `Set-AzureRmPolicyAssignment`의 자원 ID 관련 매개 변수에 대한 도움말 문서를 업데이트함</span><span class="sxs-lookup"><span data-stu-id="e709a-137">Update help documentation for resource identity related parameters in `New-AzureRmPolicyAssignment` and `Set-AzureRmPolicyAssignment`</span></span>
+* <span data-ttu-id="e709a-138">-Metadata를 사용하는 New-AzureRmPolicyDefinition에 대한 예제 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-138">Add an example for New-AzureRmPolicyDefinition that uses -Metadata</span></span>
+* <span data-ttu-id="e709a-139">NetStandard의 태그 키에서 대소문자 보존을 허용하도록 수정: #7678 #7703</span><span class="sxs-lookup"><span data-stu-id="e709a-139">Fix to allow case preservation in Tag keys in NetStandard: #7678 #7703</span></span>
 
-#### <a name="azurermservicefabric"></a><span data-ttu-id="195ef-140">AzureRM.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="195ef-140">AzureRM.ServiceFabric</span></span>
-* <span data-ttu-id="195ef-141">향후 호환성이 손상되는 변경에 대한 사용 중단 메시지 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-141">Add deprecation messages for upcoming breaking changes</span></span>
+#### <a name="azurermservicefabric"></a><span data-ttu-id="e709a-140">AzureRM.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="e709a-140">AzureRM.ServiceFabric</span></span>
+* <span data-ttu-id="e709a-141">향후 호환성이 손상되는 변경에 대한 사용 중단 메시지 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-141">Add deprecation messages for upcoming breaking changes</span></span>
 
-#### <a name="azurermsql"></a><span data-ttu-id="195ef-142">AzureRM.Sql</span><span class="sxs-lookup"><span data-stu-id="195ef-142">AzureRM.Sql</span></span>
-* <span data-ttu-id="195ef-143">Azure Sql Database Managed Instance 및 Azure Sql Managed Database에 CRUD 작업을 위한 새 cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-143">Added new cmdlets for CRUD operations on Azure Sql Database Managed Instance and Azure Sql Managed Database</span></span>
-    - <span data-ttu-id="195ef-144">Get-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="195ef-144">Get-AzureRmSqlInstance</span></span>
-    - <span data-ttu-id="195ef-145">New-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="195ef-145">New-AzureRmSqlInstance</span></span>
-    - <span data-ttu-id="195ef-146">Set-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="195ef-146">Set-AzureRmSqlInstance</span></span>
-    - <span data-ttu-id="195ef-147">Remove-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="195ef-147">Remove-AzureRmSqlInstance</span></span>
-    - <span data-ttu-id="195ef-148">Get-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="195ef-148">Get-AzureRmSqlInstanceDatabase</span></span>
-    - <span data-ttu-id="195ef-149">New-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="195ef-149">New-AzureRmSqlInstanceDatabase</span></span>
-    - <span data-ttu-id="195ef-150">Restore-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="195ef-150">Restore-AzureRmSqlInstanceDatabase</span></span>
-    - <span data-ttu-id="195ef-151">Remove-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="195ef-151">Remove-AzureRmSqlInstanceDatabase</span></span>
-* <span data-ttu-id="195ef-152">서버 또는 데이터베이스에서 확장 감사 정책 관리를 활성화했습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-152">Enabled Extended Auditing Policy management on a server or a database.</span></span>
-    - <span data-ttu-id="195ef-153">새 매개 변수(PredicateExpression)가 감사 로그 필터링을 사용하도록 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-153">New parameter (PredicateExpression) was added to enable filtering of audit logs.</span></span>
-    - <span data-ttu-id="195ef-154">Cmdlet이 레거시 클라이언트 대신 SQL 클라이언트를 사용하도록 수정되었습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-154">Cmdlets were modified to use SQL clients instead of Legacy clients.</span></span>
-    - <span data-ttu-id="195ef-155">Set-AzureRmSqlServerAuditing.</span><span class="sxs-lookup"><span data-stu-id="195ef-155">Set-AzureRmSqlServerAuditing.</span></span>
-    - <span data-ttu-id="195ef-156">Get-AzureRmSqlServerAuditing.</span><span class="sxs-lookup"><span data-stu-id="195ef-156">Get-AzureRmSqlServerAuditing.</span></span>
-    - <span data-ttu-id="195ef-157">Set-AzureRmSqlDatabaseAuditing.</span><span class="sxs-lookup"><span data-stu-id="195ef-157">Set-AzureRmSqlDatabaseAuditing.</span></span>
-    - <span data-ttu-id="195ef-158">Get-AzureRmSqlDatabaseAuditing.</span><span class="sxs-lookup"><span data-stu-id="195ef-158">Get-AzureRmSqlDatabaseAuditing.</span></span>
-* <span data-ttu-id="195ef-159">스토리지 계정 이름 매개 변수가 설정된 Update-AzureRmSqlDatabaseVulnerabilityAssessmentSettings를 사용할 때의 문제 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-159">Fixed issue with using Update-AzureRmSqlDatabaseVulnerabilityAssessmentSettings with storage account name parameter set</span></span>
+#### <a name="azurermsql"></a><span data-ttu-id="e709a-142">AzureRM.Sql</span><span class="sxs-lookup"><span data-stu-id="e709a-142">AzureRM.Sql</span></span>
+* <span data-ttu-id="e709a-143">Azure Sql Database Managed Instance 및 Azure Sql Managed Database에 CRUD 작업을 위한 새 cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-143">Added new cmdlets for CRUD operations on Azure Sql Database Managed Instance and Azure Sql Managed Database</span></span>
+    - <span data-ttu-id="e709a-144">Get-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="e709a-144">Get-AzureRmSqlInstance</span></span>
+    - <span data-ttu-id="e709a-145">New-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="e709a-145">New-AzureRmSqlInstance</span></span>
+    - <span data-ttu-id="e709a-146">Set-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="e709a-146">Set-AzureRmSqlInstance</span></span>
+    - <span data-ttu-id="e709a-147">Remove-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="e709a-147">Remove-AzureRmSqlInstance</span></span>
+    - <span data-ttu-id="e709a-148">Get-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="e709a-148">Get-AzureRmSqlInstanceDatabase</span></span>
+    - <span data-ttu-id="e709a-149">New-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="e709a-149">New-AzureRmSqlInstanceDatabase</span></span>
+    - <span data-ttu-id="e709a-150">Restore-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="e709a-150">Restore-AzureRmSqlInstanceDatabase</span></span>
+    - <span data-ttu-id="e709a-151">Remove-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="e709a-151">Remove-AzureRmSqlInstanceDatabase</span></span>
+* <span data-ttu-id="e709a-152">서버 또는 데이터베이스에서 확장 감사 정책 관리를 활성화했습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-152">Enabled Extended Auditing Policy management on a server or a database.</span></span>
+    - <span data-ttu-id="e709a-153">새 매개 변수(PredicateExpression)가 감사 로그 필터링을 사용하도록 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-153">New parameter (PredicateExpression) was added to enable filtering of audit logs.</span></span>
+    - <span data-ttu-id="e709a-154">Cmdlet이 레거시 클라이언트 대신 SQL 클라이언트를 사용하도록 수정되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-154">Cmdlets were modified to use SQL clients instead of Legacy clients.</span></span>
+    - <span data-ttu-id="e709a-155">Set-AzureRmSqlServerAuditing.</span><span class="sxs-lookup"><span data-stu-id="e709a-155">Set-AzureRmSqlServerAuditing.</span></span>
+    - <span data-ttu-id="e709a-156">Get-AzureRmSqlServerAuditing.</span><span class="sxs-lookup"><span data-stu-id="e709a-156">Get-AzureRmSqlServerAuditing.</span></span>
+    - <span data-ttu-id="e709a-157">Set-AzureRmSqlDatabaseAuditing.</span><span class="sxs-lookup"><span data-stu-id="e709a-157">Set-AzureRmSqlDatabaseAuditing.</span></span>
+    - <span data-ttu-id="e709a-158">Get-AzureRmSqlDatabaseAuditing.</span><span class="sxs-lookup"><span data-stu-id="e709a-158">Get-AzureRmSqlDatabaseAuditing.</span></span>
+* <span data-ttu-id="e709a-159">스토리지 계정 이름 매개 변수가 설정된 Update-AzureRmSqlDatabaseVulnerabilityAssessmentSettings를 사용할 때의 문제 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-159">Fixed issue with using Update-AzureRmSqlDatabaseVulnerabilityAssessmentSettings with storage account name parameter set</span></span>
 
-## <a name="6120---november-2018"></a><span data-ttu-id="195ef-160">6.12.0 - 2018년 11월</span><span class="sxs-lookup"><span data-stu-id="195ef-160">6.12.0 - November 2018</span></span>
-#### <a name="azurermprofile"></a><span data-ttu-id="195ef-161">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="195ef-161">AzureRM.Profile</span></span>
-* <span data-ttu-id="195ef-162">ClientRuntime의 최신 버전을 사용하도록 일반적인 코드를 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-162">Update common code to use latest version of ClientRuntime</span></span>
-* <span data-ttu-id="195ef-163">Connect-AzureRmAccount cmdlet의 매개 변수 TenantId 이름을 Tenant로 바꾸고 TenantId의 별칭을 추가합니다</span><span class="sxs-lookup"><span data-stu-id="195ef-163">Rename param TenantId in cmdlet Connect-AzureRmAccount to Tenant and add an alias for TenantId</span></span>
-* <span data-ttu-id="195ef-164">Connect-AzureRmAccount의 업데이트된 TenantId 설명</span><span class="sxs-lookup"><span data-stu-id="195ef-164">Updated TenantId description for Connect-AzureRmAccount</span></span>
-* <span data-ttu-id="195ef-165">테넌트 도메인을 제공할 때 실패한 로그인에 대한 오류 메시지 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-165">Fix error message for failed login when providing tenant domain</span></span>
+## <a name="6120---november-2018"></a><span data-ttu-id="e709a-160">6.12.0 - 2018년 11월</span><span class="sxs-lookup"><span data-stu-id="e709a-160">6.12.0 - November 2018</span></span>
+#### <a name="azurermprofile"></a><span data-ttu-id="e709a-161">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="e709a-161">AzureRM.Profile</span></span>
+* <span data-ttu-id="e709a-162">ClientRuntime의 최신 버전을 사용하도록 일반적인 코드를 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-162">Update common code to use latest version of ClientRuntime</span></span>
+* <span data-ttu-id="e709a-163">Connect-AzureRmAccount cmdlet의 매개 변수 TenantId 이름을 Tenant로 바꾸고 TenantId의 별칭을 추가합니다</span><span class="sxs-lookup"><span data-stu-id="e709a-163">Rename param TenantId in cmdlet Connect-AzureRmAccount to Tenant and add an alias for TenantId</span></span>
+* <span data-ttu-id="e709a-164">Connect-AzureRmAccount의 업데이트된 TenantId 설명</span><span class="sxs-lookup"><span data-stu-id="e709a-164">Updated TenantId description for Connect-AzureRmAccount</span></span>
+* <span data-ttu-id="e709a-165">테넌트 도메인을 제공할 때 실패한 로그인에 대한 오류 메시지 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-165">Fix error message for failed login when providing tenant domain</span></span>
     - https://github.com/Azure/azure-powershell/issues/6936
-* <span data-ttu-id="195ef-166">테넌트에 구독이 없는 계정의 컨텍스트 이름 충돌 문제 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-166">Fix issue with context name clashing for accounts with no subscriptions in tenant</span></span>
+* <span data-ttu-id="e709a-166">테넌트에 구독이 없는 계정의 컨텍스트 이름 충돌 문제 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-166">Fix issue with context name clashing for accounts with no subscriptions in tenant</span></span>
     - https://github.com/Azure/azure-powershell/issues/7453
-* <span data-ttu-id="195ef-167">MSI를 사용할 때 DataLake 엔드포인트 문제 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-167">Fix issue with DataLake endpoints when using MSI</span></span>
+* <span data-ttu-id="e709a-167">MSI를 사용할 때 DataLake 엔드포인트 문제 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-167">Fix issue with DataLake endpoints when using MSI</span></span>
     - https://github.com/Azure/azure-powershell/issues/7462
-* <span data-ttu-id="195ef-168">연결되지 않은 경우 'Disconnect-AzureRmAccount'가 throw하는 문제 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-168">Fix issue where 'Disconnect-AzureRmAccount' would throw if not connected</span></span>
+* <span data-ttu-id="e709a-168">연결되지 않은 경우 'Disconnect-AzureRmAccount'가 throw하는 문제 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-168">Fix issue where 'Disconnect-AzureRmAccount' would throw if not connected</span></span>
     - https://github.com/Azure/azure-powershell/issues/7167
 
-#### <a name="azurermautomation"></a><span data-ttu-id="195ef-169">AzureRM.Automation</span><span class="sxs-lookup"><span data-stu-id="195ef-169">AzureRM.Automation</span></span>
-* <span data-ttu-id="195ef-170">cmdlet DLL 파일 이름이 Microsoft.Azure.Commands.Automation.dll로 변경됨</span><span class="sxs-lookup"><span data-stu-id="195ef-170">Renamed cmdlet DLL filename to Microsoft.Azure.Commands.Automation.dll</span></span>
+#### <a name="azurermautomation"></a><span data-ttu-id="e709a-169">AzureRM.Automation</span><span class="sxs-lookup"><span data-stu-id="e709a-169">AzureRM.Automation</span></span>
+* <span data-ttu-id="e709a-170">cmdlet DLL 파일 이름이 Microsoft.Azure.Commands.Automation.dll로 변경됨</span><span class="sxs-lookup"><span data-stu-id="e709a-170">Renamed cmdlet DLL filename to Microsoft.Azure.Commands.Automation.dll</span></span>
 
-#### <a name="azurermcognitiveservices"></a><span data-ttu-id="195ef-171">AzureRM.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="195ef-171">AzureRM.CognitiveServices</span></span>
-* <span data-ttu-id="195ef-172">Get-AzureRmCognitiveServicesAccountSkus 작업을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-172">Add Get-AzureRmCognitiveServicesAccountSkus operation.</span></span>
+#### <a name="azurermcognitiveservices"></a><span data-ttu-id="e709a-171">AzureRM.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="e709a-171">AzureRM.CognitiveServices</span></span>
+* <span data-ttu-id="e709a-172">Get-AzureRmCognitiveServicesAccountSkus 작업을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-172">Add Get-AzureRmCognitiveServicesAccountSkus operation.</span></span>
 
-#### <a name="azurermcompute"></a><span data-ttu-id="195ef-173">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="195ef-173">AzureRM.Compute</span></span>
-* <span data-ttu-id="195ef-174">Add-AzureRmVmssVMDataDisk 및 Remove-AzureRmVmssVMDataDisk cmdlet를 추가합니다</span><span class="sxs-lookup"><span data-stu-id="195ef-174">Add Add-AzureRmVmssVMDataDisk and Remove-AzureRmVmssVMDataDisk cmdlets</span></span>
-* <span data-ttu-id="195ef-175">Get-AzureRmVMImage는 AutomaticOSUpgradeProperties를 표시합니다</span><span class="sxs-lookup"><span data-stu-id="195ef-175">Get-AzureRmVMImage shows AutomaticOSUpgradeProperties</span></span>
-* <span data-ttu-id="195ef-176">수정된 SetAzureRmVMChefExtension -BootstrapOptions 및 -JsonAttribute option 값이 json 형식으로 설정하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-176">Fixed SetAzureRmVMChefExtension -BootstrapOptions and -JsonAttribute option values are not setting in json format.</span></span>
+#### <a name="azurermcompute"></a><span data-ttu-id="e709a-173">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="e709a-173">AzureRM.Compute</span></span>
+* <span data-ttu-id="e709a-174">Add-AzureRmVmssVMDataDisk 및 Remove-AzureRmVmssVMDataDisk cmdlet를 추가합니다</span><span class="sxs-lookup"><span data-stu-id="e709a-174">Add Add-AzureRmVmssVMDataDisk and Remove-AzureRmVmssVMDataDisk cmdlets</span></span>
+* <span data-ttu-id="e709a-175">Get-AzureRmVMImage는 AutomaticOSUpgradeProperties를 표시합니다</span><span class="sxs-lookup"><span data-stu-id="e709a-175">Get-AzureRmVMImage shows AutomaticOSUpgradeProperties</span></span>
+* <span data-ttu-id="e709a-176">수정된 SetAzureRmVMChefExtension -BootstrapOptions 및 -JsonAttribute option 값이 json 형식으로 설정하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-176">Fixed SetAzureRmVMChefExtension -BootstrapOptions and -JsonAttribute option values are not setting in json format.</span></span>
 
-#### <a name="azurermdatalakestore"></a><span data-ttu-id="195ef-177">AzureRM.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="195ef-177">AzureRM.DataLakeStore</span></span>
-* <span data-ttu-id="195ef-178">DataLake 패키지를 1.1.10으로 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-178">Update the DataLake package to 1.1.10.</span></span>
-* <span data-ttu-id="195ef-179">기본 동시성을 다중 스레드 작업에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-179">Add default Concurrency to multithreaded operations.</span></span>
+#### <a name="azurermdatalakestore"></a><span data-ttu-id="e709a-177">AzureRM.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="e709a-177">AzureRM.DataLakeStore</span></span>
+* <span data-ttu-id="e709a-178">DataLake 패키지를 1.1.10으로 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-178">Update the DataLake package to 1.1.10.</span></span>
+* <span data-ttu-id="e709a-179">기본 동시성을 다중 스레드 작업에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-179">Add default Concurrency to multithreaded operations.</span></span>
 
-#### <a name="azurerminsights"></a><span data-ttu-id="195ef-180">AzureRM.Insights</span><span class="sxs-lookup"><span data-stu-id="195ef-180">AzureRM.Insights</span></span>
-* <span data-ttu-id="195ef-181">해결된 문제 #7267(자동 크기 조정 영역)</span><span class="sxs-lookup"><span data-stu-id="195ef-181">Fixed issue #7267 (Autoscale area)</span></span>
-    - <span data-ttu-id="195ef-182">열거된 매개 변수를 제대로 설정하지 않은 새 자동 크기 조정 규칙을 만드는 데 문제가 있습니다(이를 항상 기본값으로 설정함).</span><span class="sxs-lookup"><span data-stu-id="195ef-182">Issues with creating a new autoscale rule not properly setting enumerated parameters (would always set them to the default value).</span></span>
-* <span data-ttu-id="195ef-183">해결된 문제 # 7513[자세한 정보] Set-AzureRMDiagnosticSetting은 설정을 생성하는 동안 범주를 명시적으로 지정해야 합니다</span><span class="sxs-lookup"><span data-stu-id="195ef-183">Fixed issue #7513 [Insights] Set-AzureRMDiagnosticSetting requires explicit specification of categories during creation of setting</span></span>
-    - <span data-ttu-id="195ef-184">이제 cmdlet은 생성 중에 사용할 범주를 명시적으로 표시할 필요가 없습니다. 즉, 문서화된대로 작동합니다</span><span class="sxs-lookup"><span data-stu-id="195ef-184">Now the cmdlet does not require explicit indication of the categories to enable during creation, i.e. it works as it is documented</span></span>
+#### <a name="azurerminsights"></a><span data-ttu-id="e709a-180">AzureRM.Insights</span><span class="sxs-lookup"><span data-stu-id="e709a-180">AzureRM.Insights</span></span>
+* <span data-ttu-id="e709a-181">해결된 문제 #7267(자동 크기 조정 영역)</span><span class="sxs-lookup"><span data-stu-id="e709a-181">Fixed issue #7267 (Autoscale area)</span></span>
+    - <span data-ttu-id="e709a-182">열거된 매개 변수를 제대로 설정하지 않은 새 자동 크기 조정 규칙을 만드는 데 문제가 있습니다(이를 항상 기본값으로 설정함).</span><span class="sxs-lookup"><span data-stu-id="e709a-182">Issues with creating a new autoscale rule not properly setting enumerated parameters (would always set them to the default value).</span></span>
+* <span data-ttu-id="e709a-183">해결된 문제 # 7513[자세한 정보] Set-AzureRMDiagnosticSetting은 설정을 생성하는 동안 범주를 명시적으로 지정해야 합니다</span><span class="sxs-lookup"><span data-stu-id="e709a-183">Fixed issue #7513 [Insights] Set-AzureRMDiagnosticSetting requires explicit specification of categories during creation of setting</span></span>
+    - <span data-ttu-id="e709a-184">이제 cmdlet은 생성 중에 사용할 범주를 명시적으로 표시할 필요가 없습니다. 즉, 문서화된대로 작동합니다</span><span class="sxs-lookup"><span data-stu-id="e709a-184">Now the cmdlet does not require explicit indication of the categories to enable during creation, i.e. it works as it is documented</span></span>
 
-#### <a name="azurermnetwork"></a><span data-ttu-id="195ef-185">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="195ef-185">AzureRM.Network</span></span>
-* <span data-ttu-id="195ef-186">다음 cmdlet에 대해 PeeringType을 필수 매개 변수로 변경했습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-186">Changed PeeringType to be a mandatory parameter for the following cmdlets:-</span></span>
-    - <span data-ttu-id="195ef-187">Get-AzureRmExpressRouteCircuitRouteTable</span><span class="sxs-lookup"><span data-stu-id="195ef-187">Get-AzureRmExpressRouteCircuitRouteTable</span></span>
-    - <span data-ttu-id="195ef-188">Get-AzureRmExpressRouteCircuitARPTable</span><span class="sxs-lookup"><span data-stu-id="195ef-188">Get-AzureRmExpressRouteCircuitARPTable</span></span>
-    - <span data-ttu-id="195ef-189">Get-AzureRmExpressRouteCircuitRouteTableSummary</span><span class="sxs-lookup"><span data-stu-id="195ef-189">Get-AzureRmExpressRouteCircuitRouteTableSummary</span></span>
-    - <span data-ttu-id="195ef-190">Get-AzureRMExpressRouteCrossConnectionArpTable</span><span class="sxs-lookup"><span data-stu-id="195ef-190">Get-AzureRMExpressRouteCrossConnectionArpTable</span></span>
-    - <span data-ttu-id="195ef-191">Get-AzureRMExpressRouteCrossConnectionRouteTable</span><span class="sxs-lookup"><span data-stu-id="195ef-191">Get-AzureRMExpressRouteCrossConnectionRouteTable</span></span>
-    - <span data-ttu-id="195ef-192">Get-AzureRMExpressRouteCrossConnectionRouteTableSummary</span><span class="sxs-lookup"><span data-stu-id="195ef-192">Get-AzureRMExpressRouteCrossConnectionRouteTableSummary</span></span>
+#### <a name="azurermnetwork"></a><span data-ttu-id="e709a-185">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="e709a-185">AzureRM.Network</span></span>
+* <span data-ttu-id="e709a-186">다음 cmdlet에 대해 PeeringType을 필수 매개 변수로 변경했습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-186">Changed PeeringType to be a mandatory parameter for the following cmdlets:-</span></span>
+    - <span data-ttu-id="e709a-187">Get-AzureRmExpressRouteCircuitRouteTable</span><span class="sxs-lookup"><span data-stu-id="e709a-187">Get-AzureRmExpressRouteCircuitRouteTable</span></span>
+    - <span data-ttu-id="e709a-188">Get-AzureRmExpressRouteCircuitARPTable</span><span class="sxs-lookup"><span data-stu-id="e709a-188">Get-AzureRmExpressRouteCircuitARPTable</span></span>
+    - <span data-ttu-id="e709a-189">Get-AzureRmExpressRouteCircuitRouteTableSummary</span><span class="sxs-lookup"><span data-stu-id="e709a-189">Get-AzureRmExpressRouteCircuitRouteTableSummary</span></span>
+    - <span data-ttu-id="e709a-190">Get-AzureRMExpressRouteCrossConnectionArpTable</span><span class="sxs-lookup"><span data-stu-id="e709a-190">Get-AzureRMExpressRouteCrossConnectionArpTable</span></span>
+    - <span data-ttu-id="e709a-191">Get-AzureRMExpressRouteCrossConnectionRouteTable</span><span class="sxs-lookup"><span data-stu-id="e709a-191">Get-AzureRMExpressRouteCrossConnectionRouteTable</span></span>
+    - <span data-ttu-id="e709a-192">Get-AzureRMExpressRouteCrossConnectionRouteTableSummary</span><span class="sxs-lookup"><span data-stu-id="e709a-192">Get-AzureRMExpressRouteCrossConnectionRouteTableSummary</span></span>
 
-#### <a name="azurermpolicyinsights"></a><span data-ttu-id="195ef-193">AzureRM.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="195ef-193">AzureRM.PolicyInsights</span></span>
-* <span data-ttu-id="195ef-194">추가된 정책 재구성 cmdlet</span><span class="sxs-lookup"><span data-stu-id="195ef-194">Added policy remediation cmdlets</span></span>
+#### <a name="azurermpolicyinsights"></a><span data-ttu-id="e709a-193">AzureRM.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="e709a-193">AzureRM.PolicyInsights</span></span>
+* <span data-ttu-id="e709a-194">추가된 정책 재구성 cmdlet</span><span class="sxs-lookup"><span data-stu-id="e709a-194">Added policy remediation cmdlets</span></span>
 
-#### <a name="azurermrecoveryservicesbackup"></a><span data-ttu-id="195ef-195">AzureRM.RecoveryServices.Backup</span><span class="sxs-lookup"><span data-stu-id="195ef-195">AzureRM.RecoveryServices.Backup</span></span>
-* <span data-ttu-id="195ef-196">복구 서비스에 Azure 파일 공유 지원 추가.</span><span class="sxs-lookup"><span data-stu-id="195ef-196">Added support for azure file shares in recovery services.</span></span>
+#### <a name="azurermrecoveryservicesbackup"></a><span data-ttu-id="e709a-195">AzureRM.RecoveryServices.Backup</span><span class="sxs-lookup"><span data-stu-id="e709a-195">AzureRM.RecoveryServices.Backup</span></span>
+* <span data-ttu-id="e709a-196">복구 서비스에 Azure 파일 공유 지원 추가.</span><span class="sxs-lookup"><span data-stu-id="e709a-196">Added support for azure file shares in recovery services.</span></span>
 
-#### <a name="azurermresources"></a><span data-ttu-id="195ef-197">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="195ef-197">AzureRM.Resources</span></span>
-* <span data-ttu-id="195ef-198">[https://github.com/Azure/azure-powershell/issues/7402](https://github.com/Azure/azure-powershell/issues/7402 ) 에 대한 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-198">Fix for https://github.com/Azure/azure-powershell/issues/7402</span></span>
-    - <span data-ttu-id="195ef-199">'Get-AzureRmResource'에 대해 '-ResourceId' 매개 변수를 사용하여 리소스 나열 허용</span><span class="sxs-lookup"><span data-stu-id="195ef-199">Allow listing resources using the '-ResourceId' parameter for 'Get-AzureRmResource'</span></span>
+#### <a name="azurermresources"></a><span data-ttu-id="e709a-197">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="e709a-197">AzureRM.Resources</span></span>
+* <span data-ttu-id="e709a-198">https://github.com/Azure/azure-powershell/issues/7402 에 대한 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-198">Fix for https://github.com/Azure/azure-powershell/issues/7402</span></span>
+    - <span data-ttu-id="e709a-199">'Get-AzureRmResource'에 대해 '-ResourceId' 매개 변수를 사용하여 리소스 나열 허용</span><span class="sxs-lookup"><span data-stu-id="e709a-199">Allow listing resources using the '-ResourceId' parameter for 'Get-AzureRmResource'</span></span>
 
-#### <a name="azurermservicebus"></a><span data-ttu-id="195ef-200">AzureRM.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="195ef-200">AzureRM.ServiceBus</span></span>
-* <span data-ttu-id="195ef-201">마이그레이션 상태를 알 수 있도록 PSServiceBusMigrationConfigurationAttributes에 MigrationState 읽기 전용 속성 추가.</span><span class="sxs-lookup"><span data-stu-id="195ef-201">Added MigrationState read-only property to PSServiceBusMigrationConfigurationAttributes which will help to know the Migration state.</span></span>
+#### <a name="azurermservicebus"></a><span data-ttu-id="e709a-200">AzureRM.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="e709a-200">AzureRM.ServiceBus</span></span>
+* <span data-ttu-id="e709a-201">마이그레이션 상태를 알 수 있도록 PSServiceBusMigrationConfigurationAttributes에 MigrationState 읽기 전용 속성 추가.</span><span class="sxs-lookup"><span data-stu-id="e709a-201">Added MigrationState read-only property to PSServiceBusMigrationConfigurationAttributes which will help to know the Migration state.</span></span>
 
-#### <a name="azurermservicefabric"></a><span data-ttu-id="195ef-202">AzureRM.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="195ef-202">AzureRM.ServiceFabric</span></span>
-* <span data-ttu-id="195ef-203">Linux Vmss에 인증서 추가 수정.</span><span class="sxs-lookup"><span data-stu-id="195ef-203">Fix add certificate to Linux Vmss.</span></span>
-* <span data-ttu-id="195ef-204">'Add-AzureRmServiceFabricClusterCertificate' 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-204">Fix 'Add-AzureRmServiceFabricClusterCertificate'</span></span>
-    - <span data-ttu-id="195ef-205">새 인증서(Azure/service-fabric-issues#932)에서 올바른 지문을 사용.</span><span class="sxs-lookup"><span data-stu-id="195ef-205">Using correct thumbprint from new certificate (Azure/service-fabric-issues#932).</span></span>
-    - <span data-ttu-id="195ef-206">올바르게 예외 표시(Azure/service-fabric-issues#1054).</span><span class="sxs-lookup"><span data-stu-id="195ef-206">Display exception correctly (Azure/service-fabric-issues#1054).</span></span>
-* <span data-ttu-id="195ef-207">Vmss CreateOrUpdate 작업을 시작하기 전에 'Update-AzureRmServiceFabricDurability'를 수정하여 클러스터 구성 업데이트.</span><span class="sxs-lookup"><span data-stu-id="195ef-207">Fix 'Update-AzureRmServiceFabricDurability' to update cluster configuration before starting Vmss CreateOrUpdate operation.</span></span>
+#### <a name="azurermservicefabric"></a><span data-ttu-id="e709a-202">AzureRM.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="e709a-202">AzureRM.ServiceFabric</span></span>
+* <span data-ttu-id="e709a-203">Linux Vmss에 인증서 추가 수정.</span><span class="sxs-lookup"><span data-stu-id="e709a-203">Fix add certificate to Linux Vmss.</span></span>
+* <span data-ttu-id="e709a-204">'Add-AzureRmServiceFabricClusterCertificate' 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-204">Fix 'Add-AzureRmServiceFabricClusterCertificate'</span></span>
+    - <span data-ttu-id="e709a-205">새 인증서(Azure/service-fabric-issues#932)에서 올바른 지문을 사용.</span><span class="sxs-lookup"><span data-stu-id="e709a-205">Using correct thumbprint from new certificate (Azure/service-fabric-issues#932).</span></span>
+    - <span data-ttu-id="e709a-206">올바르게 예외 표시(Azure/service-fabric-issues#1054).</span><span class="sxs-lookup"><span data-stu-id="e709a-206">Display exception correctly (Azure/service-fabric-issues#1054).</span></span>
+* <span data-ttu-id="e709a-207">Vmss CreateOrUpdate 작업을 시작하기 전에 'Update-AzureRmServiceFabricDurability'를 수정하여 클러스터 구성 업데이트.</span><span class="sxs-lookup"><span data-stu-id="e709a-207">Fix 'Update-AzureRmServiceFabricDurability' to update cluster configuration before starting Vmss CreateOrUpdate operation.</span></span>
 
-## <a name="6110---october-2018"></a><span data-ttu-id="195ef-208">6.11.0 - 2018년 10월</span><span class="sxs-lookup"><span data-stu-id="195ef-208">6.11.0 - October 2018</span></span>
-#### <a name="azurermprofile"></a><span data-ttu-id="195ef-209">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="195ef-209">AzureRM.Profile</span></span>
-* <span data-ttu-id="195ef-210">CloudShell에서 Get-AzureRmSubscription을 사용하여 문제를 해결합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-210">Fix issue with Get-AzureRmSubscription in CloudShell</span></span>
-* <span data-ttu-id="195ef-211">ClientRuntime의 최신 버전을 사용하도록 일반적인 코드를 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-211">Update common code to use latest version of ClientRuntime</span></span>
+## <a name="6110---october-2018"></a><span data-ttu-id="e709a-208">6.11.0 - 2018년 10월</span><span class="sxs-lookup"><span data-stu-id="e709a-208">6.11.0 - October 2018</span></span>
+#### <a name="azurermprofile"></a><span data-ttu-id="e709a-209">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="e709a-209">AzureRM.Profile</span></span>
+* <span data-ttu-id="e709a-210">CloudShell에서 Get-AzureRmSubscription을 사용하여 문제를 해결합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-210">Fix issue with Get-AzureRmSubscription in CloudShell</span></span>
+* <span data-ttu-id="e709a-211">ClientRuntime의 최신 버전을 사용하도록 일반적인 코드를 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-211">Update common code to use latest version of ClientRuntime</span></span>
 
-#### <a name="azurermbackup"></a><span data-ttu-id="195ef-212">AzureRM.Backup</span><span class="sxs-lookup"><span data-stu-id="195ef-212">AzureRM.Backup</span></span>
-* <span data-ttu-id="195ef-213">Azure Backup cmdlet이 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-213">Deprecated Azure Backup cmdlets.</span></span>
+#### <a name="azurermbackup"></a><span data-ttu-id="e709a-212">AzureRM.Backup</span><span class="sxs-lookup"><span data-stu-id="e709a-212">AzureRM.Backup</span></span>
+* <span data-ttu-id="e709a-213">Azure Backup cmdlet이 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-213">Deprecated Azure Backup cmdlets.</span></span>
 
-#### <a name="azurermcompute"></a><span data-ttu-id="195ef-214">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="195ef-214">AzureRM.Compute</span></span>
-* <span data-ttu-id="195ef-215">'New-AzureRmVm'에 대해 간단한 매개 변수를 사용하는 경우 가속화된 네트워킹을 설정하기 위해 새 크기가 VM 크기의 허용 목록에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-215">Added new sizes to the whitelist of VM sizes for which accelerated networking will be turned on when using the simple param set for 'New-AzureRmVm'</span></span>
-* <span data-ttu-id="195ef-216">모든 cmdlet에 ResourceName 인수 완성자가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-216">Added ResourceName argument completer to all cmdlets.</span></span>
+#### <a name="azurermcompute"></a><span data-ttu-id="e709a-214">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="e709a-214">AzureRM.Compute</span></span>
+* <span data-ttu-id="e709a-215">'New-AzureRmVm'에 대해 간단한 매개 변수를 사용하는 경우 가속화된 네트워킹을 설정하기 위해 새 크기가 VM 크기의 허용 목록에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-215">Added new sizes to the whitelist of VM sizes for which accelerated networking will be turned on when using the simple param set for 'New-AzureRmVm'</span></span>
+* <span data-ttu-id="e709a-216">모든 cmdlet에 ResourceName 인수 완성자가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-216">Added ResourceName argument completer to all cmdlets.</span></span>
 
-#### <a name="azurermdatalakestore"></a><span data-ttu-id="195ef-217">AzureRM.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="195ef-217">AzureRM.DataLakeStore</span></span>
-* <span data-ttu-id="195ef-218">Virtual Network 규칙에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-218">Adding support for Virtual Network Rules</span></span>
-    - <span data-ttu-id="195ef-219">Get-AzureRmDataLakeStoreVirtualNetworkRule: Azure Data Lake Store 가상 네트워크 규칙을 가져오거나 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-219">Get-AzureRmDataLakeStoreVirtualNetworkRule: Gets or Lists Azure Data Lake Store virtual network rule.</span></span>
-    - <span data-ttu-id="195ef-220">Add-AzureRmDataLakeStoreVirtualNetworkRule: 지정된 Data Lake Store 계정에 가상 네트워크 규칙을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-220">Add-AzureRmDataLakeStoreVirtualNetworkRule: Adds a virtual network rule to the specified Data Lake Store account.</span></span>
-    - <span data-ttu-id="195ef-221">Set-AzureRmDataLakeStoreVirtualNetworkRule: 지정된 Data Lake Store 계정에 지정된 가상 네트워크 규칙을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-221">Set-AzureRmDataLakeStoreVirtualNetworkRule: Modifies the specified virtual network rule in the specified Data Lake Store account.</span></span>
-    - <span data-ttu-id="195ef-222">Remove-AzureRmDataLakeStoreVirtualNetworkRule: Azure Data Lake Store 가상 네트워크 규칙을 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-222">Remove-AzureRmDataLakeStoreVirtualNetworkRule: Deletes an Azure Data Lake Store virtual network rule.</span></span>
+#### <a name="azurermdatalakestore"></a><span data-ttu-id="e709a-217">AzureRM.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="e709a-217">AzureRM.DataLakeStore</span></span>
+* <span data-ttu-id="e709a-218">Virtual Network 규칙에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-218">Adding support for Virtual Network Rules</span></span>
+    - <span data-ttu-id="e709a-219">Get-AzureRmDataLakeStoreVirtualNetworkRule: Azure Data Lake Store 가상 네트워크 규칙을 가져오거나 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-219">Get-AzureRmDataLakeStoreVirtualNetworkRule: Gets or Lists Azure Data Lake Store virtual network rule.</span></span>
+    - <span data-ttu-id="e709a-220">Add-AzureRmDataLakeStoreVirtualNetworkRule: 지정된 Data Lake Store 계정에 가상 네트워크 규칙을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-220">Add-AzureRmDataLakeStoreVirtualNetworkRule: Adds a virtual network rule to the specified Data Lake Store account.</span></span>
+    - <span data-ttu-id="e709a-221">Set-AzureRmDataLakeStoreVirtualNetworkRule: 지정된 Data Lake Store 계정에 지정된 가상 네트워크 규칙을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-221">Set-AzureRmDataLakeStoreVirtualNetworkRule: Modifies the specified virtual network rule in the specified Data Lake Store account.</span></span>
+    - <span data-ttu-id="e709a-222">Remove-AzureRmDataLakeStoreVirtualNetworkRule: Azure Data Lake Store 가상 네트워크 규칙을 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-222">Remove-AzureRmDataLakeStoreVirtualNetworkRule: Deletes an Azure Data Lake Store virtual network rule.</span></span>
 
-#### <a name="azurermnetwork"></a><span data-ttu-id="195ef-223">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="195ef-223">AzureRM.Network</span></span>
-* <span data-ttu-id="195ef-224">Test-AzureRmNetworkWatcherConnectivity cmdlet을 업데이트하고, 백 엔드에 프로토콜 값을 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-224">Update cmdlet Test-AzureRmNetworkWatcherConnectivity, pass the protocol value to backend.</span></span>
-* <span data-ttu-id="195ef-225">모든 cmdlet에 ResourceName 인수 완성자가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-225">Added ResourceName argument completer to all cmdlets.</span></span>
+#### <a name="azurermnetwork"></a><span data-ttu-id="e709a-223">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="e709a-223">AzureRM.Network</span></span>
+* <span data-ttu-id="e709a-224">Test-AzureRmNetworkWatcherConnectivity cmdlet을 업데이트하고, 백 엔드에 프로토콜 값을 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-224">Update cmdlet Test-AzureRmNetworkWatcherConnectivity, pass the protocol value to backend.</span></span>
+* <span data-ttu-id="e709a-225">모든 cmdlet에 ResourceName 인수 완성자가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-225">Added ResourceName argument completer to all cmdlets.</span></span>
 
-#### <a name="azurermresources"></a><span data-ttu-id="195ef-226">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="195ef-226">AzureRM.Resources</span></span>
-* <span data-ttu-id="195ef-227">(기본 프로필에 구독이 없고 범위가 지정되지 않은 경우) 시나리오에서 의미 있는 예외를 추가하여 Get-AzureRMRoleDefinition이 인식할 수 없는 예외를 throw하는 문제를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-227">Fix isssue where Get-AzureRMRoleDefinition throws an unintelligible exception (when the default profile has no subscription in it and no scope is specified) by adding a meaningful exception in the scenario.</span></span> <span data-ttu-id="195ef-228">또한 기본 매개 변수 집합을 'RoleDefinitionNameParameterSet'으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-228">Also set the default param set to 'RoleDefinitionNameParameterSet'.</span></span>
+#### <a name="azurermresources"></a><span data-ttu-id="e709a-226">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="e709a-226">AzureRM.Resources</span></span>
+* <span data-ttu-id="e709a-227">(기본 프로필에 구독이 없고 범위가 지정되지 않은 경우) 시나리오에서 의미 있는 예외를 추가하여 Get-AzureRMRoleDefinition이 인식할 수 없는 예외를 throw하는 문제를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-227">Fix isssue where Get-AzureRMRoleDefinition throws an unintelligible exception (when the default profile has no subscription in it and no scope is specified) by adding a meaningful exception in the scenario.</span></span> <span data-ttu-id="e709a-228">또한 기본 매개 변수 집합을 'RoleDefinitionNameParameterSet'으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-228">Also set the default param set to 'RoleDefinitionNameParameterSet'.</span></span>
 
-## <a name="6100---october-2018"></a><span data-ttu-id="195ef-229">2018년 10월 - 6.10.0</span><span class="sxs-lookup"><span data-stu-id="195ef-229">6.10.0 - October 2018</span></span>
-#### <a name="azurestorage"></a><span data-ttu-id="195ef-230">Azure.Storage</span><span class="sxs-lookup"><span data-stu-id="195ef-230">Azure.Storage</span></span>
-* <span data-ttu-id="195ef-231">대상에 메타데이터가 있을 때 Blob/파일이 메타 데이터를 복사하지 않는 문제 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-231">Fix Copy Blob/File won't copy metadata when destination has metadata issue</span></span>
-    - <span data-ttu-id="195ef-232">Start-AzureStorageBlobCopy</span><span class="sxs-lookup"><span data-stu-id="195ef-232">Start-AzureStorageBlobCopy</span></span>
-    - <span data-ttu-id="195ef-233">Start-AzureStorageFileCopy</span><span class="sxs-lookup"><span data-stu-id="195ef-233">Start-AzureStorageFileCopy</span></span>
+## <a name="6100---october-2018"></a><span data-ttu-id="e709a-229">2018년 10월 - 6.10.0</span><span class="sxs-lookup"><span data-stu-id="e709a-229">6.10.0 - October 2018</span></span>
+#### <a name="azurestorage"></a><span data-ttu-id="e709a-230">Azure.Storage</span><span class="sxs-lookup"><span data-stu-id="e709a-230">Azure.Storage</span></span>
+* <span data-ttu-id="e709a-231">대상에 메타데이터가 있을 때 Blob/파일이 메타 데이터를 복사하지 않는 문제 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-231">Fix Copy Blob/File won't copy metadata when destination has metadata issue</span></span>
+    - <span data-ttu-id="e709a-232">Start-AzureStorageBlobCopy</span><span class="sxs-lookup"><span data-stu-id="e709a-232">Start-AzureStorageBlobCopy</span></span>
+    - <span data-ttu-id="e709a-233">Start-AzureStorageFileCopy</span><span class="sxs-lookup"><span data-stu-id="e709a-233">Start-AzureStorageFileCopy</span></span>
 
-#### <a name="azurermcognitiveservices"></a><span data-ttu-id="195ef-234">AzureRM.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="195ef-234">AzureRM.CognitiveServices</span></span>
-* <span data-ttu-id="195ef-235">기존 계정이 없는 Get-AzureRmCognitiveServicesAccountSkus를 지원</span><span class="sxs-lookup"><span data-stu-id="195ef-235">Support Get-AzureRmCognitiveServicesAccountSkus without an existing account.</span></span>
+#### <a name="azurermcognitiveservices"></a><span data-ttu-id="e709a-234">AzureRM.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="e709a-234">AzureRM.CognitiveServices</span></span>
+* <span data-ttu-id="e709a-235">기존 계정이 없는 Get-AzureRmCognitiveServicesAccountSkus를 지원</span><span class="sxs-lookup"><span data-stu-id="e709a-235">Support Get-AzureRmCognitiveServicesAccountSkus without an existing account.</span></span>
 
-#### <a name="azurermcompute"></a><span data-ttu-id="195ef-236">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="195ef-236">AzureRM.Compute</span></span>
-* <span data-ttu-id="195ef-237">Get-AzureRmVM -ResourceGroupName <rg>가 필요한 경우 50개가 넘는 결과를 반환하도록 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-237">Fix Get-AzureRmVM -ResourceGroupName <rg> to return more than 50 results if needed</span></span>
-* <span data-ttu-id="195ef-238">'SimpleParameterSet' 예제가 New-AzureRmVmss cmdlet 도움말에 추가됨</span><span class="sxs-lookup"><span data-stu-id="195ef-238">Added an example of the 'SimpleParameterSet' to New-AzureRmVmss cmdlet help.</span></span>
-* <span data-ttu-id="195ef-239">Azure Disk Encryption 진행률 메시지의 오타를 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-239">Fixed a typo in the Azure Disk Encryption progress message</span></span>
+#### <a name="azurermcompute"></a><span data-ttu-id="e709a-236">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="e709a-236">AzureRM.Compute</span></span>
+* <span data-ttu-id="e709a-237">Get-AzureRmVM -ResourceGroupName <rg>가 필요한 경우 50개가 넘는 결과를 반환하도록 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-237">Fix Get-AzureRmVM -ResourceGroupName <rg> to return more than 50 results if needed</span></span>
+* <span data-ttu-id="e709a-238">'SimpleParameterSet' 예제가 New-AzureRmVmss cmdlet 도움말에 추가됨</span><span class="sxs-lookup"><span data-stu-id="e709a-238">Added an example of the 'SimpleParameterSet' to New-AzureRmVmss cmdlet help.</span></span>
+* <span data-ttu-id="e709a-239">Azure Disk Encryption 진행률 메시지의 오타를 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-239">Fixed a typo in the Azure Disk Encryption progress message</span></span>
 
-#### <a name="azurermdatafactoryv2"></a><span data-ttu-id="195ef-240">AzureRM.DataFactoryV2</span><span class="sxs-lookup"><span data-stu-id="195ef-240">AzureRM.DataFactoryV2</span></span>
-* <span data-ttu-id="195ef-241">ADF.Net SDK 버전을 2.3.0으로 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-241">Updated the ADF .Net SDK version to 2.3.0.</span></span>
+#### <a name="azurermdatafactoryv2"></a><span data-ttu-id="e709a-240">AzureRM.DataFactoryV2</span><span class="sxs-lookup"><span data-stu-id="e709a-240">AzureRM.DataFactoryV2</span></span>
+* <span data-ttu-id="e709a-241">ADF.Net SDK 버전을 2.3.0으로 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-241">Updated the ADF .Net SDK version to 2.3.0.</span></span>
 
-#### <a name="azurermnetwork"></a><span data-ttu-id="195ef-242">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="195ef-242">AzureRM.Network</span></span>
-* <span data-ttu-id="195ef-243">NetworkProfile 기능 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-243">Added NetworkProfile functionality.</span></span> <span data-ttu-id="195ef-244">추가된 새 cmdlet은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-244">new cmdlets added</span></span>
-    - <span data-ttu-id="195ef-245">Get-AzureRMNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="195ef-245">Get-AzureRMNetworkProfile</span></span>
-    - <span data-ttu-id="195ef-246">New-AzureRMNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="195ef-246">New-AzureRMNetworkProfile</span></span>
-    - <span data-ttu-id="195ef-247">Remove-AzureRMNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="195ef-247">Remove-AzureRMNetworkProfile</span></span>
-    - <span data-ttu-id="195ef-248">Set-AzureRMNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="195ef-248">Set-AzureRMNetworkProfile</span></span>
-    - <span data-ttu-id="195ef-249">New-AzureRMContainerNicConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-249">New-AzureRMContainerNicConfig</span></span>
-    - <span data-ttu-id="195ef-250">New-AzureRmContainerNicConfigIpConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-250">New-AzureRmContainerNicConfigIpConfig</span></span>
-* <span data-ttu-id="195ef-251">서브넷 모델에 서비스 연결 링크 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-251">Added service association link on Subnet Model</span></span>
-* <span data-ttu-id="195ef-252">New-AzureRmVirtualNetworkTap, Get-AzureRmVirtualNetworkTap, Set-AzureRmVirtualNetworkTap, Remove-AzureRmVirtualNetworkTap cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-252">Added cmdlet New-AzureRmVirtualNetworkTap, Get-AzureRmVirtualNetworkTap, Set-AzureRmVirtualNetworkTap, Remove-AzureRmVirtualNetworkTap</span></span>
-* <span data-ttu-id="195ef-253">Set-AzureRmNEtworkInterfaceTapConfig, Get-AzureRmNEtworkInterfaceTapConfig, Remove-AzureRmNEtworkInterfaceTapConfig cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-253">Added cmdlet Set-AzureRmNEtworkInterfaceTapConfig, Get-AzureRmNEtworkInterfaceTapConfig, Remove-AzureRmNEtworkInterfaceTapConfig</span></span>
+#### <a name="azurermnetwork"></a><span data-ttu-id="e709a-242">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="e709a-242">AzureRM.Network</span></span>
+* <span data-ttu-id="e709a-243">NetworkProfile 기능 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-243">Added NetworkProfile functionality.</span></span> <span data-ttu-id="e709a-244">추가된 새 cmdlet은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-244">new cmdlets added</span></span>
+    - <span data-ttu-id="e709a-245">Get-AzureRMNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="e709a-245">Get-AzureRMNetworkProfile</span></span>
+    - <span data-ttu-id="e709a-246">New-AzureRMNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="e709a-246">New-AzureRMNetworkProfile</span></span>
+    - <span data-ttu-id="e709a-247">Remove-AzureRMNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="e709a-247">Remove-AzureRMNetworkProfile</span></span>
+    - <span data-ttu-id="e709a-248">Set-AzureRMNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="e709a-248">Set-AzureRMNetworkProfile</span></span>
+    - <span data-ttu-id="e709a-249">New-AzureRMContainerNicConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-249">New-AzureRMContainerNicConfig</span></span>
+    - <span data-ttu-id="e709a-250">New-AzureRmContainerNicConfigIpConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-250">New-AzureRmContainerNicConfigIpConfig</span></span>
+* <span data-ttu-id="e709a-251">서브넷 모델에 서비스 연결 링크 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-251">Added service association link on Subnet Model</span></span>
+* <span data-ttu-id="e709a-252">New-AzureRmVirtualNetworkTap, Get-AzureRmVirtualNetworkTap, Set-AzureRmVirtualNetworkTap, Remove-AzureRmVirtualNetworkTap cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-252">Added cmdlet New-AzureRmVirtualNetworkTap, Get-AzureRmVirtualNetworkTap, Set-AzureRmVirtualNetworkTap, Remove-AzureRmVirtualNetworkTap</span></span>
+* <span data-ttu-id="e709a-253">Set-AzureRmNEtworkInterfaceTapConfig, Get-AzureRmNEtworkInterfaceTapConfig, Remove-AzureRmNEtworkInterfaceTapConfig cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-253">Added cmdlet Set-AzureRmNEtworkInterfaceTapConfig, Get-AzureRmNEtworkInterfaceTapConfig, Remove-AzureRmNEtworkInterfaceTapConfig</span></span>
 
-#### <a name="azurermrediscache"></a><span data-ttu-id="195ef-254">AzureRM.RedisCache</span><span class="sxs-lookup"><span data-stu-id="195ef-254">AzureRM.RedisCache</span></span>
-* <span data-ttu-id="195ef-255">모든 문자열을 Size 매개 변수로 진행되도록 허용</span><span class="sxs-lookup"><span data-stu-id="195ef-255">Allow any string as Size parameter going forward.</span></span> <span data-ttu-id="195ef-256">PSArgumentCompleter 팝업에 P5 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-256">Add P5 in PSArgumentCompleter popup</span></span>
+#### <a name="azurermrediscache"></a><span data-ttu-id="e709a-254">AzureRM.RedisCache</span><span class="sxs-lookup"><span data-stu-id="e709a-254">AzureRM.RedisCache</span></span>
+* <span data-ttu-id="e709a-255">모든 문자열을 Size 매개 변수로 진행되도록 허용</span><span class="sxs-lookup"><span data-stu-id="e709a-255">Allow any string as Size parameter going forward.</span></span> <span data-ttu-id="e709a-256">PSArgumentCompleter 팝업에 P5 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-256">Add P5 in PSArgumentCompleter popup</span></span>
 
-#### <a name="azurermresources"></a><span data-ttu-id="195ef-257">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="195ef-257">AzureRM.Resources</span></span>
-* <span data-ttu-id="195ef-258">-Mode 매개 변수를 Set-AzureRmPolicyDefinition에 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-258">Add missing -Mode parameter to Set-AzureRmPolicyDefinition</span></span>
-* <span data-ttu-id="195ef-259">사용자가 포함된 Origin 작업에서 Get-AzureRmProviderOperation commandlet 버그 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-259">Fix Get-AzureRmProviderOperation commandlet bug for operations with Origin containing User</span></span>
+#### <a name="azurermresources"></a><span data-ttu-id="e709a-257">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="e709a-257">AzureRM.Resources</span></span>
+* <span data-ttu-id="e709a-258">-Mode 매개 변수를 Set-AzureRmPolicyDefinition에 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-258">Add missing -Mode parameter to Set-AzureRmPolicyDefinition</span></span>
+* <span data-ttu-id="e709a-259">사용자가 포함된 Origin 작업에서 Get-AzureRmProviderOperation commandlet 버그 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-259">Fix Get-AzureRmProviderOperation commandlet bug for operations with Origin containing User</span></span>
 
-#### <a name="azurermsql"></a><span data-ttu-id="195ef-260">AzureRM.Sql</span><span class="sxs-lookup"><span data-stu-id="195ef-260">AzureRM.Sql</span></span>
-* <span data-ttu-id="195ef-261">일부 백업 cmdlet이 현재 azure 구독을 인식하지 않는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-261">Fixed issue where some backup cmdlets would not recognize the current azure subscription</span></span>
+#### <a name="azurermsql"></a><span data-ttu-id="e709a-260">AzureRM.Sql</span><span class="sxs-lookup"><span data-stu-id="e709a-260">AzureRM.Sql</span></span>
+* <span data-ttu-id="e709a-261">일부 백업 cmdlet이 현재 azure 구독을 인식하지 않는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-261">Fixed issue where some backup cmdlets would not recognize the current azure subscription</span></span>
 
-#### <a name="azurermstorage"></a><span data-ttu-id="195ef-262">AzureRM.Storage</span><span class="sxs-lookup"><span data-stu-id="195ef-262">AzureRM.Storage</span></span>
-* <span data-ttu-id="195ef-263">특정 위치의 스토리지 리소스 사용을 지원하고 글로벌 스토리지 리소스 사용 가져오기는 더 이상 사용되지 않는다는 경고 메시지를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-263">Support get the Storage resource usage of a specific location, and add warning message for get global Storage resource usage is obsolete.</span></span>
-    - <span data-ttu-id="195ef-264">Get-AzureRmStorageUsage</span><span class="sxs-lookup"><span data-stu-id="195ef-264">Get-AzureRmStorageUsage</span></span>
+#### <a name="azurermstorage"></a><span data-ttu-id="e709a-262">AzureRM.Storage</span><span class="sxs-lookup"><span data-stu-id="e709a-262">AzureRM.Storage</span></span>
+* <span data-ttu-id="e709a-263">특정 위치의 스토리지 리소스 사용을 지원하고 글로벌 스토리지 리소스 사용 가져오기는 더 이상 사용되지 않는다는 경고 메시지를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-263">Support get the Storage resource usage of a specific location, and add warning message for get global Storage resource usage is obsolete.</span></span>
+    - <span data-ttu-id="e709a-264">Get-AzureRmStorageUsage</span><span class="sxs-lookup"><span data-stu-id="e709a-264">Get-AzureRmStorageUsage</span></span>
 
-#### <a name="azurermwebsites"></a><span data-ttu-id="195ef-265">AzureRM.Websites</span><span class="sxs-lookup"><span data-stu-id="195ef-265">AzureRM.Websites</span></span>
-* <span data-ttu-id="195ef-266">새 cmdlet Get-AzureRMWebAppContainerContinuousDeploymentUrl - 컨테이너 지속적인 배포 Webhook URL을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-266">New Cmdlet Get-AzureRMWebAppContainerContinuousDeploymentUrl - Gets the Container Continuous Deployment Webhook URL</span></span>
-* <span data-ttu-id="195ef-267">새 cmdlet New-AzureRMWebAppContainerPSSession 및 Enter-WebAppContainerPSSession -  windows 컨테이너 앱에 PowerShell 원격 세션을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-267">New Cmdlets New-AzureRMWebAppContainerPSSession and Enter-WebAppContainerPSSession  - Initiates a PowerShell remote session into a windows container app</span></span>
+#### <a name="azurermwebsites"></a><span data-ttu-id="e709a-265">AzureRM.Websites</span><span class="sxs-lookup"><span data-stu-id="e709a-265">AzureRM.Websites</span></span>
+* <span data-ttu-id="e709a-266">새 cmdlet Get-AzureRMWebAppContainerContinuousDeploymentUrl - 컨테이너 지속적인 배포 Webhook URL을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-266">New Cmdlet Get-AzureRMWebAppContainerContinuousDeploymentUrl - Gets the Container Continuous Deployment Webhook URL</span></span>
+* <span data-ttu-id="e709a-267">새 cmdlet New-AzureRMWebAppContainerPSSession 및 Enter-WebAppContainerPSSession -  windows 컨테이너 앱에 PowerShell 원격 세션을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-267">New Cmdlets New-AzureRMWebAppContainerPSSession and Enter-WebAppContainerPSSession  - Initiates a PowerShell remote session into a windows container app</span></span>
 
-## <a name="690---september-2018"></a><span data-ttu-id="195ef-268">6.9.0 - 2018년 9월</span><span class="sxs-lookup"><span data-stu-id="195ef-268">6.9.0 - September 2018</span></span>
-#### <a name="general"></a><span data-ttu-id="195ef-269">일반</span><span class="sxs-lookup"><span data-stu-id="195ef-269">General</span></span>
-* <span data-ttu-id="195ef-270">AzureRM.SignalR이 AzureRM 롤업 모듈에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-270">AzureRM.SignalR was added to the AzureRM rollup module</span></span>
+## <a name="690---september-2018"></a><span data-ttu-id="e709a-268">6.9.0 - 2018년 9월</span><span class="sxs-lookup"><span data-stu-id="e709a-268">6.9.0 - September 2018</span></span>
+#### <a name="general"></a><span data-ttu-id="e709a-269">일반</span><span class="sxs-lookup"><span data-stu-id="e709a-269">General</span></span>
+* <span data-ttu-id="e709a-270">AzureRM.SignalR이 AzureRM 롤업 모듈에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-270">AzureRM.SignalR was added to the AzureRM rollup module</span></span>
 
-#### <a name="azurermprofile"></a><span data-ttu-id="195ef-271">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="195ef-271">AzureRM.Profile</span></span>
-* <span data-ttu-id="195ef-272">스토리지 일반 코드에 대한 약간의 변경</span><span class="sxs-lookup"><span data-stu-id="195ef-272">Minor changes to the storage common code</span></span>
-* <span data-ttu-id="195ef-273">전체 매개 변수 형식을 포함하도록 도움말 파일이 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-273">Updated help files to include full parameter types.</span></span>
-* <span data-ttu-id="195ef-274">-ServicePrincipal을 필수가 아닌 것으로 ServicePrincipalCertificateWithSubscriptionId 매개변수 집합에서 변경</span><span class="sxs-lookup"><span data-stu-id="195ef-274">Changed -ServicePrincipal to non-mandatory in the ServicePrincipalCertificateWithSubscriptionId parameter set</span></span> 
+#### <a name="azurermprofile"></a><span data-ttu-id="e709a-271">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="e709a-271">AzureRM.Profile</span></span>
+* <span data-ttu-id="e709a-272">스토리지 일반 코드에 대한 약간의 변경</span><span class="sxs-lookup"><span data-stu-id="e709a-272">Minor changes to the storage common code</span></span>
+* <span data-ttu-id="e709a-273">전체 매개 변수 형식을 포함하도록 도움말 파일이 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-273">Updated help files to include full parameter types.</span></span>
+* <span data-ttu-id="e709a-274">-ServicePrincipal을 필수가 아닌 것으로 ServicePrincipalCertificateWithSubscriptionId 매개변수 집합에서 변경</span><span class="sxs-lookup"><span data-stu-id="e709a-274">Changed -ServicePrincipal to non-mandatory in the ServicePrincipalCertificateWithSubscriptionId parameter set</span></span> 
 
-#### <a name="azurestorage"></a><span data-ttu-id="195ef-275">Azure.Storage</span><span class="sxs-lookup"><span data-stu-id="195ef-275">Azure.Storage</span></span>
-* <span data-ttu-id="195ef-276">OAuth를 사용하여 스토리지 컨텍스트를 만드는 것을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-276">Support create Storage Context with OAuth.</span></span> 
-    - <span data-ttu-id="195ef-277">New-AzureStorageContext</span><span class="sxs-lookup"><span data-stu-id="195ef-277">New-AzureStorageContext</span></span>
+#### <a name="azurestorage"></a><span data-ttu-id="e709a-275">Azure.Storage</span><span class="sxs-lookup"><span data-stu-id="e709a-275">Azure.Storage</span></span>
+* <span data-ttu-id="e709a-276">OAuth를 사용하여 스토리지 컨텍스트를 만드는 것을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-276">Support create Storage Context with OAuth.</span></span> 
+    - <span data-ttu-id="e709a-277">New-AzureStorageContext</span><span class="sxs-lookup"><span data-stu-id="e709a-277">New-AzureStorageContext</span></span>
 
-#### <a name="azurermcdn"></a><span data-ttu-id="195ef-278">AzureRM.Cdn</span><span class="sxs-lookup"><span data-stu-id="195ef-278">AzureRM.Cdn</span></span>
-* <span data-ttu-id="195ef-279">Cdn 가격 책정 sku에서 Standard_Microsoft를 추가했습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-279">Added Standard_Microsoft in Cdn pricing sku.</span></span> 
+#### <a name="azurermcdn"></a><span data-ttu-id="e709a-278">AzureRM.Cdn</span><span class="sxs-lookup"><span data-stu-id="e709a-278">AzureRM.Cdn</span></span>
+* <span data-ttu-id="e709a-279">Cdn 가격 책정 sku에서 Standard_Microsoft를 추가했습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-279">Added Standard_Microsoft in Cdn pricing sku.</span></span> 
 
-#### <a name="azurermcompute"></a><span data-ttu-id="195ef-280">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="195ef-280">AzureRM.Compute</span></span>
-* <span data-ttu-id="195ef-281">Keyvault 및 Storage에서 종속성을 일반 종속성으로 이동</span><span class="sxs-lookup"><span data-stu-id="195ef-281">Move dependencies on Keyvault and Storage to the common dependencies</span></span>
-* <span data-ttu-id="195ef-282">AEM cmdlet에 더 많은 가상 머신 크기에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-282">Add support for more virutal machine sizes to AEM cmdlets</span></span>
-* <span data-ttu-id="195ef-283">PublicIPPrefix 매개 변수를 New-AzureRmVmssIpConfig에 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-283">Add PublicIPPrefix parameter to New-AzureRmVmssIpConfig</span></span>
-* <span data-ttu-id="195ef-284">Invoke-AzureRmVMRunCommand cmdelt에 ResourceId 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-284">Add ResourceId parameter to Invoke-AzureRmVMRunCommand cmdelt</span></span>
-* <span data-ttu-id="195ef-285">Invoke-AzureRmVmssVMRunCommand cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-285">Add Invoke-AzureRmVmssVMRunCommand cmdlet</span></span>
+#### <a name="azurermcompute"></a><span data-ttu-id="e709a-280">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="e709a-280">AzureRM.Compute</span></span>
+* <span data-ttu-id="e709a-281">Keyvault 및 Storage에서 종속성을 일반 종속성으로 이동</span><span class="sxs-lookup"><span data-stu-id="e709a-281">Move dependencies on Keyvault and Storage to the common dependencies</span></span>
+* <span data-ttu-id="e709a-282">AEM cmdlet에 더 많은 가상 머신 크기에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-282">Add support for more virutal machine sizes to AEM cmdlets</span></span>
+* <span data-ttu-id="e709a-283">PublicIPPrefix 매개 변수를 New-AzureRmVmssIpConfig에 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-283">Add PublicIPPrefix parameter to New-AzureRmVmssIpConfig</span></span>
+* <span data-ttu-id="e709a-284">Invoke-AzureRmVMRunCommand cmdelt에 ResourceId 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-284">Add ResourceId parameter to Invoke-AzureRmVMRunCommand cmdelt</span></span>
+* <span data-ttu-id="e709a-285">Invoke-AzureRmVmssVMRunCommand cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-285">Add Invoke-AzureRmVmssVMRunCommand cmdlet</span></span>
 
-#### <a name="azurermdns"></a><span data-ttu-id="195ef-286">AzureRM.Dns</span><span class="sxs-lookup"><span data-stu-id="195ef-286">AzureRM.Dns</span></span>
-* <span data-ttu-id="195ef-287">Dns 레코드를 만드는 동안 별칭 레코드에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-287">Added support for alias record during dns record creation</span></span>
+#### <a name="azurermdns"></a><span data-ttu-id="e709a-286">AzureRM.Dns</span><span class="sxs-lookup"><span data-stu-id="e709a-286">AzureRM.Dns</span></span>
+* <span data-ttu-id="e709a-287">Dns 레코드를 만드는 동안 별칭 레코드에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-287">Added support for alias record during dns record creation</span></span>
 
-#### <a name="azurerminsights"></a><span data-ttu-id="195ef-288">AzureRM.Insights</span><span class="sxs-lookup"><span data-stu-id="195ef-288">AzureRM.Insights</span></span>
-* <span data-ttu-id="195ef-289">#6833 및 #7102 문제 수정(진단 설정 영역)</span><span class="sxs-lookup"><span data-stu-id="195ef-289">Fixed issues #6833 and #7102 (Diagnostic Settings area)</span></span>
-    - <span data-ttu-id="195ef-290">기본 이름, 즉 'service'에 진단 설정의 목록 생성 및 가져오는 동안에 문제가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-290">Issues with the default name, i.e. 'service', during creation and listing/getting of diagnostic settings</span></span>
-    - <span data-ttu-id="195ef-291">범주를 사용하는 진단 설정 만들기 문제</span><span class="sxs-lookup"><span data-stu-id="195ef-291">Issues creating diagnostic settings with categories</span></span>
-* <span data-ttu-id="195ef-292">메트릭 시간 조직 매개 변수에 대한 사용 중단 메시지 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-292">Added deprecation message for metrics time grains parameters</span></span>
-    - <span data-ttu-id="195ef-293">Timegrains 매개 변수는 여전히 받아들여지고 있습니다(이것은 호환성이 손상되는 변경이 아닙니다). 그러나 PT1M만 유효하므로 백엔드에서 무시됩니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-293">Timegrains parameters are still being accepted (this is a non-breaking change,) but they are ignored in the backend since only PT1M is valid</span></span>
+#### <a name="azurerminsights"></a><span data-ttu-id="e709a-288">AzureRM.Insights</span><span class="sxs-lookup"><span data-stu-id="e709a-288">AzureRM.Insights</span></span>
+* <span data-ttu-id="e709a-289">#6833 및 #7102 문제 수정(진단 설정 영역)</span><span class="sxs-lookup"><span data-stu-id="e709a-289">Fixed issues #6833 and #7102 (Diagnostic Settings area)</span></span>
+    - <span data-ttu-id="e709a-290">기본 이름, 즉 'service'에 진단 설정의 목록 생성 및 가져오는 동안에 문제가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-290">Issues with the default name, i.e. 'service', during creation and listing/getting of diagnostic settings</span></span>
+    - <span data-ttu-id="e709a-291">범주를 사용하는 진단 설정 만들기 문제</span><span class="sxs-lookup"><span data-stu-id="e709a-291">Issues creating diagnostic settings with categories</span></span>
+* <span data-ttu-id="e709a-292">메트릭 시간 조직 매개 변수에 대한 사용 중단 메시지 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-292">Added deprecation message for metrics time grains parameters</span></span>
+    - <span data-ttu-id="e709a-293">Timegrains 매개 변수는 여전히 받아들여지고 있습니다(이것은 호환성이 손상되는 변경이 아닙니다). 그러나 PT1M만 유효하므로 백엔드에서 무시됩니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-293">Timegrains parameters are still being accepted (this is a non-breaking change,) but they are ignored in the backend since only PT1M is valid</span></span>
 
-#### <a name="azurermnetwork"></a><span data-ttu-id="195ef-294">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="195ef-294">AzureRM.Network</span></span>
-* <span data-ttu-id="195ef-295">LoadBalancer cmdlet에 대한 변경</span><span class="sxs-lookup"><span data-stu-id="195ef-295">Changes to LoadBalancer cmdlets</span></span>
-  - <span data-ttu-id="195ef-296">LoadBalancerInboundNatPoolConfig: IdleTimeoutInMinutes, EnableFloatingIp 및 EnableTcpReset 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-296">LoadBalancerInboundNatPoolConfig: added parameters IdleTimeoutInMinutes, EnableFloatingIp and EnableTcpReset</span></span>
-  - <span data-ttu-id="195ef-297">LoadBalancerInboundNatRuleConfig: EnableTcpReset 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-297">LoadBalancerInboundNatRuleConfig: added parameter EnableTcpReset</span></span>
-  - <span data-ttu-id="195ef-298">LoadBalancerRuleConfig: EnableTcpReset 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-298">LoadBalancerRuleConfig: added parameter EnableTcpReset</span></span>
-  - <span data-ttu-id="195ef-299">LoadBalancerProbeConfig: 매개 변수 프로토콜에 대해 "Https" 값에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-299">LoadBalancerProbeConfig: added support for value "Https" for parameter Protocol</span></span>
-* <span data-ttu-id="195ef-300">새 LoadBalancer의 하위 리소스OutboundRule에 대한 새 명령이 추가됨</span><span class="sxs-lookup"><span data-stu-id="195ef-300">Added new commands for new LoadBalancer's subresource OutboundRule</span></span>
-  - <span data-ttu-id="195ef-301">Add-AzureRmLoadBalancerOutboundRuleConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-301">Add-AzureRmLoadBalancerOutboundRuleConfig</span></span>
-  - <span data-ttu-id="195ef-302">Get-AzureRmLoadBalancerOutboundRuleConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-302">Get-AzureRmLoadBalancerOutboundRuleConfig</span></span>
-  - <span data-ttu-id="195ef-303">New-AzureRmLoadBalancerOutboundRuleConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-303">New-AzureRmLoadBalancerOutboundRuleConfig</span></span>
-  - <span data-ttu-id="195ef-304">Set-AzureRmLoadBalancerOutboundRuleConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-304">Set-AzureRmLoadBalancerOutboundRuleConfig</span></span>
-  - <span data-ttu-id="195ef-305">Remove-AzureRmLoadBalancerOutboundRuleConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-305">Remove-AzureRmLoadBalancerOutboundRuleConfig</span></span>
-* <span data-ttu-id="195ef-306">PSNetworkInterface에 대한 새 HostedWorkloads 속성 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-306">Added new HostedWorkloads property for PSNetworkInterface</span></span>
-* <span data-ttu-id="195ef-307">기능에 대한 새 cmdlet 추가: ARM을 통한 Azure Firewall</span><span class="sxs-lookup"><span data-stu-id="195ef-307">Added new cmdlets for feature: Azure Firewall via ARM</span></span>
-  - <span data-ttu-id="195ef-308">Get-AzureRmFirewall 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-308">Added Get-AzureRmFirewall</span></span>
-  - <span data-ttu-id="195ef-309">Set-AzureRmFirewall 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-309">Added Set-AzureRmFirewall</span></span>
-  - <span data-ttu-id="195ef-310">New-AzureRmFirewall 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-310">Added New-AzureRmFirewall</span></span>
-  - <span data-ttu-id="195ef-311">Remove-AzureRmFirewall 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-311">Added Remove-AzureRmFirewall</span></span>
-  - <span data-ttu-id="195ef-312">New-AzureRmFirewallApplicationRuleCollection 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-312">Added New-AzureRmFirewallApplicationRuleCollection</span></span>
-  - <span data-ttu-id="195ef-313">New-AzureRmFirewallApplicationRule 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-313">Added New-AzureRmFirewallApplicationRule</span></span>
-  - <span data-ttu-id="195ef-314">New-AzureRmFirewallNatRuleCollection 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-314">Added New-AzureRmFirewallNatRuleCollection</span></span>
-  - <span data-ttu-id="195ef-315">New-AzureRmFirewallNatRule 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-315">Added New-AzureRmFirewallNatRule</span></span>
-  - <span data-ttu-id="195ef-316">New-AzureRmFirewallNetworkRuleCollection 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-316">Added New-AzureRmFirewallNetworkRuleCollection</span></span>
-  - <span data-ttu-id="195ef-317">New-AzureRmFirewallNetworkRule 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-317">Added New-AzureRmFirewallNetworkRule</span></span>
-* <span data-ttu-id="195ef-318">Application Gateway에서 신뢰할 수 있는 루트 인증서 및 크기 자동 조정 구성에 대한 지원이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-318">Added support for Trusted Root certificate and Autoscale configuration in Application Gateway</span></span>
-  - <span data-ttu-id="195ef-319">추가된 새 cmdlet은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-319">New Cmdlets added:</span></span>
-      - <span data-ttu-id="195ef-320">Add-AzureRmApplicationGatewayTrustedRootCertificate</span><span class="sxs-lookup"><span data-stu-id="195ef-320">Add-AzureRmApplicationGatewayTrustedRootCertificate</span></span>
-      - <span data-ttu-id="195ef-321">Get-AzureRmApplicationGatewayTrustedRootCertificate</span><span class="sxs-lookup"><span data-stu-id="195ef-321">Get-AzureRmApplicationGatewayTrustedRootCertificate</span></span>
-      - <span data-ttu-id="195ef-322">New-AzureRmApplicationGatewayTrustedRootCertificate</span><span class="sxs-lookup"><span data-stu-id="195ef-322">New-AzureRmApplicationGatewayTrustedRootCertificate</span></span>
-      - <span data-ttu-id="195ef-323">Remove-AzureRmApplicationGatewayTrustedRootCertificate</span><span class="sxs-lookup"><span data-stu-id="195ef-323">Remove-AzureRmApplicationGatewayTrustedRootCertificate</span></span>
-      - <span data-ttu-id="195ef-324">Set-AzureRmApplicationGatewayTrustedRootCertificate</span><span class="sxs-lookup"><span data-stu-id="195ef-324">Set-AzureRmApplicationGatewayTrustedRootCertificate</span></span>
-      - <span data-ttu-id="195ef-325">Get-AzureRmApplicationGatewayAutoscaleConfiguration</span><span class="sxs-lookup"><span data-stu-id="195ef-325">Get-AzureRmApplicationGatewayAutoscaleConfiguration</span></span>
-      - <span data-ttu-id="195ef-326">New-AzureRmApplicationGatewayAutoscaleConfiguration</span><span class="sxs-lookup"><span data-stu-id="195ef-326">New-AzureRmApplicationGatewayAutoscaleConfiguration</span></span>
-      - <span data-ttu-id="195ef-327">Remove-AzureRmApplicationGatewayAutoscaleConfiguration</span><span class="sxs-lookup"><span data-stu-id="195ef-327">Remove-AzureRmApplicationGatewayAutoscaleConfiguration</span></span>
-      - <span data-ttu-id="195ef-328">Set-AzureRmApplicationGatewayAutoscaleConfiguration</span><span class="sxs-lookup"><span data-stu-id="195ef-328">Set-AzureRmApplicationGatewayAutoscaleConfiguration</span></span>
-  - <span data-ttu-id="195ef-329">옵션 매개 변수를 사용하도록 업데이트된 Cmdlet-TrustedRootCertificate</span><span class="sxs-lookup"><span data-stu-id="195ef-329">Cmdlets updated with optonal parameter -TrustedRootCertificate</span></span>
-      - <span data-ttu-id="195ef-330">New-AzureRmApplicationGateway</span><span class="sxs-lookup"><span data-stu-id="195ef-330">New-AzureRmApplicationGateway</span></span>
-      - <span data-ttu-id="195ef-331">Set-AzureRmApplicationGateway</span><span class="sxs-lookup"><span data-stu-id="195ef-331">Set-AzureRmApplicationGateway</span></span>
-      - <span data-ttu-id="195ef-332">New-AzureRmApplicationGatewayBackendHttpSetting</span><span class="sxs-lookup"><span data-stu-id="195ef-332">New-AzureRmApplicationGatewayBackendHttpSetting</span></span>
-      - <span data-ttu-id="195ef-333">Set-AzureRmApplicationGatewayBackendHttpSetting</span><span class="sxs-lookup"><span data-stu-id="195ef-333">Set-AzureRmApplicationGatewayBackendHttpSetting</span></span>
-  - <span data-ttu-id="195ef-334">옵션 매개 변수를 사용하도록 업데이트된 Cmdlet-AutoscaleConfiguration</span><span class="sxs-lookup"><span data-stu-id="195ef-334">Cmdlets updated with optonal parameter -AutoscaleConfiguration</span></span>
-      - <span data-ttu-id="195ef-335">New-AzureRmApplicationGateway</span><span class="sxs-lookup"><span data-stu-id="195ef-335">New-AzureRmApplicationGateway</span></span>
-      - <span data-ttu-id="195ef-336">Set-AzureRmApplicationGateway</span><span class="sxs-lookup"><span data-stu-id="195ef-336">Set-AzureRmApplicationGateway</span></span>
-* <span data-ttu-id="195ef-337">인터페이스 엔드포인트 Get-AzureInterfaceEndpoint에 대한 cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-337">Add cmdlet for Interface Endpoint Get-AzureInterfaceEndpoint</span></span>
-* <span data-ttu-id="195ef-338">서브넷에서 여러 주소 접두사에 대한 지원이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-338">Added support for multiple address prefixes in a subnet.</span></span> <span data-ttu-id="195ef-339">다음 Cmdlet이 업데이트 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-339">Updated cmdlets:</span></span>
-  - <span data-ttu-id="195ef-340">New-AzureRmVirtualNetworkSubnetConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-340">New-AzureRmVirtualNetworkSubnetConfig</span></span>
-  - <span data-ttu-id="195ef-341">Set-AzureRmVirtualNetworkSubnetConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-341">Set-AzureRmVirtualNetworkSubnetConfig</span></span>
-  - <span data-ttu-id="195ef-342">Add-AzureRmVirtualNetworkSubnetConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-342">Add-AzureRmVirtualNetworkSubnetConfig</span></span>
-  - <span data-ttu-id="195ef-343">Get-AzureRmVirtualNetworkSubnetConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-343">Get-AzureRmVirtualNetworkSubnetConfig</span></span>
-  - <span data-ttu-id="195ef-344">Add-AzureRmApplicationGatewayAuthenticationCertificate</span><span class="sxs-lookup"><span data-stu-id="195ef-344">Add-AzureRmApplicationGatewayAuthenticationCertificate</span></span>
-  - <span data-ttu-id="195ef-345">Add-AzureRmApplicationGatewayFrontendIPConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-345">Add-AzureRmApplicationGatewayFrontendIPConfig</span></span>
-  - <span data-ttu-id="195ef-346">New-AzureRmApplicationGatewayFrontendIPConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-346">New-AzureRmApplicationGatewayFrontendIPConfig</span></span>
-  - <span data-ttu-id="195ef-347">Set-AzureRmApplicationGatewayFrontendIPConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-347">Set-AzureRmApplicationGatewayFrontendIPConfig</span></span>
-  - <span data-ttu-id="195ef-348">Add-AzureRmApplicationGatewayIPConfiguration</span><span class="sxs-lookup"><span data-stu-id="195ef-348">Add-AzureRmApplicationGatewayIPConfiguration</span></span>
-  - <span data-ttu-id="195ef-349">New-AzureRmApplicationGatewayIPConfiguration</span><span class="sxs-lookup"><span data-stu-id="195ef-349">New-AzureRmApplicationGatewayIPConfiguration</span></span>
-  - <span data-ttu-id="195ef-350">Set-AzureRmApplicationGatewayIPConfiguration</span><span class="sxs-lookup"><span data-stu-id="195ef-350">Set-AzureRmApplicationGatewayIPConfiguration</span></span>
-  - <span data-ttu-id="195ef-351">Add-AzureRmNetworkInterfaceIpConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-351">Add-AzureRmNetworkInterfaceIpConfig</span></span>
-  - <span data-ttu-id="195ef-352">New-AzureRmNetworkInterfaceIpConfig  - Set-AzureRmNetworkInterfaceIpConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-352">New-AzureRmNetworkInterfaceIpConfig  - Set-AzureRmNetworkInterfaceIpConfig</span></span>
-  - <span data-ttu-id="195ef-353">New-AzureRmVirtualNetworkGatewayIpConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-353">New-AzureRmVirtualNetworkGatewayIpConfig</span></span>
-  - <span data-ttu-id="195ef-354">Add-AzureRmVirtualNetworkGatewayIpConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-354">Add-AzureRmVirtualNetworkGatewayIpConfig</span></span>
-  - <span data-ttu-id="195ef-355">Set-AzureRmLoadBalancerFrontendIpConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-355">Set-AzureRmLoadBalancerFrontendIpConfig</span></span>
-  - <span data-ttu-id="195ef-356">Add-AzureRmLoadBalancerFrontendIpConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-356">Add-AzureRmLoadBalancerFrontendIpConfig</span></span>
-  - <span data-ttu-id="195ef-357">New-AzureRmLoadBalancerFrontendIpConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-357">New-AzureRmLoadBalancerFrontendIpConfig</span></span>
-  - <span data-ttu-id="195ef-358">New-AzureRmNetworkInterface</span><span class="sxs-lookup"><span data-stu-id="195ef-358">New-AzureRmNetworkInterface</span></span>
-* <span data-ttu-id="195ef-359">서브넷 위임에 대한 cmdlet을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-359">Adding cmdlets for subnet delegation.</span></span>
-  - <span data-ttu-id="195ef-360">New-AzureRmDelegation: 서브넷에 추가할 수 있는 새 위임을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-360">New-AzureRmDelegation: Creates a new delegation, which can be added to a subnet</span></span>
-  - <span data-ttu-id="195ef-361">Remove-AzureRmDelegation: 서브넷에서 가져와서 해당 서브넷에서 제공된 위임 이름을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-361">Remove-AzureRmDelegation: Takes in a subnet and removes the provided delegation name from that subnet</span></span>
-  - <span data-ttu-id="195ef-362">Add-AzureRmDelegation: 서브넷에서 사용 및 제공된 서비스 이름을 해당 서브넷에 대한 위임으로 추가합니다</span><span class="sxs-lookup"><span data-stu-id="195ef-362">Add-AzureRmDelegation: Takes in a subnet and adds the provided service name as a delegation to that subnet</span></span>
-  - <span data-ttu-id="195ef-363">Get-AzureRmDelegation</span><span class="sxs-lookup"><span data-stu-id="195ef-363">Get-AzureRmDelegation</span></span>
-  - <span data-ttu-id="195ef-364">Get-AzureRmAvailableServiceDelegations</span><span class="sxs-lookup"><span data-stu-id="195ef-364">Get-AzureRmAvailableServiceDelegations</span></span>
+#### <a name="azurermnetwork"></a><span data-ttu-id="e709a-294">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="e709a-294">AzureRM.Network</span></span>
+* <span data-ttu-id="e709a-295">LoadBalancer cmdlet에 대한 변경</span><span class="sxs-lookup"><span data-stu-id="e709a-295">Changes to LoadBalancer cmdlets</span></span>
+  - <span data-ttu-id="e709a-296">LoadBalancerInboundNatPoolConfig: IdleTimeoutInMinutes, EnableFloatingIp 및 EnableTcpReset 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-296">LoadBalancerInboundNatPoolConfig: added parameters IdleTimeoutInMinutes, EnableFloatingIp and EnableTcpReset</span></span>
+  - <span data-ttu-id="e709a-297">LoadBalancerInboundNatRuleConfig: EnableTcpReset 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-297">LoadBalancerInboundNatRuleConfig: added parameter EnableTcpReset</span></span>
+  - <span data-ttu-id="e709a-298">LoadBalancerRuleConfig: EnableTcpReset 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-298">LoadBalancerRuleConfig: added parameter EnableTcpReset</span></span>
+  - <span data-ttu-id="e709a-299">LoadBalancerProbeConfig: 매개 변수 프로토콜에 대해 "Https" 값에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-299">LoadBalancerProbeConfig: added support for value "Https" for parameter Protocol</span></span>
+* <span data-ttu-id="e709a-300">새 LoadBalancer의 하위 리소스OutboundRule에 대한 새 명령이 추가됨</span><span class="sxs-lookup"><span data-stu-id="e709a-300">Added new commands for new LoadBalancer's subresource OutboundRule</span></span>
+  - <span data-ttu-id="e709a-301">Add-AzureRmLoadBalancerOutboundRuleConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-301">Add-AzureRmLoadBalancerOutboundRuleConfig</span></span>
+  - <span data-ttu-id="e709a-302">Get-AzureRmLoadBalancerOutboundRuleConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-302">Get-AzureRmLoadBalancerOutboundRuleConfig</span></span>
+  - <span data-ttu-id="e709a-303">New-AzureRmLoadBalancerOutboundRuleConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-303">New-AzureRmLoadBalancerOutboundRuleConfig</span></span>
+  - <span data-ttu-id="e709a-304">Set-AzureRmLoadBalancerOutboundRuleConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-304">Set-AzureRmLoadBalancerOutboundRuleConfig</span></span>
+  - <span data-ttu-id="e709a-305">Remove-AzureRmLoadBalancerOutboundRuleConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-305">Remove-AzureRmLoadBalancerOutboundRuleConfig</span></span>
+* <span data-ttu-id="e709a-306">PSNetworkInterface에 대한 새 HostedWorkloads 속성 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-306">Added new HostedWorkloads property for PSNetworkInterface</span></span>
+* <span data-ttu-id="e709a-307">기능에 대한 새 cmdlet 추가: ARM을 통한 Azure Firewall</span><span class="sxs-lookup"><span data-stu-id="e709a-307">Added new cmdlets for feature: Azure Firewall via ARM</span></span>
+  - <span data-ttu-id="e709a-308">Get-AzureRmFirewall 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-308">Added Get-AzureRmFirewall</span></span>
+  - <span data-ttu-id="e709a-309">Set-AzureRmFirewall 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-309">Added Set-AzureRmFirewall</span></span>
+  - <span data-ttu-id="e709a-310">New-AzureRmFirewall 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-310">Added New-AzureRmFirewall</span></span>
+  - <span data-ttu-id="e709a-311">Remove-AzureRmFirewall 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-311">Added Remove-AzureRmFirewall</span></span>
+  - <span data-ttu-id="e709a-312">New-AzureRmFirewallApplicationRuleCollection 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-312">Added New-AzureRmFirewallApplicationRuleCollection</span></span>
+  - <span data-ttu-id="e709a-313">New-AzureRmFirewallApplicationRule 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-313">Added New-AzureRmFirewallApplicationRule</span></span>
+  - <span data-ttu-id="e709a-314">New-AzureRmFirewallNatRuleCollection 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-314">Added New-AzureRmFirewallNatRuleCollection</span></span>
+  - <span data-ttu-id="e709a-315">New-AzureRmFirewallNatRule 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-315">Added New-AzureRmFirewallNatRule</span></span>
+  - <span data-ttu-id="e709a-316">New-AzureRmFirewallNetworkRuleCollection 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-316">Added New-AzureRmFirewallNetworkRuleCollection</span></span>
+  - <span data-ttu-id="e709a-317">New-AzureRmFirewallNetworkRule 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-317">Added New-AzureRmFirewallNetworkRule</span></span>
+* <span data-ttu-id="e709a-318">Application Gateway에서 신뢰할 수 있는 루트 인증서 및 크기 자동 조정 구성에 대한 지원이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-318">Added support for Trusted Root certificate and Autoscale configuration in Application Gateway</span></span>
+  - <span data-ttu-id="e709a-319">추가된 새 cmdlet은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-319">New Cmdlets added:</span></span>
+      - <span data-ttu-id="e709a-320">Add-AzureRmApplicationGatewayTrustedRootCertificate</span><span class="sxs-lookup"><span data-stu-id="e709a-320">Add-AzureRmApplicationGatewayTrustedRootCertificate</span></span>
+      - <span data-ttu-id="e709a-321">Get-AzureRmApplicationGatewayTrustedRootCertificate</span><span class="sxs-lookup"><span data-stu-id="e709a-321">Get-AzureRmApplicationGatewayTrustedRootCertificate</span></span>
+      - <span data-ttu-id="e709a-322">New-AzureRmApplicationGatewayTrustedRootCertificate</span><span class="sxs-lookup"><span data-stu-id="e709a-322">New-AzureRmApplicationGatewayTrustedRootCertificate</span></span>
+      - <span data-ttu-id="e709a-323">Remove-AzureRmApplicationGatewayTrustedRootCertificate</span><span class="sxs-lookup"><span data-stu-id="e709a-323">Remove-AzureRmApplicationGatewayTrustedRootCertificate</span></span>
+      - <span data-ttu-id="e709a-324">Set-AzureRmApplicationGatewayTrustedRootCertificate</span><span class="sxs-lookup"><span data-stu-id="e709a-324">Set-AzureRmApplicationGatewayTrustedRootCertificate</span></span>
+      - <span data-ttu-id="e709a-325">Get-AzureRmApplicationGatewayAutoscaleConfiguration</span><span class="sxs-lookup"><span data-stu-id="e709a-325">Get-AzureRmApplicationGatewayAutoscaleConfiguration</span></span>
+      - <span data-ttu-id="e709a-326">New-AzureRmApplicationGatewayAutoscaleConfiguration</span><span class="sxs-lookup"><span data-stu-id="e709a-326">New-AzureRmApplicationGatewayAutoscaleConfiguration</span></span>
+      - <span data-ttu-id="e709a-327">Remove-AzureRmApplicationGatewayAutoscaleConfiguration</span><span class="sxs-lookup"><span data-stu-id="e709a-327">Remove-AzureRmApplicationGatewayAutoscaleConfiguration</span></span>
+      - <span data-ttu-id="e709a-328">Set-AzureRmApplicationGatewayAutoscaleConfiguration</span><span class="sxs-lookup"><span data-stu-id="e709a-328">Set-AzureRmApplicationGatewayAutoscaleConfiguration</span></span>
+  - <span data-ttu-id="e709a-329">옵션 매개 변수를 사용하도록 업데이트된 Cmdlet-TrustedRootCertificate</span><span class="sxs-lookup"><span data-stu-id="e709a-329">Cmdlets updated with optonal parameter -TrustedRootCertificate</span></span>
+      - <span data-ttu-id="e709a-330">New-AzureRmApplicationGateway</span><span class="sxs-lookup"><span data-stu-id="e709a-330">New-AzureRmApplicationGateway</span></span>
+      - <span data-ttu-id="e709a-331">Set-AzureRmApplicationGateway</span><span class="sxs-lookup"><span data-stu-id="e709a-331">Set-AzureRmApplicationGateway</span></span>
+      - <span data-ttu-id="e709a-332">New-AzureRmApplicationGatewayBackendHttpSetting</span><span class="sxs-lookup"><span data-stu-id="e709a-332">New-AzureRmApplicationGatewayBackendHttpSetting</span></span>
+      - <span data-ttu-id="e709a-333">Set-AzureRmApplicationGatewayBackendHttpSetting</span><span class="sxs-lookup"><span data-stu-id="e709a-333">Set-AzureRmApplicationGatewayBackendHttpSetting</span></span>
+  - <span data-ttu-id="e709a-334">옵션 매개 변수를 사용하도록 업데이트된 Cmdlet-AutoscaleConfiguration</span><span class="sxs-lookup"><span data-stu-id="e709a-334">Cmdlets updated with optonal parameter -AutoscaleConfiguration</span></span>
+      - <span data-ttu-id="e709a-335">New-AzureRmApplicationGateway</span><span class="sxs-lookup"><span data-stu-id="e709a-335">New-AzureRmApplicationGateway</span></span>
+      - <span data-ttu-id="e709a-336">Set-AzureRmApplicationGateway</span><span class="sxs-lookup"><span data-stu-id="e709a-336">Set-AzureRmApplicationGateway</span></span>
+* <span data-ttu-id="e709a-337">인터페이스 엔드포인트 Get-AzureInterfaceEndpoint에 대한 cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-337">Add cmdlet for Interface Endpoint Get-AzureInterfaceEndpoint</span></span>
+* <span data-ttu-id="e709a-338">서브넷에서 여러 주소 접두사에 대한 지원이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-338">Added support for multiple address prefixes in a subnet.</span></span> <span data-ttu-id="e709a-339">다음 Cmdlet이 업데이트 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-339">Updated cmdlets:</span></span>
+  - <span data-ttu-id="e709a-340">New-AzureRmVirtualNetworkSubnetConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-340">New-AzureRmVirtualNetworkSubnetConfig</span></span>
+  - <span data-ttu-id="e709a-341">Set-AzureRmVirtualNetworkSubnetConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-341">Set-AzureRmVirtualNetworkSubnetConfig</span></span>
+  - <span data-ttu-id="e709a-342">Add-AzureRmVirtualNetworkSubnetConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-342">Add-AzureRmVirtualNetworkSubnetConfig</span></span>
+  - <span data-ttu-id="e709a-343">Get-AzureRmVirtualNetworkSubnetConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-343">Get-AzureRmVirtualNetworkSubnetConfig</span></span>
+  - <span data-ttu-id="e709a-344">Add-AzureRmApplicationGatewayAuthenticationCertificate</span><span class="sxs-lookup"><span data-stu-id="e709a-344">Add-AzureRmApplicationGatewayAuthenticationCertificate</span></span>
+  - <span data-ttu-id="e709a-345">Add-AzureRmApplicationGatewayFrontendIPConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-345">Add-AzureRmApplicationGatewayFrontendIPConfig</span></span>
+  - <span data-ttu-id="e709a-346">New-AzureRmApplicationGatewayFrontendIPConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-346">New-AzureRmApplicationGatewayFrontendIPConfig</span></span>
+  - <span data-ttu-id="e709a-347">Set-AzureRmApplicationGatewayFrontendIPConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-347">Set-AzureRmApplicationGatewayFrontendIPConfig</span></span>
+  - <span data-ttu-id="e709a-348">Add-AzureRmApplicationGatewayIPConfiguration</span><span class="sxs-lookup"><span data-stu-id="e709a-348">Add-AzureRmApplicationGatewayIPConfiguration</span></span>
+  - <span data-ttu-id="e709a-349">New-AzureRmApplicationGatewayIPConfiguration</span><span class="sxs-lookup"><span data-stu-id="e709a-349">New-AzureRmApplicationGatewayIPConfiguration</span></span>
+  - <span data-ttu-id="e709a-350">Set-AzureRmApplicationGatewayIPConfiguration</span><span class="sxs-lookup"><span data-stu-id="e709a-350">Set-AzureRmApplicationGatewayIPConfiguration</span></span>
+  - <span data-ttu-id="e709a-351">Add-AzureRmNetworkInterfaceIpConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-351">Add-AzureRmNetworkInterfaceIpConfig</span></span>
+  - <span data-ttu-id="e709a-352">New-AzureRmNetworkInterfaceIpConfig  - Set-AzureRmNetworkInterfaceIpConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-352">New-AzureRmNetworkInterfaceIpConfig  - Set-AzureRmNetworkInterfaceIpConfig</span></span>
+  - <span data-ttu-id="e709a-353">New-AzureRmVirtualNetworkGatewayIpConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-353">New-AzureRmVirtualNetworkGatewayIpConfig</span></span>
+  - <span data-ttu-id="e709a-354">Add-AzureRmVirtualNetworkGatewayIpConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-354">Add-AzureRmVirtualNetworkGatewayIpConfig</span></span>
+  - <span data-ttu-id="e709a-355">Set-AzureRmLoadBalancerFrontendIpConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-355">Set-AzureRmLoadBalancerFrontendIpConfig</span></span>
+  - <span data-ttu-id="e709a-356">Add-AzureRmLoadBalancerFrontendIpConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-356">Add-AzureRmLoadBalancerFrontendIpConfig</span></span>
+  - <span data-ttu-id="e709a-357">New-AzureRmLoadBalancerFrontendIpConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-357">New-AzureRmLoadBalancerFrontendIpConfig</span></span>
+  - <span data-ttu-id="e709a-358">New-AzureRmNetworkInterface</span><span class="sxs-lookup"><span data-stu-id="e709a-358">New-AzureRmNetworkInterface</span></span>
+* <span data-ttu-id="e709a-359">서브넷 위임에 대한 cmdlet을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-359">Adding cmdlets for subnet delegation.</span></span>
+  - <span data-ttu-id="e709a-360">New-AzureRmDelegation: 서브넷에 추가할 수 있는 새 위임을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-360">New-AzureRmDelegation: Creates a new delegation, which can be added to a subnet</span></span>
+  - <span data-ttu-id="e709a-361">Remove-AzureRmDelegation: 서브넷에서 가져와서 해당 서브넷에서 제공된 위임 이름을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-361">Remove-AzureRmDelegation: Takes in a subnet and removes the provided delegation name from that subnet</span></span>
+  - <span data-ttu-id="e709a-362">Add-AzureRmDelegation: 서브넷에서 사용 및 제공된 서비스 이름을 해당 서브넷에 대한 위임으로 추가합니다</span><span class="sxs-lookup"><span data-stu-id="e709a-362">Add-AzureRmDelegation: Takes in a subnet and adds the provided service name as a delegation to that subnet</span></span>
+  - <span data-ttu-id="e709a-363">Get-AzureRmDelegation</span><span class="sxs-lookup"><span data-stu-id="e709a-363">Get-AzureRmDelegation</span></span>
+  - <span data-ttu-id="e709a-364">Get-AzureRmAvailableServiceDelegations</span><span class="sxs-lookup"><span data-stu-id="e709a-364">Get-AzureRmAvailableServiceDelegations</span></span>
 
-#### <a name="azurermrecoveryservicessiterecovery"></a><span data-ttu-id="195ef-365">AzureRM.RecoveryServices.SiteRecovery</span><span class="sxs-lookup"><span data-stu-id="195ef-365">AzureRM.RecoveryServices.SiteRecovery</span></span>
-* <span data-ttu-id="195ef-366">관리되는 관리 디스크에 대한 지원</span><span class="sxs-lookup"><span data-stu-id="195ef-366">Support for managed Managed disk</span></span>
+#### <a name="azurermrecoveryservicessiterecovery"></a><span data-ttu-id="e709a-365">AzureRM.RecoveryServices.SiteRecovery</span><span class="sxs-lookup"><span data-stu-id="e709a-365">AzureRM.RecoveryServices.SiteRecovery</span></span>
+* <span data-ttu-id="e709a-366">관리되는 관리 디스크에 대한 지원</span><span class="sxs-lookup"><span data-stu-id="e709a-366">Support for managed Managed disk</span></span>
 
-#### <a name="azurermrediscache"></a><span data-ttu-id="195ef-367">AzureRM.RedisCache</span><span class="sxs-lookup"><span data-stu-id="195ef-367">AzureRM.RedisCache</span></span>
-* <span data-ttu-id="195ef-368">인사이트 종속성이 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-368">Updated Insights dependency.</span></span>
+#### <a name="azurermrediscache"></a><span data-ttu-id="e709a-367">AzureRM.RedisCache</span><span class="sxs-lookup"><span data-stu-id="e709a-367">AzureRM.RedisCache</span></span>
+* <span data-ttu-id="e709a-368">인사이트 종속성이 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-368">Updated Insights dependency.</span></span>
 
-#### <a name="azurermresources"></a><span data-ttu-id="195ef-369">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="195ef-369">AzureRM.Resources</span></span>
-* <span data-ttu-id="195ef-370">New-AzureRmResourceGroupDeployment를 RollbackAction 새 매개 변수를 사용하여 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-370">Update New-AzureRmResourceGroupDeployment with new parameter RollbackAction</span></span>
-    - <span data-ttu-id="195ef-371">새 매개 변수를 사용하여 OnErrorDeployment에 대한 지원을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-371">Add support for OnErrorDeployment with the new parameter.</span></span>
-* <span data-ttu-id="195ef-372">정책 할당에서 관리되는 ID를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-372">Support managed identity on policy assignments.</span></span>
-* <span data-ttu-id="195ef-373">'New-AzureRmPolicyAssignment'를 사용하여 정책을 할당할 때 기본값이 있는 매개 변수는 더 이상 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-373">Parameters with default values are no longer requred when assigning a policy with 'New-AzureRmPolicyAssignment'</span></span>
-* <span data-ttu-id="195ef-374">정책 별칭을 검색하기 위한 새 cmdlet Get-AzureRmPolicyAlias 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-374">Add new cmdlet Get-AzureRmPolicyAlias for retrieving policy aliases</span></span>
+#### <a name="azurermresources"></a><span data-ttu-id="e709a-369">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="e709a-369">AzureRM.Resources</span></span>
+* <span data-ttu-id="e709a-370">New-AzureRmResourceGroupDeployment를 RollbackAction 새 매개 변수를 사용하여 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-370">Update New-AzureRmResourceGroupDeployment with new parameter RollbackAction</span></span>
+    - <span data-ttu-id="e709a-371">새 매개 변수를 사용하여 OnErrorDeployment에 대한 지원을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-371">Add support for OnErrorDeployment with the new parameter.</span></span>
+* <span data-ttu-id="e709a-372">정책 할당에서 관리되는 ID를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-372">Support managed identity on policy assignments.</span></span>
+* <span data-ttu-id="e709a-373">'New-AzureRmPolicyAssignment'를 사용하여 정책을 할당할 때 기본값이 있는 매개 변수는 더 이상 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-373">Parameters with default values are no longer requred when assigning a policy with 'New-AzureRmPolicyAssignment'</span></span>
+* <span data-ttu-id="e709a-374">정책 별칭을 검색하기 위한 새 cmdlet Get-AzureRmPolicyAlias 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-374">Add new cmdlet Get-AzureRmPolicyAlias for retrieving policy aliases</span></span>
 
-#### <a name="azurermservicebus"></a><span data-ttu-id="195ef-375">AzureRM.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="195ef-375">AzureRM.ServiceBus</span></span>
-* <span data-ttu-id="195ef-376">#7161 문제 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-376">Fixed issue #7161</span></span>
+#### <a name="azurermservicebus"></a><span data-ttu-id="e709a-375">AzureRM.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="e709a-375">AzureRM.ServiceBus</span></span>
+* <span data-ttu-id="e709a-376">#7161 문제 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-376">Fixed issue #7161</span></span>
 
-#### <a name="azurermsignalr"></a><span data-ttu-id="195ef-377">AzureRM.SignalR</span><span class="sxs-lookup"><span data-stu-id="195ef-377">AzureRM.SignalR</span></span>
-* <span data-ttu-id="195ef-378">SKU 이름을 Free_F1 및 Standard_S1로 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-378">Update SKU names to Free_F1 and Standard_S1</span></span>
-* <span data-ttu-id="195ef-379">버전 필드를 PSSignalRResource 개체에 추가하고 연결 문자열을 PSSignalRKeys개체에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-379">Add version field to the PSSignalRResource object and connection string to the PSSignalRKeys object.</span></span>
+#### <a name="azurermsignalr"></a><span data-ttu-id="e709a-377">AzureRM.SignalR</span><span class="sxs-lookup"><span data-stu-id="e709a-377">AzureRM.SignalR</span></span>
+* <span data-ttu-id="e709a-378">SKU 이름을 Free_F1 및 Standard_S1로 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-378">Update SKU names to Free_F1 and Standard_S1</span></span>
+* <span data-ttu-id="e709a-379">버전 필드를 PSSignalRResource 개체에 추가하고 연결 문자열을 PSSignalRKeys개체에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-379">Add version field to the PSSignalRResource object and connection string to the PSSignalRKeys object.</span></span>
 
-#### <a name="azurermstorage"></a><span data-ttu-id="195ef-380">AzureRM.Storage</span><span class="sxs-lookup"><span data-stu-id="195ef-380">AzureRM.Storage</span></span>
-* <span data-ttu-id="195ef-381">AzureRm.Storage에서 불변성 정책 지원</span><span class="sxs-lookup"><span data-stu-id="195ef-381">Support Immutability Policy in AzureRm.Storage</span></span> 
-    - <span data-ttu-id="195ef-382">Remove-AzureRmStorageAccountNetworkRule</span><span class="sxs-lookup"><span data-stu-id="195ef-382">Remove-AzureRmStorageAccountNetworkRule</span></span>
-    - <span data-ttu-id="195ef-383">Get-AzureRmStorageContainer</span><span class="sxs-lookup"><span data-stu-id="195ef-383">Get-AzureRmStorageContainer</span></span>
-    - <span data-ttu-id="195ef-384">Update-AzureRmStorageContainer</span><span class="sxs-lookup"><span data-stu-id="195ef-384">Update-AzureRmStorageContainer</span></span>
-    - <span data-ttu-id="195ef-385">New-AzureRmStorageContainer</span><span class="sxs-lookup"><span data-stu-id="195ef-385">New-AzureRmStorageContainer</span></span>
-    - <span data-ttu-id="195ef-386">Remove-AzureRmStorageContainer</span><span class="sxs-lookup"><span data-stu-id="195ef-386">Remove-AzureRmStorageContainer</span></span>
-    - <span data-ttu-id="195ef-387">Add-AzureRmStorageContainerLegalHold</span><span class="sxs-lookup"><span data-stu-id="195ef-387">Add-AzureRmStorageContainerLegalHold</span></span>
-    - <span data-ttu-id="195ef-388">Remove-AzureRmStorageContainerLegalHold</span><span class="sxs-lookup"><span data-stu-id="195ef-388">Remove-AzureRmStorageContainerLegalHold</span></span>
-    - <span data-ttu-id="195ef-389">Set-AzureRmStorageContainerImmutabilityPolicy</span><span class="sxs-lookup"><span data-stu-id="195ef-389">Set-AzureRmStorageContainerImmutabilityPolicy</span></span>
-    - <span data-ttu-id="195ef-390">Get-AzureRmStorageContainerImmutabilityPolicy</span><span class="sxs-lookup"><span data-stu-id="195ef-390">Get-AzureRmStorageContainerImmutabilityPolicy</span></span>
-    - <span data-ttu-id="195ef-391">Remove-AzureRmStorageContainerImmutabilityPolicy</span><span class="sxs-lookup"><span data-stu-id="195ef-391">Remove-AzureRmStorageContainerImmutabilityPolicy</span></span>
-    - <span data-ttu-id="195ef-392">Lock-AzureRmStorageContainerImmutabilityPolicy</span><span class="sxs-lookup"><span data-stu-id="195ef-392">Lock-AzureRmStorageContainerImmutabilityPolicy</span></span>
+#### <a name="azurermstorage"></a><span data-ttu-id="e709a-380">AzureRM.Storage</span><span class="sxs-lookup"><span data-stu-id="e709a-380">AzureRM.Storage</span></span>
+* <span data-ttu-id="e709a-381">AzureRm.Storage에서 불변성 정책 지원</span><span class="sxs-lookup"><span data-stu-id="e709a-381">Support Immutability Policy in AzureRm.Storage</span></span> 
+    - <span data-ttu-id="e709a-382">Remove-AzureRmStorageAccountNetworkRule</span><span class="sxs-lookup"><span data-stu-id="e709a-382">Remove-AzureRmStorageAccountNetworkRule</span></span>
+    - <span data-ttu-id="e709a-383">Get-AzureRmStorageContainer</span><span class="sxs-lookup"><span data-stu-id="e709a-383">Get-AzureRmStorageContainer</span></span>
+    - <span data-ttu-id="e709a-384">Update-AzureRmStorageContainer</span><span class="sxs-lookup"><span data-stu-id="e709a-384">Update-AzureRmStorageContainer</span></span>
+    - <span data-ttu-id="e709a-385">New-AzureRmStorageContainer</span><span class="sxs-lookup"><span data-stu-id="e709a-385">New-AzureRmStorageContainer</span></span>
+    - <span data-ttu-id="e709a-386">Remove-AzureRmStorageContainer</span><span class="sxs-lookup"><span data-stu-id="e709a-386">Remove-AzureRmStorageContainer</span></span>
+    - <span data-ttu-id="e709a-387">Add-AzureRmStorageContainerLegalHold</span><span class="sxs-lookup"><span data-stu-id="e709a-387">Add-AzureRmStorageContainerLegalHold</span></span>
+    - <span data-ttu-id="e709a-388">Remove-AzureRmStorageContainerLegalHold</span><span class="sxs-lookup"><span data-stu-id="e709a-388">Remove-AzureRmStorageContainerLegalHold</span></span>
+    - <span data-ttu-id="e709a-389">Set-AzureRmStorageContainerImmutabilityPolicy</span><span class="sxs-lookup"><span data-stu-id="e709a-389">Set-AzureRmStorageContainerImmutabilityPolicy</span></span>
+    - <span data-ttu-id="e709a-390">Get-AzureRmStorageContainerImmutabilityPolicy</span><span class="sxs-lookup"><span data-stu-id="e709a-390">Get-AzureRmStorageContainerImmutabilityPolicy</span></span>
+    - <span data-ttu-id="e709a-391">Remove-AzureRmStorageContainerImmutabilityPolicy</span><span class="sxs-lookup"><span data-stu-id="e709a-391">Remove-AzureRmStorageContainerImmutabilityPolicy</span></span>
+    - <span data-ttu-id="e709a-392">Lock-AzureRmStorageContainerImmutabilityPolicy</span><span class="sxs-lookup"><span data-stu-id="e709a-392">Lock-AzureRmStorageContainerImmutabilityPolicy</span></span>
 
-#### <a name="azurermwebsites"></a><span data-ttu-id="195ef-393">AzureRM.Websites</span><span class="sxs-lookup"><span data-stu-id="195ef-393">AzureRM.Websites</span></span>
-* <span data-ttu-id="195ef-394">두 개의 새로운 cmdlet이 추가되었습니다. Get-AzureRmDeletedWebApp 및 Restore-AzureRmDeletedWebApp</span><span class="sxs-lookup"><span data-stu-id="195ef-394">Added two new cmdlets: Get-AzureRmDeletedWebApp and Restore-AzureRmDeletedWebApp</span></span>
-* <span data-ttu-id="195ef-395">New-AzureRmAppServicePlan -HyperV 스위치가 창 컨테이너가 있는 앱 서비스 계획 작성용으로 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-395">New-AzureRmAppServicePlan -HyperV switch is added for create app service plan with windows container</span></span>
-* <span data-ttu-id="195ef-396">New-AzureRmWebApp/New-AzureRmWebAppSlot/Set-AzureRmWebApp/ Set-AzureRmWebAppSlot - Windows 컨테이너 앱을 만들고 관리하기 위한 새 매개 변수(-ContainerRegistryUser 문자열 -ContainerRegistryPassword secureString -EnableContainerContinuousDeployment)가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-396">New-AzureRmWebApp/ New-AzureRmWebAppSlot/ Set-AzureRmWebApp/ Set-AzureRmWebAppSlot - New parameters (–ContainerRegistryUser string -ContainerRegistryPassword secureString -EnableContainerContinuousDeployment) added for creating and managing windows container app</span></span>
+#### <a name="azurermwebsites"></a><span data-ttu-id="e709a-393">AzureRM.Websites</span><span class="sxs-lookup"><span data-stu-id="e709a-393">AzureRM.Websites</span></span>
+* <span data-ttu-id="e709a-394">두 개의 새로운 cmdlet이 추가되었습니다. Get-AzureRmDeletedWebApp 및 Restore-AzureRmDeletedWebApp</span><span class="sxs-lookup"><span data-stu-id="e709a-394">Added two new cmdlets: Get-AzureRmDeletedWebApp and Restore-AzureRmDeletedWebApp</span></span>
+* <span data-ttu-id="e709a-395">New-AzureRmAppServicePlan -HyperV 스위치가 창 컨테이너가 있는 앱 서비스 계획 작성용으로 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-395">New-AzureRmAppServicePlan -HyperV switch is added for create app service plan with windows container</span></span>
+* <span data-ttu-id="e709a-396">New-AzureRmWebApp/New-AzureRmWebAppSlot/Set-AzureRmWebApp/ Set-AzureRmWebAppSlot - Windows 컨테이너 앱을 만들고 관리하기 위한 새 매개 변수(-ContainerRegistryUser 문자열 -ContainerRegistryPassword secureString -EnableContainerContinuousDeployment)가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-396">New-AzureRmWebApp/ New-AzureRmWebAppSlot/ Set-AzureRmWebApp/ Set-AzureRmWebAppSlot - New parameters (–ContainerRegistryUser string -ContainerRegistryPassword secureString -EnableContainerContinuousDeployment) added for creating and managing windows container app</span></span>
 
-## <a name="681---august-2018"></a><span data-ttu-id="195ef-397">6.8.1 - 2018년 8월</span><span class="sxs-lookup"><span data-stu-id="195ef-397">6.8.1 - August 2018</span></span>
-#### <a name="general"></a><span data-ttu-id="195ef-398">일반</span><span class="sxs-lookup"><span data-stu-id="195ef-398">General</span></span>
-* <span data-ttu-id="195ef-399">기본 리소스 그룹이 설정되지 않는 문제를 해결했습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-399">Fixed issue with default resource groups not being set.</span></span>
-* <span data-ttu-id="195ef-400">공용 런타임 어셈블리가 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-400">Updated common runtime assemblies</span></span>
+## <a name="681---august-2018"></a><span data-ttu-id="e709a-397">6.8.1 - 2018년 8월</span><span class="sxs-lookup"><span data-stu-id="e709a-397">6.8.1 - August 2018</span></span>
+#### <a name="general"></a><span data-ttu-id="e709a-398">일반</span><span class="sxs-lookup"><span data-stu-id="e709a-398">General</span></span>
+* <span data-ttu-id="e709a-399">기본 리소스 그룹이 설정되지 않는 문제를 해결했습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-399">Fixed issue with default resource groups not being set.</span></span>
+* <span data-ttu-id="e709a-400">공용 런타임 어셈블리가 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-400">Updated common runtime assemblies</span></span>
 
-#### <a name="azurermapimanagement"></a><span data-ttu-id="195ef-401">AzureRM.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="195ef-401">AzureRM.ApiManagement</span></span>
-* <span data-ttu-id="195ef-402">기본 리소스 그룹이 설정되지 않는 문제를 해결했습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-402">Fixed issue with default resource groups not being set.</span></span>
-* <span data-ttu-id="195ef-403">문제 https://github.com/Azure/azure-powershell/issues/6603 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-403">Fixed issue https://github.com/Azure/azure-powershell/issues/6603</span></span>
-    - <span data-ttu-id="195ef-404">Import-AzureRmApiManagementApi 및 \*-AzureRmApiManagementCertificate cmdlet은 이제 상대 경로를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-404">Import-AzureRmApiManagementApi and \*-AzureRmApiManagementCertificate cmdlets now handle relative Paths</span></span>
-* <span data-ttu-id="195ef-405">문제 https://github.com/Azure/azure-powershell/issues/6879 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-405">Fixed issue https://github.com/Azure/azure-powershell/issues/6879</span></span>
-    - <span data-ttu-id="195ef-406">CertificateInformation은 Set-AzureRmApiManagement cmdlet이 제대로 작동 하게 하는 설정 가능한 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-406">The CertificateInformation is a settable property allowing for Set-AzureRmApiManagement cmdlet to work property.</span></span> <span data-ttu-id="195ef-407">4\.0.4-preview nuget으로 업그레이드하여 해결됨</span><span class="sxs-lookup"><span data-stu-id="195ef-407">Fixed by upgrading to 4.0.4-preview nuget</span></span>
-* <span data-ttu-id="195ef-408">문제 https://github.com/Azure/azure-powershell/issues/6853 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-408">Fixed issue https://github.com/Azure/azure-powershell/issues/6853</span></span>
-    - <span data-ttu-id="195ef-409">제품에서 이름별 검색에 대해 Odata 필터가 수정됨</span><span class="sxs-lookup"><span data-stu-id="195ef-409">Fixed the Odata filter for Search by Name on Product</span></span>
-* <span data-ttu-id="195ef-410">문제 https://github.com/Azure/azure-powershell/issues/6814 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-410">Fixed issue https://github.com/Azure/azure-powershell/issues/6814</span></span>
-    - <span data-ttu-id="195ef-411">API에서 이름별 검색에 대해 Odata 필터가 수정됨</span><span class="sxs-lookup"><span data-stu-id="195ef-411">Fixed the Odata filter for Search by Name on Api</span></span>
-* <span data-ttu-id="195ef-412">AzureMonitor 로거에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-412">Added support for AzureMonitor logger</span></span>
-
-
-#### <a name="azurermcompute"></a><span data-ttu-id="195ef-413">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="195ef-413">AzureRM.Compute</span></span>
-* <span data-ttu-id="195ef-414">오류 출력에 대상이 없는 문제를 해결했습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-414">Fixed the issue that target is missing in error output.</span></span>
-* <span data-ttu-id="195ef-415">관리 디스크를 사용하는 VM에 대한 스토리지 계정 유형 문제 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-415">Fixed issue with storage account type for VM with managed disk</span></span>
-* <span data-ttu-id="195ef-416">기본 리소스 그룹이 설정되지 않는 문제를 해결했습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-416">Fixed issue with default resource groups not being set.</span></span>
-* <span data-ttu-id="195ef-417">예를 들어 Azure 중국과 같이, 다른 환경에 대한 AEM 확장 cmdlet 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-417">Fix AEM Extension cmdlets for other environments, for example Azure China</span></span>
-
-#### <a name="azurermnetwork"></a><span data-ttu-id="195ef-418">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="195ef-418">AzureRM.Network</span></span>
-* <span data-ttu-id="195ef-419">기본 cmdlet 출력 표시를 테이블 뷰로 변경</span><span class="sxs-lookup"><span data-stu-id="195ef-419">Changed default cmdlet output presentation to table view</span></span>
-
-#### <a name="azurermpowerbiembedded"></a><span data-ttu-id="195ef-420">AzureRM.PowerBIEmbedded</span><span class="sxs-lookup"><span data-stu-id="195ef-420">AzureRM.PowerBIEmbedded</span></span>
-* <span data-ttu-id="195ef-421">일시 중지된 용량을 확장하려고 할 때 Update-AzureRmPowerBIEmbeddedCapacity 실패 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-421">Fix failure in Update-AzureRmPowerBIEmbeddedCapacity when trying to scale paused capacity</span></span>
+#### <a name="azurermapimanagement"></a><span data-ttu-id="e709a-401">AzureRM.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="e709a-401">AzureRM.ApiManagement</span></span>
+* <span data-ttu-id="e709a-402">기본 리소스 그룹이 설정되지 않는 문제를 해결했습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-402">Fixed issue with default resource groups not being set.</span></span>
+* <span data-ttu-id="e709a-403">문제 https://github.com/Azure/azure-powershell/issues/6603 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-403">Fixed issue https://github.com/Azure/azure-powershell/issues/6603</span></span>
+    - <span data-ttu-id="e709a-404">Import-AzureRmApiManagementApi 및 \*-AzureRmApiManagementCertificate cmdlet은 이제 상대 경로를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-404">Import-AzureRmApiManagementApi and \*-AzureRmApiManagementCertificate cmdlets now handle relative Paths</span></span>
+* <span data-ttu-id="e709a-405">문제 https://github.com/Azure/azure-powershell/issues/6879 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-405">Fixed issue https://github.com/Azure/azure-powershell/issues/6879</span></span>
+    - <span data-ttu-id="e709a-406">CertificateInformation은 Set-AzureRmApiManagement cmdlet이 제대로 작동 하게 하는 설정 가능한 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-406">The CertificateInformation is a settable property allowing for Set-AzureRmApiManagement cmdlet to work property.</span></span> <span data-ttu-id="e709a-407">4\.0.4-preview nuget으로 업그레이드하여 해결됨</span><span class="sxs-lookup"><span data-stu-id="e709a-407">Fixed by upgrading to 4.0.4-preview nuget</span></span>
+* <span data-ttu-id="e709a-408">문제 https://github.com/Azure/azure-powershell/issues/6853 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-408">Fixed issue https://github.com/Azure/azure-powershell/issues/6853</span></span>
+    - <span data-ttu-id="e709a-409">제품에서 이름별 검색에 대해 Odata 필터가 수정됨</span><span class="sxs-lookup"><span data-stu-id="e709a-409">Fixed the Odata filter for Search by Name on Product</span></span>
+* <span data-ttu-id="e709a-410">문제 https://github.com/Azure/azure-powershell/issues/6814 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-410">Fixed issue https://github.com/Azure/azure-powershell/issues/6814</span></span>
+    - <span data-ttu-id="e709a-411">API에서 이름별 검색에 대해 Odata 필터가 수정됨</span><span class="sxs-lookup"><span data-stu-id="e709a-411">Fixed the Odata filter for Search by Name on Api</span></span>
+* <span data-ttu-id="e709a-412">AzureMonitor 로거에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-412">Added support for AzureMonitor logger</span></span>
 
 
-#### <a name="azurermresources"></a><span data-ttu-id="195ef-422">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="195ef-422">AzureRM.Resources</span></span>
-* <span data-ttu-id="195ef-423">MarketPlace에서 관리되는 애플리케이션 생성 시의 문제 해결.</span><span class="sxs-lookup"><span data-stu-id="195ef-423">Fixed issue with creating managed applications from the MarketPlace.</span></span>
+#### <a name="azurermcompute"></a><span data-ttu-id="e709a-413">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="e709a-413">AzureRM.Compute</span></span>
+* <span data-ttu-id="e709a-414">오류 출력에 대상이 없는 문제를 해결했습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-414">Fixed the issue that target is missing in error output.</span></span>
+* <span data-ttu-id="e709a-415">관리 디스크를 사용하는 VM에 대한 스토리지 계정 유형 문제 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-415">Fixed issue with storage account type for VM with managed disk</span></span>
+* <span data-ttu-id="e709a-416">기본 리소스 그룹이 설정되지 않는 문제를 해결했습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-416">Fixed issue with default resource groups not being set.</span></span>
+* <span data-ttu-id="e709a-417">예를 들어 Azure 중국과 같이, 다른 환경에 대한 AEM 확장 cmdlet 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-417">Fix AEM Extension cmdlets for other environments, for example Azure China</span></span>
 
-#### <a name="azurermservicebus"></a><span data-ttu-id="195ef-424">AzureRM.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="195ef-424">AzureRM.ServiceBus</span></span>
-* <span data-ttu-id="195ef-425">해결된 문제</span><span class="sxs-lookup"><span data-stu-id="195ef-425">Fixed issues</span></span>
+#### <a name="azurermnetwork"></a><span data-ttu-id="e709a-418">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="e709a-418">AzureRM.Network</span></span>
+* <span data-ttu-id="e709a-419">기본 cmdlet 출력 표시를 테이블 뷰로 변경</span><span class="sxs-lookup"><span data-stu-id="e709a-419">Changed default cmdlet output presentation to table view</span></span>
+
+#### <a name="azurermpowerbiembedded"></a><span data-ttu-id="e709a-420">AzureRM.PowerBIEmbedded</span><span class="sxs-lookup"><span data-stu-id="e709a-420">AzureRM.PowerBIEmbedded</span></span>
+* <span data-ttu-id="e709a-421">일시 중지된 용량을 확장하려고 할 때 Update-AzureRmPowerBIEmbeddedCapacity 실패 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-421">Fix failure in Update-AzureRmPowerBIEmbeddedCapacity when trying to scale paused capacity</span></span>
+
+
+#### <a name="azurermresources"></a><span data-ttu-id="e709a-422">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="e709a-422">AzureRM.Resources</span></span>
+* <span data-ttu-id="e709a-423">MarketPlace에서 관리되는 애플리케이션 생성 시의 문제 해결.</span><span class="sxs-lookup"><span data-stu-id="e709a-423">Fixed issue with creating managed applications from the MarketPlace.</span></span>
+
+#### <a name="azurermservicebus"></a><span data-ttu-id="e709a-424">AzureRM.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="e709a-424">AzureRM.ServiceBus</span></span>
+* <span data-ttu-id="e709a-425">해결된 문제</span><span class="sxs-lookup"><span data-stu-id="e709a-425">Fixed issues</span></span>
     - https://github.com/Azure/azure-powershell/issues/5058
     - https://github.com/Azure/azure-powershell/issues/5055
     - https://github.com/Azure/azure-powershell/issues/6891
 
-#### <a name="azurermtrafficmanager"></a><span data-ttu-id="195ef-426">AzureRM.TrafficManager</span><span class="sxs-lookup"><span data-stu-id="195ef-426">AzureRM.TrafficManager</span></span>
-* <span data-ttu-id="195ef-427">다중값 라우팅 메서드에 대한 지원이 추가됨</span><span class="sxs-lookup"><span data-stu-id="195ef-427">Added Support for the MultiValue routing method</span></span>
-    - <span data-ttu-id="195ef-428">다중값 라우팅에 대한 새 매개 변수 'MaxReturn'</span><span class="sxs-lookup"><span data-stu-id="195ef-428">New parameter 'MaxReturn' for MultiValue routing</span></span>
-* <span data-ttu-id="195ef-429">서브넷 라우팅 메서드에 대한 지원이 추가됨</span><span class="sxs-lookup"><span data-stu-id="195ef-429">Added Support for the Subnet routing method</span></span>
-    - <span data-ttu-id="195ef-430">엔드포인트의 IP 주소 범위(서브넷)에 대한 지원</span><span class="sxs-lookup"><span data-stu-id="195ef-430">Support for IP address ranges (subnets) in endpoints</span></span>
-* <span data-ttu-id="195ef-431">프로필 내 사용자 지정 헤더에 대한 지원이 추가됨</span><span class="sxs-lookup"><span data-stu-id="195ef-431">Added Support for Custom Headers in profiles</span></span>
-* <span data-ttu-id="195ef-432">프로필 내 예상 상태 코드 범위에 대한 지원이 추가됨</span><span class="sxs-lookup"><span data-stu-id="195ef-432">Added Support for Expected status code ranges in profiles</span></span>
-* <span data-ttu-id="195ef-433">엔드포인트 내 사용자 지정 헤더에 대한 지원이 추가됨</span><span class="sxs-lookup"><span data-stu-id="195ef-433">Added Support for Custom Headers in endpoints</span></span>
+#### <a name="azurermtrafficmanager"></a><span data-ttu-id="e709a-426">AzureRM.TrafficManager</span><span class="sxs-lookup"><span data-stu-id="e709a-426">AzureRM.TrafficManager</span></span>
+* <span data-ttu-id="e709a-427">다중값 라우팅 메서드에 대한 지원이 추가됨</span><span class="sxs-lookup"><span data-stu-id="e709a-427">Added Support for the MultiValue routing method</span></span>
+    - <span data-ttu-id="e709a-428">다중값 라우팅에 대한 새 매개 변수 'MaxReturn'</span><span class="sxs-lookup"><span data-stu-id="e709a-428">New parameter 'MaxReturn' for MultiValue routing</span></span>
+* <span data-ttu-id="e709a-429">서브넷 라우팅 메서드에 대한 지원이 추가됨</span><span class="sxs-lookup"><span data-stu-id="e709a-429">Added Support for the Subnet routing method</span></span>
+    - <span data-ttu-id="e709a-430">엔드포인트의 IP 주소 범위(서브넷)에 대한 지원</span><span class="sxs-lookup"><span data-stu-id="e709a-430">Support for IP address ranges (subnets) in endpoints</span></span>
+* <span data-ttu-id="e709a-431">프로필 내 사용자 지정 헤더에 대한 지원이 추가됨</span><span class="sxs-lookup"><span data-stu-id="e709a-431">Added Support for Custom Headers in profiles</span></span>
+* <span data-ttu-id="e709a-432">프로필 내 예상 상태 코드 범위에 대한 지원이 추가됨</span><span class="sxs-lookup"><span data-stu-id="e709a-432">Added Support for Expected status code ranges in profiles</span></span>
+* <span data-ttu-id="e709a-433">엔드포인트 내 사용자 지정 헤더에 대한 지원이 추가됨</span><span class="sxs-lookup"><span data-stu-id="e709a-433">Added Support for Custom Headers in endpoints</span></span>
 
-## <a name="680---august-2018"></a><span data-ttu-id="195ef-434">6.8.0 - 2018년 8월</span><span class="sxs-lookup"><span data-stu-id="195ef-434">6.8.0 - August 2018</span></span>
-#### <a name="general"></a><span data-ttu-id="195ef-435">일반</span><span class="sxs-lookup"><span data-stu-id="195ef-435">General</span></span>
-* <span data-ttu-id="195ef-436">기본 리소스 그룹이 설정되지 않는 문제를 해결했습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-436">Fixed issue with default resource groups not being set.</span></span>
+## <a name="680---august-2018"></a><span data-ttu-id="e709a-434">6.8.0 - 2018년 8월</span><span class="sxs-lookup"><span data-stu-id="e709a-434">6.8.0 - August 2018</span></span>
+#### <a name="general"></a><span data-ttu-id="e709a-435">일반</span><span class="sxs-lookup"><span data-stu-id="e709a-435">General</span></span>
+* <span data-ttu-id="e709a-436">기본 리소스 그룹이 설정되지 않는 문제를 해결했습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-436">Fixed issue with default resource groups not being set.</span></span>
 
-#### <a name="azurermprofile"></a><span data-ttu-id="195ef-437">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="195ef-437">AzureRM.Profile</span></span>
-* <span data-ttu-id="195ef-438">Connect-AzureRmAccount 중에 반환된 토큰에 만료 속성 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-438">Added expiration property to tokens returned during Connect-AzureRmAccount</span></span>
+#### <a name="azurermprofile"></a><span data-ttu-id="e709a-437">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="e709a-437">AzureRM.Profile</span></span>
+* <span data-ttu-id="e709a-438">Connect-AzureRmAccount 중에 반환된 토큰에 만료 속성 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-438">Added expiration property to tokens returned during Connect-AzureRmAccount</span></span>
 
-#### <a name="azurermcompute"></a><span data-ttu-id="195ef-439">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="195ef-439">AzureRM.Compute</span></span>
-* <span data-ttu-id="195ef-440">오류 출력에 대상이 없는 문제를 해결했습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-440">Fixed the issue that target is missing in error output.</span></span>
-* <span data-ttu-id="195ef-441">관리 디스크를 사용하는 VM에 대한 스토리지 계정 유형 문제 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-441">Fixed issue with storage account type for VM with managed disk</span></span>
-* <span data-ttu-id="195ef-442">예를 들어 Azure 중국과 같이, 다른 환경에 대한 AEM 확장 cmdlet 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-442">Fix AEM Extension cmdlets for other environments, for example Azure China</span></span>
+#### <a name="azurermcompute"></a><span data-ttu-id="e709a-439">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="e709a-439">AzureRM.Compute</span></span>
+* <span data-ttu-id="e709a-440">오류 출력에 대상이 없는 문제를 해결했습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-440">Fixed the issue that target is missing in error output.</span></span>
+* <span data-ttu-id="e709a-441">관리 디스크를 사용하는 VM에 대한 스토리지 계정 유형 문제 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-441">Fixed issue with storage account type for VM with managed disk</span></span>
+* <span data-ttu-id="e709a-442">예를 들어 Azure 중국과 같이, 다른 환경에 대한 AEM 확장 cmdlet 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-442">Fix AEM Extension cmdlets for other environments, for example Azure China</span></span>
 
-#### <a name="azurermiothub"></a><span data-ttu-id="195ef-443">AzureRM.IotHub</span><span class="sxs-lookup"><span data-stu-id="195ef-443">AzureRM.IotHub</span></span>
-* <span data-ttu-id="195ef-444">New-AzureRmIotHubExportDevices 및 New-AzureRmIotHubImportDevices에 대한 예제를 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-444">Fix examples for New-AzureRmIotHubExportDevices and New-AzureRmIotHubImportDevices</span></span>
+#### <a name="azurermiothub"></a><span data-ttu-id="e709a-443">AzureRM.IotHub</span><span class="sxs-lookup"><span data-stu-id="e709a-443">AzureRM.IotHub</span></span>
+* <span data-ttu-id="e709a-444">New-AzureRmIotHubExportDevices 및 New-AzureRmIotHubImportDevices에 대한 예제를 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-444">Fix examples for New-AzureRmIotHubExportDevices and New-AzureRmIotHubImportDevices</span></span>
 
-#### <a name="azurermnetwork"></a><span data-ttu-id="195ef-445">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="195ef-445">AzureRM.Network</span></span>
-* <span data-ttu-id="195ef-446">기본 모델 표시를 테이블 뷰로 변경</span><span class="sxs-lookup"><span data-stu-id="195ef-446">Changed default models representation to table-view</span></span>
+#### <a name="azurermnetwork"></a><span data-ttu-id="e709a-445">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="e709a-445">AzureRM.Network</span></span>
+* <span data-ttu-id="e709a-446">기본 모델 표시를 테이블 뷰로 변경</span><span class="sxs-lookup"><span data-stu-id="e709a-446">Changed default models representation to table-view</span></span>
 
-#### <a name="azurermpowerbiembedded"></a><span data-ttu-id="195ef-447">AzureRM.PowerBIEmbedded</span><span class="sxs-lookup"><span data-stu-id="195ef-447">AzureRM.PowerBIEmbedded</span></span>
-* <span data-ttu-id="195ef-448">일시 중지된 용량을 확장하려고 할 때 Update-AzureRmPowerBIEmbeddedCapacity 실패 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-448">Fix failure in Update-AzureRmPowerBIEmbeddedCapacity when trying to scale paused capacity</span></span>
+#### <a name="azurermpowerbiembedded"></a><span data-ttu-id="e709a-447">AzureRM.PowerBIEmbedded</span><span class="sxs-lookup"><span data-stu-id="e709a-447">AzureRM.PowerBIEmbedded</span></span>
+* <span data-ttu-id="e709a-448">일시 중지된 용량을 확장하려고 할 때 Update-AzureRmPowerBIEmbeddedCapacity 실패 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-448">Fix failure in Update-AzureRmPowerBIEmbeddedCapacity when trying to scale paused capacity</span></span>
 
-#### <a name="azurermresources"></a><span data-ttu-id="195ef-449">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="195ef-449">AzureRM.Resources</span></span>
-* <span data-ttu-id="195ef-450">MarketPlace에서 관리되는 애플리케이션 생성 시의 문제 해결.</span><span class="sxs-lookup"><span data-stu-id="195ef-450">Fixed issue with creating managed application from the MarketPlace.</span></span>
+#### <a name="azurermresources"></a><span data-ttu-id="e709a-449">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="e709a-449">AzureRM.Resources</span></span>
+* <span data-ttu-id="e709a-450">MarketPlace에서 관리되는 애플리케이션 생성 시의 문제 해결.</span><span class="sxs-lookup"><span data-stu-id="e709a-450">Fixed issue with creating managed application from the MarketPlace.</span></span>
 
-#### <a name="azurermservicebus"></a><span data-ttu-id="195ef-451">AzureRM.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="195ef-451">AzureRM.ServiceBus</span></span>
-* <span data-ttu-id="195ef-452">문제 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-452">Fix for issues</span></span>
+#### <a name="azurermservicebus"></a><span data-ttu-id="e709a-451">AzureRM.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="e709a-451">AzureRM.ServiceBus</span></span>
+* <span data-ttu-id="e709a-452">문제 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-452">Fix for issues</span></span>
     - https://github.com/Azure/azure-powershell/issues/5058
     - https://github.com/Azure/azure-powershell/issues/5055
     - https://github.com/Azure/azure-powershell/issues/6891
 
-#### <a name="azurermtrafficmanager"></a><span data-ttu-id="195ef-453">AzureRM.TrafficManager</span><span class="sxs-lookup"><span data-stu-id="195ef-453">AzureRM.TrafficManager</span></span>
-* <span data-ttu-id="195ef-454">다중값 라우팅 메서드에 대한 지원</span><span class="sxs-lookup"><span data-stu-id="195ef-454">Support for the MultiValue routing method</span></span>
-    - <span data-ttu-id="195ef-455">다중값 라우팅에 대한 새 매개 변수 'MaxReturn'</span><span class="sxs-lookup"><span data-stu-id="195ef-455">New parameter 'MaxReturn' for MultiValue routing</span></span>
-* <span data-ttu-id="195ef-456">서브넷 라우팅 메서드에 대한 지원</span><span class="sxs-lookup"><span data-stu-id="195ef-456">Support for the Subnet routing method</span></span>
-    - <span data-ttu-id="195ef-457">엔드포인트의 IP 주소 범위(서브넷)에 대한 지원</span><span class="sxs-lookup"><span data-stu-id="195ef-457">Support for IP address ranges (subnets) in endpoints</span></span>
-* <span data-ttu-id="195ef-458">프로필 내 사용자 지정 헤더에 대한 지원</span><span class="sxs-lookup"><span data-stu-id="195ef-458">Support for Custom Headers in profiles</span></span>
-* <span data-ttu-id="195ef-459">프로필 내 예상 상태 코드 범위에 대한 지원</span><span class="sxs-lookup"><span data-stu-id="195ef-459">Support for Expected status code ranges in profiles</span></span>
-* <span data-ttu-id="195ef-460">엔드포인트 내 사용자 지정 헤더에 대한 지원</span><span class="sxs-lookup"><span data-stu-id="195ef-460">Support for Custom Headers in endpoints</span></span>
+#### <a name="azurermtrafficmanager"></a><span data-ttu-id="e709a-453">AzureRM.TrafficManager</span><span class="sxs-lookup"><span data-stu-id="e709a-453">AzureRM.TrafficManager</span></span>
+* <span data-ttu-id="e709a-454">다중값 라우팅 메서드에 대한 지원</span><span class="sxs-lookup"><span data-stu-id="e709a-454">Support for the MultiValue routing method</span></span>
+    - <span data-ttu-id="e709a-455">다중값 라우팅에 대한 새 매개 변수 'MaxReturn'</span><span class="sxs-lookup"><span data-stu-id="e709a-455">New parameter 'MaxReturn' for MultiValue routing</span></span>
+* <span data-ttu-id="e709a-456">서브넷 라우팅 메서드에 대한 지원</span><span class="sxs-lookup"><span data-stu-id="e709a-456">Support for the Subnet routing method</span></span>
+    - <span data-ttu-id="e709a-457">엔드포인트의 IP 주소 범위(서브넷)에 대한 지원</span><span class="sxs-lookup"><span data-stu-id="e709a-457">Support for IP address ranges (subnets) in endpoints</span></span>
+* <span data-ttu-id="e709a-458">프로필 내 사용자 지정 헤더에 대한 지원</span><span class="sxs-lookup"><span data-stu-id="e709a-458">Support for Custom Headers in profiles</span></span>
+* <span data-ttu-id="e709a-459">프로필 내 예상 상태 코드 범위에 대한 지원</span><span class="sxs-lookup"><span data-stu-id="e709a-459">Support for Expected status code ranges in profiles</span></span>
+* <span data-ttu-id="e709a-460">엔드포인트 내 사용자 지정 헤더에 대한 지원</span><span class="sxs-lookup"><span data-stu-id="e709a-460">Support for Custom Headers in endpoints</span></span>
 
-#### <a name="azurermwebsites"></a><span data-ttu-id="195ef-461">AzureRM.Websites</span><span class="sxs-lookup"><span data-stu-id="195ef-461">AzureRM.Websites</span></span>
-* <span data-ttu-id="195ef-462">기본 리소스 그룹이 잘못 설정되는 문제를 해결했습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-462">Fixed issue with default resource group being set incorrectly.</span></span>
+#### <a name="azurermwebsites"></a><span data-ttu-id="e709a-461">AzureRM.Websites</span><span class="sxs-lookup"><span data-stu-id="e709a-461">AzureRM.Websites</span></span>
+* <span data-ttu-id="e709a-462">기본 리소스 그룹이 잘못 설정되는 문제를 해결했습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-462">Fixed issue with default resource group being set incorrectly.</span></span>
 
-## <a name="670---august-2018"></a><span data-ttu-id="195ef-463">6.7.0 - 2018년 8월</span><span class="sxs-lookup"><span data-stu-id="195ef-463">6.7.0 - August 2018</span></span>
-#### <a name="azurermprofile"></a><span data-ttu-id="195ef-464">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="195ef-464">AzureRM.Profile</span></span>
-* <span data-ttu-id="195ef-465">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-465">Updated to the latest version of the Azure ClientRuntime.</span></span>
-* <span data-ttu-id="195ef-466">충돌을 방지하려면 기본 컨텍스트 이름으로 사용자 ID를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-466">Add user id to default context name to avoid context clashing</span></span>
+## <a name="670---august-2018"></a><span data-ttu-id="e709a-463">6.7.0 - 2018년 8월</span><span class="sxs-lookup"><span data-stu-id="e709a-463">6.7.0 - August 2018</span></span>
+#### <a name="azurermprofile"></a><span data-ttu-id="e709a-464">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="e709a-464">AzureRM.Profile</span></span>
+* <span data-ttu-id="e709a-465">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-465">Updated to the latest version of the Azure ClientRuntime.</span></span>
+* <span data-ttu-id="e709a-466">충돌을 방지하려면 기본 컨텍스트 이름으로 사용자 ID를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-466">Add user id to default context name to avoid context clashing</span></span>
     - https://github.com/Azure/azure-powershell/issues/6489
-* <span data-ttu-id="195ef-467">#6398 컨텍스트를 선택할 때 문제를 발생시킨 Clear-AzureRmContext 문제 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-467">Fix issues with Clear-AzureRmContext that caused issues with selecting a context #6398</span></span>
-* <span data-ttu-id="195ef-468">'Connect-AzureRmAccount'에 대한 '-TenantId' 매개 변수에 전달할 테넌트 도메인을 사용하도록 설정</span><span class="sxs-lookup"><span data-stu-id="195ef-468">Enable tenant domain to be passed to '-TenantId' parameter for 'Connect-AzureRmAccount'</span></span>
+* <span data-ttu-id="e709a-467">#6398 컨텍스트를 선택할 때 문제를 발생시킨 Clear-AzureRmContext 문제 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-467">Fix issues with Clear-AzureRmContext that caused issues with selecting a context #6398</span></span>
+* <span data-ttu-id="e709a-468">'Connect-AzureRmAccount'에 대한 '-TenantId' 매개 변수에 전달할 테넌트 도메인을 사용하도록 설정</span><span class="sxs-lookup"><span data-stu-id="e709a-468">Enable tenant domain to be passed to '-TenantId' parameter for 'Connect-AzureRmAccount'</span></span>
     - https://github.com/Azure/azure-powershell/issues/3974
     - https://github.com/Azure/azure-powershell/issues/6709
 
-#### <a name="azurestorage"></a><span data-ttu-id="195ef-469">Azure.Storage</span><span class="sxs-lookup"><span data-stu-id="195ef-469">Azure.Storage</span></span>
-* <span data-ttu-id="195ef-470">Azure 파일 공유 할당량에 대한 5TB 제한 제거</span><span class="sxs-lookup"><span data-stu-id="195ef-470">Remove the 5TB limitation for Azure File Share quota</span></span>
-* <span data-ttu-id="195ef-471">Set-AzureStorageShareQuota</span><span class="sxs-lookup"><span data-stu-id="195ef-471">Set-AzureStorageShareQuota</span></span>
+#### <a name="azurestorage"></a><span data-ttu-id="e709a-469">Azure.Storage</span><span class="sxs-lookup"><span data-stu-id="e709a-469">Azure.Storage</span></span>
+* <span data-ttu-id="e709a-470">Azure 파일 공유 할당량에 대한 5TB 제한 제거</span><span class="sxs-lookup"><span data-stu-id="e709a-470">Remove the 5TB limitation for Azure File Share quota</span></span>
+* <span data-ttu-id="e709a-471">Set-AzureStorageShareQuota</span><span class="sxs-lookup"><span data-stu-id="e709a-471">Set-AzureStorageShareQuota</span></span>
 
-#### <a name="azurermanalysisservices"></a><span data-ttu-id="195ef-472">AzureRM.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="195ef-472">AzureRM.AnalysisServices</span></span>
-* <span data-ttu-id="195ef-473">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-473">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermanalysisservices"></a><span data-ttu-id="e709a-472">AzureRM.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="e709a-472">AzureRM.AnalysisServices</span></span>
+* <span data-ttu-id="e709a-473">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-473">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azureanalysisservices"></a><span data-ttu-id="195ef-474">Azure.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="195ef-474">Azure.AnalysisServices</span></span>
-* <span data-ttu-id="195ef-475">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-475">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azureanalysisservices"></a><span data-ttu-id="e709a-474">Azure.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="e709a-474">Azure.AnalysisServices</span></span>
+* <span data-ttu-id="e709a-475">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-475">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermapimanagement"></a><span data-ttu-id="195ef-476">AzureRM.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="195ef-476">AzureRM.ApiManagement</span></span>
-* <span data-ttu-id="195ef-477">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-477">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermapimanagement"></a><span data-ttu-id="e709a-476">AzureRM.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="e709a-476">AzureRM.ApiManagement</span></span>
+* <span data-ttu-id="e709a-477">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-477">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermapplicationinsights"></a><span data-ttu-id="195ef-478">AzureRM.ApplicationInsights</span><span class="sxs-lookup"><span data-stu-id="195ef-478">AzureRM.ApplicationInsights</span></span>
-* <span data-ttu-id="195ef-479">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-479">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermapplicationinsights"></a><span data-ttu-id="e709a-478">AzureRM.ApplicationInsights</span><span class="sxs-lookup"><span data-stu-id="e709a-478">AzureRM.ApplicationInsights</span></span>
+* <span data-ttu-id="e709a-479">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-479">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermautomation"></a><span data-ttu-id="195ef-480">AzureRM.Automation</span><span class="sxs-lookup"><span data-stu-id="195ef-480">AzureRM.Automation</span></span>
-* <span data-ttu-id="195ef-481">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-481">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermautomation"></a><span data-ttu-id="e709a-480">AzureRM.Automation</span><span class="sxs-lookup"><span data-stu-id="e709a-480">AzureRM.Automation</span></span>
+* <span data-ttu-id="e709a-481">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-481">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermbackup"></a><span data-ttu-id="195ef-482">AzureRM.Backup</span><span class="sxs-lookup"><span data-stu-id="195ef-482">AzureRM.Backup</span></span>
-* <span data-ttu-id="195ef-483">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-483">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermbackup"></a><span data-ttu-id="e709a-482">AzureRM.Backup</span><span class="sxs-lookup"><span data-stu-id="e709a-482">AzureRM.Backup</span></span>
+* <span data-ttu-id="e709a-483">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-483">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermbatch"></a><span data-ttu-id="195ef-484">AzureRM.Backup</span><span class="sxs-lookup"><span data-stu-id="195ef-484">AzureRM.Batch</span></span>
-* <span data-ttu-id="195ef-485">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-485">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermbatch"></a><span data-ttu-id="e709a-484">AzureRM.Backup</span><span class="sxs-lookup"><span data-stu-id="e709a-484">AzureRM.Batch</span></span>
+* <span data-ttu-id="e709a-485">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-485">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermbilling"></a><span data-ttu-id="195ef-486">AzureRM.Billing</span><span class="sxs-lookup"><span data-stu-id="195ef-486">AzureRM.Billing</span></span>
-* <span data-ttu-id="195ef-487">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-487">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermbilling"></a><span data-ttu-id="e709a-486">AzureRM.Billing</span><span class="sxs-lookup"><span data-stu-id="e709a-486">AzureRM.Billing</span></span>
+* <span data-ttu-id="e709a-487">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-487">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermcdn"></a><span data-ttu-id="195ef-488">AzureRM.Cdn</span><span class="sxs-lookup"><span data-stu-id="195ef-488">AzureRM.Cdn</span></span>
-* <span data-ttu-id="195ef-489">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-489">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermcdn"></a><span data-ttu-id="e709a-488">AzureRM.Cdn</span><span class="sxs-lookup"><span data-stu-id="e709a-488">AzureRM.Cdn</span></span>
+* <span data-ttu-id="e709a-489">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-489">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermcognitiveservices"></a><span data-ttu-id="195ef-490">AzureRM.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="195ef-490">AzureRM.CognitiveServices</span></span>
-* <span data-ttu-id="195ef-491">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-491">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermcognitiveservices"></a><span data-ttu-id="e709a-490">AzureRM.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="e709a-490">AzureRM.CognitiveServices</span></span>
+* <span data-ttu-id="e709a-491">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-491">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermcompute"></a><span data-ttu-id="195ef-492">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="195ef-492">AzureRM.Compute</span></span>
-* <span data-ttu-id="195ef-493">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-493">Updated to the latest version of the Azure ClientRuntime.</span></span>
-* <span data-ttu-id="195ef-494">New-AzureRmVmssConfig에 EvictionPolicy 매개 변수를 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-494">Add EvictionPolicy parameter to New-AzureRmVmssConfig</span></span>
-* <span data-ttu-id="195ef-495">지정된 위치가 없는 경우에 New-AzureRmVm의 DiskFileParameterSet 내의 기본 위치를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-495">Use default location in the DiskFileParameterSet of New-AzureRmVm if no Location is specified.</span></span>
-* <span data-ttu-id="195ef-496">Save-AzureRmVMImage에서 매개 변수 설명 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-496">Fix parameter description in Save-AzureRmVMImage</span></span>
-* <span data-ttu-id="195ef-497">특정 singlepass 관련 시나리오에 대해 Get-AzureRmVMDiskEncryptionStatus cmdlet 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-497">Fix Get-AzureRmVMDiskEncryptionStatus cmdlet for certain singlepass related scenarios</span></span>
+#### <a name="azurermcompute"></a><span data-ttu-id="e709a-492">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="e709a-492">AzureRM.Compute</span></span>
+* <span data-ttu-id="e709a-493">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-493">Updated to the latest version of the Azure ClientRuntime.</span></span>
+* <span data-ttu-id="e709a-494">New-AzureRmVmssConfig에 EvictionPolicy 매개 변수를 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-494">Add EvictionPolicy parameter to New-AzureRmVmssConfig</span></span>
+* <span data-ttu-id="e709a-495">지정된 위치가 없는 경우에 New-AzureRmVm의 DiskFileParameterSet 내의 기본 위치를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-495">Use default location in the DiskFileParameterSet of New-AzureRmVm if no Location is specified.</span></span>
+* <span data-ttu-id="e709a-496">Save-AzureRmVMImage에서 매개 변수 설명 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-496">Fix parameter description in Save-AzureRmVMImage</span></span>
+* <span data-ttu-id="e709a-497">특정 singlepass 관련 시나리오에 대해 Get-AzureRmVMDiskEncryptionStatus cmdlet 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-497">Fix Get-AzureRmVMDiskEncryptionStatus cmdlet for certain singlepass related scenarios</span></span>
 
-#### <a name="azurermconsumption"></a><span data-ttu-id="195ef-498">AzureRM.Consumption</span><span class="sxs-lookup"><span data-stu-id="195ef-498">AzureRM.Consumption</span></span>
-* <span data-ttu-id="195ef-499">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-499">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermconsumption"></a><span data-ttu-id="e709a-498">AzureRM.Consumption</span><span class="sxs-lookup"><span data-stu-id="e709a-498">AzureRM.Consumption</span></span>
+* <span data-ttu-id="e709a-499">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-499">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermcontainerinstance"></a><span data-ttu-id="195ef-500">AzureRM.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="195ef-500">AzureRM.ContainerInstance</span></span>
-* <span data-ttu-id="195ef-501">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-501">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermcontainerinstance"></a><span data-ttu-id="e709a-500">AzureRM.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="e709a-500">AzureRM.ContainerInstance</span></span>
+* <span data-ttu-id="e709a-501">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-501">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermcontainerregistry"></a><span data-ttu-id="195ef-502">AzureRM.ContainerRegistry</span><span class="sxs-lookup"><span data-stu-id="195ef-502">AzureRM.ContainerRegistry</span></span>
-* <span data-ttu-id="195ef-503">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-503">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermcontainerregistry"></a><span data-ttu-id="e709a-502">AzureRM.ContainerRegistry</span><span class="sxs-lookup"><span data-stu-id="e709a-502">AzureRM.ContainerRegistry</span></span>
+* <span data-ttu-id="e709a-503">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-503">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermdatafactories"></a><span data-ttu-id="195ef-504">AzureRM.DataFactories</span><span class="sxs-lookup"><span data-stu-id="195ef-504">AzureRM.DataFactories</span></span>
-* <span data-ttu-id="195ef-505">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-505">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermdatafactories"></a><span data-ttu-id="e709a-504">AzureRM.DataFactories</span><span class="sxs-lookup"><span data-stu-id="e709a-504">AzureRM.DataFactories</span></span>
+* <span data-ttu-id="e709a-505">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-505">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermdatafactoryv2"></a><span data-ttu-id="195ef-506">AzureRM.DataFactoryV2</span><span class="sxs-lookup"><span data-stu-id="195ef-506">AzureRM.DataFactoryV2</span></span>
-* <span data-ttu-id="195ef-507">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-507">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermdatafactoryv2"></a><span data-ttu-id="e709a-506">AzureRM.DataFactoryV2</span><span class="sxs-lookup"><span data-stu-id="e709a-506">AzureRM.DataFactoryV2</span></span>
+* <span data-ttu-id="e709a-507">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-507">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermdatalakeanalytics"></a><span data-ttu-id="195ef-508">AzureRM.DataLakeAnalytics</span><span class="sxs-lookup"><span data-stu-id="195ef-508">AzureRM.DataLakeAnalytics</span></span>
-* <span data-ttu-id="195ef-509">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-509">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermdatalakeanalytics"></a><span data-ttu-id="e709a-508">AzureRM.DataLakeAnalytics</span><span class="sxs-lookup"><span data-stu-id="e709a-508">AzureRM.DataLakeAnalytics</span></span>
+* <span data-ttu-id="e709a-509">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-509">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermdatalakestore"></a><span data-ttu-id="195ef-510">AzureRM.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="195ef-510">AzureRM.DataLakeStore</span></span>
-* <span data-ttu-id="195ef-511">DebugPreference가 powershell 명령줄에서 설정된 경우 디버깅 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-511">Fix debugging when DebugPreference is set from powershell command line</span></span>
-* <span data-ttu-id="195ef-512">Set-AzureRmDataLakeStoreItemAcl에 대한 예제 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-512">Update example for Set-AzureRmDataLakeStoreItemAcl</span></span>
-* <span data-ttu-id="195ef-513">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-513">Updated to the latest version of the Azure ClientRuntime.</span></span>
-* <span data-ttu-id="195ef-514">Set-AzureRmDataLakeStoreItemAclEntry에 대한 예제 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-514">Update example for Set-AzureRmDataLakeStoreItemAclEntry</span></span>
+#### <a name="azurermdatalakestore"></a><span data-ttu-id="e709a-510">AzureRM.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="e709a-510">AzureRM.DataLakeStore</span></span>
+* <span data-ttu-id="e709a-511">DebugPreference가 powershell 명령줄에서 설정된 경우 디버깅 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-511">Fix debugging when DebugPreference is set from powershell command line</span></span>
+* <span data-ttu-id="e709a-512">Set-AzureRmDataLakeStoreItemAcl에 대한 예제 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-512">Update example for Set-AzureRmDataLakeStoreItemAcl</span></span>
+* <span data-ttu-id="e709a-513">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-513">Updated to the latest version of the Azure ClientRuntime.</span></span>
+* <span data-ttu-id="e709a-514">Set-AzureRmDataLakeStoreItemAclEntry에 대한 예제 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-514">Update example for Set-AzureRmDataLakeStoreItemAclEntry</span></span>
 
-#### <a name="azurermdevtestlabs"></a><span data-ttu-id="195ef-515">AzureRM.DevTestLabs</span><span class="sxs-lookup"><span data-stu-id="195ef-515">AzureRM.DevTestLabs</span></span>
-* <span data-ttu-id="195ef-516">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-516">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermdevtestlabs"></a><span data-ttu-id="e709a-515">AzureRM.DevTestLabs</span><span class="sxs-lookup"><span data-stu-id="e709a-515">AzureRM.DevTestLabs</span></span>
+* <span data-ttu-id="e709a-516">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-516">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermdns"></a><span data-ttu-id="195ef-517">AzureRM.Dns</span><span class="sxs-lookup"><span data-stu-id="195ef-517">AzureRM.Dns</span></span>
-* <span data-ttu-id="195ef-518">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-518">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermdns"></a><span data-ttu-id="e709a-517">AzureRM.Dns</span><span class="sxs-lookup"><span data-stu-id="e709a-517">AzureRM.Dns</span></span>
+* <span data-ttu-id="e709a-518">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-518">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermeventgrid"></a><span data-ttu-id="195ef-519">AzureRM.EventGrid</span><span class="sxs-lookup"><span data-stu-id="195ef-519">AzureRM.EventGrid</span></span>
-* <span data-ttu-id="195ef-520">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-520">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermeventgrid"></a><span data-ttu-id="e709a-519">AzureRM.EventGrid</span><span class="sxs-lookup"><span data-stu-id="e709a-519">AzureRM.EventGrid</span></span>
+* <span data-ttu-id="e709a-520">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-520">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermeventhub"></a><span data-ttu-id="195ef-521">AzureRM.EventHub</span><span class="sxs-lookup"><span data-stu-id="195ef-521">AzureRM.EventHub</span></span>
-* <span data-ttu-id="195ef-522">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-522">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermeventhub"></a><span data-ttu-id="e709a-521">AzureRM.EventHub</span><span class="sxs-lookup"><span data-stu-id="e709a-521">AzureRM.EventHub</span></span>
+* <span data-ttu-id="e709a-522">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-522">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermhdinsight"></a><span data-ttu-id="195ef-523">AzureRM.HDInsight</span><span class="sxs-lookup"><span data-stu-id="195ef-523">AzureRM.HDInsight</span></span>
-* <span data-ttu-id="195ef-524">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-524">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermhdinsight"></a><span data-ttu-id="e709a-523">AzureRM.HDInsight</span><span class="sxs-lookup"><span data-stu-id="e709a-523">AzureRM.HDInsight</span></span>
+* <span data-ttu-id="e709a-524">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-524">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurerminsights"></a><span data-ttu-id="195ef-525">AzureRM.Insights</span><span class="sxs-lookup"><span data-stu-id="195ef-525">AzureRM.Insights</span></span>
-* <span data-ttu-id="195ef-526">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-526">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurerminsights"></a><span data-ttu-id="e709a-525">AzureRM.Insights</span><span class="sxs-lookup"><span data-stu-id="e709a-525">AzureRM.Insights</span></span>
+* <span data-ttu-id="e709a-526">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-526">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermiothub"></a><span data-ttu-id="195ef-527">AzureRM.IotHub</span><span class="sxs-lookup"><span data-stu-id="195ef-527">AzureRM.IotHub</span></span>
-* <span data-ttu-id="195ef-528">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-528">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermiothub"></a><span data-ttu-id="e709a-527">AzureRM.IotHub</span><span class="sxs-lookup"><span data-stu-id="e709a-527">AzureRM.IotHub</span></span>
+* <span data-ttu-id="e709a-528">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-528">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermkeyvault"></a><span data-ttu-id="195ef-529">AzureRM.KeyVault</span><span class="sxs-lookup"><span data-stu-id="195ef-529">AzureRM.KeyVault</span></span>
-* <span data-ttu-id="195ef-530">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-530">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermkeyvault"></a><span data-ttu-id="e709a-529">AzureRM.KeyVault</span><span class="sxs-lookup"><span data-stu-id="e709a-529">AzureRM.KeyVault</span></span>
+* <span data-ttu-id="e709a-530">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-530">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermlogicapp"></a><span data-ttu-id="195ef-531">AzureRM.LogicApp</span><span class="sxs-lookup"><span data-stu-id="195ef-531">AzureRM.LogicApp</span></span>
-* <span data-ttu-id="195ef-532">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-532">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermlogicapp"></a><span data-ttu-id="e709a-531">AzureRM.LogicApp</span><span class="sxs-lookup"><span data-stu-id="e709a-531">AzureRM.LogicApp</span></span>
+* <span data-ttu-id="e709a-532">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-532">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermmachinelearning"></a><span data-ttu-id="195ef-533">AzureRM.MachineLearning</span><span class="sxs-lookup"><span data-stu-id="195ef-533">AzureRM.MachineLearning</span></span>
-* <span data-ttu-id="195ef-534">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-534">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermmachinelearning"></a><span data-ttu-id="e709a-533">AzureRM.MachineLearning</span><span class="sxs-lookup"><span data-stu-id="e709a-533">AzureRM.MachineLearning</span></span>
+* <span data-ttu-id="e709a-534">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-534">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermmachinelearningcompute"></a><span data-ttu-id="195ef-535">AzureRM.MachineLearningCompute</span><span class="sxs-lookup"><span data-stu-id="195ef-535">AzureRM.MachineLearningCompute</span></span>
-* <span data-ttu-id="195ef-536">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-536">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermmachinelearningcompute"></a><span data-ttu-id="e709a-535">AzureRM.MachineLearningCompute</span><span class="sxs-lookup"><span data-stu-id="e709a-535">AzureRM.MachineLearningCompute</span></span>
+* <span data-ttu-id="e709a-536">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-536">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermmarketplaceordering"></a><span data-ttu-id="195ef-537">AzureRM.MarketplaceOrdering</span><span class="sxs-lookup"><span data-stu-id="195ef-537">AzureRM.MarketplaceOrdering</span></span>
-* <span data-ttu-id="195ef-538">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-538">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermmarketplaceordering"></a><span data-ttu-id="e709a-537">AzureRM.MarketplaceOrdering</span><span class="sxs-lookup"><span data-stu-id="e709a-537">AzureRM.MarketplaceOrdering</span></span>
+* <span data-ttu-id="e709a-538">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-538">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermmedia"></a><span data-ttu-id="195ef-539">AzureRM.Media</span><span class="sxs-lookup"><span data-stu-id="195ef-539">AzureRM.Media</span></span>
-* <span data-ttu-id="195ef-540">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-540">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermmedia"></a><span data-ttu-id="e709a-539">AzureRM.Media</span><span class="sxs-lookup"><span data-stu-id="e709a-539">AzureRM.Media</span></span>
+* <span data-ttu-id="e709a-540">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-540">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermnetwork"></a><span data-ttu-id="195ef-541">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="195ef-541">AzureRM.Network</span></span>
-* <span data-ttu-id="195ef-542">Set-AzureRmLocalNetworkGateway에 대한 예제가 추가됨</span><span class="sxs-lookup"><span data-stu-id="195ef-542">Added example for Set-AzureRmLocalNetworkGateway</span></span>
-* <span data-ttu-id="195ef-543">Add-AzureRmVirtualNetworkGatewayIpConfig, Get-AzureRmVirtualNetworkGatewayConnectionSharedKey, New-AzureRmVirtualNetworkGatewayConnection에 대한 예제 및 설명 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-543">Added examples and descriptions for Add-AzureRmVirtualNetworkGatewayIpConfig, Get-AzureRmVirtualNetworkGatewayConnectionSharedKey and New-AzureRmVirtualNetworkGatewayConnection</span></span>
-* <span data-ttu-id="195ef-544">Remove-AzureRmVirtualNetworkGatewayIpConfig 및 Reset-AzureRmVirtualNetworkGateway에 대한 예제 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-544">Added examples for Remove-AzureRmVirtualNetworkGatewayIpConfig and Reset-AzureRmVirtualNetworkGateway</span></span>
-* <span data-ttu-id="195ef-545">Reset-AzureRmVirtualNetworkGatewayConnectionSharedKey에 대한 예제 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-545">Added example for Reset-AzureRmVirtualNetworkGatewayConnectionSharedKey</span></span>
-* <span data-ttu-id="195ef-546">Set-AzureRmVirtualNetworkGatewayConnectionSharedKey에 대한 예제 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-546">Added example for Set-AzureRmVirtualNetworkGatewayConnectionSharedKey</span></span>
-* <span data-ttu-id="195ef-547">Set-AzureRmVirtualNetworkGatewayConnection에 대한 예제 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-547">Added example for Set-AzureRmVirtualNetworkGatewayConnection</span></span>
-* <span data-ttu-id="195ef-548">최신 코드 생성기를 사용하여 ApplicationSecurityGroup, RouteTable 및 Usage에 대한 cmdlet을 다시 생성함</span><span class="sxs-lookup"><span data-stu-id="195ef-548">Re-generated cmdlets for ApplicationSecurityGroup, RouteTable and Usage using latest code generator</span></span>
-* <span data-ttu-id="195ef-549">Exitc 하지 않는 서브넷을 얻으려고 할 때의 Get-AzureRmVirtualNetworkSubnetConfig에 대한 오류 메시지를 설명</span><span class="sxs-lookup"><span data-stu-id="195ef-549">Clarified error message for Get-AzureRmVirtualNetworkSubnetConfig when attempting to get a subnet that does not exitc</span></span>
+#### <a name="azurermnetwork"></a><span data-ttu-id="e709a-541">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="e709a-541">AzureRM.Network</span></span>
+* <span data-ttu-id="e709a-542">Set-AzureRmLocalNetworkGateway에 대한 예제가 추가됨</span><span class="sxs-lookup"><span data-stu-id="e709a-542">Added example for Set-AzureRmLocalNetworkGateway</span></span>
+* <span data-ttu-id="e709a-543">Add-AzureRmVirtualNetworkGatewayIpConfig, Get-AzureRmVirtualNetworkGatewayConnectionSharedKey, New-AzureRmVirtualNetworkGatewayConnection에 대한 예제 및 설명 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-543">Added examples and descriptions for Add-AzureRmVirtualNetworkGatewayIpConfig, Get-AzureRmVirtualNetworkGatewayConnectionSharedKey and New-AzureRmVirtualNetworkGatewayConnection</span></span>
+* <span data-ttu-id="e709a-544">Remove-AzureRmVirtualNetworkGatewayIpConfig 및 Reset-AzureRmVirtualNetworkGateway에 대한 예제 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-544">Added examples for Remove-AzureRmVirtualNetworkGatewayIpConfig and Reset-AzureRmVirtualNetworkGateway</span></span>
+* <span data-ttu-id="e709a-545">Reset-AzureRmVirtualNetworkGatewayConnectionSharedKey에 대한 예제 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-545">Added example for Reset-AzureRmVirtualNetworkGatewayConnectionSharedKey</span></span>
+* <span data-ttu-id="e709a-546">Set-AzureRmVirtualNetworkGatewayConnectionSharedKey에 대한 예제 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-546">Added example for Set-AzureRmVirtualNetworkGatewayConnectionSharedKey</span></span>
+* <span data-ttu-id="e709a-547">Set-AzureRmVirtualNetworkGatewayConnection에 대한 예제 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-547">Added example for Set-AzureRmVirtualNetworkGatewayConnection</span></span>
+* <span data-ttu-id="e709a-548">최신 코드 생성기를 사용하여 ApplicationSecurityGroup, RouteTable 및 Usage에 대한 cmdlet을 다시 생성함</span><span class="sxs-lookup"><span data-stu-id="e709a-548">Re-generated cmdlets for ApplicationSecurityGroup, RouteTable and Usage using latest code generator</span></span>
+* <span data-ttu-id="e709a-549">Exitc 하지 않는 서브넷을 얻으려고 할 때의 Get-AzureRmVirtualNetworkSubnetConfig에 대한 오류 메시지를 설명</span><span class="sxs-lookup"><span data-stu-id="e709a-549">Clarified error message for Get-AzureRmVirtualNetworkSubnetConfig when attempting to get a subnet that does not exitc</span></span>
 
-#### <a name="azurermnotificationhubs"></a><span data-ttu-id="195ef-550">AzureRM.NotificationHubs</span><span class="sxs-lookup"><span data-stu-id="195ef-550">AzureRM.NotificationHubs</span></span>
-* <span data-ttu-id="195ef-551">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-551">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermnotificationhubs"></a><span data-ttu-id="e709a-550">AzureRM.NotificationHubs</span><span class="sxs-lookup"><span data-stu-id="e709a-550">AzureRM.NotificationHubs</span></span>
+* <span data-ttu-id="e709a-551">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-551">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermoperationalinsights"></a><span data-ttu-id="195ef-552">AzureRM.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="195ef-552">AzureRM.OperationalInsights</span></span>
-* <span data-ttu-id="195ef-553">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-553">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermoperationalinsights"></a><span data-ttu-id="e709a-552">AzureRM.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="e709a-552">AzureRM.OperationalInsights</span></span>
+* <span data-ttu-id="e709a-553">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-553">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermpolicyinsights"></a><span data-ttu-id="195ef-554">AzureRM.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="195ef-554">AzureRM.PolicyInsights</span></span>
-* <span data-ttu-id="195ef-555">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-555">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermpolicyinsights"></a><span data-ttu-id="e709a-554">AzureRM.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="e709a-554">AzureRM.PolicyInsights</span></span>
+* <span data-ttu-id="e709a-555">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-555">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermpowerbiembedded"></a><span data-ttu-id="195ef-556">AzureRM.PowerBIEmbedded</span><span class="sxs-lookup"><span data-stu-id="195ef-556">AzureRM.PowerBIEmbedded</span></span>
-* <span data-ttu-id="195ef-557">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-557">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermpowerbiembedded"></a><span data-ttu-id="e709a-556">AzureRM.PowerBIEmbedded</span><span class="sxs-lookup"><span data-stu-id="e709a-556">AzureRM.PowerBIEmbedded</span></span>
+* <span data-ttu-id="e709a-557">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-557">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermrecoveryservices"></a><span data-ttu-id="195ef-558">AzureRM.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="195ef-558">AzureRM.RecoveryServices</span></span>
-* <span data-ttu-id="195ef-559">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-559">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermrecoveryservices"></a><span data-ttu-id="e709a-558">AzureRM.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="e709a-558">AzureRM.RecoveryServices</span></span>
+* <span data-ttu-id="e709a-559">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-559">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermrecoveryservicesbackup"></a><span data-ttu-id="195ef-560">AzureRM.RecoveryServices.Backup</span><span class="sxs-lookup"><span data-stu-id="195ef-560">AzureRM.RecoveryServices.Backup</span></span>
-* <span data-ttu-id="195ef-561">Get-AzureRmRecoveryServicesBackItem cmdlet에 정책 필터 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-561">Added policy filter to Get-AzureRmRecoveryServicesBackItem cmdlet.</span></span> <span data-ttu-id="195ef-562">해당 명령은 지정된 정책 ID에 의해 보호되는 백업 항목의 목록을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-562">The command returns the list of backup items protected by the given policy id.</span></span>
-* <span data-ttu-id="195ef-563">Microsoft.Azure.Management.RecoveryServices.Backup을 버전 3.0.0-preview로 업데이트함</span><span class="sxs-lookup"><span data-stu-id="195ef-563">Updated Microsoft.Azure.Management.RecoveryServices.Backup to version 3.0.0-preview.</span></span>
-* <span data-ttu-id="195ef-564">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-564">Updated to the latest version of the Azure ClientRuntime.</span></span>
-* <span data-ttu-id="195ef-565">Restore-AzureRmRecoveryServicesBackupItem에 TargetResourceGroupName 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-565">Added TargetResourceGroupName parameter to Restore-AzureRmRecoveryServicesBackupItem.</span></span> <span data-ttu-id="195ef-566">관리 디스크가 복원될 리소스 그룹</span><span class="sxs-lookup"><span data-stu-id="195ef-566">The resource group to which the managed disks are restored.</span></span> <span data-ttu-id="195ef-567">관리 디스크가 있는 VM의 백업에 적용 가능</span><span class="sxs-lookup"><span data-stu-id="195ef-567">Applicable to backup of VM with managed disks.</span></span>
+#### <a name="azurermrecoveryservicesbackup"></a><span data-ttu-id="e709a-560">AzureRM.RecoveryServices.Backup</span><span class="sxs-lookup"><span data-stu-id="e709a-560">AzureRM.RecoveryServices.Backup</span></span>
+* <span data-ttu-id="e709a-561">Get-AzureRmRecoveryServicesBackItem cmdlet에 정책 필터 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-561">Added policy filter to Get-AzureRmRecoveryServicesBackItem cmdlet.</span></span> <span data-ttu-id="e709a-562">해당 명령은 지정된 정책 ID에 의해 보호되는 백업 항목의 목록을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-562">The command returns the list of backup items protected by the given policy id.</span></span>
+* <span data-ttu-id="e709a-563">Microsoft.Azure.Management.RecoveryServices.Backup을 버전 3.0.0-preview로 업데이트함</span><span class="sxs-lookup"><span data-stu-id="e709a-563">Updated Microsoft.Azure.Management.RecoveryServices.Backup to version 3.0.0-preview.</span></span>
+* <span data-ttu-id="e709a-564">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-564">Updated to the latest version of the Azure ClientRuntime.</span></span>
+* <span data-ttu-id="e709a-565">Restore-AzureRmRecoveryServicesBackupItem에 TargetResourceGroupName 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-565">Added TargetResourceGroupName parameter to Restore-AzureRmRecoveryServicesBackupItem.</span></span> <span data-ttu-id="e709a-566">관리 디스크가 복원될 리소스 그룹</span><span class="sxs-lookup"><span data-stu-id="e709a-566">The resource group to which the managed disks are restored.</span></span> <span data-ttu-id="e709a-567">관리 디스크가 있는 VM의 백업에 적용 가능</span><span class="sxs-lookup"><span data-stu-id="e709a-567">Applicable to backup of VM with managed disks.</span></span>
 
-#### <a name="azurermrecoveryservicessiterecovery"></a><span data-ttu-id="195ef-568">AzureRM.RecoveryServices.SiteRecovery</span><span class="sxs-lookup"><span data-stu-id="195ef-568">AzureRM.RecoveryServices.SiteRecovery</span></span>
-* <span data-ttu-id="195ef-569">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-569">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermrecoveryservicessiterecovery"></a><span data-ttu-id="e709a-568">AzureRM.RecoveryServices.SiteRecovery</span><span class="sxs-lookup"><span data-stu-id="e709a-568">AzureRM.RecoveryServices.SiteRecovery</span></span>
+* <span data-ttu-id="e709a-569">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-569">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermrediscache"></a><span data-ttu-id="195ef-570">AzureRM.RedisCache</span><span class="sxs-lookup"><span data-stu-id="195ef-570">AzureRM.RedisCache</span></span>
-* <span data-ttu-id="195ef-571">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-571">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermrediscache"></a><span data-ttu-id="e709a-570">AzureRM.RedisCache</span><span class="sxs-lookup"><span data-stu-id="e709a-570">AzureRM.RedisCache</span></span>
+* <span data-ttu-id="e709a-571">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-571">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermrelay"></a><span data-ttu-id="195ef-572">AzureRM.Relay</span><span class="sxs-lookup"><span data-stu-id="195ef-572">AzureRM.Relay</span></span>
-* <span data-ttu-id="195ef-573">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-573">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermrelay"></a><span data-ttu-id="e709a-572">AzureRM.Relay</span><span class="sxs-lookup"><span data-stu-id="e709a-572">AzureRM.Relay</span></span>
+* <span data-ttu-id="e709a-573">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-573">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermresources"></a><span data-ttu-id="195ef-574">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="195ef-574">AzureRM.Resources</span></span>
-* <span data-ttu-id="195ef-575">구독 범위에서 템플릿 배포를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-575">Support template deployment at subscription scope.</span></span> <span data-ttu-id="195ef-576">새 cmdlet 추가:</span><span class="sxs-lookup"><span data-stu-id="195ef-576">Add new Cmdlets:</span></span>
-    - <span data-ttu-id="195ef-577">New-AzureRmDeployment</span><span class="sxs-lookup"><span data-stu-id="195ef-577">New-AzureRmDeployment</span></span>
-    - <span data-ttu-id="195ef-578">Get-AzureRmDeployment</span><span class="sxs-lookup"><span data-stu-id="195ef-578">Get-AzureRmDeployment</span></span>
-    - <span data-ttu-id="195ef-579">Test-AzureRmDeployment</span><span class="sxs-lookup"><span data-stu-id="195ef-579">Test-AzureRmDeployment</span></span>
-    - <span data-ttu-id="195ef-580">Remove-AzureRmDeployment</span><span class="sxs-lookup"><span data-stu-id="195ef-580">Remove-AzureRmDeployment</span></span>
-    - <span data-ttu-id="195ef-581">Stop-AzureRmDeployment</span><span class="sxs-lookup"><span data-stu-id="195ef-581">Stop-AzureRmDeployment</span></span>
-    - <span data-ttu-id="195ef-582">Save-AzureRmDeploymentTemplate</span><span class="sxs-lookup"><span data-stu-id="195ef-582">Save-AzureRmDeploymentTemplate</span></span>
-    - <span data-ttu-id="195ef-583">Get-AzureRmDeploymentOperation</span><span class="sxs-lookup"><span data-stu-id="195ef-583">Get-AzureRmDeploymentOperation</span></span>
-* <span data-ttu-id="195ef-584">Set-AzureRmResource에 컨텍스트를 전달할 때 오류가 발생하는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-584">Fix issue where error is thrown when passing a context to Set-AzureRmResource</span></span>
+#### <a name="azurermresources"></a><span data-ttu-id="e709a-574">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="e709a-574">AzureRM.Resources</span></span>
+* <span data-ttu-id="e709a-575">구독 범위에서 템플릿 배포를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-575">Support template deployment at subscription scope.</span></span> <span data-ttu-id="e709a-576">새 cmdlet 추가:</span><span class="sxs-lookup"><span data-stu-id="e709a-576">Add new Cmdlets:</span></span>
+    - <span data-ttu-id="e709a-577">New-AzureRmDeployment</span><span class="sxs-lookup"><span data-stu-id="e709a-577">New-AzureRmDeployment</span></span>
+    - <span data-ttu-id="e709a-578">Get-AzureRmDeployment</span><span class="sxs-lookup"><span data-stu-id="e709a-578">Get-AzureRmDeployment</span></span>
+    - <span data-ttu-id="e709a-579">Test-AzureRmDeployment</span><span class="sxs-lookup"><span data-stu-id="e709a-579">Test-AzureRmDeployment</span></span>
+    - <span data-ttu-id="e709a-580">Remove-AzureRmDeployment</span><span class="sxs-lookup"><span data-stu-id="e709a-580">Remove-AzureRmDeployment</span></span>
+    - <span data-ttu-id="e709a-581">Stop-AzureRmDeployment</span><span class="sxs-lookup"><span data-stu-id="e709a-581">Stop-AzureRmDeployment</span></span>
+    - <span data-ttu-id="e709a-582">Save-AzureRmDeploymentTemplate</span><span class="sxs-lookup"><span data-stu-id="e709a-582">Save-AzureRmDeploymentTemplate</span></span>
+    - <span data-ttu-id="e709a-583">Get-AzureRmDeploymentOperation</span><span class="sxs-lookup"><span data-stu-id="e709a-583">Get-AzureRmDeploymentOperation</span></span>
+* <span data-ttu-id="e709a-584">Set-AzureRmResource에 컨텍스트를 전달할 때 오류가 발생하는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-584">Fix issue where error is thrown when passing a context to Set-AzureRmResource</span></span>
     - https://github.com/Azure/azure-powershell/issues/5705
-* <span data-ttu-id="195ef-585">New-AzureRmResourceGroupDeployment의 예제 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-585">Fix example in New-AzureRmResourceGroupDeployment</span></span>
-* <span data-ttu-id="195ef-586">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-586">Updated to the latest version of the Azure ClientRuntime.</span></span>
+* <span data-ttu-id="e709a-585">New-AzureRmResourceGroupDeployment의 예제 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-585">Fix example in New-AzureRmResourceGroupDeployment</span></span>
+* <span data-ttu-id="e709a-586">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-586">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermscheduler"></a><span data-ttu-id="195ef-587">AzureRM.Scheduler</span><span class="sxs-lookup"><span data-stu-id="195ef-587">AzureRM.Scheduler</span></span>
-* <span data-ttu-id="195ef-588">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-588">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermscheduler"></a><span data-ttu-id="e709a-587">AzureRM.Scheduler</span><span class="sxs-lookup"><span data-stu-id="e709a-587">AzureRM.Scheduler</span></span>
+* <span data-ttu-id="e709a-588">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-588">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermservicebus"></a><span data-ttu-id="195ef-589">AzureRM.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="195ef-589">AzureRM.ServiceBus</span></span>
-* <span data-ttu-id="195ef-590">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-590">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermservicebus"></a><span data-ttu-id="e709a-589">AzureRM.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="e709a-589">AzureRM.ServiceBus</span></span>
+* <span data-ttu-id="e709a-590">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-590">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermservicefabric"></a><span data-ttu-id="195ef-591">AzureRM.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="195ef-591">AzureRM.ServiceFabric</span></span>
-* <span data-ttu-id="195ef-592">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-592">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermservicefabric"></a><span data-ttu-id="e709a-591">AzureRM.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="e709a-591">AzureRM.ServiceFabric</span></span>
+* <span data-ttu-id="e709a-592">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-592">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermsql"></a><span data-ttu-id="195ef-593">AzureRM.Sql</span><span class="sxs-lookup"><span data-stu-id="195ef-593">AzureRM.Sql</span></span>
-* <span data-ttu-id="195ef-594">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-594">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermsql"></a><span data-ttu-id="e709a-593">AzureRM.Sql</span><span class="sxs-lookup"><span data-stu-id="e709a-593">AzureRM.Sql</span></span>
+* <span data-ttu-id="e709a-594">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-594">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermstorage"></a><span data-ttu-id="195ef-595">AzureRM.Storage</span><span class="sxs-lookup"><span data-stu-id="195ef-595">AzureRM.Storage</span></span>
-* <span data-ttu-id="195ef-596">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-596">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermstorage"></a><span data-ttu-id="e709a-595">AzureRM.Storage</span><span class="sxs-lookup"><span data-stu-id="e709a-595">AzureRM.Storage</span></span>
+* <span data-ttu-id="e709a-596">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-596">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermstreamanalytics"></a><span data-ttu-id="195ef-597">AzureRM.StreamAnalytics</span><span class="sxs-lookup"><span data-stu-id="195ef-597">AzureRM.StreamAnalytics</span></span>
-* <span data-ttu-id="195ef-598">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-598">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermstreamanalytics"></a><span data-ttu-id="e709a-597">AzureRM.StreamAnalytics</span><span class="sxs-lookup"><span data-stu-id="e709a-597">AzureRM.StreamAnalytics</span></span>
+* <span data-ttu-id="e709a-598">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-598">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermtags"></a><span data-ttu-id="195ef-599">AzureRM.Tags</span><span class="sxs-lookup"><span data-stu-id="195ef-599">AzureRM.Tags</span></span>
-* <span data-ttu-id="195ef-600">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-600">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermtags"></a><span data-ttu-id="e709a-599">AzureRM.Tags</span><span class="sxs-lookup"><span data-stu-id="e709a-599">AzureRM.Tags</span></span>
+* <span data-ttu-id="e709a-600">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-600">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermtrafficmanager"></a><span data-ttu-id="195ef-601">AzureRM.TrafficManager</span><span class="sxs-lookup"><span data-stu-id="195ef-601">AzureRM.TrafficManager</span></span>
-* <span data-ttu-id="195ef-602">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-602">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermtrafficmanager"></a><span data-ttu-id="e709a-601">AzureRM.TrafficManager</span><span class="sxs-lookup"><span data-stu-id="e709a-601">AzureRM.TrafficManager</span></span>
+* <span data-ttu-id="e709a-602">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-602">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermusageaggregates"></a><span data-ttu-id="195ef-603">AzureRM.UsageAggregates</span><span class="sxs-lookup"><span data-stu-id="195ef-603">AzureRM.UsageAggregates</span></span>
-* <span data-ttu-id="195ef-604">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-604">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermusageaggregates"></a><span data-ttu-id="e709a-603">AzureRM.UsageAggregates</span><span class="sxs-lookup"><span data-stu-id="e709a-603">AzureRM.UsageAggregates</span></span>
+* <span data-ttu-id="e709a-604">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-604">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-#### <a name="azurermwebsites"></a><span data-ttu-id="195ef-605">AzureRM.Websites</span><span class="sxs-lookup"><span data-stu-id="195ef-605">AzureRM.Websites</span></span>
-* <span data-ttu-id="195ef-606">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-606">Updated to the latest version of the Azure ClientRuntime.</span></span>
+#### <a name="azurermwebsites"></a><span data-ttu-id="e709a-605">AzureRM.Websites</span><span class="sxs-lookup"><span data-stu-id="e709a-605">AzureRM.Websites</span></span>
+* <span data-ttu-id="e709a-606">최신 버전의 Azure ClientRuntime으로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-606">Updated to the latest version of the Azure ClientRuntime.</span></span>
 
-## <a name="660---july-2018"></a><span data-ttu-id="195ef-607">6.6.0 - 2018년 7월</span><span class="sxs-lookup"><span data-stu-id="195ef-607">6.6.0 - July 2018</span></span>
-#### <a name="general"></a><span data-ttu-id="195ef-608">일반</span><span class="sxs-lookup"><span data-stu-id="195ef-608">General</span></span>
-* <span data-ttu-id="195ef-609">전체 매개 변수 형식 및 올바른 입/출력 형식을 포함하도록 모든 도움말 파일을 업데이트했습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-609">Updated all help files to include full parameter types and correct input/output types.</span></span>
+## <a name="660---july-2018"></a><span data-ttu-id="e709a-607">6.6.0 - 2018년 7월</span><span class="sxs-lookup"><span data-stu-id="e709a-607">6.6.0 - July 2018</span></span>
+#### <a name="general"></a><span data-ttu-id="e709a-608">일반</span><span class="sxs-lookup"><span data-stu-id="e709a-608">General</span></span>
+* <span data-ttu-id="e709a-609">전체 매개 변수 형식 및 올바른 입/출력 형식을 포함하도록 모든 도움말 파일을 업데이트했습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-609">Updated all help files to include full parameter types and correct input/output types.</span></span>
 
-#### <a name="azurermprofile"></a><span data-ttu-id="195ef-610">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="195ef-610">AzureRM.Profile</span></span>
-* <span data-ttu-id="195ef-611">Common.Strategy 라이브러리가 리소스에 대한 현재 구성이 대상 리소스와 호환되는지 유효성을 검사할 수 있도록 업데이트했습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-611">Updated Common.Strategy library to be able to validate that the current config for a resource is compatible with the target resource.</span></span>
-* <span data-ttu-id="195ef-612">Common.Storage에 ps1xml 형식 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-612">Added ps1xml types to Common.Storage</span></span>
+#### <a name="azurermprofile"></a><span data-ttu-id="e709a-610">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="e709a-610">AzureRM.Profile</span></span>
+* <span data-ttu-id="e709a-611">Common.Strategy 라이브러리가 리소스에 대한 현재 구성이 대상 리소스와 호환되는지 유효성을 검사할 수 있도록 업데이트했습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-611">Updated Common.Strategy library to be able to validate that the current config for a resource is compatible with the target resource.</span></span>
+* <span data-ttu-id="e709a-612">Common.Storage에 ps1xml 형식 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-612">Added ps1xml types to Common.Storage</span></span>
 
-#### <a name="azurestorage"></a><span data-ttu-id="195ef-613">Azure.Storage</span><span class="sxs-lookup"><span data-stu-id="195ef-613">Azure.Storage</span></span>
-* <span data-ttu-id="195ef-614">DefaultProfile에서 스토리지 컨텍스트를 가져오기 위한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-614">Added support for getting Storage Context from DefaultProfile</span></span>
-* <span data-ttu-id="195ef-615">Ps1XmlAttribute를 cmdlet 출력 형식 속성에 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-615">Added Ps1XmlAttribute to cmdlets output types properties.</span></span>
+#### <a name="azurestorage"></a><span data-ttu-id="e709a-613">Azure.Storage</span><span class="sxs-lookup"><span data-stu-id="e709a-613">Azure.Storage</span></span>
+* <span data-ttu-id="e709a-614">DefaultProfile에서 스토리지 컨텍스트를 가져오기 위한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-614">Added support for getting Storage Context from DefaultProfile</span></span>
+* <span data-ttu-id="e709a-615">Ps1XmlAttribute를 cmdlet 출력 형식 속성에 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-615">Added Ps1XmlAttribute to cmdlets output types properties.</span></span>
 
-#### <a name="azurermapimanagement"></a><span data-ttu-id="195ef-616">AzureRM.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="195ef-616">AzureRM.ApiManagement</span></span>
-* <span data-ttu-id="195ef-617">문제 https://github.com/Azure/azure-powershell/issues/6370 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-617">Fixed issue https://github.com/Azure/azure-powershell/issues/6370</span></span>
-    - <span data-ttu-id="195ef-618">PsApiManagementApi를 ApiContract로 좌표 이동하도록 Automapper 버그가 수정됨</span><span class="sxs-lookup"><span data-stu-id="195ef-618">Fixed bug in Automapper to translate PsApiManagementApi to ApiContract</span></span>
-* <span data-ttu-id="195ef-619">문제 https://github.com/Azure/azure-powershell/issues/6515 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-619">Fixed issue https://github.com/Azure/azure-powershell/issues/6515</span></span>
-    - <span data-ttu-id="195ef-620">인코딩 형식을 사용하여 오버로드하지 않도록 File.Save 버그가 수정됨</span><span class="sxs-lookup"><span data-stu-id="195ef-620">Fixed bug in File.Save to not overload with Encoding Type</span></span>
-* <span data-ttu-id="195ef-621">문제 https://github.com/Azure/azure-powershell/issues/6560 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-621">Fixed issue https://github.com/Azure/azure-powershell/issues/6560</span></span>
-    - <span data-ttu-id="195ef-622">apiId에서 패턴 예외를 수정하는 4.0.3 Nuget 버전으로 업그레이드됨</span><span class="sxs-lookup"><span data-stu-id="195ef-622">Upgraded to 4.0.3 Nuget version which fixes the pattern exception on apiId</span></span>
+#### <a name="azurermapimanagement"></a><span data-ttu-id="e709a-616">AzureRM.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="e709a-616">AzureRM.ApiManagement</span></span>
+* <span data-ttu-id="e709a-617">문제 https://github.com/Azure/azure-powershell/issues/6370 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-617">Fixed issue https://github.com/Azure/azure-powershell/issues/6370</span></span>
+    - <span data-ttu-id="e709a-618">PsApiManagementApi를 ApiContract로 좌표 이동하도록 Automapper 버그가 수정됨</span><span class="sxs-lookup"><span data-stu-id="e709a-618">Fixed bug in Automapper to translate PsApiManagementApi to ApiContract</span></span>
+* <span data-ttu-id="e709a-619">문제 https://github.com/Azure/azure-powershell/issues/6515 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-619">Fixed issue https://github.com/Azure/azure-powershell/issues/6515</span></span>
+    - <span data-ttu-id="e709a-620">인코딩 형식을 사용하여 오버로드하지 않도록 File.Save 버그가 수정됨</span><span class="sxs-lookup"><span data-stu-id="e709a-620">Fixed bug in File.Save to not overload with Encoding Type</span></span>
+* <span data-ttu-id="e709a-621">문제 https://github.com/Azure/azure-powershell/issues/6560 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-621">Fixed issue https://github.com/Azure/azure-powershell/issues/6560</span></span>
+    - <span data-ttu-id="e709a-622">apiId에서 패턴 예외를 수정하는 4.0.3 Nuget 버전으로 업그레이드됨</span><span class="sxs-lookup"><span data-stu-id="e709a-622">Upgraded to 4.0.3 Nuget version which fixes the pattern exception on apiId</span></span>
 
-#### <a name="azurermcompute"></a><span data-ttu-id="195ef-623">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="195ef-623">AzureRM.Compute</span></span>
-* <span data-ttu-id="195ef-624">PremiumLRS 스토리지 계정 형식 이름 바꾸기로 인해 New-AzureRmVm에서 DiskFileParameterSet를 사용하여 vm 생성 시 실패하는 문제를 해결합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-624">Fix issue with creating a vm using DiskFileParameterSet in New-AzureRmVm failing because of PremiumLRS storage account type renaming.</span></span>
-* <span data-ttu-id="195ef-625">Invoke-AzureRmVMRunCommand cmdlet 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-625">Fix Invoke-AzureRmVMRunCommand cmdlet</span></span>
-* <span data-ttu-id="195ef-626">Get-AzureRmAvailabilitySet를 업데이트하여 구독에서 모든 가용성 집합 리스트를 사용하도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-626">Update Get-AzureRmAvailabilitySet to enable list all availability sets in a subscription.</span></span>  <span data-ttu-id="195ef-627">(ResouceGroupName 매개 변수는 이제 선택적 요소입니다.)</span><span class="sxs-lookup"><span data-stu-id="195ef-627">(ResouceGroupName parameter is now optional.)</span></span>
-* <span data-ttu-id="195ef-628">vm 선별에 가속화된 네트워크를 사용하도록 'New-AzureRmVm'의 SimpleParameterSet를 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-628">Update SimpleParameterSet of 'New-AzureRmVm' to enable Accelerated Network on qualifying vms.</span></span>
-* <span data-ttu-id="195ef-629">New-AzureRmVmss 간단 매개 변수가 사용자 지정 LB가 이미 존재할 때 vms 생성에 실패하도록 설정하여 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-629">Update New-AzureRmVmss simple parameter set to fail creating the vmss when a user specified LB already exists.</span></span>
-* <span data-ttu-id="195ef-630">New-AzureRmDisk에 대한 예제 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-630">Update example for New-AzureRmDisk</span></span>
-* <span data-ttu-id="195ef-631">'New-AzureRmVM'에 대한 예제 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-631">Add example for 'New-AzureRmVM'</span></span>
-* <span data-ttu-id="195ef-632">Set-AzureRmVMOSDisk에 대한 설명 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-632">Update description for Set-AzureRmVMOSDisk</span></span>
-* <span data-ttu-id="195ef-633">Set-AzureRmVMBginfoExtension 맞춤법 및 접두사를 수정하도록 예제 1을 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-633">Update Example 1 for Set-AzureRmVMBginfoExtension to correct spelling and prefix.</span></span> 
+#### <a name="azurermcompute"></a><span data-ttu-id="e709a-623">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="e709a-623">AzureRM.Compute</span></span>
+* <span data-ttu-id="e709a-624">PremiumLRS 스토리지 계정 형식 이름 바꾸기로 인해 New-AzureRmVm에서 DiskFileParameterSet를 사용하여 vm 생성 시 실패하는 문제를 해결합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-624">Fix issue with creating a vm using DiskFileParameterSet in New-AzureRmVm failing because of PremiumLRS storage account type renaming.</span></span>
+* <span data-ttu-id="e709a-625">Invoke-AzureRmVMRunCommand cmdlet 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-625">Fix Invoke-AzureRmVMRunCommand cmdlet</span></span>
+* <span data-ttu-id="e709a-626">Get-AzureRmAvailabilitySet를 업데이트하여 구독에서 모든 가용성 집합 리스트를 사용하도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-626">Update Get-AzureRmAvailabilitySet to enable list all availability sets in a subscription.</span></span>  <span data-ttu-id="e709a-627">(ResouceGroupName 매개 변수는 이제 선택적 요소입니다.)</span><span class="sxs-lookup"><span data-stu-id="e709a-627">(ResouceGroupName parameter is now optional.)</span></span>
+* <span data-ttu-id="e709a-628">vm 선별에 가속화된 네트워크를 사용하도록 'New-AzureRmVm'의 SimpleParameterSet를 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-628">Update SimpleParameterSet of 'New-AzureRmVm' to enable Accelerated Network on qualifying vms.</span></span>
+* <span data-ttu-id="e709a-629">New-AzureRmVmss 간단 매개 변수가 사용자 지정 LB가 이미 존재할 때 vms 생성에 실패하도록 설정하여 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-629">Update New-AzureRmVmss simple parameter set to fail creating the vmss when a user specified LB already exists.</span></span>
+* <span data-ttu-id="e709a-630">New-AzureRmDisk에 대한 예제 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-630">Update example for New-AzureRmDisk</span></span>
+* <span data-ttu-id="e709a-631">'New-AzureRmVM'에 대한 예제 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-631">Add example for 'New-AzureRmVM'</span></span>
+* <span data-ttu-id="e709a-632">Set-AzureRmVMOSDisk에 대한 설명 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-632">Update description for Set-AzureRmVMOSDisk</span></span>
+* <span data-ttu-id="e709a-633">Set-AzureRmVMBginfoExtension 맞춤법 및 접두사를 수정하도록 예제 1을 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-633">Update Example 1 for Set-AzureRmVMBginfoExtension to correct spelling and prefix.</span></span> 
 
-#### <a name="azurermdatafactoryv2"></a><span data-ttu-id="195ef-634">AzureRM.DataFactoryV2</span><span class="sxs-lookup"><span data-stu-id="195ef-634">AzureRM.DataFactoryV2</span></span>
-* <span data-ttu-id="195ef-635">ADF.Net SDK 버전을 1.1.0으로 업데이트했습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-635">Updated the ADF .Net SDK version to 1.1.0.</span></span>
-* <span data-ttu-id="195ef-636">데이터 팩터리를 공유하는 자체 호스팅된 통합 런타임을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-636">Support self-hosted integration runtime sharing across data factories.</span></span>
-     - <span data-ttu-id="195ef-637">새 매개 변수 -SharedIntegrationRuntimeResourceId를 Set-AzureRmDataFactoryV2IntegrationRuntime cmdlet에 추가.</span><span class="sxs-lookup"><span data-stu-id="195ef-637">Add new parameter -SharedIntegrationRuntimeResourceId to Set-AzureRmDataFactoryV2IntegrationRuntime cmdlet.</span></span>
-     - <span data-ttu-id="195ef-638">새로운 선택적 매개 변수 -LinkedDataFactoryName을 Remove-AzureRmDataFactoryV2IntegrationRuntime cmdlet에 추가.</span><span class="sxs-lookup"><span data-stu-id="195ef-638">Add new optional parameter -LinkedDataFactoryName to Remove-AzureRmDataFactoryV2IntegrationRuntime cmdlet.</span></span>
+#### <a name="azurermdatafactoryv2"></a><span data-ttu-id="e709a-634">AzureRM.DataFactoryV2</span><span class="sxs-lookup"><span data-stu-id="e709a-634">AzureRM.DataFactoryV2</span></span>
+* <span data-ttu-id="e709a-635">ADF.Net SDK 버전을 1.1.0으로 업데이트했습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-635">Updated the ADF .Net SDK version to 1.1.0.</span></span>
+* <span data-ttu-id="e709a-636">데이터 팩터리를 공유하는 자체 호스팅된 통합 런타임을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-636">Support self-hosted integration runtime sharing across data factories.</span></span>
+     - <span data-ttu-id="e709a-637">새 매개 변수 -SharedIntegrationRuntimeResourceId를 Set-AzureRmDataFactoryV2IntegrationRuntime cmdlet에 추가.</span><span class="sxs-lookup"><span data-stu-id="e709a-637">Add new parameter -SharedIntegrationRuntimeResourceId to Set-AzureRmDataFactoryV2IntegrationRuntime cmdlet.</span></span>
+     - <span data-ttu-id="e709a-638">새로운 선택적 매개 변수 -LinkedDataFactoryName을 Remove-AzureRmDataFactoryV2IntegrationRuntime cmdlet에 추가.</span><span class="sxs-lookup"><span data-stu-id="e709a-638">Add new optional parameter -LinkedDataFactoryName to Remove-AzureRmDataFactoryV2IntegrationRuntime cmdlet.</span></span>
 
-#### <a name="azurermdatalakestore"></a><span data-ttu-id="195ef-639">AzureRM.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="195ef-639">AzureRM.DataLakeStore</span></span>
-* <span data-ttu-id="195ef-640">DataPlane SDK(Microsoft.Azure.DataLake.Store) 버전을 1.1.9로 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-640">Updated the DataPlane SDK (Microsoft.Azure.DataLake.Store) version to 1.1.9</span></span>
+#### <a name="azurermdatalakestore"></a><span data-ttu-id="e709a-639">AzureRM.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="e709a-639">AzureRM.DataLakeStore</span></span>
+* <span data-ttu-id="e709a-640">DataPlane SDK(Microsoft.Azure.DataLake.Store) 버전을 1.1.9로 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-640">Updated the DataPlane SDK (Microsoft.Azure.DataLake.Store) version to 1.1.9</span></span>
 
-#### <a name="azurermeventhub"></a><span data-ttu-id="195ef-641">AzureRM.EventHub</span><span class="sxs-lookup"><span data-stu-id="195ef-641">AzureRM.EventHub</span></span>
-* <span data-ttu-id="195ef-642">cmdlet 제거에서 InputObject 및 ResourceId에 대한 파이핑이 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-642">Updated piping for InputObject and ResourceId in remove cmdlets</span></span>
+#### <a name="azurermeventhub"></a><span data-ttu-id="e709a-641">AzureRM.EventHub</span><span class="sxs-lookup"><span data-stu-id="e709a-641">AzureRM.EventHub</span></span>
+* <span data-ttu-id="e709a-642">cmdlet 제거에서 InputObject 및 ResourceId에 대한 파이핑이 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-642">Updated piping for InputObject and ResourceId in remove cmdlets</span></span>
 
-#### <a name="azurerminsights"></a><span data-ttu-id="195ef-643">AzureRM.Insights</span><span class="sxs-lookup"><span data-stu-id="195ef-643">AzureRM.Insights</span></span>
-* <span data-ttu-id="195ef-644">도움말 파일에서 OutputType 서식 지정 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-644">Fixed formatting of OutputType in help files</span></span>
-* <span data-ttu-id="195ef-645">Microsoft.Azure.Management.Monitor SDK 0.19.1-preview를 사용</span><span class="sxs-lookup"><span data-stu-id="195ef-645">Using Microsoft.Azure.Management.Monitor SDK 0.19.1-preview</span></span>
+#### <a name="azurerminsights"></a><span data-ttu-id="e709a-643">AzureRM.Insights</span><span class="sxs-lookup"><span data-stu-id="e709a-643">AzureRM.Insights</span></span>
+* <span data-ttu-id="e709a-644">도움말 파일에서 OutputType 서식 지정 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-644">Fixed formatting of OutputType in help files</span></span>
+* <span data-ttu-id="e709a-645">Microsoft.Azure.Management.Monitor SDK 0.19.1-preview를 사용</span><span class="sxs-lookup"><span data-stu-id="e709a-645">Using Microsoft.Azure.Management.Monitor SDK 0.19.1-preview</span></span>
 
-#### <a name="azurermkeyvault"></a><span data-ttu-id="195ef-646">AzureRM.KeyVault</span><span class="sxs-lookup"><span data-stu-id="195ef-646">AzureRM.KeyVault</span></span>
-* <span data-ttu-id="195ef-647">Set-AzureRmKeyVaultAccessPolicy 내 파이핑 문제 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-647">Fix piping issue in Set-AzureRmKeyVaultAccessPolicy</span></span>
+#### <a name="azurermkeyvault"></a><span data-ttu-id="e709a-646">AzureRM.KeyVault</span><span class="sxs-lookup"><span data-stu-id="e709a-646">AzureRM.KeyVault</span></span>
+* <span data-ttu-id="e709a-647">Set-AzureRmKeyVaultAccessPolicy 내 파이핑 문제 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-647">Fix piping issue in Set-AzureRmKeyVaultAccessPolicy</span></span>
 
-#### <a name="azurermnetwork"></a><span data-ttu-id="195ef-648">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="195ef-648">AzureRM.Network</span></span>
-* <span data-ttu-id="195ef-649">LoadBalancerInboundNatPoolConfig cmdlet에 대한 예제가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-649">Added examples for LoadBalancerInboundNatPoolConfig cmdlets.</span></span>
+#### <a name="azurermnetwork"></a><span data-ttu-id="e709a-648">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="e709a-648">AzureRM.Network</span></span>
+* <span data-ttu-id="e709a-649">LoadBalancerInboundNatPoolConfig cmdlet에 대한 예제가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-649">Added examples for LoadBalancerInboundNatPoolConfig cmdlets.</span></span>
 
-#### <a name="azurermresources"></a><span data-ttu-id="195ef-650">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="195ef-650">AzureRM.Resources</span></span>
-* <span data-ttu-id="195ef-651">'Get-AzureRmResource'에 대한 태그 이름 및 값을 제공할 때의 문제 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-651">Fix issue when providing both tag name and value for 'Get-AzureRmResource'</span></span>
+#### <a name="azurermresources"></a><span data-ttu-id="e709a-650">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="e709a-650">AzureRM.Resources</span></span>
+* <span data-ttu-id="e709a-651">'Get-AzureRmResource'에 대한 태그 이름 및 값을 제공할 때의 문제 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-651">Fix issue when providing both tag name and value for 'Get-AzureRmResource'</span></span>
     - https://github.com/Azure/azure-powershell/issues/6765
-* <span data-ttu-id="195ef-652">'Set-AzureRmResource'를 사용하여 파이핑 시나리오 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-652">Fix piping scenario with 'Set-AzureRmResource'</span></span>
+* <span data-ttu-id="e709a-652">'Set-AzureRmResource'를 사용하여 파이핑 시나리오 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-652">Fix piping scenario with 'Set-AzureRmResource'</span></span>
 
-#### <a name="azurermservicebus"></a><span data-ttu-id="195ef-653">AzureRM.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="195ef-653">AzureRM.ServiceBus</span></span>
-* <span data-ttu-id="195ef-654">cmdlet 제거에서 InputObject 및 ResourceId에 대한 파이핑이 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-654">Updated piping for InputObject and ResourceId in remove cmdlets</span></span>
-* <span data-ttu-id="195ef-655">몇 가지 문제 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-655">fixed few issues</span></span>
+#### <a name="azurermservicebus"></a><span data-ttu-id="e709a-653">AzureRM.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="e709a-653">AzureRM.ServiceBus</span></span>
+* <span data-ttu-id="e709a-654">cmdlet 제거에서 InputObject 및 ResourceId에 대한 파이핑이 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-654">Updated piping for InputObject and ResourceId in remove cmdlets</span></span>
+* <span data-ttu-id="e709a-655">몇 가지 문제 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-655">fixed few issues</span></span>
     - https://github.com/Azure/azure-powershell/issues/3780
     - https://github.com/Azure/azure-powershell/issues/4340
 
-#### <a name="azurermsql"></a><span data-ttu-id="195ef-656">AzureRM.Sql</span><span class="sxs-lookup"><span data-stu-id="195ef-656">AzureRM.Sql</span></span>
-* <span data-ttu-id="195ef-657">다음 cmdlet 사용하여 서버 Advanced Threat Protection 지원을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-657">Adding Server Advanced Threat Protection support with the following cmdlets:</span></span>
-    - <span data-ttu-id="195ef-658">Enable-AzureRmSqlServerAdvancedThreatProtection; Disable-AzureRmSqlServerAdvancedThreatProtection; Get-AzureRmSqlServerAdvancedThreatProtectionPolicy</span><span class="sxs-lookup"><span data-stu-id="195ef-658">Enable-AzureRmSqlServerAdvancedThreatProtection; Disable-AzureRmSqlServerAdvancedThreatProtection; Get-AzureRmSqlServerAdvancedThreatProtectionPolicy</span></span>
-* <span data-ttu-id="195ef-659">다음 cmdlet을 사용하여 취약성 평가 지원을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-659">Adding Vulnerability Assessment support with the following cmdlets:</span></span>
-    - <span data-ttu-id="195ef-660">Update-AzureRmSqlDatabaseVulnerabilityAssessmentSettings; Get-AzureRmSqlDatabaseVulnerabilityAssessmentSettings; Clear-AzureRmSqlDatabaseVulnerabilityAssessmentSettings</span><span class="sxs-lookup"><span data-stu-id="195ef-660">Update-AzureRmSqlDatabaseVulnerabilityAssessmentSettings; Get-AzureRmSqlDatabaseVulnerabilityAssessmentSettings; Clear-AzureRmSqlDatabaseVulnerabilityAssessmentSettings</span></span>
-    - <span data-ttu-id="195ef-661">Set-AzureRmSqlDatabaseVulnerabilityAssessmentRuleBaseline; Get-AzureRmSqlDatabaseVulnerabilityAssessmentRuleBaseline; Clear-AzureRmSqlDatabaseVulnerabilityAssessmentRuleBaseline</span><span class="sxs-lookup"><span data-stu-id="195ef-661">Set-AzureRmSqlDatabaseVulnerabilityAssessmentRuleBaseline; Get-AzureRmSqlDatabaseVulnerabilityAssessmentRuleBaseline; Clear-AzureRmSqlDatabaseVulnerabilityAssessmentRuleBaseline</span></span>
-    - <span data-ttu-id="195ef-662">Convert-AzureRmSqlDatabaseVulnerabilityAssessmentScan; Get-AzureRmSqlDatabaseVulnerabilityAssessmentScanRecord; Start-AzureRmSqlDatabaseVulnerabilityAssessmentScan</span><span class="sxs-lookup"><span data-stu-id="195ef-662">Convert-AzureRmSqlDatabaseVulnerabilityAssessmentScan; Get-AzureRmSqlDatabaseVulnerabilityAssessmentScanRecord; Start-AzureRmSqlDatabaseVulnerabilityAssessmentScan</span></span>
-* <span data-ttu-id="195ef-663">Remove-AzureRmSqlServerFirewallRule의 예제 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-663">Fixed example in Remove-AzureRmSqlServerFirewallRule</span></span>
-* <span data-ttu-id="195ef-664">Get-AzureSqlSyncGroupLog에서 미국이 아닌 문화권에서 날짜/시간을 올바르지 않게 다루는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-664">Fix datetime handling incorrectly for non-us base culture in Get-AzureSqlSyncGroupLog</span></span>
+#### <a name="azurermsql"></a><span data-ttu-id="e709a-656">AzureRM.Sql</span><span class="sxs-lookup"><span data-stu-id="e709a-656">AzureRM.Sql</span></span>
+* <span data-ttu-id="e709a-657">다음 cmdlet 사용하여 서버 Advanced Threat Protection 지원을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-657">Adding Server Advanced Threat Protection support with the following cmdlets:</span></span>
+    - <span data-ttu-id="e709a-658">Enable-AzureRmSqlServerAdvancedThreatProtection; Disable-AzureRmSqlServerAdvancedThreatProtection; Get-AzureRmSqlServerAdvancedThreatProtectionPolicy</span><span class="sxs-lookup"><span data-stu-id="e709a-658">Enable-AzureRmSqlServerAdvancedThreatProtection; Disable-AzureRmSqlServerAdvancedThreatProtection; Get-AzureRmSqlServerAdvancedThreatProtectionPolicy</span></span>
+* <span data-ttu-id="e709a-659">다음 cmdlet을 사용하여 취약성 평가 지원을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-659">Adding Vulnerability Assessment support with the following cmdlets:</span></span>
+    - <span data-ttu-id="e709a-660">Update-AzureRmSqlDatabaseVulnerabilityAssessmentSettings; Get-AzureRmSqlDatabaseVulnerabilityAssessmentSettings; Clear-AzureRmSqlDatabaseVulnerabilityAssessmentSettings</span><span class="sxs-lookup"><span data-stu-id="e709a-660">Update-AzureRmSqlDatabaseVulnerabilityAssessmentSettings; Get-AzureRmSqlDatabaseVulnerabilityAssessmentSettings; Clear-AzureRmSqlDatabaseVulnerabilityAssessmentSettings</span></span>
+    - <span data-ttu-id="e709a-661">Set-AzureRmSqlDatabaseVulnerabilityAssessmentRuleBaseline; Get-AzureRmSqlDatabaseVulnerabilityAssessmentRuleBaseline; Clear-AzureRmSqlDatabaseVulnerabilityAssessmentRuleBaseline</span><span class="sxs-lookup"><span data-stu-id="e709a-661">Set-AzureRmSqlDatabaseVulnerabilityAssessmentRuleBaseline; Get-AzureRmSqlDatabaseVulnerabilityAssessmentRuleBaseline; Clear-AzureRmSqlDatabaseVulnerabilityAssessmentRuleBaseline</span></span>
+    - <span data-ttu-id="e709a-662">Convert-AzureRmSqlDatabaseVulnerabilityAssessmentScan; Get-AzureRmSqlDatabaseVulnerabilityAssessmentScanRecord; Start-AzureRmSqlDatabaseVulnerabilityAssessmentScan</span><span class="sxs-lookup"><span data-stu-id="e709a-662">Convert-AzureRmSqlDatabaseVulnerabilityAssessmentScan; Get-AzureRmSqlDatabaseVulnerabilityAssessmentScanRecord; Start-AzureRmSqlDatabaseVulnerabilityAssessmentScan</span></span>
+* <span data-ttu-id="e709a-663">Remove-AzureRmSqlServerFirewallRule의 예제 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-663">Fixed example in Remove-AzureRmSqlServerFirewallRule</span></span>
+* <span data-ttu-id="e709a-664">Get-AzureSqlSyncGroupLog에서 미국이 아닌 문화권에서 날짜/시간을 올바르지 않게 다루는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-664">Fix datetime handling incorrectly for non-us base culture in Get-AzureSqlSyncGroupLog</span></span>
 
-#### <a name="azurermstorage"></a><span data-ttu-id="195ef-665">AzureRM.Storage</span><span class="sxs-lookup"><span data-stu-id="195ef-665">AzureRM.Storage</span></span>
-* <span data-ttu-id="195ef-666">Ps1XmlAttribute를 cmdlet 출력 형식 속성에 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-666">Add Ps1XmlAttribute to cmdlets output types properties</span></span>
-* <span data-ttu-id="195ef-667">StorageAccount cmdlet 출력을 테이블 뷰로 표시</span><span class="sxs-lookup"><span data-stu-id="195ef-667">Show StorageAccount cmdlet output in table view</span></span>
-    - <span data-ttu-id="195ef-668">Get-AzureRmStorageAccount</span><span class="sxs-lookup"><span data-stu-id="195ef-668">Get-AzureRmStorageAccount</span></span>
-    - <span data-ttu-id="195ef-669">New-AzureRmStorageAccount</span><span class="sxs-lookup"><span data-stu-id="195ef-669">New-AzureRmStorageAccount</span></span>
-    - <span data-ttu-id="195ef-670">Set-AzureRmStorageAccount</span><span class="sxs-lookup"><span data-stu-id="195ef-670">Set-AzureRmStorageAccount</span></span>
+#### <a name="azurermstorage"></a><span data-ttu-id="e709a-665">AzureRM.Storage</span><span class="sxs-lookup"><span data-stu-id="e709a-665">AzureRM.Storage</span></span>
+* <span data-ttu-id="e709a-666">Ps1XmlAttribute를 cmdlet 출력 형식 속성에 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-666">Add Ps1XmlAttribute to cmdlets output types properties</span></span>
+* <span data-ttu-id="e709a-667">StorageAccount cmdlet 출력을 테이블 뷰로 표시</span><span class="sxs-lookup"><span data-stu-id="e709a-667">Show StorageAccount cmdlet output in table view</span></span>
+    - <span data-ttu-id="e709a-668">Get-AzureRmStorageAccount</span><span class="sxs-lookup"><span data-stu-id="e709a-668">Get-AzureRmStorageAccount</span></span>
+    - <span data-ttu-id="e709a-669">New-AzureRmStorageAccount</span><span class="sxs-lookup"><span data-stu-id="e709a-669">New-AzureRmStorageAccount</span></span>
+    - <span data-ttu-id="e709a-670">Set-AzureRmStorageAccount</span><span class="sxs-lookup"><span data-stu-id="e709a-670">Set-AzureRmStorageAccount</span></span>
 
-#### <a name="azurermtags"></a><span data-ttu-id="195ef-671">AzureRM.Tags</span><span class="sxs-lookup"><span data-stu-id="195ef-671">AzureRM.Tags</span></span>
-* <span data-ttu-id="195ef-672">태그 cmdlet 도움말에서 잘못된 문을 제거합니다</span><span class="sxs-lookup"><span data-stu-id="195ef-672">Remove incorrect statement from Tag cmdlet help</span></span>
+#### <a name="azurermtags"></a><span data-ttu-id="e709a-671">AzureRM.Tags</span><span class="sxs-lookup"><span data-stu-id="e709a-671">AzureRM.Tags</span></span>
+* <span data-ttu-id="e709a-672">태그 cmdlet 도움말에서 잘못된 문을 제거합니다</span><span class="sxs-lookup"><span data-stu-id="e709a-672">Remove incorrect statement from Tag cmdlet help</span></span>
     - https://github.com/Azure/azure-powershell/issues/3878
 
-## <a name="650---july-2018"></a><span data-ttu-id="195ef-673">6.5.0 - 2018년 7월</span><span class="sxs-lookup"><span data-stu-id="195ef-673">6.5.0 - July 2018</span></span>
-#### <a name="azurermprofile"></a><span data-ttu-id="195ef-674">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="195ef-674">AzureRM.Profile</span></span>
-* <span data-ttu-id="195ef-675">'Get-AzureRmContextAutosaveSetting'에 대한 도움말이 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-675">Updated help for 'Get-AzureRmContextAutosaveSetting'</span></span>
+## <a name="650---july-2018"></a><span data-ttu-id="e709a-673">6.5.0 - 2018년 7월</span><span class="sxs-lookup"><span data-stu-id="e709a-673">6.5.0 - July 2018</span></span>
+#### <a name="azurermprofile"></a><span data-ttu-id="e709a-674">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="e709a-674">AzureRM.Profile</span></span>
+* <span data-ttu-id="e709a-675">'Get-AzureRmContextAutosaveSetting'에 대한 도움말이 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-675">Updated help for 'Get-AzureRmContextAutosaveSetting'</span></span>
 
-#### <a name="azurestorage"></a><span data-ttu-id="195ef-676">Azure.Storage</span><span class="sxs-lookup"><span data-stu-id="195ef-676">Azure.Storage</span></span>
-* <span data-ttu-id="195ef-677">쓰기 전용 SaS 토큰을 사용하는 Blob 또는 파일 업로드 지원</span><span class="sxs-lookup"><span data-stu-id="195ef-677">Support Upload Blob or File with write only Sas token</span></span>
-* <span data-ttu-id="195ef-678">Set-AzureStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="195ef-678">Set-AzureStorageBlobContent</span></span>
-* <span data-ttu-id="195ef-679">Set-AzureStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="195ef-679">Set-AzureStorageFileContent</span></span>
+#### <a name="azurestorage"></a><span data-ttu-id="e709a-676">Azure.Storage</span><span class="sxs-lookup"><span data-stu-id="e709a-676">Azure.Storage</span></span>
+* <span data-ttu-id="e709a-677">쓰기 전용 SaS 토큰을 사용하는 Blob 또는 파일 업로드 지원</span><span class="sxs-lookup"><span data-stu-id="e709a-677">Support Upload Blob or File with write only Sas token</span></span>
+* <span data-ttu-id="e709a-678">Set-AzureStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="e709a-678">Set-AzureStorageBlobContent</span></span>
+* <span data-ttu-id="e709a-679">Set-AzureStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="e709a-679">Set-AzureStorageFileContent</span></span>
 
-#### <a name="azurermanalysisservices"></a><span data-ttu-id="195ef-680">AzureRM.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="195ef-680">AzureRM.AnalysisServices</span></span>
-* <span data-ttu-id="195ef-681">필수 속성 ResourceGroupName을 AS에 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-681">Add required property ResourceGroupName to AS.</span></span>
+#### <a name="azurermanalysisservices"></a><span data-ttu-id="e709a-680">AzureRM.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="e709a-680">AzureRM.AnalysisServices</span></span>
+* <span data-ttu-id="e709a-681">필수 속성 ResourceGroupName을 AS에 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-681">Add required property ResourceGroupName to AS.</span></span>
 
-#### <a name="azurermautomation"></a><span data-ttu-id="195ef-682">AzureRM.Automation</span><span class="sxs-lookup"><span data-stu-id="195ef-682">AzureRM.Automation</span></span>
-* <span data-ttu-id="195ef-683">도움말을 업데이트하고 'New-AzureRMAutomationSchedule'에 대한 예제 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-683">Update help and add example for 'New-AzureRMAutomationSchedule'</span></span>
+#### <a name="azurermautomation"></a><span data-ttu-id="e709a-682">AzureRM.Automation</span><span class="sxs-lookup"><span data-stu-id="e709a-682">AzureRM.Automation</span></span>
+* <span data-ttu-id="e709a-683">도움말을 업데이트하고 'New-AzureRMAutomationSchedule'에 대한 예제 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-683">Update help and add example for 'New-AzureRMAutomationSchedule'</span></span>
 
-#### <a name="azurermcompute"></a><span data-ttu-id="195ef-684">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="195ef-684">AzureRM.Compute</span></span>
-* <span data-ttu-id="195ef-685">-Tag 매개 변수를 Update/New-AzureRmAvailabilitySet에 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-685">Add -Tag parameter to Update/New-AzureRmAvailabilitySet</span></span>
-* <span data-ttu-id="195ef-686">‘Add-AzureRmVmssExtension’에 대한 예제 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-686">Add example for 'Add-AzureRmVmssExtension'</span></span>
-* <span data-ttu-id="195ef-687">‘Remove-AzureRmVmssExtension’에 대한 예제 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-687">Add examples for 'Remove-AzureRmVmssExtension'</span></span>
-* <span data-ttu-id="195ef-688">‘Set-AzureRmVMAccessExtension’에 대한 도움말 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-688">Update help for 'Set-AzureRmVMAccessExtension'</span></span>
-* <span data-ttu-id="195ef-689">기본으로 SinglePlacementGroup을 false로 설정하고 단일 배치 그룹에 VMSS를 만들 수 있는 스위치 매개 변수 'SinglePlacementGroup'을 추가하도록 New-AzureRmVmss에 대한 SimpleParameterSet을 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-689">Update SimpleParameterSet for New-AzureRmVmss to set SinglePlacementGroup to false by default and add switch parameter 'SinglePlacementGroup' that enables the user to create the VMSS in a single placement group.</span></span>
+#### <a name="azurermcompute"></a><span data-ttu-id="e709a-684">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="e709a-684">AzureRM.Compute</span></span>
+* <span data-ttu-id="e709a-685">-Tag 매개 변수를 Update/New-AzureRmAvailabilitySet에 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-685">Add -Tag parameter to Update/New-AzureRmAvailabilitySet</span></span>
+* <span data-ttu-id="e709a-686">‘Add-AzureRmVmssExtension’에 대한 예제 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-686">Add example for 'Add-AzureRmVmssExtension'</span></span>
+* <span data-ttu-id="e709a-687">‘Remove-AzureRmVmssExtension’에 대한 예제 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-687">Add examples for 'Remove-AzureRmVmssExtension'</span></span>
+* <span data-ttu-id="e709a-688">‘Set-AzureRmVMAccessExtension’에 대한 도움말 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-688">Update help for 'Set-AzureRmVMAccessExtension'</span></span>
+* <span data-ttu-id="e709a-689">기본으로 SinglePlacementGroup을 false로 설정하고 단일 배치 그룹에 VMSS를 만들 수 있는 스위치 매개 변수 'SinglePlacementGroup'을 추가하도록 New-AzureRmVmss에 대한 SimpleParameterSet을 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-689">Update SimpleParameterSet for New-AzureRmVmss to set SinglePlacementGroup to false by default and add switch parameter 'SinglePlacementGroup' that enables the user to create the VMSS in a single placement group.</span></span>
 
-#### <a name="azurermeventhub"></a><span data-ttu-id="195ef-690">AzureRM.EventHub</span><span class="sxs-lookup"><span data-stu-id="195ef-690">AzureRM.EventHub</span></span>
-* <span data-ttu-id="195ef-691">PSEventHubDRConfigurationAttributes 클래스에 읽기 전용 속성 'PendingReplicationOperationsCount'를 추가하여 복제가 진행되는 동안 보류 중인 복제 작업 수를 제공</span><span class="sxs-lookup"><span data-stu-id="195ef-691">Added a readonly property 'PendingReplicationOperationsCount' to PSEventHubDRConfigurationAttributes class, which gives the pending replication operations count while replication is in progress</span></span>
+#### <a name="azurermeventhub"></a><span data-ttu-id="e709a-690">AzureRM.EventHub</span><span class="sxs-lookup"><span data-stu-id="e709a-690">AzureRM.EventHub</span></span>
+* <span data-ttu-id="e709a-691">PSEventHubDRConfigurationAttributes 클래스에 읽기 전용 속성 'PendingReplicationOperationsCount'를 추가하여 복제가 진행되는 동안 보류 중인 복제 작업 수를 제공</span><span class="sxs-lookup"><span data-stu-id="e709a-691">Added a readonly property 'PendingReplicationOperationsCount' to PSEventHubDRConfigurationAttributes class, which gives the pending replication operations count while replication is in progress</span></span>
 
-#### <a name="azurermkeyvault"></a><span data-ttu-id="195ef-692">AzureRM.KeyVault</span><span class="sxs-lookup"><span data-stu-id="195ef-692">AzureRM.KeyVault</span></span>
-* <span data-ttu-id="195ef-693">Set-AzureRmKeyVaultAccessPolicy에 대한 오류 메시지 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-693">Update error message for Set-AzureRmKeyVaultAccessPolicy</span></span>
+#### <a name="azurermkeyvault"></a><span data-ttu-id="e709a-692">AzureRM.KeyVault</span><span class="sxs-lookup"><span data-stu-id="e709a-692">AzureRM.KeyVault</span></span>
+* <span data-ttu-id="e709a-693">Set-AzureRmKeyVaultAccessPolicy에 대한 오류 메시지 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-693">Update error message for Set-AzureRmKeyVaultAccessPolicy</span></span>
 
-#### <a name="azurermlogicapp"></a><span data-ttu-id="195ef-694">AzureRM.LogicApp</span><span class="sxs-lookup"><span data-stu-id="195ef-694">AzureRM.LogicApp</span></span>
-* <span data-ttu-id="195ef-695">New-AzureRmLogicApp에서 "매개 변수 집합을 확인할 수 없습니다" 오류 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-695">Fixed "parameter set could not be resolved" error in New-AzureRmLogicApp</span></span>
+#### <a name="azurermlogicapp"></a><span data-ttu-id="e709a-694">AzureRM.LogicApp</span><span class="sxs-lookup"><span data-stu-id="e709a-694">AzureRM.LogicApp</span></span>
+* <span data-ttu-id="e709a-695">New-AzureRmLogicApp에서 "매개 변수 집합을 확인할 수 없습니다" 오류 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-695">Fixed "parameter set could not be resolved" error in New-AzureRmLogicApp</span></span>
 
-#### <a name="azurermnetwork"></a><span data-ttu-id="195ef-696">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="195ef-696">AzureRM.Network</span></span>
-* <span data-ttu-id="195ef-697">Set/Add-AzureRmVirtualNetworkPeering에 대한 여러 테넌트의 가상 네트워크에서 피어링을 사용하도록 설정</span><span class="sxs-lookup"><span data-stu-id="195ef-697">Enable peering across Virtual Networks in multiple Tenants for Set/Add-AzureRmVirtualNetworkPeering</span></span>
-* <span data-ttu-id="195ef-698">Application Gateway에 대한 아래 cmdlet 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-698">Updated below cmdlets for Application Gateway</span></span>
-    - <span data-ttu-id="195ef-699">New-AzureRmApplicationGateway : EnableFIPS 플래그 및 영역 지원이 추가됨</span><span class="sxs-lookup"><span data-stu-id="195ef-699">New-AzureRmApplicationGateway : Added EnableFIPS flag and Zones support</span></span>
-    - <span data-ttu-id="195ef-700">New-AzureRmApplicationGatewaySku : 새 SKU Standard_v2 및 WAF_v2 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-700">New-AzureRmApplicationGatewaySku : Added new skus Standard_v2 and WAF_v2</span></span>
-    - <span data-ttu-id="195ef-701">Set-AzureRmApplicationGatewaySku : 새 SKU Standard_v2 및 WAF_v2 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-701">Set-AzureRmApplicationGatewaySku : Added new skus Standard_v2 and WAF_v2</span></span>
-* <span data-ttu-id="195ef-702">최신 생성기를 사용하여 RouteTable cmdlet을 재생성</span><span class="sxs-lookup"><span data-stu-id="195ef-702">Regenerated RouteTable cmdlets with the latest generator version</span></span>
+#### <a name="azurermnetwork"></a><span data-ttu-id="e709a-696">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="e709a-696">AzureRM.Network</span></span>
+* <span data-ttu-id="e709a-697">Set/Add-AzureRmVirtualNetworkPeering에 대한 여러 테넌트의 가상 네트워크에서 피어링을 사용하도록 설정</span><span class="sxs-lookup"><span data-stu-id="e709a-697">Enable peering across Virtual Networks in multiple Tenants for Set/Add-AzureRmVirtualNetworkPeering</span></span>
+* <span data-ttu-id="e709a-698">Application Gateway에 대한 아래 cmdlet 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-698">Updated below cmdlets for Application Gateway</span></span>
+    - <span data-ttu-id="e709a-699">New-AzureRmApplicationGateway : EnableFIPS 플래그 및 영역 지원이 추가됨</span><span class="sxs-lookup"><span data-stu-id="e709a-699">New-AzureRmApplicationGateway : Added EnableFIPS flag and Zones support</span></span>
+    - <span data-ttu-id="e709a-700">New-AzureRmApplicationGatewaySku : 새 SKU Standard_v2 및 WAF_v2 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-700">New-AzureRmApplicationGatewaySku : Added new skus Standard_v2 and WAF_v2</span></span>
+    - <span data-ttu-id="e709a-701">Set-AzureRmApplicationGatewaySku : 새 SKU Standard_v2 및 WAF_v2 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-701">Set-AzureRmApplicationGatewaySku : Added new skus Standard_v2 and WAF_v2</span></span>
+* <span data-ttu-id="e709a-702">최신 생성기를 사용하여 RouteTable cmdlet을 재생성</span><span class="sxs-lookup"><span data-stu-id="e709a-702">Regenerated RouteTable cmdlets with the latest generator version</span></span>
 
-#### <a name="azurermrelay"></a><span data-ttu-id="195ef-703">AzureRM.Relay</span><span class="sxs-lookup"><span data-stu-id="195ef-703">AzureRM.Relay</span></span>
-* <span data-ttu-id="195ef-704">markdown 파일을 업데이트하여 예제에서 매개 변수 이름 문제에 대해 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-704">Updated markdown files, fix for the parameter name issue in example</span></span>
+#### <a name="azurermrelay"></a><span data-ttu-id="e709a-703">AzureRM.Relay</span><span class="sxs-lookup"><span data-stu-id="e709a-703">AzureRM.Relay</span></span>
+* <span data-ttu-id="e709a-704">markdown 파일을 업데이트하여 예제에서 매개 변수 이름 문제에 대해 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-704">Updated markdown files, fix for the parameter name issue in example</span></span>
 
-#### <a name="azurermresources"></a><span data-ttu-id="195ef-705">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="195ef-705">AzureRM.Resources</span></span>
-* <span data-ttu-id="195ef-706">Roledefinition 및 Roleassignment cmdlet을 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-706">Update Roleassignment and roledefinition cmdlets:</span></span>
-    - <span data-ttu-id="195ef-707">페이징의 일부분으로 수행하는 추가 roledefinition 호출을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-707">Remove extra roledefinition calls done as part of paging.</span></span>
-* <span data-ttu-id="195ef-708">Get-AzureRmRoleAssignment cmdlet 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-708">Fix Get-AzureRmRoleAssignment cmdlet</span></span>
-    - <span data-ttu-id="195ef-709">-ExpandPrincipalGroups 명령 매개 변수 기능 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-709">Fix -ExpandPrincipalGroups command parameter functionality</span></span>
-* <span data-ttu-id="195ef-710">'Get-AzureRmResource'에서 '-ResourceType' 매개 변수가 대/소문자를 구분하는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-710">Fix issue with 'Get-AzureRmResource' where '-ResourceType' parameter was case sensitive</span></span>
+#### <a name="azurermresources"></a><span data-ttu-id="e709a-705">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="e709a-705">AzureRM.Resources</span></span>
+* <span data-ttu-id="e709a-706">Roledefinition 및 Roleassignment cmdlet을 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-706">Update Roleassignment and roledefinition cmdlets:</span></span>
+    - <span data-ttu-id="e709a-707">페이징의 일부분으로 수행하는 추가 roledefinition 호출을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-707">Remove extra roledefinition calls done as part of paging.</span></span>
+* <span data-ttu-id="e709a-708">Get-AzureRmRoleAssignment cmdlet 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-708">Fix Get-AzureRmRoleAssignment cmdlet</span></span>
+    - <span data-ttu-id="e709a-709">-ExpandPrincipalGroups 명령 매개 변수 기능 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-709">Fix -ExpandPrincipalGroups command parameter functionality</span></span>
+* <span data-ttu-id="e709a-710">'Get-AzureRmResource'에서 '-ResourceType' 매개 변수가 대/소문자를 구분하는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-710">Fix issue with 'Get-AzureRmResource' where '-ResourceType' parameter was case sensitive</span></span>
 
-#### <a name="azurermservicebus"></a><span data-ttu-id="195ef-711">AzureRM.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="195ef-711">AzureRM.ServiceBus</span></span>
-* <span data-ttu-id="195ef-712">top 및 skip 매개 변수가 cmdlet 목록을 나열하도록 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-712">Added top and skip parameter to list cmdlets</span></span>
-* <span data-ttu-id="195ef-713">표준을 프리미엄 네임스페이스 마이그레이션 cmdlet에 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-713">Added Standard to Premium NameSpace migration cmdlets :</span></span>
-    - <span data-ttu-id="195ef-714">Start-AzureRmServiceBusMigration</span><span class="sxs-lookup"><span data-stu-id="195ef-714">Start-AzureRmServiceBusMigration</span></span>
-    - <span data-ttu-id="195ef-715">Get-AzureRmServiceBusMigration</span><span class="sxs-lookup"><span data-stu-id="195ef-715">Get-AzureRmServiceBusMigration</span></span>
-    - <span data-ttu-id="195ef-716">Complete-AzureRmServiceBusMigration</span><span class="sxs-lookup"><span data-stu-id="195ef-716">Complete-AzureRmServiceBusMigration</span></span>
-    - <span data-ttu-id="195ef-717">Stop-AzureRmServiceBusMigration</span><span class="sxs-lookup"><span data-stu-id="195ef-717">Stop-AzureRmServiceBusMigration</span></span>
-    - <span data-ttu-id="195ef-718">Remove-AzureRmServiceBusMigration</span><span class="sxs-lookup"><span data-stu-id="195ef-718">Remove-AzureRmServiceBusMigration</span></span>
-* <span data-ttu-id="195ef-719">PSServiceBusDRConfigurationAttributes 클래스에 읽기 전용 속성 'PendingReplicationOperationsCount'를 추가하여 복제가 진행되는 동안 보류 중인 복제 작업 수를 제공</span><span class="sxs-lookup"><span data-stu-id="195ef-719">Added a readonly property 'PendingReplicationOperationsCount' to PSServiceBusDRConfigurationAttributes class, which gives the pending replication operations count while replication is in progress</span></span>
+#### <a name="azurermservicebus"></a><span data-ttu-id="e709a-711">AzureRM.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="e709a-711">AzureRM.ServiceBus</span></span>
+* <span data-ttu-id="e709a-712">top 및 skip 매개 변수가 cmdlet 목록을 나열하도록 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-712">Added top and skip parameter to list cmdlets</span></span>
+* <span data-ttu-id="e709a-713">표준을 프리미엄 네임스페이스 마이그레이션 cmdlet에 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-713">Added Standard to Premium NameSpace migration cmdlets :</span></span>
+    - <span data-ttu-id="e709a-714">Start-AzureRmServiceBusMigration</span><span class="sxs-lookup"><span data-stu-id="e709a-714">Start-AzureRmServiceBusMigration</span></span>
+    - <span data-ttu-id="e709a-715">Get-AzureRmServiceBusMigration</span><span class="sxs-lookup"><span data-stu-id="e709a-715">Get-AzureRmServiceBusMigration</span></span>
+    - <span data-ttu-id="e709a-716">Complete-AzureRmServiceBusMigration</span><span class="sxs-lookup"><span data-stu-id="e709a-716">Complete-AzureRmServiceBusMigration</span></span>
+    - <span data-ttu-id="e709a-717">Stop-AzureRmServiceBusMigration</span><span class="sxs-lookup"><span data-stu-id="e709a-717">Stop-AzureRmServiceBusMigration</span></span>
+    - <span data-ttu-id="e709a-718">Remove-AzureRmServiceBusMigration</span><span class="sxs-lookup"><span data-stu-id="e709a-718">Remove-AzureRmServiceBusMigration</span></span>
+* <span data-ttu-id="e709a-719">PSServiceBusDRConfigurationAttributes 클래스에 읽기 전용 속성 'PendingReplicationOperationsCount'를 추가하여 복제가 진행되는 동안 보류 중인 복제 작업 수를 제공</span><span class="sxs-lookup"><span data-stu-id="e709a-719">Added a readonly property 'PendingReplicationOperationsCount' to PSServiceBusDRConfigurationAttributes class, which gives the pending replication operations count while replication is in progress</span></span>
 
-#### <a name="azurermservicefabric"></a><span data-ttu-id="195ef-720">AzureRM.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="195ef-720">AzureRM.ServiceFabric</span></span>
-* <span data-ttu-id="195ef-721">‘New-AzureRmServiceFabricCluster’에 대한 예제 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-721">Update example for 'New-AzureRmServiceFabricCluster'</span></span>
+#### <a name="azurermservicefabric"></a><span data-ttu-id="e709a-720">AzureRM.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="e709a-720">AzureRM.ServiceFabric</span></span>
+* <span data-ttu-id="e709a-721">‘New-AzureRmServiceFabricCluster’에 대한 예제 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-721">Update example for 'New-AzureRmServiceFabricCluster'</span></span>
 
-#### <a name="azurermsql"></a><span data-ttu-id="195ef-722">AzureRM.Sql</span><span class="sxs-lookup"><span data-stu-id="195ef-722">AzureRM.Sql</span></span>
-* <span data-ttu-id="195ef-723">Management.Sql에 대한 새 cmdlet을 추가하여 고객이 TDE 인증서를 SQL Server 인스턴스 또는 Managed Instance에 추가할 수 있도록 허용</span><span class="sxs-lookup"><span data-stu-id="195ef-723">Adding new Cmdlets for Management.Sql to allow customers to add TDE Certificate to Sql Server instance or a Managed Instance</span></span>
-    - <span data-ttu-id="195ef-724">Add-AzureRmSqlServerTransparentDataEncryptionCertificate</span><span class="sxs-lookup"><span data-stu-id="195ef-724">Add-AzureRmSqlServerTransparentDataEncryptionCertificate</span></span>
-    - <span data-ttu-id="195ef-725">Add-AzureRmSqlManagedInstanceTransparentDataEncryptionCertificate</span><span class="sxs-lookup"><span data-stu-id="195ef-725">Add-AzureRmSqlManagedInstanceTransparentDataEncryptionCertificate</span></span>
+#### <a name="azurermsql"></a><span data-ttu-id="e709a-722">AzureRM.Sql</span><span class="sxs-lookup"><span data-stu-id="e709a-722">AzureRM.Sql</span></span>
+* <span data-ttu-id="e709a-723">Management.Sql에 대한 새 cmdlet을 추가하여 고객이 TDE 인증서를 SQL Server 인스턴스 또는 Managed Instance에 추가할 수 있도록 허용</span><span class="sxs-lookup"><span data-stu-id="e709a-723">Adding new Cmdlets for Management.Sql to allow customers to add TDE Certificate to Sql Server instance or a Managed Instance</span></span>
+    - <span data-ttu-id="e709a-724">Add-AzureRmSqlServerTransparentDataEncryptionCertificate</span><span class="sxs-lookup"><span data-stu-id="e709a-724">Add-AzureRmSqlServerTransparentDataEncryptionCertificate</span></span>
+    - <span data-ttu-id="e709a-725">Add-AzureRmSqlManagedInstanceTransparentDataEncryptionCertificate</span><span class="sxs-lookup"><span data-stu-id="e709a-725">Add-AzureRmSqlManagedInstanceTransparentDataEncryptionCertificate</span></span>
 
-#### <a name="azurermwebsites"></a><span data-ttu-id="195ef-726">AzureRM.Websites</span><span class="sxs-lookup"><span data-stu-id="195ef-726">AzureRM.Websites</span></span>
-* <span data-ttu-id="195ef-727">`Set-AzureRmWebApp -AssignIdentity` 및 `Set-AzureRmWebAppSlot -AssignIdentity`가 false로 설정되면 사이트 개체에서 Identity 속성이 제거됩니다. 미리보기 태그도 제거됩니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-727">`Set-AzureRmWebApp -AssignIdentity` and  `Set-AzureRmWebAppSlot -AssignIdentity` when set to false will now remove the Identity property from the site object.Removing preview tag as well.</span></span>
-* <span data-ttu-id="195ef-728">`Get-AzureRmWebAppMetrics`, `Get-AzureRmAppServicePlanMetrics` 예제가 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-728">`Get-AzureRmWebAppMetrics`,`Get-AzureRmAppServicePlanMetrics` example updated</span></span>
-* <span data-ttu-id="195ef-729">`Set-AzureRmWebApp -PhpVersion`이 유효한 php 버전으로 해제 지원</span><span class="sxs-lookup"><span data-stu-id="195ef-729">`Set-AzureRmWebApp -PhpVersion` supports off as a valid php version</span></span>
+#### <a name="azurermwebsites"></a><span data-ttu-id="e709a-726">AzureRM.Websites</span><span class="sxs-lookup"><span data-stu-id="e709a-726">AzureRM.Websites</span></span>
+* <span data-ttu-id="e709a-727">`Set-AzureRmWebApp -AssignIdentity` 및 `Set-AzureRmWebAppSlot -AssignIdentity`가 false로 설정되면 사이트 개체에서 Identity 속성이 제거됩니다. 미리보기 태그도 제거됩니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-727">`Set-AzureRmWebApp -AssignIdentity` and  `Set-AzureRmWebAppSlot -AssignIdentity` when set to false will now remove the Identity property from the site object.Removing preview tag as well.</span></span>
+* <span data-ttu-id="e709a-728">`Get-AzureRmWebAppMetrics`, `Get-AzureRmAppServicePlanMetrics` 예제가 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-728">`Get-AzureRmWebAppMetrics`,`Get-AzureRmAppServicePlanMetrics` example updated</span></span>
+* <span data-ttu-id="e709a-729">`Set-AzureRmWebApp -PhpVersion`이 유효한 php 버전으로 해제 지원</span><span class="sxs-lookup"><span data-stu-id="e709a-729">`Set-AzureRmWebApp -PhpVersion` supports off as a valid php version</span></span>
 
-## <a name="640---july-2018"></a><span data-ttu-id="195ef-730">6.4.0 - 2018년 7월</span><span class="sxs-lookup"><span data-stu-id="195ef-730">6.4.0 - July 2018</span></span>
-#### <a name="general"></a><span data-ttu-id="195ef-731">일반</span><span class="sxs-lookup"><span data-stu-id="195ef-731">General</span></span>
-* <span data-ttu-id="195ef-732">대부분의 모듈에 대한 도움말 파일에서 OutputType 서식 지정 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-732">Fixed formatting of OutputType in help files for most modules</span></span>
+## <a name="640---july-2018"></a><span data-ttu-id="e709a-730">6.4.0 - 2018년 7월</span><span class="sxs-lookup"><span data-stu-id="e709a-730">6.4.0 - July 2018</span></span>
+#### <a name="general"></a><span data-ttu-id="e709a-731">일반</span><span class="sxs-lookup"><span data-stu-id="e709a-731">General</span></span>
+* <span data-ttu-id="e709a-732">대부분의 모듈에 대한 도움말 파일에서 OutputType 서식 지정 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-732">Fixed formatting of OutputType in help files for most modules</span></span>
 
-#### <a name="azurermprofile"></a><span data-ttu-id="195ef-733">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="195ef-733">AzureRM.Profile</span></span>
-* <span data-ttu-id="195ef-734">기본 출력 형식에 추가된 Ps1Xml 특성</span><span class="sxs-lookup"><span data-stu-id="195ef-734">Ps1Xml attribute added to the basic output types</span></span>
+#### <a name="azurermprofile"></a><span data-ttu-id="e709a-733">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="e709a-733">AzureRM.Profile</span></span>
+* <span data-ttu-id="e709a-734">기본 출력 형식에 추가된 Ps1Xml 특성</span><span class="sxs-lookup"><span data-stu-id="e709a-734">Ps1Xml attribute added to the basic output types</span></span>
 
-#### <a name="azurermcompute"></a><span data-ttu-id="195ef-735">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="195ef-735">AzureRM.Compute</span></span>
-* <span data-ttu-id="195ef-736">VMSS에 대한 IP 태그 기능</span><span class="sxs-lookup"><span data-stu-id="195ef-736">IP Tag feature for VMSS</span></span>
-    - <span data-ttu-id="195ef-737">'New-AzureRmVmssIpTagConfig' cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-737">'New-AzureRmVmssIpTagConfig' cmdlet is added</span></span>
-    - <span data-ttu-id="195ef-738">New-AzureRmVmssIpConfig에 IpTag 매개 변수가 추가됨</span><span class="sxs-lookup"><span data-stu-id="195ef-738">IpTag parameter is added to New-AzureRmVmssIpConfig</span></span>
-* <span data-ttu-id="195ef-739">VMSS에 대한 자동 OS 롤백 기능</span><span class="sxs-lookup"><span data-stu-id="195ef-739">Auto OS Rollback feature for VMSS</span></span>
-    - <span data-ttu-id="195ef-740">New-AzureRmVmssConfig 및 Update-AzureRmVmss에 DisableAutoRollback 매개 변수가 추가됨</span><span class="sxs-lookup"><span data-stu-id="195ef-740">DisableAutoRollback parameters are added to New-AzureRmVmssConfig and Update-AzureRmVmss</span></span>
-* <span data-ttu-id="195ef-741">Vmss에 대한 OS 업그레이드 기록 기능</span><span class="sxs-lookup"><span data-stu-id="195ef-741">OS Upgrade History feature for Vmss</span></span>
-    - <span data-ttu-id="195ef-742">Get-AzureRmVmss에 OSUpgradeHistory 스위치 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-742">OSUpgradeHistory switch parameter is added to Get-AzureRmVmss</span></span>
+#### <a name="azurermcompute"></a><span data-ttu-id="e709a-735">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="e709a-735">AzureRM.Compute</span></span>
+* <span data-ttu-id="e709a-736">VMSS에 대한 IP 태그 기능</span><span class="sxs-lookup"><span data-stu-id="e709a-736">IP Tag feature for VMSS</span></span>
+    - <span data-ttu-id="e709a-737">'New-AzureRmVmssIpTagConfig' cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-737">'New-AzureRmVmssIpTagConfig' cmdlet is added</span></span>
+    - <span data-ttu-id="e709a-738">New-AzureRmVmssIpConfig에 IpTag 매개 변수가 추가됨</span><span class="sxs-lookup"><span data-stu-id="e709a-738">IpTag parameter is added to New-AzureRmVmssIpConfig</span></span>
+* <span data-ttu-id="e709a-739">VMSS에 대한 자동 OS 롤백 기능</span><span class="sxs-lookup"><span data-stu-id="e709a-739">Auto OS Rollback feature for VMSS</span></span>
+    - <span data-ttu-id="e709a-740">New-AzureRmVmssConfig 및 Update-AzureRmVmss에 DisableAutoRollback 매개 변수가 추가됨</span><span class="sxs-lookup"><span data-stu-id="e709a-740">DisableAutoRollback parameters are added to New-AzureRmVmssConfig and Update-AzureRmVmss</span></span>
+* <span data-ttu-id="e709a-741">Vmss에 대한 OS 업그레이드 기록 기능</span><span class="sxs-lookup"><span data-stu-id="e709a-741">OS Upgrade History feature for Vmss</span></span>
+    - <span data-ttu-id="e709a-742">Get-AzureRmVmss에 OSUpgradeHistory 스위치 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-742">OSUpgradeHistory switch parameter is added to Get-AzureRmVmss</span></span>
 
-#### <a name="azurermdatalakeanalytics"></a><span data-ttu-id="195ef-743">AzureRM.DataLakeAnalytics</span><span class="sxs-lookup"><span data-stu-id="195ef-743">AzureRM.DataLakeAnalytics</span></span>
-* <span data-ttu-id="195ef-744">다음 명령을 통해 카탈로그 액세스 제어 목록에 대한 지원을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-744">Add support for Catalog ACLs through the following commands:</span></span>
-    - <span data-ttu-id="195ef-745">Get-AzureRmDataLakeAnalyticsCatalogItemAclEntry</span><span class="sxs-lookup"><span data-stu-id="195ef-745">Get-AzureRmDataLakeAnalyticsCatalogItemAclEntry</span></span>
-    - <span data-ttu-id="195ef-746">Set-AzureRmDataLakeAnalyticsCatalogItemAclEntry</span><span class="sxs-lookup"><span data-stu-id="195ef-746">Set-AzureRmDataLakeAnalyticsCatalogItemAclEntry</span></span>
-    - <span data-ttu-id="195ef-747">Remove-AzureRmDataLakeAnalyticsCatalogItemAclEntry</span><span class="sxs-lookup"><span data-stu-id="195ef-747">Remove-AzureRmDataLakeAnalyticsCatalogItemAclEntry</span></span>
+#### <a name="azurermdatalakeanalytics"></a><span data-ttu-id="e709a-743">AzureRM.DataLakeAnalytics</span><span class="sxs-lookup"><span data-stu-id="e709a-743">AzureRM.DataLakeAnalytics</span></span>
+* <span data-ttu-id="e709a-744">다음 명령을 통해 카탈로그 액세스 제어 목록에 대한 지원을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-744">Add support for Catalog ACLs through the following commands:</span></span>
+    - <span data-ttu-id="e709a-745">Get-AzureRmDataLakeAnalyticsCatalogItemAclEntry</span><span class="sxs-lookup"><span data-stu-id="e709a-745">Get-AzureRmDataLakeAnalyticsCatalogItemAclEntry</span></span>
+    - <span data-ttu-id="e709a-746">Set-AzureRmDataLakeAnalyticsCatalogItemAclEntry</span><span class="sxs-lookup"><span data-stu-id="e709a-746">Set-AzureRmDataLakeAnalyticsCatalogItemAclEntry</span></span>
+    - <span data-ttu-id="e709a-747">Remove-AzureRmDataLakeAnalyticsCatalogItemAclEntry</span><span class="sxs-lookup"><span data-stu-id="e709a-747">Remove-AzureRmDataLakeAnalyticsCatalogItemAclEntry</span></span>
 
-#### <a name="azurermdatalakestore"></a><span data-ttu-id="195ef-748">AzureRM.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="195ef-748">AzureRM.DataLakeStore</span></span>
-* <span data-ttu-id="195ef-749">Set-AzureRmDataLakeStoreItemAclEntry, Remove-AzureRmDataLakeStoreItemAclEntry, Set-AzureRmDataLakeStoreItemAcl에 대한 취소 지원 및 진행률 추적 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-749">Add cancellation support and progress tracking for Set-AzureRmDataLakeStoreItemAclEntry, Remove-AzureRmDataLakeStoreItemAclEntry, Set-AzureRmDataLakeStoreItemAcl</span></span>
-* <span data-ttu-id="195ef-750">Export-AzureRmDataLakeStoreChildItemProperties에 대한 취소 지원 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-750">Add cancellation support for Export-AzureRmDataLakeStoreChildItemProperties</span></span>
-* <span data-ttu-id="195ef-751">재귀 작업을 수행하는 cmdlet에 대한 디버그 메시지 플러시 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-751">Fix flushing of debug messages for cmdlets that does recursive operations</span></span>
-* <span data-ttu-id="195ef-752">DataLake cmdlet의 테스트 위치 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-752">Fix location of test of DataLake cmdlets</span></span>
+#### <a name="azurermdatalakestore"></a><span data-ttu-id="e709a-748">AzureRM.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="e709a-748">AzureRM.DataLakeStore</span></span>
+* <span data-ttu-id="e709a-749">Set-AzureRmDataLakeStoreItemAclEntry, Remove-AzureRmDataLakeStoreItemAclEntry, Set-AzureRmDataLakeStoreItemAcl에 대한 취소 지원 및 진행률 추적 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-749">Add cancellation support and progress tracking for Set-AzureRmDataLakeStoreItemAclEntry, Remove-AzureRmDataLakeStoreItemAclEntry, Set-AzureRmDataLakeStoreItemAcl</span></span>
+* <span data-ttu-id="e709a-750">Export-AzureRmDataLakeStoreChildItemProperties에 대한 취소 지원 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-750">Add cancellation support for Export-AzureRmDataLakeStoreChildItemProperties</span></span>
+* <span data-ttu-id="e709a-751">재귀 작업을 수행하는 cmdlet에 대한 디버그 메시지 플러시 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-751">Fix flushing of debug messages for cmdlets that does recursive operations</span></span>
+* <span data-ttu-id="e709a-752">DataLake cmdlet의 테스트 위치 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-752">Fix location of test of DataLake cmdlets</span></span>
 
-#### <a name="azurermeventhub"></a><span data-ttu-id="195ef-753">AzureRM.EventHub</span><span class="sxs-lookup"><span data-stu-id="195ef-753">AzureRM.EventHub</span></span>
-* <span data-ttu-id="195ef-754">목록 작업 cmdlet Get-AzureRmEventHub 및 Get-AzureRmEventHubConsumerGroup에 선택적 MaxCount 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-754">Added Optional MaxCount parameter to List Operations cmdlet Get-AzureRmEventHub and Get-AzureRmEventHubConsumerGroup</span></span>
-* <span data-ttu-id="195ef-755">새 EventHub 만드는 동안 하나 이상의 매개 변수가 필요한 New-AzureRmEventHub cmdlet 문제를 해결.</span><span class="sxs-lookup"><span data-stu-id="195ef-755">Fixed issue in New-AzureRmEventHub cmdlet where at least one parameter needed while creating New EventHub.</span></span> <span data-ttu-id="195ef-756">기본 매개 변수 집합을 제공.</span><span class="sxs-lookup"><span data-stu-id="195ef-756">Provided Default Parameter set.</span></span>
-* <span data-ttu-id="195ef-757">선택적 매개 변수 -KeyValue를 New-AzureRmEventHubKey cmdlet에 추가 하여 사용자가 KeyValue를 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-757">Added optional Parameter -KeyValue to New-AzureRmEventHubKey cmdlet, which enables user to provide KeyValue.</span></span>
+#### <a name="azurermeventhub"></a><span data-ttu-id="e709a-753">AzureRM.EventHub</span><span class="sxs-lookup"><span data-stu-id="e709a-753">AzureRM.EventHub</span></span>
+* <span data-ttu-id="e709a-754">목록 작업 cmdlet Get-AzureRmEventHub 및 Get-AzureRmEventHubConsumerGroup에 선택적 MaxCount 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-754">Added Optional MaxCount parameter to List Operations cmdlet Get-AzureRmEventHub and Get-AzureRmEventHubConsumerGroup</span></span>
+* <span data-ttu-id="e709a-755">새 EventHub 만드는 동안 하나 이상의 매개 변수가 필요한 New-AzureRmEventHub cmdlet 문제를 해결.</span><span class="sxs-lookup"><span data-stu-id="e709a-755">Fixed issue in New-AzureRmEventHub cmdlet where at least one parameter needed while creating New EventHub.</span></span> <span data-ttu-id="e709a-756">기본 매개 변수 집합을 제공.</span><span class="sxs-lookup"><span data-stu-id="e709a-756">Provided Default Parameter set.</span></span>
+* <span data-ttu-id="e709a-757">선택적 매개 변수 -KeyValue를 New-AzureRmEventHubKey cmdlet에 추가 하여 사용자가 KeyValue를 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-757">Added optional Parameter -KeyValue to New-AzureRmEventHubKey cmdlet, which enables user to provide KeyValue.</span></span>
 
-#### <a name="azurermkeyvault"></a><span data-ttu-id="195ef-758">AzureRM.KeyVault</span><span class="sxs-lookup"><span data-stu-id="195ef-758">AzureRM.KeyVault</span></span>
-* <span data-ttu-id="195ef-759">Get-AzureRmKeyVault -Tag 실행 시 모든 리소스가 리턴되는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-759">Fix issue where all resources were being returned by Get-AzureRmKeyVault -Tag</span></span>
+#### <a name="azurermkeyvault"></a><span data-ttu-id="e709a-758">AzureRM.KeyVault</span><span class="sxs-lookup"><span data-stu-id="e709a-758">AzureRM.KeyVault</span></span>
+* <span data-ttu-id="e709a-759">Get-AzureRmKeyVault -Tag 실행 시 모든 리소스가 리턴되는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-759">Fix issue where all resources were being returned by Get-AzureRmKeyVault -Tag</span></span>
 
-#### <a name="azurermnetwork"></a><span data-ttu-id="195ef-760">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="195ef-760">AzureRM.Network</span></span>
-* <span data-ttu-id="195ef-761">영역 중복 VirtualNetworkGateways에 대한 새 Sku를 노출합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-761">Expose new Skus for Zone-Redundant VirtualNetworkGateways</span></span>
-* <span data-ttu-id="195ef-762">기능에 대한 새로운 명령이 추가됨: ARM을 통한 ExpressRoute 파트너 API</span><span class="sxs-lookup"><span data-stu-id="195ef-762">Added new commands for feature: ExpressRoute Partner APIs via ARM</span></span>
-    - <span data-ttu-id="195ef-763">Get- AzureRmExpressRouteCrossConnection 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-763">Added Get-AzureRmExpressRouteCrossConnection</span></span>
-    - <span data-ttu-id="195ef-764">Set-AzureRmExpressRouteCrossConnection 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-764">Added Set-AzureRmExpressRouteCrossConnection</span></span>
-    - <span data-ttu-id="195ef-765">Add-AzureRmExpressRouteCrossConnectionPeering 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-765">Added Add-AzureRmExpressRouteCrossConnectionPeering</span></span>
-    - <span data-ttu-id="195ef-766">Get-AzureRmExpressRouteCrossConnectionPeering 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-766">Added Get-AzureRmExpressRouteCrossConnectionPeering</span></span>
-    - <span data-ttu-id="195ef-767">Remove-AzureRmExpressRouteCrossConnectionPeering 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-767">Added Remove-AzureRmExpressRouteCrossConnectionPeering</span></span>
-    - <span data-ttu-id="195ef-768">Get-AzureRMExpressRouteCrossConnectionArpTable 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-768">Added Get-AzureRMExpressRouteCrossConnectionArpTable</span></span>
-    - <span data-ttu-id="195ef-769">Get-AzureRMExpressRouteCrossConnectionRouteTable 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-769">Added Get-AzureRMExpressRouteCrossConnectionRouteTable</span></span>
-    - <span data-ttu-id="195ef-770">Get-AzureRMExpressRouteCrossConnectionRouteTableSummary 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-770">Added Get-AzureRMExpressRouteCrossConnectionRouteTableSummary</span></span>
+#### <a name="azurermnetwork"></a><span data-ttu-id="e709a-760">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="e709a-760">AzureRM.Network</span></span>
+* <span data-ttu-id="e709a-761">영역 중복 VirtualNetworkGateways에 대한 새 Sku를 노출합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-761">Expose new Skus for Zone-Redundant VirtualNetworkGateways</span></span>
+* <span data-ttu-id="e709a-762">기능에 대한 새로운 명령이 추가됨: ARM을 통한 ExpressRoute 파트너 API</span><span class="sxs-lookup"><span data-stu-id="e709a-762">Added new commands for feature: ExpressRoute Partner APIs via ARM</span></span>
+    - <span data-ttu-id="e709a-763">Get- AzureRmExpressRouteCrossConnection 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-763">Added Get-AzureRmExpressRouteCrossConnection</span></span>
+    - <span data-ttu-id="e709a-764">Set-AzureRmExpressRouteCrossConnection 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-764">Added Set-AzureRmExpressRouteCrossConnection</span></span>
+    - <span data-ttu-id="e709a-765">Add-AzureRmExpressRouteCrossConnectionPeering 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-765">Added Add-AzureRmExpressRouteCrossConnectionPeering</span></span>
+    - <span data-ttu-id="e709a-766">Get-AzureRmExpressRouteCrossConnectionPeering 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-766">Added Get-AzureRmExpressRouteCrossConnectionPeering</span></span>
+    - <span data-ttu-id="e709a-767">Remove-AzureRmExpressRouteCrossConnectionPeering 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-767">Added Remove-AzureRmExpressRouteCrossConnectionPeering</span></span>
+    - <span data-ttu-id="e709a-768">Get-AzureRMExpressRouteCrossConnectionArpTable 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-768">Added Get-AzureRMExpressRouteCrossConnectionArpTable</span></span>
+    - <span data-ttu-id="e709a-769">Get-AzureRMExpressRouteCrossConnectionRouteTable 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-769">Added Get-AzureRMExpressRouteCrossConnectionRouteTable</span></span>
+    - <span data-ttu-id="e709a-770">Get-AzureRMExpressRouteCrossConnectionRouteTableSummary 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-770">Added Get-AzureRMExpressRouteCrossConnectionRouteTableSummary</span></span>
 
-#### <a name="azurermrecoveryservicesbackup"></a><span data-ttu-id="195ef-771">AzureRM.RecoveryServices.Backup</span><span class="sxs-lookup"><span data-stu-id="195ef-771">AzureRM.RecoveryServices.Backup</span></span>
-* <span data-ttu-id="195ef-772">Get-AzureRmRecoveryServicesBackupStatus cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-772">Added Get-AzureRmRecoveryServicesBackupStatus cmdlet.</span></span> <span data-ttu-id="195ef-773">이 cmdlet은 VM ID를 가져와서 VM이 구독에서 일부 자격 증명 모음으로 보호되는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-773">This cmdlet takes a VM ID and checks if the VM is protected by some vault in the subscription.</span></span> <span data-ttu-id="195ef-774">이러한 자격 증명 모음이 존재하는 경우 cmdlet은 자격 증명 모음 세부 정보를 출력 합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-774">If there exists such a vault, the cmdlet outputs the vault details.</span></span>
+#### <a name="azurermrecoveryservicesbackup"></a><span data-ttu-id="e709a-771">AzureRM.RecoveryServices.Backup</span><span class="sxs-lookup"><span data-stu-id="e709a-771">AzureRM.RecoveryServices.Backup</span></span>
+* <span data-ttu-id="e709a-772">Get-AzureRmRecoveryServicesBackupStatus cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-772">Added Get-AzureRmRecoveryServicesBackupStatus cmdlet.</span></span> <span data-ttu-id="e709a-773">이 cmdlet은 VM ID를 가져와서 VM이 구독에서 일부 자격 증명 모음으로 보호되는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-773">This cmdlet takes a VM ID and checks if the VM is protected by some vault in the subscription.</span></span> <span data-ttu-id="e709a-774">이러한 자격 증명 모음이 존재하는 경우 cmdlet은 자격 증명 모음 세부 정보를 출력 합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-774">If there exists such a vault, the cmdlet outputs the vault details.</span></span>
 
-#### <a name="azurermresources"></a><span data-ttu-id="195ef-775">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="195ef-775">AzureRM.Resources</span></span>
-* <span data-ttu-id="195ef-776">Get-AzureRmPolicyAssignment cmdlet을 다음과 같이 업데이트함.</span><span class="sxs-lookup"><span data-stu-id="195ef-776">Update Get-AzureRmPolicyAssignment cmdlets:</span></span>
-    - <span data-ttu-id="195ef-777">관리 그룹 수준에서 -Scope 값 리스팅에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-777">Add support for listing -Scope values at management group level</span></span>
-    - <span data-ttu-id="195ef-778">관리 그룹 수준에서 -Scope 값을 사용하여 개별 할당값을 검색하는 것에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-778">Add support for retrieving individual assignments with -Scope values at management group level</span></span>
-    - <span data-ttu-id="195ef-779">제어 매개 변수에 -Effective 및 -All 스위치 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-779">Add -Effective and -All switches to control  parameter</span></span>
-* <span data-ttu-id="195ef-780">Get/New/Remove/Set-AzureRmPolicyDefinition cmdlet 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-780">Update Get/New/Remove/Set-AzureRmPolicyDefinition cmdlets</span></span>
-    - <span data-ttu-id="195ef-781">지정된 관리 그룹에 작업을 적용할 -ManagementGroupName 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-781">Add -ManagementGroupName parameter to apply operations to a given management group</span></span>
-    - <span data-ttu-id="195ef-782">지정된 구독에 작업을 적용할 -SubscriptionId 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-782">Add -SubscriptionId parameter to apply operations to a given subscription</span></span>
-* <span data-ttu-id="195ef-783">Get/New/Remove/Set-AzureRmPolicySetDefinition cmdlet 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-783">Update Get/New/Remove/Set-AzureRmPolicySetDefinition cmdlets</span></span>
-    - <span data-ttu-id="195ef-784">지정된 관리 그룹에 작업을 적용할 -ManagementGroupName 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-784">Add -ManagementGroupName parameter to apply operations to a given management group</span></span>
-    - <span data-ttu-id="195ef-785">지정된 구독에 작업을 적용할 -SubscriptionId 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-785">Add -SubscriptionId parameter to apply operations to a given subscription</span></span>
-* <span data-ttu-id="195ef-786">'New-AzureRmResourceGroupDeployment'에서 'TemplateParameterObject'를 사용하는 경우 매개 변수에 KeyVault 비밀 참조 지원 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-786">Add KeyVault secret reference support in parameters when using 'TemplateParameterObject' in 'New-AzureRmResourceGroupDeployment'</span></span>
-* <span data-ttu-id="195ef-787">'New-AzureRmADAppCredential'에 대해 '-EndDate' 매개 변수가 무시되는 문제를 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-787">Fix issue where '-EndDate' parameter was ignored for 'New-AzureRmADAppCredential'</span></span>
+#### <a name="azurermresources"></a><span data-ttu-id="e709a-775">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="e709a-775">AzureRM.Resources</span></span>
+* <span data-ttu-id="e709a-776">Get-AzureRmPolicyAssignment cmdlet을 다음과 같이 업데이트함.</span><span class="sxs-lookup"><span data-stu-id="e709a-776">Update Get-AzureRmPolicyAssignment cmdlets:</span></span>
+    - <span data-ttu-id="e709a-777">관리 그룹 수준에서 -Scope 값 리스팅에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-777">Add support for listing -Scope values at management group level</span></span>
+    - <span data-ttu-id="e709a-778">관리 그룹 수준에서 -Scope 값을 사용하여 개별 할당값을 검색하는 것에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-778">Add support for retrieving individual assignments with -Scope values at management group level</span></span>
+    - <span data-ttu-id="e709a-779">제어 매개 변수에 -Effective 및 -All 스위치 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-779">Add -Effective and -All switches to control  parameter</span></span>
+* <span data-ttu-id="e709a-780">Get/New/Remove/Set-AzureRmPolicyDefinition cmdlet 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-780">Update Get/New/Remove/Set-AzureRmPolicyDefinition cmdlets</span></span>
+    - <span data-ttu-id="e709a-781">지정된 관리 그룹에 작업을 적용할 -ManagementGroupName 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-781">Add -ManagementGroupName parameter to apply operations to a given management group</span></span>
+    - <span data-ttu-id="e709a-782">지정된 구독에 작업을 적용할 -SubscriptionId 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-782">Add -SubscriptionId parameter to apply operations to a given subscription</span></span>
+* <span data-ttu-id="e709a-783">Get/New/Remove/Set-AzureRmPolicySetDefinition cmdlet 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-783">Update Get/New/Remove/Set-AzureRmPolicySetDefinition cmdlets</span></span>
+    - <span data-ttu-id="e709a-784">지정된 관리 그룹에 작업을 적용할 -ManagementGroupName 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-784">Add -ManagementGroupName parameter to apply operations to a given management group</span></span>
+    - <span data-ttu-id="e709a-785">지정된 구독에 작업을 적용할 -SubscriptionId 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-785">Add -SubscriptionId parameter to apply operations to a given subscription</span></span>
+* <span data-ttu-id="e709a-786">'New-AzureRmResourceGroupDeployment'에서 'TemplateParameterObject'를 사용하는 경우 매개 변수에 KeyVault 비밀 참조 지원 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-786">Add KeyVault secret reference support in parameters when using 'TemplateParameterObject' in 'New-AzureRmResourceGroupDeployment'</span></span>
+* <span data-ttu-id="e709a-787">'New-AzureRmADAppCredential'에 대해 '-EndDate' 매개 변수가 무시되는 문제를 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-787">Fix issue where '-EndDate' parameter was ignored for 'New-AzureRmADAppCredential'</span></span>
     - https://github.com/Azure/azure-powershell/issues/6505
-* <span data-ttu-id="195ef-788">'Add-AzureRmADGroupMember'가 요청에 잘못된 URL을 사용하는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-788">Fix issue where 'Add-AzureRmADGroupMember' used incorrect URL to make request</span></span>
+* <span data-ttu-id="e709a-788">'Add-AzureRmADGroupMember'가 요청에 잘못된 URL을 사용하는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-788">Fix issue where 'Add-AzureRmADGroupMember' used incorrect URL to make request</span></span>
     - https://github.com/Azure/azure-powershell/issues/6485
 
-#### <a name="azurermservicebus"></a><span data-ttu-id="195ef-789">AzureRM.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="195ef-789">AzureRM.ServiceBus</span></span>
-* <span data-ttu-id="195ef-790">선택적 매개 변수 -KeyValue를 New-AzureRmServiceBusKey cmdlet에 추가 하여 사용자가 KeyValue를 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-790">Added optional Parameter -KeyValue to New-AzureRmServiceBusKey cmdlet, which enables user to provide KeyValue.</span></span>
+#### <a name="azurermservicebus"></a><span data-ttu-id="e709a-789">AzureRM.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="e709a-789">AzureRM.ServiceBus</span></span>
+* <span data-ttu-id="e709a-790">선택적 매개 변수 -KeyValue를 New-AzureRmServiceBusKey cmdlet에 추가 하여 사용자가 KeyValue를 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-790">Added optional Parameter -KeyValue to New-AzureRmServiceBusKey cmdlet, which enables user to provide KeyValue.</span></span>
 
-#### <a name="azurermsql"></a><span data-ttu-id="195ef-791">AzureRM.Sql</span><span class="sxs-lookup"><span data-stu-id="195ef-791">AzureRM.Sql</span></span>
-* <span data-ttu-id="195ef-792">New-AzureRmSqlDatabaseRestorePoint 도움말에서 SQLDW에 대한 사용자 정의 복원 지점 명시</span><span class="sxs-lookup"><span data-stu-id="195ef-792">Clarified User-Defined Restore Points for SQLDW in New-AzureRmSqlDatabaseRestorePoint help</span></span>
-* <span data-ttu-id="195ef-793">몇 가지 cmdlet에서-ComputeGeneration 매개 변수의 설명서 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-793">Updated documentation of -ComputeGeneration parameter in several cmdlets</span></span>
+#### <a name="azurermsql"></a><span data-ttu-id="e709a-791">AzureRM.Sql</span><span class="sxs-lookup"><span data-stu-id="e709a-791">AzureRM.Sql</span></span>
+* <span data-ttu-id="e709a-792">New-AzureRmSqlDatabaseRestorePoint 도움말에서 SQLDW에 대한 사용자 정의 복원 지점 명시</span><span class="sxs-lookup"><span data-stu-id="e709a-792">Clarified User-Defined Restore Points for SQLDW in New-AzureRmSqlDatabaseRestorePoint help</span></span>
+* <span data-ttu-id="e709a-793">몇 가지 cmdlet에서-ComputeGeneration 매개 변수의 설명서 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-793">Updated documentation of -ComputeGeneration parameter in several cmdlets</span></span>
 
-## <a name="630---june-2018"></a><span data-ttu-id="195ef-794">6.3.0 - 2018년 6월</span><span class="sxs-lookup"><span data-stu-id="195ef-794">6.3.0 - June 2018</span></span>
-#### <a name="azurermprofile"></a><span data-ttu-id="195ef-795">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="195ef-795">AzureRM.Profile</span></span>
-* <span data-ttu-id="195ef-796">Enable-AzureRmContextAutoSave에 대한 오류 메시지 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-796">Updated error messages for Enable-AzureRmContextAutoSave</span></span>
-* <span data-ttu-id="195ef-797">이전 컨텍스트 없이 'Connect-AzureRmAccount' 실행 시 각 구독에 대한 컨텍스트 생성</span><span class="sxs-lookup"><span data-stu-id="195ef-797">Create a context for each subscription when running 'Connect-AzureRmAccount' with no previous context</span></span>
+## <a name="630---june-2018"></a><span data-ttu-id="e709a-794">6.3.0 - 2018년 6월</span><span class="sxs-lookup"><span data-stu-id="e709a-794">6.3.0 - June 2018</span></span>
+#### <a name="azurermprofile"></a><span data-ttu-id="e709a-795">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="e709a-795">AzureRM.Profile</span></span>
+* <span data-ttu-id="e709a-796">Enable-AzureRmContextAutoSave에 대한 오류 메시지 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-796">Updated error messages for Enable-AzureRmContextAutoSave</span></span>
+* <span data-ttu-id="e709a-797">이전 컨텍스트 없이 'Connect-AzureRmAccount' 실행 시 각 구독에 대한 컨텍스트 생성</span><span class="sxs-lookup"><span data-stu-id="e709a-797">Create a context for each subscription when running 'Connect-AzureRmAccount' with no previous context</span></span>
 
-#### <a name="azurestorage"></a><span data-ttu-id="195ef-798">Azure.Storage</span><span class="sxs-lookup"><span data-stu-id="195ef-798">Azure.Storage</span></span>
-* <span data-ttu-id="195ef-799">도움말 파일 내 -Permissions 매개 변수에 대한 추가 정보가 추가됨</span><span class="sxs-lookup"><span data-stu-id="195ef-799">Added additional information about -Permissions parameter in help files.</span></span>
+#### <a name="azurestorage"></a><span data-ttu-id="e709a-798">Azure.Storage</span><span class="sxs-lookup"><span data-stu-id="e709a-798">Azure.Storage</span></span>
+* <span data-ttu-id="e709a-799">도움말 파일 내 -Permissions 매개 변수에 대한 추가 정보가 추가됨</span><span class="sxs-lookup"><span data-stu-id="e709a-799">Added additional information about -Permissions parameter in help files.</span></span>
 
-#### <a name="azurermcompute"></a><span data-ttu-id="195ef-800">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="195ef-800">AzureRM.Compute</span></span>
-* <span data-ttu-id="195ef-801">'Get-AzureRmVmDiskEncryptionStatus'가 데이터 디스크가 없는 VM에 대해 관찰된 문제를 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-801">'Get-AzureRmVmDiskEncryptionStatus' fixes an issue observed for VMs with no data disks</span></span> 
-* <span data-ttu-id="195ef-802">Compute 클라이언트 라이브러리 버전을 업데이트하여 다음 cmdlet 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-802">Update Compute client library version to fix following cmdlets</span></span>
-    - <span data-ttu-id="195ef-803">Grant-AzureRmDiskAccess</span><span class="sxs-lookup"><span data-stu-id="195ef-803">Grant-AzureRmDiskAccess</span></span>
-    - <span data-ttu-id="195ef-804">Grant-AzureRmSnapshotAccess</span><span class="sxs-lookup"><span data-stu-id="195ef-804">Grant-AzureRmSnapshotAccess</span></span>
-    - <span data-ttu-id="195ef-805">Save-AzureRmVMImage</span><span class="sxs-lookup"><span data-stu-id="195ef-805">Save-AzureRmVMImage</span></span>
-* <span data-ttu-id="195ef-806">다음 cmdlet이 '작업 ID' 및 '작업 상태'를 올바르게 표시하도록 수정:</span><span class="sxs-lookup"><span data-stu-id="195ef-806">Fixed following cmdlets to show 'operation ID' and 'operation status' correctly:</span></span>
-    - <span data-ttu-id="195ef-807">Start-AzureRmVM</span><span class="sxs-lookup"><span data-stu-id="195ef-807">Start-AzureRmVM</span></span>
-    - <span data-ttu-id="195ef-808">Stop-AzureRmVM</span><span class="sxs-lookup"><span data-stu-id="195ef-808">Stop-AzureRmVM</span></span>
-    - <span data-ttu-id="195ef-809">Restart-AzureRmVM</span><span class="sxs-lookup"><span data-stu-id="195ef-809">Restart-AzureRmVM</span></span>
-    - <span data-ttu-id="195ef-810">Set-AzureRmVM</span><span class="sxs-lookup"><span data-stu-id="195ef-810">Set-AzureRmVM</span></span>
-    - <span data-ttu-id="195ef-811">Remove-AzuerRmVM</span><span class="sxs-lookup"><span data-stu-id="195ef-811">Remove-AzuerRmVM</span></span>
-    - <span data-ttu-id="195ef-812">Set-AzureRmVmss</span><span class="sxs-lookup"><span data-stu-id="195ef-812">Set-AzureRmVmss</span></span>
-    - <span data-ttu-id="195ef-813">Start-AzureRmVmssRollingOSUpgrade</span><span class="sxs-lookup"><span data-stu-id="195ef-813">Start-AzureRmVmssRollingOSUpgrade</span></span>
-    - <span data-ttu-id="195ef-814">Stop-AzureRmVmssRollingUpgrade</span><span class="sxs-lookup"><span data-stu-id="195ef-814">Stop-AzureRmVmssRollingUpgrade</span></span>
-    - <span data-ttu-id="195ef-815">Start-AzureRmVmss</span><span class="sxs-lookup"><span data-stu-id="195ef-815">Start-AzureRmVmss</span></span>
-    - <span data-ttu-id="195ef-816">Restart-AzureRmVmss</span><span class="sxs-lookup"><span data-stu-id="195ef-816">Restart-AzureRmVmss</span></span>
-    - <span data-ttu-id="195ef-817">Stop-AzureRmVmss</span><span class="sxs-lookup"><span data-stu-id="195ef-817">Stop-AzureRmVmss</span></span>
-    - <span data-ttu-id="195ef-818">Remove-AzureRmVmss</span><span class="sxs-lookup"><span data-stu-id="195ef-818">Remove-AzureRmVmss</span></span>
-    - <span data-ttu-id="195ef-819">ConvertTo-AzureRmVMManagedDisk</span><span class="sxs-lookup"><span data-stu-id="195ef-819">ConvertTo-AzureRmVMManagedDisk</span></span>
-    - <span data-ttu-id="195ef-820">Revoke-AzureRmSnapshotAccess</span><span class="sxs-lookup"><span data-stu-id="195ef-820">Revoke-AzureRmSnapshotAccess</span></span>
-    - <span data-ttu-id="195ef-821">Remove-AzureRmSnapshot</span><span class="sxs-lookup"><span data-stu-id="195ef-821">Remove-AzureRmSnapshot</span></span>
-    - <span data-ttu-id="195ef-822">Revoke-AzureRmDiskAccess</span><span class="sxs-lookup"><span data-stu-id="195ef-822">Revoke-AzureRmDiskAccess</span></span>
-    - <span data-ttu-id="195ef-823">Remove-AzureRmDisk</span><span class="sxs-lookup"><span data-stu-id="195ef-823">Remove-AzureRmDisk</span></span>
-    - <span data-ttu-id="195ef-824">Remove-AzureRmContainerService</span><span class="sxs-lookup"><span data-stu-id="195ef-824">Remove-AzureRmContainerService</span></span>
-    - <span data-ttu-id="195ef-825">Remove-AzureRmAvailabilitySet</span><span class="sxs-lookup"><span data-stu-id="195ef-825">Remove-AzureRmAvailabilitySet</span></span>
+#### <a name="azurermcompute"></a><span data-ttu-id="e709a-800">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="e709a-800">AzureRM.Compute</span></span>
+* <span data-ttu-id="e709a-801">'Get-AzureRmVmDiskEncryptionStatus'가 데이터 디스크가 없는 VM에 대해 관찰된 문제를 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-801">'Get-AzureRmVmDiskEncryptionStatus' fixes an issue observed for VMs with no data disks</span></span> 
+* <span data-ttu-id="e709a-802">Compute 클라이언트 라이브러리 버전을 업데이트하여 다음 cmdlet 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-802">Update Compute client library version to fix following cmdlets</span></span>
+    - <span data-ttu-id="e709a-803">Grant-AzureRmDiskAccess</span><span class="sxs-lookup"><span data-stu-id="e709a-803">Grant-AzureRmDiskAccess</span></span>
+    - <span data-ttu-id="e709a-804">Grant-AzureRmSnapshotAccess</span><span class="sxs-lookup"><span data-stu-id="e709a-804">Grant-AzureRmSnapshotAccess</span></span>
+    - <span data-ttu-id="e709a-805">Save-AzureRmVMImage</span><span class="sxs-lookup"><span data-stu-id="e709a-805">Save-AzureRmVMImage</span></span>
+* <span data-ttu-id="e709a-806">다음 cmdlet이 '작업 ID' 및 '작업 상태'를 올바르게 표시하도록 수정:</span><span class="sxs-lookup"><span data-stu-id="e709a-806">Fixed following cmdlets to show 'operation ID' and 'operation status' correctly:</span></span>
+    - <span data-ttu-id="e709a-807">Start-AzureRmVM</span><span class="sxs-lookup"><span data-stu-id="e709a-807">Start-AzureRmVM</span></span>
+    - <span data-ttu-id="e709a-808">Stop-AzureRmVM</span><span class="sxs-lookup"><span data-stu-id="e709a-808">Stop-AzureRmVM</span></span>
+    - <span data-ttu-id="e709a-809">Restart-AzureRmVM</span><span class="sxs-lookup"><span data-stu-id="e709a-809">Restart-AzureRmVM</span></span>
+    - <span data-ttu-id="e709a-810">Set-AzureRmVM</span><span class="sxs-lookup"><span data-stu-id="e709a-810">Set-AzureRmVM</span></span>
+    - <span data-ttu-id="e709a-811">Remove-AzuerRmVM</span><span class="sxs-lookup"><span data-stu-id="e709a-811">Remove-AzuerRmVM</span></span>
+    - <span data-ttu-id="e709a-812">Set-AzureRmVmss</span><span class="sxs-lookup"><span data-stu-id="e709a-812">Set-AzureRmVmss</span></span>
+    - <span data-ttu-id="e709a-813">Start-AzureRmVmssRollingOSUpgrade</span><span class="sxs-lookup"><span data-stu-id="e709a-813">Start-AzureRmVmssRollingOSUpgrade</span></span>
+    - <span data-ttu-id="e709a-814">Stop-AzureRmVmssRollingUpgrade</span><span class="sxs-lookup"><span data-stu-id="e709a-814">Stop-AzureRmVmssRollingUpgrade</span></span>
+    - <span data-ttu-id="e709a-815">Start-AzureRmVmss</span><span class="sxs-lookup"><span data-stu-id="e709a-815">Start-AzureRmVmss</span></span>
+    - <span data-ttu-id="e709a-816">Restart-AzureRmVmss</span><span class="sxs-lookup"><span data-stu-id="e709a-816">Restart-AzureRmVmss</span></span>
+    - <span data-ttu-id="e709a-817">Stop-AzureRmVmss</span><span class="sxs-lookup"><span data-stu-id="e709a-817">Stop-AzureRmVmss</span></span>
+    - <span data-ttu-id="e709a-818">Remove-AzureRmVmss</span><span class="sxs-lookup"><span data-stu-id="e709a-818">Remove-AzureRmVmss</span></span>
+    - <span data-ttu-id="e709a-819">ConvertTo-AzureRmVMManagedDisk</span><span class="sxs-lookup"><span data-stu-id="e709a-819">ConvertTo-AzureRmVMManagedDisk</span></span>
+    - <span data-ttu-id="e709a-820">Revoke-AzureRmSnapshotAccess</span><span class="sxs-lookup"><span data-stu-id="e709a-820">Revoke-AzureRmSnapshotAccess</span></span>
+    - <span data-ttu-id="e709a-821">Remove-AzureRmSnapshot</span><span class="sxs-lookup"><span data-stu-id="e709a-821">Remove-AzureRmSnapshot</span></span>
+    - <span data-ttu-id="e709a-822">Revoke-AzureRmDiskAccess</span><span class="sxs-lookup"><span data-stu-id="e709a-822">Revoke-AzureRmDiskAccess</span></span>
+    - <span data-ttu-id="e709a-823">Remove-AzureRmDisk</span><span class="sxs-lookup"><span data-stu-id="e709a-823">Remove-AzureRmDisk</span></span>
+    - <span data-ttu-id="e709a-824">Remove-AzureRmContainerService</span><span class="sxs-lookup"><span data-stu-id="e709a-824">Remove-AzureRmContainerService</span></span>
+    - <span data-ttu-id="e709a-825">Remove-AzureRmAvailabilitySet</span><span class="sxs-lookup"><span data-stu-id="e709a-825">Remove-AzureRmAvailabilitySet</span></span>
 
-#### <a name="azurermeventgrid"></a><span data-ttu-id="195ef-826">AzureRM.EventGrid</span><span class="sxs-lookup"><span data-stu-id="195ef-826">AzureRM.EventGrid</span></span>
-* <span data-ttu-id="195ef-827">Update-AzureRmEventGridSubscription cmdlet의 SubjectBeginsWith/SubjectEndsWith에 대한 ValidateNotNullOrEmpty 유효성 검사 조건을 제거하여 필요에 따라 이러한 매개 변수를 빈 문자열로 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-827">Remove ValidateNotNullOrEmpty validation conditions for SubjectBeginsWith/SubjectEndsWith in Update-AzureRmEventGridSubscription cmdlet to allow changing these parameters to empty string if needed.</span></span>
+#### <a name="azurermeventgrid"></a><span data-ttu-id="e709a-826">AzureRM.EventGrid</span><span class="sxs-lookup"><span data-stu-id="e709a-826">AzureRM.EventGrid</span></span>
+* <span data-ttu-id="e709a-827">Update-AzureRmEventGridSubscription cmdlet의 SubjectBeginsWith/SubjectEndsWith에 대한 ValidateNotNullOrEmpty 유효성 검사 조건을 제거하여 필요에 따라 이러한 매개 변수를 빈 문자열로 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-827">Remove ValidateNotNullOrEmpty validation conditions for SubjectBeginsWith/SubjectEndsWith in Update-AzureRmEventGridSubscription cmdlet to allow changing these parameters to empty string if needed.</span></span>
 
-#### <a name="azurermkeyvault"></a><span data-ttu-id="195ef-828">AzureRM.KeyVault</span><span class="sxs-lookup"><span data-stu-id="195ef-828">AzureRM.KeyVault</span></span>
-* <span data-ttu-id="195ef-829">Get-AzureRmKeyVault -Tag 실행 시 태그가 리턴되지 않는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-829">Fix issue where no Tags are being returned when Get-AzureRmKeyVault -Tag is run</span></span>
+#### <a name="azurermkeyvault"></a><span data-ttu-id="e709a-828">AzureRM.KeyVault</span><span class="sxs-lookup"><span data-stu-id="e709a-828">AzureRM.KeyVault</span></span>
+* <span data-ttu-id="e709a-829">Get-AzureRmKeyVault -Tag 실행 시 태그가 리턴되지 않는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-829">Fix issue where no Tags are being returned when Get-AzureRmKeyVault -Tag is run</span></span>
 
-#### <a name="azurermpolicyinsights"></a><span data-ttu-id="195ef-830">AzureRM.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="195ef-830">AzureRM.PolicyInsights</span></span>
-* <span data-ttu-id="195ef-831">Policy Insights cmdlet의 공개 릴리스</span><span class="sxs-lookup"><span data-stu-id="195ef-831">Public release of Policy Insights cmdlets</span></span>
-    - <span data-ttu-id="195ef-832">API 버전 2018-04-04 사용</span><span class="sxs-lookup"><span data-stu-id="195ef-832">Use API version 2018-04-04</span></span>
-    - <span data-ttu-id="195ef-833">PolicyDefinitionReferenceId를 Get-AzureRmPolicyStateSummary의 결과 집합에 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-833">Add PolicyDefinitionReferenceId to the results of Get-AzureRmPolicyStateSummary</span></span>
+#### <a name="azurermpolicyinsights"></a><span data-ttu-id="e709a-830">AzureRM.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="e709a-830">AzureRM.PolicyInsights</span></span>
+* <span data-ttu-id="e709a-831">Policy Insights cmdlet의 공개 릴리스</span><span class="sxs-lookup"><span data-stu-id="e709a-831">Public release of Policy Insights cmdlets</span></span>
+    - <span data-ttu-id="e709a-832">API 버전 2018-04-04 사용</span><span class="sxs-lookup"><span data-stu-id="e709a-832">Use API version 2018-04-04</span></span>
+    - <span data-ttu-id="e709a-833">PolicyDefinitionReferenceId를 Get-AzureRmPolicyStateSummary의 결과 집합에 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-833">Add PolicyDefinitionReferenceId to the results of Get-AzureRmPolicyStateSummary</span></span>
 
-#### <a name="azurermrecoveryservicesbackup"></a><span data-ttu-id="195ef-834">AzureRM.RecoveryServices.Backup</span><span class="sxs-lookup"><span data-stu-id="195ef-834">AzureRM.RecoveryServices.Backup</span></span>
-* <span data-ttu-id="195ef-835">-Vault 매개 변수를 RecoveryServices.Backup cmdlet에 추가.</span><span class="sxs-lookup"><span data-stu-id="195ef-835">Added -Vault parameter to RecoveryServices.Backup cmdlets.</span></span> <span data-ttu-id="195ef-836">전달되는 경우 이는 Set-AzureRmRecoveryServicesContext cmdlet을 재정의함.</span><span class="sxs-lookup"><span data-stu-id="195ef-836">When passed, this will override the Set-AzureRmRecoveryServicesContext cmdlet.</span></span>
+#### <a name="azurermrecoveryservicesbackup"></a><span data-ttu-id="e709a-834">AzureRM.RecoveryServices.Backup</span><span class="sxs-lookup"><span data-stu-id="e709a-834">AzureRM.RecoveryServices.Backup</span></span>
+* <span data-ttu-id="e709a-835">-Vault 매개 변수를 RecoveryServices.Backup cmdlet에 추가.</span><span class="sxs-lookup"><span data-stu-id="e709a-835">Added -Vault parameter to RecoveryServices.Backup cmdlets.</span></span> <span data-ttu-id="e709a-836">전달되는 경우 이는 Set-AzureRmRecoveryServicesContext cmdlet을 재정의함.</span><span class="sxs-lookup"><span data-stu-id="e709a-836">When passed, this will override the Set-AzureRmRecoveryServicesContext cmdlet.</span></span>
 
-#### <a name="azurermsql"></a><span data-ttu-id="195ef-837">AzureRM.Sql</span><span class="sxs-lookup"><span data-stu-id="195ef-837">AzureRM.Sql</span></span>
-* <span data-ttu-id="195ef-838">Get-AzureRmSqlDatabaseExpanded에 대한 도움말 파일의 예가 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-838">Updated example in the help file for Get-AzureRmSqlDatabaseExpanded</span></span>
+#### <a name="azurermsql"></a><span data-ttu-id="e709a-837">AzureRM.Sql</span><span class="sxs-lookup"><span data-stu-id="e709a-837">AzureRM.Sql</span></span>
+* <span data-ttu-id="e709a-838">Get-AzureRmSqlDatabaseExpanded에 대한 도움말 파일의 예가 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-838">Updated example in the help file for Get-AzureRmSqlDatabaseExpanded</span></span>
 
-#### <a name="azurermtrafficmanager"></a><span data-ttu-id="195ef-839">AzureRM.TrafficManager</span><span class="sxs-lookup"><span data-stu-id="195ef-839">AzureRM.TrafficManager</span></span>
-* <span data-ttu-id="195ef-840">Add-AzureRmTrafficManagerEndpointConfig에대한 도움말 파일이 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-840">Updated the help file for Add-AzureRmTrafficManagerEndpointConfig</span></span>
+#### <a name="azurermtrafficmanager"></a><span data-ttu-id="e709a-839">AzureRM.TrafficManager</span><span class="sxs-lookup"><span data-stu-id="e709a-839">AzureRM.TrafficManager</span></span>
+* <span data-ttu-id="e709a-840">Add-AzureRmTrafficManagerEndpointConfig에대한 도움말 파일이 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-840">Updated the help file for Add-AzureRmTrafficManagerEndpointConfig</span></span>
 
-#### <a name="azurermwebsites"></a><span data-ttu-id="195ef-841">AzureRM.Websites</span><span class="sxs-lookup"><span data-stu-id="195ef-841">AzureRM.Websites</span></span>
-* <span data-ttu-id="195ef-842">-AssignIdentity를 사용할 때 AppSetting을 덮어쓰지 않도록 'Set-AzureRmWebApp'이 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-842">'Set-AzureRmWebApp' is updated to not overwrite the AppSettings when using -AssignIdentity</span></span>
-* <span data-ttu-id="195ef-843">'New-AzureRmWebAppSlot'이 AppServicePlan을 옵션 매개변수로 사용하도록 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-843">'New-AzureRmWebAppSlot' is updated to honor AppServicePlan as an optional parameter</span></span>
+#### <a name="azurermwebsites"></a><span data-ttu-id="e709a-841">AzureRM.Websites</span><span class="sxs-lookup"><span data-stu-id="e709a-841">AzureRM.Websites</span></span>
+* <span data-ttu-id="e709a-842">-AssignIdentity를 사용할 때 AppSetting을 덮어쓰지 않도록 'Set-AzureRmWebApp'이 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-842">'Set-AzureRmWebApp' is updated to not overwrite the AppSettings when using -AssignIdentity</span></span>
+* <span data-ttu-id="e709a-843">'New-AzureRmWebAppSlot'이 AppServicePlan을 옵션 매개변수로 사용하도록 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-843">'New-AzureRmWebAppSlot' is updated to honor AppServicePlan as an optional parameter</span></span>
 
-## <a name="621---june-2018"></a><span data-ttu-id="195ef-844">6.2.1 - 2018년 6월</span><span class="sxs-lookup"><span data-stu-id="195ef-844">6.2.1 - June 2018</span></span>
-### <a name="azurermoperationalinsights"></a><span data-ttu-id="195ef-845">AzureRM.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="195ef-845">AzureRM.OperationalInsights</span></span>
-* <span data-ttu-id="195ef-846">PSWorkspace 모델이 Network 형식을 매개 변수로 사용하도록 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-846">Updated PSWorkspace model to allow Network to use type as a parameter</span></span>
+## <a name="621---june-2018"></a><span data-ttu-id="e709a-844">6.2.1 - 2018년 6월</span><span class="sxs-lookup"><span data-stu-id="e709a-844">6.2.1 - June 2018</span></span>
+### <a name="azurermoperationalinsights"></a><span data-ttu-id="e709a-845">AzureRM.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="e709a-845">AzureRM.OperationalInsights</span></span>
+* <span data-ttu-id="e709a-846">PSWorkspace 모델이 Network 형식을 매개 변수로 사용하도록 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-846">Updated PSWorkspace model to allow Network to use type as a parameter</span></span>
 
-## <a name="620---june-2018"></a><span data-ttu-id="195ef-847">6.2.0 - 2018년 6월</span><span class="sxs-lookup"><span data-stu-id="195ef-847">6.2.0 - June 2018</span></span>
-#### <a name="azurermprofile"></a><span data-ttu-id="195ef-848">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="195ef-848">AzureRM.Profile</span></span>
-* <span data-ttu-id="195ef-849">Newtonsoft.Json의 버전 10.0.3이 모듈 가져오기에 로드되지 않는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-849">Fix issue where version 10.0.3 of Newtonsoft.Json wasn't being loaded on module import</span></span>
+## <a name="620---june-2018"></a><span data-ttu-id="e709a-847">6.2.0 - 2018년 6월</span><span class="sxs-lookup"><span data-stu-id="e709a-847">6.2.0 - June 2018</span></span>
+#### <a name="azurermprofile"></a><span data-ttu-id="e709a-848">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="e709a-848">AzureRM.Profile</span></span>
+* <span data-ttu-id="e709a-849">Newtonsoft.Json의 버전 10.0.3이 모듈 가져오기에 로드되지 않는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-849">Fix issue where version 10.0.3 of Newtonsoft.Json wasn't being loaded on module import</span></span>
 
-#### <a name="azurermcompute"></a><span data-ttu-id="195ef-850">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="195ef-850">AzureRM.Compute</span></span>
-* <span data-ttu-id="195ef-851">VMSS VM 업데이트 기능</span><span class="sxs-lookup"><span data-stu-id="195ef-851">VMSS VM Update feature</span></span>
-    - <span data-ttu-id="195ef-852">'Update-AzureRmVmssVM' 및 'New-AzureRmVMDataDisk' cmdlets 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-852">Added 'Update-AzureRmVmssVM' and 'New-AzureRmVMDataDisk' cmdlets</span></span>
-    - <span data-ttu-id="195ef-853">데이터 디스크를 Vmss VM에 추가할 수 있도록 지원하기 위해 VirtualMachineScaleSetVM 매개변수를 'Add-AzureRmVMDataDisk' cmdlet에 추가하였습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-853">Add VirtualMachineScaleSetVM parameter to 'Add-AzureRmVMDataDisk' cmdlet to support adding a data disk to Vmss VM.</span></span>
+#### <a name="azurermcompute"></a><span data-ttu-id="e709a-850">AzureRM.Compute</span><span class="sxs-lookup"><span data-stu-id="e709a-850">AzureRM.Compute</span></span>
+* <span data-ttu-id="e709a-851">VMSS VM 업데이트 기능</span><span class="sxs-lookup"><span data-stu-id="e709a-851">VMSS VM Update feature</span></span>
+    - <span data-ttu-id="e709a-852">'Update-AzureRmVmssVM' 및 'New-AzureRmVMDataDisk' cmdlets 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-852">Added 'Update-AzureRmVmssVM' and 'New-AzureRmVMDataDisk' cmdlets</span></span>
+    - <span data-ttu-id="e709a-853">데이터 디스크를 Vmss VM에 추가할 수 있도록 지원하기 위해 VirtualMachineScaleSetVM 매개변수를 'Add-AzureRmVMDataDisk' cmdlet에 추가하였습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-853">Add VirtualMachineScaleSetVM parameter to 'Add-AzureRmVMDataDisk' cmdlet to support adding a data disk to Vmss VM.</span></span>
 
-#### <a name="azurermdatafactoryv2"></a><span data-ttu-id="195ef-854">AzureRM.DataFactoryV2</span><span class="sxs-lookup"><span data-stu-id="195ef-854">AzureRM.DataFactoryV2</span></span>
-* <span data-ttu-id="195ef-855">ADF .Net SDK 버전이 다음 변경 내용이 포함된 0.8.0-preview로 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-855">Updated the ADF .Net SDK version to 0.8.0-preview containing following changes:</span></span>
-    - <span data-ttu-id="195ef-856">팩터리 리포지토리 작업 구성 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-856">Added Configure factory repository operation</span></span>
-    - <span data-ttu-id="195ef-857">QuickBooks LinkedService가 ConsumerKey 및 consumerSecret 속성을 노출하도록 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="195ef-857">Updated QuickBooks LinkedService to expose consumerKey and consumerSecret properties</span></span>
-    - <span data-ttu-id="195ef-858">여러 모델 유형을 SecretBase에서 개체로 업데이트함</span><span class="sxs-lookup"><span data-stu-id="195ef-858">Updated Several model types from SecretBase to Object</span></span>
-    - <span data-ttu-id="195ef-859">Blob 이벤트 트리거 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-859">Added Blob Events trigger</span></span>
+#### <a name="azurermdatafactoryv2"></a><span data-ttu-id="e709a-854">AzureRM.DataFactoryV2</span><span class="sxs-lookup"><span data-stu-id="e709a-854">AzureRM.DataFactoryV2</span></span>
+* <span data-ttu-id="e709a-855">ADF .Net SDK 버전이 다음 변경 내용이 포함된 0.8.0-preview로 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-855">Updated the ADF .Net SDK version to 0.8.0-preview containing following changes:</span></span>
+    - <span data-ttu-id="e709a-856">팩터리 리포지토리 작업 구성 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-856">Added Configure factory repository operation</span></span>
+    - <span data-ttu-id="e709a-857">QuickBooks LinkedService가 ConsumerKey 및 consumerSecret 속성을 노출하도록 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="e709a-857">Updated QuickBooks LinkedService to expose consumerKey and consumerSecret properties</span></span>
+    - <span data-ttu-id="e709a-858">여러 모델 유형을 SecretBase에서 개체로 업데이트함</span><span class="sxs-lookup"><span data-stu-id="e709a-858">Updated Several model types from SecretBase to Object</span></span>
+    - <span data-ttu-id="e709a-859">Blob 이벤트 트리거 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-859">Added Blob Events trigger</span></span>
 
-### <a name="azurermkeyvault"></a><span data-ttu-id="195ef-860">AzureRM.KeyVault</span><span class="sxs-lookup"><span data-stu-id="195ef-860">AzureRM.KeyVault</span></span>
-* <span data-ttu-id="195ef-861">예제 출력으로 설명서 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-861">Update documentation with example output</span></span>
+### <a name="azurermkeyvault"></a><span data-ttu-id="e709a-860">AzureRM.KeyVault</span><span class="sxs-lookup"><span data-stu-id="e709a-860">AzureRM.KeyVault</span></span>
+* <span data-ttu-id="e709a-861">예제 출력으로 설명서 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-861">Update documentation with example output</span></span>
 
-### <a name="azurermnetwork"></a><span data-ttu-id="195ef-862">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="195ef-862">AzureRM.Network</span></span>
-* <span data-ttu-id="195ef-863">Network Watcher cmdlet에서 트래픽 분석 매개 변수를 사용가능하도록 설정</span><span class="sxs-lookup"><span data-stu-id="195ef-863">Enable Traffic Analytics parameters on Network Watcher cmdlets</span></span>
+### <a name="azurermnetwork"></a><span data-ttu-id="e709a-862">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="e709a-862">AzureRM.Network</span></span>
+* <span data-ttu-id="e709a-863">Network Watcher cmdlet에서 트래픽 분석 매개 변수를 사용가능하도록 설정</span><span class="sxs-lookup"><span data-stu-id="e709a-863">Enable Traffic Analytics parameters on Network Watcher cmdlets</span></span>
 
-#### <a name="azurermresources"></a><span data-ttu-id="195ef-864">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="195ef-864">AzureRM.Resources</span></span>
-* <span data-ttu-id="195ef-865">'Get AzureRmResource'에서 반환된 'PSResource' 개체의 'Properties' 속성의 문제 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-865">Fix issue with 'Properties' property of 'PSResource' object(s) returned from 'Get-AzureRmResource'</span></span>
+#### <a name="azurermresources"></a><span data-ttu-id="e709a-864">AzureRM.Resources</span><span class="sxs-lookup"><span data-stu-id="e709a-864">AzureRM.Resources</span></span>
+* <span data-ttu-id="e709a-865">'Get AzureRmResource'에서 반환된 'PSResource' 개체의 'Properties' 속성의 문제 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-865">Fix issue with 'Properties' property of 'PSResource' object(s) returned from 'Get-AzureRmResource'</span></span>
 
-#### <a name="azurermscheduler"></a><span data-ttu-id="195ef-866">AzureRM.Scheduler</span><span class="sxs-lookup"><span data-stu-id="195ef-866">AzureRM.Scheduler</span></span>
-* <span data-ttu-id="195ef-867">ServiceBusQueueJob 업데이트가 새 인증 값을 설정하지 않는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="195ef-867">Fix issue with update ServiceBusQueueJob not setting new Auth values</span></span>
+#### <a name="azurermscheduler"></a><span data-ttu-id="e709a-866">AzureRM.Scheduler</span><span class="sxs-lookup"><span data-stu-id="e709a-866">AzureRM.Scheduler</span></span>
+* <span data-ttu-id="e709a-867">ServiceBusQueueJob 업데이트가 새 인증 값을 설정하지 않는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="e709a-867">Fix issue with update ServiceBusQueueJob not setting new Auth values</span></span>
 
-### <a name="azurermsql"></a><span data-ttu-id="195ef-868">AzureRM.Sql</span><span class="sxs-lookup"><span data-stu-id="195ef-868">AzureRM.Sql</span></span>
-* <span data-ttu-id="195ef-869">옵션 LicenseType 매개 변수를 사용하여 다음 cmdlet을 업데이트</span><span class="sxs-lookup"><span data-stu-id="195ef-869">Updated the following cmdlets with optional LicenseType parameter</span></span>
-    - <span data-ttu-id="195ef-870">New-AzureRmSqlDatabase; Set-AzureRmSqlDatabase</span><span class="sxs-lookup"><span data-stu-id="195ef-870">New-AzureRmSqlDatabase; Set-AzureRmSqlDatabase</span></span>
-    - <span data-ttu-id="195ef-871">New-AzureRmSqlElasticPool; Set-AzureRmSqlElasticPool</span><span class="sxs-lookup"><span data-stu-id="195ef-871">New-AzureRmSqlElasticPool; Set-AzureRmSqlElasticPool</span></span>
-    - <span data-ttu-id="195ef-872">New-AzureRmSqlDatabaseCopy</span><span class="sxs-lookup"><span data-stu-id="195ef-872">New-AzureRmSqlDatabaseCopy</span></span>
-    - <span data-ttu-id="195ef-873">New-AzureRmSqlDatabaseSecondary</span><span class="sxs-lookup"><span data-stu-id="195ef-873">New-AzureRmSqlDatabaseSecondary</span></span>
-    - <span data-ttu-id="195ef-874">Restore-AzureRmSqlDatabase</span><span class="sxs-lookup"><span data-stu-id="195ef-874">Restore-AzureRmSqlDatabase</span></span>
+### <a name="azurermsql"></a><span data-ttu-id="e709a-868">AzureRM.Sql</span><span class="sxs-lookup"><span data-stu-id="e709a-868">AzureRM.Sql</span></span>
+* <span data-ttu-id="e709a-869">옵션 LicenseType 매개 변수를 사용하여 다음 cmdlet을 업데이트</span><span class="sxs-lookup"><span data-stu-id="e709a-869">Updated the following cmdlets with optional LicenseType parameter</span></span>
+    - <span data-ttu-id="e709a-870">New-AzureRmSqlDatabase; Set-AzureRmSqlDatabase</span><span class="sxs-lookup"><span data-stu-id="e709a-870">New-AzureRmSqlDatabase; Set-AzureRmSqlDatabase</span></span>
+    - <span data-ttu-id="e709a-871">New-AzureRmSqlElasticPool; Set-AzureRmSqlElasticPool</span><span class="sxs-lookup"><span data-stu-id="e709a-871">New-AzureRmSqlElasticPool; Set-AzureRmSqlElasticPool</span></span>
+    - <span data-ttu-id="e709a-872">New-AzureRmSqlDatabaseCopy</span><span class="sxs-lookup"><span data-stu-id="e709a-872">New-AzureRmSqlDatabaseCopy</span></span>
+    - <span data-ttu-id="e709a-873">New-AzureRmSqlDatabaseSecondary</span><span class="sxs-lookup"><span data-stu-id="e709a-873">New-AzureRmSqlDatabaseSecondary</span></span>
+    - <span data-ttu-id="e709a-874">Restore-AzureRmSqlDatabase</span><span class="sxs-lookup"><span data-stu-id="e709a-874">Restore-AzureRmSqlDatabase</span></span>
 
-#### <a name="azurermwebsites"></a><span data-ttu-id="195ef-875">AzureRM.Websites</span><span class="sxs-lookup"><span data-stu-id="195ef-875">AzureRM.Websites</span></span>
-* <span data-ttu-id="195ef-876">'New-AzureRMWebApp'이 전략 라이브러리의 공통 알고리즘을 사용하도록 업데이트 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-876">'New-AzureRMWebApp' is updated to use common algorithms from the Strategy library.</span></span>
+#### <a name="azurermwebsites"></a><span data-ttu-id="e709a-875">AzureRM.Websites</span><span class="sxs-lookup"><span data-stu-id="e709a-875">AzureRM.Websites</span></span>
+* <span data-ttu-id="e709a-876">'New-AzureRMWebApp'이 전략 라이브러리의 공통 알고리즘을 사용하도록 업데이트 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-876">'New-AzureRMWebApp' is updated to use common algorithms from the Strategy library.</span></span>
 
-## <a name="610---may-2018"></a><span data-ttu-id="195ef-877">6.1.0 - 2018년 5월</span><span class="sxs-lookup"><span data-stu-id="195ef-877">6.1.0 - May 2018</span></span>
-#### <a name="azurermprofile"></a><span data-ttu-id="195ef-878">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="195ef-878">AzureRM.Profile</span></span>
-* <span data-ttu-id="195ef-879">'Clear-AzureRmContext'를 실행하면 이전 기본 컨텍스트의 이름으로 빈 컨텍스트가 유지되어 사용자가 이전 이름으로 새 컨텍스트를 만들지 못하게 되는 문제를 수정했습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-879">Fix issue where running 'Clear-AzureRmContext' would keep an empty context with the name of the previous default context, which prevented the user from creating a new context with the old name</span></span>
+## <a name="610---may-2018"></a><span data-ttu-id="e709a-877">6.1.0 - 2018년 5월</span><span class="sxs-lookup"><span data-stu-id="e709a-877">6.1.0 - May 2018</span></span>
+#### <a name="azurermprofile"></a><span data-ttu-id="e709a-878">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="e709a-878">AzureRM.Profile</span></span>
+* <span data-ttu-id="e709a-879">'Clear-AzureRmContext'를 실행하면 이전 기본 컨텍스트의 이름으로 빈 컨텍스트가 유지되어 사용자가 이전 이름으로 새 컨텍스트를 만들지 못하게 되는 문제를 수정했습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-879">Fix issue where running 'Clear-AzureRmContext' would keep an empty context with the name of the previous default context, which prevented the user from creating a new context with the old name</span></span>
 
-#### <a name="azurermanalysisservices"></a><span data-ttu-id="195ef-880">AzureRM.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="195ef-880">AzureRM.AnalysisServices</span></span>
-* <span data-ttu-id="195ef-881">AS에서 게이트웨이가 작업을 연결하거나 연결 해제할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-881">Enable Gateway assocaite/disassociate operations on AS.</span></span>
+#### <a name="azurermanalysisservices"></a><span data-ttu-id="e709a-880">AzureRM.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="e709a-880">AzureRM.AnalysisServices</span></span>
+* <span data-ttu-id="e709a-881">AS에서 게이트웨이가 작업을 연결하거나 연결 해제할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-881">Enable Gateway assocaite/disassociate operations on AS.</span></span>
 
-#### <a name="azurermapimanagement"></a><span data-ttu-id="195ef-882">AzureRM.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="195ef-882">AzureRM.ApiManagement</span></span>
-* <span data-ttu-id="195ef-883">ApiVersions, ApiReleases 및 ApiRevisions에 대한 지원이 추가됨</span><span class="sxs-lookup"><span data-stu-id="195ef-883">Added support for ApiVersions, ApiReleases and ApiRevisions</span></span>
-* <span data-ttu-id="195ef-884">ServiceFabric 백 엔드에 대한 지원 추가됨</span><span class="sxs-lookup"><span data-stu-id="195ef-884">Added suppport for ServiceFabric Backend</span></span>
-* <span data-ttu-id="195ef-885">Application Insights 로거에 대한 지원 추가됨</span><span class="sxs-lookup"><span data-stu-id="195ef-885">Added support for Application Insights Logger</span></span>
-* <span data-ttu-id="195ef-886">'기본' SKU를 API Management 서비스의 유효한 SKU로 인식하는 지원 추가됨</span><span class="sxs-lookup"><span data-stu-id="195ef-886">Added support for recognizing 'Basic' sku as a valid sku of Api Management service</span></span>
-* <span data-ttu-id="195ef-887">프라이빗 CA가 발급한 인증서를 루트 또는 CA로 설치하는 지원 추가됨</span><span class="sxs-lookup"><span data-stu-id="195ef-887">Added support for installing Certificates issued by private CA as Root or CA</span></span>
-* <span data-ttu-id="195ef-888">KeyVault 및 다중 프록시 호스트 이름을 통한 사용자 정의 SSL 인증서를 수락하는 지원 추가됨</span><span class="sxs-lookup"><span data-stu-id="195ef-888">Added support for accepting Custom SSL certificates via KeyVault and Multiple proxy hostnames</span></span>
-* <span data-ttu-id="195ef-889">MSI ID에 대한 지원 추가됨</span><span class="sxs-lookup"><span data-stu-id="195ef-889">Added support for MSI identity</span></span>
-* <span data-ttu-id="195ef-890">URL을 통해 정책을 수용하기 위한 지원이 추가되었습니다. 참고: 다음 cmdlet은 이후 릴리스에서 사용되지 않을 예정입니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-890">Added support for accepting Policies via Url NOTE: The following cmdlets will be deprecated in future release</span></span>
-   - <span data-ttu-id="195ef-891">Import-AzureRmApiManagementHostnameCertificate</span><span class="sxs-lookup"><span data-stu-id="195ef-891">Import-AzureRmApiManagementHostnameCertificate</span></span>
-   - <span data-ttu-id="195ef-892">New-AzureRmApiManagementHostnameConfiguration</span><span class="sxs-lookup"><span data-stu-id="195ef-892">New-AzureRmApiManagementHostnameConfiguration</span></span>
-   - <span data-ttu-id="195ef-893">Set-AzureRmApiManagementHostnames</span><span class="sxs-lookup"><span data-stu-id="195ef-893">Set-AzureRmApiManagementHostnames</span></span>
-   - <span data-ttu-id="195ef-894">Update-AzureRmApiManagementDeployment</span><span class="sxs-lookup"><span data-stu-id="195ef-894">Update-AzureRmApiManagementDeployment</span></span>
+#### <a name="azurermapimanagement"></a><span data-ttu-id="e709a-882">AzureRM.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="e709a-882">AzureRM.ApiManagement</span></span>
+* <span data-ttu-id="e709a-883">ApiVersions, ApiReleases 및 ApiRevisions에 대한 지원이 추가됨</span><span class="sxs-lookup"><span data-stu-id="e709a-883">Added support for ApiVersions, ApiReleases and ApiRevisions</span></span>
+* <span data-ttu-id="e709a-884">ServiceFabric 백 엔드에 대한 지원 추가됨</span><span class="sxs-lookup"><span data-stu-id="e709a-884">Added suppport for ServiceFabric Backend</span></span>
+* <span data-ttu-id="e709a-885">Application Insights 로거에 대한 지원 추가됨</span><span class="sxs-lookup"><span data-stu-id="e709a-885">Added support for Application Insights Logger</span></span>
+* <span data-ttu-id="e709a-886">'기본' SKU를 API Management 서비스의 유효한 SKU로 인식하는 지원 추가됨</span><span class="sxs-lookup"><span data-stu-id="e709a-886">Added support for recognizing 'Basic' sku as a valid sku of Api Management service</span></span>
+* <span data-ttu-id="e709a-887">프라이빗 CA가 발급한 인증서를 루트 또는 CA로 설치하는 지원 추가됨</span><span class="sxs-lookup"><span data-stu-id="e709a-887">Added support for installing Certificates issued by private CA as Root or CA</span></span>
+* <span data-ttu-id="e709a-888">KeyVault 및 다중 프록시 호스트 이름을 통한 사용자 정의 SSL 인증서를 수락하는 지원 추가됨</span><span class="sxs-lookup"><span data-stu-id="e709a-888">Added support for accepting Custom SSL certificates via KeyVault and Multiple proxy hostnames</span></span>
+* <span data-ttu-id="e709a-889">MSI ID에 대한 지원 추가됨</span><span class="sxs-lookup"><span data-stu-id="e709a-889">Added support for MSI identity</span></span>
+* <span data-ttu-id="e709a-890">URL을 통해 정책을 수용하기 위한 지원이 추가되었습니다. 참고: 다음 cmdlet은 이후 릴리스에서 사용되지 않을 예정입니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-890">Added support for accepting Policies via Url NOTE: The following cmdlets will be deprecated in future release</span></span>
+   - <span data-ttu-id="e709a-891">Import-AzureRmApiManagementHostnameCertificate</span><span class="sxs-lookup"><span data-stu-id="e709a-891">Import-AzureRmApiManagementHostnameCertificate</span></span>
+   - <span data-ttu-id="e709a-892">New-AzureRmApiManagementHostnameConfiguration</span><span class="sxs-lookup"><span data-stu-id="e709a-892">New-AzureRmApiManagementHostnameConfiguration</span></span>
+   - <span data-ttu-id="e709a-893">Set-AzureRmApiManagementHostnames</span><span class="sxs-lookup"><span data-stu-id="e709a-893">Set-AzureRmApiManagementHostnames</span></span>
+   - <span data-ttu-id="e709a-894">Update-AzureRmApiManagementDeployment</span><span class="sxs-lookup"><span data-stu-id="e709a-894">Update-AzureRmApiManagementDeployment</span></span>
 
-#### <a name="azurermbatch"></a><span data-ttu-id="195ef-895">AzureRM.Backup</span><span class="sxs-lookup"><span data-stu-id="195ef-895">AzureRM.Batch</span></span>
-* <span data-ttu-id="195ef-896">새 cmdlet Get AzureBatchPoolNodeCounts 릴리스</span><span class="sxs-lookup"><span data-stu-id="195ef-896">Release new cmdlet Get-AzureBatchPoolNodeCounts</span></span>
-* <span data-ttu-id="195ef-897">새 cmdlet Start-AzureBatchComputeNodeServiceLogUpload 릴리스</span><span class="sxs-lookup"><span data-stu-id="195ef-897">Release new cmdlet Start-AzureBatchComputeNodeServiceLogUpload</span></span>
+#### <a name="azurermbatch"></a><span data-ttu-id="e709a-895">AzureRM.Backup</span><span class="sxs-lookup"><span data-stu-id="e709a-895">AzureRM.Batch</span></span>
+* <span data-ttu-id="e709a-896">새 cmdlet Get AzureBatchPoolNodeCounts 릴리스</span><span class="sxs-lookup"><span data-stu-id="e709a-896">Release new cmdlet Get-AzureBatchPoolNodeCounts</span></span>
+* <span data-ttu-id="e709a-897">새 cmdlet Start-AzureBatchComputeNodeServiceLogUpload 릴리스</span><span class="sxs-lookup"><span data-stu-id="e709a-897">Release new cmdlet Start-AzureBatchComputeNodeServiceLogUpload</span></span>
 
-#### <a name="azurermconsumption"></a><span data-ttu-id="195ef-898">AzureRM.Consumption</span><span class="sxs-lookup"><span data-stu-id="195ef-898">AzureRM.Consumption</span></span>
-* <span data-ttu-id="195ef-899">Expand, ResourceGroup, InstanceName, InstanceId, Tags, Top on Cmdlet Get-AzureRmConsumptionUsageDetail 등 새 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="195ef-899">Add new parameters Expand, ResourceGroup, InstanceName, InstanceId, Tags, and Top on Cmdlet Get-AzureRmConsumptionUsageDetail</span></span>
+#### <a name="azurermconsumption"></a><span data-ttu-id="e709a-898">AzureRM.Consumption</span><span class="sxs-lookup"><span data-stu-id="e709a-898">AzureRM.Consumption</span></span>
+* <span data-ttu-id="e709a-899">Expand, ResourceGroup, InstanceName, InstanceId, Tags, Top on Cmdlet Get-AzureRmConsumptionUsageDetail 등 새 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="e709a-899">Add new parameters Expand, ResourceGroup, InstanceName, InstanceId, Tags, and Top on Cmdlet Get-AzureRmConsumptionUsageDetail</span></span>
 
-#### <a name="azurermdatalakestore"></a><span data-ttu-id="195ef-900">AzureRM.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="195ef-900">AzureRM.DataLakeStore</span></span>
-* <span data-ttu-id="195ef-901">Export-AzureRmDataLakeStoreChildItemProperties에 대한 예제 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-901">Fix example for Export-AzureRmDataLakeStoreChildItemProperties</span></span>
-* <span data-ttu-id="195ef-902">Set-AzureRmDataLakeStoreItemAclEntry에서 재귀 사례에 대한 null 매개 변수 예외 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-902">Fix null parameter exception for Recurse case in Set-AzureRmDataLakeStoreItemAclEntry</span></span> 
-* <span data-ttu-id="195ef-903">Set-AzureRmDataLakeStoreItemAclEntry, Set-AzureRmDataLakeStoreItemAcl, Remove-AzureRmDataLakeStoreItemAclEntry에 대한 도움말 파일 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-903">Fix the help files for Set-AzureRmDataLakeStoreItemAclEntry, Set-AzureRmDataLakeStoreItemAcl, Remove-AzureRmDataLakeStoreItemAclEntry</span></span> 
+#### <a name="azurermdatalakestore"></a><span data-ttu-id="e709a-900">AzureRM.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="e709a-900">AzureRM.DataLakeStore</span></span>
+* <span data-ttu-id="e709a-901">Export-AzureRmDataLakeStoreChildItemProperties에 대한 예제 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-901">Fix example for Export-AzureRmDataLakeStoreChildItemProperties</span></span>
+* <span data-ttu-id="e709a-902">Set-AzureRmDataLakeStoreItemAclEntry에서 재귀 사례에 대한 null 매개 변수 예외 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-902">Fix null parameter exception for Recurse case in Set-AzureRmDataLakeStoreItemAclEntry</span></span> 
+* <span data-ttu-id="e709a-903">Set-AzureRmDataLakeStoreItemAclEntry, Set-AzureRmDataLakeStoreItemAcl, Remove-AzureRmDataLakeStoreItemAclEntry에 대한 도움말 파일 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-903">Fix the help files for Set-AzureRmDataLakeStoreItemAclEntry, Set-AzureRmDataLakeStoreItemAcl, Remove-AzureRmDataLakeStoreItemAclEntry</span></span> 
 
-#### <a name="azurermnetwork"></a><span data-ttu-id="195ef-904">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="195ef-904">AzureRM.Network</span></span>
-* <span data-ttu-id="195ef-905">18.0.0-preview에서 19.0.0-preview로 네트워크 SDK 버전 업그레이드</span><span class="sxs-lookup"><span data-stu-id="195ef-905">Bump up Network SDK version from 18.0.0-preview to 19.0.0-preview</span></span>
-* <span data-ttu-id="195ef-906">프로토콜 구성을 만들기 위해 추가된 cmdlet</span><span class="sxs-lookup"><span data-stu-id="195ef-906">Added cmdlet to create protocol configuration</span></span>
-    - <span data-ttu-id="195ef-907">New-AzureRmNetworkWatcherProtocolConfiguration</span><span class="sxs-lookup"><span data-stu-id="195ef-907">New-AzureRmNetworkWatcherProtocolConfiguration</span></span>
-* <span data-ttu-id="195ef-908">기존 Express 경로 회로에 새 회로 연결을 추가하기 위해 추가된 cmdlet</span><span class="sxs-lookup"><span data-stu-id="195ef-908">Added cmdlet to add a new circuit connection to an existing express route circuit.</span></span>
-    - <span data-ttu-id="195ef-909">Add-AzureRmExpressRouteCircuitConnectionConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-909">Add-AzureRmExpressRouteCircuitConnectionConfig</span></span>
-* <span data-ttu-id="195ef-910">기존 Express 경로 회로에서 회로 연결을 제거하기 위해 추가된 cmdlet</span><span class="sxs-lookup"><span data-stu-id="195ef-910">Added cmdlet to remove a circuit connection from an existing express route circuit.</span></span>
-    - <span data-ttu-id="195ef-911">Remove-AzureRmExpressRouteCircuitConnectionConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-911">Remove-AzureRmExpressRouteCircuitConnectionConfig</span></span>
-* <span data-ttu-id="195ef-912">회로 연결을 검색하기 위해 추가된 cmdlet</span><span class="sxs-lookup"><span data-stu-id="195ef-912">Added cmdlet to retrieve a circuit connection</span></span>
-    - <span data-ttu-id="195ef-913">Get-AzureRmExpressRouteCircuitConnectionConfig</span><span class="sxs-lookup"><span data-stu-id="195ef-913">Get-AzureRmExpressRouteCircuitConnectionConfig</span></span>
+#### <a name="azurermnetwork"></a><span data-ttu-id="e709a-904">AzureRM.Network</span><span class="sxs-lookup"><span data-stu-id="e709a-904">AzureRM.Network</span></span>
+* <span data-ttu-id="e709a-905">18.0.0-preview에서 19.0.0-preview로 네트워크 SDK 버전 업그레이드</span><span class="sxs-lookup"><span data-stu-id="e709a-905">Bump up Network SDK version from 18.0.0-preview to 19.0.0-preview</span></span>
+* <span data-ttu-id="e709a-906">프로토콜 구성을 만들기 위해 추가된 cmdlet</span><span class="sxs-lookup"><span data-stu-id="e709a-906">Added cmdlet to create protocol configuration</span></span>
+    - <span data-ttu-id="e709a-907">New-AzureRmNetworkWatcherProtocolConfiguration</span><span class="sxs-lookup"><span data-stu-id="e709a-907">New-AzureRmNetworkWatcherProtocolConfiguration</span></span>
+* <span data-ttu-id="e709a-908">기존 Express 경로 회로에 새 회로 연결을 추가하기 위해 추가된 cmdlet</span><span class="sxs-lookup"><span data-stu-id="e709a-908">Added cmdlet to add a new circuit connection to an existing express route circuit.</span></span>
+    - <span data-ttu-id="e709a-909">Add-AzureRmExpressRouteCircuitConnectionConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-909">Add-AzureRmExpressRouteCircuitConnectionConfig</span></span>
+* <span data-ttu-id="e709a-910">기존 Express 경로 회로에서 회로 연결을 제거하기 위해 추가된 cmdlet</span><span class="sxs-lookup"><span data-stu-id="e709a-910">Added cmdlet to remove a circuit connection from an existing express route circuit.</span></span>
+    - <span data-ttu-id="e709a-911">Remove-AzureRmExpressRouteCircuitConnectionConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-911">Remove-AzureRmExpressRouteCircuitConnectionConfig</span></span>
+* <span data-ttu-id="e709a-912">회로 연결을 검색하기 위해 추가된 cmdlet</span><span class="sxs-lookup"><span data-stu-id="e709a-912">Added cmdlet to retrieve a circuit connection</span></span>
+    - <span data-ttu-id="e709a-913">Get-AzureRmExpressRouteCircuitConnectionConfig</span><span class="sxs-lookup"><span data-stu-id="e709a-913">Get-AzureRmExpressRouteCircuitConnectionConfig</span></span>
 
-#### <a name="azurermservicefabric"></a><span data-ttu-id="195ef-914">AzureRM.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="195ef-914">AzureRM.ServiceFabric</span></span>
-* <span data-ttu-id="195ef-915">생성된 인증서로 고정 서버 인증 사용(문제 # 5998)</span><span class="sxs-lookup"><span data-stu-id="195ef-915">Fixed server authentication usage with generated certificates (Issue #5998)</span></span>
+#### <a name="azurermservicefabric"></a><span data-ttu-id="e709a-914">AzureRM.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="e709a-914">AzureRM.ServiceFabric</span></span>
+* <span data-ttu-id="e709a-915">생성된 인증서로 고정 서버 인증 사용(문제 # 5998)</span><span class="sxs-lookup"><span data-stu-id="e709a-915">Fixed server authentication usage with generated certificates (Issue #5998)</span></span>
 
-#### <a name="azurermsql"></a><span data-ttu-id="195ef-916">AzureRM.Sql</span><span class="sxs-lookup"><span data-stu-id="195ef-916">AzureRM.Sql</span></span>
-* <span data-ttu-id="195ef-917">AuditActions 또는 AuditActionGroups를 제거할 수 있도록 업데이트된 감사 cmdlet</span><span class="sxs-lookup"><span data-stu-id="195ef-917">Updated Auditing cmdlets to allow removing AuditActions or AuditActionGroups</span></span>
-* <span data-ttu-id="195ef-918">'Azure 복구 서비스 자격 증명 모음을 사용하여 장기 보존 정책을 구성하면 정책이 더 이상 지원되지 않습니다. 새로운 유연 보유 정책으로 요청을 제출하십시오.'라는 메시지와 함께 명령이 실패하는 새로운 유연 보유 정책을 설정할 때</span><span class="sxs-lookup"><span data-stu-id="195ef-918">Fixed issue with Set-AzureRmSqlDatabaseBackupLongTermRetentionPolicy when setting a new flexible retention policy where the command would fail with 'Configure long term retention policy with azure recovery service vault and policy is no longer supported.</span></span> <span data-ttu-id="195ef-919">Set-AzureRmSqlDatabaseBackupLongTermRetentionPolicy의 문제 수정</span><span class="sxs-lookup"><span data-stu-id="195ef-919">Please submit request with the new flexible retention policy'.</span></span>
-* <span data-ttu-id="195ef-920">Azure SQL Database/ElasticPool Creation/Update 관련 cmdlet을 모두 업데이트하여 규모 및 계층 관련 속성에 대한 SKU 속성을 지원하는 새 데이터베이스 API를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-920">Update all Azure Sql Database/ElasticPool Creation/Update related cmdlets to use the new Database API, which support Sku property for scale and tier-related properties.</span></span>
-* <span data-ttu-id="195ef-921">업데이트된 cmdlet는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-921">The updated cmdlets including:</span></span> 
-    - <span data-ttu-id="195ef-922">New-AzureRmSqlDatabase; Set-AzureRmSqlDatabase</span><span class="sxs-lookup"><span data-stu-id="195ef-922">New-AzureRmSqlDatabase; Set-AzureRmSqlDatabase</span></span>
-    - <span data-ttu-id="195ef-923">New-AzureRmSqlElasticPool; Set-AzureRmSqlElasticPool</span><span class="sxs-lookup"><span data-stu-id="195ef-923">New-AzureRmSqlElasticPool; Set-AzureRmSqlElasticPool</span></span>
-    - <span data-ttu-id="195ef-924">New-AzureRmSqlDatabaseCopy</span><span class="sxs-lookup"><span data-stu-id="195ef-924">New-AzureRmSqlDatabaseCopy</span></span>
-    - <span data-ttu-id="195ef-925">New-AzureRmSqlDatabaseSecondary</span><span class="sxs-lookup"><span data-stu-id="195ef-925">New-AzureRmSqlDatabaseSecondary</span></span>
-    - <span data-ttu-id="195ef-926">Restore-AzureRmSqlDatabase</span><span class="sxs-lookup"><span data-stu-id="195ef-926">Restore-AzureRmSqlDatabase</span></span>
+#### <a name="azurermsql"></a><span data-ttu-id="e709a-916">AzureRM.Sql</span><span class="sxs-lookup"><span data-stu-id="e709a-916">AzureRM.Sql</span></span>
+* <span data-ttu-id="e709a-917">AuditActions 또는 AuditActionGroups를 제거할 수 있도록 업데이트된 감사 cmdlet</span><span class="sxs-lookup"><span data-stu-id="e709a-917">Updated Auditing cmdlets to allow removing AuditActions or AuditActionGroups</span></span>
+* <span data-ttu-id="e709a-918">'Azure 복구 서비스 자격 증명 모음을 사용하여 장기 보존 정책을 구성하면 정책이 더 이상 지원되지 않습니다. 새로운 유연 보유 정책으로 요청을 제출하십시오.'라는 메시지와 함께 명령이 실패하는 새로운 유연 보유 정책을 설정할 때</span><span class="sxs-lookup"><span data-stu-id="e709a-918">Fixed issue with Set-AzureRmSqlDatabaseBackupLongTermRetentionPolicy when setting a new flexible retention policy where the command would fail with 'Configure long term retention policy with azure recovery service vault and policy is no longer supported.</span></span> <span data-ttu-id="e709a-919">Set-AzureRmSqlDatabaseBackupLongTermRetentionPolicy의 문제 수정</span><span class="sxs-lookup"><span data-stu-id="e709a-919">Please submit request with the new flexible retention policy'.</span></span>
+* <span data-ttu-id="e709a-920">Azure SQL Database/ElasticPool Creation/Update 관련 cmdlet을 모두 업데이트하여 규모 및 계층 관련 속성에 대한 SKU 속성을 지원하는 새 데이터베이스 API를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-920">Update all Azure Sql Database/ElasticPool Creation/Update related cmdlets to use the new Database API, which support Sku property for scale and tier-related properties.</span></span>
+* <span data-ttu-id="e709a-921">업데이트된 cmdlet는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-921">The updated cmdlets including:</span></span> 
+    - <span data-ttu-id="e709a-922">New-AzureRmSqlDatabase; Set-AzureRmSqlDatabase</span><span class="sxs-lookup"><span data-stu-id="e709a-922">New-AzureRmSqlDatabase; Set-AzureRmSqlDatabase</span></span>
+    - <span data-ttu-id="e709a-923">New-AzureRmSqlElasticPool; Set-AzureRmSqlElasticPool</span><span class="sxs-lookup"><span data-stu-id="e709a-923">New-AzureRmSqlElasticPool; Set-AzureRmSqlElasticPool</span></span>
+    - <span data-ttu-id="e709a-924">New-AzureRmSqlDatabaseCopy</span><span class="sxs-lookup"><span data-stu-id="e709a-924">New-AzureRmSqlDatabaseCopy</span></span>
+    - <span data-ttu-id="e709a-925">New-AzureRmSqlDatabaseSecondary</span><span class="sxs-lookup"><span data-stu-id="e709a-925">New-AzureRmSqlDatabaseSecondary</span></span>
+    - <span data-ttu-id="e709a-926">Restore-AzureRmSqlDatabase</span><span class="sxs-lookup"><span data-stu-id="e709a-926">Restore-AzureRmSqlDatabase</span></span>
 
-#### <a name="azurermtrafficmanager"></a><span data-ttu-id="195ef-927">AzureRM.TrafficManager</span><span class="sxs-lookup"><span data-stu-id="195ef-927">AzureRM.TrafficManager</span></span>
-* <span data-ttu-id="195ef-928">-Name 매개 변수를 사용할 때 -ResourceGroupName 매개 변수가 필요하도록 'Get-AzureRmTrafficManagerProfile'에 대한 매개 변수를 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="195ef-928">Update the parameters for 'Get-AzureRmTrafficManagerProfile' so that -ResourceGroupName parameter is required when using -Name parameter.</span></span>
+#### <a name="azurermtrafficmanager"></a><span data-ttu-id="e709a-927">AzureRM.TrafficManager</span><span class="sxs-lookup"><span data-stu-id="e709a-927">AzureRM.TrafficManager</span></span>
+* <span data-ttu-id="e709a-928">-Name 매개 변수를 사용할 때 -ResourceGroupName 매개 변수가 필요하도록 'Get-AzureRmTrafficManagerProfile'에 대한 매개 변수를 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="e709a-928">Update the parameters for 'Get-AzureRmTrafficManagerProfile' so that -ResourceGroupName parameter is required when using -Name parameter.</span></span>
