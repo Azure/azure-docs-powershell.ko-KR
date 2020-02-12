@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/22/2019
-ms.openlocfilehash: 88861b63846db04e901d2a216657307c456c48fe
-ms.sourcegitcommit: 9181f20c2c5eaa271150de9e25b9cb30ba5e6cb0
+ms.openlocfilehash: 66d755384e532d434811f3e6122dcba97d5c48b5
+ms.sourcegitcommit: 0654679cd4141add6d12c02fb8c689efcbad428d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77002931"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77154761"
 ---
 # <a name="install-the-azure-powershell-module"></a>Azure PowerShell 모듈 설치
 
