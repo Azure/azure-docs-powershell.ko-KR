@@ -721,6 +721,7 @@
     },
     "globalMetadata": {
       "apiPlatform": "powershell",
+      "bilingual_type": "hover over",
       "brand": "azure",
             "searchScope": ["Azure", "Azure Powershell"],
       "breadcrumb_path": "/powershell/bread/toc.json",
