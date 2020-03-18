@@ -5,7 +5,7 @@
   displayName: 'intro, introduction, azurerm'
 - name: 설치
   items:
-    - name: PowerShell Get을 사용하여 설치
+    - name: PowerShellGet으로 설치
       href: install-az-ps.md
     - name: MSI를 사용하여 설치
       href: install-az-ps-msi.md
@@ -24,6 +24,8 @@
   displayName: 'sign in, signin, log in, login, find, feedback, intro, introduction'
 - name: Cloud Shell
   href: 'https://docs.microsoft.com/azure/cloud-shell/overview'
+- name: Docker의 Azure PowerShell
+  href: azureps-in-docker.md
 - name: 로그인
   items:
     - name: 인증 방법
