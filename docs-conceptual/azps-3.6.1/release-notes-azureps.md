@@ -1,18 +1,15 @@
 ---
 title: Azure PowerShell 릴리스 정보
 description: Azure PowerShell 모듈의 모든 최신 업데이트에 대해 알아봅니다.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 01/09/2020
-ms.openlocfilehash: 4c7ea19a225d63307ecf4a6fe5ebfa14ccd78d7e
+ms.date: 03/10/2020
+ms.openlocfilehash: f24e5ef66f9c49976c550c9847903bd0608c5123
 ms.sourcegitcommit: f6fa6543be1e0f6330b1598f01528b2928cc426c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79036164"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79111035"
 ---
 # <a name="azure-powershell-release-notes"></a>Azure PowerShell 릴리스 정보
 
@@ -72,14 +69,14 @@ ms.locfileid: "79036164"
     - Remove-AzTag -ResourceId
 * 새 Tag cmdlet이 추가되었습니다.
     - Update-AzTag -ResourceId
-* SDK 3.3.0에서 ScopedDeployment를 가져왔습니다. 
+* SDK 3.3.0에서 ScopedDeployment를 가져왔습니다.
 
 #### <a name="azsql"></a>Az.Sql
 * PublicNetworkAccess가 'New-AzSqlServer' 및 'Set-AzSqlServer'에 추가되었습니다.
 * 관리형 데이터베이스에 대한 장기 보존 백업 구성에 대한 지원이 추가되었습니다.
-    - 관리형 데이터베이스에서 LTR 정책을 가져오거나 설정합니다. 
-    - 관리형 데이터베이스, 관리형 인스턴스 또는 위치를 기준으로 LTR 백업을 가져옵니다. 
-    - LTR 백업을 제거합니다. 
+    - 관리형 데이터베이스에서 LTR 정책을 가져오거나 설정합니다.
+    - 관리형 데이터베이스, 관리형 인스턴스 또는 위치를 기준으로 LTR 백업을 가져옵니다.
+    - LTR 백업을 제거합니다.
     - LTR 백업을 복원하여 새 관리형 데이터베이스를 만듭니다.
 * MinimalTlsVersion이 New-AzSqlServer 및 Set-AzSqlServer에 추가되었습니다.
 * MinimalTlsVersion을 New-AzSqlInstance 및 Set-AzSqlInstance에 추가되었습니다.
@@ -323,7 +320,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
 #### <a name="azstorage"></a>Az.Storage
 * 다음 릴리스에서 DefaultAction Value 변경에 대해 호환성이 손상되는 변경 경고 메시지 추가
     - Update-AzStorageAccountNetworkRuleSet
-* -IncludeGeoReplicationStats 매개 변수와 함께 get-AzureRMStorageAccount를 실행하여 스토리지 계정의 마지막 동기화 시간 가져오기 지원 
+* -IncludeGeoReplicationStats 매개 변수와 함께 get-AzureRMStorageAccount를 실행하여 스토리지 계정의 마지막 동기화 시간 가져오기 지원
     - Get-AzureRMStorageAccount
 
 ## <a name="320---december-2019"></a>3.2.0 - 2019년 12월
@@ -373,7 +370,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
 * 모든 Idenity SAS 토큰을 해지할 수 있도록 스토리지 계정 사용자 위임 키 해지 지원
     - Revoke-AzStorageAccountUserDelegationKeys
 * 새로운 API 버전 2019-06-01을 지원하기 위해 Microsoft.Azure.Management.Storage 14.2.0으로 업그레이드.
-* File Share cmdlet의 관리 평면에서 5120을 초과하는 값에 대해 QuotaGiB(Gibyby의 공유 할당량)를 지원하고 'Quota' 매개 변수 별칭을 'QuotaGiB' 매개 변수에 추가했습니다. 
+* File Share cmdlet의 관리 평면에서 5120을 초과하는 값에 대해 QuotaGiB(Gibyby의 공유 할당량)를 지원하고 'Quota' 매개 변수 별칭을 'QuotaGiB' 매개 변수에 추가했습니다.
     - New-AzRmStorageShare
     - Update-AzRmStorageShare
 * 매개 변수 'Quota'에 매개 변수 별칭 'QuotaGiB' 추가
@@ -491,7 +488,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
 * `PSCloudServiceConfiguration`에서 `TargetOSVersion`이 제거되었습니다.
 * `PSCloudServiceConfiguration`에서 `CurrentOSVersion` 이름이 `OSVersion`으로 변경되었습니다.
 * `PSPoolUsageMetrics`에서 `DataEgressGiB` 및 `DataIngressGiB`가 제거되었습니다.
-* **Get-AzBatchNodeAgentSku**가 제거되고 **Get-AzBatchSupportedImage**로 대체되었습니다. 
+* **Get-AzBatchNodeAgentSku**가 제거되고 **Get-AzBatchSupportedImage**로 대체되었습니다.
   - **Get-AzBatchSupportedImage**가 **Get-AzBatchNodeAgentSku**와 동일한 데이터를 반환하지만 더 친숙한 형식이 사용됩니다.
   - 이제 확인되지 않은 이미지도 새롭게 반환됩니다. 각 이미지의 `Capabilities` 및 `BatchSupportEndOfLife`에 대한 추가 정보도 포함됩니다.
 * **New-AzBatchPool**의 새로운 `MountConfiguration` 매개 변수를 통해 풀의 각 노드에서 원격 파일 시스템을 마운트할 수 있는 기능이 추가되었습니다.
@@ -508,8 +505,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
 #### <a name="azcompute"></a>Az.Compute
 * 디스크 암호화 집합 기능
     - 새 cmdlet:   New-AzDiskEncryptionSetConfig   New-AzDiskEncryptionSet   Get-AzDiskEncryptionSet   Remove-AzDiskEncryptionSet
-    - DiskEncryptionSetId 매개 변수가 다음 cmdlet에 추가되었습니다. Set-AzImageOSDisk Set-AzVMOSDisk Set-AzVmssStorageProfile        
-        Add-AzImageDataDisk New-AzVMDataDisk Set-AzVMDataDisk Add-AzVMDataDisk Add-AzVmssDataDisk Add-AzVmssVMDataDisk
+    - DiskEncryptionSetId 매개 변수가 다음 cmdlet에 추가되었습니다.   Set-AzImageOSDisk   Set-AzVMOSDisk   Set-AzVmssStorageProfile   Add-AzImageDataDisk   New-AzVMDataDisk   Set-AzVMDataDisk   Add-AzVMDataDisk   Add-AzVmssDataDisk   Add-AzVmssVMDataDisk
     - DiskEncryptionSetId 및 EncryptionType 매개 변수가 다음 cmdlet에 추가되었습니다.   New-AzDiskConfig   New-AzSnapshotConfig
 * New-AzVmssIPConfig에 PublicIPAddressVersion 매개 변수 추가
 * 사용자 지정 스크립트 확장의 FileUris를 공용 설정에서 보호된 설정으로 이동
@@ -660,7 +656,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
 * Get-AzSqlDatabaseRestorePoints(대신 Get-AzSqlDatabaseRestorePoint 사용)
 * Get-AzSqlDatabaseSecureConnectionPolicy cmdlet 제거
 * 사용되지 않는 취약성 평가 설정 cmdlet에 대한 별칭 제거
-* 지능형 위협 탐지 설정 cmdlet 사용 중단 
+* 지능형 위협 탐지 설정 cmdlet 사용 중단
 * 데이터베이스의 열에 대한 민감도 권장 사항의 사용 여부를 제어하는 cmdlet이 추가되었습니다.
 
 #### <a name="azstorage"></a>Az.Storage
@@ -670,7 +666,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
 * 파일 핸들을 닫거나/가져올 때, DeletePending 상태의 개체로 인한 오류를 방지하기 위해 입력 경로가 파일 디렉터리인지 또는 파일인지를 확인하는 과정을 건너뜁니다.
     -  Get-AzStorageFileHandle
     -  Close-AzStorageFileHandle
-    
+
 ## <a name="280---october-2019"></a>2.8.0 - 2019년 10월
 ### <a name="general"></a>일반
 * Az.HealthcareApis 1.0.0 릴리스
@@ -683,7 +679,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
     - 문제 https://github.com/Azure/azure-powershell/issues/10068 수정
 
 #### <a name="azautomation"></a>Az.Automation
-* Linux 다시 부팅 설정 매개 변수에 대한 New-AzureAutomationSoftwareUpdateConfiguration cmdlet이 수정되었습니다. 
+* Linux 다시 부팅 설정 매개 변수에 대한 New-AzureAutomationSoftwareUpdateConfiguration cmdlet이 수정되었습니다.
 
 #### <a name="azbatch"></a>Az.Batch
 * **Get-AzBatchNodeAgentSku**가 더 이상 사용되지 않으며, 2.0.0 버전의 **Get-AzBatchSupportImage**로 대체되었습니다.
@@ -691,7 +687,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
 #### <a name="azcompute"></a>Az.Compute
 * Priority, EvictionPolicy 및 MaxPrice 매개 변수가 New-AzVM 및 New-AzVmss cmdlet에 추가되었습니다.
 * Add-AzVMAdditionalUnattendContent 및 Add-AzVMSshPublicKey cmdlet에 대한 경고 메시지와 도움말 문서가 수정되었습니다.
-* Set-AzVMDiskEncryptionExtension의 관리 디스크가 있는 Linux VM에 대한 -skipVmBackup 예외가 해결되었습니다. 
+* Set-AzVMDiskEncryptionExtension의 관리 디스크가 있는 Linux VM에 대한 -skipVmBackup 예외가 해결되었습니다.
 * Set-AzVMDiskEncryptionExtension의 두 가지 패스 시나리오에서 발생하는 암호화 설정 업데이트의 버그가 수정되었습니다.
 
 #### <a name="azdatafactory"></a>Az.DataFactory
@@ -710,7 +706,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
 
 #### <a name="aziothub"></a>Az.IotHub
 * 새 라우팅 원본 추가: DigitalTwinChangeEvents
-* 사소한 버그 수정: Get-AzIothub에서 subscriptionId를 반환하지 않습니다. 
+* 사소한 버그 수정: Get-AzIothub에서 subscriptionId를 반환하지 않습니다.
 
 #### <a name="azmonitor"></a>Az.Monitor
 * 작업 그룹에 대한 새 작업 그룹 수신기로 -ItsmReceiver, -VoiceReceiver, -ArmRoleReceiver, -AzureFunctionReceiver, -LogicAppReceiver, -AutomationRunbookReceiver, -AzureAppPushReceiver가 추가되었습니다.
@@ -806,7 +802,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
 * 'Set-AzActionRule'의 범위 유형 결정 버그를 수정합니다.
 
 #### <a name="aznetwork"></a>Az.Network
-* 'New-AzApplicationGateway' 참조 설명서의 잘못된 예제가 수정되었습니다. 
+* 'New-AzApplicationGateway' 참조 설명서의 잘못된 예제가 수정되었습니다.
 * 'Get-AzNetworkWatcherPacketCapture' 참조 설명서에 패킷 캡처를 위한 모든 속성 검색과 관련된 메모가 추가되었습니다.
 * NIC를 올바르게 열거하도록 'Test-AzNetworkWatcherIPFlow' 참조 설명서의 예제가 수정되었습니다.
 * 추가 세부 정보가 있는 경우 추가 세부 정보를 표시하도록 클라우드 예외 구문 분석이 향상되었습니다.
@@ -942,7 +938,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
     - 서버 쪽에서 사용되지 않으므로 'PublicIpAddress' 매개 변수가 사용되지 않음
     - 현재 IP 구성이 기본 구성인지 여부를 나타내는 하나의 선택적 'Primary' 매개 변수가 추가됨
 * SDK의 요청 오류 예외 처리가 향상됨 - 이전의 SDK 예외가 올바르게 처리되지 않아 주요 오류 세부 정보가 표시되지 않은 문제가 해결됨
-* 올바른 IPv6 접두사 길이를 확인하기 위해 Ipv6 IP 접두사에 대한 유효성 검사 논리가 조정됨 
+* 올바른 IPv6 접두사 길이를 확인하기 위해 Ipv6 IP 접두사에 대한 유효성 검사 논리가 조정됨
 * Get-AzVirtualNetworkSubnetConfig가 업데이트됨: 서브넷 리소스 ID별로 가져오도록 설정되는 매개 변수 세트가 추가됨
 * AzNetworkServiceTag의 Location(위치) 매개 변수에 대한 설명이 업데이트됨
 
@@ -965,7 +961,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
 #### <a name="azservicebus"></a>Az.ServiceBus
 * #9658 문제 해결: Set-AzServiceBusNetworkRuleSet의 VirtualNetworkRule 매개 변수에 대한 오타
 * #9786 문제 해결: Listen(수신 대기) 전용 권한이 있는 규칙을 만들 수 없음
-* 큐 및 토픽에 대한 이름 가용성을 확인하는 새 'Test-AzServiceBusNameAvailability' 명령이 추가됨 
+* 큐 및 토픽에 대한 이름 가용성을 확인하는 새 'Test-AzServiceBusNameAvailability' 명령이 추가됨
 
 #### <a name="azservicefabric"></a>Az.ServiceFabric
 * 노드 유형 추가 cmdlet 버그 수정:
@@ -992,10 +988,10 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
 * ClientRuntime의 최신 버전을 사용하도록 일반적인 코드를 업데이트합니다.
 
 #### <a name="azapplicationinsights"></a>Az.ApplicationInsights
-* 'Remove-AzApplicationInsightsApiKey' 설명서의 예제 오타 수정 
+* 'Remove-AzApplicationInsightsApiKey' 설명서의 예제 오타 수정
 
 #### <a name="azautomation"></a>Az.Automation
-* 리소스 문자열의 오타 수정 
+* 리소스 문자열의 오타 수정
 
 #### <a name="azcognitiveservices"></a>Az.CognitiveServices
 * NetworkRuleSet 지원이 추가되었습니다.
@@ -1056,7 +1052,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
     - 업데이트된 New-AzApplicationGatewayProbeConfig: 백 엔드 서버 검색에 사용되는 선택적 매개 변수 포트가 추가되었습니다. 이 매개 변수는 Standard_V2 및 WAF_V2 SKU에 적용할 수 있습니다.
 
 #### <a name="azoperationalinsights"></a>Az.OperationalInsights
-* 저장된 검색의 기본 버전이 1로 업데이트되었습니다. 
+* 저장된 검색의 기본 버전이 1로 업데이트되었습니다.
 * 사용자 지정 로그 null regex 처리가 수정됨
 
 #### <a name="azrecoveryservices"></a>Az.RecoveryServices
@@ -1210,7 +1206,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
     - New-AzureRmEventGridDomainTopic:
         - 새 Azure Event Grid 도메인 토픽을 만듭니다.
     - Get-AzureRmEventGridDomainTopic
-        - Event Grid 도메인 토픽의 세부 사항을 가져오거나, 현재 Azure의 특정 Event Grid 도메인 아래의 모든 Event Grid 도메인 토픽 목록을 가져옵니다. 
+        - Event Grid 도메인 토픽의 세부 사항을 가져오거나, 현재 Azure의 특정 Event Grid 도메인 아래의 모든 Event Grid 도메인 토픽 목록을 가져옵니다.
     - Remove-AzureRmEventGridDomainTopic:
         - 기존 Azure Event Grid 도메인 토픽을 제거합니다.
 * 다음 Cmdlet이 업데이트 되었습니다.
@@ -1222,7 +1218,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
             - 이벤트 구독 만료 날짜,
             - 고급 필터링 매개 변수.
         - 대상으로 servicebusqueue에 대한 새 열거형을 추가합니다.
-        - -IncludedEventType 옵션에서 'All' 사용을 허용하지 않고 다음으로 대체함 
+        - -IncludedEventType 옵션에서 'All' 사용을 허용하지 않고 다음으로 대체함
     - Get-AzEventGridTopic, Get-AzEventGridDomain, Get-AzEventGridDomainTopic, Get-AzEventGridSubscription:
         - 결과 페이지 매김 및 필터링을 지원하는 새로운 선택적 매개 변수(Top, ODataQuery 및 NextLink)를 추가합니다.
     - Remove-AzureRmEventGridSubscription
@@ -1240,11 +1236,11 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
     - 새로운 cmdlet
         - Get-AzVirtualNetworkGatewayVpnClientConnectionHealth
 * AvailablePrivateEndpointType 추가
-    - 새로운 cmdlet 
+    - 새로운 cmdlet
         - Get-AzAvailablePrivateEndpointType
 * PrivatePrivateLinkService 추가
-    - 새로운 cmdlet 
-        - Get-AzPrivateLinkService 
+    - 새로운 cmdlet
+        - Get-AzPrivateLinkService
         - New-AzPrivateLinkService
         - Remove-AzPrivateLinkService
         - New-AzPrivateLinkServiceIpConfig
@@ -1273,8 +1269,8 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
         - 하나 이상의 공용 IP 주소 개체를 허용하는 매개 변수 -PublicIpAddress 추가됨
         - Virtual Network 개체를 허용하는 매개 변수 -VirtualNetwork 추가됨
         - 방화벽 개체에 AddPublicIpAddress 및 RemovePublicIpAddress 메서드 추가됨 - 공용 IP 주소 개체를 입력으로 허용
-        - 매개 변수 -PublicIpName 및 -VirtualNetworkName이 더 이상 사용되지 않음 
-* 기능에 대한 새로운 명령이 업데이트됨: VpnClient AAD 인증 옵션을 가상 네트워크 게이트웨이 리소스로 설정했습니다. 
+        - 매개 변수 -PublicIpName 및 -VirtualNetworkName이 더 이상 사용되지 않음
+* 기능에 대한 새로운 명령이 업데이트됨: VpnClient AAD 인증 옵션을 가상 네트워크 게이트웨이 리소스로 설정했습니다.
     - New-AzVirtualNetworkGateway가 업데이트됨: 게이트웨이에서 VpnClient AAD 인증 옵션을 설정할 수 있도록 선택적 매개 변수 AadTenantUri, AadAudienceId, AadIssuerUri가 추가되었습니다.
     - Set-AzVirtualNetworkGateway가 업데이트됨: 게이트웨이에서 VpnClient AAD 인증 옵션을 설정할 수 있도록 선택적 매개 변수 AadTenantUri, AadAudienceId, AadIssuerUri가 추가되었습니다.
     - Set-AzVirtualNetworkGateway가 업데이트됨: 게이트웨이에서 VpnClient AAD 인증 옵션을 제거할 수 있도록 선택적인 스위치 매개 변수 RemoveAadAuthentication이 추가되었습니다.
@@ -1369,17 +1365,17 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
     - **Get-AzApiManagementSchema** - API에 구성된 스키마 가져오기
     - **Remove-AzApiManagementSchema** - API에 구성된 스키마 제거
     - **Set-AzApiManagementSchema** - API에 구성된 스키마 업데이트
-* 사용자 토큰을 생성하기 위한 새 cmdlet을 만들었습니다. 
+* 사용자 토큰을 생성하기 위한 새 cmdlet을 만들었습니다.
     - **New-AzApiManagementUserToken** - 기본적으로 8시간 동안 유효한 새 사용자 토큰을 생성합니다. 'GIT' 사용자에 대한 토큰은 이 cmdlet을 사용하여 생성할 수 있습니다.
 * 네트워크 상태를 검색하기 위한 새 cmdlet을 만들었습니다.
     - **Get-AzApiManagementNetworkStatus** - API Management 서비스에서 사용하는 리소스의 네트워크 상태 연결을 가져옵니다. ApiManagement 서비스를 가상 네트워크에 배포하고 종속성이 손상되었는지 여부를 확인할 때 유용합니다.
-* **New-AzApiManagement** cmdlet에서 ApiManagement 서비스를 관리하도록 업데이트했습니다. 
+* **New-AzApiManagement** cmdlet에서 ApiManagement 서비스를 관리하도록 업데이트했습니다.
     - 새 '소비' SKU 지원이 추가됨
     - '소비' SKU에 대해 'EnableClientCertificate' 플래그를 설정하기 위한 지원이 추가됨
     - 새 **New-AzApiManagementSslSetting** cmdlet을 사용하면 'Backend(백 엔드)' 및 'Frontend'(프런트 엔드)에서 'TLS/SSL' 설정을 구성할 수 있습니다. 또한 ApiManagement 서비스의 'Frontend'에서 '3DES'와 같은 'Ciphers'와 'Http2'와 같은 'ServerProtocols'를 구성하는 데 사용할 수 있습니다.
     - ApiManagement 서비스에서 'DeveloperPortal' 호스트 이름을 구성하기 위한 지원이 추가됨
 * **Get-AzApiManagementSsoToken** cmdlet에서 'PsApiManagement' 개체를 입력으로 사용하도록 업데이트했습니다.
-* cmdlet에서 오류 메시지를 인라인으로 표시하도록 업데이트했습니다. 
+* cmdlet에서 오류 메시지를 인라인으로 표시하도록 업데이트했습니다.
      > PS D:\github\azure-powershell> Set-AzApiManagementPolicy -Context  -PolicyFilePath C:\wrongpolicy.xml -ApiId httpbin Set-AzApiManagementPolicy : 오류 코드: ValidationError 오류 메시지: 하나 이상의 필드에 잘못된 값이 있습니다. 오류 세부 정보:    [Code=ValidationError, Message=줄 3, 열 10의 'log-to-eventhub' 요소에 오류가 있습니다.: 로거를 찾지 못함, Target=log-to-eventhub]
 * **Export-AzApiManagementApi** cmdlet에서 API를 'OpenApi 3.0' 형식으로 내보내도록 업데이트했습니다.
 * **Import-AzApiManagementApi** cmdlet을 업데이트했습니다.
@@ -1388,15 +1384,15 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
     - 문서에 지정된 'ServiceUrl' 속성 재정의
 * **Get-AzApiManagementPolicy** cmdlet에서 'rawxml'을 사용하여 이스케이프된 비 Xml 'format'(형식)의 정책을 반환하도록 업데이트했습니다.
 * **Set-AzApiManagementPolicy** cmdlet에서 'rawxml'을 사용하여 이스케이프된 비 Xml 'format'의 정책을 수락하고, 'xml'을 사용하여 이스케이프된 Xml 'format'의 정책을 수락하도록 업데이트했습니다.
-* **New-AzApiManagementApi** cmdlet을 업데이트했습니다. 
+* **New-AzApiManagementApi** cmdlet을 업데이트했습니다.
     - 'OpenId' 권한 부여 서버를 사용하여 API 구성
     - 'ApiVersionSet'에서 API 만들기
     - 'SourceApiId' 및 'SourceApiRevision'을 사용하여 API 복제
-    - API 범위에서 'SubscriptionRequired' 구성 가능 
+    - API 범위에서 'SubscriptionRequired' 구성 가능
 * **Set-AzApiManagementApi** cmdlet을 업데이트했습니다.
     - 'OpenId' 권한 부여 서버를 사용하여 API 구성
-    - API를 'ApiVersionSet'으로 업데이트    
-    - API 범위에서 'SubscriptionRequired' 구성 가능 
+    - API를 'ApiVersionSet'으로 업데이트
+    - API 범위에서 'SubscriptionRequired' 구성 가능
 * **New-AzApiManagementRevision** cmdlet을 업데이트했습니다.
     - 'SourceApiRevision'을 사용하여 기존 수정 버전 복제(태그, 제품, 작업 및 정책 복사). 새 수정 버전은 부모의 'ApiId'를 가정합니다.
     - 'ApiRevisionDescription' 제공
@@ -1422,7 +1418,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
     - 'Get-AzApiManagementAuthorizationServer'
     - 'Get-AzApiManagementBackend'
         > Get-AzApiManagementBackend -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso/backends/servicefabric
-    - 'Get-AzApiManagementCertificate' 
+    - 'Get-AzApiManagementCertificate'
     - 'Remove-AzApiManagementApiVersionSet'
     - 'Remove-AzApiManagementSubscription'
 
@@ -1470,7 +1466,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
     - 새 매개 변수 ProximityPlacementGroupId가 다음 cmdlet에 추가됩니다.   New-AzAvailabilitySet   New-AzVMConfig   New-AzVmssConfig
 * New-AzGalleryImageVersion에 StorageAccountType 매개 변수가 추가됩니다.
 * New-AzGalleryImageVersion의 TargetRegion이 StorageAccountType를 포함할 수 있습니다.
-* SkipShutdown 스위치 매개 변수가 Stop-AzVM 및 Stop-AzVmss에 추가되었습니다.       
+* SkipShutdown 스위치 매개 변수가 Stop-AzVM 및 Stop-AzVmss에 추가되었습니다.
 * 주요 변경 내용
     - Set-AzVMBootDiagnostics이 Set-AzVMBootDiagnostic으로 변경됩니다.
     - Export-AzLogAnalyticThrottledRequests이 Export-AzLogAnalyticThrottledRequests로 변경되었습니다.
@@ -1505,7 +1501,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
     - Hdinsight 운영자 역할을 가진 사용자를 영향을 받지 않습니다.
 
 #### <a name="azmonitor"></a>Az.Monitor
-* SQR API(예약 쿼리 규칙)용 새 cmdlet  
+* SQR API(예약 쿼리 규칙)용 새 cmdlet
     - New-AzScheduledQueryRuleAlertingAction
     - New-AzScheduledQueryRuleAznsActionGroup
     - New-AzScheduledQueryRuleLogMetricTrigger
@@ -1603,7 +1599,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
 * 이벤트 구독 cmdlet 만들기/업데이트를 사용하기 전에 리소스를 만들어야 함을 나타내기 위해 엔드포인트의 도움말 텍스트가 업데이트되었습니다.
 
 #### <a name="azeventhub"></a>Az.EventHub
-* 네임스페이스의 NetworkRuleSet에 대한 새 cmdlet가 추가되었습니다 
+* 네임스페이스의 NetworkRuleSet에 대한 새 cmdlet가 추가되었습니다
 
 #### <a name="azhdinsight"></a>Az.HDInsight
 * 복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.
@@ -1693,7 +1689,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
 
 #### <a name="azcompute"></a>Az.Compute
 * New-AzDiskConfig 및 New-AzSnapshotConfig에 HyperVGeneration 매개 변수 추가
-* 다른 테넌트의 갤러리 이미지를 사용하여 VM을 만들 수 있음 
+* 다른 테넌트의 갤러리 이미지를 사용하여 VM을 만들 수 있음
 
 #### <a name="azcontainerinstance"></a>Az.ContainerInstance
 * 후행 빈 인수를 추가한 New-AzContainerGroup의 -Command 매개 변수의 문제 수정
@@ -1775,7 +1771,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
     - New-AzStorageAccountManagementPolicyRule
 
 #### <a name="azwebsites"></a>Az.Websites
-* 'New-AzWebApp -IncludeSourceWebAppSlots'를 사용하여 모든 슬롯의 복제를 중단하는 ARM 템플릿 버그가 수정되었습니다. 
+* 'New-AzWebApp -IncludeSourceWebAppSlots'를 사용하여 모든 슬롯의 복제를 중단하는 ARM 템플릿 버그가 수정되었습니다.
 
 ## <a name="150---march-2019"></a>1.5.0 - 2019년 3월
 #### <a name="azaccounts"></a>Az.Accounts
@@ -1844,7 +1840,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
 * ADL 삭제된 항목 열거 및 복원에 대한 cmdlet 추가
 
 #### <a name="azeventhub"></a>Az.EventHub
-* Eventhub의 CaptureDescription 클래스에서 빈 보관을 건너뛰는 새 부울 속성 SkipEmptyArchives가 추가되었습니다. 
+* Eventhub의 CaptureDescription 클래스에서 빈 보관을 건너뛰는 새 부울 속성 SkipEmptyArchives가 추가되었습니다.
 
 #### <a name="azkeyvault"></a>Az.KeyVault
 * Set-AzKeyVaultSecret 태그 지정 수정
@@ -1872,8 +1868,8 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
 
 #### <a name="azoperationalinsights"></a>Az.OperationalInsights
 * New 및 Get ApplicationInsights 데이터 소스에 대한 지원 추가
-    - 지정된 작업 영역에 대한 특정 또는 전체 ApplicationInsights 데이터 원본 가져오기를 지원하기 위한 새로운 'ApplicationInsights' 종류가 추가되었습니다. 
-    - 지정된 Application-Insights 리소스 매개 변수(구독 ID, resourceGroupName 및 이름)별로 데이터 원본을 만들기 위한 New-AzOperationalInsightsApplicationInsightsDataSource cmdlet이 추가되었습니다. 
+    - 지정된 작업 영역에 대한 특정 또는 전체 ApplicationInsights 데이터 원본 가져오기를 지원하기 위한 새로운 'ApplicationInsights' 종류가 추가되었습니다.
+    - 지정된 Application-Insights 리소스 매개 변수(구독 ID, resourceGroupName 및 이름)별로 데이터 원본을 만들기 위한 New-AzOperationalInsightsApplicationInsightsDataSource cmdlet이 추가되었습니다.
 
 #### <a name="azresources"></a>Az.Resources
 * 문제 https://github.com/Azure/azure-powershell/issues/8166 수정
@@ -1904,9 +1900,9 @@ Az.AnalysisServices 모듈의 전반적인 가용성.
 Az.RecoveryServices 모듈의 전반적인 가용성.
 
 #### <a name="azresources"></a>Az.Resources
-* 리소스 그룹 관련 태그 수정 
+* 리소스 그룹 관련 태그 수정
     - 자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/8166 를 참조하세요.
-* `Get-AzureRmRoleAssignment`이(가) -ErrorAction을 준수하지 않는 문제 수정 
+* `Get-AzureRmRoleAssignment`이(가) -ErrorAction을 준수하지 않는 문제 수정
     - 자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/8235 를 참조하세요.
 
 #### <a name="azsql"></a>Az.Sql
@@ -2211,7 +2207,7 @@ Application Gateway에서 RewriteRuleSets를 구성하는 것에 대한 지원�
 
 ### <a name="azwebsites"></a>Az.Websites
 
-* Set-AzureRmWebApp 및 Set-AzureRmWebAppSlot 
+* Set-AzureRmWebApp 및 Set-AzureRmWebAppSlot
     - Windows 및 Linux 컨테이너 응용 프로그램에 탑재할 Azure Storage 경로를 지정하기 위해 새 매개 변수(-AzureStoragePath)가 추가되었습니다. 새 cmdlet New-AzureRmWebAppAzureStoragePath의 출력을 매개 변수로 사용하여 Azure Storage 경로를 설정합니다.
 
 ## <a name="061---november-2018"></a>0.6.1 - 2018년 11월
@@ -2239,7 +2235,7 @@ Application Gateway에서 RewriteRuleSets를 구성하는 것에 대한 지원�
 ### <a name="aznetwork"></a>Az.Network
 * New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError cmdlet 추가
 * 지원되는 AzureFirewall 네트워크 프로토콜에 ICMP 다시 추가
-* Test-AzureRmNetworkWatcherConnectivity cmdlet을 업데이트하여 대상 ID, 주소 및 포트 유효성 검사를 추가합니다. 
+* Test-AzureRmNetworkWatcherConnectivity cmdlet을 업데이트하여 대상 ID, 주소 및 포트 유효성 검사를 추가합니다.
 * VirtualNetwork 맵의 메모리 사용 문제 해결
 
 ### <a name="azrecoveryservicesbackup"></a>Az.RecoveryServices.Backup
@@ -2371,7 +2367,7 @@ Application Gateway에서 RewriteRuleSets를 구성하는 것에 대한 지원�
     - Start-AzureStorageFileCopy
 * 특정 위치의 스토리지 리소스 사용을 지원하고 글로벌 스토리지 리소스 사용 가져오기는 더 이상 사용되지 않는다는 경고 메시지를 추가합니다.
     - Get-AzStorageUsage
-    
+
 #### <a name="azcognitiveservices"></a>Az.CognitiveServices
 * 기존 계정이 없는 Get-AzCognitiveServicesAccountSkus를 지원합니다.
 
