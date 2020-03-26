@@ -3,13 +3,13 @@ title: Docker에서 Azure PowerShell 사용
 description: Docker 이미지에 미리 설치된 Azure PowerShell을 사용하는 방법입니다.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/10/2020
-ms.openlocfilehash: a5746b71cfc41f7c6283b0e95b0940ca4b594ec7
-ms.sourcegitcommit: fb95591c45bb5f12b98e0690938d18f2ec611897
+ms.date: 03/20/2020
+ms.openlocfilehash: b5ad201abcabbdc1a88db241b028d88f05054a14
+ms.sourcegitcommit: 104c90600e0c5eeb841b5a596ba7ebe60cc7f4fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79402683"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79990528"
 ---
 # <a name="using-azure-powershell-in-docker"></a>Docker에서 Azure PowerShell 사용
 
@@ -19,13 +19,13 @@ Azure PowerShell이 미리 설치된 Docker 이미지를 게시하고 있습니�
 
 릴리스된 이미지에는 Docker 17.05 이상 버전이 필요합니다. 또한 `sudo` 또는 로컬 관리자 권한 없이 Docker를 실행할 수 있어야 합니다. Docker의 공식 [지침][install]에 따라 `docker`를 올바르게 설치하세요.
 
-릴리스된 컨테이너는 공식 PowerShell 컨테이너에서 빌드된 다음, Az 모듈이 계층으로 추가됩니다.
+최신 컨테이너 이미지에는 최신 버전의 PowerShell과 Az 모듈에서 지원되는 최신 Azure PowerShell 모듈이 포함되어 있습니다.
 
-안정적인 최신 이미지에 포함된 항목은 다음과 같습니다.
+Az 모듈이 새로 릴리스될 때마다 다음 운영 체제에 대한 이미지가 릴리스됩니다.
 
-- Ubuntu 18.04
-- PowerShell 버전 6.2.4
-- Azure PowerShell 최신 Az 모듈
+- Ubuntu 18.04(기본값)
+- Debian 9
+- CentOs 7
 
 사용 가능한 이미지의 전체 목록은 [Docker 이미지][az image] 페이지에서 찾을 수 있습니다.
 
@@ -44,6 +44,8 @@ Azure PowerShell이 미리 설치된 Docker 이미지를 게시하고 있습니�
    ```console
    docker run -it mcr.microsoft.com/azure-powershell pwsh
    ```
+
+Windows Docker 호스트의 경우 Windows의 로컬 드라이브를 Linux 컨테이너와 공유할 수 있도록 Docker 파일 공유를 활성화해야 합니다. 자세한 내용은 [Windows용 Docker 시작][file-sharing]을 참조하세요.
 
 ### <a name="run-the-azure-powershell-container-interactively-using-host-authentication"></a>호스트 인증을 사용하여 azure-powershell 컨테이너를 대화형으로 실행
 
@@ -71,3 +73,4 @@ Azure PowerShell 모듈 및 모듈의 기능에 대해 자세히 알아보려면
 [install]: https://docs.docker.com/engine/installation/
 [powershell image]: https://hub.docker.com/_/microsoft-powershell
 [az image]: https://hub.docker.com/_/microsoft-azure-powershell
+[file-sharing]: https://docs.docker.com/docker-for-windows/#file-sharing
