@@ -4,14 +4,19 @@ description: Azure PowerShell 모듈의 모든 최신 업데이트에 대해 알
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/10/2020
-ms.openlocfilehash: bee24af99da4b36e89cff9852c77214e2e09a542
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: a9c5394a5fac8a8a3de96925b3563776783ea9fe
+ms.sourcegitcommit: de813e8a4e3629a6fee6e87a0208c1f0362a16ca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81740544"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080201"
 ---
+# <a name="azure-powershell-release-notes"></a>Azure PowerShell 릴리스 정보
+
 ## <a name="380---april-2020"></a>3.8.0 - 2020년 4월
+### <a name="highlights-since-the-last-release"></a>마지막 릴리스 이후의 주요 사항
+* Az.Storage에서 지원하는 PowerShell 버전: Windows PowerShell 5.1, PowerShell Core 6.2.4 이상, PowerShell 7
+
 #### <a name="azaccounts"></a>Az.Accounts
 * 'Resolve-AzError'에서 Azure PowerShell 설문 조사 URL이 업데이트되었습니다. [#11507]
 
@@ -23,7 +28,7 @@ ms.locfileid: "81740544"
 * ChinaCDN 관련 가격 책정 SKU 표시가 수정되었습니다.
 
 #### <a name="azcognitiveservices"></a>Az.CognitiveServices
-* Identity, Encryption, UserOwnedStorage가 지원됩니다. 
+* Identity, Encryption, UserOwnedStorage가 지원됩니다.
 
 #### <a name="azcompute"></a>Az.Compute
 * 'Set-AzVmssOrchestrationServiceState' cmdlet이 추가되었습니다.
@@ -97,7 +102,7 @@ ms.locfileid: "81740544"
 * 스토리지 계정 생성/업데이트 시 새로운 SkuName StandardGZRS, StandardRAGZRS가 지원됩니다.
     - 'New-AzStorageAccount'
     - 'Set-AzStorageAccount'
-* DataLake Gen2가 지원됩니다. 
+* DataLake Gen2가 지원됩니다.
     - 'New-AzDataLakeGen2Item'
     - 'Get-AzDataLakeGen2Item'
     - 'Get-AzDataLakeGen2ChildItem'
@@ -107,13 +112,31 @@ ms.locfileid: "81740544"
     - 'Get-AzDataLakeGen2ItemContent'
     - 'Remove-AzDataLakeGen2Item'
 
-# <a name="azure-powershell-release-notes"></a>Azure PowerShell 릴리스 정보
+## <a name="0100-preview---april-2020"></a>0.10.0-preview - 2020년 4월
+### <a name="general"></a>일반
+* 이제 Az 모듈이 Azure Stack Hub에서 미리 보기로 제공됩니다. 따라서 Linux 및 macOS와의 플랫폼 간 호환성이 지원됩니다. Azure Stack Hub는 이제 Az 모듈을 사용하여 PowerShell Core를 지원합니다. 자세한 내용은 [여기](https://aka.ms/az4AzureStack)를 참조하세요.
+* Az 모듈은 2019-03-01-hybrid 프로필을 지원합니다.
+  - Az.Billing
+  - Az.Compute
+  - Az.DataBoxEdge
+  - Az.EventHub
+  - Az.IotHub
+  - Az.KeyVault
+  - Az.Monitor
+  - Az.Network
+  - Az.Resources
+  - Az.Storage
+  - Az.Websites
+* Azure Stack Hub와 함께 작동하는 az용 새 PowerShell 모듈 3개(Az.Databox, Az.IotHub 및 Az.EventHub)가 도입되었습니다.
+* AzureRM을 Az로 변경하는 것과 같은 사소한 변경을 수행하면 명령이 비교적 동일하게 유지됩니다.
+* Azure Stack Hub에 대한 PowerShell 설명서의 업데이트된 링크는 [여기](https://aka.ms/InstallASHPowerShell)에서 찾을 수 있습니다.
+
 ## <a name="370---march-2020"></a>3.7.0 - 2020년 3월
 #### <a name="azaccounts"></a>Az.Accounts
 * 로그인하지 않을 때 'Get-AzTenant'/'Get-AzDefault'/'Set-AzDefault'에서 NullReferenceException이 발생하는 문제가 해결되었습니다. [# 10292]
 
 #### <a name="azcompute"></a>Az.Compute
-* 'New-AzDiskConfig' cmdlet에 다음 매개 변수를 추가했습니다. 
+* 'New-AzDiskConfig' cmdlet에 다음 매개 변수를 추가했습니다.
     - DiskIOPSReadOnly, DiskMBpsReadOnly, MaxSharesCount, GalleryImageReference
 * 암호화 속성이 'New-AzGalleryImageVersion'cmdlet의 대상 매개 변수에 허용되었습니다.
 * 'Set-AzVmss'-Reimage 및 'Invoke-AzVMReimage'cmdlet에 대한 tempDisk 이슈가 해결되었습니다. [#11354]
