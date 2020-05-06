@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/05/2017
 ms.openlocfilehash: 7867adeac41444c81c31b7ee44b910ab40d873f8
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "65534753"
 ---
 # <a name="using-experimental-azure-powershell-modules"></a>실험적 Azure PowerShell 모듈 사용
@@ -32,11 +32,11 @@ Azure PowerShell 팀은 Azure의 개발자 도구(특히 CLI)에 중점을 두�
 
 실험적 모듈은 기존 Azure PowerShell 모듈과 마찬가지로 PowerShell 갤러리에 게시됩니다. 실험적 모듈 목록을 보려면 다음 명령을 실행하십시오.
 
-```azurepowershell-interactive
+```powershell-interactive
 Find-Module AzureRM.*.Experiments
 ```
 
-```output
+```Output
 Version Name                         Repository Description
 ------- ----                         ---------- -----------
 1.0.25  AzureRM.Compute.Experiments  PSGallery  Azure Compute experiments for VM creation
@@ -45,7 +45,7 @@ Version Name                         Repository Description
 
 실험적 모듈을 설치하려면 관리자 권한 PowerShell 세션에서 다음 명령을 사용합니다.
 
-```azurepowershell-interactive
+```powershell-interactive
 Install-Module AzureRM.Compute.Experiments
 Install-Module AzureRM.Websites.Experiments
 ```
@@ -69,7 +69,7 @@ Azure CLI 2.0은 최종 사용자가 더 쉽게 시나리오를 “시작”할 
 
 - 더 짧은 이름 - cmdlet의 이름(예: `New-AzureRmVM` => `New-AzVm`) 및 매개 변수 이름(예: `-ResourceGroupName` => `-Rg`)를 포함합니다. “이전” cmdlet과의 호환성에 대한 별칭을 사용합니다. _이전 버전과 호환되는_ 매개 변수 집합을 제공합니다.
 
-- 스마트한 기본값 - 스마트한 기본값을 만들어 “필요한” 정보를 채웁니다. 예:
+- 스마트한 기본값 - 스마트한 기본값을 만들어 “필요한” 정보를 채웁니다. 다음은 그 예입니다. 
   - 리소스 그룹
   - 위치
   - 종속 리소스

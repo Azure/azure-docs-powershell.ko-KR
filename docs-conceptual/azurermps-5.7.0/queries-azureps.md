@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/08/2018
 ms.openlocfilehash: dae1db158f940587d81a3fe47dfad8524f136d56
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "65534661"
 ---
 # <a name="query-output-of-azure-powershell-cmdlets"></a>Azure PowerShell cmdlet 쿼리 결과

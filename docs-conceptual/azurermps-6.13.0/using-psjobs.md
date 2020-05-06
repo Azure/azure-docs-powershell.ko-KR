@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/11/2018
 ms.openlocfilehash: beb7f0a89d2e254b348b79daf4f8d3bfdc562de5
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "65534203"
 ---
 # <a name="running-cmdlets-in-parallel-using-powershell-jobs"></a>PowerShell 작업을 사용하여 병렬로 cmdlet 실행
@@ -69,7 +69,7 @@ MyVm                 MyVm   eastus Standard_DS1_v2 Windows    MyVm          Crea
 
 > [!NOTE]
 > `Receive-Job`은 `-AsJob` 플래그가 없는 것처럼 cmdlet으로부터 결과를 반환합니다.
-> 예를 들어 `Do-Action -AsJob`의 `Receive-Job` 결과는 `Do-Action`의 결과와 같은 형식입니다.
+> 예를 들어 `Receive-Job`의 `Do-Action -AsJob` 결과는 `Do-Action`의 결과와 같은 형식입니다.
 
 ```azurepowershell-interactive
 $vm = Receive-Job $job

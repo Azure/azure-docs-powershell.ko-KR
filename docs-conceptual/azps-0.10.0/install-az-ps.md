@@ -5,10 +5,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 02/26/2020
 ms.openlocfilehash: 7a25270566f5e856ee44c4c191a47a3e7334508b
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81445699"
 ---
 # <a name="install-azure-powershell"></a>Azure Powershell 설치
@@ -146,7 +146,7 @@ Azure PowerShell의 버전을 제거하려면 [Azure PowerShell 모듈 제거](u
 
 모듈 버전이 두 개 이상인 경우 모듈 자동 로드 및 `Import-Module`이 기본적으로 최신 버전을 로드합니다.
 
-`-RequiredVersion` 매개 변수를 사용하여 특정 버전의 `Az` 모듈을 설치하거나 로드할 수 있습니다.
+`Az` 매개 변수를 사용하여 특정 버전의 `-RequiredVersion` 모듈을 설치하거나 로드할 수 있습니다.
 
 ```powershell-interactive
 # Install Az version 3.6.1

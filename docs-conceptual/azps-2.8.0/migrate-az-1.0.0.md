@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2019
 ms.openlocfilehash: e5121d61b0f5f68ff3e1f33d774e3533adfeb64f
-ms.sourcegitcommit: f9445d1525eac8c165637e1a80fbc92b1ab005c2
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/16/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "75035781"
 ---
 # <a name="breaking-changes-for-az-100"></a>Az 1.0.0의 호환성이 손상되는 변경
@@ -58,7 +58,7 @@ ms.locfileid: "75035781"
 
 ### <a name="cmdlet-noun-prefix-changes"></a>Cmdlet 명사 접두사 변경
 
-AzureRM 모듈에서 cmdlet은 `AzureRM` 또는 `Azure`를 명사 접두사로 사용했습니다.  Az는 cmdlet 이름을 간소화하고 정규화하여 모든 cmdlet에서 'Az'를 해당 cmdlet 명사 접두사로 사용합니다. 다음은 그 예입니다.
+AzureRM 모듈에서 cmdlet은 `AzureRM` 또는 `Azure`를 명사 접두사로 사용했습니다.  Az는 cmdlet 이름을 간소화하고 정규화하여 모든 cmdlet에서 'Az'를 해당 cmdlet 명사 접두사로 사용합니다. 다음은 그 예입니다. 
 
 ```azurepowershell-interactive
 Get-AzureRMVM
@@ -72,7 +72,7 @@ Get-AzVM
 Get-AzKeyVaultSecret
 ```
 
-이러한 새 cmdlet 이름으로 더 간단하게 전환할 수 있도록 Az에서 [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias) 및 [Disable-AzureRmAlias](/powershell/module/az.accounts/disable-azurermalias)라는 두 개의 새 cmdlet을 도입했습니다.  `Enable-AzureRmAlias`는 최신 Az cmdlet 이름에 매핑되는 AzureRM의 이전 cmdlet 이름에 대한 별칭을 에 만듭니다. `Enable-AzureRmAlias`에서 `-Scope` 인수를 사용하면 별칭을 사용하도록 설정되는 위치를 선택할 수 있습니다.
+이러한 새 cmdlet 이름으로 더 간단하게 전환할 수 있도록 Az에서 [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias) 및 [Disable-AzureRmAlias](/powershell/module/az.accounts/disable-azurermalias)라는 두 개의 새 cmdlet을 도입했습니다.  `Enable-AzureRmAlias`는 최신 Az cmdlet 이름에 매핑되는 AzureRM의 이전 cmdlet 이름에 대한 별칭을 에 만듭니다. `-Scope`에서 `Enable-AzureRmAlias` 인수를 사용하면 별칭을 사용하도록 설정되는 위치를 선택할 수 있습니다.
 
 예를 들어, AzureRM의 다음 스크립트가 있습니다.
 
@@ -125,7 +125,7 @@ Get-AzureRmStorageAccount | Get-AzureStorageContainer | Get-AzureStorageBlob
 
 #### <a name="migrating-requires-and-import-module-statements"></a>#Requires 및 Import-Module 문 마이그레이션
 
-`#Requires` 또는 `Import-Module`을 사용하여 AzureRM 모듈에 대한 종속성을 선언하는 스크립트는 새 모듈 이름을 사용하도록 업데이트해야 합니다. 예:
+`#Requires` 또는 `Import-Module`을 사용하여 AzureRM 모듈에 대한 종속성을 선언하는 스크립트는 새 모듈 이름을 사용하도록 업데이트해야 합니다. 다음은 그 예입니다. 
 
 ```azurepowershell-interactive
 #Requires -Module AzureRM.Compute
@@ -212,7 +212,7 @@ Windows용 PowerShell 5.1에서 Az를 사용하려면 .NET Framework 4.7.2를 �
   - Import-AzureRmApiManagementHostnameCertificate
   - 대신 **Set-AzApiManagement**를 사용하여 이러한 속성을 설정합니다.
 - 다음 속성이 제거되었습니다.
-  - `PsApiManagementContext`에서 `PsApiManagementHostnameConfiguration` 형식의 `PortalHostnameConfiguration`, `ProxyHostnameConfiguration`, `ManagementHostnameConfiguration`, `ScmHostnameConfiguration` 속성을 제거했습니다. 대신 `PsApiManagementCustomHostNameConfiguration` 형식의 `PortalCustomHostnameConfiguration`, `ProxyCustomHostnameConfiguration`, `ManagementCustomHostnameConfiguration`, `ScmCustomHostnameConfiguration`을 사용합니다.
+  - `PortalHostnameConfiguration`에서 `ProxyHostnameConfiguration` 형식의 `ManagementHostnameConfiguration`, `ScmHostnameConfiguration`, `PsApiManagementHostnameConfiguration`, `PsApiManagementContext` 속성을 제거했습니다. 대신 `PortalCustomHostnameConfiguration` 형식의 `ProxyCustomHostnameConfiguration`, `ManagementCustomHostnameConfiguration`, `ScmCustomHostnameConfiguration`, `PsApiManagementCustomHostNameConfiguration`을 사용합니다.
   - PsApiManagementContext에서 `StaticIPs`속성을 제거했습니다. 해당 속성은 `PublicIPAddresses`, `PrivateIPAddresses`로 분할되었습니다.
   - 필수 속성 `Location`을 New-AzureApiManagementVirtualNetwork cmdlet에서 제거했습니다.
 
@@ -222,21 +222,21 @@ Windows용 PowerShell 5.1에서 Az를 사용하려면 .NET Framework 4.7.2를 �
 
 ### <a name="azcognitiveservices-previously-azurermcognitiveservices"></a>Az.CognitiveServices(이전에는 AzureRM.CognitiveServices)
 
-- `Get-AzCognitiveServicesAccountSkus` cmdlet에서 `GetSkusWithAccountParamSetName` 매개 변수 집합을 제거했습니다.  ResourceGroupName 및 계정 이름을 사용하는 대신 계정 형식 및 위치별로 SKU를 가져와야 합니다.
+- `GetSkusWithAccountParamSetName` cmdlet에서 `Get-AzCognitiveServicesAccountSkus` 매개 변수 집합을 제거했습니다.  ResourceGroupName 및 계정 이름을 사용하는 대신 계정 형식 및 위치별로 SKU를 가져와야 합니다.
 
 ### <a name="azcompute-previously-azurermcompute"></a>Az.Compute(이전에는 AzureRM.Compute)
 
-- `PSVirtualMachine` 및 `PSVirtualMachineScaleSet` 객체의 `Identity` 속성에서 `IdentityIds`가 제거되었습니다. 스크립트는 더 이상 이 필드의 값을 사용하여 처리 결정을 내려서는 안됩니다.
-- `PSVirtualMachineScaleSetVM` 개체의 `InstanceView` 속성의 형식이 `VirtualMachineInstanceView`에서 `VirtualMachineScaleSetVMInstanceView`로 변경되었습니다.
-- `UpgradePolicy` 속성에서 `AutoOSUpgradePolicy` 및 `AutomaticOSUpgrade` 속성이 제거되었습니다.
-- `PSSnapshotUpdate` 개체의 `Sku` 속성의 형식이 `DiskSku`에서 `SnapshotSku`로 변경되었습니다.
+- `IdentityIds` 및 `Identity` 객체의 `PSVirtualMachine` 속성에서 `PSVirtualMachineScaleSet`가 제거되었습니다. 스크립트는 더 이상 이 필드의 값을 사용하여 처리 결정을 내려서는 안됩니다.
+- `InstanceView` 개체의 `PSVirtualMachineScaleSetVM` 속성의 형식이 `VirtualMachineInstanceView`에서 `VirtualMachineScaleSetVMInstanceView`로 변경되었습니다.
+- `AutoOSUpgradePolicy` 속성에서 `AutomaticOSUpgrade` 및 `UpgradePolicy` 속성이 제거되었습니다.
+- `Sku` 개체의 `PSSnapshotUpdate` 속성의 형식이 `DiskSku`에서 `SnapshotSku`로 변경되었습니다.
 - `VmScaleSetVMParameterSet`이 `Add-AzVMDataDisk` cmdlet에서 제거되어, 더 이상 ScaleSet VM에 개별적으로 데이터 디스크를 추가할 수 없습니다.
 
 ### <a name="azdatafactory-previously-azurermdatafactories-and-azurermdatafactoryv2"></a>Az.DataFactory(이전에는 AzureRM.DataFactories 및 AzureRM.DataFactoryV2)
 
 - `GatewayName` 매개 변수가 `New-AzDataFactoryEncryptValue` cmdlet에서 필수 항목이 되었습니다.
 - `New-AzDataFactoryGatewayKey` cmdlet이 제거됨
-- `Get-AzDataFactoryV2ActivityRun` cmdlet에서 `LinkedServiceName` 매개 변수가 제거되었습니다. 스크립트는 더 이상 이 필드의 값을 사용하여 처리 결정을 내려서는 안됩니다.
+- `LinkedServiceName` cmdlet에서 `Get-AzDataFactoryV2ActivityRun` 매개 변수가 제거되었습니다. 스크립트는 더 이상 이 필드의 값을 사용하여 처리 결정을 내려서는 안됩니다.
 
 ### <a name="azdatalakeanalytics-previously-azurermdatalakeanalytics"></a>Az.DataLakeAnalytics(이전에는 AzureRM.DataLakeAnalytics)
 
@@ -260,15 +260,15 @@ Windows용 PowerShell 5.1에서 Az를 사용하려면 .NET Framework 4.7.2를 �
   New-AzDataLakeStoreAccount -Tag @{TagName="TagValue"}
   ```
 
-- `PSDataLakeStoreAccountBasic` 개체에서 사용되지 않는 속성 `Identity`, `EncryptionState`, `EncryptionProvisioningState`, `EncryptionConfig`, `FirewallState`, `FirewallRules`, `VirtualNetworkRules`, `TrustedIdProviderState`, `TrustedIdProviders`, `DefaultGroup`, `NewTier`, `CurrentTier`, `FirewallAllowAzureIps`을 제거했습니다.  `Get-AzDataLakeStoreAccount`에서 반환된 `PSDatalakeStoreAccount`를 사용하는 모든 스크립트는 이러한 속성을 참조하지 않아야 합니다.
+- `Identity` 개체에서 사용되지 않는 속성 `EncryptionState`, `EncryptionProvisioningState`, `EncryptionConfig`, `FirewallState`, `FirewallRules`, `VirtualNetworkRules`, `TrustedIdProviderState`, `TrustedIdProviders`, `DefaultGroup`, `NewTier`, `CurrentTier`, `FirewallAllowAzureIps`, `PSDataLakeStoreAccountBasic`을 제거했습니다.  `PSDatalakeStoreAccount`에서 반환된 `Get-AzDataLakeStoreAccount`를 사용하는 모든 스크립트는 이러한 속성을 참조하지 않아야 합니다.
 
 ### <a name="azkeyvault-previously-azurermkeyvault"></a>Az.KeyVault(이전에는 AzureRM.KeyVault)
 
-- `PSKeyVaultKeyAttributes`, `PSKeyVaultKeyIdentityItem` 및 `PSKeyVaultSecretAttributes` 개체에서 `PurgeDisabled` 속성이 제거되었습니다. 스크립트는 처리 결정을 내리기 위해 ```PurgeDisabled``` 속성을 더 이상 참조하지 않아야 합니다.
+- `PurgeDisabled`, `PSKeyVaultKeyAttributes` 및 `PSKeyVaultKeyIdentityItem` 개체에서 `PSKeyVaultSecretAttributes` 속성이 제거되었습니다. 스크립트는 처리 결정을 내리기 위해 ```PurgeDisabled``` 속성을 더 이상 참조하지 않아야 합니다.
 
 ### <a name="azmedia-previously-azurermmedia"></a>Az.Media(이전에는 AzureRM.Media)
 
-- 다음을 사용하여 `New-AzMediaService` cmdlet에서 사용되지 않는 `Tags` 속성 별칭을 제거합니다.
+- 다음을 사용하여 `Tags` cmdlet에서 사용되지 않는 `New-AzMediaService` 속성 별칭을 제거합니다.
   ```azurepowershell-interactive
   New-AzureRMMediaService -Tags @{TagName="TagValue"}
   ```
@@ -280,7 +280,7 @@ Windows용 PowerShell 5.1에서 Az를 사용하려면 .NET Framework 4.7.2를 �
 
 ### <a name="azmonitor-previously-azurerminsights"></a>Az.Monitor(이전에는 AzureRM.Insights)
 
-- `Set-AzDiagnosticSetting` cmdlet 스크립트에서 다음을 사용하여 단일 매개 변수 이름을 위해 복수 이름 `Categories` 및 `Timegrains` 매개 변수를 제거했습니다.
+- `Categories` cmdlet 스크립트에서 다음을 사용하여 단일 매개 변수 이름을 위해 복수 이름 `Timegrains` 및 `Set-AzDiagnosticSetting` 매개 변수를 제거했습니다.
   ```azurepowershell-interactive
   Set-AzureRmDiagnosticSetting -Timegrains PT1M -Categories Category1, Category2
   ```
@@ -293,7 +293,7 @@ Windows용 PowerShell 5.1에서 Az를 사용하려면 .NET Framework 4.7.2를 �
 ### <a name="aznetwork-previously-azurermnetwork"></a>Az.Network(이전에는 AzureRM.Network)
 
 - 사용되지 않는 매개 변수 `ResourceId`를 `Get-AzServiceEndpointPolicyDefinition` cmdlet에서 제거
-- `PSVirtualNetwork` 개체에서 사용되지 않는 속성 `EnableVmProtection`을 제거했습니다.
+- `EnableVmProtection` 개체에서 사용되지 않는 속성 `PSVirtualNetwork`을 제거했습니다.
 - 사용되지 않는 cmdlet 제거: `Set-AzVirtualNetworkGatewayVpnClientConfig`
 
 스크립트는 더 이상 이 필드의 값에 따라 처리하도록 결정하지 않아야 합니다.
@@ -314,15 +314,15 @@ Windows용 PowerShell 5.1에서 Az를 사용하려면 .NET Framework 4.7.2를 �
 
 ### <a name="azrecoveryservices-previously-azurermrecoveryservices-azurermrecoveryservicesbackup-and-azurermrecoveryservicessiterecovery"></a>Az.RecoveryServices(이전에는 AzureRM.RecoveryServices, AzureRM.RecoveryServices.Backup, 및 AzureRM.RecoveryServices.SiteRecovery)
 
-- `New/Set-AzRecoveryServicesAsrPolicy` cmdlet에서 `Encryption` 매개 변수를 제거했습니다.
+- `Encryption` cmdlet에서 `New/Set-AzRecoveryServicesAsrPolicy` 매개 변수를 제거했습니다.
 - `TargetStorageAccountName` 매개 변수는 이제 `Restore-AzRecoveryServicesBackupItem` cmdlet의 관리 디스크 복원에 필수 항목입니다.
-- `Restore-AzRecoveryServicesBackupItem` cmdlet에서 `StorageAccountName`, `StorageAccountResourceGroupName` 매개 변수 제거
-- `Get-AzRecoveryServicesBackupContainer` cmdlet에서 `Name` 매개 변수 제거
+- `StorageAccountName` cmdlet에서 `StorageAccountResourceGroupName`, `Restore-AzRecoveryServicesBackupItem` 매개 변수 제거
+- `Name` cmdlet에서 `Get-AzRecoveryServicesBackupContainer` 매개 변수 제거
 
 ### <a name="azresources-previously-azurermresources"></a>Az.Resources(이전에는 AzureRM.Resources)
 
-- `New/Set-AzPolicyAssignment` cmdlet에서 `Sku` 매개 변수를 제거했습니다.
-- `New-AzADServicePrincipal` 및 `New-AzADSpCredential` cmdlet에서 `Password` 매개 변수를 제거했습니다. 암호는 자동으로 생성되며 암호를 제공하는 스크립트는 다음과 같습니다.
+- `Sku` cmdlet에서 `New/Set-AzPolicyAssignment` 매개 변수를 제거했습니다.
+- `Password` 및 `New-AzADServicePrincipal` cmdlet에서 `New-AzADSpCredential` 매개 변수를 제거했습니다. 암호는 자동으로 생성되며 암호를 제공하는 스크립트는 다음과 같습니다.
 
   ```azurepowershell-interactive
   New-AzAdSpCredential -ObjectId 1f99cf81-0146-4f4e-beae-2007d0668476 -Password $secPassword
@@ -338,9 +338,9 @@ Windows용 PowerShell 5.1에서 Az를 사용하려면 .NET Framework 4.7.2를 �
 ### <a name="azservicefabric-previously-azurermservicefabric"></a>Az.ServiceFabric(이전에는 AzureRM.ServiceFabric)
 
 - 다음 cmdlet 반환 형식이 변경되었습니다.
-  - `ApplicationHealthPolicy` 형식의 속성 `ServiceTypeHealthPolicies`가 제거되었습니다.
-  - `ClusterUpgradeDeltaHealthPolicy` 형식의 속성 `ApplicationHealthPolicies`가 제거되었습니다.
-  - `ClusterUpgradePolicy` 형식의 속성 `OverrideUserUpgradePolicy`가 제거되었습니다.
+  - `ServiceTypeHealthPolicies` 형식의 속성 `ApplicationHealthPolicy`가 제거되었습니다.
+  - `ApplicationHealthPolicies` 형식의 속성 `ClusterUpgradeDeltaHealthPolicy`가 제거되었습니다.
+  - `OverrideUserUpgradePolicy` 형식의 속성 `ClusterUpgradePolicy`가 제거되었습니다.
   - 이러한 변경 내용은 다음 cmdlet에 영향을 줍니다.
     - Add-AzServiceFabricClientCertificate
     - Add-AzServiceFabricClusterCertificate
@@ -359,16 +359,16 @@ Windows용 PowerShell 5.1에서 Az를 사용하려면 .NET Framework 4.7.2를 �
 
 ### <a name="azsql-previously-azurermsql"></a>Az.Sql(이전에는 AzureRM.Sql)
 
-- `Set-AzSqlDatabaseBackupLongTermRetentionPolicy` cmdlet에서 `State`, `ResourceId` 매개 변수 제거
+- `State` cmdlet에서 `ResourceId`, `Set-AzSqlDatabaseBackupLongTermRetentionPolicy` 매개 변수 제거
 - 사용되지 않는 cmdlet 제거: `Get/Set-AzSqlServerBackupLongTermRetentionVault`, `Get/Start/Stop-AzSqlServerUpgrade`, `Get/Set-AzSqlDatabaseAuditingPolicy`, `Get/Set-AzSqlServerAuditingPolicy`, `Remove-AzSqlDatabaseAuditing`, `Remove-AzSqlServerAuditing`
-- 사용되지 않는 매개 변수 `Current`를 `Get-AzSqlDatabaseBackupLongTermRetentionPolicy` cmdlet에서 제거
+- 사용되지 않는 매개 변수 `Current`을 `Get-AzSqlDatabaseBackupLongTermRetentionPolicy` cmdlet에서 제거
 - 사용되지 않는 매개 변수 `DatabaseName`을 `Get-AzSqlServerServiceObjective` cmdlet에서 제거
 - 사용되지 않는 매개 변수 `PrivilegedLogin`을 `Set-AzSqlDatabaseDataMaskingPolicy` cmdlet에서 제거
 
 ### <a name="azstorage-previously-azurestorage-and-azurermstorage"></a>Az.Storage(이전에는 Azure.Storage 및 AzureRM.Storage)
 
 - 스토리지 계정 이름만 사용하여 Oauth 스토리지 컨텍스트를 만들 수 있도록 기본 매개 변수 집합이 `OAuthParameterSet`으로 변경되었습니다.
-  - 예제: `$ctx = New-AzureStorageContext -StorageAccountName $accountName`
+  - 예: `$ctx = New-AzureStorageContext -StorageAccountName $accountName`
 - `Location` 매개 변수가 `Get-AzStorageUsage` cmdlet에서 필수 항목이 되었습니다.
 - 이제 Storage API 메서드는 동기 API 호출 대신 작업 기반 비동기 패턴(TAP)을 사용합니다. 다음 예제에서는 새 비동기 명령을 보여 줍니다.
 

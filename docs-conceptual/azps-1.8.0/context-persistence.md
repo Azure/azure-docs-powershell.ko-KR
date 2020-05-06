@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/21/2019
 ms.openlocfilehash: 0e8dd4f766307d9ab2e27e2cf8bec6bbd34f5e51
-ms.sourcegitcommit: 1cdff856d1d559b978aac6bc034dd2f99ac04afe
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "72791422"
 ---
 # <a name="azure-powershell-context-objects"></a>Azure PowerShell 컨텍스트 개체
@@ -24,7 +24,7 @@ Azure PowerShell은 _Azure PowerShell 컨텍스트 개체_(Azure 컨텍스트)�
 
 Azure 컨텍스트는 명령을 실행할 활성 구독과 Azure Cloud에 연결하는 데 필요한 인증 정보를 나타내는 PowerShell 개체입니다. Azure 컨텍스트를 사용하면 구독을 전환할 때마다 Azure PowerShell에서 계정을 다시 인증할 필요가 없습니다. 컨텍스트는 다음과 같이 구성됩니다.
 
-* [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount)를 사용하여 Azure에 로그인하는 데 사용된 _계정_. Azure 컨텍스트는 계정 관점에서 사용자, 애플리케이션 ID 및 서비스 주체를 동일하게 처리합니다.
+* _Connect-AzAccount_를 사용하여 Azure에 로그인하는 데 사용된 [계정](/powershell/module/az.accounts/connect-azaccount). Azure 컨텍스트는 계정 관점에서 사용자, 애플리케이션 ID 및 서비스 주체를 동일하게 처리합니다.
 * _테넌트_와 연결된 Azure 리소스를 만들고 실행하기 위한 Microsoft와의 서비스 계약인 활성 _구독_. 테넌트는 종종 설명서에서 또는 Active Directory로 작업할 때 _조직_이라고도 합니다.
 * Azure Cloud에 액세스하기 위해 저장된 인증 토큰인 _토큰 캐시_에 대한 참조입니다. 이 토큰이 저장되는 위치와 지속 기간은 [컨텍스트 자동 저장 설정](#save-azure-contexts-across-powershell-sessions)에 의해 결정됩니다.
 
@@ -98,7 +98,7 @@ Azure PowerShell cmdlet을 사용한 컨텍스트의 다른 주요 용도는 백
 
 기본적으로 Azure 컨텍스트는 PowerShell 세션 간에 사용하기 위해 저장됩니다. 다음과 같은 방법으로 이 동작을 변경합니다.
 
-* `Connect-AzAccount`와 함께 `-Scope Process`를 사용하여 로그인
+* `-Scope Process`와 함께 `Connect-AzAccount`를 사용하여 로그인
 
   ```azurepowershell
   Connect-AzAccount -Scope Process
@@ -108,7 +108,7 @@ Azure PowerShell cmdlet을 사용한 컨텍스트의 다른 주요 용도는 백
 * [Disable-AzContextAutosave](/powershell/module/az.accounts/disable-azcontextautosave) cmdlet을 사용하여 AzurePowershell의 컨텍스트 자동 저장을 사용하지 않습니다.
   컨텍스트 자동 저장을 사용하지 않으면 저장된 토큰이 지워지지 __않습니다__. 저장된 Azure 컨텍스트 정보를 지우는 방법에 대해 알아보려면 [Azure 컨텍스트 및 자격 증명 제거](#remove-azure-contexts-and-stored-credentials)를 참조하세요.
 * [Enable-AzContextAutosave](/powershell/module/az.accounts/enable-azcontextautosave) cmdlet을 사용하여 Azure 컨텍스트 자동 저장을 명시적으로 사용하도록 설정할 수 있습니다. 자동 저장을 사용하면 사용자의 모든 컨텍스트가 이후의 PowerShell 세션을 위해 로컬로 저장됩니다.
-* 컨텍스트를 [Import-AzContext](/powershell/module/az.accounts/import-azcontext)와 함께 로드할 수 있는 향후 PowerShell 세션에서 사용할 [Save-AzContext](/powershell/module/az.accounts/save-azcontext)와 함께 컨텍스트를 수동으로 저장합니다.
+* 컨텍스트를 [Import-AzContext](/powershell/module/az.accounts/save-azcontext)와 함께 로드할 수 있는 향후 PowerShell 세션에서 사용할 [Save-AzContext](/powershell/module/az.accounts/import-azcontext)와 함께 컨텍스트를 수동으로 저장합니다.
 
   ```azurepowershell
   Save-AzContext -Path current-context.json # Save the current context

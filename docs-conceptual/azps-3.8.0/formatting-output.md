@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 01/07/2019
 ms.openlocfilehash: e5c9a9df830f6d866d171107472ff94166442be9
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81740374"
 ---
 # <a name="format-azure-powershell-cmdlet-output"></a>Azure PowerShell cmdlet 출력 형식 지정

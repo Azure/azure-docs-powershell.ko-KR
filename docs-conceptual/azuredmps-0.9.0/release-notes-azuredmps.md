@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.workload: ''
 ms.date: 09/26/2018
 ms.openlocfilehash: 7e384fdf66fce1102b7723018175ba6cc276ccc5
-ms.sourcegitcommit: 2054a8f74cd9bf5a50ea7fdfddccaa632c842934
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56144646"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "63054682"
 ---
 # <a name="release-notes"></a>릴리스 정보
 
