@@ -8,10 +8,10 @@ ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.openlocfilehash: 772667032d421e32c6cd63abbcb686b4eab308e2
-ms.sourcegitcommit: ad7677d703a8512d371d3123dc7e541156b95cb8
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "72814352"
 ---
 # <a name="uninstall-the-azure-powershell-module"></a>Azure PowerShell 모듈 제거
@@ -23,10 +23,10 @@ ms.locfileid: "72814352"
 
 MSI 패키지를 사용하여 Azure PowerShell을 설치한 경우 PowerShell이 아닌 Windows 시스템을 통해 제거해야 합니다.
 
-| 플랫폼 | 지침 |
+| 플랫폼 | Instructions |
 |----------|--------------|
 | 윈도우 10 | 시작 > 설정 > 앱 |
-| Windows 7 </br>Windows 8 | 시작>제어판 > 프로그램 > 프로그램 제거 |
+| Windows 7 </br>Windows 8 | 시작 > 제어판 > 프로그램 > 프로그램 제거 |
 
 이 화면을 띄우면 프로그램 목록에 __Azure PowerShell__ 이 보일 것입니다. 이 앱을 제거하면 됩니다. 이 프로그램이 나열되지 않으면 PowerShellGet을 통해 설치한 후 다음 지침을 따라야 합니다.
 
@@ -136,16 +136,16 @@ $versions[0..($versions.Length-2)]  | foreach { Uninstall-AllModules -TargetModu
 
 MSI 패키지를 사용하여 Azure PowerShell AzureRM 모듈을 설치한 경우 PowerShell이 아닌 Windows 시스템을 통해 제거해야 합니다.
 
-| 플랫폼 | 지침 |
+| 플랫폼 | Instructions |
 |----------|--------------|
 | 윈도우 10 | 시작 > 설정 > 앱 |
-| Windows 7 </br>Windows 8 | 시작>제어판 > 프로그램 > 프로그램 제거 |
+| Windows 7 </br>Windows 8 | 시작 > 제어판 > 프로그램 > 프로그램 제거 |
 
 이 화면을 띄우면 프로그램 목록에 __Azure PowerShell__ 이 보일 것입니다. 이 앱을 제거하면 됩니다. 이 프로그램이 나열되지 않으면 PowerShellGet을 통해 설치한 후 다음 지침을 따라야 합니다.
 
 ### <a name="uninstall-from-powershell"></a>PowerShell에서 제거하기
 
-AzureRM을 PowerShellGet과 함께 설치한 경우 `Az.Accounts` 모듈의 일부로 사용할 수 있는 [Uninstall-AzureRM](/powershell/module/az.accounts/uninstall-azurerm) 명령을 사용하여 모듈을 제거할 수 있습니다. 이는 컴퓨터에서 _모든_ AzureRM 모듈을 제거할 수 있지만 관리자 권한이 필요합니다.
+AzureRM을 PowerShellGet과 함께 설치한 경우 [ 모듈의 일부로 사용할 수 있는 ](/powershell/module/az.accounts/uninstall-azurerm)Uninstall-AzureRM`Az.Accounts` 명령을 사용하여 모듈을 제거할 수 있습니다. 이는 컴퓨터에서 _모든_ AzureRM 모듈을 제거할 수 있지만 관리자 권한이 필요합니다.
 
 ```powershell-interactive
 Uninstall-AzureRm

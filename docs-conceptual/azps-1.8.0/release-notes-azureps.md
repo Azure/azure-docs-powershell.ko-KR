@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 04/30/2019
 ms.openlocfilehash: 8a9a399f72ed9e3e9a3cbc09c8a4abaa91339c24
-ms.sourcegitcommit: f0f09eee03ef9dd7fe07432252a3dc8ca93e3a7b
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "71319301"
 ---
 ## <a name="180---april-2019"></a>1.8.0 - 2019년 4월
@@ -639,7 +639,7 @@ Application Gateway에서 RewriteRuleSets를 구성하는 것에 대한 지원�
 
 ### <a name="azresources"></a>Az.Resources
 
-* 에 대 한 수정 https://github.com/Azure/azure-powershell/issues/7679
+* https://github.com/Azure/azure-powershell/issues/7679 에 대한 수정
     - 기본 관리자를 요청할 때 구독 범위가 제공되는 경우 Get-AzureRmRoleAssignment를 업데이트하여 구독 범위를 사용합니다.
 
 ### <a name="azsql"></a>Az.Sql
@@ -776,7 +776,7 @@ Application Gateway에서 RewriteRuleSets를 구성하는 것에 대한 지원�
 * 추가된 정책 재구성 cmdlet
 
 #### <a name="azresources"></a>Az.Resources
-* 에 대 한 수정 https://github.com/Azure/azure-powershell/issues/7402
+* https://github.com/Azure/azure-powershell/issues/7402 에 대한 수정
     - 'Get-AzResource'에 대해 '-ResourceId' 매개 변수를 사용하여 리소스 나열 허용
 
 #### <a name="azservicebus"></a>Az.ServiceBus
@@ -858,4 +858,4 @@ Application Gateway에서 RewriteRuleSets를 구성하는 것에 대한 지원�
 * 새 cmdlet New-AzWebAppContainerPSSession 및 Enter-WebAppContainerPSSession -  windows 컨테이너 앱에 PowerShell 원격 세션을 시작합니다.
 
 ## <a name="020---september-2018"></a>0.2.0 - 2018년 9월
- 최초 릴리스
+ 초기 릴리스

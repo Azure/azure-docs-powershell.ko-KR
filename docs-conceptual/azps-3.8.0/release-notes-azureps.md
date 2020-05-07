@@ -5,10 +5,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/10/2020
 ms.openlocfilehash: a9c5394a5fac8a8a3de96925b3563776783ea9fe
-ms.sourcegitcommit: de813e8a4e3629a6fee6e87a0208c1f0362a16ca
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82080201"
 ---
 # <a name="azure-powershell-release-notes"></a>Azure PowerShell 릴리스 정보

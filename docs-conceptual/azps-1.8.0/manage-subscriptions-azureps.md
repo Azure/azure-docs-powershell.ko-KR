@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 02/04/2019
 ms.openlocfilehash: 778fdb463a42b609d3a94c910a2c0f9553ef4eb9
-ms.sourcegitcommit: a261efc84dedfd829c0613cf62f8fcf3aa62adb8
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "68807529"
 ---
 # <a name="use-multiple-azure-subscriptions"></a>여러 Azure 구독 사용

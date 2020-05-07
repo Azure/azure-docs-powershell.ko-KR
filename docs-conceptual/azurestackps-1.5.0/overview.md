@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 09/21/2018
 ms.openlocfilehash: afa83a6258e57e961576b328e67fad634704dddf
-ms.sourcegitcommit: 2054a8f74cd9bf5a50ea7fdfddccaa632c842934
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56153904"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "63053361"
 ---
 # <a name="azure-stack-module-150"></a>Azure Stack 모듈 1.5.0
 
-## <a name="requirements"></a>Requirements:
+## <a name="requirements"></a>요구 사항:
 최소 지원 Azure Stack 버전은 1808입니다.
 
 참고: 이전 버전을 사용하는 경우 1.4.0 버전을 설치하세요.
@@ -123,11 +123,11 @@ Azure Stack Subscription 관리자 모듈의 미리 보기 릴리스입니다.  
 - 사용량 및 성능 정보 보기
 - RBAC 관리
 
-### <a name="subscription"></a>구독
+### <a name="subscription"></a>Subscription
 Azure Stack Subscription 모듈의 미리 보기 릴리스입니다.  이 모듈은 사용자가 다음을 수행하기 위한 기능을 제공합니다.
 - 구독 생성, 삭제 및 업데이트
 
-### <a name="update"></a>주 지역에서
+### <a name="update"></a>업데이트
 Azure Stack Update 관리자 모듈의 미리 보기 릴리스입니다.  이 모듈에서 관리자는 다음을 수행할 수 있습니다.
 - 사용 가능한 업데이트 나열 및 설치
 - 중단된 업데이트 다시 시작

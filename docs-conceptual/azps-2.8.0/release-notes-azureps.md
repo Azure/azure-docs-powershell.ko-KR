@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/15/2019
 ms.openlocfilehash: 98a24c805fbf43dd899119d43301b4261c1f60dc
-ms.sourcegitcommit: f9445d1525eac8c165637e1a80fbc92b1ab005c2
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/16/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "75035764"
 ---
 ## <a name="280---october-2019"></a>2.8.0 - 2019년 10월
@@ -163,7 +163,7 @@ ms.locfileid: "75035764"
     - 새 모델 클래스 PSIpConfigurationConnectivityInformation이 추가되었습니다.
 * Azure Firewall 리소스에 대한 새 ApplicationRuleProtocolType 'mssql'이 추가되었습니다.
 * Virtual WAN에서 멀티 링크를 지원합니다.
-    - 새 cmdlet
+    - 새로운 cmdlet
         - New-AzVpnSiteLink
         - New-AzVpnSiteLinkConnection
     - 업데이트된 cmdlet:
@@ -372,7 +372,7 @@ ms.locfileid: "75035764"
 
 #### <a name="aznetwork"></a>Az.Network
 * 프라이빗 엔드포인트 및 프라이빗 링크 서비스에 대한 지원 추가
-    - 새 cmdlet
+    - 새로운 cmdlet
         - Set-AzPrivateEndpoint
         - Set-AzPrivateLinkService
         - Approve-AzPrivateEndpointConnection
@@ -582,20 +582,20 @@ ms.locfileid: "75035764"
 
 #### <a name="aznetwork"></a>Az.Network
 * Microsoft Azure Virtual Network 게이트웨이 리소스에 대한 지원 추가
-    - 새 cmdlet
+    - 새로운 cmdlet
         - Get-AzVirtualNetworkGatewayVpnClientConnectionHealth
 * AvailablePrivateEndpointType 추가
-    - 새 cmdlet 
+    - 새로운 cmdlet 
         - Get-AzAvailablePrivateEndpointType
 * PrivatePrivateLinkService 추가
-    - 새 cmdlet 
+    - 새로운 cmdlet 
         - Get-AzPrivateLinkService 
         - New-AzPrivateLinkService
         - Remove-AzPrivateLinkService
         - New-AzPrivateLinkServiceIpConfig
         - Set-AzPrivateEndpointConnection
 * PrivateEndpoint 추가
-    - 새 cmdlet
+    - 새로운 cmdlet
         - Get-AzPrivateEndpoint
         - New-AzPrivateEndpoint
         - Remove-AzPrivateEndpoint
@@ -867,7 +867,7 @@ ms.locfileid: "75035764"
 
 #### <a name="aznetwork"></a>Az.Network
 * Nat 게이트웨이 리소스에 대한 지원 추가
-    - 새 cmdlet
+    - 새로운 cmdlet
         - New-AzNatGateway
         - Get-AzNatGateway
         - Set-AzNatGateway
@@ -1536,7 +1536,7 @@ Application Gateway에서 RewriteRuleSets를 구성하는 것에 대한 지원�
 
 ### <a name="azresources"></a>Az.Resources
 
-* 에 대 한 수정 https://github.com/Azure/azure-powershell/issues/7679
+* https://github.com/Azure/azure-powershell/issues/7679 에 대한 수정
     - 기본 관리자를 요청할 때 구독 범위가 제공되는 경우 Get-AzureRmRoleAssignment를 업데이트하여 구독 범위를 사용합니다.
 
 ### <a name="azsql"></a>Az.Sql
@@ -1673,7 +1673,7 @@ Application Gateway에서 RewriteRuleSets를 구성하는 것에 대한 지원�
 * 추가된 정책 재구성 cmdlet
 
 #### <a name="azresources"></a>Az.Resources
-* 에 대 한 수정 https://github.com/Azure/azure-powershell/issues/7402
+* https://github.com/Azure/azure-powershell/issues/7402 에 대한 수정
     - 'Get-AzResource'에 대해 '-ResourceId' 매개 변수를 사용하여 리소스 나열 허용
 
 #### <a name="azservicebus"></a>Az.ServiceBus
@@ -1755,4 +1755,4 @@ Application Gateway에서 RewriteRuleSets를 구성하는 것에 대한 지원�
 * 새 cmdlet New-AzWebAppContainerPSSession 및 Enter-WebAppContainerPSSession -  windows 컨테이너 앱에 PowerShell 원격 세션을 시작합니다.
 
 ## <a name="020---september-2018"></a>0.2.0 - 2018년 9월
- 최초 릴리스
+ 초기 릴리스
