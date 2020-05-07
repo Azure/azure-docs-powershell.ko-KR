@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 02/06/2019
 ms.openlocfilehash: 1b3d707e862dd0c21e9e6b0a89f429ff21b1a99d
-ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "68861338"
 ---
 # <a name="azure-stack-module-172"></a>Azure Stack 모듈 1.7.2
 
-## <a name="requirements"></a>Requirements:
+## <a name="requirements"></a>요구 사항:
 
 지원되는 최소 Azure Stack 버전은 1904입니다.
 

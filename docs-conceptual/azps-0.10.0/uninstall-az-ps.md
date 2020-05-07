@@ -8,10 +8,10 @@ ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.openlocfilehash: 37f152fb43e23c361544db4a738d58911099da1f
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81445971"
 ---
 # <a name="uninstall-the-azure-powershell-module"></a>Azure PowerShell 모듈 제거
@@ -145,7 +145,7 @@ MSI 패키지를 사용하여 Azure PowerShell AzureRM 모듈을 설치한 경�
 
 ### <a name="uninstall-from-powershell"></a>PowerShell에서 제거하기
 
-AzureRM을 PowerShellGet과 함께 설치한 경우 `Az.Accounts` 모듈의 일부로 사용할 수 있는 [Uninstall-AzureRM](/powershell/module/az.accounts/uninstall-azurerm) 명령을 사용하여 모듈을 제거할 수 있습니다. 이는 컴퓨터에서 _모든_ AzureRM 모듈을 제거할 수 있지만 관리자 권한이 필요합니다.
+AzureRM을 PowerShellGet과 함께 설치한 경우 [ 모듈의 일부로 사용할 수 있는 ](/powershell/module/az.accounts/uninstall-azurerm)Uninstall-AzureRM`Az.Accounts` 명령을 사용하여 모듈을 제거할 수 있습니다. 이는 컴퓨터에서 _모든_ AzureRM 모듈을 제거할 수 있지만 관리자 권한이 필요합니다.
 
 ```powershell-interactive
 Uninstall-AzureRm

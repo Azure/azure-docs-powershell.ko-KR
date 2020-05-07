@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/10/2019
 ms.openlocfilehash: 02b39653ebb4aa0f74d2340a7be7b35e08d5e44d
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81446039"
 ---
 # <a name="migrate-azure-powershell-from-azurerm-to-az"></a>Azure PowerShell을 AzureRM에서 Az로 마이그레이션
@@ -62,7 +62,7 @@ Enable-AzureRmAlias -Scope CurrentUser
 ```
 
 별칭을 사용하면 Az 모듈이 설치된 이전 cmdlet 이름을 사용할 수 있습니다. 이러한 별칭은 선택한 범위에 대한 프로필에 기록됩니다. 프로필이 없으면 새 프로필이 만들어집니다.
-`CurrentUser`보다 넓은 `-Scope`를 사용하는 경우 해당 프로필 파일을 만들거나 업데이트하려면 적절한 권한이 필요합니다.
+`-Scope`보다 넓은 `CurrentUser`를 사용하는 경우 해당 프로필 파일을 만들거나 업데이트하려면 적절한 권한이 필요합니다.
 
 > [!IMPORTANT]
 > 모듈 이름이 아니라 __cmdlet 이름에만__ 별칭이 지정됩니다! `#Requires`, `Import-Module`, `.psd1`의 종속성 목록 또는 정규화된 cmdlet 이름을 사용하는 경우 이 시점에서 모듈 이름과 관련하여 [호환성이 손상되는 변경 목록](migrate-az-1.0.0.md)에 설명된 프로세스에 따라 해당 이름을 마이그레이션해야 합니다.
@@ -87,4 +87,4 @@ Enable-AzureRmAlias -Scope CurrentUser
 마이그레이션이 완료되고 앨리어싱 동작이 더 이상 사용되지 않으면 별칭을 사용하지 않도록 설정하는 것이 좋습니다. 이 작업은 [Disable-AzureRmAlias](/powershell/module/az.accounts/disable-azurermalias) cmdlet을 사용하여 수행됩니다.
 
 > [!IMPORTANT]
-> 이 cmdlet을 실행하는 경우 `Enable-AzureRmAlias`가 호출된 각 `-Scope`에 대해 이 cmdlet을 __호출해야 합니다__. 그렇지 않으면 앨리어싱 동작을 사용하는 스크립트가 시스템에 계속 있을 수 있습니다.
+> 이 cmdlet을 실행하는 경우 __가 호출된 각__ 에 대해 이 cmdlet을 `-Scope`호출해야 합니다`Enable-AzureRmAlias`. 그렇지 않으면 앨리어싱 동작을 사용하는 스크립트가 시스템에 계속 있을 수 있습니다.

@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/20/2018
 ms.openlocfilehash: aaba0ce38129b96e3d691f1a9d9cfdc929188ffd
-ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "75722410"
 ---
 # <a name="install-azure-powershell-on-windows-with-msi-or-web-platform-installer"></a>MSI 또는 웹 플랫폼 설치 관리자를 사용하여 Windows에 Azure PowerShell 설치
@@ -28,7 +28,7 @@ Azure PowerShell은 [GitHub](https://github.com/Azure/azure-powershell/releases/
 > [!NOTE]
 > Azure 클래식 배포 모델을 사용하는 경우 `Azure` 모듈만 사용합니다.
 
-Azure PowerShell을 사용하여 작업을 시작 하려면 [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet을 사용하여 현재 PowerShell 세션에 `AzureRM`을 로드한 후 Azure 자격 증명으로 로그인합니다.
+Azure PowerShell을 사용하여 작업을 시작 하려면 `AzureRM`Import-Module[ cmdlet을 사용하여 현재 PowerShell 세션에 ](/powershell/module/Microsoft.PowerShell.Core/Import-Module)을 로드한 후 Azure 자격 증명으로 로그인합니다.
 
 ```powershell-interactive
 # Import the module into the PowerShell session
@@ -47,7 +47,7 @@ Azure 로그인을 세션 간에 유지하는 방법을 알아보려면 [PowerSh
 > [!NOTE]
 > Azure 클래식 배포 모델을 사용하는 경우 `Azure` 모듈만 사용합니다.
 
-Azure PowerShell을 사용하여 작업을 시작 하려면 [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet을 사용하여 현재 PowerShell 세션에 `AzureRM`을 로드한 후 Azure 자격 증명으로 로그인합니다.
+Azure PowerShell을 사용하여 작업을 시작 하려면 `AzureRM`Import-Module[ cmdlet을 사용하여 현재 PowerShell 세션에 ](/powershell/module/Microsoft.PowerShell.Core/Import-Module)을 로드한 후 Azure 자격 증명으로 로그인합니다.
 
 ```powershell-interactive
 # Import the module into the PowerShell session

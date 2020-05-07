@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 01/10/2019
-ms.openlocfilehash: 9141f5640467722608cb7748f425ce3942668fb8
-ms.sourcegitcommit: 5bdedc77b27b66998387486761ec67ed9326f169
+ms.openlocfilehash: 4f74df6acaa05babc712b7b35737ce3001170b87
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67346580"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82587995"
 ---
 # <a name="query-output-of-azure-powershell"></a>Azure PowerShell 쿼리 출력 
 
@@ -73,10 +73,10 @@ TestVM 711d8ed1-b888-4c52-8ab9-66f07b87eb6b Succeeded
 
 ## <a name="select-nested-properties"></a>중첩 속성 선택
 
-Azure PowerShell cmdlet 출력의 일부 속성은 `Get-AzVM` 출력의 `StorageProfile` 속성과 같은 중첩된 개체를 사용합니다. 중첩 된 속성에서 값을 가져오려면, `Select-Object`에 대한 사전 인수의 일부로 검사할 값의 전체 경로 및 표시 이름을 제공하세요.
+Azure PowerShell cmdlet 출력의 일부 속성은 `StorageProfile` 출력의 `Get-AzVM` 속성과 같은 중첩된 개체를 사용합니다. 중첩 된 속성에서 값을 가져오려면, `Select-Object`에 대한 사전 인수의 일부로 검사할 값의 전체 경로 및 표시 이름을 제공하세요.
 
 ```azurepowershell-interactive
-Get-AzVM -ResourceGroupName TestGroup | `
+Get-AzVM -ResourceGroupName TestGroup |
     Select-Object Name,@{Name="OSType"; Expression={$_.StorageProfile.OSDisk.OSType}}
 ```
 
@@ -95,7 +95,7 @@ WinVM   Windows
 `Where-Object` cmdlet을 사용하면 중첩 속성을 포함하여 속성 값에 기반하여 결과를 필터링할 수 있습니다. 다음 예제는 `Where-Object`를 사용하여 리소스 그룹에서 Linux VM을 찾는 방법을 보여줍니다.
 
 ```azurepowershell-interactive
-Get-AzVM -ResourceGroupName TestGroup | `
+Get-AzVM -ResourceGroupName TestGroup |
     Where-Object {$_.StorageProfile.OSDisk.OSType -eq "Linux"}
 ```
 
@@ -109,8 +109,8 @@ TestGroup         TestVM2  westus2 Standard_D2s_v3  Linux testvm2669         Suc
 `Select-Object`, `Where-Object`의 결과를 각각으로 파이프할 수 있습니다. 성능 향상을 위해, `Where-Object` 작업을 `Select-Object` 전에 두는 것이 좋습니다.
 
 ```azurepowershell-interactive
-Get-AzVM -ResourceGroupName TestGroup | `
-    Where-Object {$_.StorageProfile.OsDisk.OsType -eq "Linux"} | `
+Get-AzVM -ResourceGroupName TestGroup |
+    Where-Object {$_.StorageProfile.OsDisk.OsType -eq "Linux"} |
     Select-Object Name,VmID,ProvisioningState
 ```
 

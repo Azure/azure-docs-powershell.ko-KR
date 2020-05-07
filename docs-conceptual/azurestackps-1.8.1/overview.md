@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 03/04/2020
 ms.openlocfilehash: ef034424c72d88b3ceb28956da9ca56e4a7f3941
-ms.sourcegitcommit: fb95591c45bb5f12b98e0690938d18f2ec611897
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "79402717"
 ---
 # <a name="azure-stack-module-181"></a>Azure Stack 모듈 1.8.1

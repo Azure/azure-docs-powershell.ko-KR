@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/21/2019
 ms.openlocfilehash: d74d3681794398534fe2c75a0c8fc314767ffa85
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81446005"
 ---
 # <a name="run-azure-powershell-cmdlets-in-powershell-jobs"></a>PowerShell 작업에서 Azure PowerShell cmdlet 실행

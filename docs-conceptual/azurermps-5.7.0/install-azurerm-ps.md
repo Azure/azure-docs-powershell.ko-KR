@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/15/2018
 ms.openlocfilehash: 5a4ccd67433fe3716df42075a4e2fd035a12af2b
-ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "75722444"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>PowerShellGet으로 Azure PowerShell을 설치
@@ -93,7 +93,7 @@ Are you sure you want to install the modules from 'PSGallery'?
 
 ## <a name="sign-in"></a>로그인
 
-Azure PowerShell을 사용하여 작업을 시작 하려면 [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet을 사용하여 현재 PowerShell 세션에 `AzureRM`을 로드한 후 Azure 자격 증명으로 로그인합니다.
+Azure PowerShell을 사용하여 작업을 시작 하려면 `AzureRM`Import-Module[ cmdlet을 사용하여 현재 PowerShell 세션에 ](/powershell/module/Microsoft.PowerShell.Core/Import-Module)을 로드한 후 Azure 자격 증명으로 로그인합니다.
 
 ```powershell-interactive
 # Import the module into the PowerShell session

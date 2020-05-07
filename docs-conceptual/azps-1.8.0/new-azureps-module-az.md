@@ -8,15 +8,15 @@ ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.openlocfilehash: 21d41b6e14d1b39a78e40daee74b80de3a80c2a0
-ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "68861291"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>새로운 Azure PowerShell Az 모듈 소개
 
-2018년 12월부터 Azure PowerShell Az 모듈은 일반 릴리스로 출시되며 Azure와 상호 작용하기 위한 PowerShell 모듈입니다. Az은 짧아진 명령과 향상된 안정성을 제공하며, 플랫폼 간 지원합니다. Az는 또한 AzureRM과 기능 패리티를 가지고 있어 간편한 마이그레이션 경로를 제공합니다.
+2018년 12월부터 Azure PowerShell Az 모듈은 일반 릴리스로 출시되며 이는 Azure와 상호 작용하기 위한 PowerShell 모듈입니다. Az는 짧아진 명령과 향상된 안정성을 제공하며, 여러 플랫폼을 지원합니다. Az는 또한 AzureRM과 기능 패리티를 가지고 있어 간편한 마이그레이션 경로를 제공합니다.
 
 Az 모듈을 사용하면 이제 Azure PowerShell이 Windows의 PowerShell 5.1과 호환되며, Windows, macOS 및 Linux를 포함하여 지원되는 모든 플랫폼의 PowerShell Core 6.x 이상과 호환됩니다.
 
@@ -26,7 +26,7 @@ Az는 새로운 모듈이기 때문에 버전이 1.0.0으로 다시 설정되었
 
 주요 업데이트는 불편할 수 있으므로 PowerShell의 Azure와 상호 작용할 수 있는 새 cmdlet이 포함된 새 모듈 세트를 도입하기로 결정한 이유를 알 수 있도록 해야 합니다.
 
-가장 크고 중요한 변화는 PowerShell이 [PowerShell Core 6.x](/powershell/scripting/overview)가 도입된 이후 .NET Standard 라이브러리에 기반한 플랫폼 간 제품이 되었다는 것입니다.
+가장 크고 중요한 변화는 PowerShell이 [PowerShell Core 6.x](/powershell/scripting/overview)가 도입된 이후 .NET Standard 라이브러리에 기반한 여러 플랫폼에서 사용할 수 있는 제품이 되었다는 것입니다.
 Azure 지원을 모든 플랫폼에 제공하기 위해 노력하고 있습니다. 즉 .NET Standard를 사용하고 PowerShell Core와 호환되도록 Azure PowerShell 모듈을 업데이트해야 합니다. 기존 AzureRM 모듈을 사용하고 이러한 지원을 추가하기 위해 복잡한 변경을 도입하는 대신 Az 모듈을 만들었습니다.
 
 또한 새 모듈을 만듦으로써 엔지니어가 cmdlet 및 모듈의 디자인과 이름 지정을 일관되게 유지할 수 있게 되었습니다. 이제 모든 모듈이 `Az.` 접두사로 시작하고, 모든 cmdlet에서 _동사_-`Az`_명사_ 형식을 사용합니다. 이전에는 cmdlet 이름이 더 길었을 뿐만 아니라 cmdlet 이름이 일치하지 않았습니다.

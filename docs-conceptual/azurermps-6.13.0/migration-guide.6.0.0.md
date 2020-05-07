@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/01/2018
 ms.openlocfilehash: 1fbd24996da2fbc7d4e95c2a63f828aea6cb3145
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "65534934"
 ---
 # <a name="breaking-changes-for-microsoft-azure-powershell-600"></a>Microsoft Azure PowerShell 6.0.0의 주요 변경 내용
@@ -126,7 +126,7 @@ $vm.StorageProfile.DataDisks[0].ManagedDisk.StorageAccountType   # This will now
 - `StorageAccountType` 매개 변수에 허용되는 값이 각각 `StandardLRS` 및 `PremiumLRS`에서 `Standard_LRS` 및 `Premium_LRS`로 변경되었습니다.
 
 **New-AzureRmAvailabilitySet**
-- `Managed` 매개 변수가 `Sku`를 위해 제거되었습니다.
+- `Managed` 매개 변수가 `Sku`을 위해 제거되었습니다
 
 ```powershell-interactive
 # Old
@@ -404,7 +404,7 @@ Set-AzureRmRedisCache -ResourceGroupName "MyRG" -Name "MyRedisCache" -RedisConfi
 ## <a name="breaking-changes-to-azurermresources-cmdlets"></a>AzureRM.Resources cmdlet의 주요 변경 내용
 
 **Find-AzureRmResource**
-- 이 cmdlet은 제거되었으며, 해당 기능이 `Get-AzureRmResource`로 이동되었습니다.
+- 이 cmdlet은 제거되었으며, 해당 기능이 `Get-AzureRmResource`으로 이동되었습니다.
 
 ```powershell-interactive
 # Old
@@ -461,7 +461,7 @@ Get-AzureRmRoleDefinition [other required parameters]
 
 `AzureRM.SiteRecovery` 모듈은 `AzureRM.SiteRecovery` 모듈의 기능 상위 집합이고 동등한 새 cmdlet 집합이 포함된 `AzureRM.RecoveryServices.SiteRecovery`로 대체됩니다. 이전 cmdlet과 새 cmdlet을 매핑한 전체 목록은 다음과 같습니다.
 
-| 사용되지 않는 cmdlet                                        | 상응하는 cmdlet                                                | Aliases                                  |
+| 사용되지 않는 cmdlet                                        | 상응하는 cmdlet                                                | 별칭                                  |
 |----------------------------------------------------------|------------------------------------------------------------------|------------------------------------------|
 | `Edit-AzureRmSiteRecoveryRecoveryPlan`                   | `Edit-AzureRmRecoveryServicesAsrRecoveryPlan`                    | `Edit-ASRRecoveryPlan`                   |
 | `Get-AzureRmSiteRecoveryFabric`                          | `Get-AzureRmRecoveryServicesAsrFabric`                           | `Get-ASRFabric`                          |

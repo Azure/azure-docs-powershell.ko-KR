@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 11/04/2019
 ms.openlocfilehash: e88752e0c997efc4f49161e358072803cb63450a
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81445529"
 ---
 # <a name="migration-guide-for-az-300"></a>Az 3.0.0 마이그레이션 가이드
@@ -113,7 +113,7 @@ Get-AzBatchSupportedImage -BatchContext $Context
 ## <a name="compute"></a>컴퓨팅
 
 ### `New-AzDiskConfig`
-CreateOption이 Upload인 경우 `New-AzDiskConfig`에 대해 `DiskSizeGB` 대신 `UploadSizeInBytes` 매개 변수가 사용됩니다.
+CreateOption이 Upload인 경우 `UploadSizeInBytes`에 대해 `DiskSizeGB` 대신 `New-AzDiskConfig` 매개 변수가 사용됩니다.
 
 #### <a name="before"></a>이전
 ```powershell
@@ -348,7 +348,7 @@ $job = New-AzRecoveryServicesAsrReplicationProtectedItem -VMwareToAzure -Account
 ## <a name="servicefabric"></a>ServiceFabric
 
 ### `Add-ServiceFabricApplicationCertificate`
-`Add-AzVmssSecret`에서 이 시나리오를 처리하므로 `Add-ServiceFabricApplicationCertificate`가 제거되었습니다.
+`Add-ServiceFabricApplicationCertificate`에서 이 시나리오를 처리하므로 `Add-AzVmssSecret`가 제거되었습니다.
 
 #### <a name="before"></a>이전
 ```powershell

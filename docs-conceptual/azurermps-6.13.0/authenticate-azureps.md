@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/09/2018
 ms.openlocfilehash: 464d7efa640f1d1ffd1c34bfbe6cf13cbe5202b6
-ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "68863233"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Azure PowerShell로 로그인
@@ -39,7 +39,7 @@ Connect-AzureRmAccount
 
 Azure PowerShell에 사용할 서비스 주체를 생성하는 방법을 보려면 [Azure PowerShell을 사용하여 Azure 서비스 주체 만들기](create-azure-service-principal-azureps.md)를 참조하세요.
 
-서비스 주체로 로그인하려면 `Connect-AzureRmAccount` cmdlet `-ServicePrincipal`인수를 사용합니다. 또한 서비스 주체의 로그인 자격 증명 및 서비스 주체와 연결된 테넌트 ID가 필요합니다. 서비스 주체의 자격 증명을 적절한 개체로 가져오려면 [Get-credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet을 사용합니다. 이 cmdlet은 서비스 주체 사용자 ID와 암호를 입력하는 대화 상자를 표시합니다.
+서비스 주체로 로그인하려면 `-ServicePrincipal` cmdlet `Connect-AzureRmAccount`인수를 사용합니다. 또한 서비스 주체의 로그인 자격 증명 및 서비스 주체와 연결된 테넌트 ID가 필요합니다. 서비스 주체의 자격 증명을 적절한 개체로 가져오려면 [Get-credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet을 사용합니다. 이 cmdlet은 서비스 주체 사용자 ID와 암호를 입력하는 대화 상자를 표시합니다.
 
 ```azurepowershell-interactive
 $pscredential = Get-Credential

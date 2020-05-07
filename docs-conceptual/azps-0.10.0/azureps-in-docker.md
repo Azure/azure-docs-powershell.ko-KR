@@ -5,10 +5,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/20/2020
 ms.openlocfilehash: b5ad201abcabbdc1a88db241b028d88f05054a14
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81445818"
 ---
 # <a name="using-azure-powershell-in-docker"></a>Docker에서 Azure PowerShell 사용
@@ -31,7 +31,7 @@ Az 모듈이 새로 릴리스될 때마다 다음 운영 체제에 대한 이미
 
 ## <a name="using-azure-powershell-in-a-container"></a>컨테이너에서 Azure PowerShell 사용
 
-다음 단계에서는 이미지를 다운로드하고 대화형 PowerShell 세션을 시작하는 데 필요한 Docker 명령을 보여 줍니다.
+다음 단계는 이미지를 다운로드하고 대화형 PowerShell 세션을 시작하는 데 필요한 Docker 명령을 보여 줍니다.
 
 1. 최신 azure-powershell 이미지를 다운로드합니다.
 
@@ -59,7 +59,7 @@ docker run -it -v ~/.Azure/AzureRmContext.json:/root/.Azure/AzureRmContext.json 
 
 ### <a name="remove-the-image-when-no-longer-needed"></a>더 이상 필요하지 않은 이미지 제거
 
-더 이상 필요하지 않은 경우 다음 명령이 Docker 컨테이너를 삭제하는 데 사용됩니다.
+다음 명령은 더 이상 필요하지 않을 경우 Docker 컨테이너를 삭제하는 데 사용됩니다.
 
 ```console
 docker rmi mcr.microsoft.com/azure-powershell

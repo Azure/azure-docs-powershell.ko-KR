@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 01/10/2019
 ms.openlocfilehash: 9141f5640467722608cb7748f425ce3942668fb8
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81740425"
 ---
 # <a name="query-output-of-azure-powershell"></a>Azure PowerShell 쿼리 출력 
@@ -73,7 +73,7 @@ TestVM 711d8ed1-b888-4c52-8ab9-66f07b87eb6b Succeeded
 
 ## <a name="select-nested-properties"></a>중첩 속성 선택
 
-Azure PowerShell cmdlet 출력의 일부 속성은 `Get-AzVM` 출력의 `StorageProfile` 속성과 같은 중첩된 개체를 사용합니다. 중첩 된 속성에서 값을 가져오려면, `Select-Object`에 대한 사전 인수의 일부로 검사할 값의 전체 경로 및 표시 이름을 제공하세요.
+Azure PowerShell cmdlet 출력의 일부 속성은 `StorageProfile` 출력의 `Get-AzVM` 속성과 같은 중첩된 개체를 사용합니다. 중첩 된 속성에서 값을 가져오려면, `Select-Object`에 대한 사전 인수의 일부로 검사할 값의 전체 경로 및 표시 이름을 제공하세요.
 
 ```azurepowershell-interactive
 Get-AzVM -ResourceGroupName TestGroup | `

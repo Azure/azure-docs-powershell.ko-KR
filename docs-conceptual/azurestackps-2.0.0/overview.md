@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 04/16/2020
 ms.openlocfilehash: fd1f2a3778e348ba41b46acb4bdce19e18a7f4ec
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81524968"
 ---
 # <a name="azure-stack-hub-module-200"></a>Azure Stack Hub 모듈 2.0.0

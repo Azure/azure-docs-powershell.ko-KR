@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 09/21/2018
 ms.openlocfilehash: b0e85bec82b9b7c876b2bbf337b603c8d68cf6a3
-ms.sourcegitcommit: 2054a8f74cd9bf5a50ea7fdfddccaa632c842934
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56153405"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "63053318"
 ---
 # <a name="azure-stack-module-160"></a>Azure Stack 모듈 1.6.0
 
-## <a name="requirements"></a>Requirements:
+## <a name="requirements"></a>요구 사항:
 최소 지원 Azure Stack 버전은 1811입니다.
 
 참고: 이전 버전을 사용하는 경우 1.6.0 버전을 설치하세요.

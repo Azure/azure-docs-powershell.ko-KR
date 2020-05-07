@@ -4,10 +4,10 @@ ms.author: sttramer
 ms.date: 12/20/2018
 ms.topic: include
 ms.openlocfilehash: 2d28ca4239ee775280bea24944f1f3c514984658
-ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "75752338"
 ---
 > [!NOTE]
