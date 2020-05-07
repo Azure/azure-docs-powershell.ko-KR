@@ -17,10 +17,10 @@ metadata:
   ms.service: virtual-machines
   clicktale: true
   ms.openlocfilehash: 08fb135343979a7d1a9723223a2e673641c0090f
-  ms.sourcegitcommit: 0b644bfecf4224b2ea83520d1a6a956734d9fba4
+  ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 07/13/2019
+  ms.lasthandoff: 05/05/2020
   ms.locfileid: "67863685"
 items:
 - durationInMinutes: 1

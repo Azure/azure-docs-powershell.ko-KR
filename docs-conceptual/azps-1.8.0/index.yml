@@ -16,7 +16,7 @@ landingContent:
         links:
           - text: Azure Powershell 설치
             url: install-az-ps.md
-          - text: PowerShell 설치
+          - text: 'PowerShell 설치 '
             url: /powershell/scripting/install/installing-powershell
           - text: Azure Cloud Shell에서 실행
             url: 'https://shell.azure.com'
