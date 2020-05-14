@@ -140,7 +140,7 @@
                 "azurestackps-*/**/*.md": "jeffgilb",
                 "azuredmps-*/**/*.md": "deveshguha",
                 "azps-*/**/*.md": "dcaro",
-                "docs-conceptual/azps-*/**/*.md": "dcaro"
+                "docs-conceptual/azps-*/**/*.md": "mirobb"
             },
             "author": {
                 "azurermps-*/**/*.md": "JasonRShaver",
@@ -148,7 +148,7 @@
                 "azurestackps-*/**/*.md": "jeffgilb",
                 "azuredmps-*/**/*.md": "deveshguha",
                 "azps-*/**/*.md": "dcaro",
-                "docs-conceptual/azps-*/**/*.md": "dcaro"
+                "docs-conceptual/azps-*/**/*.md": "mikefrobbins"
             },
             "ms.manager": {
                 "azurermps-*/**/*.md": "barbkess",
