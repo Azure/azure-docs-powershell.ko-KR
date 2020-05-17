@@ -113,7 +113,7 @@ Get-AzBatchSupportedImage -BatchContext $Context
 ## <a name="compute"></a>컴퓨팅
 
 ### `New-AzDiskConfig`
-CreateOption이 Upload인 경우 `UploadSizeInBytes`에 대해 `DiskSizeGB` 대신 `New-AzDiskConfig` 매개 변수가 사용됩니다.
+CreateOption이 Upload인 경우 `New-AzDiskConfig`에 대해 `DiskSizeGB` 대신 `UploadSizeInBytes` 매개 변수가 사용됩니다.
 
 #### <a name="before"></a>이전
 ```powershell
@@ -348,7 +348,7 @@ $job = New-AzRecoveryServicesAsrReplicationProtectedItem -VMwareToAzure -Account
 ## <a name="servicefabric"></a>ServiceFabric
 
 ### `Add-ServiceFabricApplicationCertificate`
-`Add-ServiceFabricApplicationCertificate`에서 이 시나리오를 처리하므로 `Add-AzVmssSecret`가 제거되었습니다.
+`Add-AzVmssSecret`에서 이 시나리오를 처리하므로 `Add-ServiceFabricApplicationCertificate`가 제거되었습니다.
 
 #### <a name="before"></a>이전
 ```powershell
