@@ -139,7 +139,7 @@ Get-InstalledModule -Name Az -AllVersions | select Name,Version
 
 Azure PowerShell의 버전을 제거하려면 [Azure PowerShell 모듈 제거](uninstall-az-ps.md)를 참조합니다.
 
-`Az` 인수를 사용하여 `-RequiredVersion` 모듈의 특정 버전을 설치하거나 로드할 수 있습니다.
+`-RequiredVersion` 인수를 사용하여 `Az` 모듈의 특정 버전을 설치하거나 로드할 수 있습니다.
 
 ```powershell-interactive
 # Install Az version 0.7.0

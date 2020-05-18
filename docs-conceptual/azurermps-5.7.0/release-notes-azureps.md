@@ -296,27 +296,27 @@ Update-Module -Name AzureRM
 * PowerShell 3 및 4에 대한 사용 중단 경고가 추가되었습니다.
 * `Add-AzureRmAccount`는 `Connect-AzureRmAccount`로 이름이 변경되었습니다. 이전 cmdlet 이름에 대한 별칭이 추가되었고 다른 별칭(`Login-AzAccount` 및 `Login-AzureRmAccount`)이 새 cmdlet 이름으로 리디렉션되었습니다.
 * `Remove-AzureRmAccount`는 `Disconnect-AzureRmAccount`로 이름이 변경되었습니다. 이전 cmdlet 이름에 대한 별칭이 추가되었고 다른 별칭(`Logout-AzAccount` 및 `Logout-AzureRmAccount`)이 새 cmdlet 이름으로 리디렉션되었습니다.
-* `Connect-AzureRmAccount` 대신 `Login-AzureRmAccount`를 사용하도록 리소스 문자열이 수정되었습니다.
+* `Login-AzureRmAccount` 대신 `Connect-AzureRmAccount`를 사용하도록 리소스 문자열이 수정되었습니다.
 * `Add-AzureRmEnvironment` 및 `Set-AzureRmEnvironment`
   - OperationalInsights 데이터 평면 RP와 함께 사용할 매개 변수로 `-AzureOperationalInsightsEndpoint` 및 `-AzureOperationalInsightsEndpointResourceId`가 추가되었습니다.
 
 ### <a name="azurermanalysisservices"></a>AzureRM.AnalysisServices
-* `Login-AzureRmAccount`를 사용하도록 `Connect-AzureRmAccount`의 사용법이 수정되었습니다.
+* `Connect-AzureRmAccount`를 사용하도록 `Login-AzureRmAccount`의 사용법이 수정되었습니다.
 
 ### <a name="azurermcompute"></a>AzureRM.Compute
-* 간소화된 매개 변수 집합 `-AvailabilitySetName`에 `New-AzureRmVM` 매개 변수가 추가되었습니다.
-* `Login-AzureRmAccount`를 사용하도록 `Connect-AzureRmAccount`의 사용법이 수정되었습니다.
+* 간소화된 매개 변수 집합 `New-AzureRmVM`에 `-AvailabilitySetName` 매개 변수가 추가되었습니다.
+* `Connect-AzureRmAccount`를 사용하도록 `Login-AzureRmAccount`의 사용법이 수정되었습니다.
 * VM 및 VM 확장 집합에 대한 사용자 할당 ID가 지원됩니다.
-    - `-IdentityType`, `-IdentityId`, `New-AzureRmVMConfig`, `New-AzureRmVmssConfig`에 `Update-AzureRmVM` 및 `Update-AzureRmVmss` 매개 변수가 추가되었습니다.
+    - `New-AzureRmVMConfig`, `New-AzureRmVmssConfig`, `Update-AzureRmVM`, `Update-AzureRmVmss`에 `-IdentityType` 및 `-IdentityId` 매개 변수가 추가되었습니다.
 * `-EnableIPForwarding` 매개 변수가 `Add-AzureRmVmssNetworkInterfaceConfig`에 추가됨
 * `-Priority` 매개 변수가 `New-AzureRmVmssConfig`에 추가됨
 
 ### <a name="azurermdatalakeanalytics"></a>AzureRM.DataLakeAnalytics
-* `Login-AzureRmAccount`를 사용하도록 `Connect-AzureRmAccount`의 사용법이 수정되었습니다.
+* `Connect-AzureRmAccount`를 사용하도록 `Login-AzureRmAccount`의 사용법이 수정되었습니다.
 
 ### <a name="azurermdatalakestore"></a>AzureRM.DataLakeStore
-* `Login-AzureRmAccount`를 사용하도록 `Connect-AzureRmAccount`의 사용법이 수정되었습니다.
-* `Test-AzureRmDataLakeStoreAccount`를 사용하여 로그인하지 않고 이 cmdlet을 실행하는 경우 오류 메시지 `Login-AzureRmAccount`가 수정되었습니다.
+* `Connect-AzureRmAccount`를 사용하도록 `Login-AzureRmAccount`의 사용법이 수정되었습니다.
+* `Login-AzureRmAccount`를 사용하여 로그인하지 않고 이 cmdlet을 실행하는 경우 오류 메시지 `Test-AzureRmDataLakeStoreAccount`가 수정되었습니다.
 
 ### <a name="azurermeventgrid"></a>AzureRM.EventGrid
 * 2018-01-01 API 버전을 사용하도록 업데이트되었습니다.
@@ -339,10 +339,10 @@ Update-Module -Name AzureRM
     - `Test-AzureRmEventHubName`
 
 ### <a name="azurerminsights"></a>AzureRM.Insights
-* `Login-AzureRmAccount`를 사용하도록 `Connect-AzureRmAccount`의 사용법이 수정되었습니다.
+* `Connect-AzureRmAccount`를 사용하도록 `Login-AzureRmAccount`의 사용법이 수정되었습니다.
 
 ### <a name="azurermkeyvault"></a>AzureRM.KeyVault
-* `Login-AzureRmAccount`를 사용하도록 `Connect-AzureRmAccount`의 사용법이 수정되었습니다.
+* `Connect-AzureRmAccount`를 사용하도록 `Login-AzureRmAccount`의 사용법이 수정되었습니다.
 
 ### <a name="azurermnetwork"></a>AzureRM.Network
 * '리소스를 덮어쓰시겠습니까?'라는 덮어쓰기 메시지가 해결되었습니다.
@@ -372,7 +372,7 @@ Update-Module -Name AzureRM
     - `Test-AzureRmServiceBusName`
 
 ### <a name="azurermusageaggregates"></a>AzureRM.UsageAggregates
-* `Login-AzureRmAccount`를 사용하도록 `Connect-AzureRmAccount`의 사용법이 수정되었습니다.
+* `Connect-AzureRmAccount`를 사용하도록 `Login-AzureRmAccount`의 사용법이 수정되었습니다.
 
 ## <a name="520---january-2018"></a>5.2.0 - 2018년 1월
 #### <a name="azurermprofile"></a>AzureRM.Profile
@@ -768,7 +768,7 @@ Update-Module -Name AzureRM
     - `UserAccounts` 매개 변수를 추가했습니다.
       - 이 매개 변수는 풀의 각 노드에서 만든 사용자 계정을 정의합니다.
     - `TargetLowPriorityComputeNodes`를 추가하고 `TargetDedicated`의 이름을 `TargetDedicatedComputeNodes`으로 변경했습니다.
-      - `TargetDedicated` 매개 변수에 대해 `TargetDedicatedComputeNodes` 별칭이 만들어졌습니다.
+      - `TargetDedicatedComputeNodes` 매개 변수에 대해 `TargetDedicated` 별칭이 만들어졌습니다.
     - `NetworkConfiguration` 매개 변수를 추가했습니다.
       - 이 매개 변수를 사용하면 풀 네트워크 설정을 구성할 수 있습니다.
   * 매개 변수를 `New-AzureBatchCertificate`로 업데이트했습니다.
@@ -777,13 +777,13 @@ Update-Module -Name AzureRM
     - `Password` 매개 변수가 이제 `SecureString`이 되었습니다.
   * 매개 변수를 `Set-AzureBatchComputeNodeUser`로 업데이트했습니다.
     - `Password` 매개 변수가 이제 `SecureString`이 되었습니다.
-  * `Name`, `Path`, 및 `Get-AzureBatchNodeFile`에서 `Get-AzureBatchNodeFileContent` 매개 변수의 이름이 `Remove-AzureBatchNodeFile`로 변경되었습니다.
-    - `Name` 매개 변수에 대해 `Path` 별칭이 만들어졌습니다.
+  * `Get-AzureBatchNodeFile`, `Get-AzureBatchNodeFileContent`, 및 `Remove-AzureBatchNodeFile`에서 `Name` 매개 변수의 이름이 `Path`로 변경되었습니다.
+    - `Path` 매개 변수에 대해 `Name` 별칭이 만들어졌습니다.
   * 개체에 대한 변경 사항
     - 전체 목록은 일괄 처리 변경 로그를 참조하세요.
   * Azure Active Directory 기반 인증에 대한 지원이 추가되었습니다.
-    - Azure Active Directory 인증을 사용하려면 `BatchAccountContext` cmdlet를 사용하여 `Get-AzureRmBatchAccount` 개체를 검색하고 이 `BatchAccountContext`를 일괄 처리 서비스 cmdlet의 `-BatchContext` 매개 변수에 제공합니다. Azure Active Directory 인증은 `PoolAllocationMode = UserSubscription`이 있는 계정에 필수입니다.
-    - 기존 계정 또는 `PoolAllocationMode = BatchService`로 만든 새 계정의 경우, `BatchAccountContext` cmdlet를 사용하는 `Get-AzureRmBatchAccoutKeys` 개체를 검색하여 공유 키 인증을 계속 사용할 수 있습니다.
+    - Azure Active Directory 인증을 사용하려면 `Get-AzureRmBatchAccount` cmdlet를 사용하여 `BatchAccountContext` 개체를 검색하고 이 `BatchAccountContext`를 일괄 처리 서비스 cmdlet의 `-BatchContext` 매개 변수에 제공합니다. Azure Active Directory 인증은 `PoolAllocationMode = UserSubscription`이 있는 계정에 필수입니다.
+    - 기존 계정 또는 `PoolAllocationMode = BatchService`로 만든 새 계정의 경우, `Get-AzureRmBatchAccoutKeys` cmdlet를 사용하는 `BatchAccountContext` 개체를 검색하여 공유 키 인증을 계속 사용할 수 있습니다.
 * 컴퓨팅
   * Azure Disk Encryption 확장 명령
     - 'Set-AzureRmVmDiskEncryptionExtension'에 대한 새 매개 변수': '-EncryptFormatAll' 암호화 형식 데이터 디스크

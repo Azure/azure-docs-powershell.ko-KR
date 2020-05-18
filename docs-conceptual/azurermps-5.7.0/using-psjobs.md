@@ -69,7 +69,7 @@ MyVm                 MyVm   eastus Standard_DS1_v2 Windows    MyVm          Crea
 
 > [!NOTE]
 > `Receive-Job`은 `-AsJob` 플래그가 없는 것처럼 cmdlet으로부터 결과를 반환합니다.
-> 예를 들어 `Receive-Job`의 `Do-Action -AsJob` 결과는 `Do-Action`의 결과와 같은 형식입니다.
+> 예를 들어 `Do-Action -AsJob`의 `Receive-Job` 결과는 `Do-Action`의 결과와 같은 형식입니다.
 
 ```azurepowershell-interactive
 $vm = Receive-Job $job

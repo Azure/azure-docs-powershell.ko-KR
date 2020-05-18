@@ -35,7 +35,7 @@ ms.locfileid: "67863547"
 이 릴리스에는 다음과 같은 출력 형식이 적용됩니다.
 
 ### <a name="psvirtualmachine"></a>PSVirtualMachine
-- `DataDiskNames` 개체의 최상위 수준 속성 `NetworkInterfaceIDs` 및 `PSVirtualMachine`가 출력 형식에서 제거되었습니다. 이러한 속성은 `StorageProfile` 개체의 `NetworkProfile` 및 `PSVirtualMachine` 속성에서 항상 사용 가능하며 앞으로 액세스하는 데 필요한 방법이 될 것입니다.
+- `PSVirtualMachine` 개체의 최상위 수준 속성 `DataDiskNames` 및 `NetworkInterfaceIDs`가 출력 형식에서 제거되었습니다. 이러한 속성은 `PSVirtualMachine` 개체의 `StorageProfile` 및 `NetworkProfile` 속성에서 항상 사용 가능하며 앞으로 액세스하는 데 필요한 방법이 될 것입니다.
 - 이 변경 사항은 다음 cmdlet에 적용됩니다.
     - `Add-AzureRmVMDataDisk`
     - `Add-AzureRmVMNetworkInterface`
@@ -195,7 +195,7 @@ Update-AzureRmDiagnosticSettings
 이 릴리스에는 다음과 같은 cmdlet이 적용됩니다.
 
 ### <a name="new-azurermvirtualnetworkgatewayconnection"></a>New-AzureRmVirtualNetworkGatewayConnection
-- `EnableBgp` 매개 변수가 `boolean` 대신 `string`을 사용하도록 변경되었습니다.
+- `EnableBgp` 매개 변수가 `string` 대신 `boolean`을 사용하도록 변경되었습니다.
 
 ```powershell-interactive
 # Old
@@ -391,7 +391,7 @@ Save-AzureRmContext -Path c:\mydir\myprofile.json
 ```
 ### <a name="breaking-changes-to-output-psazurecontext-type"></a>출력 PSAzureContext 형식의 주요 변경 내용
 
-- ```TokenCache``` 속성이 ```IAzureTokenCache``` 대신 ```byte[]```를 구현하는 형식으로 변경되었습니다.
+- ```TokenCache``` 속성이 ```byte[]``` 대신 ```IAzureTokenCache```를 구현하는 형식으로 변경되었습니다.
 
 ```powershell-interactive
 # Old

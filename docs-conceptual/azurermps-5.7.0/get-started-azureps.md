@@ -110,7 +110,7 @@ cloud-shell-storage-westus westus
 SampleVM                   eastus
 ```
 
-**cloud-shell-storage-westus** 리소스 그룹은 Cloud Shell을 처음 사용할 때 만들어집니다. **cmdlet으로**SampleVM`New-AzureRmVM` 리소스 그룹을 만듭니다.
+**cloud-shell-storage-westus** 리소스 그룹은 Cloud Shell을 처음 사용할 때 만들어집니다. `New-AzureRmVM` cmdlet으로 **SampleVM** 리소스 그룹을 만듭니다.
 
 이제 이 새 리소스 그룹에서 만든 다른 리소스는 무엇인가요?
 
