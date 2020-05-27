@@ -1,18 +1,15 @@
 ---
 title: Azure PowerShell 릴리스 정보
 description: Azure PowerShell 모듈의 모든 최신 업데이트에 대해 알아봅니다.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 04/30/2019
-ms.openlocfilehash: 8a9a399f72ed9e3e9a3cbc09c8a4abaa91339c24
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 287e9e1f066d0768e7f572ca7f5f2ee2b78931d9
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "71319301"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83386972"
 ---
 ## <a name="180---april-2019"></a>1.8.0 - 2019년 4월
 ### <a name="highlights-since-the-last-major-release"></a>마지막 주 릴리스 이후의 주요 사항

@@ -2,17 +2,14 @@
 title: Azure PowerShell 제거
 description: Azure PowerShell의 전체 제거를 수행하는 방법
 ms.date: 10/22/2019
-author: sptramer
-ms.author: sttramer
-ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: 37f152fb43e23c361544db4a738d58911099da1f
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 1bf94f4c7a27328b60b7f9369888f688541ba4a7
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81740527"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83386870"
 ---
 # <a name="uninstall-the-azure-powershell-module"></a>Azure PowerShell 모듈 제거
 

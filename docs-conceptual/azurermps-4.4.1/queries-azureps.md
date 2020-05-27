@@ -1,18 +1,15 @@
 ---
 title: Azure 리소스에 대한 쿼리 및 결과 서식 지정 | Microsoft Docs
 description: Azure에서 리소스에 대한 쿼리 및 결과 형식을 지정하는 방법입니다.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
-ms.openlocfilehash: db161bb0ec1b25b1cb7445724cc5758599dbc674
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 23cc0d13e9ecb17bef04cedc8a0f395a04e89390
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "65534625"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83386479"
 ---
 # <a name="querying-for-azure-resources"></a>Azure 리소스에 대한 쿼리
 

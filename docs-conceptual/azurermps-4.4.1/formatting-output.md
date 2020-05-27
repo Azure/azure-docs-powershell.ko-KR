@@ -1,18 +1,15 @@
 ---
 title: 쿼리 결과 서식 지정 | Microsoft Docs
 description: Azure에서 리소스에 대한 쿼리 및 결과 형식을 지정하는 방법입니다.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
-ms.openlocfilehash: 7f6cf61eef9c5549dfe78d2d801ab1278db40c17
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: a76ceee5ae1172630d74afd3c671031592d78a8b
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "67863558"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83386768"
 ---
 # <a name="formatting-query-results"></a>쿼리 결과 서식 지정
 

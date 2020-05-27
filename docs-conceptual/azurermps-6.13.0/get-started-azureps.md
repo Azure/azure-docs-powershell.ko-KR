@@ -1,18 +1,15 @@
 ---
 title: Azure PowerShell 시작
 description: ''
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/11/2018
-ms.openlocfilehash: 61d6d19336dd0e1885570c3a4e8874a849317fa3
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 471acc38b1568539780d52ac0a2a9903e944eca1
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "75722427"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83387958"
 ---
 # <a name="get-started-with-azure-powershell"></a>Azure PowerShell 시작
 

@@ -1,19 +1,15 @@
 ---
 title: Azure PowerShell 개요 | Microsoft Docs
 description: 설치 및 구성에 대한 링크를 포함한 Azure PowerShell 개요입니다.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.manager: carmonm
 ms.date: 12/20/2018
-ms.openlocfilehash: a5c5504aa4c2932582df9e4a40b4950d5f999cbd
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 91607252c33deb05efebb2d02608084a4b9c7b35
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "75035849"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83385561"
 ---
 # <a name="overview-of-azure-powershell"></a>Azure PowerShell 개요
 
@@ -37,7 +33,7 @@ PowerShell에 대해 익숙하지 않으면 PowerShell 소개가 도움이 될 �
 * [PowerShell 설치](/powershell/scripting/install/installing-windows-powershell)
 * [PowerShell 스크립팅](/powershell/scripting/powershell-scripting)
 
-[PowerShell 기본 사항: (1부) PowerShell 시작](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1) 비디오를 시청할 수도 있습니다.
+이 비디오를 시청할 수도 있습니다. [PowerShell 기본 사항: (파트 1)PowerShell 시작](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1)
 
 ## <a name="build-your-skills-with-microsoft-learn"></a>Microsoft Learn을 통해 기술 쌓기
 

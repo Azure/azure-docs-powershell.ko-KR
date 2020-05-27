@@ -1,19 +1,16 @@
 ---
 title: Azure PowerShell 변경 로그 | Microsoft Docs
 description: Azure PowerShell에 대한 최신 릴리스의 변경 내용입니다.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: ''
 ms.date: 07/26/2017
-ms.openlocfilehash: 1491f3f23deb767b754a98b3fab616356daa71f3
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: bdd8e71460a9adcdb2cc87544f81f82c96380ec7
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "67863777"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83387397"
 ---
 # <a name="release-notes"></a>릴리스 정보
 
@@ -55,7 +52,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
     - 새 cmdlet: ‘Set-AzureRmVmssDiskEncryptionExtension’은 VM 확장 집합에서 디스크 암호화를 사용하도록 설정합니다.
     - 새 cmdlet: ‘Disable-AzureRmVmssDiskEncryption’은 VM 확장 집합에서 디스크 암호화를 사용하지 않도록 설정합니다.
     - 새 cmdlet: ‘Get-AzureRmVmssDiskEncryptionStatus’는 VM 확장 집합의 디스크 암호화 상태를 표시합니다.
-    - 새 cmdlet: ‘Get-AzureRmVmssVMDiskEncryptionStatus’는 VM 확장 집합에서 VM의 디스크 암호화 상태를 표시합니다.
+    - 새 cmdelt: ‘Get-AzureRmVmssVMDiskEncryptionStatus’는 VM 확장 집합의 디스크 암호화 상태를 표시합니다.
 * ContainerInstance
   * Azure Container Registry에 대한 PowerShell cmdlet 추가
     - New-AzureRmContainerGroup
@@ -96,9 +93,9 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
     * Undo-AzureKeyVaultCertificateRemoval
 * 네트워크
   * Virtual Network 서브넷에 엔드포인트 서비스 지원 추가됨
-    - Add-AzureRmVirtualSubnetConfig 업데이트: 선택적 매개 변수 -ServiceEndpoint 추가됨
-    - New-AzureRmVirtualSubnetConfig 업데이트: 선택적 매개 변수 -ServiceEndpoint 추가됨
-    - Set-AzureRmVirtualSubnetConfig 업데이트: 선택적 매개 변수 -ServiceEndpoint 추가됨
+    - 업데이트된 Add-AzureRmVirtualSubnetConfig: 추가된 선택적 매개 변수 -ServiceEndpoint
+    - 업데이트된 New-AzureRmVirtualSubnetConfig: 추가된 선택적 매개 변수 -ServiceEndpoint
+    - 업데이트된 Set-AzureRmVirtualSubnetConfig: 추가된 선택적 매개 변수 -ServiceEndpoint
   * 위치에서 사용할 수 있는 목록 엔드포인트 서비스에 cmdlet 추가됨
     - Get-AzureRmVirtualNetworkAvailableEndpointService
   * 다음 commandlet에 외부 radius 기반 P2S 인증을 구성하는 기능 추가됨
@@ -109,41 +106,41 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
     - New-AzureRmVpnClientConfiguration
     - Get-AzureRmVpnClientConfiguration
   * 공용 IP 주소 및 부하 분산 장치에 SKU 매개 변수 지원 추가됨
-    - New-AzureRMLoadBalancer 업데이트: 선택적 매개 변수 -Sku 추가됨
-    - New-AzureRMPublicIpAddress 업데이트: 선택적 매개 변수 -Sku 추가됨
+    - 업데이트된 New-AzureRMLoadBalancer: 선택적 매개 변수 추가됨 -Sku
+    - 업데이트된 New-AzureRMPublicIpAddress: 선택적 매개 변수 추가됨 -Sku
   * 부하 분산 장치 규칙에 DisableOutboundSNAT 지원 추가됨
-    - New-AzureRMLoadBalancerRuleConfig 업데이트: 선택적 매개 변수 DisableOutboundSNAT 추가됨
-    - Add-AzureRMLoadBalancerRuleConfig 업데이트: 선택적 매개 변수 DisableOutboundSNAT 추가됨
-    - Set-AzureRMLoadBalancerRuleConfig 업데이트: 선택적 매개 변수 DisableOutboundSNAT 추가됨
+    - 업데이트된 New-AzureRMLoadBalancerRuleConfig: 선택적 매개 변수 DisableOutboundSNAT 추가됨
+    - 업데이트된 Add-AzureRMLoadBalancerRuleConfig: 선택적 매개 변수 DisableOutboundSNAT 추가됨
+    - 업데이트된 Set-AzureRMLoadBalancerRuleConfig: 선택적 매개 변수 DisableOutboundSNAT 추가됨
   * IkeV2 P2S에 대한 지원 추가됨
-    - New-AzureRmVirtualNetworkGateway 업데이트: 선택적 매개 변수 -VpnClientProtocol 추가됨, 기본값은 [ “SSTP”, “IkeV2” ]
-    - Set-AzureRmVirtualNetworkGateway 업데이트: 선택적 매개 변수 -VpnClientProtocol 추가됨
+    - 업데이트된 New-AzureRmVirtualNetworkGateway: 선택적 매개 변수 -VpnClientProtocol 추가됨, 기본값은 [ “SSTP”, “IkeV2” ]
+    - 업데이트된 Set-AzureRmVirtualNetworkGateway: 선택적 매개 변수-VpnClientProtocol 추가됨
   * 네트워크 보안 규칙 및 효과적인 네트워크 보안 규칙의 다중값 규칙 지원 추가됨
-    - Add-AzureRmNetworkSecurityRuleConfig 업데이트: 문자열 목록을 수락하는 SourcePortRange, DestinationPortRange, SourceAddressPrefix 매개 변수 업데이트
-    - New-AzureRmNetworkSecurityRuleConfig 업데이트: 문자열 목록을 수락하는 SourcePortRange, DestinationPortRange, SourceAddressPrefix 매개 변수 업데이트
-    - Set-AzureRmNetworkSecurityRuleConfig 업데이트: 문자열 목록을 수락하는 SourcePortRange, DestinationPortRange, SourceAddressPrefix 매개 변수 업데이트
-    - Add-AzureRmNetworkSecurityRuleConfig 업데이트: 문자열 목록을 수락하는 SourcePortRange, DestinationPortRange, SourceAddressPrefix 매개 변수 업데이트
-    - New-AzureRmNetworkSecurityGroup 업데이트: PSSecurityRule 개체에서 문자열 목록인 SourcePortRange, DestinationPortRange, SourceAddressPrefix 매개 변수를 수락하는 SecurityRules 매개 변수 업데이트
-    - Get-AzureRmEffectiveNetworkSecurityGroup 업데이트: 매개 변수 TagMap 추가됨
-    - Get-AzureRmEffectiveNetworkSecurityGroup 업데이트: 문자열 목록인 SourcePortRange, DestinationPortRange, SourceAddressPrefix 매개 변수와 반환된 PSEffectiveSecurityRule 개체가 업데이트되었습니다.
+    - 업데이트된 Add-AzureRmNetworkSecurityRuleConfig: 문자열 목록을 수락하는 SourcePortRange, DestinationPortRange, SourceAddressPrefix 매개 변수 업데이트
+    - 업데이트된 New-AzureRmNetworkSecurityRuleConfig: 문자열 목록을 수락하는 SourcePortRange, DestinationPortRange, SourceAddressPrefix 매개 변수 업데이트
+    - 업데이트된 Set-AzureRmNetworkSecurityRuleConfig: 문자열 목록을 수락하는 SourcePortRange, DestinationPortRange, SourceAddressPrefix 매개 변수 업데이트
+    - 업데이트된 Add-AzureRmNetworkSecurityRuleConfig: 문자열 목록을 수락하는 SourcePortRange, DestinationPortRange, SourceAddressPrefix 매개 변수 업데이트
+    - 업데이트된 New-AzureRmNetworkSecurityGroup : PSSecurityRule 개체에서 문자열 목록인 SourcePortRange, DestinationPortRange, SourceAddressPrefix 매개 변수를 수락하는 SecurityRules 매개 변수 업데이트
+    - 업데이트된 Get-AzureRmEffectiveNetworkSecurityGroup: 매개 변수 TagMap이 추가됨
+    - 업데이트된 Get-AzureRmEffectiveNetworkSecurityGroup: 문자열 목록인 SourcePortRange, DestinationPortRange, SourceAddressPrefix 매개 변수와 반환된 PSEffectiveSecurityRule 개체가 업데이트되었습니다.
   * 가상 네트워크에 대한 DDoS 보호 지원 추가됨
-    - New-AzureRmVirtualNetwork 업데이트: 스위치 매개 변수 EnableDDoSProtection 및 EnableVmProtection 추가됨
+    - 업데이트된 New-AzureRmVirtualNetwork: 스위치 매개 변수 EnableDDoSProtection 및 EnableVmProtection 추가됨
     - PSVirtualNetwork 개체에서 속성 EnableDDoSProtection 및 EnableVmProtection 추가됨
   * 항상 사용 가능한 내부 부하 분산 장치에 대한 지원 추가됨
-    - Add-AzureRmLoadBalancerRuleConfig 업데이트: 프로토콜 매개 변수에 대한 허용되는 값으로 모두 추가됨
-    - New-AzureRmLoadBalancerRuleConfig 업데이트: 프로토콜 매개 변수에 대한 허용되는 값으로 모두 추가됨
-    - Set-AzureRmLoadBalancerRuleConfig 업데이트: 프로토콜 매개 변수에 대한 허용되는 값으로 모두 추가됨
+    - 업데이트된 Add-AzureRmLoadBalancerRuleConfig: 프로토콜 매개 변수에 대해 허용되는 값으로 모두 추가됨
+    - 업데이트된 New-AzureRmLoadBalancerRuleConfig: 프로토콜 매개 변수에 대해 허용되는 값으로 모두 추가됨
+    - 업데이트된 Set-AzureRmLoadBalancerRuleConfig: 프로토콜 매개 변수에 대해 허용되는 값으로 모두 추가됨
   * 애플리케이션 보안 그룹에 대한 지원 추가됨
     - New-AzureRmApplicationSecurityGroup 추가됨
     - Get-AzureRmApplicationSecurityGroup 추가됨
     - Remove-AzureRmApplicationSecurityGroup 추가됨
-    - New-AzureRmNetworkInterface 업데이트: 선택적 매개 변수 ApplicationSecurityGroup 및 ApplicationSecurityGroupId 추가됨
-    - New-AzureRmNetworkInterfaceIpConfig 업데이트: 선택적 매개 변수 ApplicationSecurityGroup 및 ApplicationSecurityGroupId 추가됨
-    - Add-AzureRmNetworkInterfaceIpConfig 업데이트: 선택적 매개 변수 ApplicationSecurityGroup 및 ApplicationSecurityGroupId 추가됨
-    - Set-AzureRmNetworkInterfaceIpConfig 업데이트: 선택적 매개 변수 ApplicationSecurityGroup 및 ApplicationSecurityGroupId 추가됨
-    - New-AzureRmNetworkSecurityRuleConfig 업데이트: 선택적 매개 변수 SourceApplicationSecurityGroup, SourceApplicationSecurityGroupId, DestinationApplicationSecurityGroup 및 DestinationApplicationSecurityGroupId 추가됨
-    - Add-AzureRmNetworkSecurityRuleConfig 업데이트: 선택적 매개 변수 SourceApplicationSecurityGroup, SourceApplicationSecurityGroupId, DestinationApplicationSecurityGroup 및 DestinationApplicationSecurityGroupId 추가됨
-    - Set-AzureRmNetworkSecurityRuleConfig 업데이트: 선택적 매개 변수 SourceApplicationSecurityGroup, SourceApplicationSecurityGroupId, DestinationApplicationSecurityGroup 및 DestinationApplicationSecurityGroupId 추가됨
+    - 업데이트된 New-AzureRmNetworkInterface: 선택적 매개 변수 ApplicationSecurityGroup 및 ApplicationSecurityGroupId 추가됨
+    - 업데이트된 New-AzureRmNetworkInterfaceIpConfig: 선택적 매개 변수 ApplicationSecurityGroup 및 ApplicationSecurityGroupId 추가됨
+    - 업데이트된 Add-AzureRmNetworkInterfaceIpConfig: 선택적 매개 변수 ApplicationSecurityGroup 및 ApplicationSecurityGroupId 추가됨
+    - 업데이트된 Set-AzureRmNetworkInterfaceIpConfig: 선택적 매개 변수 ApplicationSecurityGroup 및 ApplicationSecurityGroupId 추가됨
+    - 업데이트된 New-AzureRmNetworkSecurityRuleConfig: 선택적 매개 변수 SourceApplicationSecurityGroup, SourceApplicationSecurityGroupId, DestinationApplicationSecurityGroup 및 DestinationApplicationSecurityGroupId 추가됨
+    - 업데이트된 Add-AzureRmNetworkSecurityRuleConfig: 선택적 매개 변수 SourceApplicationSecurityGroup, SourceApplicationSecurityGroupId, DestinationApplicationSecurityGroup 및 DestinationApplicationSecurityGroupId 추가됨
+    - 업데이트된 Set-AzureRmNetworkSecurityRuleConfig: 선택적 매개 변수 SourceApplicationSecurityGroup, SourceApplicationSecurityGroupId, DestinationApplicationSecurityGroup 및 DestinationApplicationSecurityGroupId 추가됨
   * VpnDeviceConfiguration 스크립트에 대한 새 명령 추가됨
     - Get-AzureRmVirtualNetworkGatewaySupportedVpnDevices
     - Get-AzureRmVirtualNetworkGatewayConnectionVpnDeviceConfigScript
@@ -221,7 +218,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
   * NodeConfiguration 빌드 버전 관리에 대한 지원이 StartAzureAutomationDscCompilationJob 및 ImportAzureAutomationDscNodeConfiguration에서 추가되었습니다.
   * 기존 문제에 대한 버그 수정 - 별칭 문제 해결은 #3775이며 runOn 별칭 및 HybridWorkers에 대한 지원
 * 컴퓨팅
-  * Set-AzureRmVMAEMExtension: 새로운 프리미엄 디스크 크기에 대한 지원 추가
+  * Set-AzureRmVMAEMExtension: 새로운 프리미엄 Azure Data Box Disk 크기에 대한 지원 추가
   * Set-AzureRmVMAEMExtension: M 시리즈에 대한 지원 추가
   * ForceUpdateTag 매개 변수를 Add-AzureRmVmssExtension에 추가
   * 기본 매개 변수를 New-AzureRmVmssIpConfig에 추가
@@ -388,7 +385,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
         - 문제 #1: 백 엔드는 각 200개의 레코드 페이지에서 레코드를 반환하며, 연속 토큰에서 다음 페이지로 연결됩니다. 200개 이상의 레코드가 있더라도 cmdlet에서는 반환되는 200개의 레코드만이 표시되었습니다. 200보다 값이 작지 않으면 MaxEvents에 설정한 값에 관계없이 발생했습니다.
         - 문제 #2: 예를 들어 설명서에 포함된 이 cmdlet에 대한 잘못된 데이터는 기본 timewindow가 1시간이었습니다.
         - 수정 사항 #1: 이제 cmdlet은 MaxEvents 또는 집합의 끝에 도달할 때까지 백 엔드에서 반환한 연속 토큰을 수행합니다.<br>MaxEvents의 기본값은 1000이며 최대 100000입니다. 1보다 작은 MaxEvents 값은 무시되고 대신 기본값이 사용됩니다. 이러한 값과 동작은 변경되지 않았으며 이제 올바르게 문서화됩니다.<br>cmdlet의 이름이 이벤트가 아닌 로그를 가리키기 때문에 MaxEvents의 별칭인 MaxRecords가 추가되었습니다.
-        - 수정 #2: 설명서는 새 별칭, 올바른 시간 창, 올바른 기본, 최소 및 최대 값에 대한 정확하고 자세한 정보를 포함합니다.
+        - 수정 사항 #2: 설명서는 새 별칭, 올바른 시간 범위, 올바른 기본, 최소 및 최대 값에 대한 정확하고 자세한 정보를 포함합니다.
 * KeyVault
     * -UserPrincipalName을 Set-AzureRMKeyVaultAccessPolicy 및 Remove-AzureRMKeyVaultAccessPolicy cmdlet에 지정한 경우 디렉터리 쿼리에서 전자 메일 주소를 제거합니다.
       - 이제 cmdlet 모두에 전자 메일 주소를 적절히 쿼리하는 경우 -UserPrincipalName 매개 변수 대신 사용할 수 있는 -EmailAddress 매개 변수를 만들었습니다.  디렉터리에 있는 둘 이상의 전자 메일 주소가 일치하는 경우 cmdlet이 실패합니다.
@@ -401,8 +398,8 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
             - Add-AzureRmApplicationGatewaySslPolicy
             - New-AzureRmApplicationGatewaySslPolicy
             - Set-AzureRmApplicationGatewaySslPolicy
-        - Get-AzureRmApplicationGatewayAvailableSslOptions(별칭: List-AzureRmApplicationGatewayAvailableSslOptions)를 추가했습니다.
-        - Get-AzureRmApplicationGatewaySslPredefinedPolicy(별칭: List-AzureRmApplicationGatewaySslPredefinedPolicy)를 추가했습니다.
+        - Get-AzureRmApplicationGatewayAvailableSslOptions 추가됨(별칭: List-AzureRmApplicationGatewayAvailableSslOptions)
+        - Get-AzureRmApplicationGatewaySslPredefinedPolicy 추가됨(별칭: List-AzureRmApplicationGatewaySslPredefinedPolicy)
     * Application Gateway에서 리디렉션 지원을 추가했습니다.
         - Add-AzureRmApplicationGatewayRedirectConfiguration을 추가했습니다.
         - Get-AzureRmApplicationGatewayRedirectConfiguration을 추가했습니다.
@@ -452,21 +449,21 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
         - 이 문제에 대한 자세한 내용: https://github.com/Azure/azure-powershell/issues/635 참조
 * ServiceManagement ExpressRoute의 경우:
     * 다음과 같은 새 옵션을 추가하는 New-AzureBgpPeering cmdlet을 업데이트했습니다.
-        - PeerAddressType: 해당 주소 제품군 형식의 BGP 피어링 만들기 위해 "IPv4" 또는 "IPv6" 값을 지정할 수 있습니다.
+        - PeerAddressType : 해당 주소 제품군 형식의 BGP 피어링을 만들기 위해 "IPv4" 또는 "IPv6" 값을 지정할 수 있습니다.
     * 다음과 같은 새 옵션을 추가하는 Set-AzureBgpPeering cmdlet을 업데이트했습니다.
-        - PeerAddressType: 해당 주소 제품군 형식의 BGP 피어링 업데이트하기 위해 "IPv4" 또는 "IPv6" 값을 지정할 수 있습니다.
+        - PeerAddressType : 해당 주소 제품군 형식의 BGP 피어링을 만들기 위해 "IPv4" 또는 "IPv6" 값을 지정할 수 있습니다.
     * 다음과 같은 새 옵션을 추가하는 Remove-AzureBgpPeering cmdlet을 업데이트했습니다.
-        - PeerAddressType: 해당 주소 제품군 형식의 BGP 피어링 또는 모든 항목을 제거하기 위해 "IPv4", "IPv6" 및 모든 값을 지정할 수 있습니다.
+        - PeerAddressType : 해당 주소 제품군 형식의 BGP 피어링 또는 모든 항목을 제거하기 위해 "IPv4", "IPv6" 및 모든 값을 지정할 수 있습니다.
 
 ## <a name="20170607---version-410"></a>2017.06.07 - 버전 4.1.0
 * AnalysisServices
-    * B1, B2, S0라는 새 SKU가 추가되었습니다.
+    * 새 SKU가 추가되었습니다: B1, B2, S0
     * 스케일 업/다운 지원이 추가되었습니다.
 * CognitiveServices
     * Cognitive Services 리소스를 만들 때 라이선스 규약을 자세히 표시하도록 업데이트합니다.
 * 컴퓨팅
     * 여러 개의 Managed Disks가 있는 가상 머신에서 Test-AzureRmVMAEMExtension을 수정합니다.
-    * Set-AzureRmVMAEMExtension을 업데이트했습니다. Premium Managed Disks에 대한 캐시 정보를 추가합니다.
+    * 업데이트된 Set-AzureRmVMAEMExtension: 프리미엄 관리 디스크에 대한 캐싱 정보 추가
     * Add-AzureRmVhd: VHD의 크기 제한이 4TB로 확장되었습니다.
     * Stop-AzureRmVM: STayProvisioned 매개 변수에 대한 설명서를 분류합니다.
     * New-AzureRmDiskUpdateConfig
@@ -511,7 +508,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
     * roleassignments의 수가 1000보다 큰 경우 Get-AzureRMRoleAssignment가 잘못된 요청을 발생시키는 문제를 수정했습니다.
         * 이제 사용자는 반환되는 roleassignments가 1000보다 큰 경우에도 Get-AzureRMRoleAssignment를 사용할 수 있습니다.
 * Sql
-    * Restore-AzureRmSqlDatabase: 설명서 예제를 업데이트합니다.
+    * Restore-AzureRmSqlDatabase: 업데이트 설명서 예제
 * 스토리지
     * AssignIdentity 설정 지원을 리소스 모드 스토리지 계정 cmdlet에 추가합니다.
         * New-AzureRmStorageAccount
@@ -609,14 +606,14 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
   - Get-AzureRmMetricDefinition
     + 출력은 여전히 목록이지만 목록 구조가 변경되었습니다.
   - Get-AzureRmMetric
-    + 호출이 변경되었습니다. 새 구문: Get-AzureRmMetric ResourceId [MetricNames [TimeGrain] [AggregationType] [StartTime] [EndTime]] [DetailedOutput]
+    + 호출이 변경되었습니다. 새 구문은 다음과 같습니다. Get-AzureRmMetric ResourceId [MetricNames [TimeGrain] [AggregationType] [StartTime] [EndTime]] [DetailedOutput]
     + 출력은 목록이며 해당 요소의 구조가 변경되었습니다.
 * KeyVault
   - KeyVault 비밀에 대한 백업/복원 지원 추가
     + 비밀을 백업 및 복원할 수 있으며 키에 대해 현재 지원되는 기능과 일치합니다.
 
   - 키 및 비밀에 대한 Backup cmdlet은 이제 해당 개체를 입력 매개 변수로 수락합니다.
-    + 호출자는 검색 및 백업 작업을 연쇄적으로 진행할 수 있음: Get-AzureKeyVaultKey -VaultName myVault -Name myKey | Backup-AzureKeyVaultKey
+    + 호출자는 검색 및 백업 작업을 연결할 수 있습니다. Get-AzureKeyVaultKey -VaultName myVault -Name myKey | Backup-AzureKeyVaultKey
 
   - 이제 Backup cmdlet은 기존 파일을 덮어쓰기 위한 -Force 스위치를 지원합니다.
     + 기존 파일을 덮어쓰려고 해도 더 이상 오류가 throw되지 않으며 대신, 사용자에게 진행 방법을 선택하라는 메시지가 표시됩니다.

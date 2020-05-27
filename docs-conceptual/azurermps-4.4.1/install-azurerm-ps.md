@@ -1,18 +1,15 @@
 ---
 title: Azure PowerShell 설치 및 구성 | Microsoft Docs
 description: Azure PowerShell을 처음으로 설치하고 구성하는 방법입니다.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/27/2018
-ms.openlocfilehash: 7b099fead7cb985fc8f7e6fed55b8c1107caa0d9
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 6f894546364e6a5ae06e1915a166edb258ccc698
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "75720381"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83386751"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>PowerShellGet으로 Azure PowerShell을 설치
 
@@ -59,7 +56,7 @@ PowerShellGet을 설치하지 않은 경우 이 문서의 [PowerShellGet을 가�
 > [!IMPORTANT]
 > 이 문서에서 설명된 모듈인 AzureRM에서는 .NET Framework를 사용합니다. 이렇게 하면 .NET Core를 사용하는 PowerShell 6.0과 호환되지 않습니다. PowerShell 6.0을 사용하는 경우, [macOS 및 Linux에 대한 설치 지침](install-azurermps-maclinux.md)을 따릅니다.
 
-## <a name="step-2-install-azure-powershell"></a>2단계: Azure PowerShell 설치
+## <a name="step-2-install-azure-powershell"></a>2단계: Azure Powershell 설치
 
 PowerShell 갤러리에서 Azure PowerShell을 설치하려면 상승된 권한이 필요합니다. 상승된 PowerShell 세션에서 다음 명령을 실행합니다.
 

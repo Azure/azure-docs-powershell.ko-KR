@@ -5,11 +5,11 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 11/04/2019
 ms.openlocfilehash: 06be35bc3573d00d90a8cf2d822ac051ab72f6bb
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.sourcegitcommit: 10ec909100a70acec94d42f6084e7bf0342c6854
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387669"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83624322"
 ---
 # <a name="migration-guide-for-az-300"></a>Az 3.0.0 마이그레이션 가이드
 

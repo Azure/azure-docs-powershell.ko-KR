@@ -4,12 +4,12 @@ description: Azure에서 리소스에 대한 쿼리 및 결과 형식을 지정�
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 01/10/2019
-ms.openlocfilehash: 15067736388b35d2283932b1ca4e9a0d968315a9
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.openlocfilehash: ebd108a2c13bdb376213d054fb72188e6205a565
+ms.sourcegitcommit: 10ec909100a70acec94d42f6084e7bf0342c6854
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83386938"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83624309"
 ---
 # <a name="query-output-of-azure-powershell"></a>Azure PowerShell 쿼리 출력 
 
@@ -73,7 +73,7 @@ TestVM 711d8ed1-b888-4c52-8ab9-66f07b87eb6b Succeeded
 Azure PowerShell cmdlet 출력의 일부 속성은 `Get-AzVM` 출력의 `StorageProfile` 속성과 같은 중첩된 개체를 사용합니다. 중첩 된 속성에서 값을 가져오려면, `Select-Object`에 대한 사전 인수의 일부로 검사할 값의 전체 경로 및 표시 이름을 제공하세요.
 
 ```azurepowershell-interactive
-Get-AzVM -ResourceGroupName TestGroup |
+Get-AzVM -ResourceGroupName TestGroup | `
     Select-Object Name,@{Name="OSType"; Expression={$_.StorageProfile.OSDisk.OSType}}
 ```
 
@@ -92,7 +92,7 @@ WinVM   Windows
 `Where-Object` cmdlet을 사용하면 중첩 속성을 포함하여 속성 값에 기반하여 결과를 필터링할 수 있습니다. 다음 예제는 `Where-Object`를 사용하여 리소스 그룹에서 Linux VM을 찾는 방법을 보여줍니다.
 
 ```azurepowershell-interactive
-Get-AzVM -ResourceGroupName TestGroup |
+Get-AzVM -ResourceGroupName TestGroup | `
     Where-Object {$_.StorageProfile.OSDisk.OSType -eq "Linux"}
 ```
 
@@ -106,8 +106,8 @@ TestGroup         TestVM2  westus2 Standard_D2s_v3  Linux testvm2669         Suc
 `Select-Object`, `Where-Object`의 결과를 각각으로 파이프할 수 있습니다. 성능 향상을 위해, `Where-Object` 작업을 `Select-Object` 전에 두는 것이 좋습니다.
 
 ```azurepowershell-interactive
-Get-AzVM -ResourceGroupName TestGroup |
-    Where-Object {$_.StorageProfile.OsDisk.OsType -eq "Linux"} |
+Get-AzVM -ResourceGroupName TestGroup | `
+    Where-Object {$_.StorageProfile.OsDisk.OsType -eq "Linux"} | `
     Select-Object Name,VmID,ProvisioningState
 ```
 

@@ -1,18 +1,15 @@
 ---
 title: Az 2.0.0 마이그레이션 가이드
 description: 이 마이그레이션 가이드에는 Az 버전 2.0 릴리스의 Azure PowerShell에 대한 호환성이 손상되는 변경 목록이 나와 있습니다.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/24/2019
-ms.openlocfilehash: 133769c09f74e1d0d90eff0c6c4bdbb90d1ebe24
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 91362f3cc6b35e96a543c1304fb55acbf373d291
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "75720560"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83387567"
 ---
 # <a name="migration-guide-for-az-200"></a>Az 2.0.0 마이그레이션 가이드
 

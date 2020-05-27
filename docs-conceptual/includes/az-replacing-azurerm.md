@@ -1,14 +1,12 @@
 ---
-author: sptramer
-ms.author: sttramer
 ms.date: 12/20/2018
 ms.topic: include
-ms.openlocfilehash: 2d28ca4239ee775280bea24944f1f3c514984658
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: f2e0848fa16c56686c634ae3642453a47f377200
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "75752338"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83384864"
 ---
 > [!NOTE]
 > 
