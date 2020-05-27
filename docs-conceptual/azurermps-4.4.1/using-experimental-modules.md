@@ -1,15 +1,18 @@
 ---
 title: 실험적 Azure PowerShell 모듈 사용
 description: 실험적 Azure PowerShell 모듈의 기본 원칙 및 사용을 이해합니다.
+author: sptramer
+ms.author: sttramer
+manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/05/2017
-ms.openlocfilehash: 35e704b21e0034dffc2c9edc23977d8d6ef44661
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.openlocfilehash: 7867adeac41444c81c31b7ee44b910ab40d873f8
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387380"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "65534753"
 ---
 # <a name="using-experimental-azure-powershell-modules"></a>실험적 Azure PowerShell 모듈 사용
 

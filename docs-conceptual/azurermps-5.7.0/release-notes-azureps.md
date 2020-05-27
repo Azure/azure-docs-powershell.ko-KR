@@ -1,16 +1,19 @@
 ---
 title: Azure PowerShell 변경 로그 | Microsoft Docs
 description: Azure PowerShell에 대한 최신 릴리스의 변경 내용입니다.
+author: sptramer
+ms.author: sttramer
+manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: ''
 ms.date: 2/20/2018
-ms.openlocfilehash: 795aa938ec179bb6d845774cf25778bd2b7c1442
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.openlocfilehash: 61ab0f91c3d6fffdbffd336fa0d6ed9b0ab8f6ec
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387759"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "68863288"
 ---
 # <a name="release-notes"></a>릴리스 정보
 

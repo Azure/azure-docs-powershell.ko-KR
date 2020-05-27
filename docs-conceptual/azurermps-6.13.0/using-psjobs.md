@@ -1,15 +1,18 @@
 ---
 title: PowerShell 작업을 사용하여 병렬로 cmdlet 실행
 description: -AsJob 매개 변수를 사용하여 병렬로 cmdlet을 실행하는 방법입니다.
+author: sptramer
+ms.author: sttramer
+manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/11/2018
-ms.openlocfilehash: d312812ff3c9e4934ed2bfa7371a9e420668e852
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.openlocfilehash: beb7f0a89d2e254b348b79daf4f8d3bfdc562de5
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83384996"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "65534203"
 ---
 # <a name="running-cmdlets-in-parallel-using-powershell-jobs"></a>PowerShell 작업을 사용하여 병렬로 cmdlet 실행
 
