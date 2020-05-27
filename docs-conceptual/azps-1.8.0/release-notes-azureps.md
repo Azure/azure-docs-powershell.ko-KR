@@ -1,861 +1,858 @@
 ---
 title: Azure PowerShell 릴리스 정보
 description: Azure PowerShell 모듈의 모든 최신 업데이트에 대해 알아봅니다.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 04/30/2019
-ms.openlocfilehash: 8a9a399f72ed9e3e9a3cbc09c8a4abaa91339c24
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 287e9e1f066d0768e7f572ca7f5f2ee2b78931d9
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "71319301"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83386972"
 ---
-## <a name="180---april-2019"></a><span data-ttu-id="624d0-103">1.8.0 - 2019년 4월</span><span class="sxs-lookup"><span data-stu-id="624d0-103">1.8.0 - April 2019</span></span>
-### <a name="highlights-since-the-last-major-release"></a><span data-ttu-id="624d0-104">마지막 주 릴리스 이후의 주요 사항</span><span class="sxs-lookup"><span data-stu-id="624d0-104">Highlights since the last major release</span></span>
-* <span data-ttu-id="624d0-105">`Az` 모듈 일반 공급</span><span class="sxs-lookup"><span data-stu-id="624d0-105">General availability of `Az` module</span></span>
-* <span data-ttu-id="624d0-106">`Az` 모듈에 대한 자세한 내용은 https://aka.ms/azps-announce 를 방문하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-106">For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce</span></span>
-* <span data-ttu-id="624d0-107">Location, ResourceGroup 및 ResourceName 완성자가 추가되었습니다(https://azure.microsoft.com/blog/completers-in-azure-powershell/ ).</span><span class="sxs-lookup"><span data-stu-id="624d0-107">Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span></span>
-* <span data-ttu-id="624d0-108">와일드카드 지원이 Az.Compute 및 Az.Network에 대한 Get cmdlet에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-108">Added wildcard support to Get cmdlets for Az.Compute and Az.Network</span></span>
-* <span data-ttu-id="624d0-109">Windows PowerShell 5.1 전용 대화형 사용자 이름/암호 인증이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-109">Added interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
-* <span data-ttu-id="624d0-110">Python 2 Runbook 지원이 Az.Automation에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-110">Added support for Python 2 runbooks in Az.Automation</span></span>
-* <span data-ttu-id="624d0-111">Az.LogicApp: 통합 계정 어셈블리 및 일괄 처리 구성을 위한 새로운 cmdlet입니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-111">Az.LogicApp: New cmdlets for Integration Account Assemblies and Batch Configuration</span></span>
-
-#### <a name="azaccounts"></a><span data-ttu-id="624d0-112">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="624d0-112">Az.Accounts</span></span>
-* <span data-ttu-id="624d0-113">Mac에서 모듈을 올바르게 삭제하기 위해 Uninstall-AzureRm을 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-113">Update Uninstall-AzureRm to correctly delete modules in Mac</span></span>
-
-#### <a name="azbatch"></a><span data-ttu-id="624d0-114">Az.Batch</span><span class="sxs-lookup"><span data-stu-id="624d0-114">Az.Batch</span></span>
-* <span data-ttu-id="624d0-115">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-115">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azcdn"></a><span data-ttu-id="624d0-116">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="624d0-116">Az.Cdn</span></span>
-* <span data-ttu-id="624d0-117">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-117">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azcognitiveservices"></a><span data-ttu-id="624d0-118">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="624d0-118">Az.CognitiveServices</span></span>
-* <span data-ttu-id="624d0-119">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-119">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="624d0-120">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="624d0-120">Az.Compute</span></span>
-* <span data-ttu-id="624d0-121">디스크의 리소스 ID에 리소스 ID의 소문자 resourcegroups가 있는 경우 AEM 설치 문제 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-121">Fix issue with AEM installation if resource ids of disks had lowercase resourcegroups in resource id</span></span>
-* <span data-ttu-id="624d0-122">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-122">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-* <span data-ttu-id="624d0-123">와일드 카드에 대한 설명서 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-123">Fix documentation for wildcards</span></span>
-
-#### <a name="azdatafactory"></a><span data-ttu-id="624d0-124">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="624d0-124">Az.DataFactory</span></span>
-* <span data-ttu-id="624d0-125">NodeCount가 관리형 통합 런타임에 대해 Null이 아닌 경우 SsisProperties를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-125">Add SsisProperties if NodeCount not null for managed integration runtime.</span></span>
-
-#### <a name="azdatalakestore"></a><span data-ttu-id="624d0-126">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="624d0-126">Az.DataLakeStore</span></span>
-* <span data-ttu-id="624d0-127">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-127">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azeventgrid"></a><span data-ttu-id="624d0-128">Az.EventGrid</span><span class="sxs-lookup"><span data-stu-id="624d0-128">Az.EventGrid</span></span>
-* <span data-ttu-id="624d0-129">이벤트 구독 cmdlet 만들기/업데이트를 사용하기 전에 리소스를 만들어야 함을 나타내기 위해 엔드포인트의 도움말 텍스트가 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-129">Updated the help text for endpoint to indicate that resources should be created before using the create/update event subscription cmdlets.</span></span>
-
-#### <a name="azeventhub"></a><span data-ttu-id="624d0-130">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="624d0-130">Az.EventHub</span></span>
-* <span data-ttu-id="624d0-131">네임스페이스의 NetworkRuleSet에 대한 새 cmdlet가 추가되었습니다</span><span class="sxs-lookup"><span data-stu-id="624d0-131">Added new cmdlets for NetworkRuleSet of Namespace</span></span> 
-
-#### <a name="azhdinsight"></a><span data-ttu-id="624d0-132">Az.HDInsight</span><span class="sxs-lookup"><span data-stu-id="624d0-132">Az.HDInsight</span></span>
-* <span data-ttu-id="624d0-133">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-133">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="aziothub"></a><span data-ttu-id="624d0-134">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="624d0-134">Az.IotHub</span></span>
-* <span data-ttu-id="624d0-135">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-135">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azkeyvault"></a><span data-ttu-id="624d0-136">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="624d0-136">Az.KeyVault</span></span>
-* <span data-ttu-id="624d0-137">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-137">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-* <span data-ttu-id="624d0-138">와일드 카드에 대한 설명서 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-138">Fix documentation for wildcards</span></span>
-
-#### <a name="azmachinelearning"></a><span data-ttu-id="624d0-139">Az.MachineLearning</span><span class="sxs-lookup"><span data-stu-id="624d0-139">Az.MachineLearning</span></span>
-* <span data-ttu-id="624d0-140">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-140">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azmedia"></a><span data-ttu-id="624d0-141">Az.Media</span><span class="sxs-lookup"><span data-stu-id="624d0-141">Az.Media</span></span>
-* <span data-ttu-id="624d0-142">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-142">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azmonitor"></a><span data-ttu-id="624d0-143">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="624d0-143">Az.Monitor</span></span>
-  * <span data-ttu-id="624d0-144">GenV2(비 클래식) 메트릭 기반 경고 규칙에 대한 새 cmdlet</span><span class="sxs-lookup"><span data-stu-id="624d0-144">New cmdlets for GenV2(non classic) metric-based alert rule</span></span>
-      - <span data-ttu-id="624d0-145">New-AzMetricAlertRuleV2DimensionSelection</span><span class="sxs-lookup"><span data-stu-id="624d0-145">New-AzMetricAlertRuleV2DimensionSelection</span></span>
-      - <span data-ttu-id="624d0-146">New-AzMetricAlertRuleV2Criteria</span><span class="sxs-lookup"><span data-stu-id="624d0-146">New-AzMetricAlertRuleV2Criteria</span></span>
-      - <span data-ttu-id="624d0-147">Remove-AzMetricAlertRuleV2</span><span class="sxs-lookup"><span data-stu-id="624d0-147">Remove-AzMetricAlertRuleV2</span></span>
-      - <span data-ttu-id="624d0-148">Get-AzMetricAlertRuleV2</span><span class="sxs-lookup"><span data-stu-id="624d0-148">Get-AzMetricAlertRuleV2</span></span>
-      - <span data-ttu-id="624d0-149">Add-AzMetricAlertRuleV2</span><span class="sxs-lookup"><span data-stu-id="624d0-149">Add-AzMetricAlertRuleV2</span></span>
-  * <span data-ttu-id="624d0-150">모니터 SDK가 버전 0.22.0-preview로 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-150">Updated Monitor SDK to version 0.22.0-preview</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="624d0-151">Az.Network</span><span class="sxs-lookup"><span data-stu-id="624d0-151">Az.Network</span></span>
-* <span data-ttu-id="624d0-152">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-152">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-* <span data-ttu-id="624d0-153">와일드 카드에 대한 설명서 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-153">Fix documentation for wildcards</span></span>
-
-#### <a name="aznotificationhubs"></a><span data-ttu-id="624d0-154">Az.NotificationHubs</span><span class="sxs-lookup"><span data-stu-id="624d0-154">Az.NotificationHubs</span></span>
-* <span data-ttu-id="624d0-155">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-155">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azoperationalinsights"></a><span data-ttu-id="624d0-156">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="624d0-156">Az.OperationalInsights</span></span>
-* <span data-ttu-id="624d0-157">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-157">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azpowerbiembedded"></a><span data-ttu-id="624d0-158">Az.PowerBIEmbedded</span><span class="sxs-lookup"><span data-stu-id="624d0-158">Az.PowerBIEmbedded</span></span>
-* <span data-ttu-id="624d0-159">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-159">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="624d0-160">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="624d0-160">Az.RecoveryServices</span></span>
-* <span data-ttu-id="624d0-161">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-161">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-* <span data-ttu-id="624d0-162">Azure VM의 SQL용 테이블 형식이 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-162">Updated table format for SQL in azure VM</span></span>
-* <span data-ttu-id="624d0-163">AzureFileShare에서 위치를 가져오는 대체 메서드가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-163">Added alternate method to fetch location in AzureFileShare</span></span>
-* <span data-ttu-id="624d0-164">시간대에 따라 SchedulePolicy 개체의 ScheduleRunDays가 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-164">Updated ScheduleRunDays in SchedulePolicy object according to timezone</span></span>
-
-#### <a name="azrediscache"></a><span data-ttu-id="624d0-165">Az.RedisCache</span><span class="sxs-lookup"><span data-stu-id="624d0-165">Az.RedisCache</span></span>
-* <span data-ttu-id="624d0-166">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-166">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="624d0-167">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="624d0-167">Az.Resources</span></span>
-* <span data-ttu-id="624d0-168">와일드 카드에 대한 설명서 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-168">Fix documentation for wildcards</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="624d0-169">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="624d0-169">Az.Sql</span></span>
-* <span data-ttu-id="624d0-170">Monitor SDK의 종속성을 공용 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-170">Replace dependency on Monitor SDK with common code</span></span>
-* <span data-ttu-id="624d0-171">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-171">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-* <span data-ttu-id="624d0-172">다중 열 분류 프로세스가 향상되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-172">Enhanced process of multiple columns classification.</span></span>
-* <span data-ttu-id="624d0-173">기본적으로 Get-AzSqlServerServiceObjective의 응답으로 SKU 속성(SKU 이름, 제품군, 용량)과 테이블 형식을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-173">Include sku properties (sku name, family, capacity) in response from Get-AzSqlServerServiceObjective and format as table by default.</span></span>
-* <span data-ttu-id="624d0-174">해당 지역에 기존 서버 없이 위치별로 Get-AzSqlServerServiceObjective를 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-174">Ability to Get-AzSqlServerServiceObjective by location without needing a preexisting server in the region.</span></span>
-* <span data-ttu-id="624d0-175">관리형 인스턴스 생성 시 표준 시간대 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-175">Support for time zone parameter in Managed Instance create.</span></span>
-* <span data-ttu-id="624d0-176">와일드 카드에 대한 설명서 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-176">Fix documentation for wildcards</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="624d0-177">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="624d0-177">Az.Websites</span></span>
-* <span data-ttu-id="624d0-178">실행 시 태그를 제거하지 않도록 Set-AzWebApp 및 Set-AzWebAppSlot를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-178">fixes the Set-AzWebApp and Set-AzWebAppSlot to not remove the tags on execution</span></span>
-* <span data-ttu-id="624d0-179">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-179">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-* <span data-ttu-id="624d0-180">WebSites SDK가 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-180">Updated the WebSites SDK.</span></span>
-* <span data-ttu-id="624d0-181">PSAppServicePlan에서 AdminSiteName 속성을 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-181">Removed the AdminSiteName property from PSAppServicePlan.</span></span>
-
-## <a name="170---april-2019"></a><span data-ttu-id="624d0-182">1.7.0 - 2019년 4월</span><span class="sxs-lookup"><span data-stu-id="624d0-182">1.7.0 - April 2019</span></span>
-### <a name="highlights-since-the-last-major-release"></a><span data-ttu-id="624d0-183">마지막 주 릴리스 이후의 주요 사항</span><span class="sxs-lookup"><span data-stu-id="624d0-183">Highlights since the last major release</span></span>
-* <span data-ttu-id="624d0-184">`Az` 모듈 일반 공급</span><span class="sxs-lookup"><span data-stu-id="624d0-184">General availability of `Az` module</span></span>
-* <span data-ttu-id="624d0-185">`Az` 모듈에 대한 자세한 내용은 https://aka.ms/azps-announce 를 방문하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-185">For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce</span></span>
-* <span data-ttu-id="624d0-186">Location, ResourceGroup 및 ResourceName 완성자가 추가되었습니다(https://azure.microsoft.com/blog/completers-in-azure-powershell/ ).</span><span class="sxs-lookup"><span data-stu-id="624d0-186">Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span></span>
-* <span data-ttu-id="624d0-187">와일드카드 지원이 Az.Compute 및 Az.Network에 대한 Get cmdlet에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-187">Added wildcard support to Get cmdlets for Az.Compute and Az.Network</span></span>
-* <span data-ttu-id="624d0-188">Windows PowerShell 5.1 전용 대화형 사용자 이름/암호 인증이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-188">Added interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
-* <span data-ttu-id="624d0-189">Python 2 Runbook 지원이 Az.Automation에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-189">Added support for Python 2 runbooks in Az.Automation</span></span>
-* <span data-ttu-id="624d0-190">Az.LogicApp: 통합 계정 어셈블리 및 일괄 처리 구성을 위한 새로운 cmdlet입니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-190">Az.LogicApp: New cmdlets for Integration Account Assemblies and Batch Configuration</span></span>
-
-#### <a name="azaccounts"></a><span data-ttu-id="624d0-191">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="624d0-191">Az.Accounts</span></span>
-* <span data-ttu-id="624d0-192">매개 변수 AzureAnalysisServicesEndpointResourceId를 허용하도록 Add-AzEnvironment 및 Set-AzEnvironment 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-192">Updated Add-AzEnvironment and Set-AzEnvironment to accept parameter AzureAnalysisServicesEndpointResourceId</span></span>
-
-#### <a name="azanalysisservices"></a><span data-ttu-id="624d0-193">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="624d0-193">Az.AnalysisServices</span></span>
-* <span data-ttu-id="624d0-194">데이터 평면 cmdlet에서 ServiceClient 사용 및 원본 인증 논리 제거</span><span class="sxs-lookup"><span data-stu-id="624d0-194">Using ServiceClient in dataplane cmdlets and removing the original authentication logic</span></span>
-* <span data-ttu-id="624d0-195">호환성이 손상되는 변경을 방지하기 위해 Add-AzureASAccount를 Connect-AzAccount의 래퍼로 만듦</span><span class="sxs-lookup"><span data-stu-id="624d0-195">Making Add-AzureASAccount a wrapper of Connect-AzAccount to avoid a breaking change</span></span>
-
-#### <a name="azautomation"></a><span data-ttu-id="624d0-196">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="624d0-196">Az.Automation</span></span>
-* <span data-ttu-id="624d0-197">포함에 대한 New-AzAutomationSoftwareUpdateConfiguration cmdlet 버그 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-197">Fixed New-AzAutomationSoftwareUpdateConfiguration cmdlet bug for Inclusions.</span></span> <span data-ttu-id="624d0-198">이제 매개 변수 IncludedKbNumber 및 IncludedPackageNameMask가 작동함</span><span class="sxs-lookup"><span data-stu-id="624d0-198">Now parameter IncludedKbNumber and IncludedPackageNameMask should work.</span></span>
-* <span data-ttu-id="624d0-199">Azure 자동화 업데이트 관리 동적 그룹에 대한 버그 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-199">Bug fix for azure automation update management dynamic group</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="624d0-200">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="624d0-200">Az.Compute</span></span>
-* <span data-ttu-id="624d0-201">New-AzDiskConfig 및 New-AzSnapshotConfig에 HyperVGeneration 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-201">Add HyperVGeneration parameter to New-AzDiskConfig and New-AzSnapshotConfig</span></span>
-* <span data-ttu-id="624d0-202">다른 테넌트의 갤러리 이미지를 사용하여 VM을 만들 수 있음</span><span class="sxs-lookup"><span data-stu-id="624d0-202">Allow VM creation with galley image from other tenants.</span></span> 
-
-#### <a name="azcontainerinstance"></a><span data-ttu-id="624d0-203">Az.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="624d0-203">Az.ContainerInstance</span></span>
-* <span data-ttu-id="624d0-204">후행 빈 인수를 추가한 New-AzContainerGroup의 -Command 매개 변수의 문제 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-204">Fixed issue in the -Command parameter of New-AzContainerGroup which added a trailing empty argument</span></span>
-
-#### <a name="azdatafactory"></a><span data-ttu-id="624d0-205">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="624d0-205">Az.DataFactory</span></span>
-* <span data-ttu-id="624d0-206">ADF .Net SDK 버전을 3.0.2로 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-206">Updated ADF .Net SDK version to 3.0.2</span></span>
-* <span data-ttu-id="624d0-207">RepoConfiguration 관련 설정에 대한 추가 매개 변수로 Set-AzDataFactoryV2 cmdlet을 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-207">Updated Set-AzDataFactoryV2 cmdlet with extra parameters for RepoConfiguration related settings.</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="624d0-208">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="624d0-208">Az.Resources</span></span>
-* <span data-ttu-id="624d0-209">'-ResourceId' 또는 '-ResourceGroupName', '-Name' 및 '-ResourceType' 매개 변수를 제공할 때 'Get-AzResource'에 대한 공급자 처리 개선</span><span class="sxs-lookup"><span data-stu-id="624d0-209">Improve handling of providers for 'Get-AzResource' when providing '-ResourceId' or '-ResourceGroupName', '-Name' and '-ResourceType' parameters</span></span>
-* <span data-ttu-id="624d0-210">'Test-AzDeployment' 및 'Test-AzResourceGroupDeployment'에 대한 오류 처리 개선</span><span class="sxs-lookup"><span data-stu-id="624d0-210">Improve error handling for 'Test-AzDeployment' and 'Test-AzResourceGroupDeployment'</span></span>
-    - <span data-ttu-id="624d0-211">배포 유효성 검사 외부에서 발생한 오류를 처리하고 그 대신 명령의 출력에 포함</span><span class="sxs-lookup"><span data-stu-id="624d0-211">Handle errors thrown outside of deployment validation and include them in output of command instead</span></span>
-    - <span data-ttu-id="624d0-212">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/6856 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-212">More information here: https://github.com/Azure/azure-powershell/issues/6856</span></span>
-* <span data-ttu-id="624d0-213">배포 cmdlet 세트에 스크립트 및 작업 시나리오에서 프롬프트를 건너뛰는 '-IgnoreDynamicParameters' 스위치 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-213">Add '-IgnoreDynamicParameters' switch parameter to set of deployment cmdlets to skip prompt in script and job scenarios</span></span>
-    - <span data-ttu-id="624d0-214">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/6856 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-214">More information here: https://github.com/Azure/azure-powershell/issues/6856</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="624d0-215">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="624d0-215">Az.Sql</span></span>
-* <span data-ttu-id="624d0-216">데이터베이스 데이터 분류 지원</span><span class="sxs-lookup"><span data-stu-id="624d0-216">Support Database Data Classification.</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="624d0-217">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="624d0-217">Az.Storage</span></span>
-* <span data-ttu-id="624d0-218">매개 변수 -UseConnectedAccount를 사용하여 스토리지 컨텍스트를 만들 때 자세한 오류 보고(단, 로그인 Azure 계정 없이)</span><span class="sxs-lookup"><span data-stu-id="624d0-218">Report detail error when create Storage context with parameter -UseConnectedAccount, but without login Azure account</span></span>
-    - <span data-ttu-id="624d0-219">New-AzStorageContext</span><span class="sxs-lookup"><span data-stu-id="624d0-219">New-AzStorageContext</span></span>
-* <span data-ttu-id="624d0-220">관리 평면 API를 사용하여 지정한 스토리지 계정의 BLOB 서비스 속성 관리 지원</span><span class="sxs-lookup"><span data-stu-id="624d0-220">Support Manage Blob Service Properties of a specified Storage account with Management plane API</span></span>
-    - <span data-ttu-id="624d0-221">Update-AzStorageBlobServiceProperty</span><span class="sxs-lookup"><span data-stu-id="624d0-221">Update-AzStorageBlobServiceProperty</span></span>
-    - <span data-ttu-id="624d0-222">Get-AzStorageBlobServiceProperty</span><span class="sxs-lookup"><span data-stu-id="624d0-222">Get-AzStorageBlobServiceProperty</span></span>
-    - <span data-ttu-id="624d0-223">Enable-AzStorageBlobDeleteRetentionPolicy</span><span class="sxs-lookup"><span data-stu-id="624d0-223">Enable-AzStorageBlobDeleteRetentionPolicy</span></span>
-    - <span data-ttu-id="624d0-224">Disable-AzStorageBlobDeleteRetentionPolicy</span><span class="sxs-lookup"><span data-stu-id="624d0-224">Disable-AzStorageBlobDeleteRetentionPolicy</span></span>
-* <span data-ttu-id="624d0-225">BLOB 및 파일 업로드/다운로드 cmdlet에 대한 -AsJob 지원</span><span class="sxs-lookup"><span data-stu-id="624d0-225">-AsJob support for Blob and file upload and download cmdlets</span></span>
-    - <span data-ttu-id="624d0-226">Get-AzStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="624d0-226">Get-AzStorageBlobContent</span></span>
-    - <span data-ttu-id="624d0-227">Set-AzStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="624d0-227">Set-AzStorageBlobContent</span></span>
-    - <span data-ttu-id="624d0-228">Get-AzStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="624d0-228">Get-AzStorageFileContent</span></span>
-    - <span data-ttu-id="624d0-229">Set-AzStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="624d0-229">Set-AzStorageFileContent</span></span>
-
-## <a name="160---march-2019"></a><span data-ttu-id="624d0-230">1.6.0 - 2019년 3월</span><span class="sxs-lookup"><span data-stu-id="624d0-230">1.6.0 - March 2019</span></span>
-### <a name="highlights-since-the-last-major-release"></a><span data-ttu-id="624d0-231">마지막 주 릴리스 이후의 주요 사항</span><span class="sxs-lookup"><span data-stu-id="624d0-231">Highlights since the last major release</span></span>
-* <span data-ttu-id="624d0-232">`Az` 모듈 일반 공급</span><span class="sxs-lookup"><span data-stu-id="624d0-232">General availability of `Az` module</span></span>
-* <span data-ttu-id="624d0-233">`Az` 모듈에 대한 자세한 내용은 https://aka.ms/azps-announce 를 방문하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-233">For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce</span></span>
-* <span data-ttu-id="624d0-234">Location, ResourceGroup 및 ResourceName 완성자가 추가되었습니다(https://azure.microsoft.com/blog/completers-in-azure-powershell/ ).</span><span class="sxs-lookup"><span data-stu-id="624d0-234">Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span></span>
-* <span data-ttu-id="624d0-235">와일드카드 지원이 Az.Compute 및 Az.Network에 대한 Get cmdlet에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-235">Added wildcard support to Get cmdlets for Az.Compute and Az.Network</span></span>
-* <span data-ttu-id="624d0-236">Windows PowerShell 5.1 전용 대화형 사용자 이름/암호 인증이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-236">Added interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
-* <span data-ttu-id="624d0-237">Python 2 Runbook 지원이 Az.Automation에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-237">Added support for Python 2 runbooks in Az.Automation</span></span>
-* <span data-ttu-id="624d0-238">Az.LogicApp: 통합 계정 어셈블리 및 일괄 처리 구성을 위한 새로운 cmdlet입니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-238">Az.LogicApp: New cmdlets for Integration Account Assemblies and Batch Configuration</span></span>
-
-#### <a name="azautomation"></a><span data-ttu-id="624d0-239">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="624d0-239">Az.Automation</span></span>
-* <span data-ttu-id="624d0-240">Azure 자동화 업데이트 관리에서 변경된 지원 기능은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-240">Azure automation update management change to support the following new features :</span></span>
-    * <span data-ttu-id="624d0-241">동적 그룹화</span><span class="sxs-lookup"><span data-stu-id="624d0-241">Dynamic grouping</span></span>
-    * <span data-ttu-id="624d0-242">사전 스크립트</span><span class="sxs-lookup"><span data-stu-id="624d0-242">Pre-Post script</span></span>
-    * <span data-ttu-id="624d0-243">다시 부팅 설정</span><span class="sxs-lookup"><span data-stu-id="624d0-243">Reboot Setting</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="624d0-244">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="624d0-244">Az.Compute</span></span>
-* <span data-ttu-id="624d0-245">Get-AzVmBootDiagnosticsData의 경로 확인 문제가 해결되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-245">Fix issue with path resolution in Get-AzVmBootDiagnosticsData</span></span>
-* <span data-ttu-id="624d0-246">Compute 클라이언트 라이브러리가 25.0.0으로 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-246">Update Compute client library to 25.0.0.</span></span>
-
-#### <a name="azkeyvault"></a><span data-ttu-id="624d0-247">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="624d0-247">Az.KeyVault</span></span>
-* <span data-ttu-id="624d0-248">와일드카드 지원이 KeyVault cmdlet에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-248">Added wildcard support to KeyVault cmdlets</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="624d0-249">Az.Network</span><span class="sxs-lookup"><span data-stu-id="624d0-249">Az.Network</span></span>
-* <span data-ttu-id="624d0-250">Azure Firewall에 대한 위협 인텔리전스 지원이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-250">Add Threat Intelligence support for Azure Firewall</span></span>
-* <span data-ttu-id="624d0-251">Application Gateway 방화벽 정책의 최상위 수준 리소스 및 사용자 지정 규칙이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-251">Add Application Gateway Firewall Policy top level resource and Custom Rules</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="624d0-252">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="624d0-252">Az.RecoveryServices</span></span>
-* <span data-ttu-id="624d0-253">인스턴트 RP를 지원하기 위해 SnapshotRetentionInDays가 Azure VM 정책에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-253">Added SnapshotRetentionInDays in Azure VM policy to support Instant RP</span></span>
-* <span data-ttu-id="624d0-254">컨테이너 등록을 취소하는 파이프 지원이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-254">Added pipe support for unregister container</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="624d0-255">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="624d0-255">Az.Resources</span></span>
-* <span data-ttu-id="624d0-256">Get-AzResource 및 Get-AzResourceGroup에 대한 와일드카드 지원을 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-256">Update wildcard support for Get-AzResource and Get-AzResourceGroup</span></span>
-* <span data-ttu-id="624d0-257">ARM에 대한 일반 호출을 수행할 때 사용되는 자격 증명을 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-257">Update credentials used when making generic calls to ARM</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="624d0-258">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="624d0-258">Az.Sql</span></span>
-* <span data-ttu-id="624d0-259">위협 탐지의 cmdlet 매개 변수(ExcludeDetectionType)가 DetectionType에서 string[]으로 변경되어 새 DetectionType이 추가되면 이후의 증명이 되고 자동 완성도 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-259">changed Threat Detection's cmdlets param (ExcludeDetectionType) from DetectionType to string[] to make it future proof when new DetectionTypes are added and to support autocomplete as well.</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="624d0-260">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="624d0-260">Az.Storage</span></span>
-* <span data-ttu-id="624d0-261">스토리지 계정에 대한 관리 정책 가져오기/설정/제거를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-261">Support Get/Set/Remove Management Policy on a Storage account</span></span>
-    - <span data-ttu-id="624d0-262">Set-AzStorageAccountManagementPolicy</span><span class="sxs-lookup"><span data-stu-id="624d0-262">Set-AzStorageAccountManagementPolicy</span></span>
-    - <span data-ttu-id="624d0-263">Get-AzStorageAccountManagementPolicy</span><span class="sxs-lookup"><span data-stu-id="624d0-263">Get-AzStorageAccountManagementPolicy</span></span>
-    - <span data-ttu-id="624d0-264">Remove-AzStorageAccountManagementPolicy</span><span class="sxs-lookup"><span data-stu-id="624d0-264">Remove-AzStorageAccountManagementPolicy</span></span>
-    - <span data-ttu-id="624d0-265">Add-AzStorageAccountManagementPolicyAction</span><span class="sxs-lookup"><span data-stu-id="624d0-265">Add-AzStorageAccountManagementPolicyAction</span></span>
-    - <span data-ttu-id="624d0-266">New-AzStorageAccountManagementPolicyFilter</span><span class="sxs-lookup"><span data-stu-id="624d0-266">New-AzStorageAccountManagementPolicyFilter</span></span>
-    - <span data-ttu-id="624d0-267">New-AzStorageAccountManagementPolicyRule</span><span class="sxs-lookup"><span data-stu-id="624d0-267">New-AzStorageAccountManagementPolicyRule</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="624d0-268">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="624d0-268">Az.Websites</span></span>
-* <span data-ttu-id="624d0-269">'New-AzWebApp -IncludeSourceWebAppSlots'를 사용하여 모든 슬롯의 복제를 중단하는 ARM 템플릿 버그가 수정되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-269">Fix ARM template bug that breaks cloning all slots using 'New-AzWebApp -IncludeSourceWebAppSlots'</span></span> 
-
-## <a name="150---march-2019"></a><span data-ttu-id="624d0-270">1.5.0 - 2019년 3월</span><span class="sxs-lookup"><span data-stu-id="624d0-270">1.5.0 - March 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="624d0-271">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="624d0-271">Az.Accounts</span></span>
-* <span data-ttu-id="624d0-272">'Register-AzModule' 명령을 추가하여 AutoRest 생성 cmdlet을 지원</span><span class="sxs-lookup"><span data-stu-id="624d0-272">Add 'Register-AzModule' command to support AutoRest generated cmdlets</span></span>
-* <span data-ttu-id="624d0-273">Connect-AzAccount 예제 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-273">Update examples for Connect-AzAccount</span></span>
-
-#### <a name="azautomation"></a><span data-ttu-id="624d0-274">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="624d0-274">Az.Automation</span></span>
-* <span data-ttu-id="624d0-275">몇몇 Azure Automation cmdlet에서 특정 월별 일정을 검색할 때 발생하는 문제 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-275">Fixed issue when retreiving certain monthly schedules in several Azure Automation cmdlets</span></span>
-* <span data-ttu-id="624d0-276">상위 20개 노드를 반환하도록 Get-AzAutomationDscNode를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-276">Fix Get-AzAutomationDscNode returning just top 20 nodes.</span></span> <span data-ttu-id="624d0-277">이제 모든 노드 반환</span><span class="sxs-lookup"><span data-stu-id="624d0-277">Now it returns all nodes</span></span>
-
-#### <a name="azcdn"></a><span data-ttu-id="624d0-278">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="624d0-278">Az.Cdn</span></span>
-* <span data-ttu-id="624d0-279">사용자 지정 도메인 Https 사용/사용 안 함에 대한 새 Powershell cmdlet이 추가되었으며 기존의 것은 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-279">Added new Powershell cmdlets for Enable/Disable Custom Domain Https and deprecated the old ones</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="624d0-280">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="624d0-280">Az.Compute</span></span>
-* <span data-ttu-id="624d0-281">Get cmdlet에 와일드 카드 지원 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-281">Add wildcard support to Get cmdlets</span></span>
-
-#### <a name="azdatafactory"></a><span data-ttu-id="624d0-282">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="624d0-282">Az.DataFactory</span></span>
-* <span data-ttu-id="624d0-283">ADF.Net SDK 버전이 3.0.1로 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-283">Updated ADF .Net SDK version to 3.0.1</span></span>
-
-#### <a name="azlogicapp"></a><span data-ttu-id="624d0-284">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="624d0-284">Az.LogicApp</span></span>
-* <span data-ttu-id="624d0-285">첫 결과 페이지 검색 시에만 ListWorkflows 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-285">Fix for ListWorkflows only retrieving the first page of results</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="624d0-286">Az.Network</span><span class="sxs-lookup"><span data-stu-id="624d0-286">Az.Network</span></span>
-* <span data-ttu-id="624d0-287">Network cmdlet에 와일드 카드 지원 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-287">Add wildcard support to Network cmdlets</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="624d0-288">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="624d0-288">Az.RecoveryServices</span></span>
-* <span data-ttu-id="624d0-289">Azure VM 지원에 SQL 서버가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-289">Added Sql server in Azure VM support</span></span>
-* <span data-ttu-id="624d0-290">SDK 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-290">SDK Update</span></span>
-* <span data-ttu-id="624d0-291">VMappContainer 체크 인 Get-ProtectableItem 제거</span><span class="sxs-lookup"><span data-stu-id="624d0-291">Removed VMappContainer check in Get-ProtectableItem</span></span>
-* <span data-ttu-id="624d0-292">Get ProtectableItem의 매개 변수로 Name과 ServerName이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-292">Added Name and ServerName as parameters for Get-ProtectableItem</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="624d0-293">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="624d0-293">Az.Resources</span></span>
-* <span data-ttu-id="624d0-294">`-TemplateObject` 매개 변수를 추가하여 cmdlet을 배포</span><span class="sxs-lookup"><span data-stu-id="624d0-294">Add `-TemplateObject` parameter to deployment cmdlets</span></span>
-    - <span data-ttu-id="624d0-295">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/2933 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-295">More information here: https://github.com/Azure/azure-powershell/issues/2933</span></span>
-* <span data-ttu-id="624d0-296">`Get-AzResource`의 결과를 `Set-AzResource`(으)로 파이프할 때 발생하는 문제 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-296">Fix issue when piping the result of `Get-AzResource` to `Set-AzResource`</span></span>
-    - <span data-ttu-id="624d0-297">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/8240 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-297">More information here: https://github.com/Azure/azure-powershell/issues/8240</span></span>
-* <span data-ttu-id="624d0-298">실행 시 JSON 데이터 형식 문제 해결 `Set-AzResource`</span><span class="sxs-lookup"><span data-stu-id="624d0-298">Fix issue with JSON data type change when running `Set-AzResource`</span></span>
-    - <span data-ttu-id="624d0-299">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/7930 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-299">More information here: https://github.com/Azure/azure-powershell/issues/7930</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="624d0-300">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="624d0-300">Az.Sql</span></span>
-* <span data-ttu-id="624d0-301">AuditingEndpointsCommunicator를 업데이트 합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-301">Updating AuditingEndpointsCommunicator.</span></span>
-    - <span data-ttu-id="624d0-302">새 진단 설정을 생성할 때 에지 사례의 동작을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-302">Fixing the behavior of an edge case while creating new diagnostic settings.</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="624d0-303">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="624d0-303">Az.Storage</span></span>
-* <span data-ttu-id="624d0-304">스토리지 계정      - New-AzStorageAccount를 생성할 때 종류 BlockBlobStorage를 지원</span><span class="sxs-lookup"><span data-stu-id="624d0-304">Support Kind BlockBlobStorage when create Storage account      - New-AzStorageAccount</span></span>
-
-## <a name="140---february-2019"></a><span data-ttu-id="624d0-305">1.4.0 - 2019년 2월</span><span class="sxs-lookup"><span data-stu-id="624d0-305">1.4.0 - February 2019</span></span>
-#### <a name="azanalysisservices"></a><span data-ttu-id="624d0-306">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="624d0-306">Az.AnalysisServices</span></span>
-* <span data-ttu-id="624d0-307">사용되지 않는 AddAzureASAccount cmdlet</span><span class="sxs-lookup"><span data-stu-id="624d0-307">Deprecated AddAzureASAccount cmdlet</span></span>
-
-#### <a name="azautomation"></a><span data-ttu-id="624d0-308">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="624d0-308">Az.Automation</span></span>
-* <span data-ttu-id="624d0-309">Import-AzAutomationDscNodeConfiguration 도움말 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-309">Update help for Import-AzAutomationDscNodeConfiguration</span></span>
-* <span data-ttu-id="624d0-310">Import-AzAutomationDscConfiguration cmdlet 구성 이름 유효성 검사 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-310">Added configuration name validation to Import-AzAutomationDscConfiguration cmdlet</span></span>
-* <span data-ttu-id="624d0-311">Import-AzAutomationDscConfiguration cmdlet 오류 처리 개선</span><span class="sxs-lookup"><span data-stu-id="624d0-311">Improved error handling for Import-AzAutomationDscConfiguration cmdlet</span></span>
-
-#### <a name="azcognitiveservices"></a><span data-ttu-id="624d0-312">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="624d0-312">Az.CognitiveServices</span></span>
-* <span data-ttu-id="624d0-313">리소스의 하위 도메인을 지정하는 데 사용되는 New-AzCognitiveServicesAccount에 대한 새 선택적 매개 변수로 CustomSubdomainName이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-313">Added CustomSubdomainName as a new optional parameter for New-AzCognitiveServicesAccount which is used to specify subdomain for the resource.</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="624d0-314">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="624d0-314">Az.Compute</span></span>
-* <span data-ttu-id="624d0-315">ID 매개 변수 집합 문제 해결</span><span class="sxs-lookup"><span data-stu-id="624d0-315">Fix issue with ID parameter sets</span></span>
-* <span data-ttu-id="624d0-316">Name 매개 변수를 제공하지 않으면 Get-AzVMExtension이 설치된 모든 확장을 열거하도록 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-316">Update Get-AzVMExtension to list all installed extension if Name parameter is not provided</span></span>
-* <span data-ttu-id="624d0-317">Update-AzImage cmdlet에 태그 및 ResourceId 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-317">Add Tag and ResourceId parameters to Update-AzImage cmdlet</span></span>
-* <span data-ttu-id="624d0-318">인스턴스 ID가 없는 Get-AzVmssVM과 InstanceView를 사용하면 인스턴스 보기가 있는 VMSS VM을 나열할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-318">Get-AzVmssVM without instance ID and with InstanceView can list VMSS VMs with instance view.</span></span>
-
-#### <a name="azdatalakestore"></a><span data-ttu-id="624d0-319">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="624d0-319">Az.DataLakeStore</span></span>
-* <span data-ttu-id="624d0-320">ADL 삭제된 항목 열거 및 복원에 대한 cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-320">Add cmdlets for ADL deleted item enumerate and restore</span></span>
-
-#### <a name="azeventhub"></a><span data-ttu-id="624d0-321">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="624d0-321">Az.EventHub</span></span>
-* <span data-ttu-id="624d0-322">Eventhub의 CaptureDescription 클래스에서 빈 보관을 건너뛰는 새 부울 속성 SkipEmptyArchives가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-322">Added new boolean property SkipEmptyArchives to Skip Empty Archives in CaptureDescription class of Eventhub</span></span> 
-
-#### <a name="azkeyvault"></a><span data-ttu-id="624d0-323">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="624d0-323">Az.KeyVault</span></span>
-* <span data-ttu-id="624d0-324">Set-AzKeyVaultSecret 태그 지정 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-324">Fix tagging on Set-AzKeyVaultSecret</span></span>
-
-#### <a name="azlogicapp"></a><span data-ttu-id="624d0-325">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="624d0-325">Az.LogicApp</span></span>
-* <span data-ttu-id="624d0-326">통합 계정에 대한 기본 sku 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-326">Add in Basic sku for Integration Accounts</span></span>
-* <span data-ttu-id="624d0-327">XSLT 2.0, XSLT 3.0, Liquid 맵 형식 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-327">Add in XSLT 2.0, XSLT 3.0 and Liquid Map Types</span></span>
-* <span data-ttu-id="624d0-328">통합 계정 어셈블리에 대한 새 cmdlet</span><span class="sxs-lookup"><span data-stu-id="624d0-328">New cmdlets for Integration Account Assemblies</span></span>
-    - <span data-ttu-id="624d0-329">Get-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="624d0-329">Get-AzIntegrationAccountAssembly</span></span>
-    - <span data-ttu-id="624d0-330">New-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="624d0-330">New-AzIntegrationAccountAssembly</span></span>
-    - <span data-ttu-id="624d0-331">Remove-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="624d0-331">Remove-AzIntegrationAccountAssembly</span></span>
-    - <span data-ttu-id="624d0-332">Set-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="624d0-332">Set-AzIntegrationAccountAssembly</span></span>
-* <span data-ttu-id="624d0-333">통합 계정 일괄 처리 구성에 대한 새 cmdlet</span><span class="sxs-lookup"><span data-stu-id="624d0-333">New cmdlets for Integration Account Batch Configuration</span></span>
-    - <span data-ttu-id="624d0-334">Get-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="624d0-334">Get-AzIntegrationAccountBatchConfiguration</span></span>
-    - <span data-ttu-id="624d0-335">New-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="624d0-335">New-AzIntegrationAccountBatchConfiguration</span></span>
-    - <span data-ttu-id="624d0-336">Remove-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="624d0-336">Remove-AzIntegrationAccountBatchConfiguration</span></span>
-    - <span data-ttu-id="624d0-337">Set-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="624d0-337">Set-AzIntegrationAccountBatchConfiguration</span></span>
-* <span data-ttu-id="624d0-338">논리 앱 SDK를 버전 4.1.0으로 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-338">Update Logic App SDK to version 4.1.0</span></span>
-
-#### <a name="azmonitor"></a><span data-ttu-id="624d0-339">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="624d0-339">Az.Monitor</span></span>
-* <span data-ttu-id="624d0-340">Get-AzMetric에 대한 도움말 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-340">Update help for Get-AzMetric</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="624d0-341">Az.Network</span><span class="sxs-lookup"><span data-stu-id="624d0-341">Az.Network</span></span>
-* <span data-ttu-id="624d0-342">Add-AzApplicationGatewayCustomError에 대한 도움말 예제 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-342">Update help example for Add-AzApplicationGatewayCustomError</span></span>
-
-#### <a name="azoperationalinsights"></a><span data-ttu-id="624d0-343">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="624d0-343">Az.OperationalInsights</span></span>
-* <span data-ttu-id="624d0-344">New 및 Get ApplicationInsights 데이터 소스에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-344">Additional support for New and Get ApplicationInsights data source.</span></span>
-    - <span data-ttu-id="624d0-345">지정된 작업 영역에 대한 특정 또는 전체 ApplicationInsights 데이터 원본 가져오기를 지원하기 위한 새로운 'ApplicationInsights' 종류가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-345">Added new 'ApplicationInsights' kind to support Get specific and Get all ApplicationInsights data sources for given workspace.</span></span> 
-    - <span data-ttu-id="624d0-346">지정된 Application-Insights 리소스 매개 변수(구독 ID, resourceGroupName 및 이름)별로 데이터 원본을 만들기 위한 New-AzOperationalInsightsApplicationInsightsDataSource cmdlet이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-346">Added New-AzOperationalInsightsApplicationInsightsDataSource cmdlet for creating data source by given Application-Insights resource parameters: subscription Id, resourceGroupName and name.</span></span> 
-
-#### <a name="azresources"></a><span data-ttu-id="624d0-347">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="624d0-347">Az.Resources</span></span>
-* <span data-ttu-id="624d0-348">문제 https://github.com/Azure/azure-powershell/issues/8166 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-348">Fix for issue https://github.com/Azure/azure-powershell/issues/8166</span></span>
-* <span data-ttu-id="624d0-349">문제 https://github.com/Azure/azure-powershell/issues/8235 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-349">Fix for issue https://github.com/Azure/azure-powershell/issues/8235</span></span>
-* <span data-ttu-id="624d0-350">문제 https://github.com/Azure/azure-powershell/issues/6219 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-350">Fix for issue https://github.com/Azure/azure-powershell/issues/6219</span></span>
-* <span data-ttu-id="624d0-351">KeyCredentials 반복 만들기를 방지하기 위해 버그 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-351">Fix bug preventing repeat creation of KeyCredentials</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="624d0-352">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="624d0-352">Az.Sql</span></span>
-* <span data-ttu-id="624d0-353">SQL DB 하이퍼스케일에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-353">Add support for SQL DB Hyperscale tier</span></span>
-* <span data-ttu-id="624d0-354">복원 요청에서 불필요한 속성을 설정하여 복원이 실패할 수 있는 버그 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-354">Fixed bug where restore could fail due to setting unnecessary properties in restore request</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="624d0-355">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="624d0-355">Az.Websites</span></span>
-* <span data-ttu-id="624d0-356">Get-AzWebAppSlotMetrics 내 올바른 예제</span><span class="sxs-lookup"><span data-stu-id="624d0-356">Correct example in Get-AzWebAppSlotMetrics</span></span>
-
-## <a name="130---february-2019"></a><span data-ttu-id="624d0-357">1.3.0 - 2019년 2월</span><span class="sxs-lookup"><span data-stu-id="624d0-357">1.3.0 - February 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="624d0-358">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="624d0-358">Az.Accounts</span></span>
-* <span data-ttu-id="624d0-359">ClientRuntime 최신 버전 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-359">Update to latest version of ClientRuntime</span></span>
-
-#### <a name="azanalysisservices"></a><span data-ttu-id="624d0-360">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="624d0-360">Az.AnalysisServices</span></span>
-<span data-ttu-id="624d0-361">Az.AnalysisServices 모듈의 전반적인 가용성.</span><span class="sxs-lookup"><span data-stu-id="624d0-361">General availability for Az.AnalysisServices module.</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="624d0-362">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="624d0-362">Az.Compute</span></span>
-* <span data-ttu-id="624d0-363">AEM 확장: UltraSSD 및 P60, P70, P80 디스크에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-363">AEM extension: Add support for UltraSSD and P60,P70 and P80 disks</span></span>
-* <span data-ttu-id="624d0-364">Set-AzVMBootDiagnostics에 대한 도움말 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-364">Update help description for Set-AzVMBootDiagnostics</span></span>
-* <span data-ttu-id="624d0-365">Update-AzImage에 대한 도움말 및 예제 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-365">Update help description and example for Update-AzImage</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="624d0-366">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="624d0-366">Az.RecoveryServices</span></span>
-<span data-ttu-id="624d0-367">Az.RecoveryServices 모듈의 전반적인 가용성.</span><span class="sxs-lookup"><span data-stu-id="624d0-367">General availability for Az.RecoveryServices module.</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="624d0-368">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="624d0-368">Az.Resources</span></span>
-* <span data-ttu-id="624d0-369">리소스 그룹 관련 태그 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-369">Fix tagging for resource groups</span></span> 
-    - <span data-ttu-id="624d0-370">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/8166 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-370">More information here: https://github.com/Azure/azure-powershell/issues/8166</span></span>
-* <span data-ttu-id="624d0-371">`Get-AzureRmRoleAssignment`이(가) -ErrorAction을 준수하지 않는 문제 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-371">Fix issue where `Get-AzureRmRoleAssignment` doesn't respect -ErrorAction</span></span> 
-    - <span data-ttu-id="624d0-372">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/8235 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-372">More information here: https://github.com/Azure/azure-powershell/issues/8235</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="624d0-373">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="624d0-373">Az.Sql</span></span>
-* <span data-ttu-id="624d0-374">AzSqlDatabaseBackupShortTermRetentionPolicy 가져오기/설정하기 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-374">Add Get/Set AzSqlDatabaseBackupShortTermRetentionPolicy</span></span>
-* <span data-ttu-id="624d0-375">SQL cmdlet을 실행할 경우 Azure 계정에 로그인되어 있지 않은 것이 nullref 예외를 초래하는 문제 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-375">Fix issue where not being logged into Azure account would result in nullref exception when executing SQL cmdlets</span></span>
-* <span data-ttu-id="624d0-376">Get-AzSqlCapability의 nullref 예외 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-376">Fixed null ref exception in Get-AzSqlCapability</span></span>
-
-## <a name="121---january-2019"></a><span data-ttu-id="624d0-377">1.2.1 - 2019년 1월</span><span class="sxs-lookup"><span data-stu-id="624d0-377">1.2.1 - January 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="624d0-378">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="624d0-378">Az.Accounts</span></span>
-* <span data-ttu-id="624d0-379">올바른 인증 버전을 사용하여 릴리스</span><span class="sxs-lookup"><span data-stu-id="624d0-379">Release with correct version of Authentication</span></span>
-
-#### <a name="azanalysisservices"></a><span data-ttu-id="624d0-380">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="624d0-380">Az.AnalysisServices</span></span>
-* <span data-ttu-id="624d0-381">업데이트된 인증 종속성을 사용하여 릴리스</span><span class="sxs-lookup"><span data-stu-id="624d0-381">Release with updated Authentication dependency</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="624d0-382">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="624d0-382">Az.RecoveryServices</span></span>
-* <span data-ttu-id="624d0-383">업데이트된 인증 종속성을 사용하여 릴리스</span><span class="sxs-lookup"><span data-stu-id="624d0-383">Release with updated Authentication dependency</span></span>
-
-## <a name="120---january-2019"></a><span data-ttu-id="624d0-384">1.2.0 - 2019년 1월</span><span class="sxs-lookup"><span data-stu-id="624d0-384">1.2.0 - January 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="624d0-385">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="624d0-385">Az.Accounts</span></span>
-* <span data-ttu-id="624d0-386">Windows PowerShell 5.1 전용 대화형 사용자 이름/암호 인증 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-386">Add interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
-* <span data-ttu-id="624d0-387">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-387">Update incorrect online help URLs</span></span>
-* <span data-ttu-id="624d0-388">Uninstall-AzureRm 관련 PS Core에 경고 메시지 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-388">Add warning message in PS Core for Uninstall-AzureRm</span></span>
-
-#### <a name="azaks"></a><span data-ttu-id="624d0-389">Az.Aks</span><span class="sxs-lookup"><span data-stu-id="624d0-389">Az.Aks</span></span>
-* <span data-ttu-id="624d0-390">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-390">Update incorrect online help URLs</span></span>
-
-#### <a name="azautomation"></a><span data-ttu-id="624d0-391">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="624d0-391">Az.Automation</span></span>
-* <span data-ttu-id="624d0-392">Python 2 Runbook에 대한 지원이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-392">Added support for Python 2 runbooks</span></span>
-* <span data-ttu-id="624d0-393">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-393">Update incorrect online help URLs</span></span>
-
-#### <a name="azcdn"></a><span data-ttu-id="624d0-394">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="624d0-394">Az.Cdn</span></span>
-* <span data-ttu-id="624d0-395">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-395">Update incorrect online help URLs</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="624d0-396">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="624d0-396">Az.Compute</span></span>
-* <span data-ttu-id="624d0-397">Invoke-AzVMReimage cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-397">Add Invoke-AzVMReimage cmdlet</span></span>
-* <span data-ttu-id="624d0-398">Set-AzVmss에 TempDisk 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-398">Add TempDisk parameter to Set-AzVmss</span></span>
-* <span data-ttu-id="624d0-399">New-AzVM 경고 메시지 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-399">Fix the warning message of New-AzVM</span></span>
-
-#### <a name="azcontainerregistry"></a><span data-ttu-id="624d0-400">Az.ContainerRegistry</span><span class="sxs-lookup"><span data-stu-id="624d0-400">Az.ContainerRegistry</span></span>
-* <span data-ttu-id="624d0-401">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-401">Update incorrect online help URLs</span></span>
-
-#### <a name="azdatafactory"></a><span data-ttu-id="624d0-402">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="624d0-402">Az.DataFactory</span></span>
-* <span data-ttu-id="624d0-403">ADF.Net SDK 버전이 3.0.0으로 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-403">Updated ADF .Net SDK version to 3.0.0</span></span>
-
-#### <a name="azdatalakestore"></a><span data-ttu-id="624d0-404">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="624d0-404">Az.DataLakeStore</span></span>
-* <span data-ttu-id="624d0-405">MSI를 사용할 때 ADLS 엔드포인트 문제 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-405">Fix issue with ADLS endpoint when using MSI</span></span>
-    - <span data-ttu-id="624d0-406">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/7462 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-406">More information here: https://github.com/Azure/azure-powershell/issues/7462</span></span>
-* <span data-ttu-id="624d0-407">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-407">Update incorrect online help URLs</span></span>
-
-#### <a name="aziothub"></a><span data-ttu-id="624d0-408">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="624d0-408">Az.IotHub</span></span>
-* <span data-ttu-id="624d0-409">Add-IotHubRoutingEndpoint cmdlet에 인코딩 형식을 추가하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-409">Add Encoding format to Add-IotHubRoutingEndpoint cmdlet.</span></span>
-
-#### <a name="azkeyvault"></a><span data-ttu-id="624d0-410">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="624d0-410">Az.KeyVault</span></span>
-* <span data-ttu-id="624d0-411">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-411">Update incorrect online help URLs</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="624d0-412">Az.Network</span><span class="sxs-lookup"><span data-stu-id="624d0-412">Az.Network</span></span>
-* <span data-ttu-id="624d0-413">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-413">Update incorrect online help URLs</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="624d0-414">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="624d0-414">Az.Resources</span></span>
-* <span data-ttu-id="624d0-415">'New-AzADAppCredential' 및 'New-AzADSpCredential' 참조 설명서의 잘못된 예제 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-415">Fix incorrect examples in 'New-AzADAppCredential' and 'New-AzADSpCredential' reference documentation</span></span>
-* <span data-ttu-id="624d0-416">리소스 그룹 배포 cmdlet 실행 전 '-TemplateFile' 매개 변수 경로가 확인되지 않는 문제 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-416">Fix issue where path for '-TemplateFile' parameter was not being resolved before executing resource group deployment cmdlets</span></span>
-* <span data-ttu-id="624d0-417">Az.Resources: New-AzureRmPolicyDefinition -Mode 기본값에 대한 올바른 설명서</span><span class="sxs-lookup"><span data-stu-id="624d0-417">Az.Resources: Correct documentation for New-AzureRmPolicyDefinition -Mode default value</span></span>
-* <span data-ttu-id="624d0-418">Az.Resources: 문제 https://github.com/Azure/azure-powershell/issues/7522 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-418">Az.Resources: Fix for issue https://github.com/Azure/azure-powershell/issues/7522</span></span>
-* <span data-ttu-id="624d0-419">Az.Resources: 문제 https://github.com/Azure/azure-powershell/issues/5747 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-419">Az.Resources: Fix for issue https://github.com/Azure/azure-powershell/issues/5747</span></span>
-* <span data-ttu-id="624d0-420">'PSResourceGroupDeployment' 개체의 서식 문제 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-420">Fix formatting issue with 'PSResourceGroupDeployment' object</span></span>
-    - <span data-ttu-id="624d0-421">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/2123 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-421">More information here: https://github.com/Azure/azure-powershell/issues/2123</span></span>
-
-#### <a name="azservicefabric"></a><span data-ttu-id="624d0-422">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="624d0-422">Az.ServiceFabric</span></span>
-* <span data-ttu-id="624d0-423">인증서가 VMSS 모델에 추가되었는데도 예외가 발생할 경우 롤백합니다. 이는 버그 https://github.com/Azure/service-fabric-issues/issues/932 를 수정하기 위함입니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-423">Rollback when a certificate is added to VMSS model but an exception is thrown this is to fix bug: https://github.com/Azure/service-fabric-issues/issues/932</span></span>
-* <span data-ttu-id="624d0-424">일부 오류 메시지를 수정하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-424">Fix some error messages.</span></span>
-* <span data-ttu-id="624d0-425">Az로의 마이그레이션을 통해서는 작동하지 않는 New-AzServiceFabriCluster를 위해 기본값 ARM 템플릿을 가진 클러스터 만들기를 수정하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-425">Fix create cluster with default ARM template for New-AzServiceFabriCluster which was not working with migration to Az.</span></span>
-* <span data-ttu-id="624d0-426">확장에서 클러스터 id를 확인하여 클러스터에 해당하는 VMSS에만 추가되도록 클러스터/애플리케이션 인증서 추가를 수정하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-426">Fix add cluster/application certificate to only add to VM Scale Sets that correspond to the cluster by checking cluster id in the extension.</span></span>
-
-#### <a name="azsignalr"></a><span data-ttu-id="624d0-427">Az.SignalR</span><span class="sxs-lookup"><span data-stu-id="624d0-427">Az.SignalR</span></span>
-* <span data-ttu-id="624d0-428">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-428">Update incorrect online help URLs</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="624d0-429">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="624d0-429">Az.Sql</span></span>
-* <span data-ttu-id="624d0-430">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-430">Update incorrect online help URLs</span></span>
-* <span data-ttu-id="624d0-431">가능한 값을 가진 LicenseType 매개 변수에 대한 매개 변수 설명이 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-431">Updated parameter description for LicenseType parameter with possible values</span></span>
-* <span data-ttu-id="624d0-432">유일하게 업데이트된 속성인데 작동하지 않는 관리되는 인스턴스 ID의 업데이트 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-432">Fix for updating managed instance identity not working when it is the only updated property</span></span>
-* <span data-ttu-id="624d0-433">관리되는 인스턴스에서의 사용자 지정 데이터 정렬에 대한 지원</span><span class="sxs-lookup"><span data-stu-id="624d0-433">Support for custom collation on managed instance</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="624d0-434">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="624d0-434">Az.Storage</span></span>
-* <span data-ttu-id="624d0-435">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-435">Update incorrect online help URLs</span></span>
-* <span data-ttu-id="624d0-436">Premium Storage 계정이 클래식 로깅/메트릭을 지원하지 않기 때문에, Premium Storage 계정의 클래식 로깅/메트릭을 가져올/설정할 때 상세한 오류 메시지를 제공해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-436">Give detail error message when get/set classic Logging/Metric on Premium Storage Account, since Premium Storage Account not supoort classic Logging/Metric.</span></span>
-    - <span data-ttu-id="624d0-437">Get/Set-AzStorageServiceLoggingProperty</span><span class="sxs-lookup"><span data-stu-id="624d0-437">Get/Set-AzStorageServiceLoggingProperty</span></span>
-    - <span data-ttu-id="624d0-438">Get/Set-AzStorageServiceMetricsProperty</span><span class="sxs-lookup"><span data-stu-id="624d0-438">Get/Set-AzStorageServiceMetricsProperty</span></span>
-
-#### <a name="aztrafficmanager"></a><span data-ttu-id="624d0-439">Az.TrafficManager</span><span class="sxs-lookup"><span data-stu-id="624d0-439">Az.TrafficManager</span></span>
-* <span data-ttu-id="624d0-440">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-440">Update incorrect online help URLs</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="624d0-441">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="624d0-441">Az.Websites</span></span>
-* <span data-ttu-id="624d0-442">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-442">Update incorrect online help URLs</span></span>
-* <span data-ttu-id="624d0-443">앱이 ASE에 호스팅되면 'New-AzWebAppSSLBinding'을 수정하여 올바른 resourcegroup+location에 인증서를 업로드합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-443">Fixes 'New-AzWebAppSSLBinding' to upload the certificate to the correct resourcegroup+location if the app is hosted on an ASE.</span></span>
-* <span data-ttu-id="624d0-444">'New-AzWebAppSSLBinding'을 수정하여 SSL 인증서를 앱에 바인딩하는 데 붙는 태그를 덮어쓰지 않도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-444">Fixes 'New-AzWebAppSSLBinding' to not overwrite the tags on binding an SSL certificate to an app</span></span>
-
-## <a name="110---january-2019"></a><span data-ttu-id="624d0-445">1.1.0 - 2019년 1월</span><span class="sxs-lookup"><span data-stu-id="624d0-445">1.1.0 - January 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="624d0-446">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="624d0-446">Az.Accounts</span></span>
-* <span data-ttu-id="624d0-447">Enable-AzureRmAlias에 'Local' 범위 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-447">Add 'Local' Scope to Enable-AzureRmAlias</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="624d0-448">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="624d0-448">Az.Compute</span></span>
-* <span data-ttu-id="624d0-449">이름이 Restart/Start/Stop/Remove/Set-AzVM과 Save-AzVMImage에 설정된 ID 매개 변수에서 선택 사항이 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-449">Name is now optional in ID parameter set for Restart/Start/Stop/Remove/Set-AzVM and Save-AzVMImage</span></span>
-* <span data-ttu-id="624d0-450">도움말 파일의 ID에 대한 설명이 업데이트 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-450">Updated the description of ID in help files</span></span>
-* <span data-ttu-id="624d0-451">Az.Accounts 모듈을 사용할 때의 이전 버전과의 호환성 문제를 해결합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-451">Fix backward compatibility issue with Az.Accounts module</span></span>
-
-#### <a name="azdatalakestore"></a><span data-ttu-id="624d0-452">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="624d0-452">Az.DataLakeStore</span></span>
-* <span data-ttu-id="624d0-453">SDK 수정을 위해 데이터 평면의 SDK 버전을 1.1.14로 업데이트하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-453">Update the sdk version of dataplane to 1.1.14 for SDK fixes.</span></span>
-    - <span data-ttu-id="624d0-454">getfilestatus 및 liststatus에 대한 음수 acesstime 및 modificationtime 수정, 비동기 취소 토큰 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-454">Fix handling of negative acesstime and modificationtime for getfilestatus and liststatus, Fix async cancellation token</span></span>
-
-#### <a name="azeventgrid"></a><span data-ttu-id="624d0-455">Az.EventGrid</span><span class="sxs-lookup"><span data-stu-id="624d0-455">Az.EventGrid</span></span>
-* <span data-ttu-id="624d0-456">2019-01-01 API 버전을 사용하도록 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-456">Updated to use the 2019-01-01 API version.</span></span>
-* <span data-ttu-id="624d0-457">2019-01-01 API 버전에서 새 시나리오를 지원하도록 다음 cmdlet을 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-457">Update the following cmdlets to support new scenario in 2019-01-01 API version</span></span>
-    - <span data-ttu-id="624d0-458">New-AzureRmEventGridSubscription: 지정을 위한 새로운 선택적 매개 변수를 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-458">New-AzureRmEventGridSubscription: Add new optional parameters for specifying:</span></span>
-        - <span data-ttu-id="624d0-459">이벤트 Time-to-Live</span><span class="sxs-lookup"><span data-stu-id="624d0-459">Event Time-To-Live,</span></span>
-        - <span data-ttu-id="624d0-460">이벤트에 대한 최대 배달 시도</span><span class="sxs-lookup"><span data-stu-id="624d0-460">Maximum number of delivery attempts for the events,</span></span>
-        - <span data-ttu-id="624d0-461">배달 못한 편지의 엔드포인트입니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-461">Dead letter endpoint.</span></span>
-    - <span data-ttu-id="624d0-462">Update-AzureRmEventGridSubscription: 지정을 위한 새로운 선택적 매개 변수를 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-462">Update-AzureRmEventGridSubscription: Add new optional parameters for specifying:</span></span>
-        - <span data-ttu-id="624d0-463">이벤트 Time-to-Live</span><span class="sxs-lookup"><span data-stu-id="624d0-463">Event Time-To-Live,</span></span>
-        - <span data-ttu-id="624d0-464">이벤트에 대한 최대 배달 시도</span><span class="sxs-lookup"><span data-stu-id="624d0-464">Maximum number of delivery attempts for the events,</span></span>
-        - <span data-ttu-id="624d0-465">배달 못한 편지의 엔드포인트입니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-465">Dead letter endpoint.</span></span>
-* <span data-ttu-id="624d0-466">New-AzureRmEventGridSubscription 및 Update-AzureRmEventGridSubscription cmdlet의 EndpointType 옵션에 새 열거형 값(즉, storageQueue 및 hybridConnection)을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-466">Add new enum values (namely, storageQueue and hybridConnection) for EndpointType option in New-AzureRmEventGridSubscription and Update-AzureRmEventGridSubscription cmdlets.</span></span>
-* <span data-ttu-id="624d0-467">이벤트 구독을 생성 또는 업데이트할 때 사용자가 직접 조치를 취해야 할 경우 경고 메시지를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-467">Show warning message if creating or updating the event subscription is expected to entail manual action from user.</span></span>
-
-#### <a name="aziothub"></a><span data-ttu-id="624d0-468">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="624d0-468">Az.IotHub</span></span>
-* <span data-ttu-id="624d0-469">최신 버전의 Azure IotHub SDK로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="624d0-469">Updated to the latest version of the IotHub SDK</span></span>
-
-#### <a name="azlogicapp"></a><span data-ttu-id="624d0-470">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="624d0-470">Az.LogicApp</span></span>
-* <span data-ttu-id="624d0-471">지정된 이름이 없는 모든 Get-AzLogicApp 목록</span><span class="sxs-lookup"><span data-stu-id="624d0-471">Get-AzLogicApp lists all without specified Name</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="624d0-472">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="624d0-472">Az.Resources</span></span>
-* <span data-ttu-id="624d0-473">'Get-AzResource'에 '-ODataQuery'및 '-ResourceId' 매개 변수를 제공할 때 매개 변수 집합 문제 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-473">Fix parameter set issue when providing '-ODataQuery' and '-ResourceId' parameters for 'Get-AzResource'</span></span>
-    - <span data-ttu-id="624d0-474">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/7875 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-474">More information here: https://github.com/Azure/azure-powershell/issues/7875</span></span>
-* <span data-ttu-id="624d0-475">New/Set-AzPolicyDefinition에서 -Custom 매개 변수 처리 문제 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-475">Fix handling of the -Custom parameter in New/Set-AzPolicyDefinition</span></span>
-* <span data-ttu-id="624d0-476">New-AzDeployment 설명서에서 오타 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-476">Fix typo in New-AzDeployment documentation</span></span>
-* <span data-ttu-id="624d0-477">'New-AzADUser'에 '-MailNickname'매개 변수가 필수 항목으로 지정됨</span><span class="sxs-lookup"><span data-stu-id="624d0-477">Made '-MailNickname' parameter mandatory for 'New-AzADUser'</span></span>
-    - <span data-ttu-id="624d0-478">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/8220 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-478">More information here: https://github.com/Azure/azure-powershell/issues/8220</span></span>
-
-#### <a name="azsignalr"></a><span data-ttu-id="624d0-479">Az.SignalR</span><span class="sxs-lookup"><span data-stu-id="624d0-479">Az.SignalR</span></span>
-* <span data-ttu-id="624d0-480">Az.Accounts 모듈을 사용할 때의 이전 버전과의 호환성 문제를 해결합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-480">Fix backward compatibility issue with Az.Accounts module</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="624d0-481">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="624d0-481">Az.Sql</span></span>
-* <span data-ttu-id="624d0-482">Storage 관리 클라이언트 종속성을 일반적인 SDK 구현으로 변환했습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-482">Converted the Storage management client dependency to the common SDK implementation.</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="624d0-483">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="624d0-483">Az.Storage</span></span>
-* <span data-ttu-id="624d0-484">Sas Token, OAuth 또는 Anonymous를 사용하여 스토리지 컨텍스트의 StorageAccountName을 실제 스토리지 계정 이름으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-484">Set the StorageAccountName of Storage context as the real Storage Account Name, when it's created with Sas Token, OAuth or Anonymous</span></span>
-    - <span data-ttu-id="624d0-485">New-AzStorageContext</span><span class="sxs-lookup"><span data-stu-id="624d0-485">New-AzStorageContext</span></span>
-* <span data-ttu-id="624d0-486">'-FullUri' 매개 변수를 사용하여 Blob 스냅샷 개체의 Sas Token을 생성하고 반환된 Uri를 스냅샷 Uri로 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-486">Create Sas Token of Blob Snapshot Object with '-FullUri' parameter, fix the returned Uri to be the sanpshot Uri</span></span>
-    - <span data-ttu-id="624d0-487">New-AzStorageBlobSASToken</span><span class="sxs-lookup"><span data-stu-id="624d0-487">New-AzStorageBlobSASToken</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="624d0-488">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="624d0-488">Az.Websites</span></span>
-* <span data-ttu-id="624d0-489">'Get-AzDeletedWebApp'의 날짜 구문 분석 버그를 수정했습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-489">Fixed a date parsing bug in 'Get-AzDeletedWebApp'</span></span>
-* <span data-ttu-id="624d0-490">Az.Accounts 모듈을 사용할 때의 이전 버전과의 호환성 문제를 해결합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-490">Fix backward compatibility issue with Az.Accounts module</span></span>
-
-## <a name="100---december-2018"></a><span data-ttu-id="624d0-491">1.0.0 - 2018년 12월</span><span class="sxs-lookup"><span data-stu-id="624d0-491">1.0.0 - December 2018</span></span>
-### <a name="general"></a><span data-ttu-id="624d0-492">일반</span><span class="sxs-lookup"><span data-stu-id="624d0-492">General</span></span>
-
-- <span data-ttu-id="624d0-493">Az 모듈 일반 공급</span><span class="sxs-lookup"><span data-stu-id="624d0-493">General Availability of Az Module</span></span>
-- <span data-ttu-id="624d0-494">각 모듈에 대 한 온라인 도움말</span><span class="sxs-lookup"><span data-stu-id="624d0-494">Online help for each module</span></span>
-- <span data-ttu-id="624d0-495">자세한 내용과 로드맵은 [Az 알림 페이지](https://aka.ms/azps-announce)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-495">For more details and a roadmap, see the [Az Announcement page](https://aka.ms/azps-announce)</span></span>
-- <span data-ttu-id="624d0-496">AzureRM에서 마이그레이션하는 것에 대한 정보는 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-496">See the [Migration Guide](https://aka.ms/azps-migration-guide) for information on migrating from AzureRM</span></span>
-
-### <a name="azaccounts"></a><span data-ttu-id="624d0-497">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="624d0-497">Az.Accounts</span></span>
-- <span data-ttu-id="624d0-498">Az.Profile에서 변경</span><span class="sxs-lookup"><span data-stu-id="624d0-498">Changed from Az.Profile</span></span>
-- <span data-ttu-id="624d0-499">프로필 및 컨텍스트 형식에 대한 표 형식 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-499">Fixed table formats for profile and context types</span></span>
-
-### <a name="azapimanagement"></a><span data-ttu-id="624d0-500">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="624d0-500">Az.ApiManagement</span></span>
-- <span data-ttu-id="624d0-501">#7002에 대한 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-501">Fixes for #7002</span></span>
-- <span data-ttu-id="624d0-502">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-502">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azbatch"></a><span data-ttu-id="624d0-503">Az.Batch</span><span class="sxs-lookup"><span data-stu-id="624d0-503">Az.Batch</span></span>
-- <span data-ttu-id="624d0-504">`PSComputeNode`의 새로운 `NodeAgentInformation` 속성을 통해 풀의 각 VM에서 실행 중인 Azure Batch 노드 에이전트의 버전을 확인하는 기능이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-504">Added the ability to see what version of the Azure Batch Node Agent is running on each of the VMs in a pool, via the new `NodeAgentInformation` property on `PSComputeNode`.</span></span>
-- <span data-ttu-id="624d0-505">`PSDataDisk`에 대한 `Caching` 기본 값은 이제 `None` 대신 `ReadWrite`입니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-505">The `Caching` default for `PSDataDisk` is now `ReadWrite` instead of `None`.</span></span>
-- <span data-ttu-id="624d0-506">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-506">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azbilling"></a><span data-ttu-id="624d0-507">Az.Billing</span><span class="sxs-lookup"><span data-stu-id="624d0-507">Az.Billing</span></span>
-- <span data-ttu-id="624d0-508">청구, 소비 및 UsageAggregates cmdlet 결합 cmdlet에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-508">Combines Billing, Consumption, and UsageAggregates cmdlets, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azcognitivservices"></a><span data-ttu-id="624d0-509">Az.CognitivServices</span><span class="sxs-lookup"><span data-stu-id="624d0-509">Az.CognitivServices</span></span>
-- <span data-ttu-id="624d0-510">New-AzureRmCognitiveServicesAccount 작업에서 사용 가능한 SkuName 및 Typem에 대한 완성자 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-510">Add completers for SkuName and Typem available on New-AzureRmCognitiveServicesAccount operation</span></span>
-- <span data-ttu-id="624d0-511">Get-AzCognitiveServicesAccountSkus에서 GetSkusWithAccountParamSetName 매개 변수 집합을 제거</span><span class="sxs-lookup"><span data-stu-id="624d0-511">Removed GetSkusWithAccountParamSetName parameter set from Get-AzCognitiveServicesAccountSkus</span></span>
-
-### <a name="azcontainerinstance"></a><span data-ttu-id="624d0-512">Az.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="624d0-512">Az.ContainerInstance</span></span>
-- <span data-ttu-id="624d0-513">ManagedIdentity 지원이 추가됨</span><span class="sxs-lookup"><span data-stu-id="624d0-513">Added ManagedIdentity support</span></span>
-
-### <a name="azdatalakeanalytics"></a><span data-ttu-id="624d0-514">Az.DataLakeAnalytics</span><span class="sxs-lookup"><span data-stu-id="624d0-514">Az.DataLakeAnalytics</span></span>
-- <span data-ttu-id="624d0-515">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-515">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azdatalakestore"></a><span data-ttu-id="624d0-516">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="624d0-516">Az.DataLakeStore</span></span>
-- <span data-ttu-id="624d0-517">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-517">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azmonitor"></a><span data-ttu-id="624d0-518">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="624d0-518">Az.Monitor</span></span>
-- <span data-ttu-id="624d0-519">Az.Monitor 이름 변경 및 기타 사소한 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-519">Renamed Az.Insights to Az.Monitor and other minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azkeyvault"></a><span data-ttu-id="624d0-520">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="624d0-520">Az.KeyVault</span></span>
-- <span data-ttu-id="624d0-521">출력 형식에서 사용되지 않는 'PurgeDisabled' 속성 제거</span><span class="sxs-lookup"><span data-stu-id="624d0-521">Removed the deprecated 'PurgeDisabled' property from output types</span></span>
-
-### <a name="azmachinelearning"></a><span data-ttu-id="624d0-522">Az.MachineLearning</span><span class="sxs-lookup"><span data-stu-id="624d0-522">Az.MachineLearning</span></span>
-- <span data-ttu-id="624d0-523">Az.MachineLearningCompute 모듈의 cmdlet 포함</span><span class="sxs-lookup"><span data-stu-id="624d0-523">Included cmdlets from Az.MachineLearningCompute module</span></span>
-
-### <a name="azmedia"></a><span data-ttu-id="624d0-524">Az.Media</span><span class="sxs-lookup"><span data-stu-id="624d0-524">Az.Media</span></span>
-- <span data-ttu-id="624d0-525">New-AzMediaService에서 사용되지 않는 -Tags 별칭이 제거됨</span><span class="sxs-lookup"><span data-stu-id="624d0-525">Remove deprecated -Tags alias from New-AzMediaService</span></span>
-
-### <a name="aznetwork"></a><span data-ttu-id="624d0-526">Az.Network</span><span class="sxs-lookup"><span data-stu-id="624d0-526">Az.Network</span></span>
-<span data-ttu-id="624d0-527">Application Gateway에서 RewriteRuleSets를 구성하는 것에 대한 지원이 추가됨</span><span class="sxs-lookup"><span data-stu-id="624d0-527">Added support for the configuring RewriteRuleSets in the Application Gateway</span></span>
-    - <span data-ttu-id="624d0-528">추가된 새 cmdlet은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-528">New cmdlets added:</span></span>
-        - <span data-ttu-id="624d0-529">Add-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="624d0-529">Add-AzureRmApplicationGatewayRewriteRuleSet</span></span>
-        - <span data-ttu-id="624d0-530">Get-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="624d0-530">Get-AzureRmApplicationGatewayRewriteRuleSet</span></span>
-        - <span data-ttu-id="624d0-531">New-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="624d0-531">New-AzureRmApplicationGatewayRewriteRuleSet</span></span>
-        - <span data-ttu-id="624d0-532">Remove-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="624d0-532">Remove-AzureRmApplicationGatewayRewriteRuleSet</span></span>
-        - <span data-ttu-id="624d0-533">Set-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="624d0-533">Set-AzureRmApplicationGatewayRewriteRuleSet</span></span>
-        - <span data-ttu-id="624d0-534">New-AzureRmApplicationGatewayRewriteRule</span><span class="sxs-lookup"><span data-stu-id="624d0-534">New-AzureRmApplicationGatewayRewriteRule</span></span>
-        - <span data-ttu-id="624d0-535">New-AzureRmApplicationGatewayRewriteRuleActionSet</span><span class="sxs-lookup"><span data-stu-id="624d0-535">New-AzureRmApplicationGatewayRewriteRuleActionSet</span></span>
-        - <span data-ttu-id="624d0-536">New-AzureRmApplicationGatewayRewriteRuleHeaderConfiguration</span><span class="sxs-lookup"><span data-stu-id="624d0-536">New-AzureRmApplicationGatewayRewriteRuleHeaderConfiguration</span></span>
-    - <span data-ttu-id="624d0-537">선택적 매개 변수를 사용하도록 cmdlet이 업데이트됨 -RewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="624d0-537">Cmdlets updated with optional parameter -RewriteRuleSet</span></span>
-        - <span data-ttu-id="624d0-538">New-AzureRmApplicationGateway</span><span class="sxs-lookup"><span data-stu-id="624d0-538">New-AzureRmApplicationGateway</span></span>
-        - <span data-ttu-id="624d0-539">New-AzureRmApplicationGatewayRequestRoutingRule</span><span class="sxs-lookup"><span data-stu-id="624d0-539">New-AzureRmApplicationGatewayRequestRoutingRule</span></span>
-        - <span data-ttu-id="624d0-540">Add-AzureRmApplicationGatewayRequestRoutingRule</span><span class="sxs-lookup"><span data-stu-id="624d0-540">Add-AzureRmApplicationGatewayRequestRoutingRule</span></span>
-        - <span data-ttu-id="624d0-541">New-AzureRmApplicationGatewayPathRuleConfig</span><span class="sxs-lookup"><span data-stu-id="624d0-541">New-AzureRmApplicationGatewayPathRuleConfig</span></span>
-        - <span data-ttu-id="624d0-542">Add-AzureRmApplicationGatewayUrlPathMapConfig</span><span class="sxs-lookup"><span data-stu-id="624d0-542">Add-AzureRmApplicationGatewayUrlPathMapConfig</span></span>
-        - <span data-ttu-id="624d0-543">New-AzureRmApplicationGatewayUrlPathMapConfig로 ID를 사용하여 Application Gateway에 KeyVault 지원을 추가했습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-543">New-AzureRmApplicationGatewayUrlPathMapConfig Added KeyVault Support to Application Gateway using Identity.</span></span>
-    - <span data-ttu-id="624d0-544">선택적 매개 변수를 사용하도록 cmdlet이 업데이트됨 -KeyVaultSecretId, -KeyVaultSecret</span><span class="sxs-lookup"><span data-stu-id="624d0-544">Cmdlets updated with optonal parameter -KeyVaultSecretId, -KeyVaultSecret</span></span>
-        - <span data-ttu-id="624d0-545">Add-AzApplicationGatewaySslCertificate</span><span class="sxs-lookup"><span data-stu-id="624d0-545">Add-AzApplicationGatewaySslCertificate</span></span>
-        - <span data-ttu-id="624d0-546">New-AzApplicationGatewaySslCertificate</span><span class="sxs-lookup"><span data-stu-id="624d0-546">New-AzApplicationGatewaySslCertificate</span></span>
-        - <span data-ttu-id="624d0-547">Set-AzApplicationGatewaySslCertificate</span><span class="sxs-lookup"><span data-stu-id="624d0-547">Set-AzApplicationGatewaySslCertificate</span></span>
-    - <span data-ttu-id="624d0-548">New-AzApplicationGateway cmdlet이 선택적 매개 변수를 사용하도록 업데이트됨 -UserAssignedIdentity</span><span class="sxs-lookup"><span data-stu-id="624d0-548">New-AzApplicationGateway cmdlet updated with optional parameter -UserAssignedIdentity</span></span>
-- <span data-ttu-id="624d0-549">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-549">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azoperationalinsights"></a><span data-ttu-id="624d0-550">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="624d0-550">Az.OperationalInsights</span></span>
-- <span data-ttu-id="624d0-551">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-551">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azprofile"></a><span data-ttu-id="624d0-552">Az.Profile</span><span class="sxs-lookup"><span data-stu-id="624d0-552">Az.Profile</span></span>
-- <span data-ttu-id="624d0-553">Az.Accounts에 모듈 이름이 변경됨</span><span class="sxs-lookup"><span data-stu-id="624d0-553">Changed module name to Az.Accounts</span></span>
-
-### <a name="azrecoveryservices"></a><span data-ttu-id="624d0-554">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="624d0-554">Az.RecoveryServices</span></span>
-- <span data-ttu-id="624d0-555">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-555">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azresources"></a><span data-ttu-id="624d0-556">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="624d0-556">Az.Resources</span></span>
-- <span data-ttu-id="624d0-557">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-557">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azservicefabric"></a><span data-ttu-id="624d0-558">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="624d0-558">Az.ServiceFabric</span></span>
-- <span data-ttu-id="624d0-559">일반 이름과 지문으로 지정 인증서 지원</span><span class="sxs-lookup"><span data-stu-id="624d0-559">Support specfying certificate by common name and thumbprint</span></span>
-- <span data-ttu-id="624d0-560">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-560">Mnor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azsignalr"></a><span data-ttu-id="624d0-561">Az.SIgnalR</span><span class="sxs-lookup"><span data-stu-id="624d0-561">Az.SIgnalR</span></span>
-- <span data-ttu-id="624d0-562">SIgnalR에 대한 PowerShell cmdlet에 대한 일반 공급</span><span class="sxs-lookup"><span data-stu-id="624d0-562">General Availability for PowerShell cmdlets for SIgnalR</span></span>
-
-### <a name="azsql"></a><span data-ttu-id="624d0-563">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="624d0-563">Az.Sql</span></span>
-- <span data-ttu-id="624d0-564">위협 탐지의 cmdlet에 새로운 Data_Exfiltration 및 Unsafe_Action 검색 유형 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-564">Added new Data_Exfiltration and Unsafe_Action detection types to Threat Detection's cmdlets</span></span>
-- <span data-ttu-id="624d0-565">Sql 감사 cmdlet에 대한 설명서 예제 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-565">Updated documentation examples for Sql Auditing cmdlets</span></span>
-- <span data-ttu-id="624d0-566">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-566">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azstorage"></a><span data-ttu-id="624d0-567">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="624d0-567">Az.Storage</span></span>
-- <span data-ttu-id="624d0-568">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-568">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azwebsites"></a><span data-ttu-id="624d0-569">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="624d0-569">Az.Websites</span></span>
-- <span data-ttu-id="624d0-570">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="624d0-570">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-## <a name="070---december-2018"></a><span data-ttu-id="624d0-571">0.7.0 - 2018년 12월</span><span class="sxs-lookup"><span data-stu-id="624d0-571">0.7.0 - December 2018</span></span>
-
-### <a name="general"></a><span data-ttu-id="624d0-572">일반</span><span class="sxs-lookup"><span data-stu-id="624d0-572">General</span></span>
-
-* <span data-ttu-id="624d0-573">AzureRM에서 Az 전환 예정에 대한 사소한 변경</span><span class="sxs-lookup"><span data-stu-id="624d0-573">Minor changes for upcoming AzureRM to Az transition</span></span>
-
-### <a name="azcompute"></a><span data-ttu-id="624d0-574">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="624d0-574">Az.Compute</span></span>
-
-* <span data-ttu-id="624d0-575">`New-AzVm(ss)` cmdlet에 대한 간단한 매개 변수 집합에 UltraSSD 및 갤러리 이미지에 대한 지원을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-575">Add support for UltraSSD and Gallery Images in the simple param sets for `New-AzVm(ss)` cmdlets.</span></span>
-
-### <a name="azdatalakestore"></a><span data-ttu-id="624d0-576">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="624d0-576">Az.DataLakeStore</span></span>
-
-* <span data-ttu-id="624d0-577">ADLS 계정의 도메인의 후행 슬래시를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-577">Fix the trailing slash of the domain of adls account</span></span>
-
-### <a name="azfrontdoor"></a><span data-ttu-id="624d0-578">Az.FrontDoor</span><span class="sxs-lookup"><span data-stu-id="624d0-578">Az.FrontDoor</span></span>
-
-* <span data-ttu-id="624d0-579">일부 끊어진 링크 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-579">Fixed some broken links</span></span>
-    - <span data-ttu-id="624d0-580">New-AzureRmFrontDoor 및 Set-AzureRmFrontDoor 아티클에서 New-AzureRmFrontDoorHealthProbeSettingObject cmdlet 아티클에 대한 링크가 수정되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-580">In the New-AzureRmFrontDoor and Set-AzureRmFrontDoor articles, fixed the link to the New-AzureRmFrontDoorHealthProbeSettingObject cmdlet article.</span></span>
-    - <span data-ttu-id="624d0-581">New-AzureRmFrontDoorManagedRuleObject 아티클에서 New-AzureRmFrontDoorRuleGroupOverrideObject cmdlet 아티클에 대한 링크가 수정되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-581">In the New-AzureRmFrontDoorManagedRuleObject article, fixed the link to the New-AzureRmFrontDoorRuleGroupOverrideObject cmdlet article.</span></span>
-
-### <a name="azrecoveryservices"></a><span data-ttu-id="624d0-582">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="624d0-582">Az.RecoveryServices</span></span>
-
-* <span data-ttu-id="624d0-583">Azure File Share 복원 작업에 클라이언트 측 유효성 검사가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-583">Added client side validations for Azure File Share restore operations.</span></span>
-* <span data-ttu-id="624d0-584">afs 복원의 경우 storageAccountName 및 storageAccountResourceGroupName을 선택적으로 만들었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-584">Made storageAccountName and storageAccountResourceGroupName optional for afs restore.</span></span>
-
-### <a name="azresources"></a><span data-ttu-id="624d0-585">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="624d0-585">Az.Resources</span></span>
-
-* <span data-ttu-id="624d0-586">https://github.com/Azure/azure-powershell/issues/7679 에 대한 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-586">Fix for https://github.com/Azure/azure-powershell/issues/7679</span></span>
-    - <span data-ttu-id="624d0-587">기본 관리자를 요청할 때 구독 범위가 제공되는 경우 Get-AzureRmRoleAssignment를 업데이트하여 구독 범위를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-587">Update Get-AzureRmRoleAssignment to use the subscription scope if it is provided when requesting classic administrators.</span></span>
-
-### <a name="azsql"></a><span data-ttu-id="624d0-588">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="624d0-588">Az.Sql</span></span>
-
-* <span data-ttu-id="624d0-589">AzureRM에서 Az 전환 예정에 대한 사소한 변경</span><span class="sxs-lookup"><span data-stu-id="624d0-589">Minor changes for upcoming AzureRM to Az transition</span></span>
-* <span data-ttu-id="624d0-590">DotNet 코어에서 Get-AzureRmSqlDatabaseVulnerabilityAssessment를 사용하는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="624d0-590">Fixed issue with using Get-AzureRmSqlDatabaseVulnerabilityAssessment with DotNet core</span></span>
-* <span data-ttu-id="624d0-591">SQL 감사 cmdlet과 관련된 도움말 메시지의 설명서가 수정되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-591">Modified documentation of help messages related to SQL Auditing cmdlets.</span></span>
-
-### <a name="azstorage"></a><span data-ttu-id="624d0-592">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="624d0-592">Az.Storage</span></span>
-
-* <span data-ttu-id="624d0-593">New-AzureRmStorageAccount에 -EnableHierarchicalNamespace 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-593">Add -EnableHierarchicalNamespace to New-AzureRmStorageAccount</span></span>
-* <span data-ttu-id="624d0-594">파일 복사 cmdlet이 -DestContext 입력이 없을 때 대상의 원본 컨텍스트를 다시 사용할 수 없는 문제 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-594">Fix issue that Copy File cmdlet can't reuse source context in destination when not input -DestContext</span></span>
-    - <span data-ttu-id="624d0-595">Start-AzureStorageFileCopy</span><span class="sxs-lookup"><span data-stu-id="624d0-595">Start-AzureStorageFileCopy</span></span>
-* <span data-ttu-id="624d0-596">고정적인 웹 사이트 구성 지원</span><span class="sxs-lookup"><span data-stu-id="624d0-596">Support Static Website configuration</span></span>
-    - <span data-ttu-id="624d0-597">Enable-AzureStorageStaticWebsite</span><span class="sxs-lookup"><span data-stu-id="624d0-597">Enable-AzureStorageStaticWebsite</span></span>
-    - <span data-ttu-id="624d0-598">Disable-AzureStorageStaticWebsite</span><span class="sxs-lookup"><span data-stu-id="624d0-598">Disable-AzureStorageStaticWebsite</span></span>
-
-### <a name="azwebsites"></a><span data-ttu-id="624d0-599">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="624d0-599">Az.Websites</span></span>
-
-* <span data-ttu-id="624d0-600">Set-AzureRmWebApp 및 Set-AzureRmWebAppSlot</span><span class="sxs-lookup"><span data-stu-id="624d0-600">Set-AzureRmWebApp and Set-AzureRmWebAppSlot</span></span> 
-    - <span data-ttu-id="624d0-601">Windows 및 Linux 컨테이너 응용 프로그램에 탑재할 Azure Storage 경로를 지정하기 위해 새 매개 변수(-AzureStoragePath)가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-601">New parameter (-AzureStoragePath) added to specify Azure Storage paths to be mounted in Windows and Linux container apps.</span></span> <span data-ttu-id="624d0-602">새 cmdlet New-AzureRmWebAppAzureStoragePath의 출력을 매개 변수로 사용하여 Azure Storage 경로를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-602">Use the output of the new cmdlet New-AzureRmWebAppAzureStoragePath as a parameter to set the Azure Storage paths.</span></span>
-
-## <a name="061---november-2018"></a><span data-ttu-id="624d0-603">0.6.1 - 2018년 11월</span><span class="sxs-lookup"><span data-stu-id="624d0-603">0.6.1 - November 2018</span></span>
-
-### <a name="azapimanagement"></a><span data-ttu-id="624d0-604">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="624d0-604">Az.ApiManagement</span></span>
-* <span data-ttu-id="624d0-605">형식 매핑 문제에 대한 종속성 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-605">Update dependencies for type mapping issue</span></span>
-
-### <a name="azautomation"></a><span data-ttu-id="624d0-606">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="624d0-606">Az.Automation</span></span>
-* <span data-ttu-id="624d0-607">Azure Automation cmdlet 기반 Swagger</span><span class="sxs-lookup"><span data-stu-id="624d0-607">Swagger based Azure Automation cmdlets</span></span>
-* <span data-ttu-id="624d0-608">업데이트 관리 cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-608">Added Update Management cmdlets</span></span>
-* <span data-ttu-id="624d0-609">소스 제어 cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-609">Added Source Control cmdlets</span></span>
-* <span data-ttu-id="624d0-610">Remove-AzureRmAutomationHybridWorkerGroup cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-610">Added Remove-AzureRmAutomationHybridWorkerGroup cmdlet</span></span>
-* <span data-ttu-id="624d0-611">DSC 노드 등록 명령 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-611">Fixed the DSC Register Node command</span></span>
-
-### <a name="azcompute"></a><span data-ttu-id="624d0-612">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="624d0-612">Az.Compute</span></span>
-* <span data-ttu-id="624d0-613">SystemAssigned ID에 대한 ID 문제 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-613">Fixed identity issue for SystemAssigned identity</span></span>
-* <span data-ttu-id="624d0-614">형식 매핑 문제에 대한 종속성 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-614">Update dependencies for type mapping issue</span></span>
-
-### <a name="azcontainerinstance"></a><span data-ttu-id="624d0-615">Az.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="624d0-615">Az.ContainerInstance</span></span>
-* <span data-ttu-id="624d0-616">형식 매핑 문제에 대한 종속성 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-616">Update dependencies for type mapping issue</span></span>
-
-### <a name="azmarketplaceordering"></a><span data-ttu-id="624d0-617">Az.MarketplaceOrdering</span><span class="sxs-lookup"><span data-stu-id="624d0-617">Az.MarketplaceOrdering</span></span>
-* <span data-ttu-id="624d0-618">마켓플레이스 cmdlet에 대한 예제 설명 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-618">update the examples description for marketplace cmdlets</span></span>
-
-### <a name="aznetwork"></a><span data-ttu-id="624d0-619">Az.Network</span><span class="sxs-lookup"><span data-stu-id="624d0-619">Az.Network</span></span>
-* <span data-ttu-id="624d0-620">New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-620">Added cmdlet New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError</span></span>
-* <span data-ttu-id="624d0-621">지원되는 AzureFirewall 네트워크 프로토콜에 ICMP 다시 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-621">Added ICMP back to supported AzureFirewall Network Protocols</span></span>
-* <span data-ttu-id="624d0-622">Test-AzureRmNetworkWatcherConnectivity cmdlet을 업데이트하여 대상 ID, 주소 및 포트 유효성 검사를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-622">Update cmdlet Test-AzureRmNetworkWatcherConnectivity, add validation on destination id, address and port.</span></span> 
-* <span data-ttu-id="624d0-623">VirtualNetwork 맵의 메모리 사용 문제 해결</span><span class="sxs-lookup"><span data-stu-id="624d0-623">Fix issues with memory usage in VirtualNetwork map</span></span>
-
-### <a name="azrecoveryservicesbackup"></a><span data-ttu-id="624d0-624">Az.RecoveryServices.Backup</span><span class="sxs-lookup"><span data-stu-id="624d0-624">Az.RecoveryServices.Backup</span></span>
-* <span data-ttu-id="624d0-625">보호된 파일 공유에 대한 정책을 수정하는 것에 대해 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-625">Fix for modifying policy for a protected file share.</span></span>
-* <span data-ttu-id="624d0-626">정책 표준 시간대를 대문자로 변환했습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-626">Converted policy timezone to uppercase.</span></span>
-
-### <a name="azrecoveryservicessiterecovery"></a><span data-ttu-id="624d0-627">Az.RecoveryServices.SiteRecovery</span><span class="sxs-lookup"><span data-stu-id="624d0-627">Az.RecoveryServices.SiteRecovery</span></span>
-* <span data-ttu-id="624d0-628">New-AzureRmRecoveryServicesAsrProtectableItem의 예제 정정</span><span class="sxs-lookup"><span data-stu-id="624d0-628">Corrected example in New-AzureRmRecoveryServicesAsrProtectableItem</span></span>
-* <span data-ttu-id="624d0-629">형식 매핑 문제에 대한 종속성 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-629">Update dependencies for type mapping issue</span></span>
-
-### <a name="azrelay"></a><span data-ttu-id="624d0-630">Az.Relay</span><span class="sxs-lookup"><span data-stu-id="624d0-630">Az.Relay</span></span>
-* <span data-ttu-id="624d0-631">선택적 매개 변수 -KeyValue를 New-AzureRmRelayKey cmdlet에 추가하여 사용자가 KeyValue를 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-631">Added optional Parameter -KeyValue to New-AzureRmRelayKey cmdlet, which enables user to provide KeyValue.</span></span>
-
-### <a name="azresources"></a><span data-ttu-id="624d0-632">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="624d0-632">Az.Resources</span></span>
-* <span data-ttu-id="624d0-633">`New-AzureRmPolicyAssignment` 및 `Set-AzureRmPolicyAssignment`의 자원 ID 관련 매개 변수에 대한 도움말 문서를 업데이트함</span><span class="sxs-lookup"><span data-stu-id="624d0-633">Update help documentation for resource identity related parameters in `New-AzureRmPolicyAssignment` and `Set-AzureRmPolicyAssignment`</span></span>
-* <span data-ttu-id="624d0-634">-Metadata를 사용하는 New-AzureRmPolicyDefinition에 대한 예제 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-634">Add an example for New-AzureRmPolicyDefinition that uses -Metadata</span></span>
-* <span data-ttu-id="624d0-635">NetStandard의 태그 키에서 대소문자 보존을 허용하도록 수정: #7678 #7703</span><span class="sxs-lookup"><span data-stu-id="624d0-635">Fix to allow case preservation in Tag keys in NetStandard: #7678 #7703</span></span>
-
-### <a name="azservicefabric"></a><span data-ttu-id="624d0-636">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="624d0-636">Az.ServiceFabric</span></span>
-* <span data-ttu-id="624d0-637">향후 호환성이 손상되는 변경에 대한 사용 중단 메시지 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-637">Add deprecation messages for upcoming breaking changes</span></span>
-
-### <a name="azsql"></a><span data-ttu-id="624d0-638">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="624d0-638">Az.Sql</span></span>
-* <span data-ttu-id="624d0-639">Azure Sql Database Managed Instance 및 Azure Sql Managed Database에 CRUD 작업을 위한 새 cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-639">Added new cmdlets for CRUD operations on Azure Sql Database Managed Instance and Azure Sql Managed Database</span></span>
-    - <span data-ttu-id="624d0-640">Get-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="624d0-640">Get-AzureRmSqlInstance</span></span>
-    - <span data-ttu-id="624d0-641">New-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="624d0-641">New-AzureRmSqlInstance</span></span>
-    - <span data-ttu-id="624d0-642">Set-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="624d0-642">Set-AzureRmSqlInstance</span></span>
-    - <span data-ttu-id="624d0-643">Remove-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="624d0-643">Remove-AzureRmSqlInstance</span></span>
-    - <span data-ttu-id="624d0-644">Get-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="624d0-644">Get-AzureRmSqlInstanceDatabase</span></span>
-    - <span data-ttu-id="624d0-645">New-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="624d0-645">New-AzureRmSqlInstanceDatabase</span></span>
-    - <span data-ttu-id="624d0-646">Restore-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="624d0-646">Restore-AzureRmSqlInstanceDatabase</span></span>
-    - <span data-ttu-id="624d0-647">Remove-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="624d0-647">Remove-AzureRmSqlInstanceDatabase</span></span>
-* <span data-ttu-id="624d0-648">서버 또는 데이터베이스에서 확장 감사 정책 관리를 활성화했습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-648">Enabled Extended Auditing Policy management on a server or a database.</span></span>
-    - <span data-ttu-id="624d0-649">새 매개 변수(PredicateExpression)가 감사 로그 필터링을 사용하도록 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-649">New parameter (PredicateExpression) was added to enable filtering of audit logs.</span></span>
-    - <span data-ttu-id="624d0-650">Cmdlet이 레거시 클라이언트 대신 SQL 클라이언트를 사용하도록 수정되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-650">Cmdlets were modified to use SQL clients instead of Legacy clients.</span></span>
-    - <span data-ttu-id="624d0-651">Set-AzureRmSqlServerAuditing.</span><span class="sxs-lookup"><span data-stu-id="624d0-651">Set-AzureRmSqlServerAuditing.</span></span>
-    - <span data-ttu-id="624d0-652">Get-AzureRmSqlServerAuditing.</span><span class="sxs-lookup"><span data-stu-id="624d0-652">Get-AzureRmSqlServerAuditing.</span></span>
-    - <span data-ttu-id="624d0-653">Set-AzureRmSqlDatabaseAuditing.</span><span class="sxs-lookup"><span data-stu-id="624d0-653">Set-AzureRmSqlDatabaseAuditing.</span></span>
-    - <span data-ttu-id="624d0-654">Get-AzureRmSqlDatabaseAuditing.</span><span class="sxs-lookup"><span data-stu-id="624d0-654">Get-AzureRmSqlDatabaseAuditing.</span></span>
-* <span data-ttu-id="624d0-655">스토리지 계정 이름 매개 변수가 설정된 Update-AzureRmSqlDatabaseVulnerabilityAssessmentSettings를 사용할 때의 문제 해결</span><span class="sxs-lookup"><span data-stu-id="624d0-655">Fixed issue with using Update-AzureRmSqlDatabaseVulnerabilityAssessmentSettings with storage account name parameter set</span></span>
-
-## <a name="050---november-2018"></a><span data-ttu-id="624d0-656">0.5.0 - 2018년 11월</span><span class="sxs-lookup"><span data-stu-id="624d0-656">0.5.0 - November 2018</span></span>
-#### <a name="general"></a><span data-ttu-id="624d0-657">일반</span><span class="sxs-lookup"><span data-stu-id="624d0-657">General</span></span>
-* <span data-ttu-id="624d0-658">많은 핵심 cmdlet에 Resource Completers를 추가하여 대화형으로 cmdlet을 호출할 때 기존 리소스 이름을 탭으로 이동할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-658">Added Resource Completers to many core cmdlets - these alloow you to tab through existing resource names when invoking cmdlets interactively</span></span>
-
-#### <a name="azprofile"></a><span data-ttu-id="624d0-659">Az.Profile</span><span class="sxs-lookup"><span data-stu-id="624d0-659">Az.Profile</span></span>
-* <span data-ttu-id="624d0-660">ClientRuntime의 최신 버전을 사용하도록 일반적인 코드를 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-660">Update common code to use latest version of ClientRuntime</span></span>
-* <span data-ttu-id="624d0-661">Connect-AzAccount cmdlet의 매개 변수 TenantId 이름을 Tenant로 바꾸고 TenantId의 별칭을 추가합니다</span><span class="sxs-lookup"><span data-stu-id="624d0-661">Rename param TenantId in cmdlet Connect-AzAccount to Tenant and add an alias for TenantId</span></span>
-* <span data-ttu-id="624d0-662">Connect-AzAccount의 업데이트된 TenantId 설명</span><span class="sxs-lookup"><span data-stu-id="624d0-662">Updated TenantId description for Connect-AzAccount</span></span>
-* <span data-ttu-id="624d0-663">테넌트 도메인을 제공할 때 실패한 로그인에 대한 오류 메시지 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-663">Fix error message for failed login when providing tenant domain</span></span>
+## <a name="180---april-2019"></a><span data-ttu-id="c25bf-103">1.8.0 - 2019년 4월</span><span class="sxs-lookup"><span data-stu-id="c25bf-103">1.8.0 - April 2019</span></span>
+### <a name="highlights-since-the-last-major-release"></a><span data-ttu-id="c25bf-104">마지막 주 릴리스 이후의 주요 사항</span><span class="sxs-lookup"><span data-stu-id="c25bf-104">Highlights since the last major release</span></span>
+* <span data-ttu-id="c25bf-105">`Az` 모듈 일반 공급</span><span class="sxs-lookup"><span data-stu-id="c25bf-105">General availability of `Az` module</span></span>
+* <span data-ttu-id="c25bf-106">`Az` 모듈에 대한 자세한 내용은 https://aka.ms/azps-announce 를 방문하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-106">For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce</span></span>
+* <span data-ttu-id="c25bf-107">Location, ResourceGroup 및 ResourceName 완성자가 추가되었습니다(https://azure.microsoft.com/blog/completers-in-azure-powershell/ ).</span><span class="sxs-lookup"><span data-stu-id="c25bf-107">Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span></span>
+* <span data-ttu-id="c25bf-108">와일드카드 지원이 Az.Compute 및 Az.Network에 대한 Get cmdlet에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-108">Added wildcard support to Get cmdlets for Az.Compute and Az.Network</span></span>
+* <span data-ttu-id="c25bf-109">Windows PowerShell 5.1 전용 대화형 사용자 이름/암호 인증이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-109">Added interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
+* <span data-ttu-id="c25bf-110">Python 2 Runbook 지원이 Az.Automation에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-110">Added support for Python 2 runbooks in Az.Automation</span></span>
+* <span data-ttu-id="c25bf-111">Az.LogicApp: 통합 계정 어셈블리 및 일괄 처리 구성을 위한 새로운 cmdlet입니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-111">Az.LogicApp: New cmdlets for Integration Account Assemblies and Batch Configuration</span></span>
+
+#### <a name="azaccounts"></a><span data-ttu-id="c25bf-112">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="c25bf-112">Az.Accounts</span></span>
+* <span data-ttu-id="c25bf-113">Mac에서 모듈을 올바르게 삭제하기 위해 Uninstall-AzureRm을 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-113">Update Uninstall-AzureRm to correctly delete modules in Mac</span></span>
+
+#### <a name="azbatch"></a><span data-ttu-id="c25bf-114">Az.Batch</span><span class="sxs-lookup"><span data-stu-id="c25bf-114">Az.Batch</span></span>
+* <span data-ttu-id="c25bf-115">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-115">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azcdn"></a><span data-ttu-id="c25bf-116">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="c25bf-116">Az.Cdn</span></span>
+* <span data-ttu-id="c25bf-117">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-117">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azcognitiveservices"></a><span data-ttu-id="c25bf-118">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="c25bf-118">Az.CognitiveServices</span></span>
+* <span data-ttu-id="c25bf-119">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-119">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="c25bf-120">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="c25bf-120">Az.Compute</span></span>
+* <span data-ttu-id="c25bf-121">디스크의 리소스 ID에 리소스 ID의 소문자 resourcegroups가 있는 경우 AEM 설치 문제 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-121">Fix issue with AEM installation if resource ids of disks had lowercase resourcegroups in resource id</span></span>
+* <span data-ttu-id="c25bf-122">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-122">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+* <span data-ttu-id="c25bf-123">와일드 카드에 대한 설명서 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-123">Fix documentation for wildcards</span></span>
+
+#### <a name="azdatafactory"></a><span data-ttu-id="c25bf-124">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="c25bf-124">Az.DataFactory</span></span>
+* <span data-ttu-id="c25bf-125">NodeCount가 관리형 통합 런타임에 대해 Null이 아닌 경우 SsisProperties를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-125">Add SsisProperties if NodeCount not null for managed integration runtime.</span></span>
+
+#### <a name="azdatalakestore"></a><span data-ttu-id="c25bf-126">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="c25bf-126">Az.DataLakeStore</span></span>
+* <span data-ttu-id="c25bf-127">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-127">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azeventgrid"></a><span data-ttu-id="c25bf-128">Az.EventGrid</span><span class="sxs-lookup"><span data-stu-id="c25bf-128">Az.EventGrid</span></span>
+* <span data-ttu-id="c25bf-129">이벤트 구독 cmdlet 만들기/업데이트를 사용하기 전에 리소스를 만들어야 함을 나타내기 위해 엔드포인트의 도움말 텍스트가 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-129">Updated the help text for endpoint to indicate that resources should be created before using the create/update event subscription cmdlets.</span></span>
+
+#### <a name="azeventhub"></a><span data-ttu-id="c25bf-130">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="c25bf-130">Az.EventHub</span></span>
+* <span data-ttu-id="c25bf-131">네임스페이스의 NetworkRuleSet에 대한 새 cmdlet가 추가되었습니다</span><span class="sxs-lookup"><span data-stu-id="c25bf-131">Added new cmdlets for NetworkRuleSet of Namespace</span></span> 
+
+#### <a name="azhdinsight"></a><span data-ttu-id="c25bf-132">Az.HDInsight</span><span class="sxs-lookup"><span data-stu-id="c25bf-132">Az.HDInsight</span></span>
+* <span data-ttu-id="c25bf-133">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-133">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="aziothub"></a><span data-ttu-id="c25bf-134">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="c25bf-134">Az.IotHub</span></span>
+* <span data-ttu-id="c25bf-135">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-135">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azkeyvault"></a><span data-ttu-id="c25bf-136">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="c25bf-136">Az.KeyVault</span></span>
+* <span data-ttu-id="c25bf-137">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-137">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+* <span data-ttu-id="c25bf-138">와일드 카드에 대한 설명서 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-138">Fix documentation for wildcards</span></span>
+
+#### <a name="azmachinelearning"></a><span data-ttu-id="c25bf-139">Az.MachineLearning</span><span class="sxs-lookup"><span data-stu-id="c25bf-139">Az.MachineLearning</span></span>
+* <span data-ttu-id="c25bf-140">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-140">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azmedia"></a><span data-ttu-id="c25bf-141">Az.Media</span><span class="sxs-lookup"><span data-stu-id="c25bf-141">Az.Media</span></span>
+* <span data-ttu-id="c25bf-142">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-142">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azmonitor"></a><span data-ttu-id="c25bf-143">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="c25bf-143">Az.Monitor</span></span>
+  * <span data-ttu-id="c25bf-144">GenV2(비 클래식) 메트릭 기반 경고 규칙에 대한 새 cmdlet</span><span class="sxs-lookup"><span data-stu-id="c25bf-144">New cmdlets for GenV2(non classic) metric-based alert rule</span></span>
+      - <span data-ttu-id="c25bf-145">New-AzMetricAlertRuleV2DimensionSelection</span><span class="sxs-lookup"><span data-stu-id="c25bf-145">New-AzMetricAlertRuleV2DimensionSelection</span></span>
+      - <span data-ttu-id="c25bf-146">New-AzMetricAlertRuleV2Criteria</span><span class="sxs-lookup"><span data-stu-id="c25bf-146">New-AzMetricAlertRuleV2Criteria</span></span>
+      - <span data-ttu-id="c25bf-147">Remove-AzMetricAlertRuleV2</span><span class="sxs-lookup"><span data-stu-id="c25bf-147">Remove-AzMetricAlertRuleV2</span></span>
+      - <span data-ttu-id="c25bf-148">Get-AzMetricAlertRuleV2</span><span class="sxs-lookup"><span data-stu-id="c25bf-148">Get-AzMetricAlertRuleV2</span></span>
+      - <span data-ttu-id="c25bf-149">Add-AzMetricAlertRuleV2</span><span class="sxs-lookup"><span data-stu-id="c25bf-149">Add-AzMetricAlertRuleV2</span></span>
+  * <span data-ttu-id="c25bf-150">모니터 SDK가 버전 0.22.0-preview로 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-150">Updated Monitor SDK to version 0.22.0-preview</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="c25bf-151">Az.Network</span><span class="sxs-lookup"><span data-stu-id="c25bf-151">Az.Network</span></span>
+* <span data-ttu-id="c25bf-152">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-152">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+* <span data-ttu-id="c25bf-153">와일드 카드에 대한 설명서 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-153">Fix documentation for wildcards</span></span>
+
+#### <a name="aznotificationhubs"></a><span data-ttu-id="c25bf-154">Az.NotificationHubs</span><span class="sxs-lookup"><span data-stu-id="c25bf-154">Az.NotificationHubs</span></span>
+* <span data-ttu-id="c25bf-155">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-155">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azoperationalinsights"></a><span data-ttu-id="c25bf-156">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="c25bf-156">Az.OperationalInsights</span></span>
+* <span data-ttu-id="c25bf-157">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-157">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azpowerbiembedded"></a><span data-ttu-id="c25bf-158">Az.PowerBIEmbedded</span><span class="sxs-lookup"><span data-stu-id="c25bf-158">Az.PowerBIEmbedded</span></span>
+* <span data-ttu-id="c25bf-159">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-159">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="c25bf-160">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="c25bf-160">Az.RecoveryServices</span></span>
+* <span data-ttu-id="c25bf-161">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-161">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+* <span data-ttu-id="c25bf-162">Azure VM의 SQL용 테이블 형식이 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-162">Updated table format for SQL in azure VM</span></span>
+* <span data-ttu-id="c25bf-163">AzureFileShare에서 위치를 가져오는 대체 메서드가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-163">Added alternate method to fetch location in AzureFileShare</span></span>
+* <span data-ttu-id="c25bf-164">시간대에 따라 SchedulePolicy 개체의 ScheduleRunDays가 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-164">Updated ScheduleRunDays in SchedulePolicy object according to timezone</span></span>
+
+#### <a name="azrediscache"></a><span data-ttu-id="c25bf-165">Az.RedisCache</span><span class="sxs-lookup"><span data-stu-id="c25bf-165">Az.RedisCache</span></span>
+* <span data-ttu-id="c25bf-166">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-166">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="c25bf-167">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="c25bf-167">Az.Resources</span></span>
+* <span data-ttu-id="c25bf-168">와일드 카드에 대한 설명서 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-168">Fix documentation for wildcards</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="c25bf-169">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="c25bf-169">Az.Sql</span></span>
+* <span data-ttu-id="c25bf-170">Monitor SDK의 종속성을 공용 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-170">Replace dependency on Monitor SDK with common code</span></span>
+* <span data-ttu-id="c25bf-171">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-171">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+* <span data-ttu-id="c25bf-172">다중 열 분류 프로세스가 향상되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-172">Enhanced process of multiple columns classification.</span></span>
+* <span data-ttu-id="c25bf-173">기본적으로 Get-AzSqlServerServiceObjective의 응답으로 SKU 속성(SKU 이름, 제품군, 용량)과 테이블 형식을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-173">Include sku properties (sku name, family, capacity) in response from Get-AzSqlServerServiceObjective and format as table by default.</span></span>
+* <span data-ttu-id="c25bf-174">해당 지역에 기존 서버 없이 위치별로 Get-AzSqlServerServiceObjective를 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-174">Ability to Get-AzSqlServerServiceObjective by location without needing a preexisting server in the region.</span></span>
+* <span data-ttu-id="c25bf-175">관리형 인스턴스 생성 시 표준 시간대 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-175">Support for time zone parameter in Managed Instance create.</span></span>
+* <span data-ttu-id="c25bf-176">와일드 카드에 대한 설명서 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-176">Fix documentation for wildcards</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="c25bf-177">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="c25bf-177">Az.Websites</span></span>
+* <span data-ttu-id="c25bf-178">실행 시 태그를 제거하지 않도록 Set-AzWebApp 및 Set-AzWebAppSlot를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-178">fixes the Set-AzWebApp and Set-AzWebAppSlot to not remove the tags on execution</span></span>
+* <span data-ttu-id="c25bf-179">복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-179">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+* <span data-ttu-id="c25bf-180">WebSites SDK가 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-180">Updated the WebSites SDK.</span></span>
+* <span data-ttu-id="c25bf-181">PSAppServicePlan에서 AdminSiteName 속성을 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-181">Removed the AdminSiteName property from PSAppServicePlan.</span></span>
+
+## <a name="170---april-2019"></a><span data-ttu-id="c25bf-182">1.7.0 - 2019년 4월</span><span class="sxs-lookup"><span data-stu-id="c25bf-182">1.7.0 - April 2019</span></span>
+### <a name="highlights-since-the-last-major-release"></a><span data-ttu-id="c25bf-183">마지막 주 릴리스 이후의 주요 사항</span><span class="sxs-lookup"><span data-stu-id="c25bf-183">Highlights since the last major release</span></span>
+* <span data-ttu-id="c25bf-184">`Az` 모듈 일반 공급</span><span class="sxs-lookup"><span data-stu-id="c25bf-184">General availability of `Az` module</span></span>
+* <span data-ttu-id="c25bf-185">`Az` 모듈에 대한 자세한 내용은 https://aka.ms/azps-announce 를 방문하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-185">For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce</span></span>
+* <span data-ttu-id="c25bf-186">Location, ResourceGroup 및 ResourceName 완성자가 추가되었습니다(https://azure.microsoft.com/blog/completers-in-azure-powershell/ ).</span><span class="sxs-lookup"><span data-stu-id="c25bf-186">Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span></span>
+* <span data-ttu-id="c25bf-187">와일드카드 지원이 Az.Compute 및 Az.Network에 대한 Get cmdlet에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-187">Added wildcard support to Get cmdlets for Az.Compute and Az.Network</span></span>
+* <span data-ttu-id="c25bf-188">Windows PowerShell 5.1 전용 대화형 사용자 이름/암호 인증이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-188">Added interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
+* <span data-ttu-id="c25bf-189">Python 2 Runbook 지원이 Az.Automation에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-189">Added support for Python 2 runbooks in Az.Automation</span></span>
+* <span data-ttu-id="c25bf-190">Az.LogicApp: 통합 계정 어셈블리 및 일괄 처리 구성을 위한 새로운 cmdlet입니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-190">Az.LogicApp: New cmdlets for Integration Account Assemblies and Batch Configuration</span></span>
+
+#### <a name="azaccounts"></a><span data-ttu-id="c25bf-191">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="c25bf-191">Az.Accounts</span></span>
+* <span data-ttu-id="c25bf-192">매개 변수 AzureAnalysisServicesEndpointResourceId를 허용하도록 Add-AzEnvironment 및 Set-AzEnvironment 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-192">Updated Add-AzEnvironment and Set-AzEnvironment to accept parameter AzureAnalysisServicesEndpointResourceId</span></span>
+
+#### <a name="azanalysisservices"></a><span data-ttu-id="c25bf-193">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="c25bf-193">Az.AnalysisServices</span></span>
+* <span data-ttu-id="c25bf-194">데이터 평면 cmdlet에서 ServiceClient 사용 및 원본 인증 논리 제거</span><span class="sxs-lookup"><span data-stu-id="c25bf-194">Using ServiceClient in dataplane cmdlets and removing the original authentication logic</span></span>
+* <span data-ttu-id="c25bf-195">호환성이 손상되는 변경을 방지하기 위해 Add-AzureASAccount를 Connect-AzAccount의 래퍼로 만듦</span><span class="sxs-lookup"><span data-stu-id="c25bf-195">Making Add-AzureASAccount a wrapper of Connect-AzAccount to avoid a breaking change</span></span>
+
+#### <a name="azautomation"></a><span data-ttu-id="c25bf-196">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="c25bf-196">Az.Automation</span></span>
+* <span data-ttu-id="c25bf-197">포함에 대한 New-AzAutomationSoftwareUpdateConfiguration cmdlet 버그 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-197">Fixed New-AzAutomationSoftwareUpdateConfiguration cmdlet bug for Inclusions.</span></span> <span data-ttu-id="c25bf-198">이제 매개 변수 IncludedKbNumber 및 IncludedPackageNameMask가 작동함</span><span class="sxs-lookup"><span data-stu-id="c25bf-198">Now parameter IncludedKbNumber and IncludedPackageNameMask should work.</span></span>
+* <span data-ttu-id="c25bf-199">Azure 자동화 업데이트 관리 동적 그룹에 대한 버그 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-199">Bug fix for azure automation update management dynamic group</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="c25bf-200">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="c25bf-200">Az.Compute</span></span>
+* <span data-ttu-id="c25bf-201">New-AzDiskConfig 및 New-AzSnapshotConfig에 HyperVGeneration 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-201">Add HyperVGeneration parameter to New-AzDiskConfig and New-AzSnapshotConfig</span></span>
+* <span data-ttu-id="c25bf-202">다른 테넌트의 갤러리 이미지를 사용하여 VM을 만들 수 있음</span><span class="sxs-lookup"><span data-stu-id="c25bf-202">Allow VM creation with galley image from other tenants.</span></span> 
+
+#### <a name="azcontainerinstance"></a><span data-ttu-id="c25bf-203">Az.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="c25bf-203">Az.ContainerInstance</span></span>
+* <span data-ttu-id="c25bf-204">후행 빈 인수를 추가한 New-AzContainerGroup의 -Command 매개 변수의 문제 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-204">Fixed issue in the -Command parameter of New-AzContainerGroup which added a trailing empty argument</span></span>
+
+#### <a name="azdatafactory"></a><span data-ttu-id="c25bf-205">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="c25bf-205">Az.DataFactory</span></span>
+* <span data-ttu-id="c25bf-206">ADF .Net SDK 버전을 3.0.2로 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-206">Updated ADF .Net SDK version to 3.0.2</span></span>
+* <span data-ttu-id="c25bf-207">RepoConfiguration 관련 설정에 대한 추가 매개 변수로 Set-AzDataFactoryV2 cmdlet을 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-207">Updated Set-AzDataFactoryV2 cmdlet with extra parameters for RepoConfiguration related settings.</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="c25bf-208">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="c25bf-208">Az.Resources</span></span>
+* <span data-ttu-id="c25bf-209">'-ResourceId' 또는 '-ResourceGroupName', '-Name' 및 '-ResourceType' 매개 변수를 제공할 때 'Get-AzResource'에 대한 공급자 처리 개선</span><span class="sxs-lookup"><span data-stu-id="c25bf-209">Improve handling of providers for 'Get-AzResource' when providing '-ResourceId' or '-ResourceGroupName', '-Name' and '-ResourceType' parameters</span></span>
+* <span data-ttu-id="c25bf-210">'Test-AzDeployment' 및 'Test-AzResourceGroupDeployment'에 대한 오류 처리 개선</span><span class="sxs-lookup"><span data-stu-id="c25bf-210">Improve error handling for 'Test-AzDeployment' and 'Test-AzResourceGroupDeployment'</span></span>
+    - <span data-ttu-id="c25bf-211">배포 유효성 검사 외부에서 발생한 오류를 처리하고 그 대신 명령의 출력에 포함</span><span class="sxs-lookup"><span data-stu-id="c25bf-211">Handle errors thrown outside of deployment validation and include them in output of command instead</span></span>
+    - <span data-ttu-id="c25bf-212">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/6856 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-212">More information here: https://github.com/Azure/azure-powershell/issues/6856</span></span>
+* <span data-ttu-id="c25bf-213">배포 cmdlet 세트에 스크립트 및 작업 시나리오에서 프롬프트를 건너뛰는 '-IgnoreDynamicParameters' 스위치 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-213">Add '-IgnoreDynamicParameters' switch parameter to set of deployment cmdlets to skip prompt in script and job scenarios</span></span>
+    - <span data-ttu-id="c25bf-214">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/6856 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-214">More information here: https://github.com/Azure/azure-powershell/issues/6856</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="c25bf-215">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="c25bf-215">Az.Sql</span></span>
+* <span data-ttu-id="c25bf-216">데이터베이스 데이터 분류 지원</span><span class="sxs-lookup"><span data-stu-id="c25bf-216">Support Database Data Classification.</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="c25bf-217">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="c25bf-217">Az.Storage</span></span>
+* <span data-ttu-id="c25bf-218">매개 변수 -UseConnectedAccount를 사용하여 스토리지 컨텍스트를 만들 때 자세한 오류 보고(단, 로그인 Azure 계정 없이)</span><span class="sxs-lookup"><span data-stu-id="c25bf-218">Report detail error when create Storage context with parameter -UseConnectedAccount, but without login Azure account</span></span>
+    - <span data-ttu-id="c25bf-219">New-AzStorageContext</span><span class="sxs-lookup"><span data-stu-id="c25bf-219">New-AzStorageContext</span></span>
+* <span data-ttu-id="c25bf-220">관리 평면 API를 사용하여 지정한 스토리지 계정의 BLOB 서비스 속성 관리 지원</span><span class="sxs-lookup"><span data-stu-id="c25bf-220">Support Manage Blob Service Properties of a specified Storage account with Management plane API</span></span>
+    - <span data-ttu-id="c25bf-221">Update-AzStorageBlobServiceProperty</span><span class="sxs-lookup"><span data-stu-id="c25bf-221">Update-AzStorageBlobServiceProperty</span></span>
+    - <span data-ttu-id="c25bf-222">Get-AzStorageBlobServiceProperty</span><span class="sxs-lookup"><span data-stu-id="c25bf-222">Get-AzStorageBlobServiceProperty</span></span>
+    - <span data-ttu-id="c25bf-223">Enable-AzStorageBlobDeleteRetentionPolicy</span><span class="sxs-lookup"><span data-stu-id="c25bf-223">Enable-AzStorageBlobDeleteRetentionPolicy</span></span>
+    - <span data-ttu-id="c25bf-224">Disable-AzStorageBlobDeleteRetentionPolicy</span><span class="sxs-lookup"><span data-stu-id="c25bf-224">Disable-AzStorageBlobDeleteRetentionPolicy</span></span>
+* <span data-ttu-id="c25bf-225">BLOB 및 파일 업로드/다운로드 cmdlet에 대한 -AsJob 지원</span><span class="sxs-lookup"><span data-stu-id="c25bf-225">-AsJob support for Blob and file upload and download cmdlets</span></span>
+    - <span data-ttu-id="c25bf-226">Get-AzStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="c25bf-226">Get-AzStorageBlobContent</span></span>
+    - <span data-ttu-id="c25bf-227">Set-AzStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="c25bf-227">Set-AzStorageBlobContent</span></span>
+    - <span data-ttu-id="c25bf-228">Get-AzStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="c25bf-228">Get-AzStorageFileContent</span></span>
+    - <span data-ttu-id="c25bf-229">Set-AzStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="c25bf-229">Set-AzStorageFileContent</span></span>
+
+## <a name="160---march-2019"></a><span data-ttu-id="c25bf-230">1.6.0 - 2019년 3월</span><span class="sxs-lookup"><span data-stu-id="c25bf-230">1.6.0 - March 2019</span></span>
+### <a name="highlights-since-the-last-major-release"></a><span data-ttu-id="c25bf-231">마지막 주 릴리스 이후의 주요 사항</span><span class="sxs-lookup"><span data-stu-id="c25bf-231">Highlights since the last major release</span></span>
+* <span data-ttu-id="c25bf-232">`Az` 모듈 일반 공급</span><span class="sxs-lookup"><span data-stu-id="c25bf-232">General availability of `Az` module</span></span>
+* <span data-ttu-id="c25bf-233">`Az` 모듈에 대한 자세한 내용은 https://aka.ms/azps-announce 를 방문하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-233">For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce</span></span>
+* <span data-ttu-id="c25bf-234">Location, ResourceGroup 및 ResourceName 완성자가 추가되었습니다(https://azure.microsoft.com/blog/completers-in-azure-powershell/ ).</span><span class="sxs-lookup"><span data-stu-id="c25bf-234">Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span></span>
+* <span data-ttu-id="c25bf-235">와일드카드 지원이 Az.Compute 및 Az.Network에 대한 Get cmdlet에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-235">Added wildcard support to Get cmdlets for Az.Compute and Az.Network</span></span>
+* <span data-ttu-id="c25bf-236">Windows PowerShell 5.1 전용 대화형 사용자 이름/암호 인증이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-236">Added interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
+* <span data-ttu-id="c25bf-237">Python 2 Runbook 지원이 Az.Automation에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-237">Added support for Python 2 runbooks in Az.Automation</span></span>
+* <span data-ttu-id="c25bf-238">Az.LogicApp: 통합 계정 어셈블리 및 일괄 처리 구성을 위한 새로운 cmdlet입니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-238">Az.LogicApp: New cmdlets for Integration Account Assemblies and Batch Configuration</span></span>
+
+#### <a name="azautomation"></a><span data-ttu-id="c25bf-239">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="c25bf-239">Az.Automation</span></span>
+* <span data-ttu-id="c25bf-240">Azure 자동화 업데이트 관리에서 변경된 지원 기능은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-240">Azure automation update management change to support the following new features :</span></span>
+    * <span data-ttu-id="c25bf-241">동적 그룹화</span><span class="sxs-lookup"><span data-stu-id="c25bf-241">Dynamic grouping</span></span>
+    * <span data-ttu-id="c25bf-242">사전 스크립트</span><span class="sxs-lookup"><span data-stu-id="c25bf-242">Pre-Post script</span></span>
+    * <span data-ttu-id="c25bf-243">다시 부팅 설정</span><span class="sxs-lookup"><span data-stu-id="c25bf-243">Reboot Setting</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="c25bf-244">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="c25bf-244">Az.Compute</span></span>
+* <span data-ttu-id="c25bf-245">Get-AzVmBootDiagnosticsData의 경로 확인 문제가 해결되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-245">Fix issue with path resolution in Get-AzVmBootDiagnosticsData</span></span>
+* <span data-ttu-id="c25bf-246">Compute 클라이언트 라이브러리가 25.0.0으로 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-246">Update Compute client library to 25.0.0.</span></span>
+
+#### <a name="azkeyvault"></a><span data-ttu-id="c25bf-247">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="c25bf-247">Az.KeyVault</span></span>
+* <span data-ttu-id="c25bf-248">와일드카드 지원이 KeyVault cmdlet에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-248">Added wildcard support to KeyVault cmdlets</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="c25bf-249">Az.Network</span><span class="sxs-lookup"><span data-stu-id="c25bf-249">Az.Network</span></span>
+* <span data-ttu-id="c25bf-250">Azure Firewall에 대한 위협 인텔리전스 지원이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-250">Add Threat Intelligence support for Azure Firewall</span></span>
+* <span data-ttu-id="c25bf-251">Application Gateway 방화벽 정책의 최상위 수준 리소스 및 사용자 지정 규칙이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-251">Add Application Gateway Firewall Policy top level resource and Custom Rules</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="c25bf-252">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="c25bf-252">Az.RecoveryServices</span></span>
+* <span data-ttu-id="c25bf-253">인스턴트 RP를 지원하기 위해 SnapshotRetentionInDays가 Azure VM 정책에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-253">Added SnapshotRetentionInDays in Azure VM policy to support Instant RP</span></span>
+* <span data-ttu-id="c25bf-254">컨테이너 등록을 취소하는 파이프 지원이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-254">Added pipe support for unregister container</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="c25bf-255">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="c25bf-255">Az.Resources</span></span>
+* <span data-ttu-id="c25bf-256">Get-AzResource 및 Get-AzResourceGroup에 대한 와일드카드 지원을 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-256">Update wildcard support for Get-AzResource and Get-AzResourceGroup</span></span>
+* <span data-ttu-id="c25bf-257">ARM에 대한 일반 호출을 수행할 때 사용되는 자격 증명을 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-257">Update credentials used when making generic calls to ARM</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="c25bf-258">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="c25bf-258">Az.Sql</span></span>
+* <span data-ttu-id="c25bf-259">위협 탐지의 cmdlet 매개 변수(ExcludeDetectionType)가 DetectionType에서 string[]으로 변경되어 새 DetectionType이 추가되면 이후의 증명이 되고 자동 완성도 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-259">changed Threat Detection's cmdlets param (ExcludeDetectionType) from DetectionType to string[] to make it future proof when new DetectionTypes are added and to support autocomplete as well.</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="c25bf-260">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="c25bf-260">Az.Storage</span></span>
+* <span data-ttu-id="c25bf-261">스토리지 계정에 대한 관리 정책 가져오기/설정/제거를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-261">Support Get/Set/Remove Management Policy on a Storage account</span></span>
+    - <span data-ttu-id="c25bf-262">Set-AzStorageAccountManagementPolicy</span><span class="sxs-lookup"><span data-stu-id="c25bf-262">Set-AzStorageAccountManagementPolicy</span></span>
+    - <span data-ttu-id="c25bf-263">Get-AzStorageAccountManagementPolicy</span><span class="sxs-lookup"><span data-stu-id="c25bf-263">Get-AzStorageAccountManagementPolicy</span></span>
+    - <span data-ttu-id="c25bf-264">Remove-AzStorageAccountManagementPolicy</span><span class="sxs-lookup"><span data-stu-id="c25bf-264">Remove-AzStorageAccountManagementPolicy</span></span>
+    - <span data-ttu-id="c25bf-265">Add-AzStorageAccountManagementPolicyAction</span><span class="sxs-lookup"><span data-stu-id="c25bf-265">Add-AzStorageAccountManagementPolicyAction</span></span>
+    - <span data-ttu-id="c25bf-266">New-AzStorageAccountManagementPolicyFilter</span><span class="sxs-lookup"><span data-stu-id="c25bf-266">New-AzStorageAccountManagementPolicyFilter</span></span>
+    - <span data-ttu-id="c25bf-267">New-AzStorageAccountManagementPolicyRule</span><span class="sxs-lookup"><span data-stu-id="c25bf-267">New-AzStorageAccountManagementPolicyRule</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="c25bf-268">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="c25bf-268">Az.Websites</span></span>
+* <span data-ttu-id="c25bf-269">'New-AzWebApp -IncludeSourceWebAppSlots'를 사용하여 모든 슬롯의 복제를 중단하는 ARM 템플릿 버그가 수정되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-269">Fix ARM template bug that breaks cloning all slots using 'New-AzWebApp -IncludeSourceWebAppSlots'</span></span> 
+
+## <a name="150---march-2019"></a><span data-ttu-id="c25bf-270">1.5.0 - 2019년 3월</span><span class="sxs-lookup"><span data-stu-id="c25bf-270">1.5.0 - March 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="c25bf-271">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="c25bf-271">Az.Accounts</span></span>
+* <span data-ttu-id="c25bf-272">'Register-AzModule' 명령을 추가하여 AutoRest 생성 cmdlet을 지원</span><span class="sxs-lookup"><span data-stu-id="c25bf-272">Add 'Register-AzModule' command to support AutoRest generated cmdlets</span></span>
+* <span data-ttu-id="c25bf-273">Connect-AzAccount 예제 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-273">Update examples for Connect-AzAccount</span></span>
+
+#### <a name="azautomation"></a><span data-ttu-id="c25bf-274">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="c25bf-274">Az.Automation</span></span>
+* <span data-ttu-id="c25bf-275">몇몇 Azure Automation cmdlet에서 특정 월별 일정을 검색할 때 발생하는 문제 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-275">Fixed issue when retreiving certain monthly schedules in several Azure Automation cmdlets</span></span>
+* <span data-ttu-id="c25bf-276">상위 20개 노드를 반환하도록 Get-AzAutomationDscNode를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-276">Fix Get-AzAutomationDscNode returning just top 20 nodes.</span></span> <span data-ttu-id="c25bf-277">이제 모든 노드 반환</span><span class="sxs-lookup"><span data-stu-id="c25bf-277">Now it returns all nodes</span></span>
+
+#### <a name="azcdn"></a><span data-ttu-id="c25bf-278">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="c25bf-278">Az.Cdn</span></span>
+* <span data-ttu-id="c25bf-279">사용자 지정 도메인 Https 사용/사용 안 함에 대한 새 Powershell cmdlet이 추가되었으며 기존의 것은 사용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-279">Added new Powershell cmdlets for Enable/Disable Custom Domain Https and deprecated the old ones</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="c25bf-280">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="c25bf-280">Az.Compute</span></span>
+* <span data-ttu-id="c25bf-281">Get cmdlet에 와일드 카드 지원 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-281">Add wildcard support to Get cmdlets</span></span>
+
+#### <a name="azdatafactory"></a><span data-ttu-id="c25bf-282">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="c25bf-282">Az.DataFactory</span></span>
+* <span data-ttu-id="c25bf-283">ADF.Net SDK 버전이 3.0.1로 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-283">Updated ADF .Net SDK version to 3.0.1</span></span>
+
+#### <a name="azlogicapp"></a><span data-ttu-id="c25bf-284">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="c25bf-284">Az.LogicApp</span></span>
+* <span data-ttu-id="c25bf-285">첫 결과 페이지 검색 시에만 ListWorkflows 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-285">Fix for ListWorkflows only retrieving the first page of results</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="c25bf-286">Az.Network</span><span class="sxs-lookup"><span data-stu-id="c25bf-286">Az.Network</span></span>
+* <span data-ttu-id="c25bf-287">Network cmdlet에 와일드 카드 지원 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-287">Add wildcard support to Network cmdlets</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="c25bf-288">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="c25bf-288">Az.RecoveryServices</span></span>
+* <span data-ttu-id="c25bf-289">Azure VM 지원에 SQL 서버가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-289">Added Sql server in Azure VM support</span></span>
+* <span data-ttu-id="c25bf-290">SDK 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-290">SDK Update</span></span>
+* <span data-ttu-id="c25bf-291">VMappContainer 체크 인 Get-ProtectableItem 제거</span><span class="sxs-lookup"><span data-stu-id="c25bf-291">Removed VMappContainer check in Get-ProtectableItem</span></span>
+* <span data-ttu-id="c25bf-292">Get ProtectableItem의 매개 변수로 Name과 ServerName이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-292">Added Name and ServerName as parameters for Get-ProtectableItem</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="c25bf-293">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="c25bf-293">Az.Resources</span></span>
+* <span data-ttu-id="c25bf-294">`-TemplateObject` 매개 변수를 추가하여 cmdlet을 배포</span><span class="sxs-lookup"><span data-stu-id="c25bf-294">Add `-TemplateObject` parameter to deployment cmdlets</span></span>
+    - <span data-ttu-id="c25bf-295">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/2933 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-295">More information here: https://github.com/Azure/azure-powershell/issues/2933</span></span>
+* <span data-ttu-id="c25bf-296">`Get-AzResource`의 결과를 `Set-AzResource`(으)로 파이프할 때 발생하는 문제 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-296">Fix issue when piping the result of `Get-AzResource` to `Set-AzResource`</span></span>
+    - <span data-ttu-id="c25bf-297">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/8240 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-297">More information here: https://github.com/Azure/azure-powershell/issues/8240</span></span>
+* <span data-ttu-id="c25bf-298">실행 시 JSON 데이터 형식 문제 해결 `Set-AzResource`</span><span class="sxs-lookup"><span data-stu-id="c25bf-298">Fix issue with JSON data type change when running `Set-AzResource`</span></span>
+    - <span data-ttu-id="c25bf-299">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/7930 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-299">More information here: https://github.com/Azure/azure-powershell/issues/7930</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="c25bf-300">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="c25bf-300">Az.Sql</span></span>
+* <span data-ttu-id="c25bf-301">AuditingEndpointsCommunicator를 업데이트 합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-301">Updating AuditingEndpointsCommunicator.</span></span>
+    - <span data-ttu-id="c25bf-302">새 진단 설정을 생성할 때 에지 사례의 동작을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-302">Fixing the behavior of an edge case while creating new diagnostic settings.</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="c25bf-303">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="c25bf-303">Az.Storage</span></span>
+* <span data-ttu-id="c25bf-304">스토리지 계정      - New-AzStorageAccount를 생성할 때 종류 BlockBlobStorage를 지원</span><span class="sxs-lookup"><span data-stu-id="c25bf-304">Support Kind BlockBlobStorage when create Storage account      - New-AzStorageAccount</span></span>
+
+## <a name="140---february-2019"></a><span data-ttu-id="c25bf-305">1.4.0 - 2019년 2월</span><span class="sxs-lookup"><span data-stu-id="c25bf-305">1.4.0 - February 2019</span></span>
+#### <a name="azanalysisservices"></a><span data-ttu-id="c25bf-306">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="c25bf-306">Az.AnalysisServices</span></span>
+* <span data-ttu-id="c25bf-307">사용되지 않는 AddAzureASAccount cmdlet</span><span class="sxs-lookup"><span data-stu-id="c25bf-307">Deprecated AddAzureASAccount cmdlet</span></span>
+
+#### <a name="azautomation"></a><span data-ttu-id="c25bf-308">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="c25bf-308">Az.Automation</span></span>
+* <span data-ttu-id="c25bf-309">Import-AzAutomationDscNodeConfiguration 도움말 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-309">Update help for Import-AzAutomationDscNodeConfiguration</span></span>
+* <span data-ttu-id="c25bf-310">Import-AzAutomationDscConfiguration cmdlet 구성 이름 유효성 검사 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-310">Added configuration name validation to Import-AzAutomationDscConfiguration cmdlet</span></span>
+* <span data-ttu-id="c25bf-311">Import-AzAutomationDscConfiguration cmdlet 오류 처리 개선</span><span class="sxs-lookup"><span data-stu-id="c25bf-311">Improved error handling for Import-AzAutomationDscConfiguration cmdlet</span></span>
+
+#### <a name="azcognitiveservices"></a><span data-ttu-id="c25bf-312">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="c25bf-312">Az.CognitiveServices</span></span>
+* <span data-ttu-id="c25bf-313">리소스의 하위 도메인을 지정하는 데 사용되는 New-AzCognitiveServicesAccount에 대한 새 선택적 매개 변수로 CustomSubdomainName이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-313">Added CustomSubdomainName as a new optional parameter for New-AzCognitiveServicesAccount which is used to specify subdomain for the resource.</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="c25bf-314">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="c25bf-314">Az.Compute</span></span>
+* <span data-ttu-id="c25bf-315">ID 매개 변수 집합 문제 해결</span><span class="sxs-lookup"><span data-stu-id="c25bf-315">Fix issue with ID parameter sets</span></span>
+* <span data-ttu-id="c25bf-316">Name 매개 변수를 제공하지 않으면 Get-AzVMExtension이 설치된 모든 확장을 열거하도록 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-316">Update Get-AzVMExtension to list all installed extension if Name parameter is not provided</span></span>
+* <span data-ttu-id="c25bf-317">Update-AzImage cmdlet에 태그 및 ResourceId 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-317">Add Tag and ResourceId parameters to Update-AzImage cmdlet</span></span>
+* <span data-ttu-id="c25bf-318">인스턴스 ID가 없는 Get-AzVmssVM과 InstanceView를 사용하면 인스턴스 보기가 있는 VMSS VM을 나열할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-318">Get-AzVmssVM without instance ID and with InstanceView can list VMSS VMs with instance view.</span></span>
+
+#### <a name="azdatalakestore"></a><span data-ttu-id="c25bf-319">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="c25bf-319">Az.DataLakeStore</span></span>
+* <span data-ttu-id="c25bf-320">ADL 삭제된 항목 열거 및 복원에 대한 cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-320">Add cmdlets for ADL deleted item enumerate and restore</span></span>
+
+#### <a name="azeventhub"></a><span data-ttu-id="c25bf-321">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="c25bf-321">Az.EventHub</span></span>
+* <span data-ttu-id="c25bf-322">Eventhub의 CaptureDescription 클래스에서 빈 보관을 건너뛰는 새 부울 속성 SkipEmptyArchives가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-322">Added new boolean property SkipEmptyArchives to Skip Empty Archives in CaptureDescription class of Eventhub</span></span> 
+
+#### <a name="azkeyvault"></a><span data-ttu-id="c25bf-323">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="c25bf-323">Az.KeyVault</span></span>
+* <span data-ttu-id="c25bf-324">Set-AzKeyVaultSecret 태그 지정 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-324">Fix tagging on Set-AzKeyVaultSecret</span></span>
+
+#### <a name="azlogicapp"></a><span data-ttu-id="c25bf-325">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="c25bf-325">Az.LogicApp</span></span>
+* <span data-ttu-id="c25bf-326">통합 계정에 대한 기본 sku 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-326">Add in Basic sku for Integration Accounts</span></span>
+* <span data-ttu-id="c25bf-327">XSLT 2.0, XSLT 3.0, Liquid 맵 형식 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-327">Add in XSLT 2.0, XSLT 3.0 and Liquid Map Types</span></span>
+* <span data-ttu-id="c25bf-328">통합 계정 어셈블리에 대한 새 cmdlet</span><span class="sxs-lookup"><span data-stu-id="c25bf-328">New cmdlets for Integration Account Assemblies</span></span>
+    - <span data-ttu-id="c25bf-329">Get-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="c25bf-329">Get-AzIntegrationAccountAssembly</span></span>
+    - <span data-ttu-id="c25bf-330">New-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="c25bf-330">New-AzIntegrationAccountAssembly</span></span>
+    - <span data-ttu-id="c25bf-331">Remove-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="c25bf-331">Remove-AzIntegrationAccountAssembly</span></span>
+    - <span data-ttu-id="c25bf-332">Set-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="c25bf-332">Set-AzIntegrationAccountAssembly</span></span>
+* <span data-ttu-id="c25bf-333">통합 계정 일괄 처리 구성에 대한 새 cmdlet</span><span class="sxs-lookup"><span data-stu-id="c25bf-333">New cmdlets for Integration Account Batch Configuration</span></span>
+    - <span data-ttu-id="c25bf-334">Get-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="c25bf-334">Get-AzIntegrationAccountBatchConfiguration</span></span>
+    - <span data-ttu-id="c25bf-335">New-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="c25bf-335">New-AzIntegrationAccountBatchConfiguration</span></span>
+    - <span data-ttu-id="c25bf-336">Remove-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="c25bf-336">Remove-AzIntegrationAccountBatchConfiguration</span></span>
+    - <span data-ttu-id="c25bf-337">Set-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="c25bf-337">Set-AzIntegrationAccountBatchConfiguration</span></span>
+* <span data-ttu-id="c25bf-338">논리 앱 SDK를 버전 4.1.0으로 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-338">Update Logic App SDK to version 4.1.0</span></span>
+
+#### <a name="azmonitor"></a><span data-ttu-id="c25bf-339">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="c25bf-339">Az.Monitor</span></span>
+* <span data-ttu-id="c25bf-340">Get-AzMetric에 대한 도움말 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-340">Update help for Get-AzMetric</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="c25bf-341">Az.Network</span><span class="sxs-lookup"><span data-stu-id="c25bf-341">Az.Network</span></span>
+* <span data-ttu-id="c25bf-342">Add-AzApplicationGatewayCustomError에 대한 도움말 예제 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-342">Update help example for Add-AzApplicationGatewayCustomError</span></span>
+
+#### <a name="azoperationalinsights"></a><span data-ttu-id="c25bf-343">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="c25bf-343">Az.OperationalInsights</span></span>
+* <span data-ttu-id="c25bf-344">New 및 Get ApplicationInsights 데이터 소스에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-344">Additional support for New and Get ApplicationInsights data source.</span></span>
+    - <span data-ttu-id="c25bf-345">지정된 작업 영역에 대한 특정 또는 전체 ApplicationInsights 데이터 원본 가져오기를 지원하기 위한 새로운 'ApplicationInsights' 종류가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-345">Added new 'ApplicationInsights' kind to support Get specific and Get all ApplicationInsights data sources for given workspace.</span></span> 
+    - <span data-ttu-id="c25bf-346">지정된 Application-Insights 리소스 매개 변수(구독 ID, resourceGroupName 및 이름)별로 데이터 원본을 만들기 위한 New-AzOperationalInsightsApplicationInsightsDataSource cmdlet이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-346">Added New-AzOperationalInsightsApplicationInsightsDataSource cmdlet for creating data source by given Application-Insights resource parameters: subscription Id, resourceGroupName and name.</span></span> 
+
+#### <a name="azresources"></a><span data-ttu-id="c25bf-347">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="c25bf-347">Az.Resources</span></span>
+* <span data-ttu-id="c25bf-348">문제 https://github.com/Azure/azure-powershell/issues/8166 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-348">Fix for issue https://github.com/Azure/azure-powershell/issues/8166</span></span>
+* <span data-ttu-id="c25bf-349">문제 https://github.com/Azure/azure-powershell/issues/8235 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-349">Fix for issue https://github.com/Azure/azure-powershell/issues/8235</span></span>
+* <span data-ttu-id="c25bf-350">문제 https://github.com/Azure/azure-powershell/issues/6219 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-350">Fix for issue https://github.com/Azure/azure-powershell/issues/6219</span></span>
+* <span data-ttu-id="c25bf-351">KeyCredentials 반복 만들기를 방지하기 위해 버그 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-351">Fix bug preventing repeat creation of KeyCredentials</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="c25bf-352">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="c25bf-352">Az.Sql</span></span>
+* <span data-ttu-id="c25bf-353">SQL DB 하이퍼스케일에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-353">Add support for SQL DB Hyperscale tier</span></span>
+* <span data-ttu-id="c25bf-354">복원 요청에서 불필요한 속성을 설정하여 복원이 실패할 수 있는 버그 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-354">Fixed bug where restore could fail due to setting unnecessary properties in restore request</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="c25bf-355">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="c25bf-355">Az.Websites</span></span>
+* <span data-ttu-id="c25bf-356">Get-AzWebAppSlotMetrics 내 올바른 예제</span><span class="sxs-lookup"><span data-stu-id="c25bf-356">Correct example in Get-AzWebAppSlotMetrics</span></span>
+
+## <a name="130---february-2019"></a><span data-ttu-id="c25bf-357">1.3.0 - 2019년 2월</span><span class="sxs-lookup"><span data-stu-id="c25bf-357">1.3.0 - February 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="c25bf-358">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="c25bf-358">Az.Accounts</span></span>
+* <span data-ttu-id="c25bf-359">ClientRuntime 최신 버전 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-359">Update to latest version of ClientRuntime</span></span>
+
+#### <a name="azanalysisservices"></a><span data-ttu-id="c25bf-360">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="c25bf-360">Az.AnalysisServices</span></span>
+<span data-ttu-id="c25bf-361">Az.AnalysisServices 모듈의 전반적인 가용성.</span><span class="sxs-lookup"><span data-stu-id="c25bf-361">General availability for Az.AnalysisServices module.</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="c25bf-362">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="c25bf-362">Az.Compute</span></span>
+* <span data-ttu-id="c25bf-363">AEM 확장: UltraSSD 및 P60, P70, P80 디스크에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-363">AEM extension: Add support for UltraSSD and P60,P70 and P80 disks</span></span>
+* <span data-ttu-id="c25bf-364">Set-AzVMBootDiagnostics에 대한 도움말 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-364">Update help description for Set-AzVMBootDiagnostics</span></span>
+* <span data-ttu-id="c25bf-365">Update-AzImage에 대한 도움말 및 예제 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-365">Update help description and example for Update-AzImage</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="c25bf-366">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="c25bf-366">Az.RecoveryServices</span></span>
+<span data-ttu-id="c25bf-367">Az.RecoveryServices 모듈의 전반적인 가용성.</span><span class="sxs-lookup"><span data-stu-id="c25bf-367">General availability for Az.RecoveryServices module.</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="c25bf-368">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="c25bf-368">Az.Resources</span></span>
+* <span data-ttu-id="c25bf-369">리소스 그룹 관련 태그 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-369">Fix tagging for resource groups</span></span> 
+    - <span data-ttu-id="c25bf-370">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/8166 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-370">More information here: https://github.com/Azure/azure-powershell/issues/8166</span></span>
+* <span data-ttu-id="c25bf-371">`Get-AzureRmRoleAssignment`이(가) -ErrorAction을 준수하지 않는 문제 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-371">Fix issue where `Get-AzureRmRoleAssignment` doesn't respect -ErrorAction</span></span> 
+    - <span data-ttu-id="c25bf-372">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/8235 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-372">More information here: https://github.com/Azure/azure-powershell/issues/8235</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="c25bf-373">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="c25bf-373">Az.Sql</span></span>
+* <span data-ttu-id="c25bf-374">AzSqlDatabaseBackupShortTermRetentionPolicy 가져오기/설정하기 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-374">Add Get/Set AzSqlDatabaseBackupShortTermRetentionPolicy</span></span>
+* <span data-ttu-id="c25bf-375">SQL cmdlet을 실행할 경우 Azure 계정에 로그인되어 있지 않은 것이 nullref 예외를 초래하는 문제 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-375">Fix issue where not being logged into Azure account would result in nullref exception when executing SQL cmdlets</span></span>
+* <span data-ttu-id="c25bf-376">Get-AzSqlCapability의 nullref 예외 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-376">Fixed null ref exception in Get-AzSqlCapability</span></span>
+
+## <a name="121---january-2019"></a><span data-ttu-id="c25bf-377">1.2.1 - 2019년 1월</span><span class="sxs-lookup"><span data-stu-id="c25bf-377">1.2.1 - January 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="c25bf-378">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="c25bf-378">Az.Accounts</span></span>
+* <span data-ttu-id="c25bf-379">올바른 인증 버전을 사용하여 릴리스</span><span class="sxs-lookup"><span data-stu-id="c25bf-379">Release with correct version of Authentication</span></span>
+
+#### <a name="azanalysisservices"></a><span data-ttu-id="c25bf-380">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="c25bf-380">Az.AnalysisServices</span></span>
+* <span data-ttu-id="c25bf-381">업데이트된 인증 종속성을 사용하여 릴리스</span><span class="sxs-lookup"><span data-stu-id="c25bf-381">Release with updated Authentication dependency</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="c25bf-382">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="c25bf-382">Az.RecoveryServices</span></span>
+* <span data-ttu-id="c25bf-383">업데이트된 인증 종속성을 사용하여 릴리스</span><span class="sxs-lookup"><span data-stu-id="c25bf-383">Release with updated Authentication dependency</span></span>
+
+## <a name="120---january-2019"></a><span data-ttu-id="c25bf-384">1.2.0 - 2019년 1월</span><span class="sxs-lookup"><span data-stu-id="c25bf-384">1.2.0 - January 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="c25bf-385">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="c25bf-385">Az.Accounts</span></span>
+* <span data-ttu-id="c25bf-386">Windows PowerShell 5.1 전용 대화형 사용자 이름/암호 인증 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-386">Add interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
+* <span data-ttu-id="c25bf-387">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-387">Update incorrect online help URLs</span></span>
+* <span data-ttu-id="c25bf-388">Uninstall-AzureRm 관련 PS Core에 경고 메시지 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-388">Add warning message in PS Core for Uninstall-AzureRm</span></span>
+
+#### <a name="azaks"></a><span data-ttu-id="c25bf-389">Az.Aks</span><span class="sxs-lookup"><span data-stu-id="c25bf-389">Az.Aks</span></span>
+* <span data-ttu-id="c25bf-390">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-390">Update incorrect online help URLs</span></span>
+
+#### <a name="azautomation"></a><span data-ttu-id="c25bf-391">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="c25bf-391">Az.Automation</span></span>
+* <span data-ttu-id="c25bf-392">Python 2 Runbook에 대한 지원이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-392">Added support for Python 2 runbooks</span></span>
+* <span data-ttu-id="c25bf-393">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-393">Update incorrect online help URLs</span></span>
+
+#### <a name="azcdn"></a><span data-ttu-id="c25bf-394">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="c25bf-394">Az.Cdn</span></span>
+* <span data-ttu-id="c25bf-395">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-395">Update incorrect online help URLs</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="c25bf-396">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="c25bf-396">Az.Compute</span></span>
+* <span data-ttu-id="c25bf-397">Invoke-AzVMReimage cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-397">Add Invoke-AzVMReimage cmdlet</span></span>
+* <span data-ttu-id="c25bf-398">Set-AzVmss에 TempDisk 매개 변수 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-398">Add TempDisk parameter to Set-AzVmss</span></span>
+* <span data-ttu-id="c25bf-399">New-AzVM 경고 메시지 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-399">Fix the warning message of New-AzVM</span></span>
+
+#### <a name="azcontainerregistry"></a><span data-ttu-id="c25bf-400">Az.ContainerRegistry</span><span class="sxs-lookup"><span data-stu-id="c25bf-400">Az.ContainerRegistry</span></span>
+* <span data-ttu-id="c25bf-401">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-401">Update incorrect online help URLs</span></span>
+
+#### <a name="azdatafactory"></a><span data-ttu-id="c25bf-402">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="c25bf-402">Az.DataFactory</span></span>
+* <span data-ttu-id="c25bf-403">ADF.Net SDK 버전이 3.0.0으로 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-403">Updated ADF .Net SDK version to 3.0.0</span></span>
+
+#### <a name="azdatalakestore"></a><span data-ttu-id="c25bf-404">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="c25bf-404">Az.DataLakeStore</span></span>
+* <span data-ttu-id="c25bf-405">MSI를 사용할 때 ADLS 엔드포인트 문제 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-405">Fix issue with ADLS endpoint when using MSI</span></span>
+    - <span data-ttu-id="c25bf-406">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/7462 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-406">More information here: https://github.com/Azure/azure-powershell/issues/7462</span></span>
+* <span data-ttu-id="c25bf-407">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-407">Update incorrect online help URLs</span></span>
+
+#### <a name="aziothub"></a><span data-ttu-id="c25bf-408">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="c25bf-408">Az.IotHub</span></span>
+* <span data-ttu-id="c25bf-409">Add-IotHubRoutingEndpoint cmdlet에 인코딩 형식을 추가하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-409">Add Encoding format to Add-IotHubRoutingEndpoint cmdlet.</span></span>
+
+#### <a name="azkeyvault"></a><span data-ttu-id="c25bf-410">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="c25bf-410">Az.KeyVault</span></span>
+* <span data-ttu-id="c25bf-411">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-411">Update incorrect online help URLs</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="c25bf-412">Az.Network</span><span class="sxs-lookup"><span data-stu-id="c25bf-412">Az.Network</span></span>
+* <span data-ttu-id="c25bf-413">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-413">Update incorrect online help URLs</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="c25bf-414">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="c25bf-414">Az.Resources</span></span>
+* <span data-ttu-id="c25bf-415">'New-AzADAppCredential' 및 'New-AzADSpCredential' 참조 설명서의 잘못된 예제 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-415">Fix incorrect examples in 'New-AzADAppCredential' and 'New-AzADSpCredential' reference documentation</span></span>
+* <span data-ttu-id="c25bf-416">리소스 그룹 배포 cmdlet 실행 전 '-TemplateFile' 매개 변수 경로가 확인되지 않는 문제 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-416">Fix issue where path for '-TemplateFile' parameter was not being resolved before executing resource group deployment cmdlets</span></span>
+* <span data-ttu-id="c25bf-417">Az.Resources: New-AzureRmPolicyDefinition -Mode 기본값에 대한 올바른 설명서</span><span class="sxs-lookup"><span data-stu-id="c25bf-417">Az.Resources: Correct documentation for New-AzureRmPolicyDefinition -Mode default value</span></span>
+* <span data-ttu-id="c25bf-418">Az.Resources: 문제 https://github.com/Azure/azure-powershell/issues/7522 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-418">Az.Resources: Fix for issue https://github.com/Azure/azure-powershell/issues/7522</span></span>
+* <span data-ttu-id="c25bf-419">Az.Resources: 문제 https://github.com/Azure/azure-powershell/issues/5747 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-419">Az.Resources: Fix for issue https://github.com/Azure/azure-powershell/issues/5747</span></span>
+* <span data-ttu-id="c25bf-420">'PSResourceGroupDeployment' 개체의 서식 문제 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-420">Fix formatting issue with 'PSResourceGroupDeployment' object</span></span>
+    - <span data-ttu-id="c25bf-421">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/2123 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-421">More information here: https://github.com/Azure/azure-powershell/issues/2123</span></span>
+
+#### <a name="azservicefabric"></a><span data-ttu-id="c25bf-422">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="c25bf-422">Az.ServiceFabric</span></span>
+* <span data-ttu-id="c25bf-423">인증서가 VMSS 모델에 추가되었는데도 예외가 발생할 경우 롤백합니다. 이는 버그 https://github.com/Azure/service-fabric-issues/issues/932 를 수정하기 위함입니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-423">Rollback when a certificate is added to VMSS model but an exception is thrown this is to fix bug: https://github.com/Azure/service-fabric-issues/issues/932</span></span>
+* <span data-ttu-id="c25bf-424">일부 오류 메시지를 수정하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-424">Fix some error messages.</span></span>
+* <span data-ttu-id="c25bf-425">Az로의 마이그레이션을 통해서는 작동하지 않는 New-AzServiceFabriCluster를 위해 기본값 ARM 템플릿을 가진 클러스터 만들기를 수정하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-425">Fix create cluster with default ARM template for New-AzServiceFabriCluster which was not working with migration to Az.</span></span>
+* <span data-ttu-id="c25bf-426">확장에서 클러스터 id를 확인하여 클러스터에 해당하는 VMSS에만 추가되도록 클러스터/애플리케이션 인증서 추가를 수정하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-426">Fix add cluster/application certificate to only add to VM Scale Sets that correspond to the cluster by checking cluster id in the extension.</span></span>
+
+#### <a name="azsignalr"></a><span data-ttu-id="c25bf-427">Az.SignalR</span><span class="sxs-lookup"><span data-stu-id="c25bf-427">Az.SignalR</span></span>
+* <span data-ttu-id="c25bf-428">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-428">Update incorrect online help URLs</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="c25bf-429">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="c25bf-429">Az.Sql</span></span>
+* <span data-ttu-id="c25bf-430">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-430">Update incorrect online help URLs</span></span>
+* <span data-ttu-id="c25bf-431">가능한 값을 가진 LicenseType 매개 변수에 대한 매개 변수 설명이 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-431">Updated parameter description for LicenseType parameter with possible values</span></span>
+* <span data-ttu-id="c25bf-432">유일하게 업데이트된 속성인데 작동하지 않는 관리되는 인스턴스 ID의 업데이트 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-432">Fix for updating managed instance identity not working when it is the only updated property</span></span>
+* <span data-ttu-id="c25bf-433">관리되는 인스턴스에서의 사용자 지정 데이터 정렬에 대한 지원</span><span class="sxs-lookup"><span data-stu-id="c25bf-433">Support for custom collation on managed instance</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="c25bf-434">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="c25bf-434">Az.Storage</span></span>
+* <span data-ttu-id="c25bf-435">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-435">Update incorrect online help URLs</span></span>
+* <span data-ttu-id="c25bf-436">Premium Storage 계정이 클래식 로깅/메트릭을 지원하지 않기 때문에, Premium Storage 계정의 클래식 로깅/메트릭을 가져올/설정할 때 상세한 오류 메시지를 제공해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-436">Give detail error message when get/set classic Logging/Metric on Premium Storage Account, since Premium Storage Account not supoort classic Logging/Metric.</span></span>
+    - <span data-ttu-id="c25bf-437">Get/Set-AzStorageServiceLoggingProperty</span><span class="sxs-lookup"><span data-stu-id="c25bf-437">Get/Set-AzStorageServiceLoggingProperty</span></span>
+    - <span data-ttu-id="c25bf-438">Get/Set-AzStorageServiceMetricsProperty</span><span class="sxs-lookup"><span data-stu-id="c25bf-438">Get/Set-AzStorageServiceMetricsProperty</span></span>
+
+#### <a name="aztrafficmanager"></a><span data-ttu-id="c25bf-439">Az.TrafficManager</span><span class="sxs-lookup"><span data-stu-id="c25bf-439">Az.TrafficManager</span></span>
+* <span data-ttu-id="c25bf-440">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-440">Update incorrect online help URLs</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="c25bf-441">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="c25bf-441">Az.Websites</span></span>
+* <span data-ttu-id="c25bf-442">잘못된 온라인 도움말 URL 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-442">Update incorrect online help URLs</span></span>
+* <span data-ttu-id="c25bf-443">앱이 ASE에 호스팅되면 'New-AzWebAppSSLBinding'을 수정하여 올바른 resourcegroup+location에 인증서를 업로드합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-443">Fixes 'New-AzWebAppSSLBinding' to upload the certificate to the correct resourcegroup+location if the app is hosted on an ASE.</span></span>
+* <span data-ttu-id="c25bf-444">'New-AzWebAppSSLBinding'을 수정하여 SSL 인증서를 앱에 바인딩하는 데 붙는 태그를 덮어쓰지 않도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-444">Fixes 'New-AzWebAppSSLBinding' to not overwrite the tags on binding an SSL certificate to an app</span></span>
+
+## <a name="110---january-2019"></a><span data-ttu-id="c25bf-445">1.1.0 - 2019년 1월</span><span class="sxs-lookup"><span data-stu-id="c25bf-445">1.1.0 - January 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="c25bf-446">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="c25bf-446">Az.Accounts</span></span>
+* <span data-ttu-id="c25bf-447">Enable-AzureRmAlias에 'Local' 범위 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-447">Add 'Local' Scope to Enable-AzureRmAlias</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="c25bf-448">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="c25bf-448">Az.Compute</span></span>
+* <span data-ttu-id="c25bf-449">이름이 Restart/Start/Stop/Remove/Set-AzVM과 Save-AzVMImage에 설정된 ID 매개 변수에서 선택 사항이 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-449">Name is now optional in ID parameter set for Restart/Start/Stop/Remove/Set-AzVM and Save-AzVMImage</span></span>
+* <span data-ttu-id="c25bf-450">도움말 파일의 ID에 대한 설명이 업데이트 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-450">Updated the description of ID in help files</span></span>
+* <span data-ttu-id="c25bf-451">Az.Accounts 모듈을 사용할 때의 이전 버전과의 호환성 문제를 해결합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-451">Fix backward compatibility issue with Az.Accounts module</span></span>
+
+#### <a name="azdatalakestore"></a><span data-ttu-id="c25bf-452">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="c25bf-452">Az.DataLakeStore</span></span>
+* <span data-ttu-id="c25bf-453">SDK 수정을 위해 데이터 평면의 SDK 버전을 1.1.14로 업데이트하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-453">Update the sdk version of dataplane to 1.1.14 for SDK fixes.</span></span>
+    - <span data-ttu-id="c25bf-454">getfilestatus 및 liststatus에 대한 음수 acesstime 및 modificationtime 수정, 비동기 취소 토큰 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-454">Fix handling of negative acesstime and modificationtime for getfilestatus and liststatus, Fix async cancellation token</span></span>
+
+#### <a name="azeventgrid"></a><span data-ttu-id="c25bf-455">Az.EventGrid</span><span class="sxs-lookup"><span data-stu-id="c25bf-455">Az.EventGrid</span></span>
+* <span data-ttu-id="c25bf-456">2019-01-01 API 버전을 사용하도록 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-456">Updated to use the 2019-01-01 API version.</span></span>
+* <span data-ttu-id="c25bf-457">2019-01-01 API 버전에서 새 시나리오를 지원하도록 다음 cmdlet을 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-457">Update the following cmdlets to support new scenario in 2019-01-01 API version</span></span>
+    - <span data-ttu-id="c25bf-458">New-AzureRmEventGridSubscription: 지정을 위한 새로운 선택적 매개 변수를 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-458">New-AzureRmEventGridSubscription: Add new optional parameters for specifying:</span></span>
+        - <span data-ttu-id="c25bf-459">이벤트 Time-to-Live</span><span class="sxs-lookup"><span data-stu-id="c25bf-459">Event Time-To-Live,</span></span>
+        - <span data-ttu-id="c25bf-460">이벤트에 대한 최대 배달 시도</span><span class="sxs-lookup"><span data-stu-id="c25bf-460">Maximum number of delivery attempts for the events,</span></span>
+        - <span data-ttu-id="c25bf-461">배달 못한 편지의 엔드포인트입니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-461">Dead letter endpoint.</span></span>
+    - <span data-ttu-id="c25bf-462">Update-AzureRmEventGridSubscription: 지정을 위한 새로운 선택적 매개 변수를 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-462">Update-AzureRmEventGridSubscription: Add new optional parameters for specifying:</span></span>
+        - <span data-ttu-id="c25bf-463">이벤트 Time-to-Live</span><span class="sxs-lookup"><span data-stu-id="c25bf-463">Event Time-To-Live,</span></span>
+        - <span data-ttu-id="c25bf-464">이벤트에 대한 최대 배달 시도</span><span class="sxs-lookup"><span data-stu-id="c25bf-464">Maximum number of delivery attempts for the events,</span></span>
+        - <span data-ttu-id="c25bf-465">배달 못한 편지의 엔드포인트입니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-465">Dead letter endpoint.</span></span>
+* <span data-ttu-id="c25bf-466">New-AzureRmEventGridSubscription 및 Update-AzureRmEventGridSubscription cmdlet의 EndpointType 옵션에 새 열거형 값(즉, storageQueue 및 hybridConnection)을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-466">Add new enum values (namely, storageQueue and hybridConnection) for EndpointType option in New-AzureRmEventGridSubscription and Update-AzureRmEventGridSubscription cmdlets.</span></span>
+* <span data-ttu-id="c25bf-467">이벤트 구독을 생성 또는 업데이트할 때 사용자가 직접 조치를 취해야 할 경우 경고 메시지를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-467">Show warning message if creating or updating the event subscription is expected to entail manual action from user.</span></span>
+
+#### <a name="aziothub"></a><span data-ttu-id="c25bf-468">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="c25bf-468">Az.IotHub</span></span>
+* <span data-ttu-id="c25bf-469">최신 버전의 Azure IotHub SDK로 업데이트됨</span><span class="sxs-lookup"><span data-stu-id="c25bf-469">Updated to the latest version of the IotHub SDK</span></span>
+
+#### <a name="azlogicapp"></a><span data-ttu-id="c25bf-470">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="c25bf-470">Az.LogicApp</span></span>
+* <span data-ttu-id="c25bf-471">지정된 이름이 없는 모든 Get-AzLogicApp 목록</span><span class="sxs-lookup"><span data-stu-id="c25bf-471">Get-AzLogicApp lists all without specified Name</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="c25bf-472">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="c25bf-472">Az.Resources</span></span>
+* <span data-ttu-id="c25bf-473">'Get-AzResource'에 '-ODataQuery'및 '-ResourceId' 매개 변수를 제공할 때 매개 변수 집합 문제 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-473">Fix parameter set issue when providing '-ODataQuery' and '-ResourceId' parameters for 'Get-AzResource'</span></span>
+    - <span data-ttu-id="c25bf-474">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/7875 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-474">More information here: https://github.com/Azure/azure-powershell/issues/7875</span></span>
+* <span data-ttu-id="c25bf-475">New/Set-AzPolicyDefinition에서 -Custom 매개 변수 처리 문제 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-475">Fix handling of the -Custom parameter in New/Set-AzPolicyDefinition</span></span>
+* <span data-ttu-id="c25bf-476">New-AzDeployment 설명서에서 오타 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-476">Fix typo in New-AzDeployment documentation</span></span>
+* <span data-ttu-id="c25bf-477">'New-AzADUser'에 '-MailNickname'매개 변수가 필수 항목으로 지정됨</span><span class="sxs-lookup"><span data-stu-id="c25bf-477">Made '-MailNickname' parameter mandatory for 'New-AzADUser'</span></span>
+    - <span data-ttu-id="c25bf-478">자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/8220 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-478">More information here: https://github.com/Azure/azure-powershell/issues/8220</span></span>
+
+#### <a name="azsignalr"></a><span data-ttu-id="c25bf-479">Az.SignalR</span><span class="sxs-lookup"><span data-stu-id="c25bf-479">Az.SignalR</span></span>
+* <span data-ttu-id="c25bf-480">Az.Accounts 모듈을 사용할 때의 이전 버전과의 호환성 문제를 해결합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-480">Fix backward compatibility issue with Az.Accounts module</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="c25bf-481">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="c25bf-481">Az.Sql</span></span>
+* <span data-ttu-id="c25bf-482">Storage 관리 클라이언트 종속성을 일반적인 SDK 구현으로 변환했습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-482">Converted the Storage management client dependency to the common SDK implementation.</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="c25bf-483">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="c25bf-483">Az.Storage</span></span>
+* <span data-ttu-id="c25bf-484">Sas Token, OAuth 또는 Anonymous를 사용하여 스토리지 컨텍스트의 StorageAccountName을 실제 스토리지 계정 이름으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-484">Set the StorageAccountName of Storage context as the real Storage Account Name, when it's created with Sas Token, OAuth or Anonymous</span></span>
+    - <span data-ttu-id="c25bf-485">New-AzStorageContext</span><span class="sxs-lookup"><span data-stu-id="c25bf-485">New-AzStorageContext</span></span>
+* <span data-ttu-id="c25bf-486">'-FullUri' 매개 변수를 사용하여 Blob 스냅샷 개체의 Sas Token을 생성하고 반환된 Uri를 스냅샷 Uri로 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-486">Create Sas Token of Blob Snapshot Object with '-FullUri' parameter, fix the returned Uri to be the sanpshot Uri</span></span>
+    - <span data-ttu-id="c25bf-487">New-AzStorageBlobSASToken</span><span class="sxs-lookup"><span data-stu-id="c25bf-487">New-AzStorageBlobSASToken</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="c25bf-488">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="c25bf-488">Az.Websites</span></span>
+* <span data-ttu-id="c25bf-489">'Get-AzDeletedWebApp'의 날짜 구문 분석 버그를 수정했습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-489">Fixed a date parsing bug in 'Get-AzDeletedWebApp'</span></span>
+* <span data-ttu-id="c25bf-490">Az.Accounts 모듈을 사용할 때의 이전 버전과의 호환성 문제를 해결합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-490">Fix backward compatibility issue with Az.Accounts module</span></span>
+
+## <a name="100---december-2018"></a><span data-ttu-id="c25bf-491">1.0.0 - 2018년 12월</span><span class="sxs-lookup"><span data-stu-id="c25bf-491">1.0.0 - December 2018</span></span>
+### <a name="general"></a><span data-ttu-id="c25bf-492">일반</span><span class="sxs-lookup"><span data-stu-id="c25bf-492">General</span></span>
+
+- <span data-ttu-id="c25bf-493">Az 모듈 일반 공급</span><span class="sxs-lookup"><span data-stu-id="c25bf-493">General Availability of Az Module</span></span>
+- <span data-ttu-id="c25bf-494">각 모듈에 대 한 온라인 도움말</span><span class="sxs-lookup"><span data-stu-id="c25bf-494">Online help for each module</span></span>
+- <span data-ttu-id="c25bf-495">자세한 내용과 로드맵은 [Az 알림 페이지](https://aka.ms/azps-announce)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-495">For more details and a roadmap, see the [Az Announcement page](https://aka.ms/azps-announce)</span></span>
+- <span data-ttu-id="c25bf-496">AzureRM에서 마이그레이션하는 것에 대한 정보는 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-496">See the [Migration Guide](https://aka.ms/azps-migration-guide) for information on migrating from AzureRM</span></span>
+
+### <a name="azaccounts"></a><span data-ttu-id="c25bf-497">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="c25bf-497">Az.Accounts</span></span>
+- <span data-ttu-id="c25bf-498">Az.Profile에서 변경</span><span class="sxs-lookup"><span data-stu-id="c25bf-498">Changed from Az.Profile</span></span>
+- <span data-ttu-id="c25bf-499">프로필 및 컨텍스트 형식에 대한 표 형식 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-499">Fixed table formats for profile and context types</span></span>
+
+### <a name="azapimanagement"></a><span data-ttu-id="c25bf-500">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="c25bf-500">Az.ApiManagement</span></span>
+- <span data-ttu-id="c25bf-501">#7002에 대한 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-501">Fixes for #7002</span></span>
+- <span data-ttu-id="c25bf-502">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-502">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azbatch"></a><span data-ttu-id="c25bf-503">Az.Batch</span><span class="sxs-lookup"><span data-stu-id="c25bf-503">Az.Batch</span></span>
+- <span data-ttu-id="c25bf-504">`PSComputeNode`의 새로운 `NodeAgentInformation` 속성을 통해 풀의 각 VM에서 실행 중인 Azure Batch 노드 에이전트의 버전을 확인하는 기능이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-504">Added the ability to see what version of the Azure Batch Node Agent is running on each of the VMs in a pool, via the new `NodeAgentInformation` property on `PSComputeNode`.</span></span>
+- <span data-ttu-id="c25bf-505">`PSDataDisk`에 대한 `Caching` 기본 값은 이제 `None` 대신 `ReadWrite`입니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-505">The `Caching` default for `PSDataDisk` is now `ReadWrite` instead of `None`.</span></span>
+- <span data-ttu-id="c25bf-506">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-506">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azbilling"></a><span data-ttu-id="c25bf-507">Az.Billing</span><span class="sxs-lookup"><span data-stu-id="c25bf-507">Az.Billing</span></span>
+- <span data-ttu-id="c25bf-508">청구, 소비 및 UsageAggregates cmdlet 결합 cmdlet에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-508">Combines Billing, Consumption, and UsageAggregates cmdlets, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azcognitivservices"></a><span data-ttu-id="c25bf-509">Az.CognitivServices</span><span class="sxs-lookup"><span data-stu-id="c25bf-509">Az.CognitivServices</span></span>
+- <span data-ttu-id="c25bf-510">New-AzureRmCognitiveServicesAccount 작업에서 사용 가능한 SkuName 및 Typem에 대한 완성자 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-510">Add completers for SkuName and Typem available on New-AzureRmCognitiveServicesAccount operation</span></span>
+- <span data-ttu-id="c25bf-511">Get-AzCognitiveServicesAccountSkus에서 GetSkusWithAccountParamSetName 매개 변수 집합을 제거</span><span class="sxs-lookup"><span data-stu-id="c25bf-511">Removed GetSkusWithAccountParamSetName parameter set from Get-AzCognitiveServicesAccountSkus</span></span>
+
+### <a name="azcontainerinstance"></a><span data-ttu-id="c25bf-512">Az.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="c25bf-512">Az.ContainerInstance</span></span>
+- <span data-ttu-id="c25bf-513">ManagedIdentity 지원이 추가됨</span><span class="sxs-lookup"><span data-stu-id="c25bf-513">Added ManagedIdentity support</span></span>
+
+### <a name="azdatalakeanalytics"></a><span data-ttu-id="c25bf-514">Az.DataLakeAnalytics</span><span class="sxs-lookup"><span data-stu-id="c25bf-514">Az.DataLakeAnalytics</span></span>
+- <span data-ttu-id="c25bf-515">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-515">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azdatalakestore"></a><span data-ttu-id="c25bf-516">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="c25bf-516">Az.DataLakeStore</span></span>
+- <span data-ttu-id="c25bf-517">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-517">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azmonitor"></a><span data-ttu-id="c25bf-518">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="c25bf-518">Az.Monitor</span></span>
+- <span data-ttu-id="c25bf-519">Az.Monitor 이름 변경 및 기타 사소한 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-519">Renamed Az.Insights to Az.Monitor and other minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azkeyvault"></a><span data-ttu-id="c25bf-520">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="c25bf-520">Az.KeyVault</span></span>
+- <span data-ttu-id="c25bf-521">출력 형식에서 사용되지 않는 'PurgeDisabled' 속성 제거</span><span class="sxs-lookup"><span data-stu-id="c25bf-521">Removed the deprecated 'PurgeDisabled' property from output types</span></span>
+
+### <a name="azmachinelearning"></a><span data-ttu-id="c25bf-522">Az.MachineLearning</span><span class="sxs-lookup"><span data-stu-id="c25bf-522">Az.MachineLearning</span></span>
+- <span data-ttu-id="c25bf-523">Az.MachineLearningCompute 모듈의 cmdlet 포함</span><span class="sxs-lookup"><span data-stu-id="c25bf-523">Included cmdlets from Az.MachineLearningCompute module</span></span>
+
+### <a name="azmedia"></a><span data-ttu-id="c25bf-524">Az.Media</span><span class="sxs-lookup"><span data-stu-id="c25bf-524">Az.Media</span></span>
+- <span data-ttu-id="c25bf-525">New-AzMediaService에서 사용되지 않는 -Tags 별칭이 제거됨</span><span class="sxs-lookup"><span data-stu-id="c25bf-525">Remove deprecated -Tags alias from New-AzMediaService</span></span>
+
+### <a name="aznetwork"></a><span data-ttu-id="c25bf-526">Az.Network</span><span class="sxs-lookup"><span data-stu-id="c25bf-526">Az.Network</span></span>
+<span data-ttu-id="c25bf-527">Application Gateway에서 RewriteRuleSets를 구성하는 것에 대한 지원이 추가됨</span><span class="sxs-lookup"><span data-stu-id="c25bf-527">Added support for the configuring RewriteRuleSets in the Application Gateway</span></span>
+    - <span data-ttu-id="c25bf-528">추가된 새 cmdlet은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-528">New cmdlets added:</span></span>
+        - <span data-ttu-id="c25bf-529">Add-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="c25bf-529">Add-AzureRmApplicationGatewayRewriteRuleSet</span></span>
+        - <span data-ttu-id="c25bf-530">Get-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="c25bf-530">Get-AzureRmApplicationGatewayRewriteRuleSet</span></span>
+        - <span data-ttu-id="c25bf-531">New-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="c25bf-531">New-AzureRmApplicationGatewayRewriteRuleSet</span></span>
+        - <span data-ttu-id="c25bf-532">Remove-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="c25bf-532">Remove-AzureRmApplicationGatewayRewriteRuleSet</span></span>
+        - <span data-ttu-id="c25bf-533">Set-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="c25bf-533">Set-AzureRmApplicationGatewayRewriteRuleSet</span></span>
+        - <span data-ttu-id="c25bf-534">New-AzureRmApplicationGatewayRewriteRule</span><span class="sxs-lookup"><span data-stu-id="c25bf-534">New-AzureRmApplicationGatewayRewriteRule</span></span>
+        - <span data-ttu-id="c25bf-535">New-AzureRmApplicationGatewayRewriteRuleActionSet</span><span class="sxs-lookup"><span data-stu-id="c25bf-535">New-AzureRmApplicationGatewayRewriteRuleActionSet</span></span>
+        - <span data-ttu-id="c25bf-536">New-AzureRmApplicationGatewayRewriteRuleHeaderConfiguration</span><span class="sxs-lookup"><span data-stu-id="c25bf-536">New-AzureRmApplicationGatewayRewriteRuleHeaderConfiguration</span></span>
+    - <span data-ttu-id="c25bf-537">선택적 매개 변수를 사용하도록 cmdlet이 업데이트됨 -RewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="c25bf-537">Cmdlets updated with optional parameter -RewriteRuleSet</span></span>
+        - <span data-ttu-id="c25bf-538">New-AzureRmApplicationGateway</span><span class="sxs-lookup"><span data-stu-id="c25bf-538">New-AzureRmApplicationGateway</span></span>
+        - <span data-ttu-id="c25bf-539">New-AzureRmApplicationGatewayRequestRoutingRule</span><span class="sxs-lookup"><span data-stu-id="c25bf-539">New-AzureRmApplicationGatewayRequestRoutingRule</span></span>
+        - <span data-ttu-id="c25bf-540">Add-AzureRmApplicationGatewayRequestRoutingRule</span><span class="sxs-lookup"><span data-stu-id="c25bf-540">Add-AzureRmApplicationGatewayRequestRoutingRule</span></span>
+        - <span data-ttu-id="c25bf-541">New-AzureRmApplicationGatewayPathRuleConfig</span><span class="sxs-lookup"><span data-stu-id="c25bf-541">New-AzureRmApplicationGatewayPathRuleConfig</span></span>
+        - <span data-ttu-id="c25bf-542">Add-AzureRmApplicationGatewayUrlPathMapConfig</span><span class="sxs-lookup"><span data-stu-id="c25bf-542">Add-AzureRmApplicationGatewayUrlPathMapConfig</span></span>
+        - <span data-ttu-id="c25bf-543">New-AzureRmApplicationGatewayUrlPathMapConfig로 ID를 사용하여 Application Gateway에 KeyVault 지원을 추가했습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-543">New-AzureRmApplicationGatewayUrlPathMapConfig Added KeyVault Support to Application Gateway using Identity.</span></span>
+    - <span data-ttu-id="c25bf-544">선택적 매개 변수를 사용하도록 cmdlet이 업데이트됨 -KeyVaultSecretId, -KeyVaultSecret</span><span class="sxs-lookup"><span data-stu-id="c25bf-544">Cmdlets updated with optonal parameter -KeyVaultSecretId, -KeyVaultSecret</span></span>
+        - <span data-ttu-id="c25bf-545">Add-AzApplicationGatewaySslCertificate</span><span class="sxs-lookup"><span data-stu-id="c25bf-545">Add-AzApplicationGatewaySslCertificate</span></span>
+        - <span data-ttu-id="c25bf-546">New-AzApplicationGatewaySslCertificate</span><span class="sxs-lookup"><span data-stu-id="c25bf-546">New-AzApplicationGatewaySslCertificate</span></span>
+        - <span data-ttu-id="c25bf-547">Set-AzApplicationGatewaySslCertificate</span><span class="sxs-lookup"><span data-stu-id="c25bf-547">Set-AzApplicationGatewaySslCertificate</span></span>
+    - <span data-ttu-id="c25bf-548">New-AzApplicationGateway cmdlet이 선택적 매개 변수를 사용하도록 업데이트됨 -UserAssignedIdentity</span><span class="sxs-lookup"><span data-stu-id="c25bf-548">New-AzApplicationGateway cmdlet updated with optional parameter -UserAssignedIdentity</span></span>
+- <span data-ttu-id="c25bf-549">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-549">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azoperationalinsights"></a><span data-ttu-id="c25bf-550">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="c25bf-550">Az.OperationalInsights</span></span>
+- <span data-ttu-id="c25bf-551">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-551">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azprofile"></a><span data-ttu-id="c25bf-552">Az.Profile</span><span class="sxs-lookup"><span data-stu-id="c25bf-552">Az.Profile</span></span>
+- <span data-ttu-id="c25bf-553">Az.Accounts에 모듈 이름이 변경됨</span><span class="sxs-lookup"><span data-stu-id="c25bf-553">Changed module name to Az.Accounts</span></span>
+
+### <a name="azrecoveryservices"></a><span data-ttu-id="c25bf-554">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="c25bf-554">Az.RecoveryServices</span></span>
+- <span data-ttu-id="c25bf-555">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-555">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azresources"></a><span data-ttu-id="c25bf-556">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="c25bf-556">Az.Resources</span></span>
+- <span data-ttu-id="c25bf-557">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-557">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azservicefabric"></a><span data-ttu-id="c25bf-558">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="c25bf-558">Az.ServiceFabric</span></span>
+- <span data-ttu-id="c25bf-559">일반 이름과 지문으로 지정 인증서 지원</span><span class="sxs-lookup"><span data-stu-id="c25bf-559">Support specfying certificate by common name and thumbprint</span></span>
+- <span data-ttu-id="c25bf-560">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-560">Mnor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azsignalr"></a><span data-ttu-id="c25bf-561">Az.SIgnalR</span><span class="sxs-lookup"><span data-stu-id="c25bf-561">Az.SIgnalR</span></span>
+- <span data-ttu-id="c25bf-562">SIgnalR에 대한 PowerShell cmdlet에 대한 일반 공급</span><span class="sxs-lookup"><span data-stu-id="c25bf-562">General Availability for PowerShell cmdlets for SIgnalR</span></span>
+
+### <a name="azsql"></a><span data-ttu-id="c25bf-563">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="c25bf-563">Az.Sql</span></span>
+- <span data-ttu-id="c25bf-564">위협 탐지의 cmdlet에 새로운 Data_Exfiltration 및 Unsafe_Action 검색 유형 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-564">Added new Data_Exfiltration and Unsafe_Action detection types to Threat Detection's cmdlets</span></span>
+- <span data-ttu-id="c25bf-565">Sql 감사 cmdlet에 대한 설명서 예제 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-565">Updated documentation examples for Sql Auditing cmdlets</span></span>
+- <span data-ttu-id="c25bf-566">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-566">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azstorage"></a><span data-ttu-id="c25bf-567">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="c25bf-567">Az.Storage</span></span>
+- <span data-ttu-id="c25bf-568">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-568">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azwebsites"></a><span data-ttu-id="c25bf-569">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="c25bf-569">Az.Websites</span></span>
+- <span data-ttu-id="c25bf-570">부수적인 호환성이 손상되는 변경에 대한 자세한 내용은 [마이그레이션 가이드](https://aka.ms/azps-migration-guide)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c25bf-570">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+## <a name="070---december-2018"></a><span data-ttu-id="c25bf-571">0.7.0 - 2018년 12월</span><span class="sxs-lookup"><span data-stu-id="c25bf-571">0.7.0 - December 2018</span></span>
+
+### <a name="general"></a><span data-ttu-id="c25bf-572">일반</span><span class="sxs-lookup"><span data-stu-id="c25bf-572">General</span></span>
+
+* <span data-ttu-id="c25bf-573">AzureRM에서 Az 전환 예정에 대한 사소한 변경</span><span class="sxs-lookup"><span data-stu-id="c25bf-573">Minor changes for upcoming AzureRM to Az transition</span></span>
+
+### <a name="azcompute"></a><span data-ttu-id="c25bf-574">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="c25bf-574">Az.Compute</span></span>
+
+* <span data-ttu-id="c25bf-575">`New-AzVm(ss)` cmdlet에 대한 간단한 매개 변수 집합에 UltraSSD 및 갤러리 이미지에 대한 지원을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-575">Add support for UltraSSD and Gallery Images in the simple param sets for `New-AzVm(ss)` cmdlets.</span></span>
+
+### <a name="azdatalakestore"></a><span data-ttu-id="c25bf-576">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="c25bf-576">Az.DataLakeStore</span></span>
+
+* <span data-ttu-id="c25bf-577">ADLS 계정의 도메인의 후행 슬래시를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-577">Fix the trailing slash of the domain of adls account</span></span>
+
+### <a name="azfrontdoor"></a><span data-ttu-id="c25bf-578">Az.FrontDoor</span><span class="sxs-lookup"><span data-stu-id="c25bf-578">Az.FrontDoor</span></span>
+
+* <span data-ttu-id="c25bf-579">일부 끊어진 링크 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-579">Fixed some broken links</span></span>
+    - <span data-ttu-id="c25bf-580">New-AzureRmFrontDoor 및 Set-AzureRmFrontDoor 아티클에서 New-AzureRmFrontDoorHealthProbeSettingObject cmdlet 아티클에 대한 링크가 수정되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-580">In the New-AzureRmFrontDoor and Set-AzureRmFrontDoor articles, fixed the link to the New-AzureRmFrontDoorHealthProbeSettingObject cmdlet article.</span></span>
+    - <span data-ttu-id="c25bf-581">New-AzureRmFrontDoorManagedRuleObject 아티클에서 New-AzureRmFrontDoorRuleGroupOverrideObject cmdlet 아티클에 대한 링크가 수정되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-581">In the New-AzureRmFrontDoorManagedRuleObject article, fixed the link to the New-AzureRmFrontDoorRuleGroupOverrideObject cmdlet article.</span></span>
+
+### <a name="azrecoveryservices"></a><span data-ttu-id="c25bf-582">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="c25bf-582">Az.RecoveryServices</span></span>
+
+* <span data-ttu-id="c25bf-583">Azure File Share 복원 작업에 클라이언트 측 유효성 검사가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-583">Added client side validations for Azure File Share restore operations.</span></span>
+* <span data-ttu-id="c25bf-584">afs 복원의 경우 storageAccountName 및 storageAccountResourceGroupName을 선택적으로 만들었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-584">Made storageAccountName and storageAccountResourceGroupName optional for afs restore.</span></span>
+
+### <a name="azresources"></a><span data-ttu-id="c25bf-585">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="c25bf-585">Az.Resources</span></span>
+
+* <span data-ttu-id="c25bf-586">https://github.com/Azure/azure-powershell/issues/7679 에 대한 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-586">Fix for https://github.com/Azure/azure-powershell/issues/7679</span></span>
+    - <span data-ttu-id="c25bf-587">기본 관리자를 요청할 때 구독 범위가 제공되는 경우 Get-AzureRmRoleAssignment를 업데이트하여 구독 범위를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-587">Update Get-AzureRmRoleAssignment to use the subscription scope if it is provided when requesting classic administrators.</span></span>
+
+### <a name="azsql"></a><span data-ttu-id="c25bf-588">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="c25bf-588">Az.Sql</span></span>
+
+* <span data-ttu-id="c25bf-589">AzureRM에서 Az 전환 예정에 대한 사소한 변경</span><span class="sxs-lookup"><span data-stu-id="c25bf-589">Minor changes for upcoming AzureRM to Az transition</span></span>
+* <span data-ttu-id="c25bf-590">DotNet 코어에서 Get-AzureRmSqlDatabaseVulnerabilityAssessment를 사용하는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="c25bf-590">Fixed issue with using Get-AzureRmSqlDatabaseVulnerabilityAssessment with DotNet core</span></span>
+* <span data-ttu-id="c25bf-591">SQL 감사 cmdlet과 관련된 도움말 메시지의 설명서가 수정되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-591">Modified documentation of help messages related to SQL Auditing cmdlets.</span></span>
+
+### <a name="azstorage"></a><span data-ttu-id="c25bf-592">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="c25bf-592">Az.Storage</span></span>
+
+* <span data-ttu-id="c25bf-593">New-AzureRmStorageAccount에 -EnableHierarchicalNamespace 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-593">Add -EnableHierarchicalNamespace to New-AzureRmStorageAccount</span></span>
+* <span data-ttu-id="c25bf-594">파일 복사 cmdlet이 -DestContext 입력이 없을 때 대상의 원본 컨텍스트를 다시 사용할 수 없는 문제 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-594">Fix issue that Copy File cmdlet can't reuse source context in destination when not input -DestContext</span></span>
+    - <span data-ttu-id="c25bf-595">Start-AzureStorageFileCopy</span><span class="sxs-lookup"><span data-stu-id="c25bf-595">Start-AzureStorageFileCopy</span></span>
+* <span data-ttu-id="c25bf-596">고정적인 웹 사이트 구성 지원</span><span class="sxs-lookup"><span data-stu-id="c25bf-596">Support Static Website configuration</span></span>
+    - <span data-ttu-id="c25bf-597">Enable-AzureStorageStaticWebsite</span><span class="sxs-lookup"><span data-stu-id="c25bf-597">Enable-AzureStorageStaticWebsite</span></span>
+    - <span data-ttu-id="c25bf-598">Disable-AzureStorageStaticWebsite</span><span class="sxs-lookup"><span data-stu-id="c25bf-598">Disable-AzureStorageStaticWebsite</span></span>
+
+### <a name="azwebsites"></a><span data-ttu-id="c25bf-599">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="c25bf-599">Az.Websites</span></span>
+
+* <span data-ttu-id="c25bf-600">Set-AzureRmWebApp 및 Set-AzureRmWebAppSlot</span><span class="sxs-lookup"><span data-stu-id="c25bf-600">Set-AzureRmWebApp and Set-AzureRmWebAppSlot</span></span> 
+    - <span data-ttu-id="c25bf-601">Windows 및 Linux 컨테이너 응용 프로그램에 탑재할 Azure Storage 경로를 지정하기 위해 새 매개 변수(-AzureStoragePath)가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-601">New parameter (-AzureStoragePath) added to specify Azure Storage paths to be mounted in Windows and Linux container apps.</span></span> <span data-ttu-id="c25bf-602">새 cmdlet New-AzureRmWebAppAzureStoragePath의 출력을 매개 변수로 사용하여 Azure Storage 경로를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-602">Use the output of the new cmdlet New-AzureRmWebAppAzureStoragePath as a parameter to set the Azure Storage paths.</span></span>
+
+## <a name="061---november-2018"></a><span data-ttu-id="c25bf-603">0.6.1 - 2018년 11월</span><span class="sxs-lookup"><span data-stu-id="c25bf-603">0.6.1 - November 2018</span></span>
+
+### <a name="azapimanagement"></a><span data-ttu-id="c25bf-604">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="c25bf-604">Az.ApiManagement</span></span>
+* <span data-ttu-id="c25bf-605">형식 매핑 문제에 대한 종속성 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-605">Update dependencies for type mapping issue</span></span>
+
+### <a name="azautomation"></a><span data-ttu-id="c25bf-606">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="c25bf-606">Az.Automation</span></span>
+* <span data-ttu-id="c25bf-607">Azure Automation cmdlet 기반 Swagger</span><span class="sxs-lookup"><span data-stu-id="c25bf-607">Swagger based Azure Automation cmdlets</span></span>
+* <span data-ttu-id="c25bf-608">업데이트 관리 cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-608">Added Update Management cmdlets</span></span>
+* <span data-ttu-id="c25bf-609">소스 제어 cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-609">Added Source Control cmdlets</span></span>
+* <span data-ttu-id="c25bf-610">Remove-AzureRmAutomationHybridWorkerGroup cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-610">Added Remove-AzureRmAutomationHybridWorkerGroup cmdlet</span></span>
+* <span data-ttu-id="c25bf-611">DSC 노드 등록 명령 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-611">Fixed the DSC Register Node command</span></span>
+
+### <a name="azcompute"></a><span data-ttu-id="c25bf-612">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="c25bf-612">Az.Compute</span></span>
+* <span data-ttu-id="c25bf-613">SystemAssigned ID에 대한 ID 문제 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-613">Fixed identity issue for SystemAssigned identity</span></span>
+* <span data-ttu-id="c25bf-614">형식 매핑 문제에 대한 종속성 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-614">Update dependencies for type mapping issue</span></span>
+
+### <a name="azcontainerinstance"></a><span data-ttu-id="c25bf-615">Az.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="c25bf-615">Az.ContainerInstance</span></span>
+* <span data-ttu-id="c25bf-616">형식 매핑 문제에 대한 종속성 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-616">Update dependencies for type mapping issue</span></span>
+
+### <a name="azmarketplaceordering"></a><span data-ttu-id="c25bf-617">Az.MarketplaceOrdering</span><span class="sxs-lookup"><span data-stu-id="c25bf-617">Az.MarketplaceOrdering</span></span>
+* <span data-ttu-id="c25bf-618">마켓플레이스 cmdlet에 대한 예제 설명 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-618">update the examples description for marketplace cmdlets</span></span>
+
+### <a name="aznetwork"></a><span data-ttu-id="c25bf-619">Az.Network</span><span class="sxs-lookup"><span data-stu-id="c25bf-619">Az.Network</span></span>
+* <span data-ttu-id="c25bf-620">New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-620">Added cmdlet New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError</span></span>
+* <span data-ttu-id="c25bf-621">지원되는 AzureFirewall 네트워크 프로토콜에 ICMP 다시 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-621">Added ICMP back to supported AzureFirewall Network Protocols</span></span>
+* <span data-ttu-id="c25bf-622">Test-AzureRmNetworkWatcherConnectivity cmdlet을 업데이트하여 대상 ID, 주소 및 포트 유효성 검사를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-622">Update cmdlet Test-AzureRmNetworkWatcherConnectivity, add validation on destination id, address and port.</span></span> 
+* <span data-ttu-id="c25bf-623">VirtualNetwork 맵의 메모리 사용 문제 해결</span><span class="sxs-lookup"><span data-stu-id="c25bf-623">Fix issues with memory usage in VirtualNetwork map</span></span>
+
+### <a name="azrecoveryservicesbackup"></a><span data-ttu-id="c25bf-624">Az.RecoveryServices.Backup</span><span class="sxs-lookup"><span data-stu-id="c25bf-624">Az.RecoveryServices.Backup</span></span>
+* <span data-ttu-id="c25bf-625">보호된 파일 공유에 대한 정책을 수정하는 것에 대해 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-625">Fix for modifying policy for a protected file share.</span></span>
+* <span data-ttu-id="c25bf-626">정책 표준 시간대를 대문자로 변환했습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-626">Converted policy timezone to uppercase.</span></span>
+
+### <a name="azrecoveryservicessiterecovery"></a><span data-ttu-id="c25bf-627">Az.RecoveryServices.SiteRecovery</span><span class="sxs-lookup"><span data-stu-id="c25bf-627">Az.RecoveryServices.SiteRecovery</span></span>
+* <span data-ttu-id="c25bf-628">New-AzureRmRecoveryServicesAsrProtectableItem의 예제 정정</span><span class="sxs-lookup"><span data-stu-id="c25bf-628">Corrected example in New-AzureRmRecoveryServicesAsrProtectableItem</span></span>
+* <span data-ttu-id="c25bf-629">형식 매핑 문제에 대한 종속성 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-629">Update dependencies for type mapping issue</span></span>
+
+### <a name="azrelay"></a><span data-ttu-id="c25bf-630">Az.Relay</span><span class="sxs-lookup"><span data-stu-id="c25bf-630">Az.Relay</span></span>
+* <span data-ttu-id="c25bf-631">선택적 매개 변수 -KeyValue를 New-AzureRmRelayKey cmdlet에 추가하여 사용자가 KeyValue를 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-631">Added optional Parameter -KeyValue to New-AzureRmRelayKey cmdlet, which enables user to provide KeyValue.</span></span>
+
+### <a name="azresources"></a><span data-ttu-id="c25bf-632">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="c25bf-632">Az.Resources</span></span>
+* <span data-ttu-id="c25bf-633">`New-AzureRmPolicyAssignment` 및 `Set-AzureRmPolicyAssignment`의 자원 ID 관련 매개 변수에 대한 도움말 문서를 업데이트함</span><span class="sxs-lookup"><span data-stu-id="c25bf-633">Update help documentation for resource identity related parameters in `New-AzureRmPolicyAssignment` and `Set-AzureRmPolicyAssignment`</span></span>
+* <span data-ttu-id="c25bf-634">-Metadata를 사용하는 New-AzureRmPolicyDefinition에 대한 예제 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-634">Add an example for New-AzureRmPolicyDefinition that uses -Metadata</span></span>
+* <span data-ttu-id="c25bf-635">NetStandard의 태그 키에서 대소문자 보존을 허용하도록 수정: #7678 #7703</span><span class="sxs-lookup"><span data-stu-id="c25bf-635">Fix to allow case preservation in Tag keys in NetStandard: #7678 #7703</span></span>
+
+### <a name="azservicefabric"></a><span data-ttu-id="c25bf-636">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="c25bf-636">Az.ServiceFabric</span></span>
+* <span data-ttu-id="c25bf-637">향후 호환성이 손상되는 변경에 대한 사용 중단 메시지 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-637">Add deprecation messages for upcoming breaking changes</span></span>
+
+### <a name="azsql"></a><span data-ttu-id="c25bf-638">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="c25bf-638">Az.Sql</span></span>
+* <span data-ttu-id="c25bf-639">Azure Sql Database Managed Instance 및 Azure Sql Managed Database에 CRUD 작업을 위한 새 cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-639">Added new cmdlets for CRUD operations on Azure Sql Database Managed Instance and Azure Sql Managed Database</span></span>
+    - <span data-ttu-id="c25bf-640">Get-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="c25bf-640">Get-AzureRmSqlInstance</span></span>
+    - <span data-ttu-id="c25bf-641">New-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="c25bf-641">New-AzureRmSqlInstance</span></span>
+    - <span data-ttu-id="c25bf-642">Set-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="c25bf-642">Set-AzureRmSqlInstance</span></span>
+    - <span data-ttu-id="c25bf-643">Remove-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="c25bf-643">Remove-AzureRmSqlInstance</span></span>
+    - <span data-ttu-id="c25bf-644">Get-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="c25bf-644">Get-AzureRmSqlInstanceDatabase</span></span>
+    - <span data-ttu-id="c25bf-645">New-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="c25bf-645">New-AzureRmSqlInstanceDatabase</span></span>
+    - <span data-ttu-id="c25bf-646">Restore-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="c25bf-646">Restore-AzureRmSqlInstanceDatabase</span></span>
+    - <span data-ttu-id="c25bf-647">Remove-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="c25bf-647">Remove-AzureRmSqlInstanceDatabase</span></span>
+* <span data-ttu-id="c25bf-648">서버 또는 데이터베이스에서 확장 감사 정책 관리를 활성화했습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-648">Enabled Extended Auditing Policy management on a server or a database.</span></span>
+    - <span data-ttu-id="c25bf-649">새 매개 변수(PredicateExpression)가 감사 로그 필터링을 사용하도록 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-649">New parameter (PredicateExpression) was added to enable filtering of audit logs.</span></span>
+    - <span data-ttu-id="c25bf-650">Cmdlet이 레거시 클라이언트 대신 SQL 클라이언트를 사용하도록 수정되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-650">Cmdlets were modified to use SQL clients instead of Legacy clients.</span></span>
+    - <span data-ttu-id="c25bf-651">Set-AzureRmSqlServerAuditing.</span><span class="sxs-lookup"><span data-stu-id="c25bf-651">Set-AzureRmSqlServerAuditing.</span></span>
+    - <span data-ttu-id="c25bf-652">Get-AzureRmSqlServerAuditing.</span><span class="sxs-lookup"><span data-stu-id="c25bf-652">Get-AzureRmSqlServerAuditing.</span></span>
+    - <span data-ttu-id="c25bf-653">Set-AzureRmSqlDatabaseAuditing.</span><span class="sxs-lookup"><span data-stu-id="c25bf-653">Set-AzureRmSqlDatabaseAuditing.</span></span>
+    - <span data-ttu-id="c25bf-654">Get-AzureRmSqlDatabaseAuditing.</span><span class="sxs-lookup"><span data-stu-id="c25bf-654">Get-AzureRmSqlDatabaseAuditing.</span></span>
+* <span data-ttu-id="c25bf-655">스토리지 계정 이름 매개 변수가 설정된 Update-AzureRmSqlDatabaseVulnerabilityAssessmentSettings를 사용할 때의 문제 해결</span><span class="sxs-lookup"><span data-stu-id="c25bf-655">Fixed issue with using Update-AzureRmSqlDatabaseVulnerabilityAssessmentSettings with storage account name parameter set</span></span>
+
+## <a name="050---november-2018"></a><span data-ttu-id="c25bf-656">0.5.0 - 2018년 11월</span><span class="sxs-lookup"><span data-stu-id="c25bf-656">0.5.0 - November 2018</span></span>
+#### <a name="general"></a><span data-ttu-id="c25bf-657">일반</span><span class="sxs-lookup"><span data-stu-id="c25bf-657">General</span></span>
+* <span data-ttu-id="c25bf-658">많은 핵심 cmdlet에 Resource Completers를 추가하여 대화형으로 cmdlet을 호출할 때 기존 리소스 이름을 탭으로 이동할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-658">Added Resource Completers to many core cmdlets - these alloow you to tab through existing resource names when invoking cmdlets interactively</span></span>
+
+#### <a name="azprofile"></a><span data-ttu-id="c25bf-659">Az.Profile</span><span class="sxs-lookup"><span data-stu-id="c25bf-659">Az.Profile</span></span>
+* <span data-ttu-id="c25bf-660">ClientRuntime의 최신 버전을 사용하도록 일반적인 코드를 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-660">Update common code to use latest version of ClientRuntime</span></span>
+* <span data-ttu-id="c25bf-661">Connect-AzAccount cmdlet의 매개 변수 TenantId 이름을 Tenant로 바꾸고 TenantId의 별칭을 추가합니다</span><span class="sxs-lookup"><span data-stu-id="c25bf-661">Rename param TenantId in cmdlet Connect-AzAccount to Tenant and add an alias for TenantId</span></span>
+* <span data-ttu-id="c25bf-662">Connect-AzAccount의 업데이트된 TenantId 설명</span><span class="sxs-lookup"><span data-stu-id="c25bf-662">Updated TenantId description for Connect-AzAccount</span></span>
+* <span data-ttu-id="c25bf-663">테넌트 도메인을 제공할 때 실패한 로그인에 대한 오류 메시지 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-663">Fix error message for failed login when providing tenant domain</span></span>
     - https://github.com/Azure/azure-powershell/issues/6936
-* <span data-ttu-id="624d0-664">테넌트에 구독이 없는 계정의 컨텍스트 이름 충돌 문제 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-664">Fix issue with context name clashing for accounts with no subscriptions in tenant</span></span>
+* <span data-ttu-id="c25bf-664">테넌트에 구독이 없는 계정의 컨텍스트 이름 충돌 문제 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-664">Fix issue with context name clashing for accounts with no subscriptions in tenant</span></span>
     - https://github.com/Azure/azure-powershell/issues/7453
-* <span data-ttu-id="624d0-665">MSI를 사용할 때 DataLake 엔드포인트 문제 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-665">Fix issue with DataLake endpoints when using MSI</span></span>
+* <span data-ttu-id="c25bf-665">MSI를 사용할 때 DataLake 엔드포인트 문제 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-665">Fix issue with DataLake endpoints when using MSI</span></span>
     - https://github.com/Azure/azure-powershell/issues/7462
-* <span data-ttu-id="624d0-666">연결되지 않은 경우 'Disconnect-AzAccount'가 throw하는 문제 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-666">Fix issue where 'Disconnect-AzAccount' would throw if not connected</span></span>
+* <span data-ttu-id="c25bf-666">연결되지 않은 경우 'Disconnect-AzAccount'가 throw하는 문제 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-666">Fix issue where 'Disconnect-AzAccount' would throw if not connected</span></span>
     - https://github.com/Azure/azure-powershell/issues/7167
 
-#### <a name="azcognitiveservices"></a><span data-ttu-id="624d0-667">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="624d0-667">Az.CognitiveServices</span></span>
-* <span data-ttu-id="624d0-668">Get-AzCognitiveServicesAccountSkus 작업을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-668">Add Get-AzCognitiveServicesAccountSkus operation.</span></span>
+#### <a name="azcognitiveservices"></a><span data-ttu-id="c25bf-667">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="c25bf-667">Az.CognitiveServices</span></span>
+* <span data-ttu-id="c25bf-668">Get-AzCognitiveServicesAccountSkus 작업을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-668">Add Get-AzCognitiveServicesAccountSkus operation.</span></span>
 
-#### <a name="azcompute"></a><span data-ttu-id="624d0-669">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="624d0-669">Az.Compute</span></span>
-* <span data-ttu-id="624d0-670">Add-AzVmssVMDataDisk 및 Remove-AzVmssVMDataDisk cmdlet를 추가합니다</span><span class="sxs-lookup"><span data-stu-id="624d0-670">Add Add-AzVmssVMDataDisk and Remove-AzVmssVMDataDisk cmdlets</span></span>
-* <span data-ttu-id="624d0-671">Get-AzVMImage는 AutomaticOSUpgradeProperties를 표시합니다</span><span class="sxs-lookup"><span data-stu-id="624d0-671">Get-AzVMImage shows AutomaticOSUpgradeProperties</span></span>
-* <span data-ttu-id="624d0-672">수정된 SetAzVMChefExtension -BootstrapOptions 및 -JsonAttribute option 값이 json 형식으로 설정하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-672">Fixed SetAzVMChefExtension -BootstrapOptions and -JsonAttribute option values are not setting in json format.</span></span>
+#### <a name="azcompute"></a><span data-ttu-id="c25bf-669">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="c25bf-669">Az.Compute</span></span>
+* <span data-ttu-id="c25bf-670">Add-AzVmssVMDataDisk 및 Remove-AzVmssVMDataDisk cmdlet를 추가합니다</span><span class="sxs-lookup"><span data-stu-id="c25bf-670">Add Add-AzVmssVMDataDisk and Remove-AzVmssVMDataDisk cmdlets</span></span>
+* <span data-ttu-id="c25bf-671">Get-AzVMImage는 AutomaticOSUpgradeProperties를 표시합니다</span><span class="sxs-lookup"><span data-stu-id="c25bf-671">Get-AzVMImage shows AutomaticOSUpgradeProperties</span></span>
+* <span data-ttu-id="c25bf-672">수정된 SetAzVMChefExtension -BootstrapOptions 및 -JsonAttribute option 값이 json 형식으로 설정하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-672">Fixed SetAzVMChefExtension -BootstrapOptions and -JsonAttribute option values are not setting in json format.</span></span>
 
-#### <a name="azdatalakestore"></a><span data-ttu-id="624d0-673">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="624d0-673">Az.DataLakeStore</span></span>
-* <span data-ttu-id="624d0-674">DataLake 패키지를 1.1.10으로 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-674">Update the DataLake package to 1.1.10.</span></span>
-* <span data-ttu-id="624d0-675">기본 동시성을 다중 스레드 작업에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-675">Add default Concurrency to multithreaded operations.</span></span>
+#### <a name="azdatalakestore"></a><span data-ttu-id="c25bf-673">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="c25bf-673">Az.DataLakeStore</span></span>
+* <span data-ttu-id="c25bf-674">DataLake 패키지를 1.1.10으로 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-674">Update the DataLake package to 1.1.10.</span></span>
+* <span data-ttu-id="c25bf-675">기본 동시성을 다중 스레드 작업에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-675">Add default Concurrency to multithreaded operations.</span></span>
 
-#### <a name="azinsights"></a><span data-ttu-id="624d0-676">Az.Insights</span><span class="sxs-lookup"><span data-stu-id="624d0-676">Az.Insights</span></span>
-* <span data-ttu-id="624d0-677">해결된 문제 #7267(자동 크기 조정 영역)</span><span class="sxs-lookup"><span data-stu-id="624d0-677">Fixed issue #7267 (Autoscale area)</span></span>
-    - <span data-ttu-id="624d0-678">열거된 매개 변수를 제대로 설정하지 않은 새 자동 크기 조정 규칙을 만드는 데 문제가 있습니다(이를 항상 기본값으로 설정함).</span><span class="sxs-lookup"><span data-stu-id="624d0-678">Issues with creating a new autoscale rule not properly setting enumerated parameters (would always set them to the default value).</span></span>
-* <span data-ttu-id="624d0-679">해결된 문제 # 7513[자세한 정보] Set-AzDiagnosticSetting은 설정을 생성하는 동안 범주를 명시적으로 지정해야 합니다</span><span class="sxs-lookup"><span data-stu-id="624d0-679">Fixed issue #7513 [Insights] Set-AzDiagnosticSetting requires explicit specification of categories during creation of setting</span></span>
-    - <span data-ttu-id="624d0-680">이제 cmdlet은 생성 중에 사용할 범주를 명시적으로 표시할 필요가 없습니다. 즉, 문서화된대로 작동합니다</span><span class="sxs-lookup"><span data-stu-id="624d0-680">Now the cmdlet does not require explicit indication of the categories to enable during creation, i.e. it works as it is documented</span></span>
+#### <a name="azinsights"></a><span data-ttu-id="c25bf-676">Az.Insights</span><span class="sxs-lookup"><span data-stu-id="c25bf-676">Az.Insights</span></span>
+* <span data-ttu-id="c25bf-677">해결된 문제 #7267(자동 크기 조정 영역)</span><span class="sxs-lookup"><span data-stu-id="c25bf-677">Fixed issue #7267 (Autoscale area)</span></span>
+    - <span data-ttu-id="c25bf-678">열거된 매개 변수를 제대로 설정하지 않은 새 자동 크기 조정 규칙을 만드는 데 문제가 있습니다(이를 항상 기본값으로 설정함).</span><span class="sxs-lookup"><span data-stu-id="c25bf-678">Issues with creating a new autoscale rule not properly setting enumerated parameters (would always set them to the default value).</span></span>
+* <span data-ttu-id="c25bf-679">해결된 문제 # 7513[자세한 정보] Set-AzDiagnosticSetting은 설정을 생성하는 동안 범주를 명시적으로 지정해야 합니다</span><span class="sxs-lookup"><span data-stu-id="c25bf-679">Fixed issue #7513 [Insights] Set-AzDiagnosticSetting requires explicit specification of categories during creation of setting</span></span>
+    - <span data-ttu-id="c25bf-680">이제 cmdlet은 생성 중에 사용할 범주를 명시적으로 표시할 필요가 없습니다. 즉, 문서화된대로 작동합니다</span><span class="sxs-lookup"><span data-stu-id="c25bf-680">Now the cmdlet does not require explicit indication of the categories to enable during creation, i.e. it works as it is documented</span></span>
 
-#### <a name="aznetwork"></a><span data-ttu-id="624d0-681">Az.Network</span><span class="sxs-lookup"><span data-stu-id="624d0-681">Az.Network</span></span>
-* <span data-ttu-id="624d0-682">다음 cmdlet에 대해 PeeringType을 필수 매개 변수로 변경했습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-682">Changed PeeringType to be a mandatory parameter for the following cmdlets:-</span></span>
-    - <span data-ttu-id="624d0-683">Get-AzExpressRouteCircuitRouteTable</span><span class="sxs-lookup"><span data-stu-id="624d0-683">Get-AzExpressRouteCircuitRouteTable</span></span>
-    - <span data-ttu-id="624d0-684">Get-AzExpressRouteCircuitARPTable</span><span class="sxs-lookup"><span data-stu-id="624d0-684">Get-AzExpressRouteCircuitARPTable</span></span>
-    - <span data-ttu-id="624d0-685">Get-AzExpressRouteCircuitRouteTableSummary</span><span class="sxs-lookup"><span data-stu-id="624d0-685">Get-AzExpressRouteCircuitRouteTableSummary</span></span>
-    - <span data-ttu-id="624d0-686">Get-AzExpressRouteCrossConnectionArpTable</span><span class="sxs-lookup"><span data-stu-id="624d0-686">Get-AzExpressRouteCrossConnectionArpTable</span></span>
-    - <span data-ttu-id="624d0-687">Get-AzExpressRouteCrossConnectionRouteTable</span><span class="sxs-lookup"><span data-stu-id="624d0-687">Get-AzExpressRouteCrossConnectionRouteTable</span></span>
-    - <span data-ttu-id="624d0-688">Get-AzExpressRouteCrossConnectionRouteTableSummary</span><span class="sxs-lookup"><span data-stu-id="624d0-688">Get-AzExpressRouteCrossConnectionRouteTableSummary</span></span>
+#### <a name="aznetwork"></a><span data-ttu-id="c25bf-681">Az.Network</span><span class="sxs-lookup"><span data-stu-id="c25bf-681">Az.Network</span></span>
+* <span data-ttu-id="c25bf-682">다음 cmdlet에 대해 PeeringType을 필수 매개 변수로 변경했습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-682">Changed PeeringType to be a mandatory parameter for the following cmdlets:-</span></span>
+    - <span data-ttu-id="c25bf-683">Get-AzExpressRouteCircuitRouteTable</span><span class="sxs-lookup"><span data-stu-id="c25bf-683">Get-AzExpressRouteCircuitRouteTable</span></span>
+    - <span data-ttu-id="c25bf-684">Get-AzExpressRouteCircuitARPTable</span><span class="sxs-lookup"><span data-stu-id="c25bf-684">Get-AzExpressRouteCircuitARPTable</span></span>
+    - <span data-ttu-id="c25bf-685">Get-AzExpressRouteCircuitRouteTableSummary</span><span class="sxs-lookup"><span data-stu-id="c25bf-685">Get-AzExpressRouteCircuitRouteTableSummary</span></span>
+    - <span data-ttu-id="c25bf-686">Get-AzExpressRouteCrossConnectionArpTable</span><span class="sxs-lookup"><span data-stu-id="c25bf-686">Get-AzExpressRouteCrossConnectionArpTable</span></span>
+    - <span data-ttu-id="c25bf-687">Get-AzExpressRouteCrossConnectionRouteTable</span><span class="sxs-lookup"><span data-stu-id="c25bf-687">Get-AzExpressRouteCrossConnectionRouteTable</span></span>
+    - <span data-ttu-id="c25bf-688">Get-AzExpressRouteCrossConnectionRouteTableSummary</span><span class="sxs-lookup"><span data-stu-id="c25bf-688">Get-AzExpressRouteCrossConnectionRouteTableSummary</span></span>
 
-#### <a name="azpolicyinsights"></a><span data-ttu-id="624d0-689">Az.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="624d0-689">Az.PolicyInsights</span></span>
-* <span data-ttu-id="624d0-690">추가된 정책 재구성 cmdlet</span><span class="sxs-lookup"><span data-stu-id="624d0-690">Added policy remediation cmdlets</span></span>
+#### <a name="azpolicyinsights"></a><span data-ttu-id="c25bf-689">Az.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="c25bf-689">Az.PolicyInsights</span></span>
+* <span data-ttu-id="c25bf-690">추가된 정책 재구성 cmdlet</span><span class="sxs-lookup"><span data-stu-id="c25bf-690">Added policy remediation cmdlets</span></span>
 
-#### <a name="azresources"></a><span data-ttu-id="624d0-691">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="624d0-691">Az.Resources</span></span>
-* <span data-ttu-id="624d0-692">https://github.com/Azure/azure-powershell/issues/7402 에 대한 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-692">Fix for https://github.com/Azure/azure-powershell/issues/7402</span></span>
-    - <span data-ttu-id="624d0-693">'Get-AzResource'에 대해 '-ResourceId' 매개 변수를 사용하여 리소스 나열 허용</span><span class="sxs-lookup"><span data-stu-id="624d0-693">Allow listing resources using the '-ResourceId' parameter for 'Get-AzResource'</span></span>
+#### <a name="azresources"></a><span data-ttu-id="c25bf-691">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="c25bf-691">Az.Resources</span></span>
+* <span data-ttu-id="c25bf-692">https://github.com/Azure/azure-powershell/issues/7402 에 대한 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-692">Fix for https://github.com/Azure/azure-powershell/issues/7402</span></span>
+    - <span data-ttu-id="c25bf-693">'Get-AzResource'에 대해 '-ResourceId' 매개 변수를 사용하여 리소스 나열 허용</span><span class="sxs-lookup"><span data-stu-id="c25bf-693">Allow listing resources using the '-ResourceId' parameter for 'Get-AzResource'</span></span>
 
-#### <a name="azservicebus"></a><span data-ttu-id="624d0-694">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="624d0-694">Az.ServiceBus</span></span>
-* <span data-ttu-id="624d0-695">마이그레이션 상태를 알 수 있도록 PSServiceBusMigrationConfigurationAttributes에 MigrationState 읽기 전용 속성 추가.</span><span class="sxs-lookup"><span data-stu-id="624d0-695">Added MigrationState read-only property to PSServiceBusMigrationConfigurationAttributes which will help to know the Migration state.</span></span>
+#### <a name="azservicebus"></a><span data-ttu-id="c25bf-694">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="c25bf-694">Az.ServiceBus</span></span>
+* <span data-ttu-id="c25bf-695">마이그레이션 상태를 알 수 있도록 PSServiceBusMigrationConfigurationAttributes에 MigrationState 읽기 전용 속성 추가.</span><span class="sxs-lookup"><span data-stu-id="c25bf-695">Added MigrationState read-only property to PSServiceBusMigrationConfigurationAttributes which will help to know the Migration state.</span></span>
 
-#### <a name="azservicefabric"></a><span data-ttu-id="624d0-696">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="624d0-696">Az.ServiceFabric</span></span>
-* <span data-ttu-id="624d0-697">Linux Vmss에 인증서 추가 수정.</span><span class="sxs-lookup"><span data-stu-id="624d0-697">Fix add certificate to Linux Vmss.</span></span>
-* <span data-ttu-id="624d0-698">Add-AzServiceFabricClusterCertificate 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-698">Fix 'Add-AzServiceFabricClusterCertificate'</span></span>
-    - <span data-ttu-id="624d0-699">새 인증서(Azure/service-fabric-issues#932)에서 올바른 지문을 사용.</span><span class="sxs-lookup"><span data-stu-id="624d0-699">Using correct thumbprint from new certificate (Azure/service-fabric-issues#932).</span></span>
-    - <span data-ttu-id="624d0-700">올바르게 예외 표시(Azure/service-fabric-issues#1054).</span><span class="sxs-lookup"><span data-stu-id="624d0-700">Display exception correctly (Azure/service-fabric-issues#1054).</span></span>
-* <span data-ttu-id="624d0-701">Vmss CreateOrUpdate 작업을 시작하기 전에 'Update-AzServiceFabricDurability'를 수정하여 클러스터 구성 업데이트.</span><span class="sxs-lookup"><span data-stu-id="624d0-701">Fix 'Update-AzServiceFabricDurability' to update cluster configuration before starting Vmss CreateOrUpdate operation.</span></span>
+#### <a name="azservicefabric"></a><span data-ttu-id="c25bf-696">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="c25bf-696">Az.ServiceFabric</span></span>
+* <span data-ttu-id="c25bf-697">Linux Vmss에 인증서 추가 수정.</span><span class="sxs-lookup"><span data-stu-id="c25bf-697">Fix add certificate to Linux Vmss.</span></span>
+* <span data-ttu-id="c25bf-698">Add-AzServiceFabricClusterCertificate 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-698">Fix 'Add-AzServiceFabricClusterCertificate'</span></span>
+    - <span data-ttu-id="c25bf-699">새 인증서(Azure/service-fabric-issues#932)에서 올바른 지문을 사용.</span><span class="sxs-lookup"><span data-stu-id="c25bf-699">Using correct thumbprint from new certificate (Azure/service-fabric-issues#932).</span></span>
+    - <span data-ttu-id="c25bf-700">올바르게 예외 표시(Azure/service-fabric-issues#1054).</span><span class="sxs-lookup"><span data-stu-id="c25bf-700">Display exception correctly (Azure/service-fabric-issues#1054).</span></span>
+* <span data-ttu-id="c25bf-701">Vmss CreateOrUpdate 작업을 시작하기 전에 'Update-AzServiceFabricDurability'를 수정하여 클러스터 구성 업데이트.</span><span class="sxs-lookup"><span data-stu-id="c25bf-701">Fix 'Update-AzServiceFabricDurability' to update cluster configuration before starting Vmss CreateOrUpdate operation.</span></span>
 
-## <a name="040---october-2018"></a><span data-ttu-id="624d0-702">0.4.0 - 2018년 10월</span><span class="sxs-lookup"><span data-stu-id="624d0-702">0.4.0 - October 2018</span></span>
-#### <a name="azprofile"></a><span data-ttu-id="624d0-703">Az.Profile</span><span class="sxs-lookup"><span data-stu-id="624d0-703">Az.Profile</span></span>
-* <span data-ttu-id="624d0-704">CloudShell에서 Get-AzSubscription을 사용하여 문제를 해결합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-704">Fix issue with Get-AzSubscription in CloudShell</span></span>
-* <span data-ttu-id="624d0-705">ClientRuntime의 최신 버전을 사용하도록 일반적인 코드를 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-705">Update common code to use latest version of ClientRuntime</span></span>
+## <a name="040---october-2018"></a><span data-ttu-id="c25bf-702">0.4.0 - 2018년 10월</span><span class="sxs-lookup"><span data-stu-id="c25bf-702">0.4.0 - October 2018</span></span>
+#### <a name="azprofile"></a><span data-ttu-id="c25bf-703">Az.Profile</span><span class="sxs-lookup"><span data-stu-id="c25bf-703">Az.Profile</span></span>
+* <span data-ttu-id="c25bf-704">CloudShell에서 Get-AzSubscription을 사용하여 문제를 해결합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-704">Fix issue with Get-AzSubscription in CloudShell</span></span>
+* <span data-ttu-id="c25bf-705">ClientRuntime의 최신 버전을 사용하도록 일반적인 코드를 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-705">Update common code to use latest version of ClientRuntime</span></span>
 
-#### <a name="azcompute"></a><span data-ttu-id="624d0-706">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="624d0-706">Az.Compute</span></span>
-* <span data-ttu-id="624d0-707">'New-AzVm'에 대해 간단한 매개 변수를 사용하는 경우 가속화된 네트워킹을 설정하기 위해 새 크기가 VM 크기의 허용 목록에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-707">Added new sizes to the whitelist of VM sizes for which accelerated networking will be turned on when using the simple param set for 'New-AzVm'</span></span>
-* <span data-ttu-id="624d0-708">모든 cmdlet에 ResourceName 인수 완성자가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-708">Added ResourceName argument completer to all cmdlets.</span></span>
+#### <a name="azcompute"></a><span data-ttu-id="c25bf-706">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="c25bf-706">Az.Compute</span></span>
+* <span data-ttu-id="c25bf-707">'New-AzVm'에 대해 간단한 매개 변수를 사용하는 경우 가속화된 네트워킹을 설정하기 위해 새 크기가 VM 크기의 허용 목록에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-707">Added new sizes to the whitelist of VM sizes for which accelerated networking will be turned on when using the simple param set for 'New-AzVm'</span></span>
+* <span data-ttu-id="c25bf-708">모든 cmdlet에 ResourceName 인수 완성자가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-708">Added ResourceName argument completer to all cmdlets.</span></span>
 
-#### <a name="azdatalakestore"></a><span data-ttu-id="624d0-709">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="624d0-709">Az.DataLakeStore</span></span>
-* <span data-ttu-id="624d0-710">Virtual Network 규칙에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-710">Adding support for Virtual Network Rules</span></span>
-    - <span data-ttu-id="624d0-711">Get-AzDataLakeStoreVirtualNetworkRule: Azure Data Lake Store 가상 네트워크 규칙을 가져오거나 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-711">Get-AzDataLakeStoreVirtualNetworkRule: Gets or Lists Azure Data Lake Store virtual network rule.</span></span>
-    - <span data-ttu-id="624d0-712">Add-AzDataLakeStoreVirtualNetworkRule: 지정된 Data Lake Store 계정에 가상 네트워크 규칙을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-712">Add-AzDataLakeStoreVirtualNetworkRule: Adds a virtual network rule to the specified Data Lake Store account.</span></span>
-    - <span data-ttu-id="624d0-713">Set-AzDataLakeStoreVirtualNetworkRule: 지정된 Data Lake Store 계정에 지정된 가상 네트워크 규칙을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-713">Set-AzDataLakeStoreVirtualNetworkRule: Modifies the specified virtual network rule in the specified Data Lake Store account.</span></span>
-    - <span data-ttu-id="624d0-714">Remove-AzDataLakeStoreVirtualNetworkRule: Azure Data Lake Store 가상 네트워크 규칙을 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-714">Remove-AzDataLakeStoreVirtualNetworkRule: Deletes an Azure Data Lake Store virtual network rule.</span></span>
+#### <a name="azdatalakestore"></a><span data-ttu-id="c25bf-709">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="c25bf-709">Az.DataLakeStore</span></span>
+* <span data-ttu-id="c25bf-710">Virtual Network 규칙에 대한 지원 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-710">Adding support for Virtual Network Rules</span></span>
+    - <span data-ttu-id="c25bf-711">Get-AzDataLakeStoreVirtualNetworkRule: Azure Data Lake Store 가상 네트워크 규칙을 가져오거나 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-711">Get-AzDataLakeStoreVirtualNetworkRule: Gets or Lists Azure Data Lake Store virtual network rule.</span></span>
+    - <span data-ttu-id="c25bf-712">Add-AzDataLakeStoreVirtualNetworkRule: 지정된 Data Lake Store 계정에 가상 네트워크 규칙을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-712">Add-AzDataLakeStoreVirtualNetworkRule: Adds a virtual network rule to the specified Data Lake Store account.</span></span>
+    - <span data-ttu-id="c25bf-713">Set-AzDataLakeStoreVirtualNetworkRule: 지정된 Data Lake Store 계정에 지정된 가상 네트워크 규칙을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-713">Set-AzDataLakeStoreVirtualNetworkRule: Modifies the specified virtual network rule in the specified Data Lake Store account.</span></span>
+    - <span data-ttu-id="c25bf-714">Remove-AzDataLakeStoreVirtualNetworkRule: Azure Data Lake Store 가상 네트워크 규칙을 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-714">Remove-AzDataLakeStoreVirtualNetworkRule: Deletes an Azure Data Lake Store virtual network rule.</span></span>
 
-#### <a name="aznetwork"></a><span data-ttu-id="624d0-715">Az.Network</span><span class="sxs-lookup"><span data-stu-id="624d0-715">Az.Network</span></span>
-* <span data-ttu-id="624d0-716">Test-AzNetworkWatcherConnectivity cmdlet을 업데이트하고, 백 엔드에 프로토콜 값을 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-716">Update cmdlet Test-AzNetworkWatcherConnectivity, pass the protocol value to backend.</span></span>
-* <span data-ttu-id="624d0-717">모든 cmdlet에 ResourceName 인수 완성자가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-717">Added ResourceName argument completer to all cmdlets.</span></span>
+#### <a name="aznetwork"></a><span data-ttu-id="c25bf-715">Az.Network</span><span class="sxs-lookup"><span data-stu-id="c25bf-715">Az.Network</span></span>
+* <span data-ttu-id="c25bf-716">Test-AzNetworkWatcherConnectivity cmdlet을 업데이트하고, 백 엔드에 프로토콜 값을 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-716">Update cmdlet Test-AzNetworkWatcherConnectivity, pass the protocol value to backend.</span></span>
+* <span data-ttu-id="c25bf-717">모든 cmdlet에 ResourceName 인수 완성자가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-717">Added ResourceName argument completer to all cmdlets.</span></span>
 
-#### <a name="azresources"></a><span data-ttu-id="624d0-718">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="624d0-718">Az.Resources</span></span>
-* <span data-ttu-id="624d0-719">(기본 프로필에 구독이 없고 범위가 지정되지 않은 경우) 시나리오에서 의미 있는 예외를 추가하여 Get-AzRoleDefinition이 인식할 수 없는 예외를 throw하는 문제를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-719">Fix isssue where Get-AzRoleDefinition throws an unintelligible exception (when the default profile has no subscription in it and no scope is specified) by adding a meaningful exception in the scenario.</span></span> <span data-ttu-id="624d0-720">또한 기본 매개 변수 집합을 'RoleDefinitionNameParameterSet'으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-720">Also set the default param set to 'RoleDefinitionNameParameterSet'.</span></span>
+#### <a name="azresources"></a><span data-ttu-id="c25bf-718">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="c25bf-718">Az.Resources</span></span>
+* <span data-ttu-id="c25bf-719">(기본 프로필에 구독이 없고 범위가 지정되지 않은 경우) 시나리오에서 의미 있는 예외를 추가하여 Get-AzRoleDefinition이 인식할 수 없는 예외를 throw하는 문제를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-719">Fix isssue where Get-AzRoleDefinition throws an unintelligible exception (when the default profile has no subscription in it and no scope is specified) by adding a meaningful exception in the scenario.</span></span> <span data-ttu-id="c25bf-720">또한 기본 매개 변수 집합을 'RoleDefinitionNameParameterSet'으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-720">Also set the default param set to 'RoleDefinitionNameParameterSet'.</span></span>
 
-## <a name="030---october-2018"></a><span data-ttu-id="624d0-721">0.3.0 - 2018년 10월</span><span class="sxs-lookup"><span data-stu-id="624d0-721">0.3.0 - October 2018</span></span>
-#### <a name="azurestorage"></a><span data-ttu-id="624d0-722">Azure.Storage</span><span class="sxs-lookup"><span data-stu-id="624d0-722">Azure.Storage</span></span>
-* <span data-ttu-id="624d0-723">대상에 메타데이터가 있을 때 Blob/파일이 메타 데이터를 복사하지 않는 문제 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-723">Fix Copy Blob/File won't copy metadata when destination has metadata issue</span></span>
-    - <span data-ttu-id="624d0-724">Start-AzureStorageBlobCopy</span><span class="sxs-lookup"><span data-stu-id="624d0-724">Start-AzureStorageBlobCopy</span></span>
-    - <span data-ttu-id="624d0-725">Start-AzureStorageFileCopy</span><span class="sxs-lookup"><span data-stu-id="624d0-725">Start-AzureStorageFileCopy</span></span>
-* <span data-ttu-id="624d0-726">특정 위치의 스토리지 리소스 사용을 지원하고 글로벌 스토리지 리소스 사용 가져오기는 더 이상 사용되지 않는다는 경고 메시지를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-726">Support get the Storage resource usage of a specific location, and add warning message for get global Storage resource usage is obsolete.</span></span>
-    - <span data-ttu-id="624d0-727">Get-AzStorageUsage</span><span class="sxs-lookup"><span data-stu-id="624d0-727">Get-AzStorageUsage</span></span>
+## <a name="030---october-2018"></a><span data-ttu-id="c25bf-721">0.3.0 - 2018년 10월</span><span class="sxs-lookup"><span data-stu-id="c25bf-721">0.3.0 - October 2018</span></span>
+#### <a name="azurestorage"></a><span data-ttu-id="c25bf-722">Azure.Storage</span><span class="sxs-lookup"><span data-stu-id="c25bf-722">Azure.Storage</span></span>
+* <span data-ttu-id="c25bf-723">대상에 메타데이터가 있을 때 Blob/파일이 메타 데이터를 복사하지 않는 문제 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-723">Fix Copy Blob/File won't copy metadata when destination has metadata issue</span></span>
+    - <span data-ttu-id="c25bf-724">Start-AzureStorageBlobCopy</span><span class="sxs-lookup"><span data-stu-id="c25bf-724">Start-AzureStorageBlobCopy</span></span>
+    - <span data-ttu-id="c25bf-725">Start-AzureStorageFileCopy</span><span class="sxs-lookup"><span data-stu-id="c25bf-725">Start-AzureStorageFileCopy</span></span>
+* <span data-ttu-id="c25bf-726">특정 위치의 스토리지 리소스 사용을 지원하고 글로벌 스토리지 리소스 사용 가져오기는 더 이상 사용되지 않는다는 경고 메시지를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-726">Support get the Storage resource usage of a specific location, and add warning message for get global Storage resource usage is obsolete.</span></span>
+    - <span data-ttu-id="c25bf-727">Get-AzStorageUsage</span><span class="sxs-lookup"><span data-stu-id="c25bf-727">Get-AzStorageUsage</span></span>
     
-#### <a name="azcognitiveservices"></a><span data-ttu-id="624d0-728">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="624d0-728">Az.CognitiveServices</span></span>
-* <span data-ttu-id="624d0-729">기존 계정이 없는 Get-AzCognitiveServicesAccountSkus를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-729">Support Get-AzCognitiveServicesAccountSkus without an existing account.</span></span>
+#### <a name="azcognitiveservices"></a><span data-ttu-id="c25bf-728">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="c25bf-728">Az.CognitiveServices</span></span>
+* <span data-ttu-id="c25bf-729">기존 계정이 없는 Get-AzCognitiveServicesAccountSkus를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-729">Support Get-AzCognitiveServicesAccountSkus without an existing account.</span></span>
 
-#### <a name="azcompute"></a><span data-ttu-id="624d0-730">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="624d0-730">Az.Compute</span></span>
-* <span data-ttu-id="624d0-731">Get-AzVM -ResourceGroupName <rg>가 필요한 경우 50개가 넘는 결과를 반환하도록 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-731">Fix Get-AzVM -ResourceGroupName <rg> to return more than 50 results if needed</span></span>
-* <span data-ttu-id="624d0-732">'SimpleParameterSet' 예제가 New-AzVmss cmdlet 도움말에 추가됨</span><span class="sxs-lookup"><span data-stu-id="624d0-732">Added an example of the 'SimpleParameterSet' to New-AzVmss cmdlet help.</span></span>
-* <span data-ttu-id="624d0-733">Azure Disk Encryption 진행률 메시지의 오타를 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-733">Fixed a typo in the Azure Disk Encryption progress message</span></span>
+#### <a name="azcompute"></a><span data-ttu-id="c25bf-730">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="c25bf-730">Az.Compute</span></span>
+* <span data-ttu-id="c25bf-731">Get-AzVM -ResourceGroupName <rg>가 필요한 경우 50개가 넘는 결과를 반환하도록 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-731">Fix Get-AzVM -ResourceGroupName <rg> to return more than 50 results if needed</span></span>
+* <span data-ttu-id="c25bf-732">'SimpleParameterSet' 예제가 New-AzVmss cmdlet 도움말에 추가됨</span><span class="sxs-lookup"><span data-stu-id="c25bf-732">Added an example of the 'SimpleParameterSet' to New-AzVmss cmdlet help.</span></span>
+* <span data-ttu-id="c25bf-733">Azure Disk Encryption 진행률 메시지의 오타를 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-733">Fixed a typo in the Azure Disk Encryption progress message</span></span>
 
-#### <a name="azdatafactoryv2"></a><span data-ttu-id="624d0-734">Az.DataFactoryV2</span><span class="sxs-lookup"><span data-stu-id="624d0-734">Az.DataFactoryV2</span></span>
-* <span data-ttu-id="624d0-735">ADF.Net SDK 버전을 2.3.0으로 업데이트</span><span class="sxs-lookup"><span data-stu-id="624d0-735">Updated the ADF .Net SDK version to 2.3.0.</span></span>
+#### <a name="azdatafactoryv2"></a><span data-ttu-id="c25bf-734">Az.DataFactoryV2</span><span class="sxs-lookup"><span data-stu-id="c25bf-734">Az.DataFactoryV2</span></span>
+* <span data-ttu-id="c25bf-735">ADF.Net SDK 버전을 2.3.0으로 업데이트</span><span class="sxs-lookup"><span data-stu-id="c25bf-735">Updated the ADF .Net SDK version to 2.3.0.</span></span>
 
-#### <a name="aznetwork"></a><span data-ttu-id="624d0-736">Az.Network</span><span class="sxs-lookup"><span data-stu-id="624d0-736">Az.Network</span></span>
-* <span data-ttu-id="624d0-737">NetworkProfile 기능 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-737">Added NetworkProfile functionality.</span></span> <span data-ttu-id="624d0-738">추가된 새 cmdlet은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-738">new cmdlets added</span></span>
-    - <span data-ttu-id="624d0-739">Get-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="624d0-739">Get-AzNetworkProfile</span></span>
-    - <span data-ttu-id="624d0-740">New-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="624d0-740">New-AzNetworkProfile</span></span>
-    - <span data-ttu-id="624d0-741">Remove-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="624d0-741">Remove-AzNetworkProfile</span></span>
-    - <span data-ttu-id="624d0-742">Set-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="624d0-742">Set-AzNetworkProfile</span></span>
-    - <span data-ttu-id="624d0-743">New-AzContainerNicConfig</span><span class="sxs-lookup"><span data-stu-id="624d0-743">New-AzContainerNicConfig</span></span>
-    - <span data-ttu-id="624d0-744">New-AzContainerNicConfigIpConfig</span><span class="sxs-lookup"><span data-stu-id="624d0-744">New-AzContainerNicConfigIpConfig</span></span>
-* <span data-ttu-id="624d0-745">서브넷 모델에 서비스 연결 링크 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-745">Added service association link on Subnet Model</span></span>
-* <span data-ttu-id="624d0-746">New-AzVirtualNetworkTap, Get-AzVirtualNetworkTap, Set-AzVirtualNetworkTap, Remove-AzVirtualNetworkTap cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-746">Added cmdlet New-AzVirtualNetworkTap, Get-AzVirtualNetworkTap, Set-AzVirtualNetworkTap, Remove-AzVirtualNetworkTap</span></span>
-* <span data-ttu-id="624d0-747">Set-AzNEtworkInterfaceTapConfig, Get-AzNEtworkInterfaceTapConfig, Remove-AzNEtworkInterfaceTapConfig cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-747">Added cmdlet Set-AzNEtworkInterfaceTapConfig, Get-AzNEtworkInterfaceTapConfig, Remove-AzNEtworkInterfaceTapConfig</span></span>
+#### <a name="aznetwork"></a><span data-ttu-id="c25bf-736">Az.Network</span><span class="sxs-lookup"><span data-stu-id="c25bf-736">Az.Network</span></span>
+* <span data-ttu-id="c25bf-737">NetworkProfile 기능 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-737">Added NetworkProfile functionality.</span></span> <span data-ttu-id="c25bf-738">추가된 새 cmdlet은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-738">new cmdlets added</span></span>
+    - <span data-ttu-id="c25bf-739">Get-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="c25bf-739">Get-AzNetworkProfile</span></span>
+    - <span data-ttu-id="c25bf-740">New-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="c25bf-740">New-AzNetworkProfile</span></span>
+    - <span data-ttu-id="c25bf-741">Remove-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="c25bf-741">Remove-AzNetworkProfile</span></span>
+    - <span data-ttu-id="c25bf-742">Set-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="c25bf-742">Set-AzNetworkProfile</span></span>
+    - <span data-ttu-id="c25bf-743">New-AzContainerNicConfig</span><span class="sxs-lookup"><span data-stu-id="c25bf-743">New-AzContainerNicConfig</span></span>
+    - <span data-ttu-id="c25bf-744">New-AzContainerNicConfigIpConfig</span><span class="sxs-lookup"><span data-stu-id="c25bf-744">New-AzContainerNicConfigIpConfig</span></span>
+* <span data-ttu-id="c25bf-745">서브넷 모델에 서비스 연결 링크 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-745">Added service association link on Subnet Model</span></span>
+* <span data-ttu-id="c25bf-746">New-AzVirtualNetworkTap, Get-AzVirtualNetworkTap, Set-AzVirtualNetworkTap, Remove-AzVirtualNetworkTap cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-746">Added cmdlet New-AzVirtualNetworkTap, Get-AzVirtualNetworkTap, Set-AzVirtualNetworkTap, Remove-AzVirtualNetworkTap</span></span>
+* <span data-ttu-id="c25bf-747">Set-AzNEtworkInterfaceTapConfig, Get-AzNEtworkInterfaceTapConfig, Remove-AzNEtworkInterfaceTapConfig cmdlet 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-747">Added cmdlet Set-AzNEtworkInterfaceTapConfig, Get-AzNEtworkInterfaceTapConfig, Remove-AzNEtworkInterfaceTapConfig</span></span>
 
-#### <a name="azrediscache"></a><span data-ttu-id="624d0-748">Az.RedisCache</span><span class="sxs-lookup"><span data-stu-id="624d0-748">Az.RedisCache</span></span>
-* <span data-ttu-id="624d0-749">모든 문자열을 Size 매개 변수로 진행되도록 허용</span><span class="sxs-lookup"><span data-stu-id="624d0-749">Allow any string as Size parameter going forward.</span></span> <span data-ttu-id="624d0-750">PSArgumentCompleter 팝업에 P5 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-750">Add P5 in PSArgumentCompleter popup</span></span>
+#### <a name="azrediscache"></a><span data-ttu-id="c25bf-748">Az.RedisCache</span><span class="sxs-lookup"><span data-stu-id="c25bf-748">Az.RedisCache</span></span>
+* <span data-ttu-id="c25bf-749">모든 문자열을 Size 매개 변수로 진행되도록 허용</span><span class="sxs-lookup"><span data-stu-id="c25bf-749">Allow any string as Size parameter going forward.</span></span> <span data-ttu-id="c25bf-750">PSArgumentCompleter 팝업에 P5 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-750">Add P5 in PSArgumentCompleter popup</span></span>
 
-#### <a name="azresources"></a><span data-ttu-id="624d0-751">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="624d0-751">Az.Resources</span></span>
-* <span data-ttu-id="624d0-752">-Mode 매개 변수를 Set-AzPolicyDefinition에 추가</span><span class="sxs-lookup"><span data-stu-id="624d0-752">Add missing -Mode parameter to Set-AzPolicyDefinition</span></span>
-* <span data-ttu-id="624d0-753">사용자가 포함된 Origin 작업에서 Get-AzProviderOperation commandlet 버그 수정</span><span class="sxs-lookup"><span data-stu-id="624d0-753">Fix Get-AzProviderOperation commandlet bug for operations with Origin containing User</span></span>
+#### <a name="azresources"></a><span data-ttu-id="c25bf-751">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="c25bf-751">Az.Resources</span></span>
+* <span data-ttu-id="c25bf-752">-Mode 매개 변수를 Set-AzPolicyDefinition에 추가</span><span class="sxs-lookup"><span data-stu-id="c25bf-752">Add missing -Mode parameter to Set-AzPolicyDefinition</span></span>
+* <span data-ttu-id="c25bf-753">사용자가 포함된 Origin 작업에서 Get-AzProviderOperation commandlet 버그 수정</span><span class="sxs-lookup"><span data-stu-id="c25bf-753">Fix Get-AzProviderOperation commandlet bug for operations with Origin containing User</span></span>
 
-#### <a name="azsql"></a><span data-ttu-id="624d0-754">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="624d0-754">Az.Sql</span></span>
-* <span data-ttu-id="624d0-755">일부 백업 cmdlet이 현재 azure 구독을 인식하지 않는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="624d0-755">Fixed issue where some backup cmdlets would not recognize the current azure subscription</span></span>
+#### <a name="azsql"></a><span data-ttu-id="c25bf-754">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="c25bf-754">Az.Sql</span></span>
+* <span data-ttu-id="c25bf-755">일부 백업 cmdlet이 현재 azure 구독을 인식하지 않는 문제 해결</span><span class="sxs-lookup"><span data-stu-id="c25bf-755">Fixed issue where some backup cmdlets would not recognize the current azure subscription</span></span>
 
-#### <a name="azwebsites"></a><span data-ttu-id="624d0-756">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="624d0-756">Az.Websites</span></span>
-* <span data-ttu-id="624d0-757">새 cmdlet Get-AzWebAppContainerContinuousDeploymentUrl - 컨테이너 지속적인 배포 Webhook URL을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-757">New Cmdlet Get-AzWebAppContainerContinuousDeploymentUrl - Gets the Container Continuous Deployment Webhook URL</span></span>
-* <span data-ttu-id="624d0-758">새 cmdlet New-AzWebAppContainerPSSession 및 Enter-WebAppContainerPSSession -  windows 컨테이너 앱에 PowerShell 원격 세션을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="624d0-758">New Cmdlets New-AzWebAppContainerPSSession and Enter-WebAppContainerPSSession  - Initiates a PowerShell remote session into a windows container app</span></span>
+#### <a name="azwebsites"></a><span data-ttu-id="c25bf-756">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="c25bf-756">Az.Websites</span></span>
+* <span data-ttu-id="c25bf-757">새 cmdlet Get-AzWebAppContainerContinuousDeploymentUrl - 컨테이너 지속적인 배포 Webhook URL을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-757">New Cmdlet Get-AzWebAppContainerContinuousDeploymentUrl - Gets the Container Continuous Deployment Webhook URL</span></span>
+* <span data-ttu-id="c25bf-758">새 cmdlet New-AzWebAppContainerPSSession 및 Enter-WebAppContainerPSSession -  windows 컨테이너 앱에 PowerShell 원격 세션을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="c25bf-758">New Cmdlets New-AzWebAppContainerPSSession and Enter-WebAppContainerPSSession  - Initiates a PowerShell remote session into a windows container app</span></span>
 
-## <a name="020---september-2018"></a><span data-ttu-id="624d0-759">0.2.0 - 2018년 9월</span><span class="sxs-lookup"><span data-stu-id="624d0-759">0.2.0 - September 2018</span></span>
- <span data-ttu-id="624d0-760">초기 릴리스</span><span class="sxs-lookup"><span data-stu-id="624d0-760">Initial Release</span></span>
+## <a name="020---september-2018"></a><span data-ttu-id="c25bf-759">0.2.0 - 2018년 9월</span><span class="sxs-lookup"><span data-stu-id="c25bf-759">0.2.0 - September 2018</span></span>
+ <span data-ttu-id="c25bf-760">초기 릴리스</span><span class="sxs-lookup"><span data-stu-id="c25bf-760">Initial Release</span></span>
