@@ -4,12 +4,12 @@ description: PowerShellGet으로 Azure PowerShell을 설치 하는 방법
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/14/2020
-ms.openlocfilehash: 9cc681a56270c0894348a0eb6789ded3fa294f54
-ms.sourcegitcommit: 80c3188500fd174f5c5484302360ad87ace0fb9b
+ms.openlocfilehash: d3bed5a96af6bed16cda971a1a40b8416a1b115b
+ms.sourcegitcommit: 10ec909100a70acec94d42f6084e7bf0342c6854
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/19/2020
-ms.locfileid: "83554594"
+ms.locfileid: "83630761"
 ---
 # <a name="install-azure-powershell"></a>Azure Powershell 설치
 
@@ -22,7 +22,7 @@ Azure PowerShell은 Azure [Cloud Shell](/azure/cloud-shell/overview)에서도 �
 > [!NOTE]
 > 모든 플랫폼에서 Azure PowerShell과 함께 사용할 것을 권장하는 PowerShell 버전은 PowerShell 7.x 이상입니다.
 
-Azure PowerShell은 모든 플랫폼에서 PowerShell 6.2.4 이상과 함께 작동합니다. Windows에서는 PowerShell 5.1도 지원합니다. 사용하는 운영 체제에 제공되는 [최신 버전의 PowerShell](/powershell/scripting/install/installing-powershell)을 설치하는 것이 좋습니다. PowerShell 6.2.4 이상에서 실행하는 경우 Azure PowerShell과 관련된 추가 요구 사항이 없습니다.
+Azure PowerShell은 모든 플랫폼에서 PowerShell 6.2.4 이상과 함께 작동합니다. Windows에서는 PowerShell 5.1에서도 지원됩니다. 사용하는 운영 체제에 제공되는 [최신 버전의 PowerShell](/powershell/scripting/install/installing-powershell)을 설치합니다. PowerShell 6.2.4 이상에서 실행하는 경우 Azure PowerShell과 관련된 추가 요구 사항이 없습니다.
 
 PowerShell 버전을 확인하려면 다음 명령을 실행합니다.
 
@@ -35,7 +35,7 @@ Windows의 PowerShell 5.1에서 Azure PowerShell을 사용하려면 다음을 �
 1. [Windows PowerShell 5.1](/powershell/scripting/install/installing-windows-powershell#upgrading-existing-windows-powershell)로 업데이트합니다.
    Windows 10 버전 1607 이상을 사용하는 경우 PowerShell 5.1이 이미 설치되어 있습니다.
 2. [.NET Framework 4.7.2 이상](/dotnet/framework/install)을 설치합니다.
-3. 최신 버전의 PowerShellGet이 있는지 확인합니다. **관리자 권한으로 실행**을 사용하여 PowerShell 5.1 세션을 시작하고 `Install-Module -Name PowerShellGet -AllowClobber -Force`를 실행합니다.
+3. 최신 버전의 PowerShellGet이 있는지 확인합니다. `Install-Module -Name PowerShellGet -Force`을 실행합니다.
 
 ## <a name="install-the-azure-powershell-module"></a>Azure PowerShell 모듈 설치
 
@@ -45,7 +45,7 @@ Windows의 PowerShell 5.1에서 Azure PowerShell을 사용하려면 다음을 �
 기본 설치 방법은 PowerShellGet cmdlet을 사용하는 것입니다. 현재 사용자에 대해서만 Az 모듈을 설치합니다. 이는 추천되는 설치 방법입니다. 이 방법은 Windows, macOS 및 Linux 플랫폼에서 동일하게 작동합니다. PowerShell 세션에서 다음 명령을 실행합니다.
 
 ```powershell-interactive
-if ($PSVersionTable.PSEdition -eq 'Desktop' -and (Get-Module -Name AzureRM -ListAvailable)) {
+if (Get-Module -Name AzureRM -ListAvailable) {
     Write-Warning -Message 'Az module not installed. Having both the AzureRM and Az modules installed at the same time is not supported.'
 } else {
     Install-Module -Name Az -AllowClobber -Scope CurrentUser
@@ -69,7 +69,7 @@ Are you sure you want to install the modules from 'PSGallery'?
 시스템의 모든 사용자에 대해 모듈을 설치하려면 관리자 권한이 필요합니다. Windows에서 **관리자 권한으로 실행**을 사용하여 PowerShell 세션을 시작하거나 macOS 또는 Linux에서 `sudo` 명령을 사용합니다.
 
 ```powershell-interactive
-if ($PSVersionTable.PSEdition -eq 'Desktop' -and (Get-Module -Name AzureRM -ListAvailable)) {
+if (Get-Module -Name AzureRM -ListAvailable) {
     Write-Warning -Message 'Az module not installed. Having both the AzureRM and Az modules installed at the same time is not supported.'
 } else {
     Install-Module -Name Az -AllowClobber -Scope AllUsers
@@ -134,7 +134,7 @@ PowerShell 모듈을 업데이트하려면 모듈을 설치하는 데 사용한 
 PowerShellGet cmdlet은 MSI 패키지에서 설치된 모듈을 업데이트할 수 없습니다. MSI 패키지는 PowerShellGet을 사용하여 설치한 모듈을 업데이트하지 않습니다. PowershellGet을 사용하여 업데이트하는 데 문제가 있는 경우 **업데이트**하는 대신 **다시 설치**해야 합니다. 다시 설치는 설치와 동일한 방식으로 수행되지만 `-Force` 매개 변수를 추가해야 합니다.
 
 ```powershell
-if ($PSVersionTable.PSEdition -eq 'Desktop' -and (Get-Module -Name AzureRM -ListAvailable)) {
+if (Get-Module -Name AzureRM -ListAvailable) {
     Write-Warning -Message 'Az module not installed. Having both the AzureRM and Az modules installed at the same time is not supported.'
 } else {
     Install-Module -Name Az -AllowClobber -Force
@@ -162,18 +162,6 @@ Azure PowerShell의 버전을 제거하려면 [Azure PowerShell 모듈 제거](u
 Install-Module -Name Az -RequiredVersion 3.6.1
 # Load Az version 3.6.1
 Import-Module -Name Az -RequiredVersion 3.6.1
-```
-
-## <a name="use-multiple-repositories-with-powershellget"></a>PowerShellGet에서 여러 리포지토리 사용
-
-시스템의 PowerShellGet에 리포지토리를 추가하고 그 중 2개 이상에서 Az 모듈을 찾을 수 있는 경우 **Repository** 매개 변수가 필요합니다.
-
-```powershell-interactive
-if ($PSVersionTable.PSEdition -eq 'Desktop' -and (Get-Module -Name AzureRM -ListAvailable)) {
-    Write-Warning -Message 'Az module not installed. Having both the AzureRM and Az modules installed at the same time is not supported.'
-} else {
-    Install-Module -Name Az -Repository PSGallery -AllowClobber -Force
-}
 ```
 
 ## <a name="provide-feedback"></a>피드백 제공

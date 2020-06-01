@@ -4,12 +4,12 @@ description: AzureRM 모듈을 대체하는 새로운 Azure PowerShell 모듈 Az
 ms.date: 05/20/2020
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: a50592c65c52eab005a6531572dbbfc144a0e43a
+ms.openlocfilehash: 5bc5e1230427289ec1d61971d6cab52ce2e099ac
 ms.sourcegitcommit: 308ebca475d1c37624d7a10a2c02047594f44cdf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/22/2020
-ms.locfileid: "83778141"
+ms.locfileid: "83778111"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>새로운 Azure PowerShell Az 모듈 소개
 
@@ -18,7 +18,7 @@ ms.locfileid: "83778141"
 > [!NOTE]
 > 모든 플랫폼에서 Azure PowerShell과 함께 사용할 것을 권장하는 PowerShell 버전은 PowerShell 7.x 이상입니다.
 
-최신 Az 모듈을 사용하는 Azure PowerShell은 Windows, macOS 및 Linux를 비롯한 모든 플랫폼에서 PowerShell 6.x 이상과 함께 작동합니다. Windows에서는 PowerShell 5.1 버전과 호환됩니다.
+최신 Az 모듈을 사용하는 Azure PowerShell은 Windows, macOS 및 Linux를 비롯한 모든 플랫폼에서 PowerShell 6.2.4 이상과 함께 작동합니다. Windows에서는 PowerShell 5.1 버전과 호환됩니다.
 
 Az는 새로운 모듈이기 때문에 버전이 1.0.0으로 다시 설정되었습니다.
 
@@ -26,7 +26,7 @@ Az는 새로운 모듈이기 때문에 버전이 1.0.0으로 다시 설정되었
 
 주요 업데이트는 불편할 수 있으므로 PowerShell의 Azure와 상호 작용할 수 있는 새 cmdlet이 포함된 새 모듈 세트를 도입하기로 결정한 이유를 알 수 있도록 해야 합니다.
 
-가장 크고 중요한 변화는 PowerShell이 [PowerShell 6.x](/powershell/scripting/overview)가 도입된 이후 .NET Standard 라이브러리에 기반한 여러 플랫폼에서 사용할 수 있는 제품이 되었다는 것입니다. 저희는 모든 플랫폼에서 Azure를 지원하기 위해 최선을 다하고 있습니다. 즉, .NET Standard를 사용하고 PowerShell 6.x 이상 버전과 호환될 수 있도록 Azure PowerShell 모듈을 업데이트해야 합니다.
+가장 크고 중요한 변화는 PowerShell이 [PowerShell 6.x](/powershell/scripting/overview)가 도입된 이후 .NET Standard 라이브러리에 기반한 여러 플랫폼에서 사용할 수 있는 제품이 되었다는 것입니다. 저희는 모든 플랫폼에서 Azure를 지원하기 위해 최선을 다하고 있습니다. 즉, .NET Standard를 사용하고 PowerShell 6.2.4 이상 버전과 호환될 수 있도록 Azure PowerShell 모듈을 업데이트해야 합니다.
 기존 AzureRM 모듈을 사용하고 이러한 지원을 추가하기 위해 복잡한 변경을 도입하는 대신 Az 모듈을 만들었습니다.
 
 또한 새 모듈을 만듦으로써 엔지니어들이 cmdlet 및 모듈의 디자인과 이름을 일관적으로 유지할 수 있게 되었습니다. 이제 모든 모듈이 `Az.` 접두사로 시작하고, 모든 cmdlet에서 _동사_-`Az`_명사_ 형식을 사용합니다. 이전에는 cmdlet 이름이 더 길었을 뿐 아니라 cmdlet 이름이 일치하지 않았습니다.
@@ -40,7 +40,7 @@ Az는 새로운 모듈이기 때문에 버전이 1.0.0으로 다시 설정되었
 PowerShell의 최신 Azure 기능을 계속 유지하려면 가능한 한 빨리 Az 모듈로 마이그레이션해야 합니다. AzureRM에 대한 대체 모듈로 Az 모듈을 설치할 준비가 되지 않았으면 Az를 사용하여 실험할 수 있는 몇 가지 옵션이 있습니다.
 
 - [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview)이 있는 `PowerShell` 환경을 사용합니다. Azure Cloud Shell은 Az 모듈이 설치되고 `Enable-AzureRM` 호환성 별칭을 사용하도록 설정된 상태로 제공되는 브라우저 기반 셸 환경입니다.
-- Windows용 PowerShell 5.1과 함께 설치된 AzureRM 모듈을 유지하는 한편, PowerShell 6.x 이상용 Az 모듈을 설치합니다. Windows용 PowerShell 5.1과 PowerShell 6.x 이상은 별도의 모듈 컬렉션을 사용합니다. 지침에 따라 [최신 버전의 PowerShell](/powershell/scripting/install/installing-powershell)을 설치한 다음, PowerShell 6.x 이상에서 [Az 모듈을 설치](install-az-ps.md)합니다.
+- Windows용 PowerShell 5.1과 함께 설치된 AzureRM 모듈을 유지하는 한편, PowerShell 6.2.4 이상용 Az 모듈을 설치합니다. Windows용 PowerShell 5.1과 PowerShell 6.2.4 이상은 별도의 모듈 컬렉션을 사용합니다. 지침에 따라 [최신 버전의 PowerShell](/powershell/scripting/install/installing-powershell)을 설치한 다음, PowerShell 6.2.4 이상에서 [Az 모듈을 설치](install-az-ps.md)합니다.
 
 기존 AzureRM 설치에서 업그레이드하려면 다음을 수행합니다.
 
