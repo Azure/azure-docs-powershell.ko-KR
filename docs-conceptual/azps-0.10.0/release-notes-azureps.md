@@ -4,12 +4,12 @@ description: Azure PowerShell 모듈의 모든 최신 업데이트에 대해 알
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/10/2020
-ms.openlocfilehash: c02cfaa7f7f39393f21cec31c5115f009381b19c
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 9dd733865ba8235eed6dcef4637a63ad93999338
+ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81446056"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84121924"
 ---
 # <a name="azure-powershell-release-notes"></a>Azure PowerShell 릴리스 정보
 ## <a name="0100-preview---april-2020"></a>0.10.0-preview - 2020년 4월
@@ -29,7 +29,7 @@ ms.locfileid: "81446056"
   - Az.Websites
 * Azure Stack Hub와 함께 작동하는 az용 새 PowerShell 모듈 3개(Az.Databox, Az.IotHub 및 Az.EventHub)가 도입되었습니다.
 * AzureRM을 Az로 변경하는 것과 같은 사소한 변경을 수행하면 명령이 비교적 동일하게 유지됩니다.
-* Azure Stack Hub에 대한 PowerShell 설명서의 업데이트된 링크는 [여기](aka.ms/InstallASHPowerShell)에서 찾을 수 있습니다.
+* Azure Stack Hub에 대한 PowerShell 설명서의 업데이트된 링크는 [여기](https://aka.ms/InstallASHPowerShell)에서 찾을 수 있습니다.
 
 #### <a name="azaccounts"></a>Az.Accounts
 * ADAL에서 MSAL로 업그레이드
@@ -40,7 +40,7 @@ ms.locfileid: "81446056"
 * 로그인하지 않을 때 'Get-AzTenant'/'Get-AzDefault'/'Set-AzDefault'에서 NullReferenceException이 발생하는 문제가 해결되었습니다. [# 10292]
 
 #### <a name="azcompute"></a>Az.Compute
-* 'New-AzDiskConfig' cmdlet에 다음 매개 변수를 추가했습니다. 
+* 'New-AzDiskConfig' cmdlet에 다음 매개 변수를 추가했습니다.
     - DiskIOPSReadOnly, DiskMBpsReadOnly, MaxSharesCount, GalleryImageReference
 * 암호화 속성이 'New-AzGalleryImageVersion'cmdlet의 대상 매개 변수에 허용되었습니다.
 * 'Set-AzVmss'-Reimage 및 'Invoke-AzVMReimage'cmdlet에 대한 tempDisk 이슈가 해결되었습니다. [#11354]

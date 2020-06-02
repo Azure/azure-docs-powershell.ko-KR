@@ -4,13 +4,14 @@ description: Azure PowerShell 모듈의 모든 최신 업데이트에 대해 알
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 04/30/2019
-ms.openlocfilehash: 287e9e1f066d0768e7f572ca7f5f2ee2b78931d9
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.openlocfilehash: 34b21292ccc47bb53b6609cd637ef18338a45cd3
+ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83386972"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84121468"
 ---
+# <a name="azure-powershell-release-notes"></a>Azure PowerShell 릴리스 정보
 ## <a name="180---april-2019"></a>1.8.0 - 2019년 4월
 ### <a name="highlights-since-the-last-major-release"></a>마지막 주 릴리스 이후의 주요 사항
 * `Az` 모듈 일반 공급
@@ -48,7 +49,7 @@ ms.locfileid: "83386972"
 * 이벤트 구독 cmdlet 만들기/업데이트를 사용하기 전에 리소스를 만들어야 함을 나타내기 위해 엔드포인트의 도움말 텍스트가 업데이트되었습니다.
 
 #### <a name="azeventhub"></a>Az.EventHub
-* 네임스페이스의 NetworkRuleSet에 대한 새 cmdlet가 추가되었습니다 
+* 네임스페이스의 NetworkRuleSet에 대한 새 cmdlet가 추가되었습니다
 
 #### <a name="azhdinsight"></a>Az.HDInsight
 * 복수 명사의 cmdlet가 단수로 업데이트되었고, 복수 이름이 사용되지 않았습니다.
@@ -138,7 +139,7 @@ ms.locfileid: "83386972"
 
 #### <a name="azcompute"></a>Az.Compute
 * New-AzDiskConfig 및 New-AzSnapshotConfig에 HyperVGeneration 매개 변수 추가
-* 다른 테넌트의 갤러리 이미지를 사용하여 VM을 만들 수 있음 
+* 다른 테넌트의 갤러리 이미지를 사용하여 VM을 만들 수 있음
 
 #### <a name="azcontainerinstance"></a>Az.ContainerInstance
 * 후행 빈 인수를 추가한 New-AzContainerGroup의 -Command 매개 변수의 문제 수정
@@ -220,7 +221,7 @@ ms.locfileid: "83386972"
     - New-AzStorageAccountManagementPolicyRule
 
 #### <a name="azwebsites"></a>Az.Websites
-* 'New-AzWebApp -IncludeSourceWebAppSlots'를 사용하여 모든 슬롯의 복제를 중단하는 ARM 템플릿 버그가 수정되었습니다. 
+* 'New-AzWebApp -IncludeSourceWebAppSlots'를 사용하여 모든 슬롯의 복제를 중단하는 ARM 템플릿 버그가 수정되었습니다.
 
 ## <a name="150---march-2019"></a>1.5.0 - 2019년 3월
 #### <a name="azaccounts"></a>Az.Accounts
@@ -289,7 +290,7 @@ ms.locfileid: "83386972"
 * ADL 삭제된 항목 열거 및 복원에 대한 cmdlet 추가
 
 #### <a name="azeventhub"></a>Az.EventHub
-* Eventhub의 CaptureDescription 클래스에서 빈 보관을 건너뛰는 새 부울 속성 SkipEmptyArchives가 추가되었습니다. 
+* Eventhub의 CaptureDescription 클래스에서 빈 보관을 건너뛰는 새 부울 속성 SkipEmptyArchives가 추가되었습니다.
 
 #### <a name="azkeyvault"></a>Az.KeyVault
 * Set-AzKeyVaultSecret 태그 지정 수정
@@ -317,8 +318,8 @@ ms.locfileid: "83386972"
 
 #### <a name="azoperationalinsights"></a>Az.OperationalInsights
 * New 및 Get ApplicationInsights 데이터 소스에 대한 지원 추가
-    - 지정된 작업 영역에 대한 특정 또는 전체 ApplicationInsights 데이터 원본 가져오기를 지원하기 위한 새로운 'ApplicationInsights' 종류가 추가되었습니다. 
-    - 지정된 Application-Insights 리소스 매개 변수(구독 ID, resourceGroupName 및 이름)별로 데이터 원본을 만들기 위한 New-AzOperationalInsightsApplicationInsightsDataSource cmdlet이 추가되었습니다. 
+    - 지정된 작업 영역에 대한 특정 또는 전체 ApplicationInsights 데이터 원본 가져오기를 지원하기 위한 새로운 'ApplicationInsights' 종류가 추가되었습니다.
+    - 지정된 Application-Insights 리소스 매개 변수(구독 ID, resourceGroupName 및 이름)별로 데이터 원본을 만들기 위한 New-AzOperationalInsightsApplicationInsightsDataSource cmdlet이 추가되었습니다.
 
 #### <a name="azresources"></a>Az.Resources
 * 문제 https://github.com/Azure/azure-powershell/issues/8166 수정
@@ -349,9 +350,9 @@ Az.AnalysisServices 모듈의 전반적인 가용성.
 Az.RecoveryServices 모듈의 전반적인 가용성.
 
 #### <a name="azresources"></a>Az.Resources
-* 리소스 그룹 관련 태그 수정 
+* 리소스 그룹 관련 태그 수정
     - 자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/8166 를 참조하세요.
-* `Get-AzureRmRoleAssignment`이(가) -ErrorAction을 준수하지 않는 문제 수정 
+* `Get-AzureRmRoleAssignment`이(가) -ErrorAction을 준수하지 않는 문제 수정
     - 자세한 내용은 여기 https://github.com/Azure/azure-powershell/issues/8235 를 참조하세요.
 
 #### <a name="azsql"></a>Az.Sql
@@ -656,7 +657,7 @@ Application Gateway에서 RewriteRuleSets를 구성하는 것에 대한 지원�
 
 ### <a name="azwebsites"></a>Az.Websites
 
-* Set-AzureRmWebApp 및 Set-AzureRmWebAppSlot 
+* Set-AzureRmWebApp 및 Set-AzureRmWebAppSlot
     - Windows 및 Linux 컨테이너 응용 프로그램에 탑재할 Azure Storage 경로를 지정하기 위해 새 매개 변수(-AzureStoragePath)가 추가되었습니다. 새 cmdlet New-AzureRmWebAppAzureStoragePath의 출력을 매개 변수로 사용하여 Azure Storage 경로를 설정합니다.
 
 ## <a name="061---november-2018"></a>0.6.1 - 2018년 11월
@@ -684,7 +685,7 @@ Application Gateway에서 RewriteRuleSets를 구성하는 것에 대한 지원�
 ### <a name="aznetwork"></a>Az.Network
 * New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError cmdlet 추가
 * 지원되는 AzureFirewall 네트워크 프로토콜에 ICMP 다시 추가
-* Test-AzureRmNetworkWatcherConnectivity cmdlet을 업데이트하여 대상 ID, 주소 및 포트 유효성 검사를 추가합니다. 
+* Test-AzureRmNetworkWatcherConnectivity cmdlet을 업데이트하여 대상 ID, 주소 및 포트 유효성 검사를 추가합니다.
 * VirtualNetwork 맵의 메모리 사용 문제 해결
 
 ### <a name="azrecoveryservicesbackup"></a>Az.RecoveryServices.Backup
@@ -816,7 +817,7 @@ Application Gateway에서 RewriteRuleSets를 구성하는 것에 대한 지원�
     - Start-AzureStorageFileCopy
 * 특정 위치의 스토리지 리소스 사용을 지원하고 글로벌 스토리지 리소스 사용 가져오기는 더 이상 사용되지 않는다는 경고 메시지를 추가합니다.
     - Get-AzStorageUsage
-    
+
 #### <a name="azcognitiveservices"></a>Az.CognitiveServices
 * 기존 계정이 없는 Get-AzCognitiveServicesAccountSkus를 지원합니다.
 

@@ -5,11 +5,11 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/14/2020
 ms.openlocfilehash: caa0c2fbba8b8b7e07424481360a60f3da163e66
-ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
+ms.sourcegitcommit: cef87acc9f2a0d296bef74f526afd2e067e8146b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84122188"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84299199"
 ---
 # <a name="install-azure-powershell"></a>Azure Powershell 설치
 
