@@ -1,18 +1,15 @@
 ---
 title: Azure 컨텍스트 및 로그인 자격 증명
 description: 여러 PowerShell 세션에 걸쳐 Azure 자격 증명 및 다른 정보를 재사용하는 방법에 대해 알아보세요.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/21/2019
-ms.openlocfilehash: 0e8dd4f766307d9ab2e27e2cf8bec6bbd34f5e51
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: d93d7ee0ac88d797b04080e8b96160b4241eaf92
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "72791422"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83387125"
 ---
 # <a name="azure-powershell-context-objects"></a>Azure PowerShell 컨텍스트 개체
 

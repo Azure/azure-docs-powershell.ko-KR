@@ -1,18 +1,15 @@
 ---
 title: AzureRM에서 Azure PowerShell Az 1.0.0으로의 모든 변경 내용
 description: 이 마이그레이션 가이드에는 Azure PowerShell Az 버전 1 릴리스의 호환성이 손상되는 변경에 대한 목록이 포함되어 있습니다.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2019
-ms.openlocfilehash: e5121d61b0f5f68ff3e1f33d774e3533adfeb64f
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 6c2d681144fe561e734a247c44046e3dadb78083
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "75035781"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83387448"
 ---
 # <a name="breaking-changes-for-az-100"></a>Az 1.0.0의 호환성이 손상되는 변경
 
@@ -58,7 +55,7 @@ ms.locfileid: "75035781"
 
 ### <a name="cmdlet-noun-prefix-changes"></a>Cmdlet 명사 접두사 변경
 
-AzureRM 모듈에서 cmdlet은 `AzureRM` 또는 `Azure`를 명사 접두사로 사용했습니다.  Az는 cmdlet 이름을 간소화하고 정규화하여 모든 cmdlet에서 'Az'를 해당 cmdlet 명사 접두사로 사용합니다. 다음은 그 예입니다.
+AzureRM 모듈에서 cmdlet은 `AzureRM` 또는 `Azure`를 명사 접두사로 사용했습니다.  Az는 cmdlet 이름을 간소화하고 정규화하여 모든 cmdlet에서 'Az'를 해당 cmdlet 명사 접두사로 사용합니다. 예를 들면 다음과 같습니다.
 
 ```azurepowershell-interactive
 Get-AzureRMVM
@@ -125,7 +122,7 @@ Get-AzureRmStorageAccount | Get-AzureStorageContainer | Get-AzureStorageBlob
 
 #### <a name="migrating-requires-and-import-module-statements"></a>#Requires 및 Import-Module 문 마이그레이션
 
-`#Requires` 또는 `Import-Module`을 사용하여 AzureRM 모듈에 대한 종속성을 선언하는 스크립트는 새 모듈 이름을 사용하도록 업데이트해야 합니다. 다음은 그 예입니다.
+`#Requires` 또는 `Import-Module`을 사용하여 AzureRM 모듈에 대한 종속성을 선언하는 스크립트는 새 모듈 이름을 사용하도록 업데이트해야 합니다. 예를 들면 다음과 같습니다.
 
 ```azurepowershell-interactive
 #Requires -Module AzureRM.Compute
