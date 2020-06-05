@@ -4,12 +4,12 @@ description: 이 마이그레이션 가이드에는 Azure PowerShell 버전 6 �
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/01/2018
-ms.openlocfilehash: 629cbb31f086c569d2b8961497d0255663602f54
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.openlocfilehash: ab20dd07fb0c14d8066ad12185f8245be291e7ec
+ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387210"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84122245"
 ---
 # <a name="breaking-changes-for-microsoft-azure-powershell-600"></a>Microsoft Azure PowerShell 6.0.0의 주요 변경 내용
 
@@ -20,9 +20,9 @@ ms.locfileid: "83387210"
 ## <a name="table-of-contents"></a>목차
 
 - [일반적인 주요 변경 내용](#general-breaking-changes)
-    - [요구되는 최소 PowerShell 버전이 5.0으로 향상됨](#minimum-powershell-version-required-bumped-to-50)
-    - [기본적으로 사용되는 컨텍스트 자동 저장](#context-autosave-enabled-by-default)
-    - [태그 별칭 제거](#removal-of-tags-alias)
+  - [요구되는 최소 PowerShell 버전이 5.0으로 향상됨](#minimum-powershell-version-required-bumped-to-50)
+  - [기본적으로 사용되는 컨텍스트 자동 저장](#context-autosave-enabled-by-default)
+  - [태그 별칭 제거](#removal-of-tags-alias)
 - [AzureRM.Compute cmdlet의 주요 변경 내용](#breaking-changes-to-azurermcompute-cmdlets)
 - [AzureRM.DataLakeStore cmdlet의 주요 변경 내용](#breaking-changes-to-azurermdatalakestore-cmdlets)
 - [AzureRM.Dns cmdlet의 주요 변경 내용](#breaking-changes-to-azurermdns-cmdlets)
@@ -33,22 +33,23 @@ ms.locfileid: "83387210"
 - [AzureRM.Resources cmdlet의 주요 변경 내용](#breaking-changes-to-azurermresources-cmdlets)
 - [AzureRM.Storage cmdlet의 주요 변경 내용](#breaking-changes-to-azurermstorage-cmdlets)
 - [제거된 모듈](#removed-modules)
-    - [`AzureRM.ServerManagement`](#azurermservermanagement)
-    - [`AzureRM.SiteRecovery`](#azurermsiterecovery)
+  - [`AzureRM.ServerManagement`](#azurermservermanagement)
+  - [`AzureRM.SiteRecovery`](#azurermsiterecovery)
 
 ## <a name="general-breaking-changes"></a>일반적인 주요 변경 내용
 
 ### <a name="minimum-powershell-version-required-bumped-to-50"></a>요구되는 최소 PowerShell 버전이 5.0으로 향상됨
 
-이전에는 Azure PowerShell에서 모든 cmdlet을 실행하는 데 PowerShell 버전3.0 _이상_이 필요했습니다. 앞으로 이 요구 사항은 PowerShell 버전 5.0으로 향상됩니다. PowerShell 5.0으로 업그레이드하는 방법에 대한 자세한 내용은 [이 표](https://docs.microsoft.com/powershell/scripting/setup/installing-windows-powershell?view=powershell-6#upgrading-existing-windows-powershell)를 참조하세요.
+이전에는 Azure PowerShell에서 모든 cmdlet을 실행하는 데 PowerShell 버전3.0 _이상_이 필요했습니다. 앞으로 이 요구 사항은 PowerShell 버전 5.0으로 향상됩니다. PowerShell 5.0으로 업그레이드하는 방법에 대한 자세한 내용은 [이 표](/powershell/scripting/windows-powershell/install/installing-windows-powershell#upgrading-existing-windows-powershell)를 참조하세요.
 
 ### <a name="context-autosave-enabled-by-default"></a>기본적으로 사용되는 컨텍스트 자동 저장
 
-컨텍스트 자동 저장은 새 PowerShell 세션과 다른 PowerShell 세션 간에 사용할 수 있는 Azure 로그인 정보의 스토리지입니다. 컨텍스트 자동 저장에 대한 자세한 내용은 [이 문서](https://docs.microsoft.com/powershell/azure/context-persistence)를 참조하세요.
+컨텍스트 자동 저장은 새 PowerShell 세션과 다른 PowerShell 세션 간에 사용할 수 있는 Azure 로그인 정보의 스토리지입니다. 컨텍스트 자동 저장에 대한 자세한 내용은 [이 문서](/powershell/azure/context-persistence)를 참조하세요.
 
 이전에는 컨텍스트 자동 저장이 기본적으로 비활성화되었으므로 먼저 `Enable-AzureRmContextAutosave` cmdlet을 실행하여 컨텍스트 지속성을 설정해야 세션 간에 사용자의 Azure 인증 정보를 저장할 수 있었습니다. 앞으로 컨텍스트 자동 저장은 기본적으로 사용하도록 설정됩니다. 즉, _저장된 컨텍스트 자동 저장 설정이 없는_ 사용자는 다음에 로그인할 때 컨텍스트가 저장됩니다. 사용자는 `Disable-AzureRmContextAutosave` cmdlet을 사용하여 이 기능을 사용하지 않도록 선택할 수 있습니다.
 
-_참고_: 이전에 컨텍스트 자동 저장이 설정되지 않은 사용자 또는 컨텍스트 자동 저장이 설정된 사용자 및 기존 컨텍스트는 이 변경으로 인해 영향을 받지 않습니다.
+> [!NOTE]
+> 이전에 컨텍스트 자동 저장이 설정되지 않은 사용자 또는 컨텍스트 자동 저장이 설정된 사용자 및 기존 컨텍스트는 이 변경으로 인해 영향을 받지 않습니다.
 
 ### <a name="removal-of-tags-alias"></a>태그 별칭 제거
 
@@ -96,6 +97,7 @@ _참고_: 이전에 컨텍스트 자동 저장이 설정되지 않은 사용자 
 ## <a name="breaking-changes-to-azurermcompute-cmdlets"></a>AzureRM.Compute cmdlet의 주요 변경 내용
 
 **기타**
+
 - `PSDisk` 및 `PSSnapshot` 형식에 중첩된 SKU 이름 속성이 각각 `StandardLRS` 및 `PremiumLRS`에서 `Standard_LRS` 및 `Premium_LRS`로 변경되었습니다.
 
 ```powershell-interactive
@@ -114,12 +116,15 @@ $vm.StorageProfile.DataDisks[0].ManagedDisk.StorageAccountType   # This will now
 ```
 
 **Add-AzureRmImageDataDisk**
+
 - `StorageAccountType` 매개 변수에 허용되는 값이 각각 `StandardLRS` 및 `PremiumLRS`에서 `Standard_LRS` 및 `Premium_LRS`로 변경되었습니다.
 
 **Add-AzureRmVMDataDisk**
+
 - `StorageAccountType` 매개 변수에 허용되는 값이 각각 `StandardLRS` 및 `PremiumLRS`에서 `Standard_LRS` 및 `Premium_LRS`로 변경되었습니다.
 
 **Add-AzureRmVmssDataDisk**
+
 - `StorageAccountType` 매개 변수에 허용되는 값이 각각 `StandardLRS` 및 `PremiumLRS`에서 `Standard_LRS` 및 `Premium_LRS`로 변경되었습니다.
 
 **New-AzureRmAvailabilitySet**
@@ -254,8 +259,9 @@ Remove-AzureRmDataLakeStoreItem -Account "ContosoADL" -path /myFolder -Recurse
 - 액세스 토큰을 구성하는 개별 매개 변수는 더 이상 허용되지 않습니다. 대신 명시적 토큰 매개 변수(예: `Service` 또는 `Permissions`)를 다른 곳에 정의된 액세스 토큰 샘플에 해당하는 제네릭 `TemplateUri` 매개 변수(아마도 Storage PowerShell cmdlet을 사용하거나 Storage 설명서에 따라 수동으로 구성됨)로 바꿉니다. `ValidityPeriod` 매개 변수는 계속 유지됩니다.
 
 Azure Storage에 대한 공유 액세스 토큰 구성에 대한 자세한 내용은 다음의 각 설명서 페이지를 참조하세요.
-- [서비스 SAS 생성(영문)](https://docs.microsoft.com/rest/api/storageservices/Constructing-a-Service-SAS)
-- [계정 SAS 생성(영문)](https://docs.microsoft.com/rest/api/storageservices/constructing-an-account-sas)
+
+- [서비스 SAS 생성(영문)](/rest/api/storageservices/Constructing-a-Service-SAS)
+- [계정 SAS 생성(영문)](/rest/api/storageservices/constructing-an-account-sas)
 
 ```powershell-interactive
 # Old
@@ -282,7 +288,7 @@ $sas=Set-AzureKeyVaultManagedStorageSasDefinition -AccountName $sa.StorageAccoun
 - `all` 권한이 `PermissionsToKeys`, `PermissionsToSecrets` 및 `PermissionsToCertificates`에서 제거되었습니다.
 
 **일반**
-- `ValueFromPipelineByPropertyName` 속성이 `InputObject`에 의한 파이핑을 사용하도록 설정된 모든 cmdlet에서 제거되었습니다.  영향을 받는 cmdlet은 다음과 같습니다.
+- `ValueFromPipelineByPropertyName` 속성이 `InputObject`에 의한 파이핑을 사용하도록 설정된 모든 cmdlet에서 제거되었습니다. 영향을 받는 cmdlet은 다음과 같습니다.
     - `Add-AzureKeyVaultCertificate`
     - `Add-AzureKeyVaultCertificateContact`
     - `Add-AzureKeyVaultKey`

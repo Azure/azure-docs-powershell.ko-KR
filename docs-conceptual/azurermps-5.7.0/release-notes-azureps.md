@@ -1,21 +1,18 @@
 ---
-title: Azure PowerShell 변경 로그 | Microsoft Docs
+title: Azure PowerShell 변경 로그
 description: Azure PowerShell에 대한 최신 릴리스의 변경 내용입니다.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: ''
 ms.date: 2/20/2018
-ms.openlocfilehash: 61ab0f91c3d6fffdbffd336fa0d6ed9b0ab8f6ec
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: cf8d1fc76feb07e075339255de63e09f59187dc6
+ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "68863288"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84122063"
 ---
-# <a name="release-notes"></a>릴리스 정보
+# <a name="azure-powershell-release-notes"></a>Azure PowerShell 릴리스 정보
 
 [!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
 
@@ -23,7 +20,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 
 ---
 
-# <a name="azure-powershell-570"></a>Azure PowerShell 5.7.0
+## <a name="azure-powershell-570"></a>Azure PowerShell 5.7.0
 
 Azure PowerShell 5.7.0 설치 관리자: [링크](https://github.com/Azure/azure-powershell/releases/download/v5.7.0-April2018/azure-powershell.5.7.0.msi)
 
@@ -41,7 +38,7 @@ Install-Module -Name AzureRM -Repository PSGallery -Force
 Update-Module -Name AzureRM
 ```
 
-## <a name="changes-since-last-release"></a>마지막 릴리스 이후 변경 내용
+### <a name="changes-since-last-release"></a>마지막 릴리스 이후 변경 내용
 
 #### <a name="general"></a>일반
 * 최신 버전의 Azure ClientRuntime으로 업데이트됨
@@ -149,7 +146,7 @@ Update-Module -Name AzureRM
     - Update-AzureRmRecoveryServicesAsrProtectionDirection
 
 #### <a name="azurermstorage"></a>AzureRM.Storage
-* new 및 set Storage Account cmdlet에서 Encryption at Rest는 기본적으로 활성화되며 비활성화할 수 없으므로 EnableEncryptionService 및 DisableEncryptionService 같은 매개 변수가 사용되지 않음
+* new 및 set Storage Account cmdlet에서 다음 매개 변수는 사용되지 않습니다. Encryption at Rest는 기본적으로 활성화되며 비활성화할 수 없으므로 EnableEncryptionService 및 DisableEncryptionService
     - New-AzureRmStorageAccount
     - Set-AzureRmStorageAccount
 
@@ -184,9 +181,9 @@ Update-Module -Name AzureRM
 * 'New-AzureRmVMSS'가 자세한 정보 표시 모드로 연결 문자열 인쇄
 * 'New-AzureRmVmss'가 공용 IP 주소, 부하 분산 규칙, 인바운드 NAT 규칙 지원
 * WriteAccelerator 기능
-    - WriteAccelerator 스위치 매개 변수가 다음 cmdlets에 추가됨: Set-AzureRmVMOSDisk Set-AzureRmVMDataDisk Add-AzureRmVMDataDisk Add-AzureRmVmssDataDisk
-    - OsDiskWriteAccelerator 스위치 매개 변수가 다음 cmdlet에 추가됨:   Set-AzureRmVmssStorageProfile.
-    - OsDiskWriteAccelerator 부울 매개 변수가 다음 cmdlet에 추가됨:     Update-AzureRmVM     Update-AzureRmVmss
+    - 새 스위치 매개 변수인 WriteAccelerator가 추가된 cmdlet은 다음과 같습니다. Set-AzureRmVMOSDisk Set-AzureRmVMDataDisk Add-AzureRmVMDataDisk Add-AzureRmVmssDataDisk
+    - 새 스위치 매개 변수인 OsDiskWriteAccelerator가 추가된 cmdlet은 다음과 같습니다.     Set-AzureRmVmssStorageProfile.
+    - 새 부울 매개 변수인 OsDiskWriteAccelerator가 추가된 cmdlet은 다음과 같습니다.     Update-AzureRmVM     Update-AzureRmVmss
 
 #### <a name="azurermdatafactories"></a>AzureRM.DataFactories
 * 일부 암호화 작업에 대해 의미 없는 오류를 일으키는 자격 증명 암호화 문제 해결
@@ -275,9 +272,9 @@ Update-Module -Name AzureRM
     - Remove-AzureRmNetworkWatcherConnectionMonitor
 * 사용되지 않는 예제를 제거하기 위해 Set-AzureRmApplicationGatewayBackendAddressPool 설명서가 업데이트됨
 * Application Gateway에 EnableHttp2 플래그가 추가됨
-    - New-AzureRmApplicationGateway가 업데이트됨: 선택적 매개 변수 -EnableHttp2가 추가됨
+    - 업데이트된 New-AzureRmApplicationGateway: 선택적 매개 변수 추가됨 -EnableHttp2
 * PublicIpAddress에 IpTags 추가
-    - New-AzureRmPublicIpAddress가 업데이트됨: IpTags가 추가됨
+    - 업데이트된 New-AzureRmPublicIpAddress: IpTags 추가됨
     - Iptag를 추가하는 New-AzureRmPublicIpTag
 * RouteTable 및 effectiveRoute에 DisableBgpRoutePropagation 속성을 추가합니다.
 
@@ -286,7 +283,7 @@ Update-Module -Name AzureRM
 * Register-AzureRmResourceProvider: 문서에 누락된 예제가 추가됨
 
 #### <a name="azurermstorage"></a>AzureRM.Storage
-* new 및 set Storage Account cmdlet에서 Encryption at Rest는 기본적으로 활성화되며 비활성화할 수 없으므로 EnableEncryptionService 및 DisableEncryptionService 같은 매개 변수가 사용되지 않음
+* new 및 set Storage Account cmdlet에서 다음 매개 변수는 사용되지 않습니다. Encryption at Rest는 기본적으로 활성화되며 비활성화할 수 없으므로 EnableEncryptionService 및 DisableEncryptionService
     - New-AzureRmStorageAccount
     - Set-AzureRmStorageAccount
 
@@ -493,7 +490,7 @@ Update-Module -Name AzureRM
 * 유효한 위치를 통해 탭 완성 기능을 허용하는 -Location 매개 변수에 Location Completer를 추가했습니다.
 * 현재 구독에서 리소스 그룹을 통해 탭 완성 기능을 허용하는 -ResourceGroup 매개 변수에 ResourceGroup Completer를 추가했습니다.
 * 장기 실행 KeyVault cmdlet에 대한 -AsJob 지원이 추가되었습니다. 선택된 cmdlet을 백그라운드에서 실행하고 작업을 반환하여 진행률을 추적 및 제어할 수 있습니다.
-  * 영향을 받는 cmdlet은 Remove-AzureRmKeyVault입니다.
+  * 영향을 받는 cmdlet은 다음과 같습니다. Remove-AzureRmKeyVault
 * AAD 필터가 UPN 설정이 아닌 SPN을 제공된 UPN으로 설정하는 Set-AzureRmKeyVaultAccessPolicy에서 버그를 수정했습니다.
   - 보다 자세한 내용은 다음 문제를 참조하세요. https://github.com/Azure/azure-powershell/issues/5201
 
@@ -625,7 +622,7 @@ Update-Module -Name AzureRM
   - Get-AzureRmComputeResourceSku가 영역 정보를 보여 줍니다.
   - 문제 https://github.com/Azure/azure-powershell/issues/5038 의 수정을 위해 Disable-AzureRmVmssDiskEncryption 업데이트
   - 장기 실행 Compute cmdlet에 대한 -AsJob 지원이 추가되었습니다. 선택된 cmdlet을 백그라운드에서 실행하고 작업을 반환하여 진행률을 추적 및 제어할 수 있습니다.
-    - 영향을 받는 cmdlet은 Virtual Machines 및 Virtual Machine Scale Sets에 대한 New-, Update-, Set-, Remove-, Start-, Restart-, Stop- cmdlet입니다.
+    - 영향을 받는 cmdlet은 다음과 같습니다. Virtual Machines 및 Virtual Machine Scale Sets에 대한 New-, Update-, Set-, Remove-, Start-, Restart-, Stop- cmdlet입니다.
     - 단순한 매개 변수 집합이 New-AzureRmVM에 추가되었습니다. 따라서 스마트 기본값을 사용하여 Virtual Machine과 필요한 모든 리소스가 만들어집니다.
 * ContainerInstance
   - Azure Container Instance SDK 2017-10-01 적용
@@ -639,20 +636,20 @@ Update-Module -Name AzureRM
 * DataFactories
     - 이제 자격 증명 암호화 기능은 "원격 액세스"가 사용된 경우(네트워크 사용) 및 "원격 액세스"가 사용되지 않는 경우(로컬 컴퓨터) 모두에서 작동합니다.
 * DataFactoryV2
-  - 두 개의 새로운 cmdlet 추가: Update-AzureRmDataFactoryV2 및 Stop-AzureRmDataFactoryV2PipelineRun
+  - 두 개의 새로운 cmdlet이 추가되었습니다. Update-AzureRmDataFactoryV2 및 Stop-AzureRmDataFactoryV2PipelineRun
 * DataLakeAnalytics
   - Submit-AzureRmDataLakeAnalyticsJob에 ScriptParameter라는 매개 변수가 추가됨
     - ScriptParameter에 대한 자세한 정보는 Submit-AzureRmDataLakeAnalyticsJob에서 Get-Help를 사용하여 확인할 수 있습니다.
   - New-AzureRmDataLakeAnalyticsAccount의 경우 MaxDegreeOfParallelism 매개 변수가 MaxAnalyticsUnits로 변경됨
-    - MaxAnalyticsUnits: MaxDegreeOfParallelism 매개 변수에 대한 별칭이 추가됨
+    - MaxAnalyticsUnits 매개 변수에 대한 별칭이 추가됨: MaxDegreeOfParallelism
   - New-AzureRmDataLakeAnalyticsComputePolicy의 경우 MaxDegreeOfParallelismPerJob 매개 변수가 MaxAnalyticsUnitsPerJob으로 변경됨
-    - MaxAnalyticsUnitsPerJob: MaxDegreeOfParallelismPerJob 매개 변수에 대한 별칭이 추가됨
+    - MaxAnalyticsUnitsPerJob 매개 변수에 대한 별칭이 추가됨: MaxDegreeOfParallelismPerJob
   - Set-AzureRmDataLakeAnalyticsAccount의 경우 MaxDegreeOfParallelism 매개 변수가 MaxAnalyticsUnits로 변경됨
-    - MaxAnalyticsUnits: MaxDegreeOfParallelism 매개 변수에 대한 별칭이 추가됨
+    - MaxAnalyticsUnits 매개 변수에 대한 별칭이 추가됨: MaxDegreeOfParallelism
   - Submit-AzureRmDataLakeAnalyticsJob의 경우 DegreeOfParallelism 매개 변수가 AnalyticsUnits로 변경됨
-    - AnalyticsUnits: DegreeOfParallelism 매개 변수에 대한 별칭이 추가됨
+    - AnalyticsUnits 매개 변수에 대한 별칭이 추가됨: DegreeOfParallelism
   - Update-AzureRmDataLakeAnalyticsComputePolicy의 경우 MaxDegreeOfParallelismPerJob 매개 변수가 MaxAnalyticsUnitsPerJob으로 변경됨
-    - MaxAnalyticsUnitsPerJob: MaxDegreeOfParallelismPerJob 매개 변수에 대한 별칭이 추가됨
+    - MaxAnalyticsUnitsPerJob 매개 변수에 대한 별칭이 추가됨: MaxDegreeOfParallelismPerJob
 * MachineLearningCompute
   - Set-AzureRmMlOpCluster 추가
     - 클러스터의 에이전트 개수 또는 SSL 구성 업데이트
@@ -723,7 +720,7 @@ Update-Module -Name AzureRM
   - AzureRM.StreamAnalytics
 
 ## <a name="2017118---version-500"></a>2017.11.8 - 버전 5.0.0
-* 참고: 이는 중요 변경 릴리스입니다. 중요 변경 사항의 전체 목록은 마이그레이션 가이드(https://aka.ms/azps-migration-guide) )를 참조하세요.
+* 참고:  이는 호환성이 손상되는 변경 릴리스입니다. 중요 변경 사항의 전체 목록은 마이그레이션 가이드(https://aka.ms/azps-migration-guide) )를 참조하세요.
 * AzureRM의 모든 cmdlet는 이제 온라인 도움말을 지원합니다.
   - -Online 매개 변수와 함께 Get-Help를 실행하여 기본 인터넷 브라우저에서 온라인 도움말을 엽니다.
 * AnalysisServices
@@ -793,17 +790,17 @@ Update-Module -Name AzureRM
 * DataLakeAnalytics
   * 이 릴리스의 DataLakeAnalytics에 대한 중요 변경 사항은 마이그레이션 가이드를 참조하세요.
   * Get-AzureRmDataLakeAnalyticsAccount의 두 가지 OutputTypes 중 하나를 변경
-    - 목록\<DataLakeAnalyticsAccount> 목록\<PSDataLakeAnalyticsAccountBasic>으로
+    - 목록\<DataLakeAnalyticsAccount>에서 목록\<PSDataLakeAnalyticsAccountBasic>으로
     - PSDataLakeAnalyticsAccountBasic의 속성은 DataLakeAnalyticsAccount 속성의 엄격한 하위 집합입니다.
     - DataLakeAnalyticsAccount에 있는 추가 속성은 서비스에 의해 반환되지 않습니다.  따라서 이 변경 사항은 이를 정확하게 반영합니다. 이러한 추가 속성은 PSDataLakeAnalyticsAccountBasic에 여전히 있지만, Obsolete로 태그가 지정됩니다.
   * Get-AzureRmDataLakeAnalyticsJob의 두 가지 OutputTypes 중 하나를 변경
-    - 목록\<JobInformation> 목록\<PSJobInformationBasic>으로
+    - 목록\<JobInformation>에서 목록\<PSJobInformationBasic>으로
     - PSJobInformationBasic 속성은 JobInformation 속성의 엄격한 하위 집합입니다.
     - JobInformation에 있는 추가 속성은 서비스에 의해 반환되지 않습니다.  따라서 이 변경 사항은 이를 정확하게 반영합니다. 이러한 추가 속성은 PSJobInformationBasic에 여전히 있지만, Obsolete로 태그가 지정됩니다.
 * DataLakeStore
   * 이 릴리스의 DataLakeStore에 대한 중요 변경 사항은 마이그레이션 가이드를 참조하세요.
   * Get-AzureRmDataLakeStoreAccount의 두 가지 OutputTypes 중 하나를 변경
-    - 목록\<PSDataLakeStoreAccount> 목록\<PSDataLakeStoreAccountBasic>으로
+    - 목록\<PSDataLakeStoreAccount>에서 목록\<PSDataLakeStoreAccountBasic>으로
     - PSDataLakeStoreAccountBasic의 속성은 PSDataLakeStoreAccount 속성의 엄격한 하위 집합입니다.
     - PSDataLakeStoreAccount에 있는 추가 속성은 서비스에 의해 반환되지 않습니다.  따라서 이 변경 사항은 이를 정확하게 반영합니다. 이러한 추가 속성은 PSDataLakeStoreAccountBasic에 여전히 있지만, Obsolete로 태그가 지정됩니다.
 * Dns

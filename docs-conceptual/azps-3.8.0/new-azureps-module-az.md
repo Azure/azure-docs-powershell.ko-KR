@@ -4,12 +4,12 @@ description: AzureRM 모듈을 대체하는 새로운 Azure PowerShell 모듈 Az
 ms.date: 05/20/2020
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: a50592c65c52eab005a6531572dbbfc144a0e43a
-ms.sourcegitcommit: 308ebca475d1c37624d7a10a2c02047594f44cdf
+ms.openlocfilehash: 1626bb4bee775ac173d078cf67934ee5a22632c4
+ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83778141"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84122136"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>새로운 Azure PowerShell Az 모듈 소개
 
@@ -26,8 +26,8 @@ Az는 새로운 모듈이기 때문에 버전이 1.0.0으로 다시 설정되었
 
 주요 업데이트는 불편할 수 있으므로 PowerShell의 Azure와 상호 작용할 수 있는 새 cmdlet이 포함된 새 모듈 세트를 도입하기로 결정한 이유를 알 수 있도록 해야 합니다.
 
-가장 크고 중요한 변화는 PowerShell이 [PowerShell 6.x](/powershell/scripting/overview)가 도입된 이후 .NET Standard 라이브러리에 기반한 여러 플랫폼에서 사용할 수 있는 제품이 되었다는 것입니다. 저희는 모든 플랫폼에서 Azure를 지원하기 위해 최선을 다하고 있습니다. 즉, .NET Standard를 사용하고 PowerShell 6.x 이상 버전과 호환될 수 있도록 Azure PowerShell 모듈을 업데이트해야 합니다.
-기존 AzureRM 모듈을 사용하고 이러한 지원을 추가하기 위해 복잡한 변경을 도입하는 대신 Az 모듈을 만들었습니다.
+가장 크고 중요한 변화는 PowerShell이 [PowerShell](/powershell/scripting/overview)이 도입된 이후 .NET 표준 라이브러리에 기반한 여러 플랫폼에서 사용할 수 있는 제품이 되었다는 것입니다.
+Azure 지원을 모든 플랫폼에 제공하기 위해 노력하고 있습니다. 즉 .NET Standard를 사용하고 PowerShell Core와 호환되도록 Azure PowerShell 모듈을 업데이트해야 합니다. 기존 AzureRM 모듈을 사용하고 이러한 지원을 추가하기 위해 복잡한 변경을 도입하는 대신 Az 모듈을 만들었습니다.
 
 또한 새 모듈을 만듦으로써 엔지니어들이 cmdlet 및 모듈의 디자인과 이름을 일관적으로 유지할 수 있게 되었습니다. 이제 모든 모듈이 `Az.` 접두사로 시작하고, 모든 cmdlet에서 _동사_-`Az`_명사_ 형식을 사용합니다. 이전에는 cmdlet 이름이 더 길었을 뿐 아니라 cmdlet 이름이 일치하지 않았습니다.
 
@@ -46,12 +46,12 @@ PowerShell의 최신 Azure 기능을 계속 유지하려면 가능한 한 빨리
 
 1. [Azure PowerShell AzureRM 모듈 제거](/powershell/azure/uninstall-az-ps#uninstall-the-azurerm-module)
 2. [Azure PowerShell Az 모듈 설치](install-az-ps.md)
-3. __선택 사항__: 새 명령 집합을 습득하면서 [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias)를 사용하여 AzureRM cmdlet에 대한 별칭을 추가할 수 있는 호환성 모드를 사용하도록 설정합니다. 자세한 내용은 다음 섹션 또는 [AzureRM에서 Az로 마이그레이션 시작](migrate-from-azurerm-to-az.md)을 참조하세요.
+3. **선택 사항**: 새 명령 집합을 습득하면서 [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias)를 사용하여 AzureRM cmdlet에 대한 별칭을 추가할 수 있는 호환성 모드를 사용하도록 설정합니다. 자세한 내용은 다음 섹션 또는 [AzureRM에서 Az로 마이그레이션 시작](migrate-from-azurerm-to-az.md)을 참조하세요.
 
 ## <a name="migrate-existing-scripts-to-az"></a>기존 스크립트를 Az로 마이그레이션
 
 새로운 cmdlet 이름은 쉽게 익힐 수 있도록 되었습니다. cmdlet 이름에 `AzureRm` 또는 `Azure`를 사용하는 대신 `Az`를 사용합니다. 예를 들어, 이전 명령 `New-AzureRMVm`은 `New-AzVm`이 됩니다.
-마이그레이션은 단순히 새 cmdlet 이름을 습득하는 데서 그치지 않습니다. 이름이 바뀐 모듈, 매개 변수 및 기타 중요한 변경이 있습니다.
+마이그레이션은 단순히 새 cmdlet 이름을 습득하는 것 이상입니다. 이름이 바뀐 모듈, 매개 변수 및 기타 중요한 변경이 있습니다.
 
 AzureRM에서 Az로 마이그레이션하는 프로세스를 도와주기 위해 다음과 같이 여러 리소스가 준비되어 있습니다.
 
