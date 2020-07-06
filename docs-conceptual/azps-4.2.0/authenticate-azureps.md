@@ -5,11 +5,11 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/18/2020
 ms.openlocfilehash: f82a9e373806f2f071ae59f6aee7e0a0bd4ea13d
-ms.sourcegitcommit: e8dc404c9c09b9f6531ea4f85187598e32060014
+ms.sourcegitcommit: 5523170e571fbd1dc93bd0fa4223aba3b324d3b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2020
-ms.locfileid: "85119966"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85363334"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Azure PowerShell로 로그인
 
