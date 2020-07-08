@@ -1,9 +1,0 @@
-- name: Azure Stack PowerShell
-  href: overview.md
-  items:
-    - name: 설치
-      href: 'https://docs.microsoft.com/azure/azure-stack/azure-stack-powershell-install?toc=/powershell/azure/azure-stack/toc.json'
-    - name: 연결 - 클라우드 운영자
-      href: 'https://docs.microsoft.com/azure/azure-stack/azure-stack-powershell-configure-admin'
-    - name: 연결 - 사용자
-      href: 'https://docs.microsoft.com/azure/azure-stack/user/azure-stack-powershell-configure-user'
