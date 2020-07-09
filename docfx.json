@@ -154,7 +154,7 @@
                 "azuredmps-*/**/*.md": "deoletim",
                 "azurermps-*/**/*.md": "jasonsha",
                 "azuresmps-*/**/*.md": "jasonsha",
-                "azurestackps-*/**/*.md": "jeffgilb",
+                "azurestackps-*/**/*.md": "mattbriggs",
                 "docs-conceptual/azps-*/*.md": "mirobb",
                 "docs-conceptual/azuredmps-*/*.md": "deoletim",
                 "docs-conceptual/azurermps-*/*.md": "mirobb",
@@ -167,7 +167,7 @@
                 "azuredmps-*/**/*.md": "deveshguha",
                 "azurermps-*/**/*.md": "JasonRShaver",
                 "azuresmps-*/**/*.md": "JasonRShaver",
-                "azurestackps-*/**/*.md": "jeffgilb",
+                "azurestackps-*/**/*.md": "mattbriggs",
                 "docs-conceptual/azps-*/*.md": "mikefrobbins",
                 "docs-conceptual/azuredmps-*/*.md": "deveshguha",
                 "docs-conceptual/azurermps-*/*.md": "mikefrobbins",
@@ -287,6 +287,11 @@
                 "azps-4.3.0/**/*.md": "6/19/2020",
                 "azps-0.10.0/**/*.md": "4/14/2020",
                 "azuresmps-4.0.0/**/*.md": "09/11/2018"
+            },
+            "ms.custom": {
+                "docs-conceptual/azps-*/*.md": "devx-track-azurepowershell",
+                "docs-conceptual/azurermps-*/*.md": "devx-track-azurepowershell",
+                "docs-conceptual/azuresmps-*/*.md": "devx-track-azurepowershell"
             },
             "feedback_system": {
                 "azurermps-2.5.0/**/*": "None",
