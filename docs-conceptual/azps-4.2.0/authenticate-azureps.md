@@ -3,19 +3,19 @@ title: Azure PowerShell로 로그인
 description: Azure PowerShell 사용자나 서비스 주체로 로그인 또는 Azure 리소스에 대한 관리 ID로 로그인하는 방법.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/18/2020
-ms.openlocfilehash: f82a9e373806f2f071ae59f6aee7e0a0bd4ea13d
-ms.sourcegitcommit: 5523170e571fbd1dc93bd0fa4223aba3b324d3b0
+ms.date: 7/7/2020
+ms.openlocfilehash: 7ac723202ca9e81c8ef4cba5e844d46b98ba4b67
+ms.sourcegitcommit: 7b368a9be1cea2ac4e7d269e1a51529271269a42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85363334"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86098815"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Azure PowerShell로 로그인
 
 Azure PowerShell에서는 여러 인증 방법을 지원합니다. 시작하는 가장 쉬운 방법은 [Azure Cloud Shell](/azure/cloud-shell/overview)을 사용하는 것으로서, 자동으로 로그인합니다. 로컬 설치에서는, 브라우저를 통해 대화형으로 로그인할 수 있습니다. 자동화 스크립트를 작성할 때 권장되는 방법은 필요한 권한이 있는 [서비스 주체](create-azure-service-principal-azureps.md)를 사용하는 것입니다. 사용 사례에 대해 로그인 권한을 가능한 한 많이 제한하면 Azure 리소스를 안전하게 유지할 수 있습니다.
 
-로그인한 후 명령은 기본 구독에 대해 실행됩니다. 세션에 대한 활성 구독을 변경하려면 [Set-AzContext](/powershell/module/az.accounts/set-azcontext) cmdlet을 사용합니다. Azure PowerShell로 로그인할 때 사용되는 기본 구독을 변경하려면 [Set-AzDefault](/powershell/module/az.accounts/set-azdefault)를 사용합니다.
+처음에 두 개 이상의 구독에 액세스할 수 있는 경우 첫 번째 구독에 로그인됩니다. 명령은 기본적으로 이 구독에 대해 실행됩니다. 세션에 대한 활성 구독을 변경하려면 [Set-AzContext](/powershell/module/az.accounts/set-azcontext) cmdlet을 사용합니다. 활성 구독을 변경하고 동일한 시스템의 세션 간에 지속되도록 하려면 [AzContext](/powershell/module/az.accounts/select-azcontext) cmdlet을 사용합니다.
 
 > [!IMPORTANT]
 > 로그인한 상태를 유지하는 한, 여러 PowerShell 세션에서 자격 증명을 공유할 수 있습니다.
