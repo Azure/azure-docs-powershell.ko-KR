@@ -4,12 +4,12 @@ description: PowerShellGet으로 Azure PowerShell을 설치 하는 방법
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 11/16/2018
-ms.openlocfilehash: b04d4070e420f2d1e64f233eda6b3e250f8bb68c
-ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
+ms.openlocfilehash: 2615d1efef05c892552d7ccbea6fcff37f871039
+ms.sourcegitcommit: c19bf5a96a82a56e2b1fa9ab5e106690f850cedf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84122044"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87177461"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>PowerShellGet으로 Azure PowerShell을 설치
 
@@ -33,7 +33,7 @@ $PSVersionTable.PSVersion
 만료된 버전을 사용하는 경우 [기존 Windows PowerShell 업그레이드](/powershell/scripting/windows-powershell/install/installing-windows-powershell#upgrading-existing-windows-powershell)를 참조합니다.
 
 > [!IMPORTANT]
-> 이 문서에서 설명된 모듈인 AzureRM에서는 .NET Framework를 사용합니다. 이렇게 하면 .NET Core를 사용하는 PowerShell 6.0과 호환되지 않습니다. PowerShell 6.0을 사용하는 경우, [macOS 및 Linux에 대한 설치 지침](install-azurermps-maclinux.md)을 따릅니다.
+> 이 문서에서 설명된 모듈인 AzureRM에서는 .NET Framework를 사용합니다. 이렇게 하면 .NET Core를 사용하는 PowerShell 6.0과 호환되지 않습니다. PowerShell 6.0을 사용하는 경우, [macOS 및 Linux에 대한 설치 지침](/powershell/azure/install-az-ps)을 따릅니다.
 
 ## <a name="install-the-azure-powershell-module"></a>Azure PowerShell 모듈 설치
 
