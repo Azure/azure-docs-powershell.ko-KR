@@ -4,12 +4,12 @@ description: 설치 및 구성에 대한 링크를 포함한 Azure PowerShell �
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 12/20/2018
-ms.openlocfilehash: 9d1b9c35829facc34cd7c252cb450fcce18685b2
-ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
+ms.openlocfilehash: 0ebbb504111c54fb42415f4084ba6828d47958d2
+ms.sourcegitcommit: 7546b8bcca0a6381248ecbb9d9bd6b2ef34b70e6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84122219"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88584410"
 ---
 # <a name="overview-of-azure-powershell"></a>Azure PowerShell 개요
 
@@ -21,8 +21,8 @@ Azure PowerShell은 Azure 리소스를 관리하기 위해 [Azure Resource Manag
 
 다음 샘플을 통해 Azure PowerShell로 일반 시나리오를 수행하는 방법을 배울 수 있습니다.
 
-- [Linux Virtual Machines](/azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=/powershell/azure/toc.json)
-- [Windows Virtual Machines](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=/powershell/azure/toc.json)
+- [Linux Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/linux/powershell-samples)
+- [Windows Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/windows/powershell-samples)
 - [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
 - [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
 
