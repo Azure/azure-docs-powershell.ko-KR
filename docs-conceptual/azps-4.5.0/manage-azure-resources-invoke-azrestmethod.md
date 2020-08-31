@@ -3,13 +3,13 @@ title: Invoke-AzRestMethod를 사용하여 Azure 리소스 관리
 description: Azure PowerShell을 사용하여 Invoke-AzRestMethod cmdlet을 사용하여 리소스를 관리하는 방법입니다.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 08/17/2020
-ms.openlocfilehash: 380fd818a3af2474ce192c7a1da8a6798795cf21
-ms.sourcegitcommit: bd7edc4d48b6a8a8bec864edc876e16af0a49505
+ms.date: 08/24/2020
+ms.openlocfilehash: 6a267e28ec8e2540ce7d6431ffd9aab0b2090c6a
+ms.sourcegitcommit: b94a3f00c147144b0ef7f8cf8d0f151e04674b89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512992"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88821366"
 ---
 # <a name="manage-azure-resources-with-invoke-azrestmethod"></a>Invoke-AzRestMethod를 사용하여 Azure 리소스 관리
 
@@ -19,8 +19,7 @@ ms.locfileid: "88512992"
 
 ## <a name="how-to-use-invoke-azrestmethod"></a>Invoke-AzRestMethod 사용 방법
 
-예를 들어, 특정 네트워크에 대해서만 ACR(Azure Container Registry) 액세스를 허용하거나 공용 액세스를 거부할 수 있습니다. 이 기능은 아직 [Az.ContainerRegistry PowerShell 모듈](/powershell/module/Az.ContainerRegistry/)에서 사용할 수 없습니다.
-그러나 `Invoke-AzRestMethod`를 사용하여 임시로 관리할 수 있습니다.
+예를 들어, 특정 네트워크에 대해서만 ACR(Azure Container Registry) 액세스를 허용하거나 공용 액세스를 거부할 수 있습니다. Az PowerShell 모듈 버전 4.5.0부터 이 기능은 [Az.ContainerRegistry PowerShell 모듈](/powershell/module/Az.ContainerRegistry/)에서 아직 사용할 수 없습니다. 그러나 `Invoke-AzRestMethod`를 사용하여 임시로 관리할 수 있습니다.
 
 ## <a name="using-invoke-azrestmethod-with-get-operations"></a>GET 작업으로 Invoke-AzRestMethod 사용
 
@@ -51,7 +50,7 @@ ACR의 2019-12-01 미리 보기 버전에 대한 정의는 [azure-rest-api-specs
 
 ## <a name="using-invoke-azrestmethod-with-patch-operations"></a>PATCH 작업과 함께 Invoke-AzRestMethod 사용
 
-Invoke-AzRestMethod cmdlet을 사용하여 `myresourcegroup` 리소스 그룹에서 `myacr`이라는 기존 ACR에 대한 공용 액세스를 사용하지 않도록 설정할 수 있습니다.
+`Invoke-AzRestMethod` cmdlet을 사용하여 `myresourcegroup` 리소스 그룹에서 `myacr`이라는 기존 ACR에 대한 공용 액세스를 사용하지 않도록 설정할 수 있습니다.
 
 공용 네트워크 액세스를 사용하지 않도록 설정하려면 다음 예와 같이 `publicNetwokAccess` 매개 변수의 값을 변경하는 API에 **PATCH** 호출을 수행해야 합니다.
 
@@ -100,11 +99,11 @@ Invoke-AzRestMethod @specificIpParams
 
 ## <a name="comparison-to-get-azresource-new-azresource-and-remove-azresource"></a>Get-AzResource, New-AzResource 및 Remove-AzResource의 비교
 
-`*-AzResource` cmdlet을 사용하면 리소스 유형, API 버전 및 업데이트할 속성을 지정하여 Azure에 대한 REST API 호출을 사용자 지정할 수 있습니다. 그러나 속성은 만들 때 쉽게 복잡해질 수 있는 `PSObject`이어야 합니다.
+`*-AzResource` cmdlet을 사용하면 리소스 유형, API 버전 및 업데이트할 속성을 지정하여 Azure에 대한 REST API 호출을 사용자 지정할 수 있습니다. 하지만 먼저 속성을 `PSObject`로 만들어야 합니다. 이 프로세스를 통해 복잡성 수준을 더 추가하고 쉽게 복잡해질 수 있습니다.
 
-`Invoke-AzRestMethod`는 Azure 리소스를 보다 간편하게 관리할 수 있는 방법을 제공합니다. 이전 예에서는 페이로드에 JSON 문자열이 있음을 확인할 수 있습니다. JSON과 `PSObjects` 사이를 어렵지 않게 변환할 수 있습니다.
+`Invoke-AzRestMethod`는 Azure 리소스를 보다 간편하게 관리할 수 있는 방법을 제공합니다. 이전 예제와 같이, JSON 문자열을 빌드하고 이 문자열을 사용하면 `PSObjects`를 미리 만들지 않고도 REST API 호출을 사용자 지정할 수 있습니다.
 
-`*-AzResource` cmdlet에 대해 이미 잘 알고 있는 경우 계속 사용할 수 있습니다. 지원을 중지할 계획은 없습니다. `Invoke-AzRestMethod`와 함께 새 cmdlet을 제품군에 추가했습니다.
+`*-AzResource` cmdlet에 대해 이미 잘 알고 있는 경우 계속 사용할 수 있습니다. 지원을 중지할 계획은 없습니다. `Invoke-AzRestMethod`를 사용하여 새 cmdlet을 도구 키트에 추가했습니다.
 
 ## <a name="see-also"></a>관련 항목
 
