@@ -7,24 +7,31 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: azurepowershell
-  ms.date: 02/08/2018
-  ms.author: sewhee
-  author: sdwheeler
-  manager: carmonm
+  ms.date: 12/13/2018
+  ms.author: mirobb
+  author: mikefrobbins
+  manager: barbkess
   ms.devlang: azure-powershell
   ms.prod: powershell
   ms.technology: azure-powershell
-  ms.service: virtual-machines
+  ms.topic: tutorial
   clicktale: true
-  ms.openlocfilehash: b71557b2280d0fbfded2f626a54480a0606e126d
+  ms.openlocfilehash: b8b66edda328eb108d0d8d6f7b5cec3df145ab16
   ms.sourcegitcommit: c10563f2c4753ee6e1481e52768b05d19c812b8c
   ms.translationtype: HT
   ms.contentlocale: ko-KR
   ms.lasthandoff: 08/29/2020
-  ms.locfileid: "89098183"
+  ms.locfileid: "89099606"
 items:
 - durationInMinutes: 1
-  content: "\n[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]\n\n이 자습서에서는 Azure PowerShell에서 가상 머신을 설정하는 방법과 관련된 모든 단계를 알아봅니다. 또한 이 자습서에는 출력 쿼리, Azure 리소스 재사용 및 리소스 정리가 포함됩니다.\n\n이 자습서는 Azure Cloud Shell을 통해 제공되는 대화형 환경을 사용해서 완료할 수 있으며, [Azure PowerShell을 로컬에서 설치](install-azurerm-ps.md)할 수도 있습니다.\n\n__Ctrl+Shift+V__(macOS의 경우 __Cmd+Shift+V__)를 사용하여 Azure Cloud Shell에 자습서 텍스트를 붙여넣습니다."
+  content: >-
+    이 자습서에서는 Azure PowerShell에서 가상 머신을 설정하는 방법과 관련된 모든 단계를 알아봅니다. 또한 이 자습서에는 출력 쿼리, Azure 리소스 재사용 및 리소스 정리가 포함됩니다.
+
+
+    이 자습서는 Azure Cloud Shell을 통해 제공되는 대화형 환경을 사용해서 완료할 수 있으며, [Azure PowerShell을 로컬에서 설치](install-az-ps.md)할 수도 있습니다.
+
+
+    **Ctrl+Shift+V**(macOS의 경우 **Cmd+Shift+V**)를 사용하여 Azure Cloud Shell에 자습서 텍스트를 붙여넣습니다.
 - durationInMinutes: 1
   title: 로그인
   content: >-
@@ -33,7 +40,7 @@ items:
 
     ```powershell-interactive
 
-    Connect-AzureRmAccount
+    Connect-AzAccount
 
     ```
 
@@ -49,7 +56,7 @@ items:
 
     ```powershell-interactive
 
-    New-AzureRmResourceGroup -Name TutorialResources -Location eastus
+    New-AzResourceGroup -Name TutorialResources -Location eastus
 
     ```
 
@@ -115,7 +122,7 @@ items:
       OpenPorts = 3389
     }
 
-    $newVM1 = New-AzureRmVM @vmParams
+    $newVM1 = New-AzVM @vmParams
 
     ```
 
@@ -202,13 +209,13 @@ items:
 
     ```powershell-interactive
 
-    $newVM1 | Get-AzureRmNetworkInterface |
+    $newVM1 | Get-AzNetworkInterface |
       Select-Object -ExpandProperty IpConfigurations |
         Select-Object Name,PrivateIpAddress
     ```
 
 
-    이 예제에서는 PowerShell 파이프라인을 사용하여 \$newVM1 개체를 `Get-AzureRmNetworkInterface` cmdlet으로 전송합니다. 결과로 생성된 네트워크 인터페이스 개체에서 중첩된 IpConfigurations 개체를 선택합니다. IpConfigurations 개체에서 이름 및 PrivateIpAddress 속성을 선택합니다.
+    이 예제에서는 PowerShell 파이프라인을 사용하여 \$newVM1 개체를 `Get-AzNetworkInterface` cmdlet으로 전송합니다. 결과로 생성된 네트워크 인터페이스 개체에서 중첩된 IpConfigurations 개체를 선택합니다. IpConfigurations 개체에서 이름 및 PrivateIpAddress 속성을 선택합니다.
 
 
     ```Output
@@ -227,7 +234,7 @@ items:
 
     ```powershell-interactive
 
-    $publicIp = Get-AzureRmPublicIpAddress -Name tutorialPublicIp -ResourceGroupName TutorialResources
+    $publicIp = Get-AzPublicIpAddress -Name tutorialPublicIp -ResourceGroupName TutorialResources
 
 
     $publicIp | Select-Object Name,IpAddress,@{label='FQDN';expression={$_.DnsSettings.Fqdn}}
@@ -235,7 +242,7 @@ items:
     ```
 
 
-    이 예제에서는 `Get-AzureRmPublicIpAddress`를 사용하여 \$publicIp 변수에 결과를 저장합니다. 이 변수에서 속성을 선택하고 식을 사용하여 중첩된 Fqdn 속성을 검색합니다.
+    이 예제에서는 `Get-AzPublicIpAddress`를 사용하여 \$publicIp 변수에 결과를 저장합니다. 이 변수에서 속성을 선택하고 식을 사용하여 중첩된 Fqdn 속성을 검색합니다.
 
 
     ```Output
@@ -279,7 +286,7 @@ items:
       OpenPorts = 3389
     }
 
-    $newVM2 = New-AzureRmVM @vm2Params
+    $newVM2 = New-AzVM @vm2Params
 
 
     $newVM2
@@ -329,12 +336,12 @@ items:
 - durationInMinutes: 4
   title: 정리
   content: >-
-    이제 자습서가 완료되었으므로, 생성된 리소스를 정리해야 합니다. `Remove-AzureRmResource` 명령을 사용하여 개별 리소스를 삭제할 수 있지만, 리소스 그룹에 있는 모든 리소스를 제거하는 가장 안전한 방법은 `Remove-AzureRmResourceGroup` 명령을 사용하여 그룹을 삭제하는 것입니다.
+    이제 자습서가 완료되었으므로, 생성된 리소스를 정리해야 합니다. `Remove-AzResource` 명령을 사용하여 개별 리소스를 삭제할 수 있지만, 리소스 그룹에 있는 모든 리소스를 제거하는 가장 안전한 방법은 `Remove-AzResourceGroup` 명령을 사용하여 그룹을 삭제하는 것입니다.
 
 
     ```powershell-interactive
 
-    $job = Remove-AzureRmResourceGroup -Name TutorialResources -Force -AsJob
+    $job = Remove-AzResourceGroup -Name TutorialResources -Force -AsJob
 
 
     $job
@@ -348,7 +355,7 @@ items:
 
     --     ----            -------------   -----         -----------     --------             -------
 
-    1      Long Running... AzureLongRun... Running       True            localhost            Remove-AzureRmResource...
+    1      Long Running... AzureLongRun... Running       True            localhost            Remove-AzResource...
 
     ```
 
@@ -366,4 +373,4 @@ items:
     정리가 완료되면 자습서가 완료됩니다. 계속해서 학습한 모든 항목들에 대한 요약 내용을 살펴보고 다음 단계를 진행하는 데 도움이 되는 리소스 링크를 확인하십시오.
 - durationInMinutes: 1
   title: 요약
-  content: "\n축하합니다! 새로운 또는 기존의 리소스, 사용된 식 및 Azure PowerShell 명령을 사용하여 VM을 만드는 방법을 알아보고, 셸 변수에 저장할 데이터를 캡처하고, Azure VM에 대해 생성되는 일부 리소스를 살펴보았습니다.\n\n앞으로 진행할 내용은 Azure PowerShell을 사용하려는 방법에 따라 달라집니다. 이 자습서에 포함된 기능들에 대해서는 여러 자료를 통해 더 자세히 학습할 수 있습니다.\n\n### <a name=\"in-depth-azure-powershell-documentation\"></a>PowerShell 심층 설명서\n\n전체 [Azure PowerShell 설명서](overview.md) 집합을 탐색하는 데 시간이 걸릴 수 있습니다.\n\n이 자습서에서 사용한 명령에 대한 자세한 내용은 다음 아티클을 참조하세요.\n\n- [New-AzureRmResourceGroup](/powershell/module/azurerm.resources/new-azurermresourcegroup)\n- [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential)\n- [New-AzureRmVM](/powershell/module/azurerm.compute/new-azurermvm)\n- [Select-Object](/powershell/module/microsoft.powershell.utility/select-object)\n- [Get-AzureRmPublicIpAddress](/powershell/module/azurerm.network/get-AzureRmPublicIpAddress)\n- [Remove-AzureRmResourceGroup](/powershell/module/azurerm.resources/Remove-AzureRmResourceGroup)\n- [Wait-Job](/powershell/module/microsoft.powershell.core/wait-job)\n\n또한 자습서에 표시된 기능에 대해 보다 자세한 아티클도 있습니다.\n\n- [PowerShell 스플랫](/powershell/module/microsoft.powershell.core/about/about_splatting)\n- [쿼리](queries-azureps.md)\n- [서식 지정](formatting-output.md)\n- [PowerShell 작업 사용](using-psjobs.md)\n\n### <a name=\"sample-scripts\"></a>샘플 스크립트\n\n지금 바로 특정 작업을 시작하려면 해당 샘플 스크립트를 확인하십시오.\n\n- [Linux Virtual Machines](/azure/virtual-machines/linux/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [Windows Virtual Machines](/azure/virtual-machines/windows/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [Cosmos DB](/azure/cosmos-db/powershell-samples?toc=%2fpowershell%2fmodules%2ftoc.json)\n\n### <a name=\"feedback\"></a>사용자 의견\n\n피드백, 제안 사항 또는 질문이 있는 경우 여러 방법을 통해 연락할 수 있습니다.\n\n* `Send-Feedback`은 팀에 자유 형식의 피드백을 제공할 수 있는 Azure PowerShell의 기본 제공 명령입니다.\n* [Azure PowerShell 리포지토리](https://github.com/Azure/azure-powershell/issues)에서 기능 요청 또는 버그 보고서를 작성합니다.\n* 질문 또는 설명이 필요한 경우에는 [Azure PowerShell 설명서 리포지토리](https://github.com/MicrosoftDocs/azure-docs-powershell/issues)에서 문제를 작성합니다.\n\nAzure PowerShell을 마음껏 사용하세요!"
+  content: "\n축하합니다! 새로운 또는 기존의 리소스, 사용된 식 및 Azure PowerShell 명령을 사용하여 VM을 만드는 방법을 알아보고, 셸 변수에 저장할 데이터를 캡처하고, Azure VM에 대해 생성되는 일부 리소스를 살펴보았습니다.\n\n앞으로 진행할 내용은 Azure PowerShell을 사용하려는 방법에 따라 달라집니다. 이 자습서에 포함된 기능들에 대해서는 여러 자료를 통해 더 자세히 학습할 수 있습니다.\n\n### <a name=\"in-depth-azure-powershell-documentation\"></a>PowerShell 심층 설명서\n\n전체 [Azure PowerShell 설명서](/powershell/azure/new-azureps-module-az?view=azps-4.1.0) 집합을 탐색하는 데 시간이 걸릴 수 있습니다.\n\n이 자습서에서 사용한 명령에 대한 자세한 내용은 다음 아티클을 참조하세요.\n\n- [New-AzResourceGroup](/powershell/module/Az.resources/new-Azresourcegroup)\n- [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential)\n- [New-AzVM](/powershell/module/Az.compute/new-Azvm)\n- [Select-Object](/powershell/module/microsoft.powershell.utility/select-object)\n- [Get-AzPublicIpAddress](/powershell/module/Az.network/get-AzPublicIpAddress)\n- [Remove-AzResourceGroup](/powershell/module/Az.resources/Remove-AzResourceGroup)\n- [Wait-Job](/powershell/module/microsoft.powershell.core/wait-job)\n\n또한 자습서에 표시된 기능에 대해 보다 자세한 아티클도 있습니다.\n\n- [PowerShell 스플랫](/powershell/module/microsoft.powershell.core/about/about_splatting)\n- [쿼리](queries-azureps.md)\n- [서식 지정](formatting-output.md)\n- [PowerShell 작업 사용](using-psjobs.md)\n\n### <a name=\"sample-scripts\"></a>샘플 스크립트\n\n지금 바로 특정 작업을 시작하려면 해당 샘플 스크립트를 확인하십시오.\n\n- [Linux Virtual Machines](/azure/virtual-machines/linux/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [Windows Virtual Machines](/azure/virtual-machines/windows/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [Cosmos DB](/azure/cosmos-db/powershell-samples?toc=%2fpowershell%2fmodules%2ftoc.json)\n\n### <a name=\"feedback\"></a>사용자 의견\n\n피드백, 제안 사항 또는 질문이 있는 경우 여러 방법을 통해 연락할 수 있습니다.\n\n* `Send-Feedback`은 팀에 자유 형식의 피드백을 제공할 수 있는 Azure PowerShell의 기본 제공 명령입니다.\n* [Azure PowerShell 리포지토리](https://github.com/Azure/azure-powershell/issues)에서 기능 요청 또는 버그 보고서를 작성합니다.\n* 질문 또는 설명이 필요한 경우에는 [Azure PowerShell 설명서 리포지토리](https://github.com/MicrosoftDocs/azure-docs-powershell/issues)에서 문제를 작성합니다.\n\nAzure PowerShell을 마음껏 사용하세요!"
