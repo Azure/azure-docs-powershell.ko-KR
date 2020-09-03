@@ -10,7 +10,7 @@ ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/01/2020
-ms.locfileid: "89243075"
+ms.locfileid: "89242922"
 ---
 # <a name="run-azure-powershell-cmdlets-in-powershell-jobs"></a>PowerShell 작업에서 Azure PowerShell cmdlet 실행
 

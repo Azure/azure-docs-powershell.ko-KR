@@ -4,16 +4,17 @@ description: Azure에서 리소스에 대한 쿼리 및 결과 형식을 지정�
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
-ms.openlocfilehash: a76ceee5ae1172630d74afd3c671031592d78a8b
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 54895da77a0073f34c1fae9565eb93092de9cfd1
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83386768"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89238718"
 ---
 # <a name="formatting-query-results"></a>쿼리 결과 서식 지정
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 기본적으로 각 PowerShell cmdlet은 미리 정의된 출력의 서식을 지정하여 쉽게 읽을 수 있도록 합니다.  또한 PowerShell은 출력을 조정하거나 cmdlet 출력을 다음 cmdlet을 가진 다른 형식으로 변환할 수 있는 유연성을 제공합니다.
 

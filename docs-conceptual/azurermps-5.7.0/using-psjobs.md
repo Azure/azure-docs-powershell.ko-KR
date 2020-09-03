@@ -4,16 +4,17 @@ description: -AsJob 매개 변수를 사용하여 병렬로 cmdlet을 실행하�
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 12/11/2017
-ms.openlocfilehash: 3f8617ade3afbf6a283f3696f6d688ba9529173a
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: b5385a9fa3da508e6f0841baea2e4bcd20503b9f
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387992"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89243551"
 ---
 # <a name="running-cmdlets-in-parallel-using-powershell-jobs"></a>PowerShell 작업을 사용하여 병렬로 cmdlet 실행
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 PowerShell에서는 [PowerShell 작업](/powershell/module/microsoft.powershell.core/about/about_jobs)을 통해 비동기 작업을 지원합니다.
 Azure PowerShell은 Azure에 대한 네트워크 호출 만들기 및 대기에 크게 의존합니다. 개발자는 스크립트에서 Azure에 대해 여러 개의 비중단 호출을 시도하거나 현재 세션을 차단하지 않고 REPL에서 Azure 리소스를 만들고자 하는 경우가 있습니다. 이러한 요구를 해결하기 위해 Azure PowerShell에는 최고 수준의 [PSJob](/powershell/module/microsoft.powershell.core/about/about_jobs) 지원을 제공합니다.

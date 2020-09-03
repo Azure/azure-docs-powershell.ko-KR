@@ -4,12 +4,13 @@ description: 이 마이그레이션 가이드에는 Az 버전 4.1.0 릴리스의
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/23/2020
-ms.openlocfilehash: e3a4563acf4b0820b61a2ac5da244b26490c8174
-ms.sourcegitcommit: b94a3f00c147144b0ef7f8cf8d0f151e04674b89
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 5f42bbb65313d1caa839443d463b61cc743ca0a5
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88821690"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89242667"
 ---
 # <a name="migration-guide-for-az-410"></a>Az 4.1.0 마이그레이션 가이드
 

@@ -4,16 +4,17 @@ description: Azure powershell cmdlet 출력의 형식을 지정 하는 방법.
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/09/2018
-ms.openlocfilehash: 059b00194de2e9369f7c8e39d22049035bd7b814
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: f30a4599ee1a80c5535f938dbe6522be60a027c2
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83388043"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89243313"
 ---
 # <a name="format-azurepowershell-cmdlet-output"></a>Azure PowerShell cmdlet 출력 형식 지정
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 기본적으로 각 Azure PowerShell cmdlet은 미리 정의된 출력의 형식을 지정하여 쉽게 읽을 수 있도록 합니다.  또한 PowerShell은 출력을 조정하거나 cmdlet 출력을 다음 cmdlet을 가진 다른 형식으로 변환할 수 있는 유연성을 제공합니다.
 
