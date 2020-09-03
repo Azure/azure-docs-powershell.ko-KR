@@ -4,16 +4,17 @@ description: 여러 PowerShell 세션에 걸쳐 Azure 자격 증명 및 다른 �
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/31/2017
-ms.openlocfilehash: 5e16922b4f944a56c5a232f5e04541bc2eeb9aa8
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 73f8401fa3fe405d21b654bf8e7df628af9773e9
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387278"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89243857"
 ---
 # <a name="persisting-user-credentials-across-powershell-sessions"></a>PowerShell 세션에 걸쳐 사용자 자격 증명 유지
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 Azure PowerShell은 **Azure Context Autosave**라고 하는 기능을 제공하며, 이는 다음과 같은 기능을 제공합니다.
 

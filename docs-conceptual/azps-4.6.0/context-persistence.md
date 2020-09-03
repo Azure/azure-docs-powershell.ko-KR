@@ -4,12 +4,13 @@ description: 여러 PowerShell 세션에 걸쳐 Azure 자격 증명 및 다른 �
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/21/2019
-ms.openlocfilehash: c79d1d634d5b76b2c6ab6b6ab309c2d49f9f7678
-ms.sourcegitcommit: b94a3f00c147144b0ef7f8cf8d0f151e04674b89
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: b6ac8b821f2d88431be67fd5fe1d50fc640d2b8f
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88821867"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89244520"
 ---
 # <a name="azure-powershell-context-objects"></a>Azure PowerShell 컨텍스트 개체
 

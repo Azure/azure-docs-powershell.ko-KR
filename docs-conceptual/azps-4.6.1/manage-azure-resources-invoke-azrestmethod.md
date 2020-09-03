@@ -10,7 +10,7 @@ ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/01/2020
-ms.locfileid: "89239624"
+ms.locfileid: "89240304"
 ---
 # <a name="manage-azure-resources-with-invoke-azrestmethod"></a>Invoke-AzRestMethod를 사용하여 Azure 리소스 관리
 

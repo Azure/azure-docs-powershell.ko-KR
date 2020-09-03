@@ -4,12 +4,13 @@ description: Docker 이미지에 미리 설치된 Azure PowerShell을 사용하�
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/20/2020
-ms.openlocfilehash: b5ad201abcabbdc1a88db241b028d88f05054a14
-ms.sourcegitcommit: edfe63c6949cd59127028ac8a13bb4a8827d555c
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 2b487abeecbffa6cd8b7b64276ab301619348385
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87566448"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89239862"
 ---
 # <a name="using-azure-powershell-in-docker"></a>Docker에서 Azure PowerShell 사용
 

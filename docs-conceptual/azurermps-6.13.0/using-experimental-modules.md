@@ -4,16 +4,17 @@ description: 실험적 Azure PowerShell 모듈의 기본 원칙 및 사용을 �
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/11/2018
-ms.openlocfilehash: 2c52dec39bdc656c7a2b17c547ec5f87ac659fa1
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 2a44d29cb0770bf1517993606358c3669b2ee982
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387295"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89244248"
 ---
 # <a name="use-experimental-azure-powershell-modules"></a>실험적 Azure PowerShell 모듈 사용
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 Azure PowerShell 팀은 Azure의 개발자 도구(특히 CLI)에 중점을 두고 Azure PowerShell 환경에 많은 향상된 기능을 실험하고 있습니다.
 

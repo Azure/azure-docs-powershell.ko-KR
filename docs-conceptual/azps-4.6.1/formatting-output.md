@@ -10,7 +10,7 @@ ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/01/2020
-ms.locfileid: "89239845"
+ms.locfileid: "89244401"
 ---
 # <a name="format-azure-powershell-cmdlet-output"></a>Azure PowerShell cmdlet 출력 형식 지정
 

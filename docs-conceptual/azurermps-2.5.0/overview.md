@@ -8,12 +8,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 09/21/2018
-ms.openlocfilehash: 55f19ac5e6767df1312e0b531184e8621b60a011
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 4b72bbd1bda93767251e0ba3d488f798575d9115
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "67038196"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89244316"
 ---
 # <a name="azurerm-module-250"></a>AzureRM 모듈 2.5.0
 
@@ -59,7 +60,7 @@ Use-AzureRmProfile -Profile 2018-03-01-hybrid -Force
     * 리소스 - 2018-02-01
     * Keyvault - 2016-10-01
     * Dns - 2016-04-01
-* 각 리소스 종류에 대한 전체 API 버전 맵은 https://github.com/Azure/azure-rest-api-specs/blob/master/profile/2018-03-01-hybrid.json 에서 확인할 수 있습니다.
+* 각 리소스 종류에 대한 전체 API 버전 맵은 https://github.com/Azure/azure-rest-api-specs/blob/master/profile/2018-03-01-hybrid.json에서 확인할 수 있습니다.
 
 ## <a name="content"></a>콘텐츠:
 ### <a name="azure-bridge"></a>Azure Bridge

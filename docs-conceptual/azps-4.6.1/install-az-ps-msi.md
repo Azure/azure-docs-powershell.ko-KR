@@ -3,14 +3,14 @@ title: MSI로 Azure PowerShell 설치
 description: PowerShellGet을 사용하지 않고 MSI를 사용하여 Azure PowerShell을 설치하는 방법
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 10/22/2019
+ms.date: 03/10/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 7e36765f34a689640e1ed82f5fa221e71d3e08ec
+ms.openlocfilehash: 33d9214544ddb126b717685f9e7986bed926b149
 ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/01/2020
-ms.locfileid: "89244214"
+ms.locfileid: "89240355"
 ---
 # <a name="install-azure-powershell-on-windows-with-msi"></a>MSI로 Windows에 Azure PowerShell 설치
 
@@ -31,7 +31,7 @@ PowerShell 5.1에서 Azure PowerShell을 사용하려면 다음을 수행합니�
 
 ## <a name="install-or-update-on-windows-using-the-msi-package"></a>MSI 패키지를 사용하여 Windows에 설치 및 업데이트
 
-Azure PowerShell용 MSI 패키지는 [GitHub](https://github.com/Azure/azure-powershell/releases/tag/v1.8.0-April2019)에서 사용할 수 있습니다. MSI를 사용하여 이전 버전의 Azure PowerShell 모듈을 설치한 경우 설치 관리자에서 자동으로 이를 제거합니다. MSI 패키지는 `${env:ProgramFiles}\WindowsPowerShell\Modules`에서 모듈을 설치합니다.
+Azure PowerShell용 MSI 패키지는 [GitHub](https://github.com/Azure/azure-powershell/releases/latest)에서 사용할 수 있습니다. MSI를 사용하여 이전 버전의 Azure PowerShell 모듈을 설치한 경우 설치 관리자에서 자동으로 이를 제거합니다. MSI 패키지는 `${env:ProgramFiles}\WindowsPowerShell\Modules`에서 모듈을 설치합니다.
 
 Azure PowerShell을 사용하여 작업을 시작하려면 Azure 자격 증명으로 로그인합니다.
 
