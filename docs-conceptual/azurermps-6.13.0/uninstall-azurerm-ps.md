@@ -4,37 +4,38 @@ description: Azure PowerShell의 전체 제거를 수행하는 방법
 ms.date: 06/10/2019
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: 7bd53a9bceaee8ce50a62b3e99a861229c50bc22
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 58d861f09eef04638cfa7e784ef0e28e9f4751d4
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387584"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89244265"
 ---
-# <a name="uninstall-the-azure-powershell-module"></a><span data-ttu-id="f9566-103">Azure PowerShell 모듈 제거</span><span class="sxs-lookup"><span data-stu-id="f9566-103">Uninstall the Azure PowerShell module</span></span>
+# <a name="uninstall-the-azure-powershell-module"></a><span data-ttu-id="87e68-103">Azure PowerShell 모듈 제거</span><span class="sxs-lookup"><span data-stu-id="87e68-103">Uninstall the Azure PowerShell module</span></span>
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
-<span data-ttu-id="f9566-104">이 문서에서는 Azure PowerShell의 이전 버전을 제거하거나 시스템에서 완전히 제거하는 방법을 알려줍니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-104">This article tells you how to uninstall an older version of Azure PowerShell, or completely remove it from your system.</span></span> <span data-ttu-id="f9566-105">Azure PowerShell을 완전히 제거하기로 한 경우 [Send-Feedback](/powershell/module/azurerm.profile/send-feedback) cmdlet을 통해 몇 가지 피드백을 보내주세요.</span><span class="sxs-lookup"><span data-stu-id="f9566-105">If you've decided to completely uninstall the Azure PowerShell, give us some feedback through the [Send-Feedback](/powershell/module/azurerm.profile/send-feedback) cmdlet.</span></span>
-<span data-ttu-id="f9566-106">버그가 발생한 경우 [GitHub 문제를 제출](https://github.com/azure/azure-powershell/issues)해주시면 감사하겠습니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-106">If you encounter a bug, we'd appreciate it if you [file a GitHub issue](https://github.com/azure/azure-powershell/issues).</span></span>
+<span data-ttu-id="87e68-104">이 문서에서는 Azure PowerShell의 이전 버전을 제거하거나 시스템에서 완전히 제거하는 방법을 알려줍니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-104">This article tells you how to uninstall an older version of Azure PowerShell, or completely remove it from your system.</span></span> <span data-ttu-id="87e68-105">Azure PowerShell을 완전히 제거하기로 한 경우 [Send-Feedback](/powershell/module/azurerm.profile/send-feedback) cmdlet을 통해 몇 가지 피드백을 보내주세요.</span><span class="sxs-lookup"><span data-stu-id="87e68-105">If you've decided to completely uninstall the Azure PowerShell, give us some feedback through the [Send-Feedback](/powershell/module/azurerm.profile/send-feedback) cmdlet.</span></span>
+<span data-ttu-id="87e68-106">버그가 발생한 경우 [GitHub 문제를 제출](https://github.com/azure/azure-powershell/issues)해주시면 감사하겠습니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-106">If you encounter a bug, we'd appreciate it if you [file a GitHub issue](https://github.com/azure/azure-powershell/issues).</span></span>
 
 
-## <a name="uninstall-azure-powershell-msi"></a><span data-ttu-id="f9566-107">Azure PowerShell MSI 제거</span><span class="sxs-lookup"><span data-stu-id="f9566-107">Uninstall Azure PowerShell MSI</span></span>
+## <a name="uninstall-azure-powershell-msi"></a><span data-ttu-id="87e68-107">Azure PowerShell MSI 제거</span><span class="sxs-lookup"><span data-stu-id="87e68-107">Uninstall Azure PowerShell MSI</span></span>
 
-<span data-ttu-id="f9566-108">MSI 패키지를 사용하여 Azure PowerShell을 설치한 경우 PowerShell이 아닌 Windows 시스템을 통해 제거해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-108">If you installed Azure PowerShell using the MSI package, you must uninstall through the Windows system rather than PowerShell.</span></span>
+<span data-ttu-id="87e68-108">MSI 패키지를 사용하여 Azure PowerShell을 설치한 경우 PowerShell이 아닌 Windows 시스템을 통해 제거해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-108">If you installed Azure PowerShell using the MSI package, you must uninstall through the Windows system rather than PowerShell.</span></span>
 
-| <span data-ttu-id="f9566-109">플랫폼</span><span class="sxs-lookup"><span data-stu-id="f9566-109">Platform</span></span> | <span data-ttu-id="f9566-110">Instructions</span><span class="sxs-lookup"><span data-stu-id="f9566-110">Instructions</span></span> |
+| <span data-ttu-id="87e68-109">플랫폼</span><span class="sxs-lookup"><span data-stu-id="87e68-109">Platform</span></span> | <span data-ttu-id="87e68-110">Instructions</span><span class="sxs-lookup"><span data-stu-id="87e68-110">Instructions</span></span> |
 |----------|--------------|
-| <span data-ttu-id="f9566-111">윈도우 10</span><span class="sxs-lookup"><span data-stu-id="f9566-111">Windows 10</span></span> | <span data-ttu-id="f9566-112">시작 > 설정 > 앱</span><span class="sxs-lookup"><span data-stu-id="f9566-112">Start > Settings > Apps</span></span> |
-| <span data-ttu-id="f9566-113">Windows 7</span><span class="sxs-lookup"><span data-stu-id="f9566-113">Windows 7</span></span> </br><span data-ttu-id="f9566-114">Windows 8</span><span class="sxs-lookup"><span data-stu-id="f9566-114">Windows 8</span></span> | <span data-ttu-id="f9566-115">시작 > 제어판 > 프로그램 > 프로그램 제거</span><span class="sxs-lookup"><span data-stu-id="f9566-115">Start > Control Panel > Programs > Uninstall a program</span></span> |
+| <span data-ttu-id="87e68-111">윈도우 10</span><span class="sxs-lookup"><span data-stu-id="87e68-111">Windows 10</span></span> | <span data-ttu-id="87e68-112">시작 > 설정 > 앱</span><span class="sxs-lookup"><span data-stu-id="87e68-112">Start > Settings > Apps</span></span> |
+| <span data-ttu-id="87e68-113">Windows 7</span><span class="sxs-lookup"><span data-stu-id="87e68-113">Windows 7</span></span> </br><span data-ttu-id="87e68-114">Windows 8</span><span class="sxs-lookup"><span data-stu-id="87e68-114">Windows 8</span></span> | <span data-ttu-id="87e68-115">시작 > 제어판 > 프로그램 > 프로그램 제거</span><span class="sxs-lookup"><span data-stu-id="87e68-115">Start > Control Panel > Programs > Uninstall a program</span></span> |
 
-<span data-ttu-id="f9566-116">이 화면을 띄우면 프로그램 목록에 __Azure PowerShell__ 이 보일 것입니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-116">Once on this screen you should see __Azure PowerShell__ in the program listing.</span></span> <span data-ttu-id="f9566-117">이 앱을 제거하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-117">This is the app to uninstall.</span></span>
+<span data-ttu-id="87e68-116">이 화면을 띄우면 프로그램 목록에 __Azure PowerShell__ 이 보일 것입니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-116">Once on this screen you should see __Azure PowerShell__ in the program listing.</span></span> <span data-ttu-id="87e68-117">이 앱을 제거하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-117">This is the app to uninstall.</span></span>
 
-## <a name="uninstall-from-powershell"></a><span data-ttu-id="f9566-118">PowerShell에서 제거하기</span><span class="sxs-lookup"><span data-stu-id="f9566-118">Uninstall from PowerShell</span></span>
+## <a name="uninstall-from-powershell"></a><span data-ttu-id="87e68-118">PowerShell에서 제거하기</span><span class="sxs-lookup"><span data-stu-id="87e68-118">Uninstall from PowerShell</span></span>
 
-<span data-ttu-id="f9566-119">PowerShellGet을 사용하여 Azure PowerShell을 설치하는 경우 [Uninstall-module](/powershell/module/powershellget/uninstall-module) cmdlet을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-119">If you installed Azure PowerShell using PowerShellGet, you can use the [Uninstall-Module](/powershell/module/powershellget/uninstall-module) cmdlet.</span></span> <span data-ttu-id="f9566-120">그러나 `Uninstall-Module`은 모듈 중 하나만 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-120">However, `Uninstall-Module` only uninstalls one module.</span></span> <span data-ttu-id="f9566-121">Azure PowerShell을 완전히 제거하려면 각 모듈을 개별적으로 제거해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-121">To remove Azure PowerShell completely, you must uninstall each module individually.</span></span> <span data-ttu-id="f9566-122">2개 이상의 Azure PowerShell 버전을 설치한 경우 제거가 복잡할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-122">Uninstallation can be complicated if you have more than one version of Azure PowerShell installed.</span></span>
+<span data-ttu-id="87e68-119">PowerShellGet을 사용하여 Azure PowerShell을 설치하는 경우 [Uninstall-module](/powershell/module/powershellget/uninstall-module) cmdlet을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-119">If you installed Azure PowerShell using PowerShellGet, you can use the [Uninstall-Module](/powershell/module/powershellget/uninstall-module) cmdlet.</span></span> <span data-ttu-id="87e68-120">그러나 `Uninstall-Module`은 모듈 중 하나만 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-120">However, `Uninstall-Module` only uninstalls one module.</span></span> <span data-ttu-id="87e68-121">Azure PowerShell을 완전히 제거하려면 각 모듈을 개별적으로 제거해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-121">To remove Azure PowerShell completely, you must uninstall each module individually.</span></span> <span data-ttu-id="87e68-122">2개 이상의 Azure PowerShell 버전을 설치한 경우 제거가 복잡할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-122">Uninstallation can be complicated if you have more than one version of Azure PowerShell installed.</span></span>
 
-<span data-ttu-id="f9566-123">현재 설치한 Azure PowerShell 버전을 확인하려면 다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-123">To check which versions of Azure PowerShell you currently have installed, run the following command:</span></span>
+<span data-ttu-id="87e68-123">현재 설치한 Azure PowerShell 버전을 확인하려면 다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-123">To check which versions of Azure PowerShell you currently have installed, run the following command:</span></span>
 
 ```powershell-interactive
 Get-InstalledModule -Name AzureRM -AllVersions
@@ -47,7 +48,7 @@ Version              Name                                Repository           De
 6.13.1               AzureRM                             PSGallery            Azure Resource Manager Module
 ```
 
-<span data-ttu-id="f9566-124">다음 스크립트는 PowerShell 갤러리를 쿼리하여 종속 하위 모듈의 목록을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-124">The following script queries the PowerShell Gallery to get a list of dependent submodules.</span></span> <span data-ttu-id="f9566-125">그런 다음 스크립트는 올바른 버전의 각 하위 모듈을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-125">Then, the script uninstalls the correct version of each submodule.</span></span> <span data-ttu-id="f9566-126">`Process` 또는 `CurrentUser`외의 범위에서 이 스크립트를 실행하려면 관리자 권한이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-126">You will need to have administrator access to run this script in a scope other than `Process` or `CurrentUser`.</span></span>
+<span data-ttu-id="87e68-124">다음 스크립트는 PowerShell 갤러리를 쿼리하여 종속 하위 모듈의 목록을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-124">The following script queries the PowerShell Gallery to get a list of dependent submodules.</span></span> <span data-ttu-id="87e68-125">그런 다음 스크립트는 올바른 버전의 각 하위 모듈을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-125">Then, the script uninstalls the correct version of each submodule.</span></span> <span data-ttu-id="87e68-126">`Process` 또는 `CurrentUser`외의 범위에서 이 스크립트를 실행하려면 관리자 권한이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-126">You will need to have administrator access to run this script in a scope other than `Process` or `CurrentUser`.</span></span>
 
 ```powershell-interactive
 function Uninstall-AllModules {
@@ -62,9 +63,9 @@ function Uninstall-AllModules {
 
     [switch]$WhatIf
   )
-  
+
   $AllModules = @()
-  
+
   'Creating list of dependencies...'
   $target = Find-Module $TargetModule -RequiredVersion $version
   $target.Dependencies | ForEach-Object {
@@ -98,13 +99,13 @@ function Uninstall-AllModules {
 }
 ```
 
-<span data-ttu-id="f9566-127">이 함수를 사용하려면 코드를 복사하고 PowerShell 세션에 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-127">To use this function, copy and paste the code into your PowerShell session.</span></span> <span data-ttu-id="f9566-128">다음 예제에서는 이전 버전의 Azure PowerShell을 제거하는 함수를 실행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-128">The following example shows how to run the function to remove an older version of Azure PowerShell.</span></span>
+<span data-ttu-id="87e68-127">이 함수를 사용하려면 코드를 복사하고 PowerShell 세션에 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-127">To use this function, copy and paste the code into your PowerShell session.</span></span> <span data-ttu-id="87e68-128">다음 예제에서는 이전 버전의 Azure PowerShell을 제거하는 함수를 실행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-128">The following example shows how to run the function to remove an older version of Azure PowerShell.</span></span>
 
 ```powershell-interactive
 Uninstall-AllModules -TargetModule AzureRM -Version 4.4.1 -Force
 ```
 
-<span data-ttu-id="f9566-129">이 스크립트를 실행하면 제거하고 있는 각 하위 모듈의 이름 및 버전이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-129">As the script runs, it will display the name and version of each submodule that is being uninstalled.</span></span> <span data-ttu-id="f9566-130">제거하지는 안되, 삭제할 것을 표시만 하도록 스크립트를 실행하려면 `-WhatIf` 옵션을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-130">To run the script to only see what would be deleted, without removing it, use the `-WhatIf` option.</span></span>
+<span data-ttu-id="87e68-129">이 스크립트를 실행하면 제거하고 있는 각 하위 모듈의 이름 및 버전이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-129">As the script runs, it will display the name and version of each submodule that is being uninstalled.</span></span> <span data-ttu-id="87e68-130">제거하지는 안되, 삭제할 것을 표시만 하도록 스크립트를 실행하려면 `-WhatIf` 옵션을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-130">To run the script to only see what would be deleted, without removing it, use the `-WhatIf` option.</span></span>
 
 ```output
 Creating list of dependencies...
@@ -116,11 +117,11 @@ Uninstalling Azure.AnalysisServices version 0.4.7
 ```
 
 > [!NOTE]
-> <span data-ttu-id="f9566-131">이 스크립트가 제거할 동일한 버전의 정확한 종속성과 매치될 수 없으면 해당 종속성의 _어떠한_ 버전도 제거하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-131">If this script can't match an exact dependency with the same version to uninstall, it won't uninstall _any_ version of that dependecy.</span></span> <span data-ttu-id="f9566-132">이는 시스템에 이러한 종속성을 사용하는 대상 모듈의 다른 버전이 있을 수 있기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-132">This is because there may be other versions of the target module on your system which rely on these dependencies.</span></span> <span data-ttu-id="f9566-133">이 경우 해당 종속성의 사용 가능한 버전이 나열됩니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-133">In this case, the available versions of the dependency are listed.</span></span>
-> <span data-ttu-id="f9566-134">그러면 `Uninstall-Module`을 사용하여 이전 버전을 수동으로 제거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-134">You can then remove any old versions manually with `Uninstall-Module`.</span></span>
+> <span data-ttu-id="87e68-131">이 스크립트가 제거할 동일한 버전의 정확한 종속성과 매치될 수 없으면 해당 종속성의 _어떠한_ 버전도 제거하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-131">If this script can't match an exact dependency with the same version to uninstall, it won't uninstall _any_ version of that dependecy.</span></span> <span data-ttu-id="87e68-132">이는 시스템에 이러한 종속성을 사용하는 대상 모듈의 다른 버전이 있을 수 있기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-132">This is because there may be other versions of the target module on your system which rely on these dependencies.</span></span> <span data-ttu-id="87e68-133">이 경우 해당 종속성의 사용 가능한 버전이 나열됩니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-133">In this case, the available versions of the dependency are listed.</span></span>
+> <span data-ttu-id="87e68-134">그러면 `Uninstall-Module`을 사용하여 이전 버전을 수동으로 제거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-134">You can then remove any old versions manually with `Uninstall-Module`.</span></span>
 
 
-<span data-ttu-id="f9566-135">제거하려는 Azure PowerShell의 모든 버전에 대해 이 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-135">Run this command for every version of Azure PowerShell that you want to uninstall.</span></span> <span data-ttu-id="f9566-136">편의를 위해, 다음 스크립트는 최신 버전을 __제외한__ 모든 AzureRM 버전을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="f9566-136">For convenience, the following script will uninstall all versions of AzureRM __except__ for the latest.</span></span>
+<span data-ttu-id="87e68-135">제거하려는 Azure PowerShell의 모든 버전에 대해 이 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-135">Run this command for every version of Azure PowerShell that you want to uninstall.</span></span> <span data-ttu-id="87e68-136">편의를 위해, 다음 스크립트는 최신 버전을 __제외한__ 모든 AzureRM 버전을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="87e68-136">For convenience, the following script will uninstall all versions of AzureRM __except__ for the latest.</span></span>
 
 ```powershell-interactive
 $versions = (get-installedmodule AzureRM -AllVersions | Select-Object Version)

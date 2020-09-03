@@ -4,22 +4,23 @@ description: Azure에서 리소스에 대한 쿼리 및 결과 형식을 지정�
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 01/10/2019
-ms.openlocfilehash: ebd108a2c13bdb376213d054fb72188e6205a565
-ms.sourcegitcommit: b94a3f00c147144b0ef7f8cf8d0f151e04674b89
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 2754df5132ca9d528217fa5caad95b7f59cc8215
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88821728"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89244418"
 ---
-# <a name="query-output-of-azure-powershell"></a><span data-ttu-id="0c5ba-103">Azure PowerShell 쿼리 출력</span><span class="sxs-lookup"><span data-stu-id="0c5ba-103">Query output of Azure PowerShell</span></span> 
+# <a name="query-output-of-azure-powershell"></a><span data-ttu-id="066e4-103">Azure PowerShell 쿼리 출력</span><span class="sxs-lookup"><span data-stu-id="066e4-103">Query output of Azure PowerShell</span></span> 
 
-<span data-ttu-id="0c5ba-104">각 Azure PowerShell cmdlet의 결과는 Azure PowerShell 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="0c5ba-104">The results of each Azure PowerShell cmdlet are an Azure PowerShell object.</span></span> <span data-ttu-id="0c5ba-105">명시적 `Get-` 작업이 아닌 cmdlet도 생성되거나 수정된 리소스에 대한 정보를 제공하기 위해 검사할 수 있는 값을 반환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0c5ba-105">Even cmdlets that aren't explicitly `Get-` operations might return a value that can be inspected, to give information about a resource that was created or modified.</span></span> <span data-ttu-id="0c5ba-106">대부분의 cmdlet은 단일 개체를 반환하지만 일부는 반복되어야 하는 배열을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="0c5ba-106">While most cmdlets return a single object, some return an array that should be iterated through.</span></span>
+<span data-ttu-id="066e4-104">각 Azure PowerShell cmdlet의 결과는 Azure PowerShell 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="066e4-104">The results of each Azure PowerShell cmdlet are an Azure PowerShell object.</span></span> <span data-ttu-id="066e4-105">명시적 `Get-` 작업이 아닌 cmdlet도 생성되거나 수정된 리소스에 대한 정보를 제공하기 위해 검사할 수 있는 값을 반환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="066e4-105">Even cmdlets that aren't explicitly `Get-` operations might return a value that can be inspected, to give information about a resource that was created or modified.</span></span> <span data-ttu-id="066e4-106">대부분의 cmdlet은 단일 개체를 반환하지만 일부는 반복되어야 하는 배열을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="066e4-106">While most cmdlets return a single object, some return an array that should be iterated through.</span></span>
 
-<span data-ttu-id="0c5ba-107">대부분의 경우 Azure PowerShell의 출력을 [Select-Object](/powershell/module/Microsoft.PowerShell.Utility/Select-Object) cmdlet(약식 `select`)을 사용하여 쿼리합니다.</span><span class="sxs-lookup"><span data-stu-id="0c5ba-107">In almost all cases, you query output from Azure PowerShell with the [Select-Object](/powershell/module/Microsoft.PowerShell.Utility/Select-Object) cmdlet, often abbreviated to `select`.</span></span> <span data-ttu-id="0c5ba-108">출력은 [Where-object](/powershell/module/Microsoft.PowerShell.Core/Where-Object), 또는 별칭인 `where`을 사용하여 필터링할 수 있습니다</span><span class="sxs-lookup"><span data-stu-id="0c5ba-108">Output can be filtered with [Where-Object](/powershell/module/Microsoft.PowerShell.Core/Where-Object), or its alias `where`.</span></span>
+<span data-ttu-id="066e4-107">대부분의 경우 Azure PowerShell의 출력을 [Select-Object](/powershell/module/Microsoft.PowerShell.Utility/Select-Object) cmdlet(약식 `select`)을 사용하여 쿼리합니다.</span><span class="sxs-lookup"><span data-stu-id="066e4-107">In almost all cases, you query output from Azure PowerShell with the [Select-Object](/powershell/module/Microsoft.PowerShell.Utility/Select-Object) cmdlet, often abbreviated to `select`.</span></span> <span data-ttu-id="066e4-108">출력은 [Where-object](/powershell/module/Microsoft.PowerShell.Core/Where-Object), 또는 별칭인 `where`을 사용하여 필터링할 수 있습니다</span><span class="sxs-lookup"><span data-stu-id="066e4-108">Output can be filtered with [Where-Object](/powershell/module/Microsoft.PowerShell.Core/Where-Object), or its alias `where`.</span></span>
 
-## <a name="select-simple-properties"></a><span data-ttu-id="0c5ba-109">단순 속성 선택</span><span class="sxs-lookup"><span data-stu-id="0c5ba-109">Select simple properties</span></span>
+## <a name="select-simple-properties"></a><span data-ttu-id="066e4-109">단순 속성 선택</span><span class="sxs-lookup"><span data-stu-id="066e4-109">Select simple properties</span></span>
 
-<span data-ttu-id="0c5ba-110">기본 테이블 형식에서, Azure PowerShell cmdlet은 사용 가능한 속성을 모두 표시하지는 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0c5ba-110">In the default table format, Azure PowerShell cmdlets don't display all of their available properties.</span></span> <span data-ttu-id="0c5ba-111">[Format-list](/powershell/module/microsoft.powershell.utility/format-list) cmdlet 또는 `Select-Object *`로 출력을 파이핑하여 전체 속성을 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0c5ba-111">You can get the full properties by using the [Format-List](/powershell/module/microsoft.powershell.utility/format-list) cmdlet, or by piping output to `Select-Object *`:</span></span>
+<span data-ttu-id="066e4-110">기본 테이블 형식에서, Azure PowerShell cmdlet은 사용 가능한 속성을 모두 표시하지는 않습니다.</span><span class="sxs-lookup"><span data-stu-id="066e4-110">In the default table format, Azure PowerShell cmdlets don't display all of their available properties.</span></span> <span data-ttu-id="066e4-111">[Format-list](/powershell/module/microsoft.powershell.utility/format-list) cmdlet 또는 `Select-Object *`로 출력을 파이핑하여 전체 속성을 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="066e4-111">You can get the full properties by using the [Format-List](/powershell/module/microsoft.powershell.utility/format-list) cmdlet, or by piping output to `Select-Object *`:</span></span>
 
 ```azurepowershell-interactive
 Get-AzVM -Name TestVM -ResourceGroupName TestGroup | Select-Object *
@@ -54,7 +55,7 @@ RequestId                : 711d8ed1-b888-4c52-8ab9-66f07b87eb6b
 StatusCode               : OK
 ```
 
-<span data-ttu-id="0c5ba-112">관심있는 속성의 이름을 알게되면 `Select-Object`와 같은 속성 이름을 사용하여 직접 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0c5ba-112">Once you know the names of the properties that you're interested in, you can use those property names with `Select-Object` to get them directly:</span></span>
+<span data-ttu-id="066e4-112">관심있는 속성의 이름을 알게되면 `Select-Object`와 같은 속성 이름을 사용하여 직접 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="066e4-112">Once you know the names of the properties that you're interested in, you can use those property names with `Select-Object` to get them directly:</span></span>
 
 ```azurepowershell-interactive
 Get-AzVM -Name TestVM -ResourceGroupName TestGroup | Select-Object Name,VmId,ProvisioningState
@@ -66,11 +67,11 @@ Name   VmId                                 ProvisioningState
 TestVM 711d8ed1-b888-4c52-8ab9-66f07b87eb6b Succeeded
 ```
 
-<span data-ttu-id="0c5ba-113">`Select-Object`를 사용한 출력은 항상 요청된 형식을 표시하도록 서식 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="0c5ba-113">Output from using `Select-Object` is always formatted to display the requested information.</span></span> <span data-ttu-id="0c5ba-114">쿼리 결과를 cmdlet 결과의 일부로 사용하는 방법에 대한 자세한 내용은 [Azure PowerShell cmdlet 출력 형식](formatting-output.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0c5ba-114">To learn about using formatting as part of querying cmdlet results, see [Format Azure PowerShell cmdlet output](formatting-output.md).</span></span>
+<span data-ttu-id="066e4-113">`Select-Object`를 사용한 출력은 항상 요청된 형식을 표시하도록 서식 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="066e4-113">Output from using `Select-Object` is always formatted to display the requested information.</span></span> <span data-ttu-id="066e4-114">쿼리 결과를 cmdlet 결과의 일부로 사용하는 방법에 대한 자세한 내용은 [Azure PowerShell cmdlet 출력 형식](formatting-output.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="066e4-114">To learn about using formatting as part of querying cmdlet results, see [Format Azure PowerShell cmdlet output](formatting-output.md).</span></span>
 
-## <a name="select-nested-properties"></a><span data-ttu-id="0c5ba-115">중첩 속성 선택</span><span class="sxs-lookup"><span data-stu-id="0c5ba-115">Select nested properties</span></span>
+## <a name="select-nested-properties"></a><span data-ttu-id="066e4-115">중첩 속성 선택</span><span class="sxs-lookup"><span data-stu-id="066e4-115">Select nested properties</span></span>
 
-<span data-ttu-id="0c5ba-116">Azure PowerShell cmdlet 출력의 일부 속성은 `Get-AzVM` 출력의 `StorageProfile` 속성과 같은 중첩된 개체를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="0c5ba-116">Some properties in Azure PowerShell cmdlet output use nested objects, like the `StorageProfile` property of `Get-AzVM` output.</span></span> <span data-ttu-id="0c5ba-117">중첩 된 속성에서 값을 가져오려면, `Select-Object`에 대한 사전 인수의 일부로 검사할 값의 전체 경로 및 표시 이름을 제공하세요.</span><span class="sxs-lookup"><span data-stu-id="0c5ba-117">To get a value from a nested property, provide a display name and the full path to the value you want to inspect as part of a dictionary argument to `Select-Object`:</span></span>
+<span data-ttu-id="066e4-116">Azure PowerShell cmdlet 출력의 일부 속성은 `Get-AzVM` 출력의 `StorageProfile` 속성과 같은 중첩된 개체를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="066e4-116">Some properties in Azure PowerShell cmdlet output use nested objects, like the `StorageProfile` property of `Get-AzVM` output.</span></span> <span data-ttu-id="066e4-117">중첩 된 속성에서 값을 가져오려면, `Select-Object`에 대한 사전 인수의 일부로 검사할 값의 전체 경로 및 표시 이름을 제공하세요.</span><span class="sxs-lookup"><span data-stu-id="066e4-117">To get a value from a nested property, provide a display name and the full path to the value you want to inspect as part of a dictionary argument to `Select-Object`:</span></span>
 
 ```azurepowershell-interactive
 Get-AzVM -ResourceGroupName TestGroup | `
@@ -85,11 +86,11 @@ TestVM2   Linux
 WinVM   Windows
 ```
 
-<span data-ttu-id="0c5ba-118">각 사전 인수는 개체의 한 속성을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="0c5ba-118">Each dictionary argument selects one property from the object.</span></span> <span data-ttu-id="0c5ba-119">추출할 속성은 식의 일부여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0c5ba-119">The property to extract must be part of an expression.</span></span>
+<span data-ttu-id="066e4-118">각 사전 인수는 개체의 한 속성을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="066e4-118">Each dictionary argument selects one property from the object.</span></span> <span data-ttu-id="066e4-119">추출할 속성은 식의 일부여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="066e4-119">The property to extract must be part of an expression.</span></span>
 
-## <a name="filter-results"></a><span data-ttu-id="0c5ba-120">결과 필터링</span><span class="sxs-lookup"><span data-stu-id="0c5ba-120">Filter results</span></span> 
+## <a name="filter-results"></a><span data-ttu-id="066e4-120">결과 필터링</span><span class="sxs-lookup"><span data-stu-id="066e4-120">Filter results</span></span> 
 
-<span data-ttu-id="0c5ba-121">`Where-Object` cmdlet을 사용하면 중첩 속성을 포함하여 속성 값에 기반하여 결과를 필터링할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0c5ba-121">The `Where-Object` cmdlet allows you to filter the result based on any property value, including nested properties.</span></span> <span data-ttu-id="0c5ba-122">다음 예제는 `Where-Object`를 사용하여 리소스 그룹에서 Linux VM을 찾는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="0c5ba-122">The next example shows how to use `Where-Object` to find the Linux VMs in a resource group.</span></span>
+<span data-ttu-id="066e4-121">`Where-Object` cmdlet을 사용하면 중첩 속성을 포함하여 속성 값에 기반하여 결과를 필터링할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="066e4-121">The `Where-Object` cmdlet allows you to filter the result based on any property value, including nested properties.</span></span> <span data-ttu-id="066e4-122">다음 예제는 `Where-Object`를 사용하여 리소스 그룹에서 Linux VM을 찾는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="066e4-122">The next example shows how to use `Where-Object` to find the Linux VMs in a resource group.</span></span>
 
 ```azurepowershell-interactive
 Get-AzVM -ResourceGroupName TestGroup | `
@@ -103,7 +104,7 @@ TestGroup          TestVM  westus2 Standard_D2s_v3  Linux  testvm299         Suc
 TestGroup         TestVM2  westus2 Standard_D2s_v3  Linux testvm2669         Succeeded
 ```
 
-<span data-ttu-id="0c5ba-123">`Select-Object`, `Where-Object`의 결과를 각각으로 파이프할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0c5ba-123">You can pipe the results of `Select-Object` and `Where-Object` to each other.</span></span> <span data-ttu-id="0c5ba-124">성능 향상을 위해, `Where-Object` 작업을 `Select-Object` 전에 두는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="0c5ba-124">For performance purposes, it's always recommended to put the `Where-Object` operation before `Select-Object`:</span></span>
+<span data-ttu-id="066e4-123">`Select-Object`, `Where-Object`의 결과를 각각으로 파이프할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="066e4-123">You can pipe the results of `Select-Object` and `Where-Object` to each other.</span></span> <span data-ttu-id="066e4-124">성능 향상을 위해, `Where-Object` 작업을 `Select-Object` 전에 두는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="066e4-124">For performance purposes, it's always recommended to put the `Where-Object` operation before `Select-Object`:</span></span>
 
 ```azurepowershell-interactive
 Get-AzVM -ResourceGroupName TestGroup | `
