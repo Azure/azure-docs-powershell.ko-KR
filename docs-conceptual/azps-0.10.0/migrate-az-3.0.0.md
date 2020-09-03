@@ -1,18 +1,16 @@
 ---
 title: Az 3.0.0 마이그레이션 가이드
 description: 이 마이그레이션 가이드에는 Az 버전 3.0 릴리스의 Azure PowerShell에 대한 호환성이 손상되는 변경 목록이 나와 있습니다.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 11/04/2019
-ms.openlocfilehash: e88752e0c997efc4f49161e358072803cb63450a
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 727a74ef9cd0f6e1bf93b65c4776816c1aa23334
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81445529"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89241715"
 ---
 # <a name="migration-guide-for-az-300"></a>Az 3.0.0 마이그레이션 가이드
 

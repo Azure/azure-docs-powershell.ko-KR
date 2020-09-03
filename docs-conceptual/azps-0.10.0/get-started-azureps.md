@@ -4,12 +4,13 @@ description: ''
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 01/17/2020
-ms.openlocfilehash: c47395e4291ba61e929511db1273cafac9d289f0
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: c00e38e5ef381e4d3454aa026a6d05b8df1bec60
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387856"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89241916"
 ---
 # <a name="get-started-with-azure-powershell"></a>Azure PowerShell 시작
 

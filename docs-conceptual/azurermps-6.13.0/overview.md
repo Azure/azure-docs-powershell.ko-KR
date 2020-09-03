@@ -4,16 +4,17 @@ description: 설치 및 구성에 대한 링크를 포함한 Azure PowerShell �
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 12/20/2018
-ms.openlocfilehash: 0ebbb504111c54fb42415f4084ba6828d47958d2
-ms.sourcegitcommit: 7546b8bcca0a6381248ecbb9d9bd6b2ef34b70e6
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 5b5d3a9ff1ebdd5b170d83510300b310e2061887
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88584410"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89242225"
 ---
 # <a name="overview-of-azure-powershell"></a>Azure PowerShell 개요
 
-[!INCLUDE[az-replacing-azurerm](../includes/az-replacing-azurerm.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 Azure PowerShell은 Azure 리소스를 관리하기 위해 [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) 모델을 사용하는 cmdlet 집합을 제공합니다. [Azure Cloud Shell](/azure/cloud-shell/overview)과 함께 브라우저에서 사용하거나 로컬 컴퓨터에 설치하여 PowerShell 세션에서 사용할 수 있습니다.
 

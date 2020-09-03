@@ -4,12 +4,13 @@ description: PowerShellGet을 사용하지 않고 MSI를 사용하여 Azure Powe
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/10/2020
-ms.openlocfilehash: 07abfc9a4277c0d658830c397ad5c1abfbe95abe
-ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 33d9214544ddb126b717685f9e7986bed926b149
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84122216"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89240695"
 ---
 # <a name="install-azure-powershell-on-windows-with-msi"></a>MSI로 Windows에 Azure PowerShell 설치
 

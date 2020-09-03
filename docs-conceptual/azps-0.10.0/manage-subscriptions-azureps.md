@@ -4,12 +4,13 @@ description: Azure PowerShell을 사용하여 Azure 구독 관리
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 02/04/2019
-ms.openlocfilehash: 2fbf4387bb6a3b70a95bf607e3a24d61539e5810
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: cfe5833bd8bbfac53f65695f8bdfbd7b946a8852
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387839"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89241868"
 ---
 # <a name="use-multiple-azure-subscriptions"></a>여러 Azure 구독 사용
 

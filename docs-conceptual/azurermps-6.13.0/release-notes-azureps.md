@@ -5,16 +5,17 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: ''
 ms.date: 08/28/2018
-ms.openlocfilehash: 8aa0462af97877e0d20fe898ddd927a6d2850dea
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 189b360f8825b7de93b67b0b2cbe670d00187327
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387329"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89241358"
 ---
 # <a name="release-notes"></a>릴리스 정보
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 
@@ -46,7 +47,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 #### <a name="azurermnetwork"></a>AzureRM.Network
 * New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError cmdlet 추가
 * 지원되는 AzureFirewall 네트워크 프로토콜에 ICMP 다시 추가
-* Test-AzureRmNetworkWatcherConnectivity cmdlet을 업데이트하여 대상 ID, 주소 및 포트 유효성 검사를 추가합니다. 
+* Test-AzureRmNetworkWatcherConnectivity cmdlet을 업데이트하여 대상 ID, 주소 및 포트 유효성 검사를 추가합니다.
 * VirtualNetwork 맵의 메모리 사용 문제 해결
 
 #### <a name="azurermrecoveryservicesbackup"></a>AzureRM.RecoveryServices.Backup
@@ -231,14 +232,14 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 #### <a name="azurermprofile"></a>AzureRM.Profile
 * 스토리지 일반 코드에 대한 약간의 변경
 * 전체 매개 변수 형식을 포함하도록 도움말 파일이 업데이트되었습니다.
-* -ServicePrincipal을 필수가 아닌 것으로 ServicePrincipalCertificateWithSubscriptionId 매개변수 집합에서 변경 
+* -ServicePrincipal을 필수가 아닌 것으로 ServicePrincipalCertificateWithSubscriptionId 매개변수 집합에서 변경
 
 #### <a name="azurestorage"></a>Azure.Storage
-* OAuth를 사용하여 스토리지 컨텍스트를 만드는 것을 지원합니다. 
+* OAuth를 사용하여 스토리지 컨텍스트를 만드는 것을 지원합니다.
     - New-AzureStorageContext
 
 #### <a name="azurermcdn"></a>AzureRM.Cdn
-* Cdn 가격 책정 sku에서 Standard_Microsoft를 추가했습니다. 
+* Cdn 가격 책정 sku에서 Standard_Microsoft를 추가했습니다.
 
 #### <a name="azurermcompute"></a>AzureRM.Compute
 * Keyvault 및 Storage에서 종속성을 일반 종속성으로 이동
@@ -349,7 +350,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 * 버전 필드를 PSSignalRResource 개체에 추가하고 연결 문자열을 PSSignalRKeys개체에 추가합니다.
 
 #### <a name="azurermstorage"></a>AzureRM.Storage
-* AzureRm.Storage에서 불변성 정책 지원 
+* AzureRm.Storage에서 불변성 정책 지원
     - Remove-AzureRmStorageAccountNetworkRule
     - Get-AzureRmStorageContainer
     - Update-AzureRmStorageContainer
@@ -685,7 +686,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 * New-AzureRmDisk에 대한 예제 업데이트
 * 'New-AzureRmVM'에 대한 예제 추가
 * Set-AzureRmVMOSDisk에 대한 설명 업데이트
-* Set-AzureRmVMBginfoExtension 맞춤법 및 접두사를 수정하도록 예제 1을 업데이트합니다. 
+* Set-AzureRmVMBginfoExtension 맞춤법 및 접두사를 수정하도록 예제 1을 업데이트합니다.
 
 #### <a name="azurermdatafactoryv2"></a>AzureRM.DataFactoryV2
 * ADF.Net SDK 버전을 1.1.0으로 업데이트했습니다.
@@ -897,7 +898,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 * 도움말 파일 내 -Permissions 매개 변수에 대한 추가 정보가 추가됨
 
 #### <a name="azurermcompute"></a>AzureRM.Compute
-* 'Get-AzureRmVmDiskEncryptionStatus'가 데이터 디스크가 없는 VM에 대해 관찰된 문제를 해결 
+* 'Get-AzureRmVmDiskEncryptionStatus'가 데이터 디스크가 없는 VM에 대해 관찰된 문제를 해결
 * Compute 클라이언트 라이브러리 버전을 업데이트하여 다음 cmdlet 수정
     - Grant-AzureRmDiskAccess
     - Grant-AzureRmSnapshotAccess
@@ -1020,8 +1021,8 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 
 #### <a name="azurermdatalakestore"></a>AzureRM.DataLakeStore
 * Export-AzureRmDataLakeStoreChildItemProperties에 대한 예제 수정
-* Set-AzureRmDataLakeStoreItemAclEntry에서 재귀 사례에 대한 null 매개 변수 예외 수정 
-* Set-AzureRmDataLakeStoreItemAclEntry, Set-AzureRmDataLakeStoreItemAcl, Remove-AzureRmDataLakeStoreItemAclEntry에 대한 도움말 파일 수정 
+* Set-AzureRmDataLakeStoreItemAclEntry에서 재귀 사례에 대한 null 매개 변수 예외 수정
+* Set-AzureRmDataLakeStoreItemAclEntry, Set-AzureRmDataLakeStoreItemAcl, Remove-AzureRmDataLakeStoreItemAclEntry에 대한 도움말 파일 수정
 
 #### <a name="azurermnetwork"></a>AzureRM.Network
 * 18.0.0-preview에서 19.0.0-preview로 네트워크 SDK 버전 업그레이드
@@ -1041,7 +1042,7 @@ Azure PowerShell에 대한 릴리스의 변경 내용 목록입니다.
 * AuditActions 또는 AuditActionGroups를 제거할 수 있도록 업데이트된 감사 cmdlet
 * 'Azure 복구 서비스 자격 증명 모음을 사용하여 장기 보존 정책을 구성하면 정책이 더 이상 지원되지 않습니다. 새로운 유연 보유 정책으로 요청을 제출하십시오.'라는 메시지와 함께 명령이 실패하는 새로운 유연 보유 정책을 설정할 때 Set-AzureRmSqlDatabaseBackupLongTermRetentionPolicy의 문제 수정
 * Azure SQL Database/ElasticPool Creation/Update 관련 cmdlet을 모두 업데이트하여 규모 및 계층 관련 속성에 대한 SKU 속성을 지원하는 새 데이터베이스 API를 사용합니다.
-* 업데이트된 cmdlet는 다음과 같습니다. 
+* 업데이트된 cmdlet는 다음과 같습니다.
     - New-AzureRmSqlDatabase; Set-AzureRmSqlDatabase
     - New-AzureRmSqlElasticPool; Set-AzureRmSqlElasticPool
     - New-AzureRmSqlDatabaseCopy

@@ -4,12 +4,13 @@ description: Azure PowerShell 사용자나 서비스 주체로 로그인 또는 
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/04/2019
-ms.openlocfilehash: 2d931e39d3332cd7ad3e63314b5f4015abd28c83
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 8dd0048a40f505522e84e5bd13e2cac6436fbc1f
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83386241"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89241086"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Azure PowerShell로 로그인
 

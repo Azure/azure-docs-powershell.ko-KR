@@ -4,12 +4,13 @@ description: Azure PowerShell을 처음으로 설치하고 구성하는 방법�
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/06/2017
-ms.openlocfilehash: 8a04684e644fedf12613341bec99ab3a27900d7e
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 286288f83a0ad0b486cccb3543858c173a8eb087
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83384762"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89241324"
 ---
 # <a name="installing-the-azure-powershell-service-management-module"></a>Azure PowerShell Service Management 모듈 설치
 
