@@ -4,12 +4,13 @@ description: 이 마이그레이션 가이드에는 Azure PowerShell Az 버전 1
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2019
-ms.openlocfilehash: 6c2d681144fe561e734a247c44046e3dadb78083
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: ae2539a09b93fb482ed3f8a363c7a0a66e02a412
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387448"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89244061"
 ---
 # <a name="breaking-changes-for-az-100"></a>Az 1.0.0의 호환성이 손상되는 변경
 

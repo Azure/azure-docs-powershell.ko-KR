@@ -4,12 +4,13 @@ description: PowerShellGet으로 Azure PowerShell을 설치 하는 방법
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/22/2019
-ms.openlocfilehash: 88df7d916dd234c51d8982fb63547b5147f9cde8
-ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 6198ddb5169e7db4f6f2fd578570b19ca73a07e1
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84121606"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89244197"
 ---
 # <a name="install-azure-powershell"></a>Azure Powershell 설치
 

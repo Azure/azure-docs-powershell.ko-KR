@@ -4,16 +4,17 @@ description: MSI 패키지 또는 웹 플랫폼 설치 관리자를 사용하여
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/06/2017
-ms.openlocfilehash: 3f8963c98b26f971c1259dc89d5da1f35ce3015a
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 3a52201f6fd45de171d6a6b1088e12eb204192ae
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83386700"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89243959"
 ---
 # <a name="other-installation-methods"></a>다른 설치 방법
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 Azure PowerShell에는 여러 설치 방법이 있습니다. PowerShell 갤러리와 PowerShellGet을 사용하는 것이 좋습니다. Azure PowerShell은 웹 플랫폼 설치 관리자(WebPI)를 사용하거나 GitHub에서 사용할 수 있는 MSI 파일을 사용하여 Windows에 설치할 수 있습니다.
 

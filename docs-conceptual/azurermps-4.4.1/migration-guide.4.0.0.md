@@ -4,16 +4,17 @@ description: 이 마이그레이션 가이드에는 Azure PowerShell 버전 4 �
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/01/2018
-ms.openlocfilehash: 47d7ab67a6b1d092bb07405e7dc925d844cac5ab
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 3e5be2d8279b28e683fbe8a03b812c658fcecf33
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83386717"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89243976"
 ---
 # <a name="breaking-changes-for-microsoft-azure-powershell-400"></a>Microsoft Azure PowerShell 4.0.0의 주요 변경 내용
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 이 문서는 Microsoft Azure PowerShell cmdlet의 소비자를 위한 주요 변경 내용 알림 및 마이그레이션 가이드 역할을 합니다. 각 섹션에서는 주요 변경에 대한 원동력과 최소 저항의 마이그레이션 경로에 대해 설명합니다. 심층적인 맥락에서는 각 변경 내용과 관련된 끌어오기 요청을 참조하세요.
 
@@ -64,15 +65,15 @@ $vm.NetworkProfile.NetworkInterfaces | Select -Property Id
 ## <a name="breaking-changes-to-insights-cmdlets"></a>Insights cmdlet의 주요 변경 내용
 
 이 릴리스에는 다음과 같은 cmdlet이 적용됩니다.
-    
+
 ### <a name="get-azurermusage"></a>Get-AzureRmUsage
 - 이 cmdlet은 더 이상 사용되지 않습니다.
 
 ### <a name="remove-azurermalertrule"></a>Remove-AzureRmAlertRule
 - 이 cmdlet의 출력이 단일 개체가 있는 목록에서 단일 개체로 변경되었습니다. 이 개체는 요청 ID와 상태 코드를 포함합니다.
-    
+
 ```powershell-interactive
-# Old  
+# Old
 $s1 = Remove-AzureRmAlertRule -ResourceGroup $resourceGroup -name chiricutin
 if ($s1 -ne $null)
 {
@@ -85,20 +86,20 @@ $s1 = Remove-AzureRmAlertRule -ResourceGroup $resourceGroup -name chiricutin
 $r = $s1.RequestId
 $s = $s1.StatusCode
 ```
-    
+
 ### <a name="add-azurermlogalertrule"></a>Add-AzureRmLogAlertRule
 - 이 cmdlet은 더 이상 사용되지 않습니다.
-    
+
 ### <a name="get-azurermalertrule"></a>Get-AzureRmAlertRule
 - 이 cmdlet의 출력(개체 목록)의 각 요소는 평면화되어 `{ Id, Location, Name, Tags, Properties }` 구조의 개체를 반환하는 대신 `{ Id, Location, Name, Tags, Type, Description, IsEnabled, Condition, Actions, LastUpdatedTime, ...}` 구조의 개체를 반환합니다. 이 개체는 Azure 리소스의 모든 특성과 최상위 수준에 있는 AlertRuleResource의 모든 특성을 포함합니다.
-    
+
 ```powershell-interactive
 # Old
 $rules = Get-AzureRmAlertRule -ResourceGroup $resourceGroup
 if ($rules -and $rules.count -ge 1)
 {
     Write-Host -fore red "Error updating alert rule"
-      
+
     Write-Host $rules(0).Id
     Write-Host $rules(0).Properties.IsEnabled
     Write-Host $rules(0).Properties.Condition
@@ -109,23 +110,23 @@ $rules = Get-AzureRmAlertRule -ResourceGroup $resourceGroup
 if ($rules -and $rules.count -ge 1)
 {
     Write-Host -fore red "Error updating alert rule"
- 
+
     Write-Host $rules(0).Id
-      
+
     # Properties will remain for a while
     Write-Host $rules(0).Properties.IsEnabled
-      
+
     # But the properties will be at the top level too. Later Properties will be removed
     Write-Host $rules(0).IsEnabled
     Write-Host $rules(0).Condition
 }
 ```
-    
+
 ### <a name="get-azurermautoscalesetting"></a>Get-AzureRmAutoscaleSetting
 - `AutoscaleSettingResourceName` 필드는 항상 `Name` 필드와 동일한 값을 포함하므로 더 이상 사용되지 않습니다.
 
 ```powershell-interactive
-# Old  
+# Old
 $s1 = Get-AzureRmAutoscaleSetting -ResourceGroup $resourceGroup -Name MySetting
 if ($s1.AutoscaleSettingResourceName -ne $s1.Name)
 {
@@ -134,16 +135,16 @@ if ($s1.AutoscaleSettingResourceName -ne $s1.Name)
 
 # New
 $s1 = Get-AzureRmAutoscaleSetting -ResourceGroup $resourceGroup -Name MySetting
-    
+
 # There won't be a AutoscaleSettingResourceName
 Write-Host $s1.Name
 ```
-    
+
 ### <a name="remove-azurermlogprofile"></a>Remove-AzureRmLogProfile
 - 이 cmdlet의 출력이 `Boolean`에서 `RequestId` 및 `StatusCode`를 포함하는 개체로 변경됩니다.
 
 ```powershell-interactive
-# Old  
+# Old
 $s1 = Remove-AzureRmLogProfile -Name myLogProfile
 if ($s1 -eq $true)
 {
@@ -159,12 +160,12 @@ $s1 = Remove-AzureRmLogProfile -Name myLogProfile
 $r = $s1.RequestId
 $s = $s1.StatusCode
 ```
-    
+
 ### <a name="add-azurermlogprofile"></a>Add-AzureRmLogProfile
 - 이 cmdlet의 출력이 요청 ID, 상태 코드를 포함하는 개체에서, 업데이트되거나 새로 만든 리소스로 변경됩니다.
-    
+
 ```powershell-interactive
-# Old  
+# Old
 $s1 = Add-AzureRmLogProfile -Name default -StorageAccountId /subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/JohnKemTest/providers/Microsoft.Storage/storageAccounts/johnkemtest8162 -Locations Global -categ Delete, Write, Action -retention 3
 $r = $s1.ServiceBusRuleId
 
@@ -173,9 +174,9 @@ $s1 = Add-AzureRmLogProfile -Name default -StorageAccountId /subscriptions/df602
 $r = $s1.RequestId
 $s = $s1.StatusCode
 $a = $s1.NewResource.ServiceBusRuleId
-    
+
 ```
-    
+
 ### <a name="set-azurermdiagnosticsettings"></a>Set-AzureRmDiagnosticSettings
 - 이 명령은 `Update-AzureRmDiagnosticSettings`로 이름이 변경됩니다.
 
@@ -299,7 +300,7 @@ Remove-AzureRmSqlDatabaseFailoverGroup -ResourceGroupName rg -ServerName server1
     - `Set-AzureStorageBlobContent`
     - `Start-AzureStorageBlobCopy`
     - `Stop-AzureStorageBlobCopy`
-    
+
 ### <a name="azurestoragecontainercloudblobcontainerserviceclient"></a>AzureStorageContainer.CloudBlobContainer.ServiceClient
 - 이 형식에서 다음과 같은 속성이 제거되었습니다(_참고_: `DefaultRequestOptions` 속성에서 확인할 수 있음).
     - `LocationMode`
@@ -311,7 +312,7 @@ Remove-AzureRmSqlDatabaseFailoverGroup -ResourceGroupName rg -ServerName server1
     - `Get-AzureStorageContainer`
     - `New-AzureStorageContainer`
     - `Set-AzureStorageContainerAcl`
-    
+
 ### <a name="azurestoragequeuecloudqueueserviceclient"></a>AzureStorageQueue.CloudQueue.ServiceClient
 - 이 형식에서 다음과 같은 속성이 제거되었습니다(_참고_: `DefaultRequestOptions` 속성에서 확인할 수 있음).
     - `LocationMode`
@@ -321,7 +322,7 @@ Remove-AzureRmSqlDatabaseFailoverGroup -ResourceGroupName rg -ServerName server1
 - 이 변경 사항은 다음 cmdlet에 적용됩니다.
     - `Get-AzureStorageQueue`
     - `New-AzureStorageQueue`
-    
+
 ### <a name="azurestoragetablecloudtableserviceclient"></a>AzureStorageTable.CloudTable.ServiceClient
 - 이 형식에서 다음과 같은 속성이 제거되었습니다(_참고_: `DefaultRequestOptions` 속성에서 확인할 수 있음).
     - `LocationMode`
@@ -332,16 +333,16 @@ Remove-AzureRmSqlDatabaseFailoverGroup -ResourceGroupName rg -ServerName server1
 - 이 변경 사항은 다음 cmdlet에 적용됩니다.
     - `Get-AzureStorageTable`
     - `New-AzureStorageTable`
-    
+
 ```powershell-interactive
 # Old
-$LocationMode = (Get-AzureStorageBlob -Container $containername)[0].ICloudBlob.ServiceClient.LocationMode       
+$LocationMode = (Get-AzureStorageBlob -Container $containername)[0].ICloudBlob.ServiceClient.LocationMode
 $ParallelOperationThreadCount = (Get-AzureStorageContainer -Container $containername).CloudBlobContainer.ServiceClient.ParallelOperationThreadCount
 $PayloadFormat = (Get-AzureStorageTable -Name $tablename).CloudTable.ServiceClient.PayloadFormat
 $RetryPolicy = (Get-AzureStorageQueue -Name $queuename).CloudQueue.ServiceClient.RetryPolicy
 
 # New
-$LocationMode = (Get-AzureStorageBlob -Container $containername)[0].ICloudBlob.ServiceClient.DefaultRequestOptions.LocationMode     
+$LocationMode = (Get-AzureStorageBlob -Container $containername)[0].ICloudBlob.ServiceClient.DefaultRequestOptions.LocationMode
 $ParallelOperationThreadCount = (Get-AzureStorageContainer -Container $containername).CloudBlobContainer.ServiceClient.DefaultRequestOptions.ParallelOperationThreadCount
 $PayloadFormat = (Get-AzureStorageTable -Name $tablename).CloudTable.ServiceClient.DefaultRequestOptions.PayloadFormat
 $RetryPolicy = (Get-AzureStorageQueue -Name $queuename).CloudQueue.ServiceClient.DefaultRequestOptions.RetryPolicy
@@ -412,7 +413,7 @@ $type = (Get-AzureRmContext).Account.AccountType
 $type = (Set-AzureRmContext -SubscriptionId xxx-xxx-xxx-xxx).Account.AccountType
 $type = (Add-AzureRmAccount).Context.Account.AccountType
 
-# New 
+# New
 $type = (Get-AzureRmContext).Account.Type
 $type = (Set-AzureRmContext -SubscriptionId xxx-xxx-xxx-xxx).Account.Type
 $type = (Add-AzureRmAccount).Context.Account.Type
