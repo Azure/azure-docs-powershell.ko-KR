@@ -5,12 +5,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/23/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 5f42bbb65313d1caa839443d463b61cc743ca0a5
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.openlocfilehash: c64541beb5eb0d3db38932fb3915de865919641b
+ms.sourcegitcommit: 2f1e3c275626fba1c4275cae8ef1d13b11f55735
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89240559"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89449962"
 ---
 # <a name="migration-guide-for-az-410"></a>Az 4.1.0 마이그레이션 가이드
 
@@ -135,19 +135,19 @@ ms.locfileid: "89240559"
 
 ### `Get-AzApiManagementProperty`
 
-`Get-AzApiManagementProperty` cmdlet이 `Get-AzureApiManagementNamedValue`로 대체되었습니다.
+`Get-AzApiManagementProperty` cmdlet이 `Get-AzApiManagementNamedValue`로 대체되었습니다.
 
 ### `New-AzApiManagementProperty`
 
-`New-AzApiManagementProperty` cmdlet이 `New-AzureApiManagementNamedValue`로 대체되었습니다.
+`New-AzApiManagementProperty` cmdlet이 `New-AzApiManagementNamedValue`로 대체되었습니다.
 
 ### `Remove-AzApiManagementProperty`
 
-`Remove-AzApiManagementProperty` cmdlet이 `Remove-AzureApiManagementNamedValue`로 대체되었습니다.
+`Remove-AzApiManagementProperty` cmdlet이 `Remove-AzApiManagementNamedValue`로 대체되었습니다.
 
 ### `Set-AzApiManagementProperty`
 
-`Set-AzApiManagementProperty` cmdlet이 `Set-AzureApiManagementNamedValue`로 대체되었습니다.
+`Set-AzApiManagementProperty` cmdlet이 `Set-AzApiManagementNamedValue`로 대체되었습니다.
 
 ## <a name="azbatch"></a>Az.Batch
 

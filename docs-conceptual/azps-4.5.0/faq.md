@@ -4,12 +4,13 @@ description: Azure PowerShell에 대한 질문과 대답입니다.
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/17/2020
-ms.openlocfilehash: ac7a15121a19fa9c208163dad41b1aeed1981080
-ms.sourcegitcommit: bd7edc4d48b6a8a8bec864edc876e16af0a49505
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: b436f00ccef779464a555cd787a9ab0adcc970ce
+ms.sourcegitcommit: 2f1e3c275626fba1c4275cae8ef1d13b11f55735
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512976"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89449945"
 ---
 # <a name="frequently-asked-questions-about-azure-powershell"></a>Azure PowerShell에 대한 질문과 대답
 

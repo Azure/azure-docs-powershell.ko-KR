@@ -1,18 +1,16 @@
 ---
 title: Azure PowerShell cmdlet 쿼리 결과
 description: Azure에서 리소스에 대한 쿼리 및 결과 형식을 지정하는 방법입니다.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 01/10/2019
-ms.openlocfilehash: 9141f5640467722608cb7748f425ce3942668fb8
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 2754df5132ca9d528217fa5caad95b7f59cc8215
+ms.sourcegitcommit: 2f1e3c275626fba1c4275cae8ef1d13b11f55735
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81740425"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89449979"
 ---
 # <a name="query-output-of-azure-powershell"></a>Azure PowerShell 쿼리 출력 
 
