@@ -5,14 +5,176 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/10/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 52129f31202a8ae04bf80988b5aa07b12fe081b8
+ms.openlocfilehash: 98bae70dbd61c74aa92e69cb67afc89ebae23f70
 ms.sourcegitcommit: 15f21c40dcb7610e2fbaaabf264ad925e4224500
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913385"
+ms.locfileid: "90928380"
 ---
 # <a name="azure-powershell-release-notes"></a>Azure PowerShell 릴리스 정보
+
+## <a name="470---september-2020"></a>4.7.0 - 2020년 9월
+#### <a name="azaccounts"></a>Az.Accounts
+* 예정된 호환성이 손상되는 변경 메시지의 형식이 지정됨
+* Azure.Core가 1.4.1로 업데이트됨
+
+#### <a name="azaks"></a>Az.Aks
+* 'New-AzAksCluster', 'Set-AzAksCluster' 및 'New-AzAksNodePool'에 대한 클라이언트 쪽 매개 변수 유효성 검사 논리가 추가되었습니다. [#12372]
+* 'New-AzAksCluster'에서 추가 항목에 대한 지원이 추가되었습니다. [#11239]
+* 추가 항목에 대한 'Enable-AzAksAddOn' 및 'Disable-AzAksAddOn' cmdlet이 추가되었습니다. [#11239]
+* 'New-AzAksCluster'에 대한 매개 변수 'GenerateSshKey'가 추가되었습니다. [#12371]
+* API 버전이 2020-06-01로 업데이트되었습니다.
+
+#### <a name="azcognitiveservices"></a>Az.CognitiveServices
+* 특정 API에 대한 추가 법률 용어를 표시했습니다.
+
+#### <a name="azcompute"></a>Az.Compute
+* 'New-AzVmDiskEncryptionSetConfig'에 '-EncryptionType' 선택적 매개 변수가 추가됨
+* 새 리소스 종류에 대한 새 cmdlet: DiskAccess 'Get-AzDiskAccess', 'New-AzDiskAccess', 'Get-AzDiskAccess'
+* 'New-AzSnapshotConfig'에 선택적 매개 변수 '-DiskAccessId' 및 '-NetworkAccessPolicy'가 추가됨
+* 'New-AzDiskConfig'에 선택적 매개 변수 '-DiskAccessId' 및 '-NetworkAccessPolicy'가 추가됨
+* VirtualMachine 인스턴스 보기에 'PatchStatus' 속성이 추가됨
+* 가상 머신의 인스턴스 보기에 'VMHealth' 속성이 추가됨. 이 속성은 'Get-AzVm'이 '-Status'로 호출될 때 반환되는 개체
+* 'Get-AzVM' 및 'Get-AzVmss' 인스턴스 보기에 'AssignedHost' 필드가 추가됨 필드는 가상 머신 인스턴스의 리소스 ID를 표시합니다.
+* 선택적 매개 변수 '-SupportAutomaticPlacement'가 'New-AzHostGroup'에 추가됨 
+* '-HostGroupId' 매개 변수가 'New-AzVm' 및 'New-AzVmss'에 추가됨
+
+#### <a name="azdatafactory"></a>Az.DataFactory
+* ADF .Net SDK 버전이 4.11.0으로 업데이트됨
+
+#### <a name="azeventhub"></a>Az.EventHub
+* 새 클러스터 cmdlet 추가됨 - 'New-AzEventHubCluster', 'Set-AzEventHubCluster', 'Get-AzEventHubCluster', 'Remove-AzEventHubCluster', 'Get-AzEventHubClustersAvailableRegions'
+* #10722 문제 해결됨: AuthorizationRule 권한에 'Listen'만 할당하는 문제가 해결되었습니다.
+
+#### <a name="azfunctions"></a>Az.Functions
+* v2 Functions를 지원하지 않는 지역에서 생성하는 기능이 제거되었습니다.
+* PowerShell 6.2가 사용되지 않음 사용자가 PowerShell 6.2 함수 앱을 만들 때 PowerShell 7.0 함수 앱을 만들도록 권장하는 경고가 추가되었습니다.
+
+#### <a name="azhdinsight"></a>Az.HDInsight
+* 자동 크기 조정 구성을 사용하여 클러스터 만들기 지원
+    - cmdlet 'New-AzHDInsightCluster'에 새 매개 변수 'AutoscaleConfiguration' 추가
+* 운영 클러스터의 자동 크기 조정 구성 지원됨
+    - 새 cmdlet 'Get-AzHDInsihgtClusterAutoscaleConfiguration' 추가
+    - 새 cmdlet 'New-AzHDInsihgtClusterAutoscaleConfiguration' 추가
+    - 새 cmdlet 'Set-AzHDInsihgtClusterAutoscaleConfiguration' 추가
+    - 새 cmdlet 'Remove-AzHDInsihgtClusterAutoscaleConfiguration' 추가
+    - 새 cmdlet 'New-AzHDInsihgtClusterAutoscaleScheduleCondition' 추가
+
+#### <a name="azkeyvault"></a>Az.KeyVault
+* RBAC 권한 부여에 대한 지원 추가됨 [#10557]
+* 'Set-AzKeyVaultAccessPolicy'에서 향상된 오류 처리 [#4007]
+
+#### <a name="azkusto"></a>Az.Kusto
+* 'Az.Kusto' 모듈의 일반 공급
+
+#### <a name="aznetwork"></a>Az.Network
+* [호환성이 손상되는 변경] 리소스 가상 라우터 및 가상 허브에 맞게 아래 cmdlet이 업데이트됨
+    - 'New-AzVirtualRouter': 
+        - IP 구성 자식 리소스를 지원하는 -HostedSubnet 매개 변수가 추가됨
+        - -HostedGateway 및 -HostedGatewayId 삭제됨
+    - 'Get-AzVirtualRouter':
+        - 구독 수준 매개 변수 집합이 추가됨
+    - 'Remove-AzVirtualRouter'
+    - 'Add-AzVirtualRouterPeer'
+    - 'Get-AzVirtualRouterPeer'
+    - 'Remove-AzVirtualRouterPeer'
+* Azure Express 경로 포트에 대해 새 cmdlet이 추가됨
+    - 'New-AzExpressRoutePortLOA'
+* VirtualNetwork 피어링 리소스에 RemoteBgpCommunities 속성이 추가됨
+* 'New-AzLoadBalancerFrontendIpConfig', 'New-AzPublicIpAddress' 및 'New-AzPublicIpPrefix'에 대한 경고 메시지를 수정했습니다.
+* 'Get-AzVpnGateway' 출력에 VpnGatewayIpConfigurations가 추가됨
+* 'Set-AzApplicationGatewaySslCertificate'의 버그 수정됨 [#9488]
+* 'AzureFirewall'에 'AllowActiveFTP' 매개 변수가 추가됨
+* 기능에 대한 새로운 명령이 업데이트됨: VirtualWan P2SVpnGateway에서 인터넷 보안 설정 사용/제거
+- 'New-AzP2sVpnGateway' 업데이트됨: 고객이 P2SVpnGateway에서 인터넷 보안을 사용하도록 true를 설정할 수 있는 선택적 스위치 매개 변수 'EnableInternetSecurityFlag'가 추가되었으며, 이는 지점 및 사이트 간 클라이언트에 적용됩니다.
+- 'Update-AzP2sVpnGateway' 업데이트됨: 고객이 P2SVpnGateway에서 인터넷 보안을 활성화/비활성화하도록 true/false를 설정할 수 있는 선택적 스위치 매개 변수 'EnableInternetSecurityFlag' 또는 'DisableInternetSecurityFlag'가 추가되었으며, 이는 지점 및 사이트 간 클라이언트에 적용됩니다.
+* 문제 해결을 위해 VirtualWan P2SVPNGateway를 재설정/재부팅할 수 있도록 새 cmdlet 'Reset-AzP2sVpnGateway'를 추가했습니다.
+* 문제 해결을 위해 VirtualWan VpnGateway를 재설정/재부팅할 수 있도록 새 cmdlet 'Reset-AzVpnGateway'를 추가했습니다.
+* 'Set-AzVirtualNetworkSubnetConfig' 업데이트됨
+    - 매개 변수에 명시적으로 설정된 경우 서브넷의 NSG 및 라우팅 테이블 속성을 null로 설정 [# 1548][# 9718]
+
+#### <a name="azrecoveryservices"></a>Az.RecoveryServices
+* 워크로드 백업 항목에 대한 삭제 상태가 수정되었습니다.
+
+#### <a name="azresources"></a>Az.Resources
+* Set-AzRoleAssignment에 대한 누락된 검사 추가됨
+* 'Get-AzResourceGroupDeploymentOperation'의 'SubscriptionId' 매개 변수에 호환성이 손상되는 변경 특성이 추가됨
+* 마지막으로 'Ignore' 리소스 변경을 표시하도록 ARM 템플릿 What-If cmdlet이 업데이트됨
+* 배포 cmdlet에 대한 보안 및 배열 매개 변수 직렬화 문제가 해결됨 [#12773]
+
+#### <a name="azservicefabric"></a>Az.ServiceFabric
+* 관리형 클러스터 및 노드 유형에 대해 다음과 같은 새 cmdlet가 추가됨
+    - 'New-AzServiceFabricManagedCluster'
+    - 'Get-AzServiceFabricManagedCluster'
+    - 'Set-AzServiceFabricManagedCluster'
+    - 'Remove-AzServiceFabricManagedCluster'
+    - 'Add-AzServiceFabricManagedClusterClientCertificate'
+    - 'Remove-AzServiceFabricManagedClusterClientCertificate'
+    - 'New-AzServiceFabricManagedNodeType'
+    - 'Get-AzServiceFabricManagedNodeType'
+    - 'Set-AzServiceFabricManagedNodeType'
+    - 'Remove-AzServiceFabricManagedNodeType'
+    - 'Add-AzServiceFabricManagedNodeTypeVMExtension'
+    - 'Add-AzServiceFabricManagedNodeTypeVMSecret'
+    - 'Remove-AzServiceFabricManagedNodeTypeVMExtension'
+    - 'Restart-AzServiceFabricManagedNodeTyp'
+* Service Fabric SDK를 버전 1.2.0으로 업그레이드했으며, 현재 모델에서는 서비스 패브릭 리소스 제공자 api-version 2020-03-01을, 관리형 클러스터에서는 2020-01-01-preview를 사용합니다.
+
+#### <a name="azsql"></a>Az.Sql
+* BackupStorageRedundancy가 'New-AzSqlInstance' 및 'Get-AzSqlInstance'에 추가됨
+* 'Get-AzSqlServerActiveDirectoryOnlyAuthentication' cmdlet이 추가됨
+* 'Enable-AzSqlServerActiveDirectoryOnlyAuthentication' cmdlet이 추가됨
+* Force 매개 변수가 'New-AzSqlInstance'에 추가됨
+* 관리되는 데이터베이스 로그 재생 서비스용 cmdlet이 추가됨
+    - 'Start-AzSqlInstanceDatabaseLogReplay'
+    - 'Get-AzSqlInstanceDatabaseLogReplay'
+    - 'Complete-AzSqlInstanceDatabaseLogReplay'
+    - 'Stop-AzSqlInstanceDatabaseLogReplay'
+* 'Get-AzSqlInstanceActiveDirectoryOnlyAuthentication' cmdlet이 추가됨
+* 'Enable-AzSqlInstanceActiveDirectoryOnlyAuthentication' cmdlet이 추가됨
+* 'Disable-AzSqlInstanceActiveDirectoryOnlyAuthentication' cmdlet이 추가됨
+* 네트워크 격리 기능을 지원하기 위해 'New-AzSqlDatabaseImport' 및 'New-AzSqlDatabaseExport' cmdlet이 업데이트됨
+* 'New-AzSqlDatabaseImportExisting' cmdlet이 추가됨
+* 백업 스토리지 유형 사양을 지원하도록 데이터베이스 cmdlet이 업데이트됨
+* Force 매개 변수가 'New-AzSqlDatabase'에 추가됨
+* 'New-AzSqlDatabase'의 영역 선택에서 BackupStorageRedundancy 구성에 대한 경고가 추가됨
+* ResourceId 및 InputObject를 포함하도록 서버 및 인스턴스에 대한 ActiveDirectoryOnlyAuthentication cmdlet이 업데이트됨
+
+#### <a name="azstorage"></a>Az.Storage
+* Microsoft.Azure.Storage.DataMovement 2.0.0로 업그레이드하여 blob 업로드 실패 수정됨 [#12220]
+* 지정 시간 복원 지원
+    - 'Enable-AzStorageBlobRestorePolicy'
+    - 'Disable-AzStorageBlobRestorePolicy'
+    - 'New-AzStorageBlobRangeToRestore'
+    - 'Restore-AzStorageBlobRange'
+* -IncludeBlobRestoreStatus 매개 변수와 함께 get-AzureRMStorageAccount를 실행하여 스토리지 계정의 blob 복원 상태 가져오기 지원 
+    - 'Get-AzureRMStorageAccount'
+* 예정된 cmdlet 출력 변경에 대해 호환성이 손상되는 변경 경고 메시지가 추가됨
+    - 'Get-AzStorageContainerStoredAccessPolicy'
+    - 'Set-AzStorageContainerStoredAccessPolicy'
+    - 'Set-AzStorageAccountManagementPolicy'
+    - 'Get-AzStorageAccountManagementPolicy'
+    - 'Add-AzStorageAccountManagementPolicyAction'
+    - 'New-AzStorageAccountManagementPolicyRule'
+* Microsoft.Azure.Cosmos.Table SDK를 1.0.8로 업그레이드
+
+### <a name="thanks-to-our-community-contributors"></a>커뮤니티 기여자에게 감사드립니다.
+* Thomas Van Laere(@ThomVanL), Dockerfile-alpine-3.10 추가(#12911) 
+* Lohith Chowdary Chilukuri(@Lochiluk), Remove-AzNetworkInterfaceIpConfig.md 업데이트(#12807) 
+* Roberth Strand(@roberthstrand), Get-AzResourceGroup - 새로운 예제 및 정리(#12828) 
+* Ravi Mishra(@inmishrar), Azure 웹앱 런타임 스택을 DOTNETCORE로 업데이트(#12833) 
+* @jack-education, NSG 및 라우팅 테이블을 서브넷에서 제거할 수 있도록 Set-AzVirtualNetworkSubnetConfig를 업데이트(# 12351) 
+* @hagop-globanet, Add-AzApplicationGatewayCustomError.md 업데이트(#12784) 
+* Joshua Van Daalen(@greenSacrifice)
+  * 속성(Property) 철자를 속성(Property)으로 업데이트(#12821) 
+  * New-AzResourceLock.md 예제 업데이트(#12806)
+* Eragon Riddle(@eragonriddle), 예제에서 매개 변수 필드 이름 수정(#12825) 
+* @rossifumax, New-AzConfigurationAssignment.md의 오타 수정(#12701)
+
+## <a name="461---august-2020"></a>4.6.1 - 2020년 8월
+#### <a name="azcompute"></a>Az.Compute
+* 'New-AzVm'에서 '-EncryptionAtHost' 매개 변수를 패치하여 기본값인 false가 제거됨[#12776]
 
 ## <a name="460---august-2020"></a>4.6.0 - 2020년 8월
 #### <a name="azaccounts"></a>Az.Accounts
@@ -55,7 +217,7 @@ ms.locfileid: "90913385"
 * 관리 그룹 범위에서 ARM 템플릿 What-If 결과를 가져오는 'Get-AzDeploymentManagementGroupWhatIfResult'가 추가됨
 * 테넌트 범위에서 ARM 템플릿 What-If 결과를 가져오는 'Get-AzTenantWhatIfResult' 새 cmdlet이 추가됨
 * ARM 템플릿 What-If 결과를 사용하도록 'New-AzManagementGroupDeployment' 및 'New-AzTenantDeployment'에 대한 '-WhatIf' 및 '-Confirm'이 재정의됨
-* 새 배포 cmdlet에 대한 '-WhatIf' 및 '-Confirm' 동작이 $WhatIfPreference 및 $ConfirmPreference를 준수하도록 수정되었습니다.
+* 새 배포 cmdlet에 대한 '-WhatIf' 및 '-Confirm' 동작이 False를 준수하도록 수정됨 
 * '-TemplateObject' 및 'TemplateParameterObject'에 대한 직렬화 오류가 수정됨 [#1528] [#6292]
 * 예정된 출력 형식 변경을 위해 'Get-AzResourceGroupDeploymentOperation'에 호환성이 손상되는 변경 특성이 추가됨
 
