@@ -5,18 +5,22 @@ ms.date: 09/15/2020
 ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 20859d6135676a3a4fb1e9f5d66909d157b38ac6
-ms.sourcegitcommit: 15f21c40dcb7610e2fbaaabf264ad925e4224500
+ms.openlocfilehash: 7f831bdf6d6144640e036d72900958847283acf1
+ms.sourcegitcommit: 5fcf17330d6f335561640a5ee3d98c59f7baab94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90928359"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91381499"
 ---
-# <a name="uninstall-the-azure-powershell-module"></a>Azure PowerShell 모듈 제거
+# <a name="how-to-uninstall-azure-powershell-modules"></a>Azure PowerShell 모듈을 제거하는 방법
 
 이 문서에서는 Azure PowerShell의 이전 버전을 제거하거나 시스템에서 완전히 제거하는 방법을 알려줍니다. Azure PowerShell을 완전히 제거하기로 한 경우 [Send-Feedback](/powershell/module/az.accounts/send-feedback) cmdlet을 통해 몇 가지 피드백을 보내주세요. 버그가 발생하면 해결을 위해 [GitHub 문제를 제출](https://github.com/azure/azure-powershell/issues)해 주시기 바랍니다.
 
-## <a name="uninstall-the-az-powershell-module-from-msi"></a>MSI에서 Az PowerShell 모듈 제거
+## <a name="uninstall-the-az-module"></a>Az 모듈 제거
+
+시스템에 Az 모듈이 설치되어 있고 이를 제거하려는 경우 두 가지 옵션이 있습니다. 수행할 방법은 Az 모듈을 설치한 방법에 따라 달라집니다. 원래의 설치 방법을 잘 모르는 경우 먼저 제거를 위해 MSI 단계를 수행합니다.
+
+### <a name="option-1-uninstall-the-az-powershell-module-from-msi"></a>옵션 1: MSI에서 Az PowerShell 모듈 제거
 
 MSI 패키지를 사용하여 Az PowerShell 모듈을 설치한 경우 PowerShell이 아닌 Windows 시스템을 통해 제거해야 합니다.
 
@@ -27,7 +31,7 @@ MSI 패키지를 사용하여 Az PowerShell 모듈을 설치한 경우 PowerShel
 
 이 화면을 띄우면 프로그램 목록에 **Azure PowerShell** 이 보일 것입니다. 이 앱을 제거하면 됩니다. 이 프로그램이 나열되지 않으면 PowerShellGet을 통해 설치한 후 다음 지침을 따라야 합니다.
 
-## <a name="uninstall-the-az-powershell-module-from-powershellget"></a>PowerShellGet에서 Az PowerShell 모듈 제거
+### <a name="option-2-uninstall-the-az-powershell-module-from-powershellget"></a>옵션 2: PowerShellGet에서 Az PowerShell 모듈 제거
 
 Az 모듈을 제거하기 위해 [Uninstall-Module](/powershell/module/powershellget/uninstall-module) cmdlet을 사용할 수 있습니다. 그러나 `Uninstall-Module`은 모듈 중 하나만 제거합니다. Az PowerShell 모듈을 완전히 제거하려면 각 모듈을 개별적으로 제거해야 합니다. 2개 이상의 Azure PowerShell 버전을 설치한 경우 제거가 복잡할 수 있습니다.
 
@@ -174,9 +178,9 @@ $Modules | ForEach-Object {Uninstall-AzModule -Name $_.Name -Version $_.Version}
 
 ## <a name="uninstall-the-azurerm-module"></a>AzureRM 모듈을 제거합니다.
 
-시스템에 Az 모듈이 설치되어 있고 AzureRM을 제거하려는 경우 두 가지 옵션이 있습니다. 수행할 방법은 AzureRM 모듈을 설치한 방법에 따라 달라집니다. 원래의 설치 방법을 잘 모르는 경우 먼저 MSI를 제거하는 단계를 수행합니다.
+시스템에 Az 모듈이 설치되어 있고 AzureRM을 제거하려는 경우 두 가지 옵션이 있습니다. 수행할 방법은 AzureRM 모듈을 설치한 방법에 따라 달라집니다. 원래의 설치 방법을 잘 모르는 경우 먼저 제거를 위해 MSI 단계를 수행합니다.
 
-### <a name="uninstall-the-azurerm-powershell-module-from-msi"></a>MSI에서 AzureRM PowerShell 모듈 제거
+### <a name="option-1-uninstall-the-azurerm-powershell-module-from-msi"></a>옵션 1: MSI에서 AzureRM PowerShell 모듈 제거
 
 MSI 패키지를 사용하여 AzureRM PowerShell 모듈을 설치한 경우 PowerShell이 아닌 Windows 시스템을 통해 제거해야 합니다.
 
@@ -187,9 +191,17 @@ MSI 패키지를 사용하여 AzureRM PowerShell 모듈을 설치한 경우 Powe
 
 이 화면의 프로그램 목록에서 **Azure PowerShell** 또는 **Microsoft Azure PowerShell - Month Year**를 확인할 수 있습니다. 이 앱을 제거하면 됩니다. 이 프로그램이 나열되지 않으면 PowerShellGet을 통해 설치한 후 다음 지침을 따라야 합니다.
 
-### <a name="uninstall-the-azurerm-powershell-module-from-powershellget"></a>PowerShellGet에서 AzureRM PowerShell 모듈 제거
+### <a name="option-2-uninstall-the-azurerm-powershell-module-from-powershellget"></a>옵션 2: PowerShellGet에서 AzureRM PowerShell 모듈 제거
 
-AzureRM을 PowerShellGet과 함께 설치한 경우 `Az.Accounts` 모듈의 일부로 사용할 수 있는 [Uninstall-AzureRM](/powershell/module/az.accounts/uninstall-azurerm) cmdlet을 사용하여 모듈을 제거할 수 있습니다. 다음 예제는 머신에서 _모든_ AzureRM 모듈을 제거할 수 있습니다. 관리자 권한이 필요합니다.
+AzureRM을 PowerShellGet과 함께 설치한 경우 `Az.Accounts` 모듈의 일부로 사용할 수 있는 [Uninstall-AzureRM](/powershell/module/az.accounts/uninstall-azurerm) cmdlet을 사용하여 모듈을 제거할 수 있습니다.
+
+`Az.Accounts` 모듈을 사용하려면 Az 모듈이 설치되어 있어야 합니다.  AzureRM 및 Az 모듈을 동시에 설치하는 것은 지원되지 않지만 Az 모듈을 사용하여 AzureRM 모듈을 즉시 제거할 수 있습니다.  Az 모듈이 설치되어 있지 않은 경우 다음 명령을 사용하여 Az 모듈을 설치하고 AzureRM 모듈 경고를 무시할 수 있습니다.
+
+```powershell-interactive
+Install-Module -Name Az -AllowClobber -Scope CurrentUser
+```
+
+Az 모듈이 설치되면 다음 명령을 사용하여 _모든_ AzureRM 모듈을 머신에서 제거할 수 있습니다. 관리자 권한이 필요합니다.
 
 ```powershell-interactive
 Uninstall-AzureRm
