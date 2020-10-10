@@ -16,12 +16,12 @@ metadata:
   ms.technology: azure-powershell
   ms.topic: tutorial
   clicktale: true
-  ms.openlocfilehash: b8b66edda328eb108d0d8d6f7b5cec3df145ab16
-  ms.sourcegitcommit: 15f21c40dcb7610e2fbaaabf264ad925e4224500
+  ms.openlocfilehash: f0a86f5eb970528bd4119f8487f724745a6e044c
+  ms.sourcegitcommit: 1f8110a868608e6a897d1209881d4f80659a661e
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 09/22/2020
-  ms.locfileid: "90928292"
+  ms.lasthandoff: 10/02/2020
+  ms.locfileid: "91672026"
 items:
 - durationInMinutes: 1
   content: >-
@@ -128,7 +128,7 @@ items:
 
     VM이 생성될 때 사용된 매개 변수 값 및 생성된 Azure 리소스를 확인할 수 있습니다.
 
-    아래와 같이 PowerShell은 진행률 표시줄을 제거합니다.
+    PowerShell은 아래와 같이 진행률 표시줄을 표시합니다.
 
 
     ```Output
