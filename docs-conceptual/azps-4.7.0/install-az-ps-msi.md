@@ -5,12 +5,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/10/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 33d9214544ddb126b717685f9e7986bed926b149
-ms.sourcegitcommit: 15f21c40dcb7610e2fbaaabf264ad925e4224500
+ms.openlocfilehash: 193e8c5d14f1bf2fe9c84a9da2defac50be97ec7
+ms.sourcegitcommit: 3d16496984a0b9fd7631aa043726060ddae3624d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90928247"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833272"
 ---
 # <a name="install-azure-powershell-on-windows-with-msi"></a>MSI로 Windows에 Azure PowerShell 설치
 
@@ -31,7 +31,14 @@ PowerShell 5.1에서 Azure PowerShell을 사용하려면 다음을 수행합니�
 
 ## <a name="install-or-update-on-windows-using-the-msi-package"></a>MSI 패키지를 사용하여 Windows에 설치 및 업데이트
 
-Azure PowerShell용 MSI 패키지는 [GitHub](https://github.com/Azure/azure-powershell/releases/latest)에서 사용할 수 있습니다. MSI를 사용하여 이전 버전의 Azure PowerShell 모듈을 설치한 경우 설치 관리자에서 자동으로 이를 제거합니다. MSI 패키지는 `${env:ProgramFiles}\WindowsPowerShell\Modules`에서 모듈을 설치합니다.
+Azure PowerShell용 MSI 패키지는 [GitHub](https://github.com/Azure/azure-powershell/releases)에 있습니다.
+
+1. https://github.com/Azure/azure-powershell/releases로 이동합니다.
+2. Azure PowerShell용 최신 갤러리 모듈을 찾으세요(이러한 모듈은 시간순으로 나열되어 있으며 일반적으로 "4.7.0"처럼 이름 없는 릴리스 버전입니다).
+3. 패치 노트의 아래쪽으로 스크롤한 다음, "자산" 옆의 화살표를 클릭하여 MSI 옵션을 표시합니다.
+4. 원하는 Az-Cmdlets MSI를 클릭하여 다운로드를 시작합니다.
+
+MSI를 사용하여 이전 버전의 Azure PowerShell 모듈을 설치한 경우 설치 관리자에서 자동으로 이를 제거합니다. MSI 패키지는 `${env:ProgramFiles}\WindowsPowerShell\Modules`에서 모듈을 설치합니다.
 
 Azure PowerShell을 사용하여 작업을 시작하려면 Azure 자격 증명으로 로그인합니다.
 
