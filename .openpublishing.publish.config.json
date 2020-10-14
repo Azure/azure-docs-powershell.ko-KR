@@ -34,20 +34,21 @@
   ],
   "notification_subscribers": [],
   "sync_notification_subscribers": [],
-  "branches_to_filter": ["live"],
+  "branches_to_filter": [
+    "live"
+  ],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/azure-docs-powershell.ko-kr",
   "git_repository_branch_open_to_public_contributors": "live",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
   "enable_incremental_build": true,
- "dependent_repositories": [
+  "dependent_repositories": [
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft.ko-kr",
       "branch": "master",
       "branch_mapping": {}
     },
- 
     {
       "path_to_root": "dotnet-xref",
       "url": "https://github.com/MicrosoftDocs/dotnet-xref",
@@ -71,9 +72,9 @@
     }
   ],
   "branch_target_mapping": {
-     "live-sxs": [
-           "Publish",
-           "Pdf" 
+    "live-sxs": [
+      "Publish",
+      "Pdf"
     ],
     "live": [
       "Publish",
@@ -99,5 +100,8 @@
       "version": "latest"
     }
   ],
-  "dest": "_site"
+  "dest": "_site",
+  "docs_build_engine": {
+    "name": "docfx_v3"
+  }
 }
