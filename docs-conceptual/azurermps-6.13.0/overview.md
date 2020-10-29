@@ -5,12 +5,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 12/20/2018
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 5b5d3a9ff1ebdd5b170d83510300b310e2061887
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.openlocfilehash: 4827b9be1dddb3cefcbbadbd0aed4298f45452e1
+ms.sourcegitcommit: 038cb42a3bd8c009bc57c8c1c252e66fa170c84b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89242225"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523232"
 ---
 # <a name="overview-of-azure-powershell"></a>Azure PowerShell 개요
 
@@ -22,8 +22,8 @@ Azure PowerShell은 Azure 리소스를 관리하기 위해 [Azure Resource Manag
 
 다음 샘플을 통해 Azure PowerShell로 일반 시나리오를 수행하는 방법을 배울 수 있습니다.
 
-- [Linux Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/linux/powershell-samples)
-- [Windows Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/windows/powershell-samples)
+- [Linux Virtual Machines](/azure/virtual-machines/linux/powershell-samples?toc=/powershell/azure/toc.json)
+- [Windows Virtual Machines](/azure/virtual-machines/windows/powershell-samples?toc=/powershell/azure/toc.json)
 - [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
 - [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
 
@@ -43,7 +43,5 @@ PowerShell에 대해 잘 모른다면 PowerShell에 대한 소개가 유용할 �
 
 ## <a name="other-azure-powershell-modules"></a>다른 Azure PowerShell 모듈
 
-- [Azure Active Directory](/powershell/azure/active-directory/)
-- [Azure Information Protection](/powershell/azure/aip/)
-- [Azure Service Fabric](/powershell/azure/service-fabric/)
-- [Azure ElasticDB](/powershell/azure/elasticdbjobs/)
+- [Azure Active Directory](/powershell/module/activedirectory/)
+- [Azure Service Fabric](/powershell/module/AzureRM.ServiceFabric/)

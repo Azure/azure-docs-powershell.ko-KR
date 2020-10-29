@@ -5,12 +5,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/06/2017
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 286288f83a0ad0b486cccb3543858c173a8eb087
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.openlocfilehash: 2860d5c7642b137c1cb14a38fa13d59ec2a4123c
+ms.sourcegitcommit: 038cb42a3bd8c009bc57c8c1c252e66fa170c84b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89241324"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523209"
 ---
 # <a name="installing-the-azure-powershell-service-management-module"></a>Azure PowerShell Service Management 모듈 설치
 
@@ -72,7 +72,7 @@ Azure PowerShell 모듈은 자주 업데이트됩니다. 모듈에 있지 않은
 
 Azure에서 일반적인 일부 작업을 자동화할 수 있는 샘플 스크립트는 [Windows Azure 스크립트 센터](http://www.windowsazure.com/documentation/scripts/)를 참조하세요.
 
-Windows PowerShell을 설치, 학습, 사용 및 사용자 지정하는 방법에 대한 일반적인 정보는 [Windows PowerShell을 사용하여 스크립팅](https://go.microsoft.com/fwlink/p/?linkid=320210)을 참조하세요.
+Windows PowerShell을 설치, 학습, 사용 및 사용자 지정하는 방법에 대한 일반적인 정보는 [Windows PowerShell을 사용하여 스크립팅](/powershell/scripting/learn/ps101/00-introduction)을 참조하세요.
 
 ### <a name="how-to-get-powershellget"></a>PowerShellGet을 가져오는 방법
 
@@ -80,7 +80,6 @@ Windows PowerShell을 설치, 학습, 사용 및 사용자 지정하는 방법�
 |---|---|
 |Windows 10 또는 Windows Server 2016을 사용합니다.|OS에 포함된 WMF(Windows Management Framework) 5.0으로 빌드됩니다.|
 |PowerShell 5로 업그레이드하려고 합니다.|[최신 버전의 WMF 설치](https://www.microsoft.com/download/details.aspx?id=54616)|
-|PowerShell 3 또는 PowerShell 4를 사용하는 Windows 버전에서 실행됩니다.|[PackageManagement 모듈 가져오기](https://go.microsoft.com/fwlink/?LinkID=746217)|
 
 <div id="helpmechoose"/>
 
