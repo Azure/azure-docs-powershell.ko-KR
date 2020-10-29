@@ -5,33 +5,33 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/15/2018
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: c287afa2fb34938cac7304028071afd7deedb263
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.openlocfilehash: c03c6ee3782b68de8a237b3c215405ff6513dbca
+ms.sourcegitcommit: 038cb42a3bd8c009bc57c8c1c252e66fa170c84b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89243789"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523242"
 ---
-# <a name="install-azure-powershell-on-windows-with-powershellget"></a><span data-ttu-id="c721b-103">PowerShellGet으로 Azure PowerShell을 설치</span><span class="sxs-lookup"><span data-stu-id="c721b-103">Install Azure PowerShell on Windows with PowerShellGet</span></span>
+# <a name="install-azure-powershell-on-windows-with-powershellget"></a><span data-ttu-id="7f56d-103">PowerShellGet으로 Azure PowerShell을 설치</span><span class="sxs-lookup"><span data-stu-id="7f56d-103">Install Azure PowerShell on Windows with PowerShellGet</span></span>
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
-<span data-ttu-id="c721b-104">이 아티클에서는 PowerShellGet을 사용하여 Windows용 PowerShell 5.x용 Azure PowerShell 모듈을 설치하는 단계를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-104">This article explains the steps to install the Azure PowerShell modules for PowerShell 5.x for Windows using PowerShellGet.</span></span> <span data-ttu-id="c721b-105">PowerShellGet 및 모듈 관리는 Azure PowerShell을 설치하는 더 좋은 방법이지만 대신 웹 플랫폼 설치 관리자 또는 MSI 패키지로 설치하려는 경우 [다른 설치 방법](other-install.md)을 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-105">PowerShellGet and module management is the preferred way to install Azure PowerShell but if you would rather install with the Web Platform Installer or MSI package, see [Other installation methods](other-install.md).</span></span>
+<span data-ttu-id="7f56d-104">이 아티클에서는 PowerShellGet을 사용하여 Windows용 PowerShell 5.x용 Azure PowerShell 모듈을 설치하는 단계를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-104">This article explains the steps to install the Azure PowerShell modules for PowerShell 5.x for Windows using PowerShellGet.</span></span> <span data-ttu-id="7f56d-105">PowerShellGet 및 모듈 관리는 Azure PowerShell을 설치하는 더 좋은 방법이지만 대신 웹 플랫폼 설치 관리자 또는 MSI 패키지로 설치하려는 경우 [다른 설치 방법](other-install.md)을 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-105">PowerShellGet and module management is the preferred way to install Azure PowerShell but if you would rather install with the Web Platform Installer or MSI package, see [Other installation methods](other-install.md).</span></span>
 
-<span data-ttu-id="c721b-106">Azure 클래식 배포 모델은 본 버전의 Azure PowerShell에서 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-106">The Azure classic deployment model is not supported by this version of Azure PowerShell.</span></span> <span data-ttu-id="c721b-107">클래식 배포에 대한 지원은 [Azure PowerShell Service Management 모듈 설치](/powershell/azure/servicemanagement/install-azure-ps) 지침을 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-107">For support for classic deployments, follow the instructions in [Install the Azure PowerShell Service Management module](/powershell/azure/servicemanagement/install-azure-ps).</span></span>
+<span data-ttu-id="7f56d-106">Azure 클래식 배포 모델은 본 버전의 Azure PowerShell에서 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-106">The Azure classic deployment model is not supported by this version of Azure PowerShell.</span></span> <span data-ttu-id="7f56d-107">클래식 배포에 대한 지원은 [Azure PowerShell Service Management 모듈 설치](/powershell/azure/servicemanagement/install-azure-ps) 지침을 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-107">For support for classic deployments, follow the instructions in [Install the Azure PowerShell Service Management module](/powershell/azure/servicemanagement/install-azure-ps).</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="c721b-108">MacOS 또는 Linux 용 AzureRM 모듈은 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-108">The AzureRM module is not supported for macOS or Linux.</span></span> <span data-ttu-id="c721b-109">이러한 플랫폼에서 Azure PowerShell cmdlet을 사용하려면 [Az 모듈을 설치](/powershell/azure/install-az-ps)합니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-109">To use Azure PowerShell cmdlets on these platforms, [Install the Az module](/powershell/azure/install-az-ps).</span></span>
+> <span data-ttu-id="7f56d-108">MacOS 또는 Linux 용 AzureRM 모듈은 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-108">The AzureRM module is not supported for macOS or Linux.</span></span> <span data-ttu-id="7f56d-109">이러한 플랫폼에서 Azure PowerShell cmdlet을 사용하려면 [Az 모듈을 설치](/powershell/azure/install-az-ps)합니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-109">To use Azure PowerShell cmdlets on these platforms, [Install the Az module](/powershell/azure/install-az-ps).</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="c721b-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c721b-110">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="7f56d-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="7f56d-110">Requirements</span></span>
 
-<span data-ttu-id="c721b-111">Azure PowerShell을 설치하려면, PowerShellGet 버전 1.1.2.0 이상이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-111">To install Azure PowerShell, you need PowerShellGet version 1.1.2.0 or higher.</span></span> <span data-ttu-id="c721b-112">귀하의 시스템에서 가능한지 확인하려면 다음 명령을 실행합니다:</span><span class="sxs-lookup"><span data-stu-id="c721b-112">To check if it is available on your system, run the following command:</span></span>
+<span data-ttu-id="7f56d-111">Azure PowerShell을 설치하려면, PowerShellGet 버전 1.1.2.0 이상이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-111">To install Azure PowerShell, you need PowerShellGet version 1.1.2.0 or higher.</span></span> <span data-ttu-id="7f56d-112">귀하의 시스템에서 가능한지 확인하려면 다음 명령을 실행합니다:</span><span class="sxs-lookup"><span data-stu-id="7f56d-112">To check if it is available on your system, run the following command:</span></span>
 
 ```powershell-interactive
 Get-InstalledModule -Name PowerShellGet -AllVersions | Select-Object -Property Name,Version,Path
 ```
 
-<span data-ttu-id="c721b-113">다음과 비슷하게 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-113">You should see something similar to the following output:</span></span>
+<span data-ttu-id="7f56d-113">다음과 비슷하게 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-113">You should see something similar to the following output:</span></span>
 
 ```output
 Name          Version Path
@@ -42,38 +42,37 @@ PowerShellGet 1.6.0   C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1
 PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PowerShellGet.psd1
 ```
 
-<span data-ttu-id="c721b-114">PowerShellGet 설치를 업데이트하려면 다음 명령을 실행합니다:</span><span class="sxs-lookup"><span data-stu-id="c721b-114">If you need to update your installation of PowerShellGet, run the following command:</span></span>
+<span data-ttu-id="7f56d-114">PowerShellGet 설치를 업데이트하려면 다음 명령을 실행합니다:</span><span class="sxs-lookup"><span data-stu-id="7f56d-114">If you need to update your installation of PowerShellGet, run the following command:</span></span>
 
 ```powershell-interactive
 Install-Module PowerShellGet -Force
 ```
 
-<span data-ttu-id="c721b-115">PowerShellGet이 설치되지 않은 경우, 귀하의 시스템을 위해 아래 표의 지침을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-115">If you don't have PowerShellGet installed, follow the instructions in the table below for your system.</span></span>
+<span data-ttu-id="7f56d-115">PowerShellGet이 설치되지 않은 경우, 귀하의 시스템을 위해 아래 표의 지침을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-115">If you don't have PowerShellGet installed, follow the instructions in the table below for your system.</span></span>
 
-|<span data-ttu-id="c721b-116">시나리오</span><span class="sxs-lookup"><span data-stu-id="c721b-116">Scenario</span></span>|<span data-ttu-id="c721b-117">설치 지침</span><span class="sxs-lookup"><span data-stu-id="c721b-117">Install instructions</span></span>|
+|<span data-ttu-id="7f56d-116">시나리오</span><span class="sxs-lookup"><span data-stu-id="7f56d-116">Scenario</span></span>|<span data-ttu-id="7f56d-117">설치 지침</span><span class="sxs-lookup"><span data-stu-id="7f56d-117">Install instructions</span></span>|
 |---|---|
-|<span data-ttu-id="c721b-118">윈도우 10</span><span class="sxs-lookup"><span data-stu-id="c721b-118">Windows 10</span></span><br/><span data-ttu-id="c721b-119">Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="c721b-119">Windows Server 2016</span></span>|<span data-ttu-id="c721b-120">OS에 포함된 WMF(Windows Management Framework) 5.0으로 빌드됩니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-120">Built into Windows Management Framework (WMF) 5.0 included in the OS</span></span>|
-|<span data-ttu-id="c721b-121">PowerShell 5로 업그레이드</span><span class="sxs-lookup"><span data-stu-id="c721b-121">Upgrade to PowerShell 5</span></span>| <ol><li>[<span data-ttu-id="c721b-122">최신 버전의 WMF 설치</span><span class="sxs-lookup"><span data-stu-id="c721b-122">Install the latest version of WMF</span></span>](https://www.microsoft.com/download/details.aspx?id=54616)</li><li><span data-ttu-id="c721b-123">다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-123">Run the following command:</span></span><br/>```Install-Module PowerShellGet -Force```</li></ol>|
-|<span data-ttu-id="c721b-124">PowerShell 3 또는 PowerShell 4이 설치된 Windows</span><span class="sxs-lookup"><span data-stu-id="c721b-124">Windows with PowerShell 3 or PowerShell 4</span></span>|<ol><span data-ttu-id="c721b-125"><il>[PackageManagement 모듈 가져오기](https://go.microsoft.com/fwlink/?LinkID=746217)</il></span><span class="sxs-lookup"><span data-stu-id="c721b-125"><il>[Get the PackageManagement modules](https://go.microsoft.com/fwlink/?LinkID=746217)</il></span></span><li><span data-ttu-id="c721b-126">다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-126">Run the following command:</span></span><br/>```Install-Module PowerShellGet -Force```</li></ol>|
+|<span data-ttu-id="7f56d-118">윈도우 10</span><span class="sxs-lookup"><span data-stu-id="7f56d-118">Windows 10</span></span><br/><span data-ttu-id="7f56d-119">Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="7f56d-119">Windows Server 2016</span></span>|<span data-ttu-id="7f56d-120">OS에 포함된 WMF(Windows Management Framework) 5.0으로 빌드됩니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-120">Built into Windows Management Framework (WMF) 5.0 included in the OS</span></span>|
+|<span data-ttu-id="7f56d-121">PowerShell 5로 업그레이드</span><span class="sxs-lookup"><span data-stu-id="7f56d-121">Upgrade to PowerShell 5</span></span>| <ol><li>[<span data-ttu-id="7f56d-122">최신 버전의 WMF 설치</span><span class="sxs-lookup"><span data-stu-id="7f56d-122">Install the latest version of WMF</span></span>](https://www.microsoft.com/download/details.aspx?id=54616)</li><li><span data-ttu-id="7f56d-123">다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-123">Run the following command:</span></span><br/>```Install-Module PowerShellGet -Force```</li></ol>|
 
 > [!NOTE]
-> <span data-ttu-id="c721b-127">PowerShellGet을 사용하려면 스크립트를 실행할 수 있게 하는 실행 정책이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-127">Using PowerShellGet requires an Execution Policy that allows you to run scripts.</span></span> <span data-ttu-id="c721b-128">PowerShell의 실행 정책에 대한 자세한 내용은 [실행 정책 정보](/powershell/module/microsoft.powershell.core/about/about_execution_policies)(영문)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c721b-128">For more information about PowerShell's Execution Policy, see [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).</span></span>
+> <span data-ttu-id="7f56d-124">PowerShellGet을 사용하려면 스크립트를 실행할 수 있게 하는 실행 정책이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-124">Using PowerShellGet requires an Execution Policy that allows you to run scripts.</span></span> <span data-ttu-id="7f56d-125">PowerShell의 실행 정책에 대한 자세한 내용은 [실행 정책 정보](/powershell/module/microsoft.powershell.core/about/about_execution_policies)(영문)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7f56d-125">For more information about PowerShell's Execution Policy, see [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).</span></span>
 >
 > [!IMPORTANT]
-> <span data-ttu-id="c721b-129">이 문서에서 설명된 모듈인 AzureRM에서는 .NET Framework를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-129">The module described in this document, AzureRM, uses .NET Framework.</span></span> <span data-ttu-id="c721b-130">이렇게 하면 .NET Core를 사용하는 PowerShell 6.0과 호환되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-130">This makes it incompatible with PowerShell 6.0, which uses .NET Core.</span></span> <span data-ttu-id="c721b-131">PowerShell 6.0을 사용하는 경우, [macOS 및 Linux에 대한 설치 지침](/powershell/azure/install-az-ps)을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-131">If you are using PowerShell 6.0, follow the [installation instructions for macOS and Linux](/powershell/azure/install-az-ps).</span></span>
+> <span data-ttu-id="7f56d-126">이 문서에서 설명된 모듈인 AzureRM에서는 .NET Framework를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-126">The module described in this document, AzureRM, uses .NET Framework.</span></span> <span data-ttu-id="7f56d-127">이렇게 하면 .NET Core를 사용하는 PowerShell 6.0과 호환되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-127">This makes it incompatible with PowerShell 6.0, which uses .NET Core.</span></span> <span data-ttu-id="7f56d-128">PowerShell 6.0을 사용하는 경우, [macOS 및 Linux에 대한 설치 지침](/powershell/azure/install-az-ps)을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-128">If you are using PowerShell 6.0, follow the [installation instructions for macOS and Linux](/powershell/azure/install-az-ps).</span></span>
 
-## <a name="install-the-azure-powershell-module"></a><span data-ttu-id="c721b-132">Azure PowerShell 모듈 설치</span><span class="sxs-lookup"><span data-stu-id="c721b-132">Install the Azure PowerShell module</span></span>
+## <a name="install-the-azure-powershell-module"></a><span data-ttu-id="7f56d-129">Azure PowerShell 모듈 설치</span><span class="sxs-lookup"><span data-stu-id="7f56d-129">Install the Azure PowerShell module</span></span>
 
-<span data-ttu-id="c721b-133">PowerShell 갤러리에서 모듈을 설치하려면 상승된 권한이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-133">You need elevated privileges to install modules from the PowerShell Gallery.</span></span> <span data-ttu-id="c721b-134">Azure PowerShell을 설치하려면 승격된 세션에서 다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-134">To install Azure PowerShell, run the following command in an elevated session:</span></span>
+<span data-ttu-id="7f56d-130">PowerShell 갤러리에서 모듈을 설치하려면 상승된 권한이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-130">You need elevated privileges to install modules from the PowerShell Gallery.</span></span> <span data-ttu-id="7f56d-131">Azure PowerShell을 설치하려면 승격된 세션에서 다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-131">To install Azure PowerShell, run the following command in an elevated session:</span></span>
 
 ```powershell-interactive
 Install-Module -Name AzureRM
 ```
 
 > [!NOTE]
-> <span data-ttu-id="c721b-135">NuGet 2.8.5.201 이전 버전을 사용하는 경우 최신 버전의 NuGet을 다운로드하여 설치하라는 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-135">If you have a version older than 2.8.5.201 of NuGet, you are prompted to download and install the latest version of NuGet.</span></span>
+> <span data-ttu-id="7f56d-132">NuGet 2.8.5.201 이전 버전을 사용하는 경우 최신 버전의 NuGet을 다운로드하여 설치하라는 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-132">If you have a version older than 2.8.5.201 of NuGet, you are prompted to download and install the latest version of NuGet.</span></span>
 
-<span data-ttu-id="c721b-136">기본적으로 PowerShell 갤러리는 PowerShellGet에 대한 신뢰할 수 있는 리포지토리로 구성되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-136">By default, the PowerShell gallery isn't configured as a trusted repository for PowerShellGet.</span></span> <span data-ttu-id="c721b-137">PSGallery를 처음 사용할 때는 다음과 같은 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-137">The first time you use the PSGallery you see the following prompt:</span></span>
+<span data-ttu-id="7f56d-133">기본적으로 PowerShell 갤러리는 PowerShellGet에 대한 신뢰할 수 있는 리포지토리로 구성되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-133">By default, the PowerShell gallery isn't configured as a trusted repository for PowerShellGet.</span></span> <span data-ttu-id="7f56d-134">PSGallery를 처음 사용할 때는 다음과 같은 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-134">The first time you use the PSGallery you see the following prompt:</span></span>
 
 ```output
 Untrusted repository
@@ -82,16 +81,16 @@ You are installing the modules from an untrusted repository. If you trust this r
 its InstallationPolicy value by running the Set-PSRepository cmdlet.
 
 Are you sure you want to install the modules from 'PSGallery'?
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
 ```
 
-<span data-ttu-id="c721b-138">설치를 계속하려면 `Yes` 또는 `Yes to All`로 답변합니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-138">Answer `Yes` or `Yes to All` to continue with the installation.</span></span>
+<span data-ttu-id="7f56d-135">설치를 계속하려면 `Yes` 또는 `Yes to All`로 답변합니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-135">Answer `Yes` or `Yes to All` to continue with the installation.</span></span>
 
-<span data-ttu-id="c721b-139">`AzureRM` 모듈은 Azure PowerShell cmdlet의 롤업 모듈입니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-139">The `AzureRM` module is a rollup module for the Azure PowerShell cmdlets.</span></span> <span data-ttu-id="c721b-140">설치하면 사용 가능한 모든 Azure Resource Manager 모듈이 다운로드되고 cmdlet을 사용할 수 있게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-140">Installing it downloads all of the available Azure Resource Manager modules, and makes their cmdlets available for use.</span></span>
+<span data-ttu-id="7f56d-136">`AzureRM` 모듈은 Azure PowerShell cmdlet의 롤업 모듈입니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-136">The `AzureRM` module is a rollup module for the Azure PowerShell cmdlets.</span></span> <span data-ttu-id="7f56d-137">설치하면 사용 가능한 모든 Azure Resource Manager 모듈이 다운로드되고 cmdlet을 사용할 수 있게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-137">Installing it downloads all of the available Azure Resource Manager modules, and makes their cmdlets available for use.</span></span>
 
-## <a name="sign-in"></a><span data-ttu-id="c721b-141">로그인</span><span class="sxs-lookup"><span data-stu-id="c721b-141">Sign in</span></span>
+## <a name="sign-in"></a><span data-ttu-id="7f56d-138">로그인</span><span class="sxs-lookup"><span data-stu-id="7f56d-138">Sign in</span></span>
 
-<span data-ttu-id="c721b-142">Azure PowerShell을 사용하여 작업을 시작 하려면 [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet을 사용하여 현재 PowerShell 세션에 `AzureRM`을 로드한 후 Azure 자격 증명으로 로그인합니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-142">To start working with Azure PowerShell, you need to load `AzureRM` into your current PowerShell session with the [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet, and then sign in with your Azure credentials.</span></span>
+<span data-ttu-id="7f56d-139">Azure PowerShell을 사용하여 작업을 시작 하려면 [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet을 사용하여 현재 PowerShell 세션에 `AzureRM`을 로드한 후 Azure 자격 증명으로 로그인합니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-139">To start working with Azure PowerShell, you need to load `AzureRM` into your current PowerShell session with the [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet, and then sign in with your Azure credentials.</span></span>
 
 ```powershell-interactive
 # Import the module into the PowerShell session
@@ -100,40 +99,40 @@ Import-Module AzureRM
 Connect-AzureRmAccount
 ```
 
-<span data-ttu-id="c721b-143">모든 새 PowerShell 세션에 대해 이러한 단계를 반복해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-143">You'll need to repeat these steps for every new PowerShell session you start.</span></span> <span data-ttu-id="c721b-144">`AzureRM` 모듈을 자동으로 가져오려면 PowerShell 프로필을 설정해야 하며, 프로필 설정은 [프로필 정보](/powershell/module/microsoft.powershell.core/about/about_profiles)에서 알아볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-144">Automatically importing the `AzureRM` module requires setting up a PowerShell profile, which you can learn about in [About Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles).</span></span>
-<span data-ttu-id="c721b-145">Azure 로그인을 세션 간에 유지하는 방법을 알아보려면 [PowerShell 세션 간에 사용자 자격 증명 유지](context-persistence.md)를 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-145">To learn how to persist your Azure sign in across sessions, see [Persist user credentials across PowerShell sessions](context-persistence.md).</span></span>
+<span data-ttu-id="7f56d-140">모든 새 PowerShell 세션에 대해 이러한 단계를 반복해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-140">You'll need to repeat these steps for every new PowerShell session you start.</span></span> <span data-ttu-id="7f56d-141">`AzureRM` 모듈을 자동으로 가져오려면 PowerShell 프로필을 설정해야 하며, 프로필 설정은 [프로필 정보](/powershell/module/microsoft.powershell.core/about/about_profiles)에서 알아볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-141">Automatically importing the `AzureRM` module requires setting up a PowerShell profile, which you can learn about in [About Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles).</span></span>
+<span data-ttu-id="7f56d-142">Azure 로그인을 세션 간에 유지하는 방법을 알아보려면 [PowerShell 세션 간에 사용자 자격 증명 유지](context-persistence.md)를 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-142">To learn how to persist your Azure sign in across sessions, see [Persist user credentials across PowerShell sessions](context-persistence.md).</span></span>
 
-## <a name="update-the-azure-powershell-module"></a><span data-ttu-id="c721b-146">Azure PowerShell 모듈 업데이트</span><span class="sxs-lookup"><span data-stu-id="c721b-146">Update the Azure PowerShell module</span></span>
+## <a name="update-the-azure-powershell-module"></a><span data-ttu-id="7f56d-143">Azure PowerShell 모듈 업데이트</span><span class="sxs-lookup"><span data-stu-id="7f56d-143">Update the Azure PowerShell module</span></span>
 
-<span data-ttu-id="c721b-147">[Update-Module](/powershell/module/powershellget/update-module)을 실행하여 Azure PowerShell 설치를 업데이트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-147">You can update your Azure PowerShell installation by running [Update-Module](/powershell/module/powershellget/update-module).</span></span> <span data-ttu-id="c721b-148">이 명령은 이전 버전을 제거하지 __않습니다__.</span><span class="sxs-lookup"><span data-stu-id="c721b-148">This command does __not__ uninstall earlier versions.</span></span>
+<span data-ttu-id="7f56d-144">[Update-Module](/powershell/module/powershellget/update-module)을 실행하여 Azure PowerShell 설치를 업데이트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-144">You can update your Azure PowerShell installation by running [Update-Module](/powershell/module/powershellget/update-module).</span></span> <span data-ttu-id="7f56d-145">이 명령은 이전 버전을 제거하지 __않습니다__ .</span><span class="sxs-lookup"><span data-stu-id="7f56d-145">This command does __not__ uninstall earlier versions.</span></span>
 
 ```powershell-interactive
 Update-Module -Name AzureRM
 ```
 
-<span data-ttu-id="c721b-149">Azure PowerShell의 이전 버전을 시스템에서 제거하려면, [Azure PowerShell 모듈 제거](uninstall-azurerm-ps.md)를 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-149">If you want to remove older versions of Azure PowerShell from your system, see [Uninstall the Azure PowerShell module](uninstall-azurerm-ps.md).</span></span>
+<span data-ttu-id="7f56d-146">Azure PowerShell의 이전 버전을 시스템에서 제거하려면, [Azure PowerShell 모듈 제거](uninstall-azurerm-ps.md)를 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-146">If you want to remove older versions of Azure PowerShell from your system, see [Uninstall the Azure PowerShell module](uninstall-azurerm-ps.md).</span></span>
 
-## <a name="use-multiple-versions-of-azure-powershell"></a><span data-ttu-id="c721b-150">여러 버전의 Azure PowerShell 사용</span><span class="sxs-lookup"><span data-stu-id="c721b-150">Use multiple versions of Azure PowerShell</span></span>
+## <a name="use-multiple-versions-of-azure-powershell"></a><span data-ttu-id="7f56d-147">여러 버전의 Azure PowerShell 사용</span><span class="sxs-lookup"><span data-stu-id="7f56d-147">Use multiple versions of Azure PowerShell</span></span>
 
-<span data-ttu-id="c721b-151">여러 버전의 Azure PowerShell을 설치하는 것은 가능합니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-151">It's possible to install multiple versions of Azure PowerShell.</span></span> <span data-ttu-id="c721b-152">온-프레미스 Azure Stack 리소스로 작업하거나 PowerShell 5.0으로 업데이트할 수 없는 이전 버전의 Windows를 실행하거나 Azure 클래식 배포 모델을 사용하는 경우 둘 이상의 버전이 필요할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-152">You might need more than one version if you work with on-premises Azure Stack resources, run an older version of Windows that you can't update to PowerShell 5.0, or use the Azure classic deployment model.</span></span> <span data-ttu-id="c721b-153">이전 버전을 설치하려면 `-RequiredVersion` 인수를 설치 시 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-153">To install an older version, provide the `-RequiredVersion` argument when installing.</span></span>
+<span data-ttu-id="7f56d-148">여러 버전의 Azure PowerShell을 설치하는 것은 가능합니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-148">It's possible to install multiple versions of Azure PowerShell.</span></span> <span data-ttu-id="7f56d-149">온-프레미스 Azure Stack 리소스로 작업하거나 PowerShell 5.0으로 업데이트할 수 없는 이전 버전의 Windows를 실행하거나 Azure 클래식 배포 모델을 사용하는 경우 둘 이상의 버전이 필요할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-149">You might need more than one version if you work with on-premises Azure Stack resources, run an older version of Windows that you can't update to PowerShell 5.0, or use the Azure classic deployment model.</span></span> <span data-ttu-id="7f56d-150">이전 버전을 설치하려면 `-RequiredVersion` 인수를 설치 시 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-150">To install an older version, provide the `-RequiredVersion` argument when installing.</span></span>
 
 ```powershell-interactive
 # Install version 2.3.0 of Azure PowerShell
 Install-Module -Name AzureRM -RequiredVersion 2.3.0
 ```
 
-<span data-ttu-id="c721b-154">Azure PowerShell 모듈 로드 시, 기본으로 최신 버전이 로드됩니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-154">When loading the Azure PowerShell module the latest version is loaded by default.</span></span> <span data-ttu-id="c721b-155">다른 버전을 로드하려면 `-RequiredVersion` 인수를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="c721b-155">To load a different version, provide the `-RequiredVersion` argument.</span></span>
+<span data-ttu-id="7f56d-151">Azure PowerShell 모듈 로드 시, 기본으로 최신 버전이 로드됩니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-151">When loading the Azure PowerShell module the latest version is loaded by default.</span></span> <span data-ttu-id="7f56d-152">다른 버전을 로드하려면 `-RequiredVersion` 인수를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="7f56d-152">To load a different version, provide the `-RequiredVersion` argument.</span></span>
 
 ```powershell-interactive
 # Load version 2.3.0 of Azure PowerShell
 Import-Module -Name AzureRM -RequiredVersion 2.3.0
 ```
 
-## <a name="provide-feedback"></a><span data-ttu-id="c721b-156">피드백 제공</span><span class="sxs-lookup"><span data-stu-id="c721b-156">Provide feedback</span></span>
+## <a name="provide-feedback"></a><span data-ttu-id="7f56d-153">피드백 제공</span><span class="sxs-lookup"><span data-stu-id="7f56d-153">Provide feedback</span></span>
 
-<span data-ttu-id="c721b-157">Azure Powershell 사용 중 버그 발생 시, [ GitHub에서 문제 제출](https://github.com/Azure/azure-powershell/issues)을 해 주십시오.</span><span class="sxs-lookup"><span data-stu-id="c721b-157">If you find a bug when using Azure Powershell, please [file an issue on GitHub](https://github.com/Azure/azure-powershell/issues).</span></span>
-<span data-ttu-id="c721b-158">명령줄에서 피드백을 제공하려면 [Send-Feedback](/powershell/module/azurerm.profile/send-feedback) cmdlet을 사용해 보세요.</span><span class="sxs-lookup"><span data-stu-id="c721b-158">To provide feedback from the command line, use the [Send-Feedback](/powershell/module/azurerm.profile/send-feedback) cmdlet.</span></span>
+<span data-ttu-id="7f56d-154">Azure Powershell 사용 중 버그 발생 시, [ GitHub에서 문제 제출](https://github.com/Azure/azure-powershell/issues)을 해 주십시오.</span><span class="sxs-lookup"><span data-stu-id="7f56d-154">If you find a bug when using Azure Powershell, please [file an issue on GitHub](https://github.com/Azure/azure-powershell/issues).</span></span>
+<span data-ttu-id="7f56d-155">명령줄에서 피드백을 제공하려면 [Send-Feedback](/powershell/module/azurerm.profile/send-feedback) cmdlet을 사용해 보세요.</span><span class="sxs-lookup"><span data-stu-id="7f56d-155">To provide feedback from the command line, use the [Send-Feedback](/powershell/module/azurerm.profile/send-feedback) cmdlet.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="c721b-159">다음 단계</span><span class="sxs-lookup"><span data-stu-id="c721b-159">Next Steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="7f56d-156">다음 단계</span><span class="sxs-lookup"><span data-stu-id="7f56d-156">Next Steps</span></span>
 
-<span data-ttu-id="c721b-160">Azure PowerShell 사용을 시작하려면, [Azure PowerShell 시작](get-started-azureps.md)을 참조하여 모듈 및 모듈의 기능에 대해 자세히 알아보세요.</span><span class="sxs-lookup"><span data-stu-id="c721b-160">To get started using Azure PowerShell, see [Get Started with Azure PowerShell](get-started-azureps.md) to learn more about the module and its features.</span></span>
+<span data-ttu-id="7f56d-157">Azure PowerShell 사용을 시작하려면, [Azure PowerShell 시작](get-started-azureps.md)을 참조하여 모듈 및 모듈의 기능에 대해 자세히 알아보세요.</span><span class="sxs-lookup"><span data-stu-id="7f56d-157">To get started using Azure PowerShell, see [Get Started with Azure PowerShell](get-started-azureps.md) to learn more about the module and its features.</span></span>
