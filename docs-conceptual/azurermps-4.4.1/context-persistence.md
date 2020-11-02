@@ -5,18 +5,18 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/31/2017
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 9c9d6a028d3a28f99320aef5a574d868b2fd9bc1
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.openlocfilehash: 77f5bcc478228a9d860039983640ff0e7ff31ab2
+ms.sourcegitcommit: 038cb42a3bd8c009bc57c8c1c252e66fa170c84b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89244605"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523192"
 ---
 # <a name="persisting-user-credentials-across-powershell-sessions"></a>PowerShell 세션에 걸쳐 사용자 자격 증명 유지
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
-Azure PowerShell은 **Azure Context Autosave**라고 하는 기능을 제공하며, 이는 다음과 같은 기능을 제공합니다.
+Azure PowerShell은 **Azure Context Autosave** 라고 하는 기능을 제공하며, 이는 다음과 같은 기능을 제공합니다.
 
 - 새 PowerShell 세션에서 다시 사용하기 위한 로그인 정보 보존.
 - 오랫동안 수행되는 cmdlet을 실행하기 위한 더 쉬운 백그라운드 작업 사용.
@@ -25,7 +25,7 @@ Azure PowerShell은 **Azure Context Autosave**라고 하는 기능을 제공하�
 
 ## <a name="azure-contexts-defined"></a>정의된 Azure 컨텍스트
 
-*Azure 컨텍스트*는 Azure PowerShell cmdlet의 대상을 정의하는 정보 집합입니다. 컨텍스트는 5개의 부분으로 구성됩니다.
+*Azure 컨텍스트* 는 Azure PowerShell cmdlet의 대상을 정의하는 정보 집합입니다. 컨텍스트는 5개의 부분으로 구성됩니다.
 
 - *계정* - Azure와의 통신을 인증하는 데 사용되는 사용자 이름 또는 서비스 주체
 - *구독* - 동작하는 리소스를 포함하는 Azure 구독.
@@ -61,7 +61,7 @@ Azure 컨텍스트를 관리할 수 있는 cmdlet을 사용하면 세분화된 �
 
 - 자동 저장이 활성화된 기본 컨텍스트 사용
 
-  **컨텍스트 자동 저장**을 사용하도록 설정한 경우 백그라운드 작업은 자동으로 기본 저장된 기본 컨텍스트를 사용합니다.
+  **컨텍스트 자동 저장** 을 사용하도록 설정한 경우 백그라운드 작업은 자동으로 기본 저장된 기본 컨텍스트를 사용합니다.
 
   ```powershell-interactive
   PS C:\> $job = Start-Job { New-AzureRmVm [... Additional parameters ...]}
@@ -154,5 +154,4 @@ $env:AzureRmContextAutoSave="true" | "false"
 
 <!-- Updated cmdlets -->
 [login]: /powershell/module/azurerm.profile/Add-AzureRmAccount
-[import]: /powershell/module/azurerm.profile/Import-AzureRmAccount
 [set-context]: /powershell/module/azurerm.profile/Import-AzureRmContext
