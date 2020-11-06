@@ -1,0 +1,191 @@
+---
+external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+ms.assetid: 2B12BC19-EF8F-43F5-AF04-C570FEEA1AE6
+online version: ''
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/New-AzureStorageContainer.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/New-AzureStorageContainer.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
+ms.openlocfilehash: 7e7672368a2f9e102e1e073c1f10be609e658cfa
+ms.sourcegitcommit: f599b50d5e980197d1fca769378df90a842b42a1
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "93525844"
+---
+# <span data-ttu-id="cf50d-101">New-AzureStorageContainer</span><span class="sxs-lookup"><span data-stu-id="cf50d-101">New-AzureStorageContainer</span></span>
+
+## <span data-ttu-id="cf50d-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="cf50d-102">SYNOPSIS</span></span>
+<span data-ttu-id="cf50d-103">Azure 저장소 컨테이너를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-103">Creates an Azure storage container.</span></span>
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## <span data-ttu-id="cf50d-104">구문과</span><span class="sxs-lookup"><span data-stu-id="cf50d-104">SYNTAX</span></span>
+
+```
+New-AzureStorageContainer [-Name] <String> [[-Permission] <BlobContainerPublicAccessType>]
+ [-Context <IStorageContext>] [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>]
+ [-ConcurrentTaskCount <Int32>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="cf50d-105">설명은</span><span class="sxs-lookup"><span data-stu-id="cf50d-105">DESCRIPTION</span></span>
+<span data-ttu-id="cf50d-106">**AzureStorageContainer** Cmdlet은 Azure 저장소 컨테이너를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-106">The **New-AzureStorageContainer** cmdlet creates an Azure storage container.</span></span>
+
+## <span data-ttu-id="cf50d-107">예제의</span><span class="sxs-lookup"><span data-stu-id="cf50d-107">EXAMPLES</span></span>
+
+### <span data-ttu-id="cf50d-108">예제 1: Azure storage 컨테이너 만들기</span><span class="sxs-lookup"><span data-stu-id="cf50d-108">Example 1: Create an Azure storage container</span></span>
+```
+PS C:\>New-AzureStorageContainer -Name "ContainerName" -Permission Off
+```
+
+<span data-ttu-id="cf50d-109">이 명령은 저장소 컨테이너를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-109">This command creates a storage container.</span></span>
+
+### <span data-ttu-id="cf50d-110">예제 2: 여러 Azure storage 컨테이너 만들기</span><span class="sxs-lookup"><span data-stu-id="cf50d-110">Example 2: Create multiple Azure storage containers</span></span>
+```
+PS C:\>"container1 container2 container3".split() | New-AzureStorageContainer -Permission Container
+```
+
+<span data-ttu-id="cf50d-111">이 예제에서는 저장소 컨테이너를 여러 개 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-111">This example creates multiple storage containers.</span></span>
+<span data-ttu-id="cf50d-112">.NET **문자열** 클래스의 **Split** 메서드를 사용 하 고 파이프라인의 이름을 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-112">It uses the **Split** method of the .NET **String** class and then passes the names on the pipeline.</span></span>
+
+## <span data-ttu-id="cf50d-113">변수</span><span class="sxs-lookup"><span data-stu-id="cf50d-113">PARAMETERS</span></span>
+
+### <span data-ttu-id="cf50d-114">-ClientTimeoutPerRequest</span><span class="sxs-lookup"><span data-stu-id="cf50d-114">-ClientTimeoutPerRequest</span></span>
+<span data-ttu-id="cf50d-115">한 서비스 요청에 대 한 클라이언트 쪽 시간 제한 간격 (초)을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-115">Specifies the client-side time-out interval, in seconds, for one service request.</span></span>
+<span data-ttu-id="cf50d-116">이전 호출이 지정 된 간격으로 실행 되지 않는 경우이 cmdlet은 요청을 다시 시도 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-116">If the previous call fails in the specified interval, this cmdlet retries the request.</span></span>
+<span data-ttu-id="cf50d-117">이 cmdlet이 간격이 경과할 때까지 성공적인 응답을 받지 못하는 경우이 cmdlet은 오류를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-117">If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.</span></span>
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cf50d-118">-ConcurrentTaskCount</span><span class="sxs-lookup"><span data-stu-id="cf50d-118">-ConcurrentTaskCount</span></span>
+<span data-ttu-id="cf50d-119">최대 동시 네트워크 통화를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-119">Specifies the maximum concurrent network calls.</span></span>
+<span data-ttu-id="cf50d-120">이 매개 변수를 사용 하 여 최대 동시 네트워크 호출 수를 지정 하 여 로컬 CPU 및 대역폭 사용량을 스로틀 하도록 병행성을 제한할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-120">You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.</span></span>
+<span data-ttu-id="cf50d-121">지정 된 값이 절대 수 이며 코어 개수로 곱해집니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-121">The specified value is an absolute count and is not multiplied by the core count.</span></span>
+<span data-ttu-id="cf50d-122">이 매개 변수는 낮은 대역폭 환경 (예: 초당 100 킬로 비트)에서 네트워크 연결 문제를 줄이는 데 도움이 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-122">This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.</span></span>
+<span data-ttu-id="cf50d-123">기본값은 10입니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-123">The default value is 10.</span></span>
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cf50d-124">-컨텍스트</span><span class="sxs-lookup"><span data-stu-id="cf50d-124">-Context</span></span>
+<span data-ttu-id="cf50d-125">새 컨테이너에 대 한 컨텍스트를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-125">Specifies a context for the new container.</span></span>
+
+```yaml
+Type: IStorageContext
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cf50d-126">-이름</span><span class="sxs-lookup"><span data-stu-id="cf50d-126">-Name</span></span>
+<span data-ttu-id="cf50d-127">새 컨테이너의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-127">Specifies a name for the new container.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: N, Container
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cf50d-128">-사용 권한</span><span class="sxs-lookup"><span data-stu-id="cf50d-128">-Permission</span></span>
+<span data-ttu-id="cf50d-129">이 컨테이너에 대 한 공용 액세스 수준을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-129">Specifies the level of public access to this container.</span></span>
+<span data-ttu-id="cf50d-130">기본적으로 컨테이너 및 그 안의 모든 blob에는 저장소 계정의 소유자만 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-130">By default, the container and any blobs in it can be accessed only by the owner of the storage account.</span></span>
+<span data-ttu-id="cf50d-131">컨테이너 및 해당 blob에 대 한 읽기 권한을 익명 사용자에 게 부여 하려면 공용 액세스를 사용 하도록 컨테이너 사용 권한을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-131">To grant anonymous users read permissions to a container and its blobs, you can set the container permissions to enable public access.</span></span>
+<span data-ttu-id="cf50d-132">익명 사용자는 요청을 인증 하지 않고 공개적으로 사용할 수 있는 컨테이너에서 blob을 읽을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-132">Anonymous users can read blobs in a publicly available container without authenticating the request.</span></span>
+<span data-ttu-id="cf50d-133">이 매개 변수에 허용 되는 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-133">The acceptable values for this parameter are:</span></span>
+
+- <span data-ttu-id="cf50d-134">컨트롤러.</span><span class="sxs-lookup"><span data-stu-id="cf50d-134">Container.</span></span>
+<span data-ttu-id="cf50d-135">컨테이너 및 해당 blob에 대 한 전체 읽기 액세스를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-135">Provides full read access to a container and its blobs.</span></span>
+<span data-ttu-id="cf50d-136">클라이언트는 익명 요청을 통해 컨테이너의 blob을 열거할 수 있지만 저장소 계정의 컨테이너를 열거할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-136">Clients can enumerate blobs in the container through anonymous request, but cannot enumerate containers in the storage account.</span></span> 
+- <span data-ttu-id="cf50d-137">블.</span><span class="sxs-lookup"><span data-stu-id="cf50d-137">Blob.</span></span>
+<span data-ttu-id="cf50d-138">익명 요청을 통해 컨테이너 전체의 blob 데이터에 대 한 읽기 액세스를 제공 하지만 컨테이너 데이터에 대 한 액세스는 제공 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-138">Provides read access to blob data throughout a container through anonymous request, but does not provide access to container data.</span></span>
+<span data-ttu-id="cf50d-139">클라이언트는 익명 요청을 사용 하 여 컨테이너의 blob을 열거할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-139">Clients cannot enumerate blobs in the container by using anonymous request.</span></span> 
+- <span data-ttu-id="cf50d-140">끄십시오.</span><span class="sxs-lookup"><span data-stu-id="cf50d-140">Off.</span></span>
+<span data-ttu-id="cf50d-141">이는 저장소 계정 소유자 에게만 액세스를 제한 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-141">Which restricts access to only the storage account owner.</span></span>
+
+```yaml
+Type: BlobContainerPublicAccessType
+Parameter Sets: (All)
+Aliases: PublicAccess
+Accepted values: Off, Container, Blob
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cf50d-142">-ServerTimeoutPerRequest</span><span class="sxs-lookup"><span data-stu-id="cf50d-142">-ServerTimeoutPerRequest</span></span>
+<span data-ttu-id="cf50d-143">요청에 대 한 서비스 측 시간 제한 간격 (초)을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-143">Specifies the service side time-out interval, in seconds, for a request.</span></span>
+<span data-ttu-id="cf50d-144">서비스가 요청을 처리 하기 전에 지정 된 간격이 경과 하면 저장소 서비스에서 오류를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-144">If the specified interval elapses before the service processes the request, the storage service returns an error.</span></span>
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="cf50d-145">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="cf50d-145">CommonParameters</span></span>
+<span data-ttu-id="cf50d-146">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-146">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="cf50d-147">자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="cf50d-147">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="cf50d-148">입력</span><span class="sxs-lookup"><span data-stu-id="cf50d-148">INPUTS</span></span>
+
+### <span data-ttu-id="cf50d-149">IStorageContext</span><span class="sxs-lookup"><span data-stu-id="cf50d-149">IStorageContext</span></span>
+
+<span data-ttu-id="cf50d-150">' Context ' 매개 변수는 파이프라인에서 ' IStorageContext ' 형식의 값을 허용 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-150">Parameter 'Context' accepts value of type 'IStorageContext' from the pipeline</span></span>
+
+### <span data-ttu-id="cf50d-151">이름</span><span class="sxs-lookup"><span data-stu-id="cf50d-151">String</span></span>
+
+<span data-ttu-id="cf50d-152">' Name ' 매개 변수는 파이프라인에서 ' String ' 형식의 값을 허용 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-152">Parameter 'Name' accepts value of type 'String' from the pipeline</span></span>
+
+## <span data-ttu-id="cf50d-153">출력</span><span class="sxs-lookup"><span data-stu-id="cf50d-153">OUTPUTS</span></span>
+
+### <span data-ttu-id="cf50d-154">WindowsAzure. ResourceModel를 AzureStorageContainer로 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf50d-154">Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.AzureStorageContainer</span></span>
+
+## <span data-ttu-id="cf50d-155">상속자</span><span class="sxs-lookup"><span data-stu-id="cf50d-155">NOTES</span></span>
+
+## <span data-ttu-id="cf50d-156">관련 링크</span><span class="sxs-lookup"><span data-stu-id="cf50d-156">RELATED LINKS</span></span>
+
+[<span data-ttu-id="cf50d-157">Get-AzureStorageContainer</span><span class="sxs-lookup"><span data-stu-id="cf50d-157">Get-AzureStorageContainer</span></span>](./Get-AzureStorageContainer.md)
+
+[<span data-ttu-id="cf50d-158">제거-AzureStorageContainer</span><span class="sxs-lookup"><span data-stu-id="cf50d-158">Remove-AzureStorageContainer</span></span>](./Remove-AzureStorageContainer.md)
+
+[<span data-ttu-id="cf50d-159">Set-AzureStorageContainerAcl</span><span class="sxs-lookup"><span data-stu-id="cf50d-159">Set-AzureStorageContainerAcl</span></span>](./Set-AzureStorageContainerAcl.md)
+
+
