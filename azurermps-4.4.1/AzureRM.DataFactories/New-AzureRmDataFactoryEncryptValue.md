@@ -1,0 +1,335 @@
+---
+external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
+Module Name: AzureRM.DataFactories
+ms.assetid: 5BF24BC2-DEB6-4830-BDEA-841BAB070388
+online version: ''
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/New-AzureRmDataFactoryEncryptValue.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/New-AzureRmDataFactoryEncryptValue.md
+ms.openlocfilehash: 54a759370f39dcd3844d42d858d23f6c178a4d08
+ms.sourcegitcommit: f599b50d5e980197d1fca769378df90a842b42a1
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "93702706"
+---
+# <span data-ttu-id="69f73-101">New-AzureRmDataFactoryEncryptValue</span><span class="sxs-lookup"><span data-stu-id="69f73-101">New-AzureRmDataFactoryEncryptValue</span></span>
+
+## <span data-ttu-id="69f73-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="69f73-102">SYNOPSIS</span></span>
+<span data-ttu-id="69f73-103">중요 한 데이터를 암호화 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-103">Encrypts sensitive data.</span></span>
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## <span data-ttu-id="69f73-104">구문과</span><span class="sxs-lookup"><span data-stu-id="69f73-104">SYNTAX</span></span>
+
+### <span data-ttu-id="69f73-105">ByFactoryName (기본값)</span><span class="sxs-lookup"><span data-stu-id="69f73-105">ByFactoryName (Default)</span></span>
+```
+New-AzureRmDataFactoryEncryptValue [-DataFactoryName] <String> [[-Value] <SecureString>]
+ [[-GatewayName] <String>] [[-Credential] <PSCredential>] [[-Type] <String>] [[-NonCredentialValue] <String>]
+ [[-AuthenticationType] <String>] [[-Server] <String>] [[-Database] <String>] [-ResourceGroupName] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="69f73-106">ByFactoryObject</span><span class="sxs-lookup"><span data-stu-id="69f73-106">ByFactoryObject</span></span>
+```
+New-AzureRmDataFactoryEncryptValue [-DataFactory] <PSDataFactory> [[-Value] <SecureString>]
+ [[-GatewayName] <String>] [[-Credential] <PSCredential>] [[-Type] <String>] [[-NonCredentialValue] <String>]
+ [[-AuthenticationType] <String>] [[-Server] <String>] [[-Database] <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="69f73-107">설명은</span><span class="sxs-lookup"><span data-stu-id="69f73-107">DESCRIPTION</span></span>
+<span data-ttu-id="69f73-108">**AzureRmDataFactoryEncryptValue** cmdlet은 암호나 Microsoft SQL Server 연결 문자열과 같은 중요 한 데이터를 암호화 하 고 암호화 된 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-108">The **New-AzureRmDataFactoryEncryptValue** cmdlet encrypts sensitive data, such as a password or a Microsoft SQL Server connection string, and returns an encrypted value.</span></span>
+
+## <span data-ttu-id="69f73-109">예제의</span><span class="sxs-lookup"><span data-stu-id="69f73-109">EXAMPLES</span></span>
+
+### <span data-ttu-id="69f73-110">예제 1: 비 ODBC 연결 문자열 암호화</span><span class="sxs-lookup"><span data-stu-id="69f73-110">Example 1: Encrypt a non-ODBC connection string</span></span>
+```
+PS C:\>$Value = ConvertTo-SecureString 'Data Source=ContosoServer;Initial Catalog=catelog;user id =user123;password=password123' -AsPlainText -Force 
+PS C:\> New-AzureRmDataFactoryEncryptValue -GatewayName "WikiGateway" -DataFactoryName "WikiAdf" -Value $value -ResourceGroupName "ADF" -Type OnPremisesSqlLinkedService
+```
+
+<span data-ttu-id="69f73-111">첫 번째 명령은 ConvertTo-SecureString cmdlet을 사용 하 여 지정 된 연결 문자열을 **SecureString** 개체로 변환한 다음 해당 개체를 $Value 변수에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-111">The first command uses the ConvertTo-SecureString cmdlet to convert the specified connection string to a **SecureString** object, and then stores that object in the $Value variable.</span></span>
+<span data-ttu-id="69f73-112">자세한 내용은을 입력 `Get-Help ConvertTo-SecureString` 하세요.</span><span class="sxs-lookup"><span data-stu-id="69f73-112">For more information, type `Get-Help ConvertTo-SecureString`.</span></span>
+<span data-ttu-id="69f73-113">허용 되는 값: SQL Server 또는 Oracle 연결 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-113">Allowed values: SQL Server or Oracle connection string.</span></span>
+
+<span data-ttu-id="69f73-114">두 번째 명령은 지정 된 data factory, gateway, 리소스 그룹 및 연결 된 서비스 유형에 대해 $Value에 저장 된 개체에 대 한 암호화 값을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-114">The second command creates an encrypted value for the object stored in $Value for the specified data factory, gateway, resource group, and linked service type.</span></span>
+
+### <span data-ttu-id="69f73-115">예제 2: Windows 인증을 사용 하는 비 ODBC 연결 문자열을 암호화 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-115">Example 2: Encrypt a non-ODBC connection string that uses Windows authentication.</span></span>
+```
+PS C:\>$Value = ConvertTo-SecureString 'Data Source=ContosoServer;Initial Catalog=catelog;Integrated Security=True' -AsPlainText -Force
+PS C:\> $Credential = Get-Credential
+PS C:\> New-AzureRmDataFactoryEncryptValue -DataFactoryName "WikiADF" -GatewayName "WikiGateway" -ResourceGroupName "ADF" -Value $Value -Credential $Credential -Type OnPremisesSqlLinkedService $Value = ConvertTo-SecureString 'Data Source=ContosoServer;Initial Catalog=catelog;Integrated Security=True' -AsPlainText -Force
+```
+
+<span data-ttu-id="69f73-116">첫 번째 명령은 **ConvertTo** 를 사용 하 여 지정 된 연결 문자열을 안전한 문자열 개체로 변환한 다음 해당 개체를 $Value 변수에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-116">The first command uses **ConvertTo-SecureString** to convert the specified connection string to a secure string object, and then stores that object in the $Value variable.</span></span>
+
+<span data-ttu-id="69f73-117">두 번째 명령은 Get-Credential cmdlet을 사용 하 여 windows 인증 (사용자 이름 및 암호)을 수집한 다음 해당 **PSCredential** 개체를 $Credential 변수에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-117">The second command uses the Get-Credential cmdlet to collect the windows authentication (user name and password), and then stores that **PSCredential** object in the $Credential variable.</span></span>
+<span data-ttu-id="69f73-118">자세한 내용은을 입력 `Get-Help Get-Credential` 하세요.</span><span class="sxs-lookup"><span data-stu-id="69f73-118">For more information, type `Get-Help Get-Credential`.</span></span>
+
+<span data-ttu-id="69f73-119">세 번째 명령은 $Value에 저장 되어 있고 지정 된 데이터 팩토리, 게이트웨이, 리소스 그룹 및 연결 된 서비스 유형에 대 한 $Credential에 대해 암호화 된 값을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-119">The third command creates an encrypted value for the object stored in $Value and $Credential for the specified data factory, gateway, resource group, and linked service type.</span></span>
+
+### <span data-ttu-id="69f73-120">예제 3: 파일 시스템 연결 서비스에 대 한 서버 이름 및 자격 증명 암호화</span><span class="sxs-lookup"><span data-stu-id="69f73-120">Example 3: Encrypt server name and credentials for File system linked service</span></span>
+```
+PS C:\>$Value = ConvertTo-SecureString '\\servername' -AsPlainText -Force
+PS C:\> $Credential = Get-Credential
+PS C:\> New-AzureRmDataFactoryEncryptValue -DataFactoryName "WikiADF" -GatewayName "WikiGateway" -ResourceGroupName "ADF" -Value $Value -Credential $Credential -Type OnPremisesFileSystemLinkedService
+```
+
+<span data-ttu-id="69f73-121">첫 번째 명령은 **ConvertTo** 를 사용 하 여 지정 된 문자열을 보안 문자열로 변환한 다음 해당 개체를 $Value 변수에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-121">The first command uses **ConvertTo-SecureString** to convert the specified string to a secure string, and then stores that object in the $Value variable.</span></span>
+
+<span data-ttu-id="69f73-122">두 번째 명령은 **자격 증명 가져오기 기능** 을 사용 하 여 windows 인증 (사용자 이름 및 암호)을 수집한 다음 해당 **PSCredential** 개체를 $Credential 변수에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-122">The second command uses **Get-Credential** to collect the windows authentication (user name and password), and then stores that **PSCredential** object in the $Credential variable.</span></span>
+
+<span data-ttu-id="69f73-123">세 번째 명령은 $Value에 저장 되어 있고 지정 된 데이터 팩토리, 게이트웨이, 리소스 그룹 및 연결 된 서비스 유형에 대 한 $Credential에 대해 암호화 된 값을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-123">The third command creates an encrypted value for the object stored in $Value and $Credential for the specified data factory, gateway, resource group, and linked service type.</span></span>
+
+### <span data-ttu-id="69f73-124">예제 4: HDFS 연결 된 서비스에 대 한 자격 증명 암호화</span><span class="sxs-lookup"><span data-stu-id="69f73-124">Example 4: Encrypt credentials for HDFS linked service</span></span>
+```
+PS C:\>$UserName = ConvertTo-SecureString "domain\\username" -AsPlainText -Force
+$Password = ConvertTo-SecureString "password" -AsPlainText -Force
+$Credential = New-Object System.Management.Automation.PSCredential ($UserName, $Password)
+New-AzureRmDataFactoryEncryptValue -DataFactoryName "MyDataFactory" -ResourceGroupName "MyResourceGroup" -GatewayName "MyDataManagementGateway" -Type HdfsLinkedService -AuthenticationType Windows -Credential $Credential -NonCredentialValue "http://server01.com:50070/webhdfs/v1/user/username"
+```
+
+<span data-ttu-id="69f73-125">**ConvertTo-SecureString** 명령은 지정 된 문자열을 보안 문자열로 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-125">The **ConvertTo-SecureString** command converts the specified string to a secure string.</span></span>
+<span data-ttu-id="69f73-126">**새 개체** 명령은 보안 사용자 이름 및 암호 문자열을 사용 하 여 PSCredential 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-126">The **New-Object** command creates a PSCredential object using the secure username and password strings.</span></span>
+<span data-ttu-id="69f73-127">대신 **Get-Credential** 명령을 사용 하 여 windows 인증 (사용자 이름 및 암호)을 수집한 다음 이전 예제와 같이 $credential 변수에 반환 된 **PSCredential** 개체를 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-127">Instead, you could use the **Get-Credential** command to collect windows authentication (user name and password), and then store the returned **PSCredential** object in the $credential variable as shown in previous examples.</span></span>
+
+<span data-ttu-id="69f73-128">**AzureRmDataFactoryEncryptValue** 명령은 지정 된 데이터 팩토리, 게이트웨이, 리소스 그룹 및 연결 된 서비스 유형에 대해 $Credential에 저장 된 개체에 대 한 암호화 값을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-128">The **New-AzureRmDataFactoryEncryptValue** command creates an encrypted value for the object stored in $Credential for the specified data factory, gateway, resource group, and linked service type.</span></span>
+
+### <span data-ttu-id="69f73-129">예제 5: ODBC 연결 된 서비스에 대 한 자격 증명 암호화</span><span class="sxs-lookup"><span data-stu-id="69f73-129">Example 5: Encrypt credentials for ODBC linked service</span></span>
+```
+PS C:\>$Content = ConvertTo-SecureString "UID=username@contoso;PWD=password;" -AsPlainText -Force
+New-AzureRmDataFactoryEncryptValue -ResourceGroupName $RGName -DataFactoryName $DFName -GatewayName $Gateway -Type OnPremisesOdbcLinkedService -AuthenticationType Basic -NonCredentialValue "Driver={SQL Server};Server=server01.database.contoso.net; Database=HDISScenarioTest;" -Value $content
+```
+
+<span data-ttu-id="69f73-130">**ConvertTo-SecureString** 명령은 지정 된 문자열을 보안 문자열로 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-130">The **ConvertTo-SecureString** command converts the specified string to a secure string.</span></span>
+
+<span data-ttu-id="69f73-131">**AzureRmDataFactoryEncryptValue** 명령은 지정 된 데이터 팩토리, 게이트웨이, 리소스 그룹 및 연결 된 서비스 유형에 대해 $Value에 저장 된 개체에 대 한 암호화 값을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-131">The **New-AzureRmDataFactoryEncryptValue** command creates an encrypted value for the object stored in $Value for the specified data factory, gateway, resource group, and linked service type.</span></span>
+
+## <span data-ttu-id="69f73-132">변수</span><span class="sxs-lookup"><span data-stu-id="69f73-132">PARAMETERS</span></span>
+
+### <span data-ttu-id="69f73-133">-AuthenticationType</span><span class="sxs-lookup"><span data-stu-id="69f73-133">-AuthenticationType</span></span>
+<span data-ttu-id="69f73-134">데이터 원본에 연결 하는 데 사용할 인증 유형을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-134">Specifies the type of authentication to be used to connect to the data source.</span></span>
+<span data-ttu-id="69f73-135">이 매개 변수에 허용 되는 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-135">The acceptable values for this parameter are:</span></span>
+
+- <span data-ttu-id="69f73-136">창을</span><span class="sxs-lookup"><span data-stu-id="69f73-136">Windows</span></span>
+- <span data-ttu-id="69f73-137">기본적</span><span class="sxs-lookup"><span data-stu-id="69f73-137">Basic</span></span>
+- <span data-ttu-id="69f73-138">공용.</span><span class="sxs-lookup"><span data-stu-id="69f73-138">Anonymous.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Windows, Basic, Anonymous
+
+Required: False
+Position: 6
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69f73-139">-Credential</span><span class="sxs-lookup"><span data-stu-id="69f73-139">-Credential</span></span>
+<span data-ttu-id="69f73-140">사용할 Windows 인증 자격 증명 (사용자 이름 및 암호)을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-140">Specifies the Windows authentication credentials (user name and password) to be used.</span></span>
+<span data-ttu-id="69f73-141">이 cmdlet은 여기에서 지정 하는 자격 증명 데이터를 암호화 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-141">This cmdlet encrypts the credential data you specify here.</span></span>
+
+```yaml
+Type: System.Management.Automation.PSCredential
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69f73-142">-데이터베이스</span><span class="sxs-lookup"><span data-stu-id="69f73-142">-Database</span></span>
+<span data-ttu-id="69f73-143">연결 된 서비스의 데이터베이스 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-143">Specifies the database name of the linked service.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 8
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69f73-144">-DataFactory</span><span class="sxs-lookup"><span data-stu-id="69f73-144">-DataFactory</span></span>
+<span data-ttu-id="69f73-145">**PSDataFactory** 개체를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-145">Specifies a **PSDataFactory** object.</span></span>
+<span data-ttu-id="69f73-146">이 cmdlet은이 매개 변수에서 지정 하는 데이터 팩터리에 대 한 데이터를 암호화 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-146">This cmdlet encrypts data for the data factory that this parameter specifies.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory
+Parameter Sets: ByFactoryObject
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69f73-147">-DataFactoryName</span><span class="sxs-lookup"><span data-stu-id="69f73-147">-DataFactoryName</span></span>
+<span data-ttu-id="69f73-148">Data factory의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-148">Specifies the name of a data factory.</span></span>
+<span data-ttu-id="69f73-149">이 cmdlet은이 매개 변수에서 지정 하는 데이터 팩터리에 대 한 데이터를 암호화 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-149">This cmdlet encrypts data for the data factory that this parameter specifies.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByFactoryName
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69f73-150">--게이트웨이 이름</span><span class="sxs-lookup"><span data-stu-id="69f73-150">-GatewayName</span></span>
+<span data-ttu-id="69f73-151">게이트웨이의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-151">Specifies the name of the gateway.</span></span>
+<span data-ttu-id="69f73-152">이 cmdlet은이 매개 변수에서 지정 하는 게이트웨이에 대 한 데이터를 암호화 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-152">This cmdlet encrypts data for the gateway that this parameter specifies.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69f73-153">-Credentialvalue</span><span class="sxs-lookup"><span data-stu-id="69f73-153">-NonCredentialValue</span></span>
+<span data-ttu-id="69f73-154">ODBC (Open Database Connectivity) 연결 문자열의 자격 증명이 아닌 부분을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-154">Specifies the non-credential part of the Open Database Connectivity (ODBC) connection string.</span></span>
+<span data-ttu-id="69f73-155">이 매개 변수는 ODBC 연결 된 서비스에만 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-155">This parameter is applicable only for the ODBC linked service.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69f73-156">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="69f73-156">-ResourceGroupName</span></span>
+<span data-ttu-id="69f73-157">Azure 리소스 그룹의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-157">Specifies the name of an Azure resource group.</span></span>
+<span data-ttu-id="69f73-158">이 cmdlet은이 매개 변수에서 지정 하는 그룹의 데이터를 암호화 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-158">This cmdlet encrypts data for the group that this parameter specifies.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByFactoryName
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69f73-159">-서버</span><span class="sxs-lookup"><span data-stu-id="69f73-159">-Server</span></span>
+<span data-ttu-id="69f73-160">연결 된 서비스의 서버 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-160">Specifies the server name of the linked service.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 7
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69f73-161">-Type</span><span class="sxs-lookup"><span data-stu-id="69f73-161">-Type</span></span>
+<span data-ttu-id="69f73-162">연결 된 서비스 유형을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-162">Specifies the linked service type.</span></span>
+<span data-ttu-id="69f73-163">이 cmdlet은이 매개 변수에서 지정 하는 연결 된 서비스 유형의 데이터를 암호화 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-163">This cmdlet encrypts data for the linked service type that this parameter specifies.</span></span>
+<span data-ttu-id="69f73-164">이 매개 변수에 허용 되는 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-164">The acceptable values for this parameter are:</span></span>
+
+- <span data-ttu-id="69f73-165">OnPremisesSqlLinkedService</span><span class="sxs-lookup"><span data-stu-id="69f73-165">OnPremisesSqlLinkedService</span></span> 
+- <span data-ttu-id="69f73-166">OnPremisesFileSystemLinkedService</span><span class="sxs-lookup"><span data-stu-id="69f73-166">OnPremisesFileSystemLinkedService</span></span> 
+- <span data-ttu-id="69f73-167">OnPremisesOracleLinkedService</span><span class="sxs-lookup"><span data-stu-id="69f73-167">OnPremisesOracleLinkedService</span></span> 
+- <span data-ttu-id="69f73-168">OnPremisesOdbcLinkedService</span><span class="sxs-lookup"><span data-stu-id="69f73-168">OnPremisesOdbcLinkedService</span></span> 
+- <span data-ttu-id="69f73-169">OnPremisesPostgreSqlLinkedService</span><span class="sxs-lookup"><span data-stu-id="69f73-169">OnPremisesPostgreSqlLinkedService</span></span> 
+- <span data-ttu-id="69f73-170">OnPremisesTeradataLinkedService</span><span class="sxs-lookup"><span data-stu-id="69f73-170">OnPremisesTeradataLinkedService</span></span> 
+- <span data-ttu-id="69f73-171">OnPremisesMySQLLinkedService</span><span class="sxs-lookup"><span data-stu-id="69f73-171">OnPremisesMySQLLinkedService</span></span> 
+- <span data-ttu-id="69f73-172">OnPremisesDB2LinkedService</span><span class="sxs-lookup"><span data-stu-id="69f73-172">OnPremisesDB2LinkedService</span></span> 
+- <span data-ttu-id="69f73-173">OnPremisesSybaseLinkedService</span><span class="sxs-lookup"><span data-stu-id="69f73-173">OnPremisesSybaseLinkedService</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+Accepted values: OnPremisesSqlLinkedService, OnPremisesFileSystemLinkedService, OnPremisesOracleLinkedService, OnPremisesOdbcLinkedService, OnPremisesPostgreSqlLinkedService, OnPremisesTeradataLinkedService, OnPremisesMySQLLinkedService, OnPremisesDB2LinkedService, OnPremisesSybaseLinkedService, HdfsLinkedService
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69f73-174">-값</span><span class="sxs-lookup"><span data-stu-id="69f73-174">-Value</span></span>
+<span data-ttu-id="69f73-175">암호화할 값을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-175">Specifies the value to encrypt.</span></span>
+<span data-ttu-id="69f73-176">온-프레미스 SQL Server 연결 된 서비스 및 온-프레미스 Oracle 연결 된 서비스의 경우 연결 문자열을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-176">For an on-premises SQL Server linked service and an on-premises Oracle linked service, use a connection string.</span></span>
+<span data-ttu-id="69f73-177">온-프레미스 ODBC 연결 서비스의 경우 연결 문자열의 자격 증명 부분을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-177">For an on-premises ODBC linked service, use the credential part of the connection string.</span></span>
+<span data-ttu-id="69f73-178">온-프레미스 파일 시스템 연결 서비스의 경우 파일 시스템이 게이트웨이 컴퓨터에 로컬인 경우 Local 또는 localhost를 사용 하 고, 파일 시스템이 게이트웨이 컴퓨터와 다른 서버에 있는 경우 servername을 사용 \\ \\ 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-178">For on premises file system linked service, if the file system is local to the gateway computer, use Local or localhost, and if the file system is on a server different from the gateway computer, use \\\\servername.</span></span>
+
+```yaml
+Type: System.Security.SecureString
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69f73-179">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="69f73-179">-DefaultProfile</span></span>
+<span data-ttu-id="69f73-180">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-180">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="69f73-181">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="69f73-181">CommonParameters</span></span>
+<span data-ttu-id="69f73-182">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="69f73-182">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="69f73-183">자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="69f73-183">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="69f73-184">입력</span><span class="sxs-lookup"><span data-stu-id="69f73-184">INPUTS</span></span>
+
+## <span data-ttu-id="69f73-185">출력</span><span class="sxs-lookup"><span data-stu-id="69f73-185">OUTPUTS</span></span>
+
+### <span data-ttu-id="69f73-186">System. 문자열</span><span class="sxs-lookup"><span data-stu-id="69f73-186">System.String</span></span>
+
+## <span data-ttu-id="69f73-187">상속자</span><span class="sxs-lookup"><span data-stu-id="69f73-187">NOTES</span></span>
+* <span data-ttu-id="69f73-188">키워드: azure, azurerm, arm, resource, 관리, manager, data, 팩토리</span><span class="sxs-lookup"><span data-stu-id="69f73-188">Keywords: azure, azurerm, arm, resource, management, manager, data, factories</span></span>
+
+## <span data-ttu-id="69f73-189">관련 링크</span><span class="sxs-lookup"><span data-stu-id="69f73-189">RELATED LINKS</span></span>
+
+[<span data-ttu-id="69f73-190">새로운 AzureRmDataFactoryEncryptValue</span><span class="sxs-lookup"><span data-stu-id="69f73-190">New-AzureRmDataFactoryEncryptValue</span></span>](./New-AzureRmDataFactoryEncryptValue.md)
+
+

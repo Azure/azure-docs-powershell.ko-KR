@@ -1,0 +1,96 @@
+---
+external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+Module Name: AzureRM.Network
+ms.assetid: 614B0634-154A-449A-83E7-051DEF5A3BEE
+online version: ''
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmLoadBalancerInboundNatPoolConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmLoadBalancerInboundNatPoolConfig.md
+ms.openlocfilehash: 9f9e14b94cbe38ba643d2c39beca5e1fe52138b0
+ms.sourcegitcommit: f599b50d5e980197d1fca769378df90a842b42a1
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "93703105"
+---
+# <span data-ttu-id="8998e-101">Get-AzureRmLoadBalancerInboundNatPoolConfig</span><span class="sxs-lookup"><span data-stu-id="8998e-101">Get-AzureRmLoadBalancerInboundNatPoolConfig</span></span>
+
+## <span data-ttu-id="8998e-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="8998e-102">SYNOPSIS</span></span>
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## <span data-ttu-id="8998e-103">구문과</span><span class="sxs-lookup"><span data-stu-id="8998e-103">SYNTAX</span></span>
+
+```
+Get-AzureRmLoadBalancerInboundNatPoolConfig [-Name <String>] -LoadBalancer <PSLoadBalancer>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="8998e-104">설명은</span><span class="sxs-lookup"><span data-stu-id="8998e-104">DESCRIPTION</span></span>
+
+## <span data-ttu-id="8998e-105">예제의</span><span class="sxs-lookup"><span data-stu-id="8998e-105">EXAMPLES</span></span>
+
+### <span data-ttu-id="8998e-106">raid-1</span><span class="sxs-lookup"><span data-stu-id="8998e-106">1:</span></span>
+```
+PS C:\>
+```
+
+## <span data-ttu-id="8998e-107">변수</span><span class="sxs-lookup"><span data-stu-id="8998e-107">PARAMETERS</span></span>
+
+### <span data-ttu-id="8998e-108">-LoadBalancer</span><span class="sxs-lookup"><span data-stu-id="8998e-108">-LoadBalancer</span></span>
+```yaml
+Type: Microsoft.Azure.Commands.Network.Models.PSLoadBalancer
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="8998e-109">-이름</span><span class="sxs-lookup"><span data-stu-id="8998e-109">-Name</span></span>
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="8998e-110">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="8998e-110">-DefaultProfile</span></span>
+<span data-ttu-id="8998e-111">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="8998e-111">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="8998e-112">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="8998e-112">CommonParameters</span></span>
+<span data-ttu-id="8998e-113">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="8998e-113">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="8998e-114">자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="8998e-114">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="8998e-115">입력</span><span class="sxs-lookup"><span data-stu-id="8998e-115">INPUTS</span></span>
+
+### <span data-ttu-id="8998e-116">PSLoadBalancer</span><span class="sxs-lookup"><span data-stu-id="8998e-116">PSLoadBalancer</span></span>
+<span data-ttu-id="8998e-117">' LoadBalancer ' 매개 변수는 파이프라인에서 ' PSLoadBalancer ' 형식의 값을 허용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8998e-117">Parameter 'LoadBalancer' accepts value of type 'PSLoadBalancer' from the pipeline</span></span>
+
+## <span data-ttu-id="8998e-118">출력</span><span class="sxs-lookup"><span data-stu-id="8998e-118">OUTPUTS</span></span>
+
+### <span data-ttu-id="8998e-119">PSInboundNatPool에 대 한.</span><span class="sxs-lookup"><span data-stu-id="8998e-119">Microsoft.Azure.Commands.Network.Models.PSInboundNatPool</span></span>
+
+## <span data-ttu-id="8998e-120">상속자</span><span class="sxs-lookup"><span data-stu-id="8998e-120">NOTES</span></span>
+
+## <span data-ttu-id="8998e-121">관련 링크</span><span class="sxs-lookup"><span data-stu-id="8998e-121">RELATED LINKS</span></span>
+
