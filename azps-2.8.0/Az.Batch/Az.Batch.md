@@ -1,0 +1,233 @@
+---
+Module Name: Az.Batch
+Module Guid: a8f00f40-1c1a-49b5-9db3-24076b75c3cf
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.batch
+Help Version: 4.0.0.0
+Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Az.Batch.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Batch/Batch/help/Az.Batch.md
+ms.openlocfilehash: 1c9a5227db42fc1677efd0be50a6ecebda0d64d2
+ms.sourcegitcommit: 0b94b9566124331d0b15eb7f5a811305c254172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "93688974"
+---
+# <span data-ttu-id="44657-101">Az.Batch 모듈</span><span class="sxs-lookup"><span data-stu-id="44657-101">Az.Batch Module</span></span>
+## <span data-ttu-id="44657-102">설명은</span><span class="sxs-lookup"><span data-stu-id="44657-102">Description</span></span>
+<span data-ttu-id="44657-103">Azure 모듈의 Azure Batch cmdlet을 사용 하 여 Azure PowerShell에서 Microsoft Azure 일괄 처리 서비스를 관리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="44657-103">The Azure Batch cmdlets in the Azure module enable you to manage Microsoft Azure Batch services in Azure PowerShell.</span></span>
+
+## <span data-ttu-id="44657-104">Az.Batch Cmdlet</span><span class="sxs-lookup"><span data-stu-id="44657-104">Az.Batch Cmdlets</span></span>
+### [<span data-ttu-id="44657-105">Disable-AzBatchAutoScale</span><span class="sxs-lookup"><span data-stu-id="44657-105">Disable-AzBatchAutoScale</span></span>](Disable-AzBatchAutoScale.md)
+<span data-ttu-id="44657-106">풀의 자동 크기 조정을 사용 하지 않도록 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-106">Disables automatic scaling of a pool.</span></span>
+
+### [<span data-ttu-id="44657-107">Disable-AzBatchComputeNodeScheduling</span><span class="sxs-lookup"><span data-stu-id="44657-107">Disable-AzBatchComputeNodeScheduling</span></span>](Disable-AzBatchComputeNodeScheduling.md)
+<span data-ttu-id="44657-108">지정 된 계산 노드에서 작업 일정을 사용 하지 않도록 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-108">Disables task scheduling on the specified compute node.</span></span>
+
+### [<span data-ttu-id="44657-109">Disable-AzBatchJob</span><span class="sxs-lookup"><span data-stu-id="44657-109">Disable-AzBatchJob</span></span>](Disable-AzBatchJob.md)
+<span data-ttu-id="44657-110">일괄 작업을 사용 하지 않도록 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-110">Disables a Batch job.</span></span>
+
+### [<span data-ttu-id="44657-111">Disable-AzBatchJobSchedule</span><span class="sxs-lookup"><span data-stu-id="44657-111">Disable-AzBatchJobSchedule</span></span>](Disable-AzBatchJobSchedule.md)
+<span data-ttu-id="44657-112">일괄 작업 일정을 사용 하지 않도록 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-112">Disables a Batch job schedule.</span></span>
+
+### [<span data-ttu-id="44657-113">Enable-AzBatchAutoScale</span><span class="sxs-lookup"><span data-stu-id="44657-113">Enable-AzBatchAutoScale</span></span>](Enable-AzBatchAutoScale.md)
+<span data-ttu-id="44657-114">풀의 자동 크기 조정을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-114">Enables automatic scaling of a pool.</span></span>
+
+### [<span data-ttu-id="44657-115">Enable-AzBatchComputeNodeScheduling</span><span class="sxs-lookup"><span data-stu-id="44657-115">Enable-AzBatchComputeNodeScheduling</span></span>](Enable-AzBatchComputeNodeScheduling.md)
+<span data-ttu-id="44657-116">지정 된 계산 노드에서 작업 일정을 사용 하도록 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-116">Enables task scheduling on the specified compute node.</span></span>
+
+### [<span data-ttu-id="44657-117">Enable-AzBatchJob</span><span class="sxs-lookup"><span data-stu-id="44657-117">Enable-AzBatchJob</span></span>](Enable-AzBatchJob.md)
+<span data-ttu-id="44657-118">일괄 작업을 사용 하도록 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-118">Enables a Batch job.</span></span>
+
+### [<span data-ttu-id="44657-119">Enable-AzBatchJobSchedule</span><span class="sxs-lookup"><span data-stu-id="44657-119">Enable-AzBatchJobSchedule</span></span>](Enable-AzBatchJobSchedule.md)
+<span data-ttu-id="44657-120">일괄 작업 일정을 사용 하도록 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-120">Enables a Batch job schedule.</span></span>
+
+### [<span data-ttu-id="44657-121">Enable-AzBatchTask</span><span class="sxs-lookup"><span data-stu-id="44657-121">Enable-AzBatchTask</span></span>](Enable-AzBatchTask.md)
+<span data-ttu-id="44657-122">작업을 다시 활성화 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-122">Reactivates a task.</span></span>
+
+### [<span data-ttu-id="44657-123">Get-AzBatchAccount</span><span class="sxs-lookup"><span data-stu-id="44657-123">Get-AzBatchAccount</span></span>](Get-AzBatchAccount.md)
+<span data-ttu-id="44657-124">현재 구독에서 일괄 처리 계정을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-124">Gets a Batch account in the current subscription.</span></span>
+
+### [<span data-ttu-id="44657-125">Get-AzBatchAccountKey</span><span class="sxs-lookup"><span data-stu-id="44657-125">Get-AzBatchAccountKey</span></span>](Get-AzBatchAccountKey.md)
+<span data-ttu-id="44657-126">일괄 처리 계정의 키를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-126">Gets the keys of a Batch account.</span></span>
+
+### [<span data-ttu-id="44657-127">Get-AzBatchApplication</span><span class="sxs-lookup"><span data-stu-id="44657-127">Get-AzBatchApplication</span></span>](Get-AzBatchApplication.md)
+<span data-ttu-id="44657-128">지정 된 응용 프로그램에 대 한 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-128">Gets information about the specified application.</span></span>
+
+### [<span data-ttu-id="44657-129">Get-AzBatchApplicationPackage</span><span class="sxs-lookup"><span data-stu-id="44657-129">Get-AzBatchApplicationPackage</span></span>](Get-AzBatchApplicationPackage.md)
+<span data-ttu-id="44657-130">일괄 계정에서 응용 프로그램 패키지에 대 한 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-130">Gets information about an application package in a Batch account.</span></span>
+
+### [<span data-ttu-id="44657-131">Get-AzBatchCertificate</span><span class="sxs-lookup"><span data-stu-id="44657-131">Get-AzBatchCertificate</span></span>](Get-AzBatchCertificate.md)
+<span data-ttu-id="44657-132">일괄 계정에서 인증서를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-132">Gets the certificates in a Batch account.</span></span>
+
+### [<span data-ttu-id="44657-133">Get-AzBatchComputeNode</span><span class="sxs-lookup"><span data-stu-id="44657-133">Get-AzBatchComputeNode</span></span>](Get-AzBatchComputeNode.md)
+<span data-ttu-id="44657-134">풀에서 일괄 처리를 계산 하는 노드를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-134">Gets Batch compute nodes from a pool.</span></span>
+
+### [<span data-ttu-id="44657-135">Get-AzBatchJob</span><span class="sxs-lookup"><span data-stu-id="44657-135">Get-AzBatchJob</span></span>](Get-AzBatchJob.md)
+<span data-ttu-id="44657-136">일괄 처리 계정 또는 작업 일정에 대 한 일괄 작업을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-136">Gets Batch jobs for a Batch account or job schedule.</span></span>
+
+### [<span data-ttu-id="44657-137">Get-AzBatchJobPreparationAndReleaseTaskStatus</span><span class="sxs-lookup"><span data-stu-id="44657-137">Get-AzBatchJobPreparationAndReleaseTaskStatus</span></span>](Get-AzBatchJobPreparationAndReleaseTaskStatus.md)
+<span data-ttu-id="44657-138">일괄 작업 준비 및 릴리스 작업 상태를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-138">Gets Batch job preparation and release task status.</span></span>
+
+### [<span data-ttu-id="44657-139">Get-AzBatchJobSchedule</span><span class="sxs-lookup"><span data-stu-id="44657-139">Get-AzBatchJobSchedule</span></span>](Get-AzBatchJobSchedule.md)
+<span data-ttu-id="44657-140">일괄 작업 일정을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-140">Gets Batch job schedules.</span></span>
+
+### [<span data-ttu-id="44657-141">Get-AzBatchJobStatistic</span><span class="sxs-lookup"><span data-stu-id="44657-141">Get-AzBatchJobStatistic</span></span>](Get-AzBatchJobStatistic.md)
+<span data-ttu-id="44657-142">일괄 처리 계정에 대 한 작업 요약 통계를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-142">Gets job summary statistics for a Batch account.</span></span>
+
+### [<span data-ttu-id="44657-143">Get-AzBatchLocationQuota</span><span class="sxs-lookup"><span data-stu-id="44657-143">Get-AzBatchLocationQuota</span></span>](Get-AzBatchLocationQuota.md)
+<span data-ttu-id="44657-144">지정 된 위치에서 구독에 대 한 일괄 처리 서비스 할당량을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-144">Gets the Batch service quotas for your subscription at the given location.</span></span>
+
+### [<span data-ttu-id="44657-145">Get-AzBatchNodeAgentSku</span><span class="sxs-lookup"><span data-stu-id="44657-145">Get-AzBatchNodeAgentSku</span></span>](Get-AzBatchNodeAgentSku.md)
+<span data-ttu-id="44657-146">일괄 처리 계정에서 사용할 수 있는 일괄 처리 노드 에이전트 Sku를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-146">Gets Batch node agent SKUs available in a Batch account.</span></span>
+
+### [<span data-ttu-id="44657-147">Get-AzBatchNodeFile</span><span class="sxs-lookup"><span data-stu-id="44657-147">Get-AzBatchNodeFile</span></span>](Get-AzBatchNodeFile.md)
+<span data-ttu-id="44657-148">일괄 처리 노드 파일의 속성을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-148">Gets the properties of Batch node files.</span></span>
+
+### [<span data-ttu-id="44657-149">Get-AzBatchNodeFileContent</span><span class="sxs-lookup"><span data-stu-id="44657-149">Get-AzBatchNodeFileContent</span></span>](Get-AzBatchNodeFileContent.md)
+<span data-ttu-id="44657-150">일괄 처리 노드 파일을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-150">Gets a Batch node file.</span></span>
+
+### [<span data-ttu-id="44657-151">Get-AzBatchPool</span><span class="sxs-lookup"><span data-stu-id="44657-151">Get-AzBatchPool</span></span>](Get-AzBatchPool.md)
+<span data-ttu-id="44657-152">지정 된 Batch 계정으로 일괄 처리 풀을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-152">Gets Batch pools under the specified Batch account.</span></span>
+
+### [<span data-ttu-id="44657-153">Get-AzBatchPoolNodeCount</span><span class="sxs-lookup"><span data-stu-id="44657-153">Get-AzBatchPoolNodeCount</span></span>](Get-AzBatchPoolNodeCount.md)
+<span data-ttu-id="44657-154">풀 id로 그룹화 된 노드 상태별로 일괄 처리 노드 개수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-154">Gets Batch node counts per node state grouped by pool id.</span></span>
+
+### [<span data-ttu-id="44657-155">Get-AzBatchPoolStatistic</span><span class="sxs-lookup"><span data-stu-id="44657-155">Get-AzBatchPoolStatistic</span></span>](Get-AzBatchPoolStatistic.md)
+<span data-ttu-id="44657-156">일괄 처리 계정에 대 한 풀 요약 통계를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-156">Gets pool summary statistics for a Batch account.</span></span>
+
+### [<span data-ttu-id="44657-157">Get-AzBatchPoolUsageMetric</span><span class="sxs-lookup"><span data-stu-id="44657-157">Get-AzBatchPoolUsageMetric</span></span>](Get-AzBatchPoolUsageMetric.md)
+<span data-ttu-id="44657-158">일괄 처리 계정에 대 한 풀 사용 메트릭을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-158">Gets pool usage metrics for a Batch account.</span></span>
+
+### [<span data-ttu-id="44657-159">Get-AzBatchRemoteDesktopProtocolFile</span><span class="sxs-lookup"><span data-stu-id="44657-159">Get-AzBatchRemoteDesktopProtocolFile</span></span>](Get-AzBatchRemoteDesktopProtocolFile.md)
+<span data-ttu-id="44657-160">계산 노드에서 RDP 파일을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-160">Gets an RDP file from a compute node.</span></span>
+
+### [<span data-ttu-id="44657-161">Get-AzBatchRemoteLoginSetting</span><span class="sxs-lookup"><span data-stu-id="44657-161">Get-AzBatchRemoteLoginSetting</span></span>](Get-AzBatchRemoteLoginSetting.md)
+<span data-ttu-id="44657-162">계산 노드에 대 한 원격 로그온 설정을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-162">Gets remote logon settings for a compute node.</span></span>
+
+### [<span data-ttu-id="44657-163">Get-AzBatchSubtask</span><span class="sxs-lookup"><span data-stu-id="44657-163">Get-AzBatchSubtask</span></span>](Get-AzBatchSubtask.md)
+<span data-ttu-id="44657-164">지정 된 작업의 하위 작업 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-164">Gets the subtask information of the specified task.</span></span>
+
+### [<span data-ttu-id="44657-165">Get-AzBatchTask</span><span class="sxs-lookup"><span data-stu-id="44657-165">Get-AzBatchTask</span></span>](Get-AzBatchTask.md)
+<span data-ttu-id="44657-166">작업에 대 한 일괄 작업을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-166">Gets the Batch tasks for a job.</span></span>
+
+### [<span data-ttu-id="44657-167">Get-AzBatchTaskCount</span><span class="sxs-lookup"><span data-stu-id="44657-167">Get-AzBatchTaskCount</span></span>](Get-AzBatchTaskCount.md)
+<span data-ttu-id="44657-168">지정 된 작업에 대 한 작업 개수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-168">Gets the task counts for the specified job.</span></span>
+
+### [<span data-ttu-id="44657-169">새로운 AzBatchAccount</span><span class="sxs-lookup"><span data-stu-id="44657-169">New-AzBatchAccount</span></span>](New-AzBatchAccount.md)
+<span data-ttu-id="44657-170">일괄 처리 계정을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="44657-170">Creates a Batch account.</span></span>
+
+### [<span data-ttu-id="44657-171">새로운 AzBatchAccountKey</span><span class="sxs-lookup"><span data-stu-id="44657-171">New-AzBatchAccountKey</span></span>](New-AzBatchAccountKey.md)
+<span data-ttu-id="44657-172">일괄 처리 계정의 키를 다시 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-172">Regenerates a key of a Batch account.</span></span>
+
+### [<span data-ttu-id="44657-173">새로운 AzBatchApplication</span><span class="sxs-lookup"><span data-stu-id="44657-173">New-AzBatchApplication</span></span>](New-AzBatchApplication.md)
+<span data-ttu-id="44657-174">지정 된 Batch 계정에 응용 프로그램을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-174">Adds an application to the specified Batch account.</span></span>
+
+### [<span data-ttu-id="44657-175">새로운 AzBatchApplicationPackage</span><span class="sxs-lookup"><span data-stu-id="44657-175">New-AzBatchApplicationPackage</span></span>](New-AzBatchApplicationPackage.md)
+<span data-ttu-id="44657-176">일괄 처리 계정에 응용 프로그램 패키지를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="44657-176">Creates an application package in a Batch account.</span></span>
+
+### [<span data-ttu-id="44657-177">새로운 AzBatchCertificate</span><span class="sxs-lookup"><span data-stu-id="44657-177">New-AzBatchCertificate</span></span>](New-AzBatchCertificate.md)
+<span data-ttu-id="44657-178">지정 된 Batch 계정에 인증서를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-178">Adds a certificate to the specified Batch account.</span></span>
+
+### [<span data-ttu-id="44657-179">새로운 AzBatchComputeNodeUser</span><span class="sxs-lookup"><span data-stu-id="44657-179">New-AzBatchComputeNodeUser</span></span>](New-AzBatchComputeNodeUser.md)
+<span data-ttu-id="44657-180">일괄 계산 노드에 사용자 계정을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="44657-180">Creates a user account on a Batch compute node.</span></span>
+
+### [<span data-ttu-id="44657-181">새로운 AzBatchJob</span><span class="sxs-lookup"><span data-stu-id="44657-181">New-AzBatchJob</span></span>](New-AzBatchJob.md)
+<span data-ttu-id="44657-182">일괄 처리 서비스에 작업을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="44657-182">Creates a job in the Batch service.</span></span>
+
+### [<span data-ttu-id="44657-183">새로운 AzBatchJobSchedule</span><span class="sxs-lookup"><span data-stu-id="44657-183">New-AzBatchJobSchedule</span></span>](New-AzBatchJobSchedule.md)
+<span data-ttu-id="44657-184">일괄 처리 서비스에서 작업 일정을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="44657-184">Creates a job schedule in the Batch service.</span></span>
+
+### [<span data-ttu-id="44657-185">새로운 AzBatchPool</span><span class="sxs-lookup"><span data-stu-id="44657-185">New-AzBatchPool</span></span>](New-AzBatchPool.md)
+<span data-ttu-id="44657-186">일괄 처리 서비스에서 풀을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="44657-186">Creates a pool in the Batch service.</span></span>
+
+### [<span data-ttu-id="44657-187">새로운 AzBatchTask</span><span class="sxs-lookup"><span data-stu-id="44657-187">New-AzBatchTask</span></span>](New-AzBatchTask.md)
+<span data-ttu-id="44657-188">작업 아래에 일괄 작업을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="44657-188">Creates a Batch task under a job.</span></span>
+
+### [<span data-ttu-id="44657-189">제거-AzBatchAccount</span><span class="sxs-lookup"><span data-stu-id="44657-189">Remove-AzBatchAccount</span></span>](Remove-AzBatchAccount.md)
+<span data-ttu-id="44657-190">일괄 처리 계정을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-190">Removes a Batch account.</span></span>
+
+### [<span data-ttu-id="44657-191">제거-AzBatchApplication</span><span class="sxs-lookup"><span data-stu-id="44657-191">Remove-AzBatchApplication</span></span>](Remove-AzBatchApplication.md)
+<span data-ttu-id="44657-192">일괄 처리 계정에서 응용 프로그램을 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-192">Deletes an application from a Batch account.</span></span>
+
+### [<span data-ttu-id="44657-193">제거-AzBatchApplicationPackage</span><span class="sxs-lookup"><span data-stu-id="44657-193">Remove-AzBatchApplicationPackage</span></span>](Remove-AzBatchApplicationPackage.md)
+<span data-ttu-id="44657-194">응용 프로그램 패키지 레코드와 이진 파일을 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-194">Deletes an application package record and the binary file.</span></span>
+
+### [<span data-ttu-id="44657-195">제거-AzBatchCertificate</span><span class="sxs-lookup"><span data-stu-id="44657-195">Remove-AzBatchCertificate</span></span>](Remove-AzBatchCertificate.md)
+<span data-ttu-id="44657-196">계정에서 인증서를 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-196">Deletes a certificate from an account.</span></span>
+
+### [<span data-ttu-id="44657-197">제거-AzBatchComputeNode</span><span class="sxs-lookup"><span data-stu-id="44657-197">Remove-AzBatchComputeNode</span></span>](Remove-AzBatchComputeNode.md)
+<span data-ttu-id="44657-198">풀에서 계산 노드를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-198">Removes compute nodes from a pool.</span></span>
+
+### [<span data-ttu-id="44657-199">제거-AzBatchComputeNodeUser</span><span class="sxs-lookup"><span data-stu-id="44657-199">Remove-AzBatchComputeNodeUser</span></span>](Remove-AzBatchComputeNodeUser.md)
+<span data-ttu-id="44657-200">일괄 처리 계산 노드에서 사용자 계정을 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-200">Deletes a user account from a Batch compute node.</span></span>
+
+### [<span data-ttu-id="44657-201">제거-AzBatchJob</span><span class="sxs-lookup"><span data-stu-id="44657-201">Remove-AzBatchJob</span></span>](Remove-AzBatchJob.md)
+<span data-ttu-id="44657-202">일괄 처리 작업을 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-202">Deletes a Batch job.</span></span>
+
+### [<span data-ttu-id="44657-203">제거-AzBatchJobSchedule</span><span class="sxs-lookup"><span data-stu-id="44657-203">Remove-AzBatchJobSchedule</span></span>](Remove-AzBatchJobSchedule.md)
+<span data-ttu-id="44657-204">일괄 작업 일정을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-204">Removes a Batch job schedule.</span></span>
+
+### [<span data-ttu-id="44657-205">제거-AzBatchNodeFile</span><span class="sxs-lookup"><span data-stu-id="44657-205">Remove-AzBatchNodeFile</span></span>](Remove-AzBatchNodeFile.md)
+<span data-ttu-id="44657-206">작업 또는 계산 노드에 대 한 노드 파일을 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-206">Deletes a node file for a task or compute node.</span></span>
+
+### [<span data-ttu-id="44657-207">제거-AzBatchPool</span><span class="sxs-lookup"><span data-stu-id="44657-207">Remove-AzBatchPool</span></span>](Remove-AzBatchPool.md)
+<span data-ttu-id="44657-208">지정 된 일괄 처리 풀을 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-208">Deletes the specified Batch pool.</span></span>
+
+### [<span data-ttu-id="44657-209">제거-AzBatchTask</span><span class="sxs-lookup"><span data-stu-id="44657-209">Remove-AzBatchTask</span></span>](Remove-AzBatchTask.md)
+<span data-ttu-id="44657-210">일괄 작업을 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-210">Deletes a Batch task.</span></span>
+
+### [<span data-ttu-id="44657-211">다시 설정-AzBatchComputeNode</span><span class="sxs-lookup"><span data-stu-id="44657-211">Reset-AzBatchComputeNode</span></span>](Reset-AzBatchComputeNode.md)
+<span data-ttu-id="44657-212">지정 된 계산 노드에 운영 체제를 다시 설치 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-212">Reinstalls the operating system on the specified compute node.</span></span>
+
+### [<span data-ttu-id="44657-213">다시 시작-AzBatchComputeNode</span><span class="sxs-lookup"><span data-stu-id="44657-213">Restart-AzBatchComputeNode</span></span>](Restart-AzBatchComputeNode.md)
+<span data-ttu-id="44657-214">지정 된 계산 노드를 다시 부팅 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-214">Reboots the specified compute node.</span></span>
+
+### [<span data-ttu-id="44657-215">Set-AzBatchAccount</span><span class="sxs-lookup"><span data-stu-id="44657-215">Set-AzBatchAccount</span></span>](Set-AzBatchAccount.md)
+<span data-ttu-id="44657-216">일괄 처리 계정을 업데이트 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-216">Updates a Batch account.</span></span>
+
+### [<span data-ttu-id="44657-217">Set-AzBatchApplication</span><span class="sxs-lookup"><span data-stu-id="44657-217">Set-AzBatchApplication</span></span>](Set-AzBatchApplication.md)
+<span data-ttu-id="44657-218">지정 된 응용 프로그램에 대 한 설정을 업데이트 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-218">Updates settings for the specified application.</span></span>
+
+### [<span data-ttu-id="44657-219">Set-AzBatchComputeNodeUser</span><span class="sxs-lookup"><span data-stu-id="44657-219">Set-AzBatchComputeNodeUser</span></span>](Set-AzBatchComputeNodeUser.md)
+<span data-ttu-id="44657-220">일괄 처리 계산 노드의 계정 속성을 수정 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-220">Modifies properties of an account on a Batch compute node.</span></span>
+
+### [<span data-ttu-id="44657-221">Set-AzBatchJob</span><span class="sxs-lookup"><span data-stu-id="44657-221">Set-AzBatchJob</span></span>](Set-AzBatchJob.md)
+<span data-ttu-id="44657-222">일괄 작업을 업데이트 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-222">Updates a Batch job.</span></span>
+
+### [<span data-ttu-id="44657-223">Set-AzBatchJobSchedule</span><span class="sxs-lookup"><span data-stu-id="44657-223">Set-AzBatchJobSchedule</span></span>](Set-AzBatchJobSchedule.md)
+<span data-ttu-id="44657-224">작업 일정을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-224">Sets a job schedule.</span></span>
+
+### [<span data-ttu-id="44657-225">Set-AzBatchPool</span><span class="sxs-lookup"><span data-stu-id="44657-225">Set-AzBatchPool</span></span>](Set-AzBatchPool.md)
+<span data-ttu-id="44657-226">풀의 속성을 업데이트 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-226">Updates the properties of a pool.</span></span>
+
+### [<span data-ttu-id="44657-227">Set-AzBatchPoolOSVersion</span><span class="sxs-lookup"><span data-stu-id="44657-227">Set-AzBatchPoolOSVersion</span></span>](Set-AzBatchPoolOSVersion.md)
+<span data-ttu-id="44657-228">지정 된 풀의 운영 체제 버전을 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-228">Changes the operating system version of the specified pool.</span></span>
+
+### [<span data-ttu-id="44657-229">Set-AzBatchTask</span><span class="sxs-lookup"><span data-stu-id="44657-229">Set-AzBatchTask</span></span>](Set-AzBatchTask.md)
+<span data-ttu-id="44657-230">작업의 속성을 업데이트 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-230">Updates the properties of a task.</span></span>
+
+### [<span data-ttu-id="44657-231">시작-AzBatchComputeNodeServiceLogUpload</span><span class="sxs-lookup"><span data-stu-id="44657-231">Start-AzBatchComputeNodeServiceLogUpload</span></span>](Start-AzBatchComputeNodeServiceLogUpload.md)
+<span data-ttu-id="44657-232">Azure 저장소 컨테이너에 계산 노드 서비스 로그 파일을 업로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-232">Upload compute node service log files to an Azure Storage container.</span></span>
+
+### [<span data-ttu-id="44657-233">시작-AzBatchPoolResize</span><span class="sxs-lookup"><span data-stu-id="44657-233">Start-AzBatchPoolResize</span></span>](Start-AzBatchPoolResize.md)
+<span data-ttu-id="44657-234">풀의 크기를 조정 하기 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-234">Starts to resize a pool.</span></span>
+
+### [<span data-ttu-id="44657-235">중지-AzBatchCertificateDeletion</span><span class="sxs-lookup"><span data-stu-id="44657-235">Stop-AzBatchCertificateDeletion</span></span>](Stop-AzBatchCertificateDeletion.md)
+<span data-ttu-id="44657-236">실패 한 인증서 삭제를 취소 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-236">Cancels a failed deletion of a certificate.</span></span>
+
+### [<span data-ttu-id="44657-237">중지-AzBatchJob</span><span class="sxs-lookup"><span data-stu-id="44657-237">Stop-AzBatchJob</span></span>](Stop-AzBatchJob.md)
+<span data-ttu-id="44657-238">일괄 작업을 중지 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-238">Stops a Batch job.</span></span>
+
+### [<span data-ttu-id="44657-239">중지-AzBatchJobSchedule</span><span class="sxs-lookup"><span data-stu-id="44657-239">Stop-AzBatchJobSchedule</span></span>](Stop-AzBatchJobSchedule.md)
+<span data-ttu-id="44657-240">일괄 작업 일정을 중지 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-240">Stops a Batch job schedule.</span></span>
+
+### [<span data-ttu-id="44657-241">중지-AzBatchPoolResize</span><span class="sxs-lookup"><span data-stu-id="44657-241">Stop-AzBatchPoolResize</span></span>](Stop-AzBatchPoolResize.md)
+<span data-ttu-id="44657-242">풀 크기 조정 작업을 중지 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-242">Stops a pool resize operation.</span></span>
+
+### [<span data-ttu-id="44657-243">중지-AzBatchTask</span><span class="sxs-lookup"><span data-stu-id="44657-243">Stop-AzBatchTask</span></span>](Stop-AzBatchTask.md)
+<span data-ttu-id="44657-244">일괄 작업을 중지 합니다.</span><span class="sxs-lookup"><span data-stu-id="44657-244">Stops a Batch task.</span></span>
+
+### [<span data-ttu-id="44657-245">테스트-AzBatchAutoScale</span><span class="sxs-lookup"><span data-stu-id="44657-245">Test-AzBatchAutoScale</span></span>](Test-AzBatchAutoScale.md)
+<span data-ttu-id="44657-246">풀의 자동 크기 조정 수식 결과를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44657-246">Gets the result of an automatic scaling formula on a pool.</span></span>
+
