@@ -1,0 +1,402 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+Module Name: Az.ApiManagement
+ms.assetid: 93005775-3AB9-43C5-B353-45B82124ADB7
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/set-azapimanagementauthorizationserver
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Set-AzApiManagementAuthorizationServer.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Set-AzApiManagementAuthorizationServer.md
+ms.openlocfilehash: 88e7c1304aae987dbf7315d5ed474969af12ba08
+ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "93869357"
+---
+# <span data-ttu-id="ae456-101">Set-AzApiManagementAuthorizationServer</span><span class="sxs-lookup"><span data-stu-id="ae456-101">Set-AzApiManagementAuthorizationServer</span></span>
+
+## <span data-ttu-id="ae456-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="ae456-102">SYNOPSIS</span></span>
+<span data-ttu-id="ae456-103">권한 부여 서버를 수정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-103">Modifies an authorization server.</span></span>
+
+## <span data-ttu-id="ae456-104">구문과</span><span class="sxs-lookup"><span data-stu-id="ae456-104">SYNTAX</span></span>
+
+```
+Set-AzApiManagementAuthorizationServer -Context <PsApiManagementContext> -ServerId <String> -Name <String>
+ [-Description <String>] -ClientRegistrationPageUrl <String> -AuthorizationEndpointUrl <String>
+ -TokenEndpointUrl <String> -ClientId <String> [-ClientSecret <String>]
+ [-AuthorizationRequestMethods <PsApiManagementAuthorizationRequestMethod[]>]
+ -GrantTypes <PsApiManagementGrantType[]>
+ -ClientAuthenticationMethods <PsApiManagementClientAuthenticationMethod[]> [-TokenBodyParameters <Hashtable>]
+ [-SupportState <Boolean>] [-DefaultScope <String>]
+ -AccessTokenSendingMethods <PsApiManagementAccessTokenSendingMethod[]> [-ResourceOwnerUsername <String>]
+ [-ResourceOwnerPassword <String>] [-PassThru] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="ae456-105">설명은</span><span class="sxs-lookup"><span data-stu-id="ae456-105">DESCRIPTION</span></span>
+<span data-ttu-id="ae456-106">**AzApiManagementAuthorizationServer** Cmdlet은 Azure API Management 권한 부여 서버 세부 정보를 수정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-106">The **Set-AzApiManagementAuthorizationServer** cmdlet modifies Azure API Management authorization server details.</span></span>
+
+## <span data-ttu-id="ae456-107">예제의</span><span class="sxs-lookup"><span data-stu-id="ae456-107">EXAMPLES</span></span>
+
+### <span data-ttu-id="ae456-108">예제 1: 권한 부여 서버 수정</span><span class="sxs-lookup"><span data-stu-id="ae456-108">Example 1: Modify an authorization server</span></span>
+```
+PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Set-AzApiManagementAuthrizarionServer -Context $ApiMgmtContext -ServerId 0123456789 -Name "Contoso OAuth2 server" -ClientRegistrationPageUrl "https://contoso/signupv2" -AuthorizationEndpointUrl "https://contoso/authv2" -TokenEndpointUrl "https://contoso/tokenv2" -ClientId "clientid" -ClientSecret "e041ed1b660b4eadbad5a29d066e6e88" -AuthorizationRequestMethods @('Get') -GrantTypes @( 'AuthorizationCode', 'Implicit', 'ClientCredentials') -ClientAuthenticationMethods @('Basic') -TokenBodyParameters @{'par1'='val1'} -AccessTokenSendingMethods @('AuthorizationHeader')
+```
+
+<span data-ttu-id="ae456-109">이 명령은 지정 된 API 관리 권한 부여 서버를 수정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-109">This command modifies the specified API Management authorization server.</span></span>
+
+## <span data-ttu-id="ae456-110">변수</span><span class="sxs-lookup"><span data-stu-id="ae456-110">PARAMETERS</span></span>
+
+### <span data-ttu-id="ae456-111">-AccessTokenSendingMethods</span><span class="sxs-lookup"><span data-stu-id="ae456-111">-AccessTokenSendingMethods</span></span>
+<span data-ttu-id="ae456-112">액세스 토큰을 보낼 메서드의 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-112">Specifies an array of methods to send an access token.</span></span>
+<span data-ttu-id="ae456-113">psdx_paramvalues AuthorizationHeader 및 Query.</span><span class="sxs-lookup"><span data-stu-id="ae456-113">psdx_paramvalues AuthorizationHeader and Query.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementAccessTokenSendingMethod[]
+Parameter Sets: (All)
+Aliases:
+Accepted values: AuthorizationHeader, Query
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ae456-114">-AuthorizationEndpointUrl</span><span class="sxs-lookup"><span data-stu-id="ae456-114">-AuthorizationEndpointUrl</span></span>
+<span data-ttu-id="ae456-115">리소스 소유자를 인증 하 고 권한 부여 권한을 얻을 수 있는 권한 부여 끝점을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-115">Specifies the authorization endpoint to authenticate resource owners and obtain authorization grants.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ae456-116">-AuthorizationRequestMethods</span><span class="sxs-lookup"><span data-stu-id="ae456-116">-AuthorizationRequestMethods</span></span>
+<span data-ttu-id="ae456-117">인증 요청 메서드 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-117">Specifies an array of authorization request methods.</span></span>
+<span data-ttu-id="ae456-118">psdx_paramvalues 가져오고 게시 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-118">psdx_paramvalues GET and POST.</span></span>
+<span data-ttu-id="ae456-119">기본 값은 GET입니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-119">The default value is GET.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementAuthorizationRequestMethod[]
+Parameter Sets: (All)
+Aliases:
+Accepted values: Get, Post, Head, Options, Trace, Put, Patch, Delete
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ae456-120">-ClientAuthenticationMethods</span><span class="sxs-lookup"><span data-stu-id="ae456-120">-ClientAuthenticationMethods</span></span>
+<span data-ttu-id="ae456-121">클라이언트 인증 방법의 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-121">Specifies an array of client authentication methods.</span></span>
+<span data-ttu-id="ae456-122">기본 및 본문을 psdx_paramvalues 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-122">psdx_paramvalues Basic and Body.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementClientAuthenticationMethod[]
+Parameter Sets: (All)
+Aliases:
+Accepted values: Basic, Body
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ae456-123">-ClientId</span><span class="sxs-lookup"><span data-stu-id="ae456-123">-ClientId</span></span>
+<span data-ttu-id="ae456-124">클라이언트 응용 프로그램에 해당 하는 개발자 콘솔의 클라이언트 ID를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-124">Specifies the client ID of the developer console that is the client application.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ae456-125">-ClientRegistrationPageUrl</span><span class="sxs-lookup"><span data-stu-id="ae456-125">-ClientRegistrationPageUrl</span></span>
+<span data-ttu-id="ae456-126">인증 서버에 클라이언트를 등록 하 고 클라이언트 자격 증명을 가져오는 클라이언트 등록 끝점을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-126">Specifies the client registration endpoint to register clients with the authorization server and obtain client credentials.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ae456-127">-ClientSecret</span><span class="sxs-lookup"><span data-stu-id="ae456-127">-ClientSecret</span></span>
+<span data-ttu-id="ae456-128">클라이언트 응용 프로그램 개발자 콘솔의 클라이언트 암호를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-128">Specifies the client secret of the developer console that is the client application.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ae456-129">-컨텍스트</span><span class="sxs-lookup"><span data-stu-id="ae456-129">-Context</span></span>
+<span data-ttu-id="ae456-130">**PsApiManagementContext** 개체를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-130">Specifies a **PsApiManagementContext** object.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ae456-131">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="ae456-131">-DefaultProfile</span></span>
+<span data-ttu-id="ae456-132">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-132">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ae456-133">-DefaultScope</span><span class="sxs-lookup"><span data-stu-id="ae456-133">-DefaultScope</span></span>
+<span data-ttu-id="ae456-134">권한 부여 서버의 기본 범위를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-134">Specifies the default scope for the authorization server.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ae456-135">-설명</span><span class="sxs-lookup"><span data-stu-id="ae456-135">-Description</span></span>
+<span data-ttu-id="ae456-136">권한 부여 서버에 대 한 설명을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-136">Specifies a description for an authorization server.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ae456-137">-GrantTypes</span><span class="sxs-lookup"><span data-stu-id="ae456-137">-GrantTypes</span></span>
+<span data-ttu-id="ae456-138">허용 형식 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-138">Specifies an array of grant types.</span></span>
+<span data-ttu-id="ae456-139">psdx_paramvalues</span><span class="sxs-lookup"><span data-stu-id="ae456-139">psdx_paramvalues</span></span>
+- <span data-ttu-id="ae456-140">AuthorizationCode</span><span class="sxs-lookup"><span data-stu-id="ae456-140">AuthorizationCode</span></span>
+- <span data-ttu-id="ae456-141">ClientCredentials</span><span class="sxs-lookup"><span data-stu-id="ae456-141">ClientCredentials</span></span> 
+- <span data-ttu-id="ae456-142">명시적</span><span class="sxs-lookup"><span data-stu-id="ae456-142">Implicit</span></span> 
+- <span data-ttu-id="ae456-143">Resource소유자 비밀 번호</span><span class="sxs-lookup"><span data-stu-id="ae456-143">ResourceOwnerPassword</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementGrantType[]
+Parameter Sets: (All)
+Aliases:
+Accepted values: AuthorizationCode, Implicit, ResourceOwnerPassword, ClientCredentials
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ae456-144">-이름</span><span class="sxs-lookup"><span data-stu-id="ae456-144">-Name</span></span>
+<span data-ttu-id="ae456-145">수정할 인증 서버의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-145">Specifies the name of the authorization server to modify.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ae456-146">-PassThru</span><span class="sxs-lookup"><span data-stu-id="ae456-146">-PassThru</span></span>
+<span data-ttu-id="ae456-147">passthru</span><span class="sxs-lookup"><span data-stu-id="ae456-147">passthru</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ae456-148">-Resource소유자 비밀 번호</span><span class="sxs-lookup"><span data-stu-id="ae456-148">-ResourceOwnerPassword</span></span>
+<span data-ttu-id="ae456-149">리소스 소유자 암호를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-149">Specifies the resource owner password.</span></span>
+<span data-ttu-id="ae456-150">Resource소유 암호가 *GrantTypes* 매개 변수로 지정 된 경우이 매개 변수를 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-150">You must specify this parameter if ResourceOwnerPassword is specified by the *GrantTypes* parameter.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ae456-151">-Resource소유자 사용자 이름</span><span class="sxs-lookup"><span data-stu-id="ae456-151">-ResourceOwnerUsername</span></span>
+<span data-ttu-id="ae456-152">리소스 소유자 사용자 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-152">Specifies the resource owner user name.</span></span>
+<span data-ttu-id="ae456-153">Resource소유 암호가 *GrantTypes* 매개 변수로 지정 된 경우이 매개 변수를 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-153">You must specify this parameter if ResourceOwnerPassword is specified by the *GrantTypes* parameter.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ae456-154">-ServerId</span><span class="sxs-lookup"><span data-stu-id="ae456-154">-ServerId</span></span>
+<span data-ttu-id="ae456-155">수정할 인증 서버의 ID를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-155">Specifies the ID of the authorization server to modify.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ae456-156">-SupportState</span><span class="sxs-lookup"><span data-stu-id="ae456-156">-SupportState</span></span>
+<span data-ttu-id="ae456-157">*State* 매개 변수를 지원 하는지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-157">Indicates whether to support the *State* parameter.</span></span>
+
+```yaml
+Type: System.Nullable`1[System.Boolean]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ae456-158">-TokenBodyParameters</span><span class="sxs-lookup"><span data-stu-id="ae456-158">-TokenBodyParameters</span></span>
+<span data-ttu-id="ae456-159">Application/x-www-urlencoded 형식을 사용 하 여 추가 본문 매개 변수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-159">Specifies additional body parameters using application/x-www-form-urlencoded format.</span></span>
+
+```yaml
+Type: System.Collections.Hashtable
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ae456-160">-TokenEndpointUrl</span><span class="sxs-lookup"><span data-stu-id="ae456-160">-TokenEndpointUrl</span></span>
+<span data-ttu-id="ae456-161">권한 부여를 제공 하거나 새로 고침 토큰을 제공 하기 위해 exchange에서 액세스 토큰을 가져오는 클라이언트의 토큰 끝점을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-161">Specifies the token endpoint for clients to obtain access tokens in exchange for presenting authorization grants or refresh tokens.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="ae456-162">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="ae456-162">CommonParameters</span></span>
+<span data-ttu-id="ae456-163">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae456-163">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="ae456-164">자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="ae456-164">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="ae456-165">입력</span><span class="sxs-lookup"><span data-stu-id="ae456-165">INPUTS</span></span>
+
+### <span data-ttu-id="ae456-166">ApiManagement. ServiceManagement. \ PsApiManagementContext</span><span class="sxs-lookup"><span data-stu-id="ae456-166">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext</span></span>
+
+### <span data-ttu-id="ae456-167">System. 문자열</span><span class="sxs-lookup"><span data-stu-id="ae456-167">System.String</span></span>
+
+### <span data-ttu-id="ae456-168">ApiManagement [] ServiceManagement. PsApiManagementAuthorizationRequestMethod []</span><span class="sxs-lookup"><span data-stu-id="ae456-168">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementAuthorizationRequestMethod[]</span></span>
+
+### <span data-ttu-id="ae456-169">ApiManagement [] ServiceManagement. PsApiManagementGrantType []</span><span class="sxs-lookup"><span data-stu-id="ae456-169">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementGrantType[]</span></span>
+
+### <span data-ttu-id="ae456-170">ApiManagement [] ServiceManagement. PsApiManagementClientAuthenticationMethod []</span><span class="sxs-lookup"><span data-stu-id="ae456-170">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementClientAuthenticationMethod[]</span></span>
+
+### <span data-ttu-id="ae456-171">System.webserver. 컬렉션 테이블</span><span class="sxs-lookup"><span data-stu-id="ae456-171">System.Collections.Hashtable</span></span>
+
+### <span data-ttu-id="ae456-172">시스템 Null 허용 ' 1 [[CoreLib, Version = 4.0.0.0, Culture = 중립, PublicKeyToken = 7cec85d7bea7798e]]</span><span class="sxs-lookup"><span data-stu-id="ae456-172">System.Nullable\`1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span></span>
+
+### <span data-ttu-id="ae456-173">ApiManagement [] ServiceManagement. PsApiManagementAccessTokenSendingMethod []</span><span class="sxs-lookup"><span data-stu-id="ae456-173">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementAccessTokenSendingMethod[]</span></span>
+
+### <span data-ttu-id="ae456-174">System.webserver 매개 변수</span><span class="sxs-lookup"><span data-stu-id="ae456-174">System.Management.Automation.SwitchParameter</span></span>
+
+## <span data-ttu-id="ae456-175">출력</span><span class="sxs-lookup"><span data-stu-id="ae456-175">OUTPUTS</span></span>
+
+### <span data-ttu-id="ae456-176">ApiManagement. ServiceManagement. \ PsApiManagementOAuth2AuthrozationServer</span><span class="sxs-lookup"><span data-stu-id="ae456-176">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementOAuth2AuthrozationServer</span></span>
+
+## <span data-ttu-id="ae456-177">상속자</span><span class="sxs-lookup"><span data-stu-id="ae456-177">NOTES</span></span>
+
+## <span data-ttu-id="ae456-178">관련 링크</span><span class="sxs-lookup"><span data-stu-id="ae456-178">RELATED LINKS</span></span>
+
+[<span data-ttu-id="ae456-179">Get-AzApiManagementAuthorizationServer</span><span class="sxs-lookup"><span data-stu-id="ae456-179">Get-AzApiManagementAuthorizationServer</span></span>](./Get-AzApiManagementAuthorizationServer.md)
+
+[<span data-ttu-id="ae456-180">새로운 AzApiManagementAuthorizationServer</span><span class="sxs-lookup"><span data-stu-id="ae456-180">New-AzApiManagementAuthorizationServer</span></span>](./New-AzApiManagementAuthorizationServer.md)
+
+[<span data-ttu-id="ae456-181">제거-AzApiManagementAuthorizationServer</span><span class="sxs-lookup"><span data-stu-id="ae456-181">Remove-AzApiManagementAuthorizationServer</span></span>](./Remove-AzApiManagementAuthorizationServer.md)
+
+
