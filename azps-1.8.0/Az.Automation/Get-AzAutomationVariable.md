@@ -1,0 +1,135 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+Module Name: Az.Automation
+ms.assetid: 8FB78A4A-8392-44EE-A907-10FDF756071B
+online version: https://docs.microsoft.com/en-us/powershell/module/az.automation/get-azautomationvariable
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Get-AzAutomationVariable.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Automation/Automation/help/Get-AzAutomationVariable.md
+ms.openlocfilehash: a430b8a57abf19e036a75039b6bdddb8a7ea0d16
+ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "93701586"
+---
+# <span data-ttu-id="bdd73-101">Get-AzAutomationVariable</span><span class="sxs-lookup"><span data-stu-id="bdd73-101">Get-AzAutomationVariable</span></span>
+
+## <span data-ttu-id="bdd73-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="bdd73-102">SYNOPSIS</span></span>
+<span data-ttu-id="bdd73-103">자동화 변수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="bdd73-103">Gets an Automation variable.</span></span>
+
+## <span data-ttu-id="bdd73-104">구문과</span><span class="sxs-lookup"><span data-stu-id="bdd73-104">SYNTAX</span></span>
+
+### <span data-ttu-id="bdd73-105">ByAll (기본값)</span><span class="sxs-lookup"><span data-stu-id="bdd73-105">ByAll (Default)</span></span>
+```
+Get-AzAutomationVariable [-ResourceGroupName] <String> [-AutomationAccountName] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="bdd73-106">ByName</span><span class="sxs-lookup"><span data-stu-id="bdd73-106">ByName</span></span>
+```
+Get-AzAutomationVariable [-Name] <String> [-ResourceGroupName] <String> [-AutomationAccountName] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="bdd73-107">설명은</span><span class="sxs-lookup"><span data-stu-id="bdd73-107">DESCRIPTION</span></span>
+<span data-ttu-id="bdd73-108">**Get-AzAutomationVariable** cmdlet은 하나 이상의 Azure 자동화 변수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="bdd73-108">The **Get-AzAutomationVariable** cmdlet gets one or more Azure Automation variables.</span></span>
+<span data-ttu-id="bdd73-109">특정 변수를 가져오려면 해당 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="bdd73-109">To get a specific variable, specify its name.</span></span>
+
+## <span data-ttu-id="bdd73-110">예제의</span><span class="sxs-lookup"><span data-stu-id="bdd73-110">EXAMPLES</span></span>
+
+### <span data-ttu-id="bdd73-111">예제 1: 변수 가져오기</span><span class="sxs-lookup"><span data-stu-id="bdd73-111">Example 1: Get a variable</span></span>
+```
+PS C:\>$Variable = Get-AzAutomationVariable -AutomationAccountName "Contoso17" -Name "Variable06" -ResourceGroupName "ResourceGroup01"
+PS C:\> $Value = $Variable.value
+```
+
+<span data-ttu-id="bdd73-112">첫 번째 명령은 Contoso17 라는 계정에서 Variable06 이라는 자동화 변수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="bdd73-112">The first command gets an Automation variable named Variable06 in the account named Contoso17.</span></span>
+<span data-ttu-id="bdd73-113">명령이 $Variable 변수에 해당 개체를 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="bdd73-113">The command stores that object in the $Variable variable.</span></span>
+<span data-ttu-id="bdd73-114">두 번째 명령은 표준 점 표기법을 사용 하 여 $Variable의 **value** 속성을 참조 합니다.</span><span class="sxs-lookup"><span data-stu-id="bdd73-114">The second command uses standard dot notation to refer to the **value** property of $Variable.</span></span>
+<span data-ttu-id="bdd73-115">명령이 $value 변수에 값을 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="bdd73-115">The command stores the value in the $value variable.</span></span>
+
+## <span data-ttu-id="bdd73-116">변수</span><span class="sxs-lookup"><span data-stu-id="bdd73-116">PARAMETERS</span></span>
+
+### <span data-ttu-id="bdd73-117">-AutomationAccountName</span><span class="sxs-lookup"><span data-stu-id="bdd73-117">-AutomationAccountName</span></span>
+<span data-ttu-id="bdd73-118">이 cmdlet이 가져오는 변수를 포함 하는 Automation 계정의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="bdd73-118">Specifies the name of the Automation account that contains the variables that this cmdlet gets.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bdd73-119">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="bdd73-119">-DefaultProfile</span></span>
+<span data-ttu-id="bdd73-120">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독</span><span class="sxs-lookup"><span data-stu-id="bdd73-120">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bdd73-121">-이름</span><span class="sxs-lookup"><span data-stu-id="bdd73-121">-Name</span></span>
+<span data-ttu-id="bdd73-122">이 cmdlet이 가져오는 변수의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="bdd73-122">Specifies the name of a variable that this cmdlet gets.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByName
+Aliases:
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bdd73-123">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="bdd73-123">-ResourceGroupName</span></span>
+<span data-ttu-id="bdd73-124">이 cmdlet이 변수를 가져오는 리소스 그룹을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="bdd73-124">Specifies the resource group for which this cmdlet gets variables.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="bdd73-125">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="bdd73-125">CommonParameters</span></span>
+<span data-ttu-id="bdd73-126">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="bdd73-126">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="bdd73-127">자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="bdd73-127">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="bdd73-128">입력</span><span class="sxs-lookup"><span data-stu-id="bdd73-128">INPUTS</span></span>
+
+### <span data-ttu-id="bdd73-129">System. 문자열</span><span class="sxs-lookup"><span data-stu-id="bdd73-129">System.String</span></span>
+
+## <span data-ttu-id="bdd73-130">출력</span><span class="sxs-lookup"><span data-stu-id="bdd73-130">OUTPUTS</span></span>
+
+### <span data-ttu-id="bdd73-131">Microsoft. Azure. m a. 모델 변수</span><span class="sxs-lookup"><span data-stu-id="bdd73-131">Microsoft.Azure.Commands.Automation.Model.Variable</span></span>
+
+## <span data-ttu-id="bdd73-132">상속자</span><span class="sxs-lookup"><span data-stu-id="bdd73-132">NOTES</span></span>
+
+## <span data-ttu-id="bdd73-133">관련 링크</span><span class="sxs-lookup"><span data-stu-id="bdd73-133">RELATED LINKS</span></span>
+
+[<span data-ttu-id="bdd73-134">새로운 AzAutomationVariable</span><span class="sxs-lookup"><span data-stu-id="bdd73-134">New-AzAutomationVariable</span></span>](./New-AzAutomationVariable.md)
+
+[<span data-ttu-id="bdd73-135">제거-AzAutomationVariable</span><span class="sxs-lookup"><span data-stu-id="bdd73-135">Remove-AzAutomationVariable</span></span>](./Remove-AzAutomationVariable.md)
+
+[<span data-ttu-id="bdd73-136">Set-AzAutomationVariable</span><span class="sxs-lookup"><span data-stu-id="bdd73-136">Set-AzAutomationVariable</span></span>](./Set-AzAutomationVariable.md)
+
+
