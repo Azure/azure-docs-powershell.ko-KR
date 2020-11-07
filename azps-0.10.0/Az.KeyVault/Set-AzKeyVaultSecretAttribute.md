@@ -1,0 +1,287 @@
+---
+external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+Module Name: Az.KeyVault
+ms.assetid: E2A45461-6B41-42FF-A874-A4CEFC867A33
+online version: https://docs.microsoft.com/en-us/powershell/module/Az.keyvault/set-AzKeyvaultsecretattribute
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Set-AzKeyVaultSecretAttribute.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Set-AzKeyVaultSecretAttribute.md
+ms.openlocfilehash: 719f0676b87cf785785b0adfbfde71ad2a6b965b
+ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "93875808"
+---
+# <span data-ttu-id="6871d-101">Set-AzKeyVaultSecretAttribute</span><span class="sxs-lookup"><span data-stu-id="6871d-101">Set-AzKeyVaultSecretAttribute</span></span>
+
+## <span data-ttu-id="6871d-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="6871d-102">SYNOPSIS</span></span>
+<span data-ttu-id="6871d-103">키 보관소에서 비밀의 특성을 업데이트 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-103">Updates attributes of a secret in a key vault.</span></span>
+
+## <span data-ttu-id="6871d-104">구문과</span><span class="sxs-lookup"><span data-stu-id="6871d-104">SYNTAX</span></span>
+
+```
+Set-AzKeyVaultSecretAttribute [-VaultName] <String> [-Name] <String> [[-Version] <String>]
+ [-Enable <Boolean>] [-Expires <DateTime>] [-NotBefore <DateTime>] [-ContentType <String>] [-Tag <Hashtable>]
+ [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="6871d-105">설명은</span><span class="sxs-lookup"><span data-stu-id="6871d-105">DESCRIPTION</span></span>
+<span data-ttu-id="6871d-106">**AzKeyVaultSecretAttribute** cmdlet은 키 보관소에서 비밀의 편집 가능한 특성을 업데이트 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-106">The **Set-AzKeyVaultSecretAttribute** cmdlet updates editable attributes of a secret in a key vault.</span></span>
+
+## <span data-ttu-id="6871d-107">예제의</span><span class="sxs-lookup"><span data-stu-id="6871d-107">EXAMPLES</span></span>
+
+### <span data-ttu-id="6871d-108">예제 1: 비밀의 특성 수정</span><span class="sxs-lookup"><span data-stu-id="6871d-108">Example 1: Modify the attributes of a secret</span></span>
+```
+PS C:\> $Expires = (Get-Date).AddYears(2).ToUniversalTime()
+PS C:\> $Nbf = (Get-Date).ToUniversalTime()
+PS C:\> $Tags = @{ 'Severity' = 'medium'; 'HR' = null}
+PS C:\> $ContentType= 'xml'
+PS C:\> Set-AzKeyVaultSecretAttribute -VaultName 'ContosoVault' -Name 'HR' -Expires $Expires -NotBefore $Nbf -ContentType $ContentType -Enable $True -Tag $Tags -PassThru
+```
+
+<span data-ttu-id="6871d-109">처음 네 개의 명령은 만료 날짜, NotBefore 날짜, 태그, 컨텍스트 형식에 대 한 특성을 정의 하 고 변수에 특성을 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-109">The first four commands define attributes for the expiry date, the NotBefore date, tags, and context type, and store the attributes in variables.</span></span>
+
+<span data-ttu-id="6871d-110">마지막 명령은 저장 된 변수를 사용 하 여 ContosoVault 이라는 키 보관소에서 HR 이라는 비밀에 대 한 특성을 수정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-110">The final command modifies the attributes for the secret named HR in the key vault named ContosoVault, using the stored variables.</span></span>
+
+### <span data-ttu-id="6871d-111">예제 2: 비밀 태그 및 콘텐츠 형식 삭제</span><span class="sxs-lookup"><span data-stu-id="6871d-111">Example 2: Delete the tags and content type for a secret</span></span>
+```
+PS C:\>Set-AzKeyVaultSecretAttribute -VaultName 'ContosoVault' -Name 'HR' -Version '9EEA45C6EE50490B9C3176A80AC1A0DF' -ContentType '' -Tag -@{}
+```
+
+<span data-ttu-id="6871d-112">이 명령은 Contoso 라는 키 보관소에 있는 지정 된 버전의 비밀에 대 한 태그와 콘텐츠 유형을 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-112">This command deletes the tags and the content type for the specified version of the secret named HR in the key vault named Contoso.</span></span>
+
+### <span data-ttu-id="6871d-113">예제 3: 이름이 해당 이름으로 시작 하는 현재 버전의 비밀을 사용 하지 않도록 설정</span><span class="sxs-lookup"><span data-stu-id="6871d-113">Example 3: Disable the current version of secrets whose name begins with IT</span></span>
+```
+PS C:\> $Vault = 'ContosoVault'
+PS C:\> $Prefix = 'IT'
+PS C:\> Get-AzKeyVaultSecret $Vault | Where-Object {$_.Name -like $Prefix + '*'} | Set-AzKeyVaultSecretAttribute -Enable $False
+```
+
+<span data-ttu-id="6871d-114">첫 번째 명령은 Contoso $Vault 변수에 문자열 값을 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-114">The first command stores the string value Contoso in the $Vault variable.</span></span>
+
+<span data-ttu-id="6871d-115">두 번째 명령은 $Prefix 변수에 문자열 값을 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-115">The second command stores the string value IT in the $Prefix variable.</span></span>
+
+<span data-ttu-id="6871d-116">세 번째 명령은 Get-AzKeyVaultSecret cmdlet을 사용 하 여 지정 된 키 보관소의 비밀을 얻은 다음 해당 비밀을 **Where-개체** cmdlet에 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-116">The third command uses the Get-AzKeyVaultSecret cmdlet to get the secrets in the specified key vault, and then passes those secrets to the **Where-Object** cmdlet.</span></span> <span data-ttu-id="6871d-117">**Where 개체** cmdlet은 해당 문자로 시작 하는 이름에 대 한 비밀 정보를 필터링 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-117">The **Where-Object** cmdlet filters the secrets for names that begin with the characters IT.</span></span> <span data-ttu-id="6871d-118">이 명령은 필터와 일치 하는 비밀을 Set-AzKeyVaultSecretAttribute cmdlet에 연결 하 여 파이프를 비활성화 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-118">The command pipes the secrets that match the filter to the Set-AzKeyVaultSecretAttribute cmdlet, which disables them.</span></span>
+
+### <span data-ttu-id="6871d-119">예제 4: 모든 버전의 비밀에 대 한 ContentType 설정</span><span class="sxs-lookup"><span data-stu-id="6871d-119">Example 4: Set the ContentType for all versions of a secret</span></span>
+```
+PS C:\>$VaultName = 'ContosoVault'
+PS C:\> $Name = 'HR'
+PS C:\> $ContentType = 'xml'
+PS C:\> Get-AzKeyVaultKey -VaultName $VaultName -Name $Name -IncludeVersions | Set-AzKeyVaultSecretAttribute -ContentType $ContentType
+```
+
+<span data-ttu-id="6871d-120">처음 세 명령은 *VaultName* , *Name* , *ContentType* 매개 변수에 사용할 문자열 변수를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-120">The first three commands define string variables to use for the *VaultName* , *Name* , and *ContentType* parameters.</span></span> <span data-ttu-id="6871d-121">네 번째 명령은 Get-AzKeyVaultKey cmdlet을 사용 하 여 지정 된 키를 가져오고 Set-AzKeyVaultSecretAttribute cmdlet에 키를 파이프 하 여 콘텐츠 형식을 XML로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-121">The fourth command uses the Get-AzKeyVaultKey cmdlet to get the specified keys, and pipes the keys to the Set-AzKeyVaultSecretAttribute cmdlet to set their content type to XML.</span></span>
+
+## <span data-ttu-id="6871d-122">변수</span><span class="sxs-lookup"><span data-stu-id="6871d-122">PARAMETERS</span></span>
+
+### <span data-ttu-id="6871d-123">-ContentType</span><span class="sxs-lookup"><span data-stu-id="6871d-123">-ContentType</span></span>
+<span data-ttu-id="6871d-124">비밀의 콘텐츠 유형을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-124">Specifies the content type of a secret.</span></span> <span data-ttu-id="6871d-125">이 매개 변수를 지정 하지 않으면 현재 비밀의 콘텐츠 형식이 변경 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-125">If you do not specify this parameter, there is no change to the current secret's content type.</span></span> <span data-ttu-id="6871d-126">기존 콘텐츠 형식을 제거 하려면 빈 문자열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-126">To remove the existing content type, specify an empty string.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="6871d-127">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="6871d-127">-DefaultProfile</span></span>
+<span data-ttu-id="6871d-128">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독</span><span class="sxs-lookup"><span data-stu-id="6871d-128">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="6871d-129">-사용</span><span class="sxs-lookup"><span data-stu-id="6871d-129">-Enable</span></span>
+<span data-ttu-id="6871d-130">비밀을 사용할지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-130">Indicates whether to enable a secret.</span></span> <span data-ttu-id="6871d-131">비밀을 사용 하지 않도록 $False 지정 하거나 비밀을 사용 하도록 $True 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-131">Specify $False to disable a secret, or $True to enable a secret.</span></span> <span data-ttu-id="6871d-132">이 매개 변수를 지정 하지 않으면 현재 비밀의 사용 또는 사용 안 함 상태가 변경 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-132">If you do not specify this parameter, there is no change to the current secret's enabled or disabled state.</span></span>
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="6871d-133">-만료</span><span class="sxs-lookup"><span data-stu-id="6871d-133">-Expires</span></span>
+<span data-ttu-id="6871d-134">비밀을 만료 하는 날짜와 시간을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-134">Specifies the date and time that a secret expires.</span></span>
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="6871d-135">-이름</span><span class="sxs-lookup"><span data-stu-id="6871d-135">-Name</span></span>
+<span data-ttu-id="6871d-136">비밀의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-136">Specifies the name of a secret.</span></span> <span data-ttu-id="6871d-137">이 cmdlet은이 매개 변수에서 지정 하는 이름, 키 보관소의 이름 및 현재 환경에 따라 비밀의 FQDN (정규화 된 도메인 이름)을 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-137">This cmdlet constructs the fully qualified domain name (FQDN) of a secret based on the name that this parameter specifies, the name of the key vault, and your current environment.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: SecretName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="6871d-138">-NotBefore</span><span class="sxs-lookup"><span data-stu-id="6871d-138">-NotBefore</span></span>
+<span data-ttu-id="6871d-139">비밀을 사용할 수 없는 UTC (협정 세계시)를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-139">Specifies the Coordinated Universal Time (UTC) before which the secret can't be used.</span></span>
+<span data-ttu-id="6871d-140">이 매개 변수를 지정 하지 않으면 현재 비밀의 NotBefore 특성이 변경 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-140">If you do not specify this parameter, there is no change to the current secret's NotBefore attribute.</span></span>
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="6871d-141">-PassThru</span><span class="sxs-lookup"><span data-stu-id="6871d-141">-PassThru</span></span>
+<span data-ttu-id="6871d-142">작업 중인 항목을 나타내는 개체를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-142">Returns an object representing the item with which you are working.</span></span>
+<span data-ttu-id="6871d-143">기본적으로이 cmdlet은 출력을 생성 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-143">By default, this cmdlet does not generate any output.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="6871d-144">태그</span><span class="sxs-lookup"><span data-stu-id="6871d-144">-Tag</span></span>
+<span data-ttu-id="6871d-145">해시 테이블 형태의 키-값 쌍입니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-145">Key-value pairs in the form of a hash table.</span></span> <span data-ttu-id="6871d-146">예를 들어:</span><span class="sxs-lookup"><span data-stu-id="6871d-146">For example:</span></span>
+
+<span data-ttu-id="6871d-147">@ {key0 = "value0", key1 = $null, key2 = "value2"}</span><span class="sxs-lookup"><span data-stu-id="6871d-147">@{key0="value0";key1=$null;key2="value2"}</span></span>
+
+```yaml
+Type: Hashtable
+Parameter Sets: (All)
+Aliases: Tags
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="6871d-148">-VaultName</span><span class="sxs-lookup"><span data-stu-id="6871d-148">-VaultName</span></span>
+<span data-ttu-id="6871d-149">수정할 키 보관소의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-149">Specifies the name of the key vault to modify.</span></span>
+<span data-ttu-id="6871d-150">이 cmdlet은이 매개 변수에서 지정 하는 이름 및 현재 선택 된 환경에 따라 키 자격 증명의 FQDN을 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-150">This cmdlet constructs the FQDN of a key vault based on the name that this parameter specifies, and your currently selected environment.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="6871d-151">-버전</span><span class="sxs-lookup"><span data-stu-id="6871d-151">-Version</span></span>
+<span data-ttu-id="6871d-152">비밀의 버전을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-152">Specifies the version of a secret.</span></span>
+<span data-ttu-id="6871d-153">이 cmdlet은 키 보관소 이름, 현재 선택 된 환경, 비밀 이름 및 비밀 버전을 기준으로 비밀의 FQDN을 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-153">This cmdlet constructs the FQDN of a secret based on the key vault name, your currently selected environment, the secret name, and the secret version.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: SecretVersion
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="6871d-154">-확인</span><span class="sxs-lookup"><span data-stu-id="6871d-154">-Confirm</span></span>
+<span data-ttu-id="6871d-155">Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-155">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="6871d-156">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="6871d-156">-WhatIf</span></span>
+<span data-ttu-id="6871d-157">Cmdlet이 실행 되는 경우의 동작을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-157">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="6871d-158">Cmdlet이 실행 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-158">The cmdlet is not run.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="6871d-159">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="6871d-159">CommonParameters</span></span>
+<span data-ttu-id="6871d-160">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-160">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="6871d-161">자세한 내용은 about_CommonParameters (을 참조 하세요 http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="6871d-161">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="6871d-162">입력</span><span class="sxs-lookup"><span data-stu-id="6871d-162">INPUTS</span></span>
+
+### <span data-ttu-id="6871d-163">않아야</span><span class="sxs-lookup"><span data-stu-id="6871d-163">None</span></span>
+<span data-ttu-id="6871d-164">이 cmdlet은 입력을 허용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-164">This cmdlet does not accept any input.</span></span>
+
+## <span data-ttu-id="6871d-165">출력</span><span class="sxs-lookup"><span data-stu-id="6871d-165">OUTPUTS</span></span>
+
+### <span data-ttu-id="6871d-166">Microsoft. KeyVault. 모델 암호</span><span class="sxs-lookup"><span data-stu-id="6871d-166">Microsoft.Azure.Commands.KeyVault.Models.Secret</span></span>
+<span data-ttu-id="6871d-167">PassThru가 지정 된 경우에는 Microsoft Azure. KeyVault를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-167">Returns Microsoft.Azure.Commands.KeyVault.Models.Secret object if PassThru is specified.</span></span> <span data-ttu-id="6871d-168">그렇지 않으면 nothing을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="6871d-168">Otherwise, returns nothing.</span></span>
+
+## <span data-ttu-id="6871d-169">상속자</span><span class="sxs-lookup"><span data-stu-id="6871d-169">NOTES</span></span>
+
+## <span data-ttu-id="6871d-170">관련 링크</span><span class="sxs-lookup"><span data-stu-id="6871d-170">RELATED LINKS</span></span>
+
+[<span data-ttu-id="6871d-171">Get-AzKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="6871d-171">Get-AzKeyVaultKey</span></span>](./Get-AzKeyVaultKey.md)
+
+[<span data-ttu-id="6871d-172">Get-AzKeyVaultSecret</span><span class="sxs-lookup"><span data-stu-id="6871d-172">Get-AzKeyVaultSecret</span></span>](./Get-AzKeyVaultSecret.md)
+
+[<span data-ttu-id="6871d-173">제거-AzKeyVaultSecret</span><span class="sxs-lookup"><span data-stu-id="6871d-173">Remove-AzKeyVaultSecret</span></span>](./Remove-AzKeyVaultSecret.md)
