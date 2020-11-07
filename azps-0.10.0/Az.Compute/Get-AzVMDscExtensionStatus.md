@@ -1,0 +1,121 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
+Module Name: Az.Compute
+ms.assetid: 695F224D-DA25-49F2-916E-25DA2A48A4A7
+online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azvmdscextensionstatus
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Get-AzVMDscExtensionStatus.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Get-AzVMDscExtensionStatus.md
+ms.openlocfilehash: 3ae9827c6db5136b9327936a63ac0441dcf94ff1
+ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "93877060"
+---
+# <span data-ttu-id="36bc7-101">Get-AzVMDscExtensionStatus</span><span class="sxs-lookup"><span data-stu-id="36bc7-101">Get-AzVMDscExtensionStatus</span></span>
+
+## <span data-ttu-id="36bc7-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="36bc7-102">SYNOPSIS</span></span>
+<span data-ttu-id="36bc7-103">가상 컴퓨터에 대 한 DSC 확장 처리기의 상태를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="36bc7-103">Gets the status of the DSC extension handler for a virtual machine.</span></span>
+
+## <span data-ttu-id="36bc7-104">구문과</span><span class="sxs-lookup"><span data-stu-id="36bc7-104">SYNTAX</span></span>
+
+```
+Get-AzVMDscExtensionStatus [-ResourceGroupName] <String> [-VMName] <String> [[-Name] <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="36bc7-105">설명은</span><span class="sxs-lookup"><span data-stu-id="36bc7-105">DESCRIPTION</span></span>
+<span data-ttu-id="36bc7-106">**AzVMDscExtensionStatus** cmdlet은 리소스 그룹의 가상 컴퓨터에 대 한 DSC (원하는 상태 구성) 확장 처리기의 상태를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="36bc7-106">The **Get-AzVMDscExtensionStatus** cmdlet gets the status of the Desired State Configuration (DSC) extension handler for a virtual machine in a resource group.</span></span>
+<span data-ttu-id="36bc7-107">구성이 적용 되 면이 cmdlet은 Start-DscConfiguration cmdlet과 일치 하는 출력을 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="36bc7-107">When a configuration is applied this cmdlet produces output consistent with the Start-DscConfiguration cmdlet.</span></span>
+
+## <span data-ttu-id="36bc7-108">예제의</span><span class="sxs-lookup"><span data-stu-id="36bc7-108">EXAMPLES</span></span>
+
+### <span data-ttu-id="36bc7-109">raid-1</span><span class="sxs-lookup"><span data-stu-id="36bc7-109">1:</span></span>
+```
+
+```
+
+## <span data-ttu-id="36bc7-110">변수</span><span class="sxs-lookup"><span data-stu-id="36bc7-110">PARAMETERS</span></span>
+
+### <span data-ttu-id="36bc7-111">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="36bc7-111">-DefaultProfile</span></span>
+<span data-ttu-id="36bc7-112">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="36bc7-112">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="36bc7-113">-이름</span><span class="sxs-lookup"><span data-stu-id="36bc7-113">-Name</span></span>
+<span data-ttu-id="36bc7-114">확장을 나타내는 Azure Resource Manager 리소스의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="36bc7-114">Specifies the name of the Azure Resource Manager resource that represents the extension.</span></span>
+<span data-ttu-id="36bc7-115">Set-AzVMDscExtension cmdlet은이 이름을 **AzVMDscExtensionStatus** 에서 사용 하는 것과 동일한 값인 Microsoft Powershell로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="36bc7-115">The Set-AzVMDscExtension cmdlet sets this name to Microsoft.Powershell.DSC, which is the same value that is used by **Get-AzVMDscExtensionStatus**.</span></span>
+<span data-ttu-id="36bc7-116">Set cmdlet의 기본 이름을 변경 하거나 자원 관리자 서식 파일에서 다른 자원 이름을 사용 하는 경우에만이 매개 변수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="36bc7-116">Specify this parameter only if you changed the default name in the Set cmdlet or used a different resource name in a Resource Manager template.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="36bc7-117">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="36bc7-117">-ResourceGroupName</span></span>
+<span data-ttu-id="36bc7-118">가상 컴퓨터의 리소스 그룹 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="36bc7-118">Specifies the name of the resource group of the virtual machine.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="36bc7-119">-VMName</span><span class="sxs-lookup"><span data-stu-id="36bc7-119">-VMName</span></span>
+<span data-ttu-id="36bc7-120">이 cmdlet이 DSC 확장 상태를 가져오는 가상 컴퓨터의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="36bc7-120">Specifies the name of a virtual machine for which this cmdlet gets the DSC extension status.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="36bc7-121">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="36bc7-121">CommonParameters</span></span>
+<span data-ttu-id="36bc7-122">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="36bc7-122">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="36bc7-123">자세한 내용은 about_CommonParameters (을 참조 하세요 http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="36bc7-123">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="36bc7-124">입력</span><span class="sxs-lookup"><span data-stu-id="36bc7-124">INPUTS</span></span>
+
+### <span data-ttu-id="36bc7-125">않아야</span><span class="sxs-lookup"><span data-stu-id="36bc7-125">None</span></span>
+<span data-ttu-id="36bc7-126">이 cmdlet은 입력을 허용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="36bc7-126">This cmdlet does not accept any input.</span></span>
+
+## <span data-ttu-id="36bc7-127">출력</span><span class="sxs-lookup"><span data-stu-id="36bc7-127">OUTPUTS</span></span>
+
+### <span data-ttu-id="36bc7-128">Microsoft. a. PSVirtualMachineInstanceView</span><span class="sxs-lookup"><span data-stu-id="36bc7-128">Microsoft.Azure.Commands.Compute.Models.PSVirtualMachineInstanceView</span></span>
+
+## <span data-ttu-id="36bc7-129">상속자</span><span class="sxs-lookup"><span data-stu-id="36bc7-129">NOTES</span></span>
+
+## <span data-ttu-id="36bc7-130">관련 링크</span><span class="sxs-lookup"><span data-stu-id="36bc7-130">RELATED LINKS</span></span>
+
+[<span data-ttu-id="36bc7-131">Set-AzVMDscExtension</span><span class="sxs-lookup"><span data-stu-id="36bc7-131">Set-AzVMDscExtension</span></span>](./Set-AzVMDscExtension.md)
+
+
