@@ -1,0 +1,147 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+Module Name: Az.Storage
+ms.assetid: C2EBCCF0-56CE-4D49-A138-74E52FC3A9AC
+online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/get-azstoragequeue
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Get-AzStorageQueue.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Storage/Storage.Management/help/Get-AzStorageQueue.md
+ms.openlocfilehash: df4d31c1a90808e4d289cab60c5edf9785de1182
+ms.sourcegitcommit: b4a38bcb0501a9016a4998efd377aa75d3ef9ce8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "94216345"
+---
+# Get-AzStorageQueue
+
+## SYNOPSIS
+저장소 큐를 나열 합니다.
+
+## 구문과
+
+### QueueName (기본값)
+```
+Get-AzStorageQueue [[-Name] <String>] [-Context <IStorageContext>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
+```
+
+### QueuePrefix
+```
+Get-AzStorageQueue -Prefix <String> [-Context <IStorageContext>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
+```
+
+## 설명은
+**AzStorageQueue** Cmdlet은 Azure 저장소 계정과 연결 된 저장소 큐를 나열 합니다.
+
+## 예제의
+
+### 예제 1: 모든 Azure Storage 큐 나열
+```
+PS C:\>Get-AzStorageQueue
+```
+
+이 명령은 현재 저장소 계정에 대 한 모든 저장소 큐의 목록을 가져옵니다.
+
+### 예제 2: 와일드 카드 문자를 사용 하 여 Azure Storage 큐 나열
+```
+PS C:\>Get-AzStorageQueue -Name queue*
+```
+
+이 명령은 와일드 카드 문자를 사용 하 여 이름이 대기열로 시작 하는 저장소 대기열 목록을 가져옵니다.
+
+### 예제 3: 큐 이름 접두사를 사용 하 여 Azure Storage 큐 나열
+```
+PS C:\>Get-AzStorageQueue -Prefix "queue"
+```
+
+이 예제에서는 *Prefix* 매개 변수를 사용 하 여 이름이 대기열로 시작 하는 저장소 대기열 목록을 가져옵니다.
+
+## 변수
+
+### -컨텍스트
+Azure 저장소 컨텍스트를 지정 합니다.
+**새 AzStorageContext** cmdlet을 사용 하 여 만들 수 있습니다.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -이름
+이름을 지정 합니다.
+이름을 지정 하지 않으면 cmdlet에서 모든 큐의 목록을 가져옵니다.
+전체 또는 일부 이름을 지정한 경우 cmdlet은 이름 패턴과 일치 하는 모든 큐를 가져옵니다.
+
+```yaml
+Type: System.String
+Parameter Sets: QueueName
+Aliases: N, Queue
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -접두사
+가져오려는 큐 이름에 사용 되는 접두사를 지정 합니다.
+
+```yaml
+Type: System.String
+Parameter Sets: QueuePrefix
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 about_CommonParameters (을 참조 하세요 http://go.microsoft.com/fwlink/?LinkID=113216) .
+
+## 입력
+
+### System. 문자열
+
+### Microsoft. Azure. 일반. IStorageContext
+
+## 출력
+
+### WindowsAzure. ResourceModel를 AzureStorageQueue로 저장 합니다.
+
+## 상속자
+
+## 관련 링크
+
+[새로운 AzStorageQueue](./New-AzStorageQueue.md)
+
+[제거-AzStorageQueue](./Remove-AzStorageQueue.md)
+
+
