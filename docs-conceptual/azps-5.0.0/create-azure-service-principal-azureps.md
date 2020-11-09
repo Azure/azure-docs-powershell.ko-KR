@@ -5,12 +5,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/17/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 3c876454560e4ad421e6d32a8ca8b30a651fd8af
-ms.sourcegitcommit: b4a38bcb0501a9016a4998efd377aa75d3ef9ce8
+ms.openlocfilehash: 20a58253e3f9435a9d33c700435f77fbb42df7ea
+ms.sourcegitcommit: 375232b84336ef5e13052504deaa43f5bd4b7f65
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92754034"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93365146"
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Azure PowerShell을 사용하여 Azure 서비스 주체 만들기
 
@@ -19,6 +19,11 @@ Azure 서비스를 사용하도록 자동화된 도구에는 항상 제한된 �
 Azure 서비스 주체는 애플리케이션, 호스팅된 서비스 및 자동화된 도구에서 사용하여 Azure 리소스에 액세스하기 위해 만든 ID입니다. 이 액세스는 서비스 주체에 할당된 역할로 제한되므로 액세스할 수 있는 리소스와 해당 수준을 제어할 수 있습니다. 보안상의 이유로 사용자 ID를 통해 로그인할 수 있게 하는 대신, 항상 자동화된 도구에서 서비스 주체를 사용하는 것이 좋습니다.
 
 이 문서에서는 Azure PowerShell을 사용하여 서비스 주체를 만들고, 정보를 가져오고, 다시 설정하는 단계를 보여 줍니다.
+
+> [!WARNING]
+> [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal) 명령을 사용하여 서비스 주체를 만들면 보호해야 하는 자격 증명이 출력에 포함됩니다. 이러한 자격 증명을 코드에 포함하지 않도록 하거나 소스 제어에 자격 증명을 확인해야 합니다. 또는 자격 증명을 사용할 필요가 없도록 [관리 ID](/azure/active-directory/managed-identities-azure-resources/overview)를 사용하는 것이 좋습니다.
+>
+> 기본적으로 [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal)은 구독 범위에서 서비스 주체에 [Contributor](/azure/role-based-access-control/built-in-roles#contributor) 역할을 할당합니다. 서비스 주체가 손상될 위험을 줄이려면 보다 구체적인 역할을 할당하고 범위를 리소스 또는 리소스 그룹으로 좁힙니다. 자세한 내용은 [역할 할당을 추가하는 단계](/azure/role-based-access-control/role-assignments-steps)를 참조하세요.
 
 ## <a name="create-a-service-principal"></a>서비스 주체 만들기
 
@@ -41,7 +46,7 @@ Azure 서비스 주체는 애플리케이션, 호스팅된 서비스 및 자동�
 $sp = New-AzADServicePrincipal -DisplayName ServicePrincipalName
 ```
 
-반환된 개체는 생성된 암호를 포함하는 `Secret` 멤버인 `SecureString`을 포함합니다. 서비스 주체로 인증하려면 이 값을 안전한 곳에서 저장하세요. 해당 값은 콘솔 출력에 표시되지 _않습니다_ . 암호를 잊어버린 경우 [서비스 주체 자격 증명을 다시 설정](#reset-credentials)하세요.
+반환된 개체는 생성된 암호를 포함하는 `Secret` 멤버인 `SecureString`을 포함합니다. 서비스 주체로 인증하려면 이 값을 안전한 곳에서 저장하세요. 해당 값은 콘솔 출력에 표시되지 _않습니다_. 암호를 잊어버린 경우 [서비스 주체 자격 증명을 다시 설정](#reset-credentials)하세요.
 
 다음 코드를 사용하면 비밀을 내보낼 수 있습니다.
 
@@ -127,7 +132,7 @@ Remove-AzRoleAssignment -ObjectId <service principal object ID> -RoleDefinitionN
 > [!NOTE]
 > 계정에 역할을 할당할 수 있는 권한이 없으면 계정에 "'Microsoft.Authorization/roleAssignments/write' 작업을 수행할 수 있는 권한이 없습니다"라는 오류 메시지가 표시됩니다. 역할을 관리하려면 Azure Active Directory 관리자에게 문의하십시오.
 
-역할을 추가해도 이전에 할당된 권한은 _제한되지 않습니다_ . 서비스 주체 권한을 제한할 때는 **Contributor** 역할을 제거해야 합니다.
+역할을 추가해도 이전에 할당된 권한은 _제한되지 않습니다_. 서비스 주체 권한을 제한할 때는 **Contributor** 역할을 제거해야 합니다.
 
 변경 내용은 할당된 역할을 나열하여 확인할 수 있습니다.
 
