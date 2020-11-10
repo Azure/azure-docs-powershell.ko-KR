@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/ad
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Add-AzVMSecret.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Add-AzVMSecret.md
-ms.openlocfilehash: 281b74aa14431a0bcfe0d138a78db73e28bcfeb4
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.openlocfilehash: f17da705ed65484e789a803308bcaddb60e409f3
+ms.sourcegitcommit: 7aaa37edc9681b643946505bcbc3cc6435f1d7ca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "93877134"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94395138"
 ---
 # Add-AzVMSecret
 
@@ -30,7 +30,7 @@ Add-AzVMSecret [-VM] <PSVirtualMachine> [[-SourceVaultId] <String>] [[-Certifica
 이 값을 사용 하 여 가상 컴퓨터에 인증서를 추가할 수 있습니다.
 비밀은 키 보관소에 저장 되어 있어야 합니다.
 키 자격 증명 모음에 대 한 자세한 내용은 [Azure 키 보관소 란?](https://azure.microsoft.com/en-us/documentation/articles/key-vault-whatis/)을 참조 하세요.
-Cmdlet에 대 한 자세한 내용은 Microsoft 개발자 네트워크 라이브러리 또는 [AzureKeyVaultSecret](/powershell/module/azurerm.keyvault/set-azurekeyvaultsecret) Cmdlet의 [Azure 키 자격 증명 모음 cmdlet](https://msdn.microsoft.com/library/azure/dn868052.aspx) 을 참조 하세요.
+Cmdlet에 대 한 자세한 내용은 [Azure 키 자격 증명 모음 cmdlet](/powershell/module/az.keyvault) 또는 [AzKeyVaultSecret](/powershell/module/az.keyvault/set-azkeyvaultsecret) cmdlet을 참조 하세요.
 
 ## 예제의
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 
 인증서는 u t f-8로 인코딩된 다음의 JSON (JavaScript Object Notation) 개체에 대 한 Base64 인코딩입니다.
 
-{"data": " \< Base 64 인코딩 파일 \> "," dataType ":" \< 파일 형식 \> "," 암호 ":" \< pfx-file-password \> "}
+{"data": " \<Base64-encoded-file\> ", "dataType": " \<file-format\> ", "암호": " \<pfx-file-password\> "}
 
 
 현재 데이터 형식은 .pfx 파일만 허용 합니다.

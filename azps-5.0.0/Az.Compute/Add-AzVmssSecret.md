@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/ad
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Add-AzVmssSecret.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Add-AzVmssSecret.md
-ms.openlocfilehash: c5bc6295db0346b12f42093a2e03f8de137a4146
-ms.sourcegitcommit: b4a38bcb0501a9016a4998efd377aa75d3ef9ce8
+ms.openlocfilehash: 6f9f1f29f23906442d7c9c8187b9bab3bf41403b
+ms.sourcegitcommit: 7aaa37edc9681b643946505bcbc3cc6435f1d7ca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "94219088"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94395512"
 ---
 # Add-AzVmssSecret
 
@@ -30,7 +30,7 @@ Add-AzVmssSecret [-VirtualMachineScaleSet] <PSVirtualMachineScaleSet> [[-SourceV
 **AzVmssSecret** Cmdlet은 가상 컴퓨터 크기 조정 집합 (vmss)에 비밀을 추가 합니다.
 비밀은 Azure Key Vault에 저장 되어 있어야 합니다.
 키 볼트에 대 한 자세한 내용은 [Azure 키 보관소 란?](https://azure.microsoft.com/en-us/documentation/articles/key-vault-whatis/) 을 참조 하세요. (https://azure.microsoft.com/en-us/documentation/articles/key-vault-whatis/).
-Cmdlet에 대 한 자세한 내용은 [Azure 키 자격 증명 모음 cmdlet](https://msdn.microsoft.com/library/azure/dn868052.aspx) ( https://msdn.microsoft.com/library/azure/dn868052.aspx) Microsoft 개발자 네트워크 라이브러리 또는 [AzKeyVaultSecret](/powershell/module/az.keyvault/set-azkeyvaultsecret) cmdlet)을 참조 하세요.
+Cmdlet에 대 한 자세한 내용은 [Azure 키 자격 증명 모음 cmdlet](/powershell/module/az.keyvault) 또는 [AzKeyVaultSecret](/powershell/module/az.keyvault/set-azkeyvaultsecret) cmdlet을 참조 하세요.
 
 ## 예제의
 

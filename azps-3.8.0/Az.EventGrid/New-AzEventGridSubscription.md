@@ -5,12 +5,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.eventgrid/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/EventGrid/EventGrid/help/New-AzEventGridSubscription.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/EventGrid/EventGrid/help/New-AzEventGridSubscription.md
-ms.openlocfilehash: a2b8ba54a812f405d634066881c32b6b0467eeab
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 1e2ac4d8763376da6854b3c5d1551e4213f25f60
+ms.sourcegitcommit: 7aaa37edc9681b643946505bcbc3cc6435f1d7ca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "93877362"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94395308"
 ---
 # New-AzEventGridSubscription
 
@@ -113,21 +113,21 @@ Azure 이벤트 그리드 항목에 대 한 이벤트 구독을 만들려면 항
 PS C:\> New-AzEventGridSubscription -ResourceGroup MyResourceGroup -TopicName Topic1 -Endpoint https://requestb.in/19qlscd1 -EventSubscriptionName EventSubscription1
 ```
 
-\` \` \` \` \` \` Webhook 대상 끝점을 사용 하 여 리소스 그룹 MyResourceGroupName에서 Azure 이벤트 그리드 항목 Topic1에 EventSubscription1 새 이벤트 구독을 만듭니다 https://requestb.in/19qlscd1 . 이 이벤트 구독은 기본 필터를 사용 합니다.
+\` \` \` \` \` \` Webhook 대상 끝점을 사용 하 여 리소스 그룹 MyResourceGroupName에서 Azure 이벤트 그리드 항목 Topic1에 EventSubscription1 새 이벤트 구독을 만듭니다 `https://requestb.in/19qlscd1` . 이 이벤트 구독은 기본 필터를 사용 합니다.
 
 ### 예제 2
 ```powershell
 PS C:\> New-AzEventGridSubscription -ResourceGroup MyResourceGroupName -Endpoint https://requestb.in/19qlscd1 -EventSubscriptionName EventSubscription1
 ```
 
-\` \` \` \` Webhook 대상 끝점을 사용 하 여 리소스 그룹 MyResourceGroupName EventSubscription1 새 이벤트 구독을 만듭니다 https://requestb.in/19qlscd1 . 이 이벤트 구독은 기본 필터를 사용 합니다.
+\` \` \` \` Webhook 대상 끝점을 사용 하 여 리소스 그룹 MyResourceGroupName EventSubscription1 새 이벤트 구독을 만듭니다 `https://requestb.in/19qlscd1` . 이 이벤트 구독은 기본 필터를 사용 합니다.
 
 ### 예제 3
 ```powershell
 PS C:\> New-AzEventGridSubscription -Endpoint https://requestb.in/19qlscd1 -EventSubscriptionName EventSubscription1
 ```
 
-\` \` Webhook 대상 끝점을 사용 하 여 현재 선택 된 Azure 구독에 EventSubscription1 새 이벤트 구독을 만듭니다 https://requestb.in/19qlscd1 . 이 이벤트 구독은 기본 필터를 사용 합니다.
+\` \` Webhook 대상 끝점을 사용 하 여 현재 선택 된 Azure 구독에 EventSubscription1 새 이벤트 구독을 만듭니다 `https://requestb.in/19qlscd1` . 이 이벤트 구독은 기본 필터를 사용 합니다.
 
 ### 예제 4
 ```powershell
@@ -136,7 +136,7 @@ PS C:\> $labels = "Finance", "HR"
 PS C:\> New-AzEventGridSubscription -Endpoint https://requestb.in/19qlscd1 -EventSubscriptionName EventSubscription1 -SubjectBeginsWith "TestPrefix" -SubjectEndsWith "TestSuffix" -IncludedEventType $includedEventTypes -Label $labels
 ```
 
-\` \` Webhook 대상 끝점을 사용 하 여 현재 선택 된 Azure 구독에 EventSubscription1 새 이벤트 구독을 만듭니다 https://requestb.in/19qlscd1 . 이 이벤트 구독은 이벤트 유형 및 주체의 추가 필터를 지정 하 고 해당 필터와 일치 하는 이벤트만 대상 끝점에 전달 됩니다.
+\` \` Webhook 대상 끝점을 사용 하 여 현재 선택 된 Azure 구독에 EventSubscription1 새 이벤트 구독을 만듭니다 `https://requestb.in/19qlscd1` . 이 이벤트 구독은 이벤트 유형 및 주체의 추가 필터를 지정 하 고 해당 필터와 일치 하는 이벤트만 대상 끝점에 전달 됩니다.
 
 ### 예제 5
 ```powershell
@@ -150,7 +150,7 @@ PS C:\> New-AzEventGridSubscription -EventSubscriptionName EventSubscription1 -E
 PS C:\> New-AzEventGridSubscription -ResourceId "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace" -Endpoint https://requestb.in/19qlscd1 -EventSubscriptionName EventSubscription1
 ```
 
-\` \` 지정 된 webhook 대상 끝점을 사용 하 여 EventHub 네임 스페이스에 EventSubscription1 새 이벤트 구독을 만듭니다 https://requestb.in/19qlscd1 . 이 이벤트 구독은 기본 필터를 사용 합니다.
+\` \` 지정 된 webhook 대상 끝점을 사용 하 여 EventHub 네임 스페이스에 EventSubscription1 새 이벤트 구독을 만듭니다 `https://requestb.in/19qlscd1` . 이 이벤트 구독은 기본 필터를 사용 합니다.
 
 ## 변수
 
