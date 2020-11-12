@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2019
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: ae2539a09b93fb482ed3f8a363c7a0a66e02a412
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.service: azure-powershell
+ms.openlocfilehash: 3ab12307f786c12422338835926802793a33713e
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89240644"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93408014"
 ---
 # <a name="breaking-changes-for-az-100"></a>Az 1.0.0의 호환성이 손상되는 변경
 
@@ -208,7 +209,7 @@ Windows용 PowerShell 5.1에서 Az를 사용하려면 .NET Framework 4.7.2를 �
   - Set-AzureRmApiManagementHostnames
   - Update-AzureRmApiManagementDeployment
   - Import-AzureRmApiManagementHostnameCertificate
-  - 대신 **Set-AzApiManagement**를 사용하여 이러한 속성을 설정합니다.
+  - 대신 **Set-AzApiManagement** 를 사용하여 이러한 속성을 설정합니다.
 - 다음 속성이 제거되었습니다.
   - `PsApiManagementContext`에서 `PsApiManagementHostnameConfiguration` 형식의 `PortalHostnameConfiguration`, `ProxyHostnameConfiguration`, `ManagementHostnameConfiguration`, `ScmHostnameConfiguration` 속성을 제거했습니다. 대신 `PsApiManagementCustomHostNameConfiguration` 형식의 `PortalCustomHostnameConfiguration`, `ProxyCustomHostnameConfiguration`, `ManagementCustomHostnameConfiguration`, `ScmCustomHostnameConfiguration`을 사용합니다.
   - PsApiManagementContext에서 `StaticIPs`속성을 제거했습니다. 해당 속성은 `PublicIPAddresses`, `PrivateIPAddresses`로 분할되었습니다.

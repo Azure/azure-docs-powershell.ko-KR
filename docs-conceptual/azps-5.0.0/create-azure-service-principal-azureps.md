@@ -3,14 +3,15 @@ title: Azure PowerShell로 Azure 서비스 주체 만들기
 description: Azure PowerShell을 사용하여 서비스 주체를 만들고 사용하는 방법을 알아봅니다.
 ms.devlang: powershell
 ms.topic: conceptual
+ms.service: azure-powershell
 ms.date: 06/17/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 20a58253e3f9435a9d33c700435f77fbb42df7ea
-ms.sourcegitcommit: 375232b84336ef5e13052504deaa43f5bd4b7f65
+ms.openlocfilehash: a5640ded6fc8c6478084374f7808450f6a99d6e5
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93365146"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93407649"
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Azure PowerShell을 사용하여 Azure 서비스 주체 만들기
 

@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/17/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: b436f00ccef779464a555cd787a9ab0adcc970ce
-ms.sourcegitcommit: b4a38bcb0501a9016a4998efd377aa75d3ef9ce8
+ms.service: azure-powershell
+ms.openlocfilehash: 10ed859f04fa29d866530af71c32819b256c882a
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92754033"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93407513"
 ---
 # <a name="frequently-asked-questions-about-azure-powershell"></a>Azure PowerShell에 대한 질문과 대답
 

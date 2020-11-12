@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/21/2019
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: b6ac8b821f2d88431be67fd5fe1d50fc640d2b8f
-ms.sourcegitcommit: b4a38bcb0501a9016a4998efd377aa75d3ef9ce8
+ms.service: azure-powershell
+ms.openlocfilehash: be9113ab1ad6a359832634ae2c21fd177b09318f
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92754047"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93407683"
 ---
 # <a name="azure-powershell-context-objects"></a>Azure PowerShell 컨텍스트 개체
 
@@ -22,11 +23,11 @@ Azure PowerShell은 _Azure PowerShell 컨텍스트 개체_ (Azure 컨텍스트)�
 
 Azure 컨텍스트는 명령을 실행할 활성 구독과 Azure Cloud에 연결하는 데 필요한 인증 정보를 나타내는 PowerShell 개체입니다. Azure 컨텍스트를 사용하면 구독을 전환할 때마다 Azure PowerShell에서 계정을 다시 인증할 필요가 없습니다. 컨텍스트는 다음과 같이 구성됩니다.
 
-* [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount)를 사용하여 Azure에 로그인하는 데 사용된 _계정_ . Azure 컨텍스트는 계정 관점에서 사용자, 애플리케이션 ID 및 서비스 주체를 동일하게 처리합니다.
-* _테넌트_ 와 연결된 Azure 리소스를 만들고 실행하기 위한 Microsoft와의 서비스 계약인 활성 _구독_ . 테넌트는 종종 설명서에서 또는 Active Directory로 작업할 때 _조직_ 이라고도 합니다.
+* [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount)를 사용하여 Azure에 로그인하는 데 사용된 _계정_. Azure 컨텍스트는 계정 관점에서 사용자, 애플리케이션 ID 및 서비스 주체를 동일하게 처리합니다.
+* _테넌트_ 와 연결된 Azure 리소스를 만들고 실행하기 위한 Microsoft와의 서비스 계약인 활성 _구독_. 테넌트는 종종 설명서에서 또는 Active Directory로 작업할 때 _조직_ 이라고도 합니다.
 * Azure Cloud에 액세스하기 위해 저장된 인증 토큰인 _토큰 캐시_ 에 대한 참조입니다. 이 토큰이 저장되는 위치와 지속 기간은 [컨텍스트 자동 저장 설정](#save-azure-contexts-across-powershell-sessions)에 의해 결정됩니다.
 
-이러한 용어에 대한 자세한 내용은 [Azure Active Directory 용어](/azure/active-directory/fundamentals/active-directory-whatis#terminology)를 참조하세요. Azure 컨텍스트에서 사용되는 인증 토큰은 영구 세션의 일부인 다른 저장된 토큰과 동일합니다. 
+이러한 용어에 대한 자세한 내용은 [Azure Active Directory 용어](/azure/active-directory/fundamentals/active-directory-whatis#terminology)를 참조하세요. Azure 컨텍스트에서 사용되는 인증 토큰은 영구 세션의 일부인 다른 저장된 토큰과 동일합니다.
 
 `Connect-AzAccount`에 로그인하면 기본 구독에 대해 하나 이상의 Azure 컨텍스트가 생성됩니다. `Connect-AzAccount`에 의해 반환된 개체는 PowerShell 세션의 나머지 부분에 사용되는 기본 Azure 컨텍스트입니다.
 
@@ -47,7 +48,7 @@ $context = Get-AzContext -Name "mycontext"
 컨텍스트 이름은 연결된 구독의 이름과 다를 수 있습니다.
 
 > [!IMPORTANT]
-> 사용 가능한 Azure 컨텍스트가 항상 사용 가능한 구독은 __아닙니다__ . Azure 컨텍스트는 로컬에 저장된 정보만 표시합니다. [Get-AzSubscription](/powershell/module/Az.Accounts/Get-AzSubscription?view=azps-1.8.0) cmdlet을 사용하여 구독을 가져올 수 있습니다.
+> 사용 가능한 Azure 컨텍스트가 항상 사용 가능한 구독은 __아닙니다__. Azure 컨텍스트는 로컬에 저장된 정보만 표시합니다. [Get-AzSubscription](/powershell/module/Az.Accounts/Get-AzSubscription) cmdlet을 사용하여 구독을 가져올 수 있습니다.
 
 ## <a name="create-a-new-azure-context-from-subscription-information"></a>구독 정보에서 새 Azure 컨텍스트 만들기
 
@@ -104,7 +105,7 @@ Azure PowerShell cmdlet을 사용한 컨텍스트의 다른 주요 용도는 백
 
   이 로그인의 일부로 반환된 Azure 컨텍스트는 현재 세션에 _대해서만_ 유효하며 Azure PowerShell 컨텍스트 자동 저장 설정에 관계없이 자동으로 저장되지 않습니다.
 * [Disable-AzContextAutosave](/powershell/module/az.accounts/disable-azcontextautosave) cmdlet을 사용하여 AzurePowershell의 컨텍스트 자동 저장을 사용하지 않습니다.
-  컨텍스트 자동 저장을 사용하지 않으면 저장된 토큰이 지워지지 __않습니다__ . 저장된 Azure 컨텍스트 정보를 지우는 방법에 대해 알아보려면 [Azure 컨텍스트 및 자격 증명 제거](#remove-azure-contexts-and-stored-credentials)를 참조하세요.
+  컨텍스트 자동 저장을 사용하지 않으면 저장된 토큰이 지워지지 __않습니다__. 저장된 Azure 컨텍스트 정보를 지우는 방법에 대해 알아보려면 [Azure 컨텍스트 및 자격 증명 제거](#remove-azure-contexts-and-stored-credentials)를 참조하세요.
 * [Enable-AzContextAutosave](/powershell/module/az.accounts/enable-azcontextautosave) cmdlet을 사용하여 Azure 컨텍스트 자동 저장을 명시적으로 사용하도록 설정할 수 있습니다. 자동 저장을 사용하면 사용자의 모든 컨텍스트가 이후의 PowerShell 세션을 위해 로컬로 저장됩니다.
 * 컨텍스트를 [Import-AzContext](/powershell/module/az.accounts/import-azcontext)와 함께 로드할 수 있는 향후 PowerShell 세션에서 사용할 [Save-AzContext](/powershell/module/az.accounts/save-azcontext)와 함께 컨텍스트를 수동으로 저장합니다.
 
@@ -115,7 +116,7 @@ Azure PowerShell cmdlet을 사용한 컨텍스트의 다른 주요 용도는 백
   ```
 
 > [!WARNING]
-> 컨텍스트 자동 저장을 사용하지 않으면 저장된 모든 컨텍스트 정보는 지워지지 __않습니다__ . 저장된 정보를 제거하려면 [Clear-AzContext](/powershell/module/az.accounts/Clear-AzContext) cmdlet을 사용합니다. 저장된 컨텍스트 제거에 대한 자세한 내용은 [컨텍스트 및 자격 증명 제거](#remove-azure-contexts-and-stored-credentials)를 참조하세요.
+> 컨텍스트 자동 저장을 사용하지 않으면 저장된 모든 컨텍스트 정보는 지워지지 __않습니다__. 저장된 정보를 제거하려면 [Clear-AzContext](/powershell/module/az.accounts/Clear-AzContext) cmdlet을 사용합니다. 저장된 컨텍스트 제거에 대한 자세한 내용은 [컨텍스트 및 자격 증명 제거](#remove-azure-contexts-and-stored-credentials)를 참조하세요.
 
 이러한 각각의 명령은 `-Scope` 매개 변수를 지원하며, 현재 실행중인 프로세스에만 적용되는 `Process` 값을 취합니다. 예를 들어, PowerShell 세션을 종료한 후 새로 만든 컨텍스트가 저장되지 않도록 하기 위해
 
@@ -134,7 +135,7 @@ Azure 컨텍스트 및 로그인 자격 증명을 지우기 위해
   계정 또는 컨텍스트별로 계정에서 로그아웃할 수 있습니다.
 
   ```azurepowershell-interactive
-  Disconnect-AzAccount # Disconnect active account 
+  Disconnect-AzAccount # Disconnect active account
   Disconnect-AzAccount -Username "user@contoso.com" # Disconnect by account name
 
   Disconnect-AzAccount -ContextName "subscription2" # Disconnect by context name
@@ -144,7 +145,7 @@ Azure 컨텍스트 및 로그인 자격 증명을 지우기 위해
   연결을 끊으면 항상 저장된 인증 토큰이 제거되고 연결이 끊어진 사용자 또는 컨텍스트와 관련된 저장된 컨텍스트가 지워집니다.
 * [Clear-AzContext](/powershell/module/az.accounts/Clear-AzContext)를 사용합니다. 이 cmdlet은 항상 저장된 컨텍스트 및 인증 토큰을 제거하고 또한 사용자도 로그아웃합니다.
 * [Remove-AzContext](/powershell/module/az.accounts/remove-azcontext)를 사용하여 컨텍스트를 제거합니다.
-  
+
   ```azurepowershell-interactive
   Remove-AzContext -Name "mycontext" # Remove by name
   Get-AzContext -Name "mycontext" | Remove-AzContext # Remove by piping Azure context object

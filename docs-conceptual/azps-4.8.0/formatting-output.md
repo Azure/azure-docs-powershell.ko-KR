@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 01/07/2019
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 27acf416d118fb4e25f0f683d97f3a56fe882a1a
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.service: azure-powershell
+ms.openlocfilehash: 44016cc9546869b05693276293119c21ca02e4b0
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92002025"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93407353"
 ---
 # <a name="format-azure-powershell-cmdlet-output"></a>Azure PowerShell cmdlet 출력 형식 지정
 

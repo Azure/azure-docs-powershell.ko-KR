@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 04/23/2019
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 0a1c0a6f0a5cee796590dbab1e7839e79696f98b
-ms.sourcegitcommit: 375232b84336ef5e13052504deaa43f5bd4b7f65
+ms.service: azure-powershell
+ms.openlocfilehash: a8ce4669d52e587bd171cbeab2496e5386029615
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93365214"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93407972"
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Azure PowerShell을 사용하여 Azure 서비스 주체 만들기
 

@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/10/2019
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 83860dd5abfbb1c3da94de6813bceca1bbb0fca7
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.service: azure-powershell
+ms.openlocfilehash: a0a6fcbc0a7bdae507ff5e16dd844e8425c929d5
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89244350"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93407003"
 ---
 # <a name="migrate-azure-powershell-from-azurerm-to-az"></a>Azure PowerShell을 AzureRM에서 Az로 마이그레이션
 

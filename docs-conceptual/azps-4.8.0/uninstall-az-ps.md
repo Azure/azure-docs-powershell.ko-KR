@@ -5,12 +5,13 @@ ms.date: 09/15/2020
 ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 7f831bdf6d6144640e036d72900958847283acf1
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.service: azure-powershell
+ms.openlocfilehash: ec4ecc9902f700e12ce6b22c32b4e07b13b4d4dc
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92002121"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93407785"
 ---
 # <a name="how-to-uninstall-azure-powershell-modules"></a>Azure PowerShell 모듈을 제거하는 방법
 
@@ -150,7 +151,7 @@ function Uninstall-AzModule {
 Uninstall-AzModule -Name Az -Version 1.8.0
 ```
 
-이 스크립트를 실행하면 제거하고 있는 각 하위 모듈의 **이름**, **버전** 및 **상태**가 표시됩니다. 제거하지는 않되, 삭제할 것을 표시만 하도록 스크립트를 실행하려면 `-WhatIf` 매개 변수를 지정합니다.
+이 스크립트를 실행하면 제거하고 있는 각 하위 모듈의 **이름** , **버전** 및 **상태** 가 표시됩니다. 제거하지는 않되, 삭제할 것을 표시만 하도록 스크립트를 실행하려면 `-WhatIf` 매개 변수를 지정합니다.
 
 ```output
 ModuleName              Version  State
@@ -189,7 +190,7 @@ MSI 패키지를 사용하여 AzureRM PowerShell 모듈을 설치한 경우 Powe
 | 윈도우 10               | 시작 > 설정 > 앱                                |
 | Windows 7 </br>Windows 8 | 시작 > 제어판 > 프로그램 > 프로그램 제거 |
 
-이 화면의 프로그램 목록에서 **Azure PowerShell** 또는 **Microsoft Azure PowerShell - Month Year**를 확인할 수 있습니다. 이 앱을 제거하면 됩니다. 이 프로그램이 나열되지 않으면 PowerShellGet을 통해 설치한 후 다음 지침을 따라야 합니다.
+이 화면의 프로그램 목록에서 **Azure PowerShell** 또는 **Microsoft Azure PowerShell - Month Year** 를 확인할 수 있습니다. 이 앱을 제거하면 됩니다. 이 프로그램이 나열되지 않으면 PowerShellGet을 통해 설치한 후 다음 지침을 따라야 합니다.
 
 ### <a name="option-2-uninstall-the-azurerm-powershell-module-from-powershellget"></a>옵션 2: PowerShellGet에서 AzureRM PowerShell 모듈 제거
 

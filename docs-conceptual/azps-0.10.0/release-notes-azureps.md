@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/10/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: f0a8c70ac16c99235b9497cddd03ec4796b40482
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.service: azure-powershell
+ms.openlocfilehash: 2e824dbbf593e0da9a2a8735aaa094b1944e306c
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89239352"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93408873"
 ---
 # <a name="azure-powershell-release-notes"></a>Azure PowerShell 릴리스 정보
 ## <a name="0100-preview---april-2020"></a>0.10.0-preview - 2020년 4월
@@ -279,7 +280,7 @@ ms.locfileid: "89239352"
 
 #### <a name="azapimanagement"></a>Az.ApiManagement
 * **Get-AzApiManagementApiSchema** API와 연결된 Open-Api 스키마 가져오기 수정   https://github.com/Azure/azure-powershell/issues/10626
-* **New-AzApiManagementProduct*** 및 **Set-AzApiManagementProduct**
+* **New-AzApiManagementProduct** _ 및 _ *Set-AzApiManagementProduct**
   - https://github.com/Azure/azure-powershell/issues/10472 설명서 수정
 * **Set-AzApiManagementApi** cmdlet을 사용하여 ServiceUrl을 업데이트하는 방법을 보여주는 예제 추가
 
@@ -437,7 +438,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
 * Az 4.0 미리 보기에서 컨텍스트가 null인 경우 사용자에게 친숙한 오류 메시지로 표시
 
 #### <a name="azbatch"></a>Az.Batch
-* **New-AzBatchPool**이 'VirtualMachineConfiguration.ContainerConfiguration' 또는 'VirtualMachineConfiguration.DataDisks'를 서버로 제대로 보내지 않는 [#10602](https://github.com/Azure/azure-powershell/issues/10602) 문제 수정
+* **New-AzBatchPool** 이 'VirtualMachineConfiguration.ContainerConfiguration' 또는 'VirtualMachineConfiguration.DataDisks'를 서버로 제대로 보내지 않는 [#10602](https://github.com/Azure/azure-powershell/issues/10602) 문제 수정
 
 #### <a name="azdatafactory"></a>Az.DataFactory
 * ADF .Net SDK 버전을 4.5.0으로 업데이트
@@ -574,28 +575,28 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
 
 #### <a name="azbatch"></a>Az.Batch
 * `BatchAccountContext`의 `CoreQuota` 이름이 `DedicatedCoreQuota`로 변경되었습니다. 또한 `LowPriorityCoreQuota`가 새로 추가되었습니다.
-  - 이 변경 사항은 **Get-AzBatchAccount**에 영향을 줍니다.
+  - 이 변경 사항은 **Get-AzBatchAccount** 에 영향을 줍니다.
 * 이제 **New-AzBatchTask** `-ResourceFile` 매개 변수는 새로운 **New-AzBatchResourceFile** cmdlet을 사용하여 구성할 수 있는 `PSResourceFile` 개체의 컬렉션을 가져옵니다.
-* 새로운 **New-AzBatchResourceFile** cmdlet을 통해 `PSResourceFile` 개체를 만들 수 있습니다. 이들은 `-ResourceFile` 매개 변수의 **New-AzBatchTask**에 제공될 수 있습니다.
+* 새로운 **New-AzBatchResourceFile** cmdlet을 통해 `PSResourceFile` 개체를 만들 수 있습니다. 이들은 `-ResourceFile` 매개 변수의 **New-AzBatchTask** 에 제공될 수 있습니다.
   - 그에 따라 기존 `HttpUrl` 방법 외에도 두 가지 종류의 리소스 파일이 새롭게 지원됩니다.
     - `AutoStorageContainerName` 기반 리소스 파일은 전체 자동 스토리지 컨테이너를 일괄 처리 노드에 다운로드합니다.
     - `StorageContainerUrl` 기반 리소스 파일은 URL에 지정된 컨테이너를 일괄 처리 노드에 다운로드합니다.
-* **Get-AzBatchApplication**으로 반환되는 `PSApplication`의 `ApplicationPackages` 속성이 제거되었습니다.
-  - 이제 **Get-AzBatchApplicationPackage**를 사용하여 애플리케이션 내부의 특정 패키지를 검색할 수 있습니다. 예: `Get-AzBatchApplication -AccountName myaccount -ResourceGroupName myresourcegroup -ApplicationId myapplication`
-* **Get-AzBatchApplicationPackage**, **New-AzBatchApplicationPackage**, **Remove-AzBatchApplicationPackage**, **Get-AzBatchApplication**, **New-AzBatchApplication**, **Remove-AzBatchApplication** 및 **Set-AzBatchApplication**에서 `ApplicationId` 이름이 `ApplicationName`으로 변경되었습니다.
+* **Get-AzBatchApplication** 으로 반환되는 `PSApplication`의 `ApplicationPackages` 속성이 제거되었습니다.
+  - 이제 **Get-AzBatchApplicationPackage** 를 사용하여 애플리케이션 내부의 특정 패키지를 검색할 수 있습니다. 예: `Get-AzBatchApplication -AccountName myaccount -ResourceGroupName myresourcegroup -ApplicationId myapplication`
+* **Get-AzBatchApplicationPackage** , **New-AzBatchApplicationPackage** , **Remove-AzBatchApplicationPackage** , **Get-AzBatchApplication** , **New-AzBatchApplication** , **Remove-AzBatchApplication** 및 **Set-AzBatchApplication** 에서 `ApplicationId` 이름이 `ApplicationName`으로 변경되었습니다.
   - 이제 `ApplicationId`는 `ApplicationName`의 별칭입니다.
 * 새로운 `PSWindowsUserConfiguration` 속성이 `PSUserAccount`에 추가되었습니다.
 * `PSApplicationPackage`에서 `Version` 이름이 `Name`으로 변경되었습니다.
 * `PSResourceFile`에서 `BlobSource` 이름이 `HttpUrl`으로 변경되었습니다.
 * `PSVirtualMachineConfiguration`에서 `OSDisk` 속성이 제거되었습니다.
-* **Set-AzBatchPoolOSVersion**이 제거되었습니다. 이 작업은 더 이상 지원되지 않습니다.
+* **Set-AzBatchPoolOSVersion** 이 제거되었습니다. 이 작업은 더 이상 지원되지 않습니다.
 * `PSCloudServiceConfiguration`에서 `TargetOSVersion`이 제거되었습니다.
 * `PSCloudServiceConfiguration`에서 `CurrentOSVersion` 이름이 `OSVersion`으로 변경되었습니다.
 * `PSPoolUsageMetrics`에서 `DataEgressGiB` 및 `DataIngressGiB`가 제거되었습니다.
-* **Get-AzBatchNodeAgentSku**가 제거되고 **Get-AzBatchSupportedImage**로 대체되었습니다.
-  - **Get-AzBatchSupportedImage**가 **Get-AzBatchNodeAgentSku**와 동일한 데이터를 반환하지만 더 친숙한 형식이 사용됩니다.
+* **Get-AzBatchNodeAgentSku** 가 제거되고 **Get-AzBatchSupportedImage** 로 대체되었습니다.
+  - **Get-AzBatchSupportedImage** 가 **Get-AzBatchNodeAgentSku** 와 동일한 데이터를 반환하지만 더 친숙한 형식이 사용됩니다.
   - 이제 확인되지 않은 이미지도 새롭게 반환됩니다. 각 이미지의 `Capabilities` 및 `BatchSupportEndOfLife`에 대한 추가 정보도 포함됩니다.
-* **New-AzBatchPool**의 새로운 `MountConfiguration` 매개 변수를 통해 풀의 각 노드에서 원격 파일 시스템을 마운트할 수 있는 기능이 추가되었습니다.
+* **New-AzBatchPool** 의 새로운 `MountConfiguration` 매개 변수를 통해 풀의 각 노드에서 원격 파일 시스템을 마운트할 수 있는 기능이 추가되었습니다.
 * 이제 트래픽의 소스 포트를 기준으로 풀에 대한 네트워크 액세스를 차단하는 네트워크 보안 규칙이 지원됩니다. 이 작업은 `PSNetworkSecurityGroupRule`에서 `SourcePortRanges` 속성을 통해 수행됩니다.
 * 컨테이너를 실행할 때 Batch는 이제 컨테이너 작업 디렉터리 또는 일괄 처리 태스크 작업 디렉터리에서 작업 실행을 지원합니다. 이 작업은 `PSTaskContainerSettings`에서 `WorkingDirectory` 속성에 의해 제어됩니다.
 * 새로운 `PublicIPs` 속성을 통해 `PSNetworkConfiguration`에서 공용 IP의 컬렉션을 지정할 수 있는 기능이 추가되었습니다. 그 결과 사용자 제공 IP 목록의 IP가 풀에 있는 노드에 포함됩니다.
@@ -786,7 +787,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
 * Linux 다시 부팅 설정 매개 변수에 대한 New-AzureAutomationSoftwareUpdateConfiguration cmdlet이 수정되었습니다.
 
 #### <a name="azbatch"></a>Az.Batch
-* **Get-AzBatchNodeAgentSku**가 더 이상 사용되지 않으며, 2.0.0 버전의 **Get-AzBatchSupportImage**로 대체되었습니다.
+* **Get-AzBatchNodeAgentSku** 가 더 이상 사용되지 않으며, 2.0.0 버전의 **Get-AzBatchSupportImage** 로 대체되었습니다.
 
 #### <a name="azcompute"></a>Az.Compute
 * Priority, EvictionPolicy 및 MaxPrice 매개 변수가 New-AzVM 및 New-AzVmss cmdlet에 추가되었습니다.
@@ -891,10 +892,10 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
 #### <a name="azmonitor"></a>Az.Monitor
 * 최신 모니터링 SDK, 즉, 0.24.1-preview를 가리킵니다.
    - 메트릭 cmdlet에 줄 바꿈하지 않는 변경 내용을 추가합니다. 즉, 단위 열거형은 여러 새 값을 지원합니다. 이러한 cmdlet은 읽기 전용이므로 cmdlet 입력이 변경되지 않습니다.
-   - 이제 **ActionGroups** 요청의 api 버전은 **2019-06-01**이고, 이전에는 **2018-03-01**였습니다. 시나리오 테스트가 이 변경 내용에 맞게 업데이트되었습니다.
-   - **EmailReceiver** 및 **WebhookReceiver** 클래스에 대한 생성자가 새 필수 인수, 즉, **useCommonAlertSchema**라는 부울 값을 추가했습니다. 현재 이 값은 cmdlet의 주요 변경 사항을 숨기도록 **false**로 고정되었습니다. **참고**: 이 변경 사항은 경고 팀에서 유효성을 검사해야 하는 임시 변경 내용입니다.
-   - 이전 SDK에서 변경된 **Source** 클래스(**ScheduledQueryRuleSource** 클래스와 관련됨)의 생성자에 대한 인수 순서입니다. 이번 변화로 인해 두 개의 단위 테스트를 수정해야 했습니다. 즉, 두 단위 테스트가 컴파일되었지만 테스트를 통과하지 못했습니다.
-   - 이전 SDK에서 변경된 **AlertingAction** 클래스(**ScheduledQueryRuleSource** 클래스와 관련됨)의 생성자에 대한 인수 순서입니다. 이번 변화로 인해 두 개의 단위 테스트를 수정해야 했습니다. 즉, 두 단위 테스트가 컴파일되었지만 테스트를 통과하지 못했습니다.
+   - 이제 **ActionGroups** 요청의 api 버전은 **2019-06-01** 이고, 이전에는 **2018-03-01** 였습니다. 시나리오 테스트가 이 변경 내용에 맞게 업데이트되었습니다.
+   - **EmailReceiver** 및 **WebhookReceiver** 클래스에 대한 생성자가 새 필수 인수, 즉, **useCommonAlertSchema** 라는 부울 값을 추가했습니다. 현재 이 값은 cmdlet의 주요 변경 사항을 숨기도록 **false** 로 고정되었습니다. **참고** : 이 변경 사항은 경고 팀에서 유효성을 검사해야 하는 임시 변경 내용입니다.
+   - 이전 SDK에서 변경된 **Source** 클래스( **ScheduledQueryRuleSource** 클래스와 관련됨)의 생성자에 대한 인수 순서입니다. 이번 변화로 인해 두 개의 단위 테스트를 수정해야 했습니다. 즉, 두 단위 테스트가 컴파일되었지만 테스트를 통과하지 못했습니다.
+   - 이전 SDK에서 변경된 **AlertingAction** 클래스( **ScheduledQueryRuleSource** 클래스와 관련됨)의 생성자에 대한 인수 순서입니다. 이번 변화로 인해 두 개의 단위 테스트를 수정해야 했습니다. 즉, 두 단위 테스트가 컴파일되었지만 테스트를 통과하지 못했습니다.
 * 메트릭 경고 V2에 대한 동적 임계값 기준 지원
     - AzMetricAlertRuleV2Criteria: 이제 동적 임계값 조건도 만듭니다.
     - Add-AzMetricAlertRuleV2: 이제 동적 임계값 조건도 수락합니다.

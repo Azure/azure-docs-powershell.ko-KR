@@ -1,16 +1,17 @@
 ---
 title: Azure PowerShell 시작
-description: ''
+description: Azure PowerShell 시작
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 01/17/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: c00e38e5ef381e4d3454aa026a6d05b8df1bec60
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.service: azure-powershell
+ms.openlocfilehash: 8958570285e3db264b3e0bb654acb7f38526354c
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89241188"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93408584"
 ---
 # <a name="get-started-with-azure-powershell"></a>Azure PowerShell 시작
 

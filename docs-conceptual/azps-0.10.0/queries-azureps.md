@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 01/10/2019
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 2754df5132ca9d528217fa5caad95b7f59cc8215
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.service: azure-powershell
+ms.openlocfilehash: 71de99fec7de36cf8cc0fe3e8840fb55cedc5db7
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89241698"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93408040"
 ---
 # <a name="query-output-of-azure-powershell"></a>Azure PowerShell 쿼리 출력 
 

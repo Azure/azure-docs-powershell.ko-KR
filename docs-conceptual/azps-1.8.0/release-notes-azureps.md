@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 04/30/2019
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 1cc7d6519ded41003daed558a8e78ee65ded072a
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.service: azure-powershell
+ms.openlocfilehash: 7d468fb760f9be23e8b8eea7f74adc1dd137e469
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89240967"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93408329"
 ---
 # <a name="azure-powershell-release-notes"></a>Azure PowerShell 릴리스 정보
 ## <a name="180---april-2019"></a>1.8.0 - 2019년 4월

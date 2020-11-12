@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/10/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 4ab5639cfb997c5f9ee1286e6eacb97ef775239a
-ms.sourcegitcommit: 63181e0af0e4468b0530fdb0495ed4d44bdfd1c8
+ms.service: azure-powershell
+ms.openlocfilehash: 27073db862b83c5b95f2364355037c1ebd34a3b5
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134865"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93407496"
 ---
 # <a name="azure-powershell-release-notes"></a>Azure PowerShell 릴리스 정보
 
@@ -140,7 +141,6 @@ ms.locfileid: "93134865"
 * '*-AzDeployment' cmdlet에서 '-ApiVersion' 매개 변수가 제거되었습니다.
 
 #### <a name="azsql"></a>Az.Sql
-* 'Set-AzSqlDatabaseBackupShortTermRetentionPolicy'에 DiffBackupIntervalInHours가 추가되었습니다. 
 * networkIsolation이 지정되지 않은 경우 New-AzSqlDatabaseExport가 실패하는 문제가 해결되었습니다. [#13097]
 * New-AzSqlDatabaseExport 및 New-AzSqlDatabaseImport가 결과 개체에 OperationStatusLink를 반환하지 않는 문제가 해결되었습니다. [#13097]
 * 백업 스토리지 중복성 경고에서 Azure 쌍을 이루는 지역 URL이 업데이트되었습니다. 
