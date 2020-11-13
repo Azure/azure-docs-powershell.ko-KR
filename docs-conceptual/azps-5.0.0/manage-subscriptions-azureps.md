@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 02/04/2019
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 96b94ffcb5075764eb5d2dcaec7b13c5933b83da
-ms.sourcegitcommit: b4a38bcb0501a9016a4998efd377aa75d3ef9ce8
+ms.service: azure-powershell
+ms.openlocfilehash: 4f48e009d9769cba671ea54e8f619a9ad40603d1
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92753689"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93410216"
 ---
 # <a name="use-multiple-azure-subscriptions"></a>여러 Azure 구독 사용
 

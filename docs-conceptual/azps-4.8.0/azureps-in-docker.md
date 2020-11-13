@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/20/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 2b487abeecbffa6cd8b7b64276ab301619348385
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.service: azure-powershell
+ms.openlocfilehash: 48935f15241ec965adf4c34d2c17aa670110585a
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92002061"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93410159"
 ---
 # <a name="using-azure-powershell-in-docker"></a>Docker에서 Azure PowerShell 사용
 

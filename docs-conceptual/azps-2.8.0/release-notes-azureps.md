@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/15/2019
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 2929d7ebaf26e069b12c5b6451e333255ae740af
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.service: azure-powershell
+ms.openlocfilehash: c6880e4c09339ec6a3e192480fde9e1f85cbca5f
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89244333"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93409502"
 ---
 # <a name="azure-powershell-release-notes"></a>Azure PowerShell 릴리스 정보
 ## <a name="280---october-2019"></a>2.8.0 - 2019년 10월
@@ -28,7 +29,7 @@ ms.locfileid: "89244333"
 * Linux 다시 부팅 설정 매개 변수에 대한 New-AzureAutomationSoftwareUpdateConfiguration cmdlet이 수정되었습니다.
 
 #### <a name="azbatch"></a>Az.Batch
-* **Get-AzBatchNodeAgentSku**가 더 이상 사용되지 않으며, 2.0.0 버전의 **Get-AzBatchSupportImage**로 대체되었습니다.
+* **Get-AzBatchNodeAgentSku** 가 더 이상 사용되지 않으며, 2.0.0 버전의 **Get-AzBatchSupportImage** 로 대체되었습니다.
 
 #### <a name="azcompute"></a>Az.Compute
 * Priority, EvictionPolicy 및 MaxPrice 매개 변수가 New-AzVM 및 New-AzVmss cmdlet에 추가되었습니다.
@@ -135,10 +136,10 @@ ms.locfileid: "89244333"
 #### <a name="azmonitor"></a>Az.Monitor
 * 최신 모니터링 SDK, 즉, 0.24.1-preview를 가리킵니다.
    - 메트릭 cmdlet에 줄 바꿈하지 않는 변경 내용을 추가합니다. 즉, 단위 열거형은 여러 새 값을 지원합니다. 이러한 cmdlet은 읽기 전용이므로 cmdlet 입력이 변경되지 않습니다.
-   - 이제 **ActionGroups** 요청의 api 버전은 **2019-06-01**이고, 이전에는 **2018-03-01**였습니다. 시나리오 테스트가 이 변경 내용에 맞게 업데이트되었습니다.
-   - **EmailReceiver** 및 **WebhookReceiver** 클래스에 대한 생성자가 새 필수 인수, 즉, **useCommonAlertSchema**라는 부울 값을 추가했습니다. 현재 이 값은 cmdlet의 주요 변경 사항을 숨기도록 **false**로 고정되었습니다. **참고**: 이 변경 사항은 경고 팀에서 유효성을 검사해야 하는 임시 변경 내용입니다.
-   - 이전 SDK에서 변경된 **Source** 클래스(**ScheduledQueryRuleSource** 클래스와 관련됨)의 생성자에 대한 인수 순서입니다. 이번 변화로 인해 두 개의 단위 테스트를 수정해야 했습니다. 즉, 두 단위 테스트가 컴파일되었지만 테스트를 통과하지 못했습니다.
-   - 이전 SDK에서 변경된 **AlertingAction** 클래스(**ScheduledQueryRuleSource** 클래스와 관련됨)의 생성자에 대한 인수 순서입니다. 이번 변화로 인해 두 개의 단위 테스트를 수정해야 했습니다. 즉, 두 단위 테스트가 컴파일되었지만 테스트를 통과하지 못했습니다.
+   - 이제 **ActionGroups** 요청의 api 버전은 **2019-06-01** 이고, 이전에는 **2018-03-01** 였습니다. 시나리오 테스트가 이 변경 내용에 맞게 업데이트되었습니다.
+   - **EmailReceiver** 및 **WebhookReceiver** 클래스에 대한 생성자가 새 필수 인수, 즉, **useCommonAlertSchema** 라는 부울 값을 추가했습니다. 현재 이 값은 cmdlet의 주요 변경 사항을 숨기도록 **false** 로 고정되었습니다. **참고** : 이 변경 사항은 경고 팀에서 유효성을 검사해야 하는 임시 변경 내용입니다.
+   - 이전 SDK에서 변경된 **Source** 클래스( **ScheduledQueryRuleSource** 클래스와 관련됨)의 생성자에 대한 인수 순서입니다. 이번 변화로 인해 두 개의 단위 테스트를 수정해야 했습니다. 즉, 두 단위 테스트가 컴파일되었지만 테스트를 통과하지 못했습니다.
+   - 이전 SDK에서 변경된 **AlertingAction** 클래스( **ScheduledQueryRuleSource** 클래스와 관련됨)의 생성자에 대한 인수 순서입니다. 이번 변화로 인해 두 개의 단위 테스트를 수정해야 했습니다. 즉, 두 단위 테스트가 컴파일되었지만 테스트를 통과하지 못했습니다.
 * 메트릭 경고 V2에 대한 동적 임계값 기준 지원
     - AzMetricAlertRuleV2Criteria: 이제 동적 임계값 조건도 만듭니다.
     - Add-AzMetricAlertRuleV2: 이제 동적 임계값 조건도 수락합니다.

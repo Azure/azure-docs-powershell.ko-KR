@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/27/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 3a82e738bcb652ddc38886f7064e7373b5fb8cc1
-ms.sourcegitcommit: b4a38bcb0501a9016a4998efd377aa75d3ef9ce8
+ms.service: azure-powershell
+ms.openlocfilehash: 35d562db72e37a630fce8530d715e783412add2e
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92754131"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93410063"
 ---
 # <a name="migration-guide-for-az-500"></a>Az 5.0.0 마이그레이션 가이드
 

@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/24/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 55d7cc06178257a9288e2d27f810d1180369ddc4
-ms.sourcegitcommit: b4a38bcb0501a9016a4998efd377aa75d3ef9ce8
+ms.service: azure-powershell
+ms.openlocfilehash: 5fdb8543630198d141d42626dc3a8b85f0bcdaa7
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92753700"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93410233"
 ---
 # <a name="manage-azure-resources-with-invoke-azrestmethod"></a>Invoke-AzRestMethod를 사용하여 Azure 리소스 관리
 

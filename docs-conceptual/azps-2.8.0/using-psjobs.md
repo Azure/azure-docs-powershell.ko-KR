@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/21/2019
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 5d9028c0a433149c8f6cc346651bb8bf875bb42a
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.service: azure-powershell
+ms.openlocfilehash: b76e310e1677e539927ebc4746df67c1d1accc16
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89241494"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93409451"
 ---
 # <a name="run-azure-powershell-cmdlets-in-powershell-jobs"></a>PowerShell 작업에서 Azure PowerShell cmdlet 실행
 

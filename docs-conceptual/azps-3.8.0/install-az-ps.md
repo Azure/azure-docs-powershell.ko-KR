@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/14/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: a263f1d363b3d1a1cce433a6112c55afe65262a4
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.service: azure-powershell
+ms.openlocfilehash: f7a1658cdcafd1e8d6cba51ead26f9ddaa8c4c56
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89240678"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93409111"
 ---
 # <a name="install-azure-powershell"></a>Azure Powershell 설치
 
@@ -63,12 +64,12 @@ You are installing the modules from an untrusted repository. If you trust this r
 its InstallationPolicy value by running the `Set-PSRepository` cmdlet.
 
 Are you sure you want to install the modules from 'PSGallery'?
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
 ```
 
 설치를 계속하려면 `Yes` 또는 `Yes to All`로 답변합니다.
 
-시스템의 모든 사용자에 대해 모듈을 설치하려면 관리자 권한이 필요합니다. Windows에서 **관리자 권한으로 실행**을 사용하여 PowerShell 세션을 시작하거나 macOS 또는 Linux에서 `sudo` 명령을 사용합니다.
+시스템의 모든 사용자에 대해 모듈을 설치하려면 관리자 권한이 필요합니다. Windows에서 **관리자 권한으로 실행** 을 사용하여 PowerShell 세션을 시작하거나 macOS 또는 Linux에서 `sudo` 명령을 사용합니다.
 
 ```powershell-interactive
 if ($PSVersionTable.PSEdition -eq 'Desktop' -and (Get-Module -Name AzureRM -ListAvailable)) {
@@ -134,7 +135,7 @@ Connect-AzAccount
 
 PowerShell 모듈을 업데이트하려면 모듈을 설치하는 데 사용한 것과 동일한 방법을 사용해야 합니다. 예를 들어 처음에 `Install-Module`을 사용한 경우 [Update-Module](/powershell/module/powershellget/update-module)을 사용하여 최신 버전을 가져와야 합니다. 처음에 MSI 패키지를 사용한 경우 새 MSI 패키지를 다운로드하여 설치해야 합니다.
 
-PowerShellGet cmdlet은 MSI 패키지에서 설치된 모듈을 업데이트할 수 없습니다. MSI 패키지는 PowerShellGet을 사용하여 설치한 모듈을 업데이트하지 않습니다. PowershellGet을 사용하여 업데이트하는 데 문제가 있는 경우 **업데이트**하는 대신 **다시 설치**해야 합니다. 다시 설치는 설치와 동일한 방식으로 수행되지만 `-Force` 매개 변수를 추가해야 합니다.
+PowerShellGet cmdlet은 MSI 패키지에서 설치된 모듈을 업데이트할 수 없습니다. MSI 패키지는 PowerShellGet을 사용하여 설치한 모듈을 업데이트하지 않습니다. PowershellGet을 사용하여 업데이트하는 데 문제가 있는 경우 **업데이트** 하는 대신 **다시 설치** 해야 합니다. 다시 설치는 설치와 동일한 방식으로 수행되지만 `-Force` 매개 변수를 추가해야 합니다.
 
 ```powershell
 if ($PSVersionTable.PSEdition -eq 'Desktop' -and (Get-Module -Name AzureRM -ListAvailable)) {
