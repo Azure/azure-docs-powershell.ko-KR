@@ -5,81 +5,82 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2019
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: ae2539a09b93fb482ed3f8a363c7a0a66e02a412
-ms.sourcegitcommit: b4a38bcb0501a9016a4998efd377aa75d3ef9ce8
+ms.service: azure-powershell
+ms.openlocfilehash: 3ab12307f786c12422338835926802793a33713e
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92753622"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93410352"
 ---
-# <a name="breaking-changes-for-az-100"></a><span data-ttu-id="51a18-103">Az 1.0.0의 호환성이 손상되는 변경</span><span class="sxs-lookup"><span data-stu-id="51a18-103">Breaking changes for Az 1.0.0</span></span>
+# <a name="breaking-changes-for-az-100"></a><span data-ttu-id="51590-103">Az 1.0.0의 호환성이 손상되는 변경</span><span class="sxs-lookup"><span data-stu-id="51590-103">Breaking changes for Az 1.0.0</span></span>
 
-<span data-ttu-id="51a18-104">이 문서에서는 AzureRM 6.x와 새 Az 모듈 버전 1.x 이상 간의 변경 내용에 대한 자세한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-104">This document provides detailed information on the changes between AzureRM 6.x and the new Az module, version 1.x and later.</span></span> <span data-ttu-id="51a18-105">목차는 스크립트에 영향을 줄 수 있는 모듈별 변경을 포함하여 전체 마이그레이션 경로를 안내합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-105">The table of contents will help guide you through a full migration path, including module-specific changes that may affect your scripts.</span></span>
+<span data-ttu-id="51590-104">이 문서에서는 AzureRM 6.x와 새 Az 모듈 버전 1.x 이상 간의 변경 내용에 대한 자세한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-104">This document provides detailed information on the changes between AzureRM 6.x and the new Az module, version 1.x and later.</span></span> <span data-ttu-id="51590-105">목차는 스크립트에 영향을 줄 수 있는 모듈별 변경을 포함하여 전체 마이그레이션 경로를 안내합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-105">The table of contents will help guide you through a full migration path, including module-specific changes that may affect your scripts.</span></span>
 
-<span data-ttu-id="51a18-106">마이그레이션을 AzureRM에서 Az로 시작하는 방법에 대한 일반적인 추천 사항은 [AzureRM에서 Az로 마이그레이션 시작](migrate-from-azurerm-to-az.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="51a18-106">For general advice on getting started with a migration from AzureRM to Az, see [Start migration from AzureRM to Az](migrate-from-azurerm-to-az.md).</span></span>
+<span data-ttu-id="51590-106">마이그레이션을 AzureRM에서 Az로 시작하는 방법에 대한 일반적인 추천 사항은 [AzureRM에서 Az로 마이그레이션 시작](migrate-from-azurerm-to-az.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="51590-106">For general advice on getting started with a migration from AzureRM to Az, see [Start migration from AzureRM to Az](migrate-from-azurerm-to-az.md).</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="51a18-107">Az 1.0.0과 Az 2.0.0 간에도 호환성이 손상되는 변경이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-107">There have been breaking changes between Az 1.0.0 and Az 2.0.0 as well.</span></span> <span data-ttu-id="51a18-108">이 가이드에 따라 AzureRM에서 Az로 업데이트한 후에 [Az 2.0.0 호환성이 손상되는 변경](migrate-az-2.0.0.md)을 참조하여 추가로 변경할 필요가 있는지 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="51a18-108">After following this guide for updating from AzureRM to Az, see the [Az 2.0.0 breaking changes](migrate-az-2.0.0.md) to find out if you need to make additional changes.</span></span>
+> <span data-ttu-id="51590-107">Az 1.0.0과 Az 2.0.0 간에도 호환성이 손상되는 변경이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-107">There have been breaking changes between Az 1.0.0 and Az 2.0.0 as well.</span></span> <span data-ttu-id="51590-108">이 가이드에 따라 AzureRM에서 Az로 업데이트한 후에 [Az 2.0.0 호환성이 손상되는 변경](migrate-az-2.0.0.md)을 참조하여 추가로 변경할 필요가 있는지 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="51590-108">After following this guide for updating from AzureRM to Az, see the [Az 2.0.0 breaking changes](migrate-az-2.0.0.md) to find out if you need to make additional changes.</span></span>
 
-## <a name="table-of-contents"></a><span data-ttu-id="51a18-109">목차</span><span class="sxs-lookup"><span data-stu-id="51a18-109">Table of Contents</span></span>
+## <a name="table-of-contents"></a><span data-ttu-id="51590-109">목차</span><span class="sxs-lookup"><span data-stu-id="51590-109">Table of Contents</span></span>
 
-- [<span data-ttu-id="51a18-110">일반적인 주요 변경 내용</span><span class="sxs-lookup"><span data-stu-id="51a18-110">General breaking changes</span></span>](#general-breaking-changes)
-  - [<span data-ttu-id="51a18-111">cmdlet 명사 접두사 변경</span><span class="sxs-lookup"><span data-stu-id="51a18-111">Cmdlet noun prefix changes</span></span>](#cmdlet-noun-prefix-changes)
-  - [<span data-ttu-id="51a18-112">모듈 이름 변경</span><span class="sxs-lookup"><span data-stu-id="51a18-112">Module name changes</span></span>](#module-name-changes)
-  - [<span data-ttu-id="51a18-113">제거된 모듈</span><span class="sxs-lookup"><span data-stu-id="51a18-113">Removed modules</span></span>](#removed-modules)
-  - [<span data-ttu-id="51a18-114">Windows PowerShell 5.1 및 .NET 4.7.2</span><span class="sxs-lookup"><span data-stu-id="51a18-114">Windows PowerShell 5.1 and .NET 4.7.2</span></span>](#windows-powershell-51-and-net-472)
-  - [<span data-ttu-id="51a18-115">PSCredential을 사용하여 사용자 로그인 임시 제거</span><span class="sxs-lookup"><span data-stu-id="51a18-115">Temporary removal of user login using PSCredential</span></span>](#temporary-removal-of-user-login-using-pscredential)
-  - [<span data-ttu-id="51a18-116">웹 브라우저 프롬프트 대신 기본 디바이스 코드 로그인</span><span class="sxs-lookup"><span data-stu-id="51a18-116">Default device code login instead of web browser prompt</span></span>](#default-device-code-login-instead-of-web-browser-prompt)
-- [<span data-ttu-id="51a18-117">모듈의 호환성이 손상되는 변경</span><span class="sxs-lookup"><span data-stu-id="51a18-117">Module breaking changes</span></span>](#module-breaking-changes)
-  - [<span data-ttu-id="51a18-118">Az.ApiManagement(이전에는 AzureRM.ApiManagement)</span><span class="sxs-lookup"><span data-stu-id="51a18-118">Az.ApiManagement (previously AzureRM.ApiManagement)</span></span>](#azapimanagement-previously-azurermapimanagement)
-  - [<span data-ttu-id="51a18-119">Az.Billing(이전에는 AzureRM.Billing, AzureRM.Consumption, 및 AzureRM.UsageAggregates)</span><span class="sxs-lookup"><span data-stu-id="51a18-119">Az.Billing (previously AzureRM.Billing, AzureRM.Consumption, and AzureRM.UsageAggregates)</span></span>](#azbilling-previously-azurermbilling-azurermconsumption-and-azurermusageaggregates)
-  - [<span data-ttu-id="51a18-120">Az.CognitiveServices(이전에는 AzureRM.CognitiveServices)</span><span class="sxs-lookup"><span data-stu-id="51a18-120">Az.CognitiveServices (previously AzureRM.CognitiveServices)</span></span>](#azcognitiveservices-previously-azurermcognitiveservices)
-  - [<span data-ttu-id="51a18-121">Az.Compute(이전에는 AzureRM.Compute)</span><span class="sxs-lookup"><span data-stu-id="51a18-121">Az.Compute (previously AzureRM.Compute)</span></span>](#azcompute-previously-azurermcompute)
-  - [<span data-ttu-id="51a18-122">Az.DataFactory(이전에는 AzureRM.DataFactories 및 AzureRM.DataFactoryV2)</span><span class="sxs-lookup"><span data-stu-id="51a18-122">Az.DataFactory (previously AzureRM.DataFactories and AzureRM.DataFactoryV2)</span></span>](#azdatafactory-previously-azurermdatafactories-and-azurermdatafactoryv2)
-  - [<span data-ttu-id="51a18-123">Az.DataLakeAnalytics(이전에는 AzureRM.DataLakeAnalytics)</span><span class="sxs-lookup"><span data-stu-id="51a18-123">Az.DataLakeAnalytics (previously AzureRM.DataLakeAnalytics)</span></span>](#azdatalakeanalytics-previously-azurermdatalakeanalytics)
-  - [<span data-ttu-id="51a18-124">Az.DataLakeStore(이전에는 AzureRM.DataLakeStore)</span><span class="sxs-lookup"><span data-stu-id="51a18-124">Az.DataLakeStore (previously AzureRM.DataLakeStore)</span></span>](#azdatalakestore-previously-azurermdatalakestore)
-  - [<span data-ttu-id="51a18-125">Az.KeyVault(이전에는 AzureRM.KeyVault)</span><span class="sxs-lookup"><span data-stu-id="51a18-125">Az.KeyVault (previously AzureRM.KeyVault)</span></span>](#azkeyvault-previously-azurermkeyvault)
-  - [<span data-ttu-id="51a18-126">Az.Media(이전에는 AzureRM.Media)</span><span class="sxs-lookup"><span data-stu-id="51a18-126">Az.Media (previously AzureRM.Media)</span></span>](#azmedia-previously-azurermmedia)
-  - [<span data-ttu-id="51a18-127">Az.Monitor(이전에는 AzureRM.Insights)</span><span class="sxs-lookup"><span data-stu-id="51a18-127">Az.Monitor (previously AzureRM.Insights)</span></span>](#azmonitor-previously-azurerminsights)
-  - [<span data-ttu-id="51a18-128">Az.Network(이전에는 AzureRM.Network)</span><span class="sxs-lookup"><span data-stu-id="51a18-128">Az.Network (previously AzureRM.Network)</span></span>](#aznetwork-previously-azurermnetwork)
-  - [<span data-ttu-id="51a18-129">Az.OperationalInsights(이전에는 AzureRM.OperationalInsights)</span><span class="sxs-lookup"><span data-stu-id="51a18-129">Az.OperationalInsights (previously AzureRM.OperationalInsights)</span></span>](#azoperationalinsights-previously-azurermoperationalinsights)
-  - [<span data-ttu-id="51a18-130">Az.RecoveryServices(이전에는 AzureRM.RecoveryServices, AzureRM.RecoveryServices.Backup, 및 AzureRM.RecoveryServices.SiteRecovery)</span><span class="sxs-lookup"><span data-stu-id="51a18-130">Az.RecoveryServices (previously AzureRM.RecoveryServices, AzureRM.RecoveryServices.Backup, and AzureRM.RecoveryServices.SiteRecovery)</span></span>](#azrecoveryservices-previously-azurermrecoveryservices-azurermrecoveryservicesbackup-and-azurermrecoveryservicessiterecovery)
-  - [<span data-ttu-id="51a18-131">Az.Resources(이전에는 AzureRM.Resources)</span><span class="sxs-lookup"><span data-stu-id="51a18-131">Az.Resources (previously AzureRM.Resources)</span></span>](#azresources-previously-azurermresources)
-  - [<span data-ttu-id="51a18-132">Az.ServiceFabric(이전에는 AzureRM.ServiceFabric)</span><span class="sxs-lookup"><span data-stu-id="51a18-132">Az.ServiceFabric (previously AzureRM.ServiceFabric)</span></span>](#azservicefabric-previously-azurermservicefabric)
-  - [<span data-ttu-id="51a18-133">Az.Sql(이전에는 AzureRM.Sql)</span><span class="sxs-lookup"><span data-stu-id="51a18-133">Az.Sql (previously AzureRM.Sql)</span></span>](#azsql-previously-azurermsql)
-  - [<span data-ttu-id="51a18-134">Az.Storage(이전에는 Azure.Storage 및 AzureRM.Storage)</span><span class="sxs-lookup"><span data-stu-id="51a18-134">Az.Storage (previously Azure.Storage and AzureRM.Storage)</span></span>](#azstorage-previously-azurestorage-and-azurermstorage)
-  - [<span data-ttu-id="51a18-135">Az.Websites(이전에는 AzureRM.Websites)</span><span class="sxs-lookup"><span data-stu-id="51a18-135">Az.Websites (previously AzureRM.Websites)</span></span>](#azwebsites-previously-azurermwebsites)
+- [<span data-ttu-id="51590-110">일반적인 주요 변경 내용</span><span class="sxs-lookup"><span data-stu-id="51590-110">General breaking changes</span></span>](#general-breaking-changes)
+  - [<span data-ttu-id="51590-111">cmdlet 명사 접두사 변경</span><span class="sxs-lookup"><span data-stu-id="51590-111">Cmdlet noun prefix changes</span></span>](#cmdlet-noun-prefix-changes)
+  - [<span data-ttu-id="51590-112">모듈 이름 변경</span><span class="sxs-lookup"><span data-stu-id="51590-112">Module name changes</span></span>](#module-name-changes)
+  - [<span data-ttu-id="51590-113">제거된 모듈</span><span class="sxs-lookup"><span data-stu-id="51590-113">Removed modules</span></span>](#removed-modules)
+  - [<span data-ttu-id="51590-114">Windows PowerShell 5.1 및 .NET 4.7.2</span><span class="sxs-lookup"><span data-stu-id="51590-114">Windows PowerShell 5.1 and .NET 4.7.2</span></span>](#windows-powershell-51-and-net-472)
+  - [<span data-ttu-id="51590-115">PSCredential을 사용하여 사용자 로그인 임시 제거</span><span class="sxs-lookup"><span data-stu-id="51590-115">Temporary removal of user login using PSCredential</span></span>](#temporary-removal-of-user-login-using-pscredential)
+  - [<span data-ttu-id="51590-116">웹 브라우저 프롬프트 대신 기본 디바이스 코드 로그인</span><span class="sxs-lookup"><span data-stu-id="51590-116">Default device code login instead of web browser prompt</span></span>](#default-device-code-login-instead-of-web-browser-prompt)
+- [<span data-ttu-id="51590-117">모듈의 호환성이 손상되는 변경</span><span class="sxs-lookup"><span data-stu-id="51590-117">Module breaking changes</span></span>](#module-breaking-changes)
+  - [<span data-ttu-id="51590-118">Az.ApiManagement(이전에는 AzureRM.ApiManagement)</span><span class="sxs-lookup"><span data-stu-id="51590-118">Az.ApiManagement (previously AzureRM.ApiManagement)</span></span>](#azapimanagement-previously-azurermapimanagement)
+  - [<span data-ttu-id="51590-119">Az.Billing(이전에는 AzureRM.Billing, AzureRM.Consumption, 및 AzureRM.UsageAggregates)</span><span class="sxs-lookup"><span data-stu-id="51590-119">Az.Billing (previously AzureRM.Billing, AzureRM.Consumption, and AzureRM.UsageAggregates)</span></span>](#azbilling-previously-azurermbilling-azurermconsumption-and-azurermusageaggregates)
+  - [<span data-ttu-id="51590-120">Az.CognitiveServices(이전에는 AzureRM.CognitiveServices)</span><span class="sxs-lookup"><span data-stu-id="51590-120">Az.CognitiveServices (previously AzureRM.CognitiveServices)</span></span>](#azcognitiveservices-previously-azurermcognitiveservices)
+  - [<span data-ttu-id="51590-121">Az.Compute(이전에는 AzureRM.Compute)</span><span class="sxs-lookup"><span data-stu-id="51590-121">Az.Compute (previously AzureRM.Compute)</span></span>](#azcompute-previously-azurermcompute)
+  - [<span data-ttu-id="51590-122">Az.DataFactory(이전에는 AzureRM.DataFactories 및 AzureRM.DataFactoryV2)</span><span class="sxs-lookup"><span data-stu-id="51590-122">Az.DataFactory (previously AzureRM.DataFactories and AzureRM.DataFactoryV2)</span></span>](#azdatafactory-previously-azurermdatafactories-and-azurermdatafactoryv2)
+  - [<span data-ttu-id="51590-123">Az.DataLakeAnalytics(이전에는 AzureRM.DataLakeAnalytics)</span><span class="sxs-lookup"><span data-stu-id="51590-123">Az.DataLakeAnalytics (previously AzureRM.DataLakeAnalytics)</span></span>](#azdatalakeanalytics-previously-azurermdatalakeanalytics)
+  - [<span data-ttu-id="51590-124">Az.DataLakeStore(이전에는 AzureRM.DataLakeStore)</span><span class="sxs-lookup"><span data-stu-id="51590-124">Az.DataLakeStore (previously AzureRM.DataLakeStore)</span></span>](#azdatalakestore-previously-azurermdatalakestore)
+  - [<span data-ttu-id="51590-125">Az.KeyVault(이전에는 AzureRM.KeyVault)</span><span class="sxs-lookup"><span data-stu-id="51590-125">Az.KeyVault (previously AzureRM.KeyVault)</span></span>](#azkeyvault-previously-azurermkeyvault)
+  - [<span data-ttu-id="51590-126">Az.Media(이전에는 AzureRM.Media)</span><span class="sxs-lookup"><span data-stu-id="51590-126">Az.Media (previously AzureRM.Media)</span></span>](#azmedia-previously-azurermmedia)
+  - [<span data-ttu-id="51590-127">Az.Monitor(이전에는 AzureRM.Insights)</span><span class="sxs-lookup"><span data-stu-id="51590-127">Az.Monitor (previously AzureRM.Insights)</span></span>](#azmonitor-previously-azurerminsights)
+  - [<span data-ttu-id="51590-128">Az.Network(이전에는 AzureRM.Network)</span><span class="sxs-lookup"><span data-stu-id="51590-128">Az.Network (previously AzureRM.Network)</span></span>](#aznetwork-previously-azurermnetwork)
+  - [<span data-ttu-id="51590-129">Az.OperationalInsights(이전에는 AzureRM.OperationalInsights)</span><span class="sxs-lookup"><span data-stu-id="51590-129">Az.OperationalInsights (previously AzureRM.OperationalInsights)</span></span>](#azoperationalinsights-previously-azurermoperationalinsights)
+  - [<span data-ttu-id="51590-130">Az.RecoveryServices(이전에는 AzureRM.RecoveryServices, AzureRM.RecoveryServices.Backup, 및 AzureRM.RecoveryServices.SiteRecovery)</span><span class="sxs-lookup"><span data-stu-id="51590-130">Az.RecoveryServices (previously AzureRM.RecoveryServices, AzureRM.RecoveryServices.Backup, and AzureRM.RecoveryServices.SiteRecovery)</span></span>](#azrecoveryservices-previously-azurermrecoveryservices-azurermrecoveryservicesbackup-and-azurermrecoveryservicessiterecovery)
+  - [<span data-ttu-id="51590-131">Az.Resources(이전에는 AzureRM.Resources)</span><span class="sxs-lookup"><span data-stu-id="51590-131">Az.Resources (previously AzureRM.Resources)</span></span>](#azresources-previously-azurermresources)
+  - [<span data-ttu-id="51590-132">Az.ServiceFabric(이전에는 AzureRM.ServiceFabric)</span><span class="sxs-lookup"><span data-stu-id="51590-132">Az.ServiceFabric (previously AzureRM.ServiceFabric)</span></span>](#azservicefabric-previously-azurermservicefabric)
+  - [<span data-ttu-id="51590-133">Az.Sql(이전에는 AzureRM.Sql)</span><span class="sxs-lookup"><span data-stu-id="51590-133">Az.Sql (previously AzureRM.Sql)</span></span>](#azsql-previously-azurermsql)
+  - [<span data-ttu-id="51590-134">Az.Storage(이전에는 Azure.Storage 및 AzureRM.Storage)</span><span class="sxs-lookup"><span data-stu-id="51590-134">Az.Storage (previously Azure.Storage and AzureRM.Storage)</span></span>](#azstorage-previously-azurestorage-and-azurermstorage)
+  - [<span data-ttu-id="51590-135">Az.Websites(이전에는 AzureRM.Websites)</span><span class="sxs-lookup"><span data-stu-id="51590-135">Az.Websites (previously AzureRM.Websites)</span></span>](#azwebsites-previously-azurermwebsites)
 
-## <a name="general-breaking-changes"></a><span data-ttu-id="51a18-136">일반적인 주요 변경 내용</span><span class="sxs-lookup"><span data-stu-id="51a18-136">General breaking changes</span></span>
+## <a name="general-breaking-changes"></a><span data-ttu-id="51590-136">일반적인 주요 변경 내용</span><span class="sxs-lookup"><span data-stu-id="51590-136">General breaking changes</span></span>
 
-<span data-ttu-id="51a18-137">이 섹션에서는 Az 모듈 재설계의 일부인 일반적인 호환성이 손상되는 변경에 대해 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-137">This section details the general breaking changes that are part of the redesign of the Az module.</span></span>
+<span data-ttu-id="51590-137">이 섹션에서는 Az 모듈 재설계의 일부인 일반적인 호환성이 손상되는 변경에 대해 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-137">This section details the general breaking changes that are part of the redesign of the Az module.</span></span>
 
-### <a name="cmdlet-noun-prefix-changes"></a><span data-ttu-id="51a18-138">Cmdlet 명사 접두사 변경</span><span class="sxs-lookup"><span data-stu-id="51a18-138">Cmdlet Noun Prefix Changes</span></span>
+### <a name="cmdlet-noun-prefix-changes"></a><span data-ttu-id="51590-138">Cmdlet 명사 접두사 변경</span><span class="sxs-lookup"><span data-stu-id="51590-138">Cmdlet Noun Prefix Changes</span></span>
 
-<span data-ttu-id="51a18-139">AzureRM 모듈에서 cmdlet은 `AzureRM` 또는 `Azure`를 명사 접두사로 사용했습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-139">In the AzureRM module, cmdlets used either `AzureRM` or `Azure` as a noun prefix.</span></span>  <span data-ttu-id="51a18-140">Az는 cmdlet 이름을 간소화하고 정규화하여 모든 cmdlet에서 'Az'를 해당 cmdlet 명사 접두사로 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-140">Az simplifies and normalizes cmdlet names, so that all cmdlets use 'Az' as their cmdlet noun prefix.</span></span> <span data-ttu-id="51a18-141">예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-141">For example:</span></span>
+<span data-ttu-id="51590-139">AzureRM 모듈에서 cmdlet은 `AzureRM` 또는 `Azure`를 명사 접두사로 사용했습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-139">In the AzureRM module, cmdlets used either `AzureRM` or `Azure` as a noun prefix.</span></span>  <span data-ttu-id="51590-140">Az는 cmdlet 이름을 간소화하고 정규화하여 모든 cmdlet에서 'Az'를 해당 cmdlet 명사 접두사로 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-140">Az simplifies and normalizes cmdlet names, so that all cmdlets use 'Az' as their cmdlet noun prefix.</span></span> <span data-ttu-id="51590-141">예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-141">For example:</span></span>
 
 ```azurepowershell-interactive
 Get-AzureRMVM
 Get-AzureKeyVaultSecret
 ```
 
-<span data-ttu-id="51a18-142">다음으로 변경되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-142">Has changed to:</span></span>
+<span data-ttu-id="51590-142">다음으로 변경되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-142">Has changed to:</span></span>
 
 ```azurepowershell-interactive
 Get-AzVM
 Get-AzKeyVaultSecret
 ```
 
-<span data-ttu-id="51a18-143">이러한 새 cmdlet 이름으로 더 간단하게 전환할 수 있도록 Az에서 [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias) 및 [Disable-AzureRmAlias](/powershell/module/az.accounts/disable-azurermalias)라는 두 개의 새 cmdlet을 도입했습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-143">To make the transition to these new cmdlet names simpler, Az introduces two new cmdlets, [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias) and [Disable-AzureRmAlias](/powershell/module/az.accounts/disable-azurermalias).</span></span>  <span data-ttu-id="51a18-144">`Enable-AzureRmAlias`는 최신 Az cmdlet 이름에 매핑되는 AzureRM의 이전 cmdlet 이름에 대한 별칭을 에 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-144">`Enable-AzureRmAlias` creates aliases for the older cmdlet names in AzureRM that map to the newer Az cmdlet names.</span></span> <span data-ttu-id="51a18-145">`Enable-AzureRmAlias`에서 `-Scope` 인수를 사용하면 별칭을 사용하도록 설정되는 위치를 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-145">Using the `-Scope` argument with `Enable-AzureRmAlias` allows you to choose where aliases are enabled.</span></span>
+<span data-ttu-id="51590-143">이러한 새 cmdlet 이름으로 더 간단하게 전환할 수 있도록 Az에서 [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias) 및 [Disable-AzureRmAlias](/powershell/module/az.accounts/disable-azurermalias)라는 두 개의 새 cmdlet을 도입했습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-143">To make the transition to these new cmdlet names simpler, Az introduces two new cmdlets, [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias) and [Disable-AzureRmAlias](/powershell/module/az.accounts/disable-azurermalias).</span></span>  <span data-ttu-id="51590-144">`Enable-AzureRmAlias`는 최신 Az cmdlet 이름에 매핑되는 AzureRM의 이전 cmdlet 이름에 대한 별칭을 에 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="51590-144">`Enable-AzureRmAlias` creates aliases for the older cmdlet names in AzureRM that map to the newer Az cmdlet names.</span></span> <span data-ttu-id="51590-145">`Enable-AzureRmAlias`에서 `-Scope` 인수를 사용하면 별칭을 사용하도록 설정되는 위치를 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-145">Using the `-Scope` argument with `Enable-AzureRmAlias` allows you to choose where aliases are enabled.</span></span>
 
-<span data-ttu-id="51a18-146">예를 들어, AzureRM의 다음 스크립트가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-146">For example, the following script in AzureRM:</span></span>
+<span data-ttu-id="51590-146">예를 들어, AzureRM의 다음 스크립트가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-146">For example, the following script in AzureRM:</span></span>
 
 ```azurepowershell-interactive
 #Requires -Modules AzureRM.Storage
 Get-AzureRmStorageAccount | Get-AzureStorageContainer | Get-AzureStorageBlob
 ```
 
-<span data-ttu-id="51a18-147">`Enable-AzureRmAlias`를 사용하여 최소한의 변경으로 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-147">Can be run with minimal changes using `Enable-AzureRmAlias`:</span></span>
+<span data-ttu-id="51590-147">`Enable-AzureRmAlias`를 사용하여 최소한의 변경으로 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-147">Can be run with minimal changes using `Enable-AzureRmAlias`:</span></span>
 
 ```azurepowershell-interactive
 #Requires -Modules Az.Storage
@@ -87,299 +88,299 @@ Enable-AzureRmAlias -Scope Process
 Get-AzureRmStorageAccount | Get-AzureStorageContainer | Get-AzureStorageBlob
 ```
 
-<span data-ttu-id="51a18-148">`Enable-AzureRmAlias -Scope CurrentUser`를 실행하면 열려 있는 모든 PowerShell 세션에 별칭을 사용하도록 설정되므로 이 cmdlet을 실행한 후 이와 같은 스크립트를 전혀 변경할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-148">Running `Enable-AzureRmAlias -Scope CurrentUser` will enable the aliases for all PowerShell sessions you open, so that after executing this cmdlet, a script like this would not need to be changed at all:</span></span>
+<span data-ttu-id="51590-148">`Enable-AzureRmAlias -Scope CurrentUser`를 실행하면 열려 있는 모든 PowerShell 세션에 별칭을 사용하도록 설정되므로 이 cmdlet을 실행한 후 이와 같은 스크립트를 전혀 변경할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-148">Running `Enable-AzureRmAlias -Scope CurrentUser` will enable the aliases for all PowerShell sessions you open, so that after executing this cmdlet, a script like this would not need to be changed at all:</span></span>
 
 ```azurepowershell-interactive
 Get-AzureRmStorageAccount | Get-AzureStorageContainer | Get-AzureStorageBlob
 ```
 
-<span data-ttu-id="51a18-149">별칭 cmdlet을 사용하는 방법에 대한 자세한 내용은 [Enable-AzureRmAlias 참조](/powershell/module/az.accounts/enable-azurermalias)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="51a18-149">For complete details on the usage of the alias cmdlets, see the [Enable-AzureRmAlias reference](/powershell/module/az.accounts/enable-azurermalias).</span></span>
+<span data-ttu-id="51590-149">별칭 cmdlet을 사용하는 방법에 대한 자세한 내용은 [Enable-AzureRmAlias 참조](/powershell/module/az.accounts/enable-azurermalias)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="51590-149">For complete details on the usage of the alias cmdlets, see the [Enable-AzureRmAlias reference](/powershell/module/az.accounts/enable-azurermalias).</span></span>
 
-<span data-ttu-id="51a18-150">별칭을 사용하지 않도록 설정할 준비가 되면 `Disable-AzureRmAlias`에서 만들어진 별칭을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-150">When you're ready to disable aliases, `Disable-AzureRmAlias` removes the created aliases.</span></span> <span data-ttu-id="51a18-151">자세한 내용은 [Disable-AzureRmAlias 참조](/powershell/module/az.accounts/disable-azurermalias)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="51a18-151">For complete details, see the [Disable-AzureRmAlias reference](/powershell/module/az.accounts/disable-azurermalias).</span></span>
+<span data-ttu-id="51590-150">별칭을 사용하지 않도록 설정할 준비가 되면 `Disable-AzureRmAlias`에서 만들어진 별칭을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-150">When you're ready to disable aliases, `Disable-AzureRmAlias` removes the created aliases.</span></span> <span data-ttu-id="51590-151">자세한 내용은 [Disable-AzureRmAlias 참조](/powershell/module/az.accounts/disable-azurermalias)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="51590-151">For complete details, see the [Disable-AzureRmAlias reference](/powershell/module/az.accounts/disable-azurermalias).</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="51a18-152">별칭을 사용하지 않도록 설정하는 경우 별칭을 사용하도록 설정된 _모든_ 범위에 대해 사용하지 않도록 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-152">When disabling aliases, make sure that they are disabled for _all_ scopes which had aliases enabled.</span></span>
+> <span data-ttu-id="51590-152">별칭을 사용하지 않도록 설정하는 경우 별칭을 사용하도록 설정된 _모든_ 범위에 대해 사용하지 않도록 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-152">When disabling aliases, make sure that they are disabled for _all_ scopes which had aliases enabled.</span></span>
 
-### <a name="module-name-changes"></a><span data-ttu-id="51a18-153">모듈 이름 변경</span><span class="sxs-lookup"><span data-stu-id="51a18-153">Module Name Changes</span></span>
+### <a name="module-name-changes"></a><span data-ttu-id="51590-153">모듈 이름 변경</span><span class="sxs-lookup"><span data-stu-id="51590-153">Module Name Changes</span></span>
 
-<span data-ttu-id="51a18-154">다음 모듈을 제외하고 모듈 이름이 `AzureRM.*`에서 `Az.*`로 변경되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-154">The module names have changed from `AzureRM.*` to `Az.*`, except for the following modules:</span></span>
+<span data-ttu-id="51590-154">다음 모듈을 제외하고 모듈 이름이 `AzureRM.*`에서 `Az.*`로 변경되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-154">The module names have changed from `AzureRM.*` to `Az.*`, except for the following modules:</span></span>
 
-| <span data-ttu-id="51a18-155">AzureRM 모듈</span><span class="sxs-lookup"><span data-stu-id="51a18-155">AzureRM module</span></span> | <span data-ttu-id="51a18-156">Az 모듈</span><span class="sxs-lookup"><span data-stu-id="51a18-156">Az module</span></span> |
+| <span data-ttu-id="51590-155">AzureRM 모듈</span><span class="sxs-lookup"><span data-stu-id="51590-155">AzureRM module</span></span> | <span data-ttu-id="51590-156">Az 모듈</span><span class="sxs-lookup"><span data-stu-id="51590-156">Az module</span></span> |
 |----------------|-----------|
-| <span data-ttu-id="51a18-157">Azure.Storage</span><span class="sxs-lookup"><span data-stu-id="51a18-157">Azure.Storage</span></span> | <span data-ttu-id="51a18-158">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="51a18-158">Az.Storage</span></span> |
-| <span data-ttu-id="51a18-159">Azure.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="51a18-159">Azure.AnalysisServices</span></span> | <span data-ttu-id="51a18-160">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="51a18-160">Az.AnalysisServices</span></span> |
-| <span data-ttu-id="51a18-161">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="51a18-161">AzureRM.Profile</span></span> | <span data-ttu-id="51a18-162">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="51a18-162">Az.Accounts</span></span> |
-| <span data-ttu-id="51a18-163">AzureRM.Insights</span><span class="sxs-lookup"><span data-stu-id="51a18-163">AzureRM.Insights</span></span> | <span data-ttu-id="51a18-164">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="51a18-164">Az.Monitor</span></span> |
-| <span data-ttu-id="51a18-165">AzureRM.DataFactories</span><span class="sxs-lookup"><span data-stu-id="51a18-165">AzureRM.DataFactories</span></span> | <span data-ttu-id="51a18-166">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="51a18-166">Az.DataFactory</span></span> |
-| <span data-ttu-id="51a18-167">AzureRM.DataFactoryV2</span><span class="sxs-lookup"><span data-stu-id="51a18-167">AzureRM.DataFactoryV2</span></span> | <span data-ttu-id="51a18-168">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="51a18-168">Az.DataFactory</span></span> |
-| <span data-ttu-id="51a18-169">AzureRM.RecoveryServices.Backup</span><span class="sxs-lookup"><span data-stu-id="51a18-169">AzureRM.RecoveryServices.Backup</span></span> | <span data-ttu-id="51a18-170">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="51a18-170">Az.RecoveryServices</span></span> |
-| <span data-ttu-id="51a18-171">AzureRM.RecoveryServices.SiteRecovery</span><span class="sxs-lookup"><span data-stu-id="51a18-171">AzureRM.RecoveryServices.SiteRecovery</span></span> | <span data-ttu-id="51a18-172">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="51a18-172">Az.RecoveryServices</span></span> |
-| <span data-ttu-id="51a18-173">AzureRM.Tags</span><span class="sxs-lookup"><span data-stu-id="51a18-173">AzureRM.Tags</span></span> | <span data-ttu-id="51a18-174">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="51a18-174">Az.Resources</span></span> |
-| <span data-ttu-id="51a18-175">AzureRM.MachineLearningCompute</span><span class="sxs-lookup"><span data-stu-id="51a18-175">AzureRM.MachineLearningCompute</span></span> | <span data-ttu-id="51a18-176">Az.MachineLearning</span><span class="sxs-lookup"><span data-stu-id="51a18-176">Az.MachineLearning</span></span> |
-| <span data-ttu-id="51a18-177">AzureRM.UsageAggregates</span><span class="sxs-lookup"><span data-stu-id="51a18-177">AzureRM.UsageAggregates</span></span> | <span data-ttu-id="51a18-178">Az.Billing</span><span class="sxs-lookup"><span data-stu-id="51a18-178">Az.Billing</span></span> |
-| <span data-ttu-id="51a18-179">AzureRM.Consumption</span><span class="sxs-lookup"><span data-stu-id="51a18-179">AzureRM.Consumption</span></span> | <span data-ttu-id="51a18-180">Az.Billing</span><span class="sxs-lookup"><span data-stu-id="51a18-180">Az.Billing</span></span> |
+| <span data-ttu-id="51590-157">Azure.Storage</span><span class="sxs-lookup"><span data-stu-id="51590-157">Azure.Storage</span></span> | <span data-ttu-id="51590-158">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="51590-158">Az.Storage</span></span> |
+| <span data-ttu-id="51590-159">Azure.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="51590-159">Azure.AnalysisServices</span></span> | <span data-ttu-id="51590-160">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="51590-160">Az.AnalysisServices</span></span> |
+| <span data-ttu-id="51590-161">AzureRM.Profile</span><span class="sxs-lookup"><span data-stu-id="51590-161">AzureRM.Profile</span></span> | <span data-ttu-id="51590-162">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="51590-162">Az.Accounts</span></span> |
+| <span data-ttu-id="51590-163">AzureRM.Insights</span><span class="sxs-lookup"><span data-stu-id="51590-163">AzureRM.Insights</span></span> | <span data-ttu-id="51590-164">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="51590-164">Az.Monitor</span></span> |
+| <span data-ttu-id="51590-165">AzureRM.DataFactories</span><span class="sxs-lookup"><span data-stu-id="51590-165">AzureRM.DataFactories</span></span> | <span data-ttu-id="51590-166">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="51590-166">Az.DataFactory</span></span> |
+| <span data-ttu-id="51590-167">AzureRM.DataFactoryV2</span><span class="sxs-lookup"><span data-stu-id="51590-167">AzureRM.DataFactoryV2</span></span> | <span data-ttu-id="51590-168">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="51590-168">Az.DataFactory</span></span> |
+| <span data-ttu-id="51590-169">AzureRM.RecoveryServices.Backup</span><span class="sxs-lookup"><span data-stu-id="51590-169">AzureRM.RecoveryServices.Backup</span></span> | <span data-ttu-id="51590-170">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="51590-170">Az.RecoveryServices</span></span> |
+| <span data-ttu-id="51590-171">AzureRM.RecoveryServices.SiteRecovery</span><span class="sxs-lookup"><span data-stu-id="51590-171">AzureRM.RecoveryServices.SiteRecovery</span></span> | <span data-ttu-id="51590-172">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="51590-172">Az.RecoveryServices</span></span> |
+| <span data-ttu-id="51590-173">AzureRM.Tags</span><span class="sxs-lookup"><span data-stu-id="51590-173">AzureRM.Tags</span></span> | <span data-ttu-id="51590-174">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="51590-174">Az.Resources</span></span> |
+| <span data-ttu-id="51590-175">AzureRM.MachineLearningCompute</span><span class="sxs-lookup"><span data-stu-id="51590-175">AzureRM.MachineLearningCompute</span></span> | <span data-ttu-id="51590-176">Az.MachineLearning</span><span class="sxs-lookup"><span data-stu-id="51590-176">Az.MachineLearning</span></span> |
+| <span data-ttu-id="51590-177">AzureRM.UsageAggregates</span><span class="sxs-lookup"><span data-stu-id="51590-177">AzureRM.UsageAggregates</span></span> | <span data-ttu-id="51590-178">Az.Billing</span><span class="sxs-lookup"><span data-stu-id="51590-178">Az.Billing</span></span> |
+| <span data-ttu-id="51590-179">AzureRM.Consumption</span><span class="sxs-lookup"><span data-stu-id="51590-179">AzureRM.Consumption</span></span> | <span data-ttu-id="51590-180">Az.Billing</span><span class="sxs-lookup"><span data-stu-id="51590-180">Az.Billing</span></span> |
 
-<span data-ttu-id="51a18-181">모듈 이름이 변경되면 `#Requires` 또는 `Import-Module`을 사용하여 특정 모듈을 로드하는 스크립트는 대신 새 모듈을 사용하도록 변경되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-181">The changes in module names mean that any script that uses `#Requires` or `Import-Module` to load specific modules will need to be changed to use the new module instead.</span></span> <span data-ttu-id="51a18-182">cmdlet 접미사가 변경되지 않은 모듈의 경우 이는 모듈 이름이 변경되었지만 작업 공간을 나타내는 접미사가 _변경되지 않았음_ 을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-182">For modules where the cmdlet suffix has not changed, this means that although the module name has changed, the suffix indicating the operation space has _not_ .</span></span>
+<span data-ttu-id="51590-181">모듈 이름이 변경되면 `#Requires` 또는 `Import-Module`을 사용하여 특정 모듈을 로드하는 스크립트는 대신 새 모듈을 사용하도록 변경되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-181">The changes in module names mean that any script that uses `#Requires` or `Import-Module` to load specific modules will need to be changed to use the new module instead.</span></span> <span data-ttu-id="51590-182">cmdlet 접미사가 변경되지 않은 모듈의 경우 이는 모듈 이름이 변경되었지만 작업 공간을 나타내는 접미사가 _변경되지 않았음_ 을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-182">For modules where the cmdlet suffix has not changed, this means that although the module name has changed, the suffix indicating the operation space has _not_.</span></span>
 
-#### <a name="migrating-requires-and-import-module-statements"></a><span data-ttu-id="51a18-183">#Requires 및 Import-Module 문 마이그레이션</span><span class="sxs-lookup"><span data-stu-id="51a18-183">Migrating #Requires and Import-Module Statements</span></span>
+#### <a name="migrating-requires-and-import-module-statements"></a><span data-ttu-id="51590-183">#Requires 및 Import-Module 문 마이그레이션</span><span class="sxs-lookup"><span data-stu-id="51590-183">Migrating #Requires and Import-Module Statements</span></span>
 
-<span data-ttu-id="51a18-184">`#Requires` 또는 `Import-Module`을 사용하여 AzureRM 모듈에 대한 종속성을 선언하는 스크립트는 새 모듈 이름을 사용하도록 업데이트해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-184">Scripts that use `#Requires` or `Import-Module` to declare a dependency on AzureRM modules must be updated to use the new module names.</span></span> <span data-ttu-id="51a18-185">예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-185">For example:</span></span>
+<span data-ttu-id="51590-184">`#Requires` 또는 `Import-Module`을 사용하여 AzureRM 모듈에 대한 종속성을 선언하는 스크립트는 새 모듈 이름을 사용하도록 업데이트해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-184">Scripts that use `#Requires` or `Import-Module` to declare a dependency on AzureRM modules must be updated to use the new module names.</span></span> <span data-ttu-id="51590-185">예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-185">For example:</span></span>
 
 ```azurepowershell-interactive
 #Requires -Module AzureRM.Compute
 ```
 
-<span data-ttu-id="51a18-186">다음으로 변경되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-186">Should be changed to:</span></span>
+<span data-ttu-id="51590-186">다음으로 변경되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-186">Should be changed to:</span></span>
 
 ```azurepowershell-interactive
 #Requires -Module Az.Compute
 ```
 
-<span data-ttu-id="51a18-187">`Import-Module`의 경우</span><span class="sxs-lookup"><span data-stu-id="51a18-187">For `Import-Module`:</span></span>
+<span data-ttu-id="51590-187">`Import-Module`의 경우</span><span class="sxs-lookup"><span data-stu-id="51590-187">For `Import-Module`:</span></span>
 
 ```azurepowershell-interactive
 Import-Module -Name AzureRM.Compute
 ```
 
-<span data-ttu-id="51a18-188">다음으로 변경되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-188">Should be changed to:</span></span>
+<span data-ttu-id="51590-188">다음으로 변경되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-188">Should be changed to:</span></span>
 
 ```azurepowershell-interactive
 Import-Module -Name Az.Compute
 ```
 
-### <a name="migrating-fully-qualified-cmdlet-invocations"></a><span data-ttu-id="51a18-189">Cmdlet 정규화 호출 마이그레이션</span><span class="sxs-lookup"><span data-stu-id="51a18-189">Migrating Fully-Qualified Cmdlet Invocations</span></span>
+### <a name="migrating-fully-qualified-cmdlet-invocations"></a><span data-ttu-id="51590-189">Cmdlet 정규화 호출 마이그레이션</span><span class="sxs-lookup"><span data-stu-id="51590-189">Migrating Fully-Qualified Cmdlet Invocations</span></span>
 
-<span data-ttu-id="51a18-190">다음과 같이 모듈에서 정규화된 cmdlet 호출을 사용하는 스크립트는</span><span class="sxs-lookup"><span data-stu-id="51a18-190">Scripts that use module-qualified cmdlet invocations, such as:</span></span>
+<span data-ttu-id="51590-190">다음과 같이 모듈에서 정규화된 cmdlet 호출을 사용하는 스크립트는</span><span class="sxs-lookup"><span data-stu-id="51590-190">Scripts that use module-qualified cmdlet invocations, such as:</span></span>
 
 ```azurepowershell-interactive
 AzureRM.Compute\Get-AzureRmVM
 ```
 
-<span data-ttu-id="51a18-191">새 모듈 및 cmdlet 이름을 사용하도록 변경되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-191">Must be changed to use the new module and cmdlet names:</span></span>
+<span data-ttu-id="51590-191">새 모듈 및 cmdlet 이름을 사용하도록 변경되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-191">Must be changed to use the new module and cmdlet names:</span></span>
 
 ```azurepowershell-interactive
 Az.Compute\Get-AzVM
 ```
 
-### <a name="migrating-module-manifest-dependencies"></a><span data-ttu-id="51a18-192">모듈 매니페스트 종속성 마이그레이션</span><span class="sxs-lookup"><span data-stu-id="51a18-192">Migrating module manifest dependencies</span></span>
+### <a name="migrating-module-manifest-dependencies"></a><span data-ttu-id="51590-192">모듈 매니페스트 종속성 마이그레이션</span><span class="sxs-lookup"><span data-stu-id="51590-192">Migrating module manifest dependencies</span></span>
 
-<span data-ttu-id="51a18-193">모듈 매니페스트 파일(.psd1)을 통해 AzureRM 모듈에 대한 종속성을 나타내는 모듈은 `RequiredModules` 섹션에서 모듈 이름을 업데이트해야 합니다</span><span class="sxs-lookup"><span data-stu-id="51a18-193">Modules that express dependencies on AzureRM modules through a module manifest (.psd1) file will need to updated the module names in their `RequiredModules` section:</span></span>
+<span data-ttu-id="51590-193">모듈 매니페스트 파일(.psd1)을 통해 AzureRM 모듈에 대한 종속성을 나타내는 모듈은 `RequiredModules` 섹션에서 모듈 이름을 업데이트해야 합니다</span><span class="sxs-lookup"><span data-stu-id="51590-193">Modules that express dependencies on AzureRM modules through a module manifest (.psd1) file will need to updated the module names in their `RequiredModules` section:</span></span>
 
 ```powershell
 RequiredModules = @(@{ModuleName="AzureRM.Profile"; ModuleVersion="5.8.2"})
 ```
 
-<span data-ttu-id="51a18-194">다음으로 변경되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-194">Must be changed to:</span></span>
+<span data-ttu-id="51590-194">다음으로 변경되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-194">Must be changed to:</span></span>
 
 ```powershell
 RequiredModules = @(@{ModuleName="Az.Profile"; ModuleVersion="1.0.0"})
 ```
 
-### <a name="removed-modules"></a><span data-ttu-id="51a18-195">제거된 모듈</span><span class="sxs-lookup"><span data-stu-id="51a18-195">Removed modules</span></span>
+### <a name="removed-modules"></a><span data-ttu-id="51590-195">제거된 모듈</span><span class="sxs-lookup"><span data-stu-id="51590-195">Removed modules</span></span>
 
-<span data-ttu-id="51a18-196">다음 모듈이 제거되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-196">The following modules have been removed:</span></span>
+<span data-ttu-id="51590-196">다음 모듈이 제거되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-196">The following modules have been removed:</span></span>
 
 - `AzureRM.Backup`
 - `AzureRM.Compute.ManagedService`
 - `AzureRM.Scheduler`
 
-<span data-ttu-id="51a18-197">이러한 서비스를 위한 도구는 더 이상 적극적으로 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-197">The tools for these services are no longer actively supported.</span></span>  <span data-ttu-id="51a18-198">편리한 대체 서비스로 이동하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-198">Customers are encouraged to move to alternative services as soon as it is convenient.</span></span>
+<span data-ttu-id="51590-197">이러한 서비스를 위한 도구는 더 이상 적극적으로 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-197">The tools for these services are no longer actively supported.</span></span>  <span data-ttu-id="51590-198">편리한 대체 서비스로 이동하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-198">Customers are encouraged to move to alternative services as soon as it is convenient.</span></span>
 
-### <a name="windows-powershell-51-and-net-472"></a><span data-ttu-id="51a18-199">Windows PowerShell 5.1 및 .NET 4.7.2</span><span class="sxs-lookup"><span data-stu-id="51a18-199">Windows PowerShell 5.1 and .NET 4.7.2</span></span>
+### <a name="windows-powershell-51-and-net-472"></a><span data-ttu-id="51590-199">Windows PowerShell 5.1 및 .NET 4.7.2</span><span class="sxs-lookup"><span data-stu-id="51590-199">Windows PowerShell 5.1 and .NET 4.7.2</span></span>
 
-<span data-ttu-id="51a18-200">Windows용 PowerShell 5.1에서 Az를 사용하려면 .NET Framework 4.7.2를 설치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-200">Using Az with PowerShell 5.1 for Windows requires the installation of .NET Framework 4.7.2.</span></span> <span data-ttu-id="51a18-201">PowerShell Core 6.x 이상을 사용하는 경우 .NET Framework가 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-201">Using PowerShell Core 6.x or later does not require .NET Framework.</span></span>
+<span data-ttu-id="51590-200">Windows용 PowerShell 5.1에서 Az를 사용하려면 .NET Framework 4.7.2를 설치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-200">Using Az with PowerShell 5.1 for Windows requires the installation of .NET Framework 4.7.2.</span></span> <span data-ttu-id="51590-201">PowerShell Core 6.x 이상을 사용하는 경우 .NET Framework가 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-201">Using PowerShell Core 6.x or later does not require .NET Framework.</span></span>
 
-### <a name="temporary-removal-of-user-login-using-pscredential"></a><span data-ttu-id="51a18-202">PSCredential을 사용하여 사용자 로그인 임시 제거</span><span class="sxs-lookup"><span data-stu-id="51a18-202">Temporary removal of User login using PSCredential</span></span>
+### <a name="temporary-removal-of-user-login-using-pscredential"></a><span data-ttu-id="51590-202">PSCredential을 사용하여 사용자 로그인 임시 제거</span><span class="sxs-lookup"><span data-stu-id="51590-202">Temporary removal of User login using PSCredential</span></span>
 
-<span data-ttu-id="51a18-203">.NET 표준의 인증 흐름이 변경되어 PSCredential을 통한 사용자 로그인이 일시적으로 제거됩니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-203">Due to changes in the authentication flow for .NET Standard, we are temporarily removing user login via PSCredential.</span></span> <span data-ttu-id="51a18-204">이 기능은 Windows용 PowerShell 5.1에 대한 2019년 1월 15일 릴리스에서 다시 도입됩니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-204">This capability will be re-introduced in the 1/15/2019 release for PowerShell 5.1 for Windows.</span></span> <span data-ttu-id="51a18-205">이는 [이 GitHub 문제](https://github.com/Azure/azure-powershell/issues/7430)에서 자세히 설명하고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-205">This is discussed in detail in [this GitHub issue.](https://github.com/Azure/azure-powershell/issues/7430)</span></span>
+<span data-ttu-id="51590-203">.NET 표준의 인증 흐름이 변경되어 PSCredential을 통한 사용자 로그인이 일시적으로 제거됩니다.</span><span class="sxs-lookup"><span data-stu-id="51590-203">Due to changes in the authentication flow for .NET Standard, we are temporarily removing user login via PSCredential.</span></span> <span data-ttu-id="51590-204">이 기능은 Windows용 PowerShell 5.1에 대한 2019년 1월 15일 릴리스에서 다시 도입됩니다.</span><span class="sxs-lookup"><span data-stu-id="51590-204">This capability will be re-introduced in the 1/15/2019 release for PowerShell 5.1 for Windows.</span></span> <span data-ttu-id="51590-205">이는 [이 GitHub 문제](https://github.com/Azure/azure-powershell/issues/7430)에서 자세히 설명하고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-205">This is discussed in detail in [this GitHub issue.](https://github.com/Azure/azure-powershell/issues/7430)</span></span>
 
-### <a name="default-device-code-login-instead-of-web-browser-prompt"></a><span data-ttu-id="51a18-206">웹 브라우저 프롬프트 대신 기본 디바이스 코드 로그인</span><span class="sxs-lookup"><span data-stu-id="51a18-206">Default device code login instead of web browser prompt</span></span>
+### <a name="default-device-code-login-instead-of-web-browser-prompt"></a><span data-ttu-id="51590-206">웹 브라우저 프롬프트 대신 기본 디바이스 코드 로그인</span><span class="sxs-lookup"><span data-stu-id="51590-206">Default device code login instead of web browser prompt</span></span>
 
-<span data-ttu-id="51a18-207">.NET 표준의 인증 흐름이 변경되어 대화식 로그인 중에 기본 로그인 흐름으로 디바이스 로그인을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-207">Due to changes in the authentication flow for .NET Standard, we are using device login as the default login flow during interactive login.</span></span> <span data-ttu-id="51a18-208">웹 브라우저 기반 로그인은 Windows용 PowerShell 5.1에 대한 2019년 1월 15일 릴리스에서 기본적으로 다시 도입됩니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-208">Web browser based login will be re-introduced for PowerShell 5.1 for Windows as the default in the 1/15/2019 release.</span></span> <span data-ttu-id="51a18-209">이때 사용자는 스위치 매개 변수를 사용하여 디바이스 로그인을 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-209">At that time, users will be able to choose device login using a Switch parameter.</span></span>
+<span data-ttu-id="51590-207">.NET 표준의 인증 흐름이 변경되어 대화식 로그인 중에 기본 로그인 흐름으로 디바이스 로그인을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-207">Due to changes in the authentication flow for .NET Standard, we are using device login as the default login flow during interactive login.</span></span> <span data-ttu-id="51590-208">웹 브라우저 기반 로그인은 Windows용 PowerShell 5.1에 대한 2019년 1월 15일 릴리스에서 기본적으로 다시 도입됩니다.</span><span class="sxs-lookup"><span data-stu-id="51590-208">Web browser based login will be re-introduced for PowerShell 5.1 for Windows as the default in the 1/15/2019 release.</span></span> <span data-ttu-id="51590-209">이때 사용자는 스위치 매개 변수를 사용하여 디바이스 로그인을 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-209">At that time, users will be able to choose device login using a Switch parameter.</span></span>
 
-## <a name="module-breaking-changes"></a><span data-ttu-id="51a18-210">모듈의 호환성이 손상되는 변경</span><span class="sxs-lookup"><span data-stu-id="51a18-210">Module breaking changes</span></span>
+## <a name="module-breaking-changes"></a><span data-ttu-id="51590-210">모듈의 호환성이 손상되는 변경</span><span class="sxs-lookup"><span data-stu-id="51590-210">Module breaking changes</span></span>
 
-<span data-ttu-id="51a18-211">이 섹션에서는 개별 모듈 및 cmdlet에 대한 특정 호환성이 손상되는 변경에 대해 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-211">This section details specific breaking changes for individual modules and cmdlets.</span></span>
+<span data-ttu-id="51590-211">이 섹션에서는 개별 모듈 및 cmdlet에 대한 특정 호환성이 손상되는 변경에 대해 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-211">This section details specific breaking changes for individual modules and cmdlets.</span></span>
 
-### <a name="azapimanagement-previously-azurermapimanagement"></a><span data-ttu-id="51a18-212">Az.ApiManagement(이전에는 AzureRM.ApiManagement)</span><span class="sxs-lookup"><span data-stu-id="51a18-212">Az.ApiManagement (previously AzureRM.ApiManagement)</span></span>
+### <a name="azapimanagement-previously-azurermapimanagement"></a><span data-ttu-id="51590-212">Az.ApiManagement(이전에는 AzureRM.ApiManagement)</span><span class="sxs-lookup"><span data-stu-id="51590-212">Az.ApiManagement (previously AzureRM.ApiManagement)</span></span>
 
-- <span data-ttu-id="51a18-213">다음 cmdlet이 제거되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-213">Removed the following cmdlets:</span></span>
-  - <span data-ttu-id="51a18-214">New-AzureRmApiManagementHostnameConfiguration</span><span class="sxs-lookup"><span data-stu-id="51a18-214">New-AzureRmApiManagementHostnameConfiguration</span></span>
-  - <span data-ttu-id="51a18-215">Set-AzureRmApiManagementHostnames</span><span class="sxs-lookup"><span data-stu-id="51a18-215">Set-AzureRmApiManagementHostnames</span></span>
-  - <span data-ttu-id="51a18-216">Update-AzureRmApiManagementDeployment</span><span class="sxs-lookup"><span data-stu-id="51a18-216">Update-AzureRmApiManagementDeployment</span></span>
-  - <span data-ttu-id="51a18-217">Import-AzureRmApiManagementHostnameCertificate</span><span class="sxs-lookup"><span data-stu-id="51a18-217">Import-AzureRmApiManagementHostnameCertificate</span></span>
-  - <span data-ttu-id="51a18-218">대신 **Set-AzApiManagement** 를 사용하여 이러한 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-218">Use **Set-AzApiManagement** cmdlet to set these properties instead</span></span>
-- <span data-ttu-id="51a18-219">다음 속성이 제거되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-219">Removed the following properties:</span></span>
-  - <span data-ttu-id="51a18-220">`PsApiManagementContext`에서 `PsApiManagementHostnameConfiguration` 형식의 `PortalHostnameConfiguration`, `ProxyHostnameConfiguration`, `ManagementHostnameConfiguration`, `ScmHostnameConfiguration` 속성을 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-220">Removed property `PortalHostnameConfiguration`, `ProxyHostnameConfiguration`, `ManagementHostnameConfiguration` and `ScmHostnameConfiguration` of type `PsApiManagementHostnameConfiguration` from `PsApiManagementContext`.</span></span> <span data-ttu-id="51a18-221">대신 `PsApiManagementCustomHostNameConfiguration` 형식의 `PortalCustomHostnameConfiguration`, `ProxyCustomHostnameConfiguration`, `ManagementCustomHostnameConfiguration`, `ScmCustomHostnameConfiguration`을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-221">Instead use `PortalCustomHostnameConfiguration`, `ProxyCustomHostnameConfiguration`, `ManagementCustomHostnameConfiguration` and `ScmCustomHostnameConfiguration` of type `PsApiManagementCustomHostNameConfiguration`.</span></span>
-  - <span data-ttu-id="51a18-222">PsApiManagementContext에서 `StaticIPs`속성을 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-222">Removed property `StaticIPs` from PsApiManagementContext.</span></span> <span data-ttu-id="51a18-223">해당 속성은 `PublicIPAddresses`, `PrivateIPAddresses`로 분할되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-223">The property has been split into `PublicIPAddresses` and `PrivateIPAddresses`.</span></span>
-  - <span data-ttu-id="51a18-224">필수 속성 `Location`을 New-AzureApiManagementVirtualNetwork cmdlet에서 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-224">Removed required property `Location` from New-AzureApiManagementVirtualNetwork cmdlet.</span></span>
+- <span data-ttu-id="51590-213">다음 cmdlet이 제거되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-213">Removed the following cmdlets:</span></span>
+  - <span data-ttu-id="51590-214">New-AzureRmApiManagementHostnameConfiguration</span><span class="sxs-lookup"><span data-stu-id="51590-214">New-AzureRmApiManagementHostnameConfiguration</span></span>
+  - <span data-ttu-id="51590-215">Set-AzureRmApiManagementHostnames</span><span class="sxs-lookup"><span data-stu-id="51590-215">Set-AzureRmApiManagementHostnames</span></span>
+  - <span data-ttu-id="51590-216">Update-AzureRmApiManagementDeployment</span><span class="sxs-lookup"><span data-stu-id="51590-216">Update-AzureRmApiManagementDeployment</span></span>
+  - <span data-ttu-id="51590-217">Import-AzureRmApiManagementHostnameCertificate</span><span class="sxs-lookup"><span data-stu-id="51590-217">Import-AzureRmApiManagementHostnameCertificate</span></span>
+  - <span data-ttu-id="51590-218">대신 **Set-AzApiManagement** 를 사용하여 이러한 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-218">Use **Set-AzApiManagement** cmdlet to set these properties instead</span></span>
+- <span data-ttu-id="51590-219">다음 속성이 제거되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-219">Removed the following properties:</span></span>
+  - <span data-ttu-id="51590-220">`PsApiManagementContext`에서 `PsApiManagementHostnameConfiguration` 형식의 `PortalHostnameConfiguration`, `ProxyHostnameConfiguration`, `ManagementHostnameConfiguration`, `ScmHostnameConfiguration` 속성을 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-220">Removed property `PortalHostnameConfiguration`, `ProxyHostnameConfiguration`, `ManagementHostnameConfiguration` and `ScmHostnameConfiguration` of type `PsApiManagementHostnameConfiguration` from `PsApiManagementContext`.</span></span> <span data-ttu-id="51590-221">대신 `PsApiManagementCustomHostNameConfiguration` 형식의 `PortalCustomHostnameConfiguration`, `ProxyCustomHostnameConfiguration`, `ManagementCustomHostnameConfiguration`, `ScmCustomHostnameConfiguration`을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-221">Instead use `PortalCustomHostnameConfiguration`, `ProxyCustomHostnameConfiguration`, `ManagementCustomHostnameConfiguration` and `ScmCustomHostnameConfiguration` of type `PsApiManagementCustomHostNameConfiguration`.</span></span>
+  - <span data-ttu-id="51590-222">PsApiManagementContext에서 `StaticIPs`속성을 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-222">Removed property `StaticIPs` from PsApiManagementContext.</span></span> <span data-ttu-id="51590-223">해당 속성은 `PublicIPAddresses`, `PrivateIPAddresses`로 분할되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-223">The property has been split into `PublicIPAddresses` and `PrivateIPAddresses`.</span></span>
+  - <span data-ttu-id="51590-224">필수 속성 `Location`을 New-AzureApiManagementVirtualNetwork cmdlet에서 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-224">Removed required property `Location` from New-AzureApiManagementVirtualNetwork cmdlet.</span></span>
 
-### <a name="azbilling-previously-azurermbilling-azurermconsumption-and-azurermusageaggregates"></a><span data-ttu-id="51a18-225">Az.Billing(이전에는 AzureRM.Billing, AzureRM.Consumption, 및 AzureRM.UsageAggregates)</span><span class="sxs-lookup"><span data-stu-id="51a18-225">Az.Billing (previously AzureRM.Billing, AzureRM.Consumption, and AzureRM.UsageAggregates)</span></span>
+### <a name="azbilling-previously-azurermbilling-azurermconsumption-and-azurermusageaggregates"></a><span data-ttu-id="51590-225">Az.Billing(이전에는 AzureRM.Billing, AzureRM.Consumption, 및 AzureRM.UsageAggregates)</span><span class="sxs-lookup"><span data-stu-id="51590-225">Az.Billing (previously AzureRM.Billing, AzureRM.Consumption, and AzureRM.UsageAggregates)</span></span>
 
-- <span data-ttu-id="51a18-226">`InvoiceName` 매개 변수가 `Get-AzConsumptionUsageDetail` cmdlet에서 제거되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-226">The `InvoiceName` parameter was removed from the `Get-AzConsumptionUsageDetail` cmdlet.</span></span>  <span data-ttu-id="51a18-227">스크립트는 청구서에 대한 다른 ID 매개 변수를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-227">Scripts will need to use other identity parameters for the invoice.</span></span>
+- <span data-ttu-id="51590-226">`InvoiceName` 매개 변수가 `Get-AzConsumptionUsageDetail` cmdlet에서 제거되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-226">The `InvoiceName` parameter was removed from the `Get-AzConsumptionUsageDetail` cmdlet.</span></span>  <span data-ttu-id="51590-227">스크립트는 청구서에 대한 다른 ID 매개 변수를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-227">Scripts will need to use other identity parameters for the invoice.</span></span>
 
-### <a name="azcognitiveservices-previously-azurermcognitiveservices"></a><span data-ttu-id="51a18-228">Az.CognitiveServices(이전에는 AzureRM.CognitiveServices)</span><span class="sxs-lookup"><span data-stu-id="51a18-228">Az.CognitiveServices (previously AzureRM.CognitiveServices)</span></span>
+### <a name="azcognitiveservices-previously-azurermcognitiveservices"></a><span data-ttu-id="51590-228">Az.CognitiveServices(이전에는 AzureRM.CognitiveServices)</span><span class="sxs-lookup"><span data-stu-id="51590-228">Az.CognitiveServices (previously AzureRM.CognitiveServices)</span></span>
 
-- <span data-ttu-id="51a18-229">`Get-AzCognitiveServicesAccountSkus` cmdlet에서 `GetSkusWithAccountParamSetName` 매개 변수 집합을 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-229">Removed `GetSkusWithAccountParamSetName` parameter set from `Get-AzCognitiveServicesAccountSkus` cmdlet.</span></span>  <span data-ttu-id="51a18-230">ResourceGroupName 및 계정 이름을 사용하는 대신 계정 형식 및 위치별로 SKU를 가져와야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-230">You must get Skus by Account Type and Location, instead of using ResourceGroupName and Account Name.</span></span>
+- <span data-ttu-id="51590-229">`Get-AzCognitiveServicesAccountSkus` cmdlet에서 `GetSkusWithAccountParamSetName` 매개 변수 집합을 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-229">Removed `GetSkusWithAccountParamSetName` parameter set from `Get-AzCognitiveServicesAccountSkus` cmdlet.</span></span>  <span data-ttu-id="51590-230">ResourceGroupName 및 계정 이름을 사용하는 대신 계정 형식 및 위치별로 SKU를 가져와야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-230">You must get Skus by Account Type and Location, instead of using ResourceGroupName and Account Name.</span></span>
 
-### <a name="azcompute-previously-azurermcompute"></a><span data-ttu-id="51a18-231">Az.Compute(이전에는 AzureRM.Compute)</span><span class="sxs-lookup"><span data-stu-id="51a18-231">Az.Compute (previously AzureRM.Compute)</span></span>
+### <a name="azcompute-previously-azurermcompute"></a><span data-ttu-id="51590-231">Az.Compute(이전에는 AzureRM.Compute)</span><span class="sxs-lookup"><span data-stu-id="51590-231">Az.Compute (previously AzureRM.Compute)</span></span>
 
-- <span data-ttu-id="51a18-232">`PSVirtualMachine` 및 `PSVirtualMachineScaleSet` 객체의 `Identity` 속성에서 `IdentityIds`가 제거되었습니다. 스크립트는 더 이상 이 필드의 값을 사용하여 처리 결정을 내려서는 안됩니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-232">`IdentityIds` are removed from `Identity` property in `PSVirtualMachine` and `PSVirtualMachineScaleSet` objects Scripts should no longer use the value of this field to make processing decisions.</span></span>
-- <span data-ttu-id="51a18-233">`PSVirtualMachineScaleSetVM` 개체의 `InstanceView` 속성의 형식이 `VirtualMachineInstanceView`에서 `VirtualMachineScaleSetVMInstanceView`로 변경되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-233">The type of `InstanceView` property of `PSVirtualMachineScaleSetVM` object is changed from `VirtualMachineInstanceView` to `VirtualMachineScaleSetVMInstanceView`</span></span>
-- <span data-ttu-id="51a18-234">`UpgradePolicy` 속성에서 `AutoOSUpgradePolicy` 및 `AutomaticOSUpgrade` 속성이 제거되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-234">`AutoOSUpgradePolicy` and `AutomaticOSUpgrade` properties are removed from `UpgradePolicy` property</span></span>
-- <span data-ttu-id="51a18-235">`PSSnapshotUpdate` 개체의 `Sku` 속성의 형식이 `DiskSku`에서 `SnapshotSku`로 변경되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-235">The type of `Sku` property in `PSSnapshotUpdate` object is changed from `DiskSku` to `SnapshotSku`</span></span>
-- <span data-ttu-id="51a18-236">`VmScaleSetVMParameterSet`이 `Add-AzVMDataDisk` cmdlet에서 제거되어, 더 이상 ScaleSet VM에 개별적으로 데이터 디스크를 추가할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-236">`VmScaleSetVMParameterSet` is removed from `Add-AzVMDataDisk` cmdlet, you can no longer add a data disk individually to a ScaleSet VM.</span></span>
+- <span data-ttu-id="51590-232">`PSVirtualMachine` 및 `PSVirtualMachineScaleSet` 객체의 `Identity` 속성에서 `IdentityIds`가 제거되었습니다. 스크립트는 더 이상 이 필드의 값을 사용하여 처리 결정을 내려서는 안됩니다.</span><span class="sxs-lookup"><span data-stu-id="51590-232">`IdentityIds` are removed from `Identity` property in `PSVirtualMachine` and `PSVirtualMachineScaleSet` objects Scripts should no longer use the value of this field to make processing decisions.</span></span>
+- <span data-ttu-id="51590-233">`PSVirtualMachineScaleSetVM` 개체의 `InstanceView` 속성의 형식이 `VirtualMachineInstanceView`에서 `VirtualMachineScaleSetVMInstanceView`로 변경되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-233">The type of `InstanceView` property of `PSVirtualMachineScaleSetVM` object is changed from `VirtualMachineInstanceView` to `VirtualMachineScaleSetVMInstanceView`</span></span>
+- <span data-ttu-id="51590-234">`UpgradePolicy` 속성에서 `AutoOSUpgradePolicy` 및 `AutomaticOSUpgrade` 속성이 제거되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-234">`AutoOSUpgradePolicy` and `AutomaticOSUpgrade` properties are removed from `UpgradePolicy` property</span></span>
+- <span data-ttu-id="51590-235">`PSSnapshotUpdate` 개체의 `Sku` 속성의 형식이 `DiskSku`에서 `SnapshotSku`로 변경되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-235">The type of `Sku` property in `PSSnapshotUpdate` object is changed from `DiskSku` to `SnapshotSku`</span></span>
+- <span data-ttu-id="51590-236">`VmScaleSetVMParameterSet`이 `Add-AzVMDataDisk` cmdlet에서 제거되어, 더 이상 ScaleSet VM에 개별적으로 데이터 디스크를 추가할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-236">`VmScaleSetVMParameterSet` is removed from `Add-AzVMDataDisk` cmdlet, you can no longer add a data disk individually to a ScaleSet VM.</span></span>
 
-### <a name="azdatafactory-previously-azurermdatafactories-and-azurermdatafactoryv2"></a><span data-ttu-id="51a18-237">Az.DataFactory(이전에는 AzureRM.DataFactories 및 AzureRM.DataFactoryV2)</span><span class="sxs-lookup"><span data-stu-id="51a18-237">Az.DataFactory (previously AzureRM.DataFactories and AzureRM.DataFactoryV2)</span></span>
+### <a name="azdatafactory-previously-azurermdatafactories-and-azurermdatafactoryv2"></a><span data-ttu-id="51590-237">Az.DataFactory(이전에는 AzureRM.DataFactories 및 AzureRM.DataFactoryV2)</span><span class="sxs-lookup"><span data-stu-id="51590-237">Az.DataFactory (previously AzureRM.DataFactories and AzureRM.DataFactoryV2)</span></span>
 
-- <span data-ttu-id="51a18-238">`GatewayName` 매개 변수가 `New-AzDataFactoryEncryptValue` cmdlet에서 필수 항목이 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-238">The `GatewayName` parameter has become mandatory in the `New-AzDataFactoryEncryptValue` cmdlet</span></span>
-- <span data-ttu-id="51a18-239">`New-AzDataFactoryGatewayKey` cmdlet이 제거됨</span><span class="sxs-lookup"><span data-stu-id="51a18-239">Removed `New-AzDataFactoryGatewayKey` cmdlet</span></span>
-- <span data-ttu-id="51a18-240">`Get-AzDataFactoryV2ActivityRun` cmdlet에서 `LinkedServiceName` 매개 변수가 제거되었습니다. 스크립트는 더 이상 이 필드의 값을 사용하여 처리 결정을 내려서는 안됩니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-240">Removed `LinkedServiceName` parameter from `Get-AzDataFactoryV2ActivityRun` cmdlet Scripts should no longer use the value of this field to make processing decisions.</span></span>
+- <span data-ttu-id="51590-238">`GatewayName` 매개 변수가 `New-AzDataFactoryEncryptValue` cmdlet에서 필수 항목이 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-238">The `GatewayName` parameter has become mandatory in the `New-AzDataFactoryEncryptValue` cmdlet</span></span>
+- <span data-ttu-id="51590-239">`New-AzDataFactoryGatewayKey` cmdlet이 제거됨</span><span class="sxs-lookup"><span data-stu-id="51590-239">Removed `New-AzDataFactoryGatewayKey` cmdlet</span></span>
+- <span data-ttu-id="51590-240">`Get-AzDataFactoryV2ActivityRun` cmdlet에서 `LinkedServiceName` 매개 변수가 제거되었습니다. 스크립트는 더 이상 이 필드의 값을 사용하여 처리 결정을 내려서는 안됩니다.</span><span class="sxs-lookup"><span data-stu-id="51590-240">Removed `LinkedServiceName` parameter from `Get-AzDataFactoryV2ActivityRun` cmdlet Scripts should no longer use the value of this field to make processing decisions.</span></span>
 
-### <a name="azdatalakeanalytics-previously-azurermdatalakeanalytics"></a><span data-ttu-id="51a18-241">Az.DataLakeAnalytics(이전에는 AzureRM.DataLakeAnalytics)</span><span class="sxs-lookup"><span data-stu-id="51a18-241">Az.DataLakeAnalytics (previously AzureRM.DataLakeAnalytics)</span></span>
+### <a name="azdatalakeanalytics-previously-azurermdatalakeanalytics"></a><span data-ttu-id="51590-241">Az.DataLakeAnalytics(이전에는 AzureRM.DataLakeAnalytics)</span><span class="sxs-lookup"><span data-stu-id="51590-241">Az.DataLakeAnalytics (previously AzureRM.DataLakeAnalytics)</span></span>
 
-- <span data-ttu-id="51a18-242">사용되지 않는 cmdlet 제거: `New-AzDataLakeAnalyticsCatalogSecret`, `Remove-AzDataLakeAnalyticsCatalogSecret`, `Set-AzDataLakeAnalyticsCatalogSecret`</span><span class="sxs-lookup"><span data-stu-id="51a18-242">Removed deprecated cmdlets: `New-AzDataLakeAnalyticsCatalogSecret`, `Remove-AzDataLakeAnalyticsCatalogSecret`, and `Set-AzDataLakeAnalyticsCatalogSecret`</span></span>
+- <span data-ttu-id="51590-242">사용되지 않는 cmdlet 제거: `New-AzDataLakeAnalyticsCatalogSecret`, `Remove-AzDataLakeAnalyticsCatalogSecret`, `Set-AzDataLakeAnalyticsCatalogSecret`</span><span class="sxs-lookup"><span data-stu-id="51590-242">Removed deprecated cmdlets: `New-AzDataLakeAnalyticsCatalogSecret`, `Remove-AzDataLakeAnalyticsCatalogSecret`, and `Set-AzDataLakeAnalyticsCatalogSecret`</span></span>
 
-### <a name="azdatalakestore-previously-azurermdatalakestore"></a><span data-ttu-id="51a18-243">Az.DataLakeStore(이전에는 AzureRM.DataLakeStore)</span><span class="sxs-lookup"><span data-stu-id="51a18-243">Az.DataLakeStore (previously AzureRM.DataLakeStore)</span></span>
+### <a name="azdatalakestore-previously-azurermdatalakestore"></a><span data-ttu-id="51590-243">Az.DataLakeStore(이전에는 AzureRM.DataLakeStore)</span><span class="sxs-lookup"><span data-stu-id="51590-243">Az.DataLakeStore (previously AzureRM.DataLakeStore)</span></span>
 
-- <span data-ttu-id="51a18-244">다음 cmdlet의 `Encoding` 매개 변수는 `FileSystemCmdletProviderEncoding` 형식에서 `System.Text.Encoding` 형식으로 변경되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-244">The following cmdlets have had the `Encoding` parameter changed from the type `FileSystemCmdletProviderEncoding` to `System.Text.Encoding`.</span></span> <span data-ttu-id="51a18-245">이 변경은 인코딩 값 `String` 및 `Oem`을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-245">This change removes the encoding values `String` and `Oem`.</span></span> <span data-ttu-id="51a18-246">다른 모든 이전 인코딩 값은 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-246">All the other prior encoding values remain.</span></span>
-  - <span data-ttu-id="51a18-247">New-AzureRmDataLakeStoreItem</span><span class="sxs-lookup"><span data-stu-id="51a18-247">New-AzureRmDataLakeStoreItem</span></span>
-  - <span data-ttu-id="51a18-248">Add-AzureRmDataLakeStoreItemContent</span><span class="sxs-lookup"><span data-stu-id="51a18-248">Add-AzureRmDataLakeStoreItemContent</span></span>
-  - <span data-ttu-id="51a18-249">Get-AzureRmDataLakeStoreItemContent</span><span class="sxs-lookup"><span data-stu-id="51a18-249">Get-AzureRmDataLakeStoreItemContent</span></span>
-- <span data-ttu-id="51a18-250">사용되지 않는 `Tags` 속성 별칭을 `New-AzDataLakeStoreAccount` 및 `Set-AzDataLakeStoreAccount` cmdlet에서 제거함</span><span class="sxs-lookup"><span data-stu-id="51a18-250">Removed deprecated `Tags` property alias from `New-AzDataLakeStoreAccount` and `Set-AzDataLakeStoreAccount` cmdlets</span></span>
+- <span data-ttu-id="51590-244">다음 cmdlet의 `Encoding` 매개 변수는 `FileSystemCmdletProviderEncoding` 형식에서 `System.Text.Encoding` 형식으로 변경되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-244">The following cmdlets have had the `Encoding` parameter changed from the type `FileSystemCmdletProviderEncoding` to `System.Text.Encoding`.</span></span> <span data-ttu-id="51590-245">이 변경은 인코딩 값 `String` 및 `Oem`을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-245">This change removes the encoding values `String` and `Oem`.</span></span> <span data-ttu-id="51590-246">다른 모든 이전 인코딩 값은 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="51590-246">All the other prior encoding values remain.</span></span>
+  - <span data-ttu-id="51590-247">New-AzureRmDataLakeStoreItem</span><span class="sxs-lookup"><span data-stu-id="51590-247">New-AzureRmDataLakeStoreItem</span></span>
+  - <span data-ttu-id="51590-248">Add-AzureRmDataLakeStoreItemContent</span><span class="sxs-lookup"><span data-stu-id="51590-248">Add-AzureRmDataLakeStoreItemContent</span></span>
+  - <span data-ttu-id="51590-249">Get-AzureRmDataLakeStoreItemContent</span><span class="sxs-lookup"><span data-stu-id="51590-249">Get-AzureRmDataLakeStoreItemContent</span></span>
+- <span data-ttu-id="51590-250">사용되지 않는 `Tags` 속성 별칭을 `New-AzDataLakeStoreAccount` 및 `Set-AzDataLakeStoreAccount` cmdlet에서 제거함</span><span class="sxs-lookup"><span data-stu-id="51590-250">Removed deprecated `Tags` property alias from `New-AzDataLakeStoreAccount` and `Set-AzDataLakeStoreAccount` cmdlets</span></span>
 
-  <span data-ttu-id="51a18-251">다음을 사용하는 스크립트</span><span class="sxs-lookup"><span data-stu-id="51a18-251">Scripts using</span></span>
+  <span data-ttu-id="51590-251">다음을 사용하는 스크립트</span><span class="sxs-lookup"><span data-stu-id="51590-251">Scripts using</span></span>
   ```azurepowershell-interactive
   New-AzureRMDataLakeStoreAccount -Tags @{TagName="TagValue"}
   ```
 
-  <span data-ttu-id="51a18-252">다음과 같이 변경되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-252">Should be changed to</span></span>
+  <span data-ttu-id="51590-252">다음과 같이 변경되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-252">Should be changed to</span></span>
   ```azurepowershell-interactive
   New-AzDataLakeStoreAccount -Tag @{TagName="TagValue"}
   ```
 
-- <span data-ttu-id="51a18-253">`PSDataLakeStoreAccountBasic` 개체에서 사용되지 않는 속성 `Identity`, `EncryptionState`, `EncryptionProvisioningState`, `EncryptionConfig`, `FirewallState`, `FirewallRules`, `VirtualNetworkRules`, `TrustedIdProviderState`, `TrustedIdProviders`, `DefaultGroup`, `NewTier`, `CurrentTier`, `FirewallAllowAzureIps`을 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-253">Removed deprecated properties `Identity`, `EncryptionState`, `EncryptionProvisioningState`, `EncryptionConfig`, `FirewallState`, `FirewallRules`, `VirtualNetworkRules`, `TrustedIdProviderState`, `TrustedIdProviders`, `DefaultGroup`, `NewTier`, `CurrentTier`, `FirewallAllowAzureIps` from `PSDataLakeStoreAccountBasic` object.</span></span>  <span data-ttu-id="51a18-254">`Get-AzDataLakeStoreAccount`에서 반환된 `PSDatalakeStoreAccount`를 사용하는 모든 스크립트는 이러한 속성을 참조하지 않아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-254">Any script that uses the `PSDatalakeStoreAccount` returned from `Get-AzDataLakeStoreAccount` should not reference these properties.</span></span>
+- <span data-ttu-id="51590-253">`PSDataLakeStoreAccountBasic` 개체에서 사용되지 않는 속성 `Identity`, `EncryptionState`, `EncryptionProvisioningState`, `EncryptionConfig`, `FirewallState`, `FirewallRules`, `VirtualNetworkRules`, `TrustedIdProviderState`, `TrustedIdProviders`, `DefaultGroup`, `NewTier`, `CurrentTier`, `FirewallAllowAzureIps`을 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-253">Removed deprecated properties `Identity`, `EncryptionState`, `EncryptionProvisioningState`, `EncryptionConfig`, `FirewallState`, `FirewallRules`, `VirtualNetworkRules`, `TrustedIdProviderState`, `TrustedIdProviders`, `DefaultGroup`, `NewTier`, `CurrentTier`, `FirewallAllowAzureIps` from `PSDataLakeStoreAccountBasic` object.</span></span>  <span data-ttu-id="51590-254">`Get-AzDataLakeStoreAccount`에서 반환된 `PSDatalakeStoreAccount`를 사용하는 모든 스크립트는 이러한 속성을 참조하지 않아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-254">Any script that uses the `PSDatalakeStoreAccount` returned from `Get-AzDataLakeStoreAccount` should not reference these properties.</span></span>
 
-### <a name="azkeyvault-previously-azurermkeyvault"></a><span data-ttu-id="51a18-255">Az.KeyVault(이전에는 AzureRM.KeyVault)</span><span class="sxs-lookup"><span data-stu-id="51a18-255">Az.KeyVault (previously AzureRM.KeyVault)</span></span>
+### <a name="azkeyvault-previously-azurermkeyvault"></a><span data-ttu-id="51590-255">Az.KeyVault(이전에는 AzureRM.KeyVault)</span><span class="sxs-lookup"><span data-stu-id="51590-255">Az.KeyVault (previously AzureRM.KeyVault)</span></span>
 
-- <span data-ttu-id="51a18-256">`PSKeyVaultKeyAttributes`, `PSKeyVaultKeyIdentityItem` 및 `PSKeyVaultSecretAttributes` 개체에서 `PurgeDisabled` 속성이 제거되었습니다. 스크립트는 처리 결정을 내리기 위해 ```PurgeDisabled``` 속성을 더 이상 참조하지 않아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-256">The `PurgeDisabled` property was removed from the `PSKeyVaultKeyAttributes`, `PSKeyVaultKeyIdentityItem`, and `PSKeyVaultSecretAttributes` objects Scripts should no longer reference the ```PurgeDisabled``` property to make processing decisions.</span></span>
+- <span data-ttu-id="51590-256">`PSKeyVaultKeyAttributes`, `PSKeyVaultKeyIdentityItem` 및 `PSKeyVaultSecretAttributes` 개체에서 `PurgeDisabled` 속성이 제거되었습니다. 스크립트는 처리 결정을 내리기 위해 ```PurgeDisabled``` 속성을 더 이상 참조하지 않아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-256">The `PurgeDisabled` property was removed from the `PSKeyVaultKeyAttributes`, `PSKeyVaultKeyIdentityItem`, and `PSKeyVaultSecretAttributes` objects Scripts should no longer reference the ```PurgeDisabled``` property to make processing decisions.</span></span>
 
-### <a name="azmedia-previously-azurermmedia"></a><span data-ttu-id="51a18-257">Az.Media(이전에는 AzureRM.Media)</span><span class="sxs-lookup"><span data-stu-id="51a18-257">Az.Media (previously AzureRM.Media)</span></span>
+### <a name="azmedia-previously-azurermmedia"></a><span data-ttu-id="51590-257">Az.Media(이전에는 AzureRM.Media)</span><span class="sxs-lookup"><span data-stu-id="51590-257">Az.Media (previously AzureRM.Media)</span></span>
 
-- <span data-ttu-id="51a18-258">다음을 사용하여 `New-AzMediaService` cmdlet에서 사용되지 않는 `Tags` 속성 별칭을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-258">Remove deprecated `Tags` property alias from `New-AzMediaService` cmdlet Scripts using</span></span>
+- <span data-ttu-id="51590-258">다음을 사용하여 `New-AzMediaService` cmdlet에서 사용되지 않는 `Tags` 속성 별칭을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-258">Remove deprecated `Tags` property alias from `New-AzMediaService` cmdlet Scripts using</span></span>
   ```azurepowershell-interactive
   New-AzureRMMediaService -Tags @{TagName="TagValue"}
   ```
 
-  <span data-ttu-id="51a18-259">다음과 같이 변경되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-259">Should be changed to</span></span>
+  <span data-ttu-id="51590-259">다음과 같이 변경되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-259">Should be changed to</span></span>
   ```azurepowershell-interactive
   New-AzMediaService -Tag @{TagName="TagValue"}
   ```
 
-### <a name="azmonitor-previously-azurerminsights"></a><span data-ttu-id="51a18-260">Az.Monitor(이전에는 AzureRM.Insights)</span><span class="sxs-lookup"><span data-stu-id="51a18-260">Az.Monitor (previously AzureRM.Insights)</span></span>
+### <a name="azmonitor-previously-azurerminsights"></a><span data-ttu-id="51590-260">Az.Monitor(이전에는 AzureRM.Insights)</span><span class="sxs-lookup"><span data-stu-id="51590-260">Az.Monitor (previously AzureRM.Insights)</span></span>
 
-- <span data-ttu-id="51a18-261">`Set-AzDiagnosticSetting` cmdlet 스크립트에서 다음을 사용하여 단일 매개 변수 이름을 위해 복수 이름 `Categories` 및 `Timegrains` 매개 변수를 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-261">Removed plural names `Categories` and `Timegrains` parameter in favor of singular parameter names from `Set-AzDiagnosticSetting` cmdlet Scripts using</span></span>
+- <span data-ttu-id="51590-261">`Set-AzDiagnosticSetting` cmdlet 스크립트에서 다음을 사용하여 단일 매개 변수 이름을 위해 복수 이름 `Categories` 및 `Timegrains` 매개 변수를 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-261">Removed plural names `Categories` and `Timegrains` parameter in favor of singular parameter names from `Set-AzDiagnosticSetting` cmdlet Scripts using</span></span>
   ```azurepowershell-interactive
   Set-AzureRmDiagnosticSetting -Timegrains PT1M -Categories Category1, Category2
   ```
 
-  <span data-ttu-id="51a18-262">다음과 같이 변경되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-262">Should be changed to</span></span>
+  <span data-ttu-id="51590-262">다음과 같이 변경되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-262">Should be changed to</span></span>
   ```azurepowershell-interactive
   Set-AzDiagnosticSetting -Timegrain PT1M -Category Category1, Category2
   ```
 
-### <a name="aznetwork-previously-azurermnetwork"></a><span data-ttu-id="51a18-263">Az.Network(이전에는 AzureRM.Network)</span><span class="sxs-lookup"><span data-stu-id="51a18-263">Az.Network (previously AzureRM.Network)</span></span>
+### <a name="aznetwork-previously-azurermnetwork"></a><span data-ttu-id="51590-263">Az.Network(이전에는 AzureRM.Network)</span><span class="sxs-lookup"><span data-stu-id="51590-263">Az.Network (previously AzureRM.Network)</span></span>
 
-- <span data-ttu-id="51a18-264">사용되지 않는 매개 변수 `ResourceId`를 `Get-AzServiceEndpointPolicyDefinition` cmdlet에서 제거</span><span class="sxs-lookup"><span data-stu-id="51a18-264">Removed deprecated `ResourceId` parameter from `Get-AzServiceEndpointPolicyDefinition` cmdlet</span></span>
-- <span data-ttu-id="51a18-265">`PSVirtualNetwork` 개체에서 사용되지 않는 속성 `EnableVmProtection`을 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-265">Removed deprecated `EnableVmProtection` property from `PSVirtualNetwork` object</span></span>
-- <span data-ttu-id="51a18-266">사용되지 않는 cmdlet 제거: `Set-AzVirtualNetworkGatewayVpnClientConfig`</span><span class="sxs-lookup"><span data-stu-id="51a18-266">Removed deprecated `Set-AzVirtualNetworkGatewayVpnClientConfig` cmdlet</span></span>
+- <span data-ttu-id="51590-264">사용되지 않는 매개 변수 `ResourceId`를 `Get-AzServiceEndpointPolicyDefinition` cmdlet에서 제거</span><span class="sxs-lookup"><span data-stu-id="51590-264">Removed deprecated `ResourceId` parameter from `Get-AzServiceEndpointPolicyDefinition` cmdlet</span></span>
+- <span data-ttu-id="51590-265">`PSVirtualNetwork` 개체에서 사용되지 않는 속성 `EnableVmProtection`을 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-265">Removed deprecated `EnableVmProtection` property from `PSVirtualNetwork` object</span></span>
+- <span data-ttu-id="51590-266">사용되지 않는 cmdlet 제거: `Set-AzVirtualNetworkGatewayVpnClientConfig`</span><span class="sxs-lookup"><span data-stu-id="51590-266">Removed deprecated `Set-AzVirtualNetworkGatewayVpnClientConfig` cmdlet</span></span>
 
-<span data-ttu-id="51a18-267">스크립트는 더 이상 이 필드의 값에 따라 처리하도록 결정하지 않아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-267">Scripts should no longer make processing decisions based on the values fo these fields.</span></span>
+<span data-ttu-id="51590-267">스크립트는 더 이상 이 필드의 값에 따라 처리하도록 결정하지 않아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-267">Scripts should no longer make processing decisions based on the values fo these fields.</span></span>
 
-### <a name="azoperationalinsights-previously-azurermoperationalinsights"></a><span data-ttu-id="51a18-268">Az.OperationalInsights(이전에는 AzureRM.OperationalInsights)</span><span class="sxs-lookup"><span data-stu-id="51a18-268">Az.OperationalInsights (previously AzureRM.OperationalInsights)</span></span>
+### <a name="azoperationalinsights-previously-azurermoperationalinsights"></a><span data-ttu-id="51590-268">Az.OperationalInsights(이전에는 AzureRM.OperationalInsights)</span><span class="sxs-lookup"><span data-stu-id="51590-268">Az.OperationalInsights (previously AzureRM.OperationalInsights)</span></span>
 
-- <span data-ttu-id="51a18-269">`Get-AzOperationalInsightsDataSource`에 설정된 기본 매개 변수가 제거되고 `ByWorkspaceNameByKind`가 기본 매개 변수 집합이 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-269">Default parameter set for `Get-AzOperationalInsightsDataSource` is removed, and `ByWorkspaceNameByKind` has become the default parameter set</span></span>
+- <span data-ttu-id="51590-269">`Get-AzOperationalInsightsDataSource`에 설정된 기본 매개 변수가 제거되고 `ByWorkspaceNameByKind`가 기본 매개 변수 집합이 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-269">Default parameter set for `Get-AzOperationalInsightsDataSource` is removed, and `ByWorkspaceNameByKind` has become the default parameter set</span></span>
 
-  <span data-ttu-id="51a18-270">다음을 사용하여 데이터 원본을 나열하는 스크립트</span><span class="sxs-lookup"><span data-stu-id="51a18-270">Scripts that listed data sources using</span></span>
+  <span data-ttu-id="51590-270">다음을 사용하여 데이터 원본을 나열하는 스크립트</span><span class="sxs-lookup"><span data-stu-id="51590-270">Scripts that listed data sources using</span></span>
   ```azurepowershell-interactive
   Get-AzureRmOperationalInsightsDataSource
   ```
 
-  <span data-ttu-id="51a18-271">종류를 지정하도록 변경되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-271">Should be changed to specify a Kind</span></span>
+  <span data-ttu-id="51590-271">종류를 지정하도록 변경되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-271">Should be changed to specify a Kind</span></span>
   ```azurepowershell-interactive
   Get-AzOperationalInsightsDataSource -Kind AzureActivityLog
   ```
 
-### <a name="azrecoveryservices-previously-azurermrecoveryservices-azurermrecoveryservicesbackup-and-azurermrecoveryservicessiterecovery"></a><span data-ttu-id="51a18-272">Az.RecoveryServices(이전에는 AzureRM.RecoveryServices, AzureRM.RecoveryServices.Backup, 및 AzureRM.RecoveryServices.SiteRecovery)</span><span class="sxs-lookup"><span data-stu-id="51a18-272">Az.RecoveryServices (previously AzureRM.RecoveryServices, AzureRM.RecoveryServices.Backup, and AzureRM.RecoveryServices.SiteRecovery)</span></span>
+### <a name="azrecoveryservices-previously-azurermrecoveryservices-azurermrecoveryservicesbackup-and-azurermrecoveryservicessiterecovery"></a><span data-ttu-id="51590-272">Az.RecoveryServices(이전에는 AzureRM.RecoveryServices, AzureRM.RecoveryServices.Backup, 및 AzureRM.RecoveryServices.SiteRecovery)</span><span class="sxs-lookup"><span data-stu-id="51590-272">Az.RecoveryServices (previously AzureRM.RecoveryServices, AzureRM.RecoveryServices.Backup, and AzureRM.RecoveryServices.SiteRecovery)</span></span>
 
-- <span data-ttu-id="51a18-273">`New/Set-AzRecoveryServicesAsrPolicy` cmdlet에서 `Encryption` 매개 변수를 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-273">Removed `Encryption` parameter from `New/Set-AzRecoveryServicesAsrPolicy` cmdlet</span></span>
-- <span data-ttu-id="51a18-274">`TargetStorageAccountName` 매개 변수는 이제 `Restore-AzRecoveryServicesBackupItem` cmdlet의 관리 디스크 복원에 필수 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-274">`TargetStorageAccountName` parameter is now mandatory for managed disk restores in `Restore-AzRecoveryServicesBackupItem` cmdlet</span></span>
-- <span data-ttu-id="51a18-275">`Restore-AzRecoveryServicesBackupItem` cmdlet에서 `StorageAccountName`, `StorageAccountResourceGroupName` 매개 변수 제거</span><span class="sxs-lookup"><span data-stu-id="51a18-275">Removed `StorageAccountName` and `StorageAccountResourceGroupName` parameters in `Restore-AzRecoveryServicesBackupItem` cmdlet</span></span>
-- <span data-ttu-id="51a18-276">`Get-AzRecoveryServicesBackupContainer` cmdlet에서 `Name` 매개 변수 제거</span><span class="sxs-lookup"><span data-stu-id="51a18-276">Removed `Name`parameter in `Get-AzRecoveryServicesBackupContainer` cmdlet</span></span>
+- <span data-ttu-id="51590-273">`New/Set-AzRecoveryServicesAsrPolicy` cmdlet에서 `Encryption` 매개 변수를 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-273">Removed `Encryption` parameter from `New/Set-AzRecoveryServicesAsrPolicy` cmdlet</span></span>
+- <span data-ttu-id="51590-274">`TargetStorageAccountName` 매개 변수는 이제 `Restore-AzRecoveryServicesBackupItem` cmdlet의 관리 디스크 복원에 필수 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="51590-274">`TargetStorageAccountName` parameter is now mandatory for managed disk restores in `Restore-AzRecoveryServicesBackupItem` cmdlet</span></span>
+- <span data-ttu-id="51590-275">`Restore-AzRecoveryServicesBackupItem` cmdlet에서 `StorageAccountName`, `StorageAccountResourceGroupName` 매개 변수 제거</span><span class="sxs-lookup"><span data-stu-id="51590-275">Removed `StorageAccountName` and `StorageAccountResourceGroupName` parameters in `Restore-AzRecoveryServicesBackupItem` cmdlet</span></span>
+- <span data-ttu-id="51590-276">`Get-AzRecoveryServicesBackupContainer` cmdlet에서 `Name` 매개 변수 제거</span><span class="sxs-lookup"><span data-stu-id="51590-276">Removed `Name`parameter in `Get-AzRecoveryServicesBackupContainer` cmdlet</span></span>
 
-### <a name="azresources-previously-azurermresources"></a><span data-ttu-id="51a18-277">Az.Resources(이전에는 AzureRM.Resources)</span><span class="sxs-lookup"><span data-stu-id="51a18-277">Az.Resources (previously AzureRM.Resources)</span></span>
+### <a name="azresources-previously-azurermresources"></a><span data-ttu-id="51590-277">Az.Resources(이전에는 AzureRM.Resources)</span><span class="sxs-lookup"><span data-stu-id="51590-277">Az.Resources (previously AzureRM.Resources)</span></span>
 
-- <span data-ttu-id="51a18-278">`New/Set-AzPolicyAssignment` cmdlet에서 `Sku` 매개 변수를 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-278">Removed `Sku` parameter from `New/Set-AzPolicyAssignment` cmdlet</span></span>
-- <span data-ttu-id="51a18-279">`New-AzADServicePrincipal` 및 `New-AzADSpCredential` cmdlet에서 `Password` 매개 변수를 제거했습니다. 암호는 자동으로 생성되며 암호를 제공하는 스크립트는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-279">Removed `Password` parameter from `New-AzADServicePrincipal` and `New-AzADSpCredential` cmdlet Passwords are automatically generated, scripts that provided the password:</span></span>
+- <span data-ttu-id="51590-278">`New/Set-AzPolicyAssignment` cmdlet에서 `Sku` 매개 변수를 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-278">Removed `Sku` parameter from `New/Set-AzPolicyAssignment` cmdlet</span></span>
+- <span data-ttu-id="51590-279">`New-AzADServicePrincipal` 및 `New-AzADSpCredential` cmdlet에서 `Password` 매개 변수를 제거했습니다. 암호는 자동으로 생성되며 암호를 제공하는 스크립트는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-279">Removed `Password` parameter from `New-AzADServicePrincipal` and `New-AzADSpCredential` cmdlet Passwords are automatically generated, scripts that provided the password:</span></span>
 
   ```azurepowershell-interactive
   New-AzAdSpCredential -ObjectId 1f99cf81-0146-4f4e-beae-2007d0668476 -Password $secPassword
   ```
 
-  <span data-ttu-id="51a18-280">출력에서 암호를 검색하도록 변경해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-280">Should be changed to retrieve the password from the output:</span></span>
+  <span data-ttu-id="51590-280">출력에서 암호를 검색하도록 변경해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-280">Should be changed to retrieve the password from the output:</span></span>
 
   ```azurepowershell-interactive
   $credential = New-AzAdSpCredential -ObjectId 1f99cf81-0146-4f4e-beae-2007d0668476
   $secPassword = $credential.Secret
   ```
 
-### <a name="azservicefabric-previously-azurermservicefabric"></a><span data-ttu-id="51a18-281">Az.ServiceFabric(이전에는 AzureRM.ServiceFabric)</span><span class="sxs-lookup"><span data-stu-id="51a18-281">Az.ServiceFabric (previously AzureRM.ServiceFabric)</span></span>
+### <a name="azservicefabric-previously-azurermservicefabric"></a><span data-ttu-id="51590-281">Az.ServiceFabric(이전에는 AzureRM.ServiceFabric)</span><span class="sxs-lookup"><span data-stu-id="51590-281">Az.ServiceFabric (previously AzureRM.ServiceFabric)</span></span>
 
-- <span data-ttu-id="51a18-282">다음 cmdlet 반환 형식이 변경되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-282">The following cmdlet return types have been changed:</span></span>
-  - <span data-ttu-id="51a18-283">`ApplicationHealthPolicy` 형식의 속성 `ServiceTypeHealthPolicies`가 제거되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-283">The property `ServiceTypeHealthPolicies` of type `ApplicationHealthPolicy` has been removed.</span></span>
-  - <span data-ttu-id="51a18-284">`ClusterUpgradeDeltaHealthPolicy` 형식의 속성 `ApplicationHealthPolicies`가 제거되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-284">The property `ApplicationHealthPolicies` of type `ClusterUpgradeDeltaHealthPolicy` has been removed.</span></span>
-  - <span data-ttu-id="51a18-285">`ClusterUpgradePolicy` 형식의 속성 `OverrideUserUpgradePolicy`가 제거되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-285">The property `OverrideUserUpgradePolicy` of type `ClusterUpgradePolicy` has been removed.</span></span>
-  - <span data-ttu-id="51a18-286">이러한 변경 내용은 다음 cmdlet에 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-286">These changes affect the following cmdlets:</span></span>
-    - <span data-ttu-id="51a18-287">Add-AzServiceFabricClientCertificate</span><span class="sxs-lookup"><span data-stu-id="51a18-287">Add-AzServiceFabricClientCertificate</span></span>
-    - <span data-ttu-id="51a18-288">Add-AzServiceFabricClusterCertificate</span><span class="sxs-lookup"><span data-stu-id="51a18-288">Add-AzServiceFabricClusterCertificate</span></span>
-    - <span data-ttu-id="51a18-289">Add-AzServiceFabricNode</span><span class="sxs-lookup"><span data-stu-id="51a18-289">Add-AzServiceFabricNode</span></span>
-    - <span data-ttu-id="51a18-290">Add-AzServiceFabricNodeType</span><span class="sxs-lookup"><span data-stu-id="51a18-290">Add-AzServiceFabricNodeType</span></span>
-    - <span data-ttu-id="51a18-291">Get-AzServiceFabricCluster</span><span class="sxs-lookup"><span data-stu-id="51a18-291">Get-AzServiceFabricCluster</span></span>
-    - <span data-ttu-id="51a18-292">Remove-AzServiceFabricClientCertificate</span><span class="sxs-lookup"><span data-stu-id="51a18-292">Remove-AzServiceFabricClientCertificate</span></span>
-    - <span data-ttu-id="51a18-293">Remove-AzServiceFabricClusterCertificate</span><span class="sxs-lookup"><span data-stu-id="51a18-293">Remove-AzServiceFabricClusterCertificate</span></span>
-    - <span data-ttu-id="51a18-294">Remove-AzServiceFabricNode</span><span class="sxs-lookup"><span data-stu-id="51a18-294">Remove-AzServiceFabricNode</span></span>
-    - <span data-ttu-id="51a18-295">Remove-AzServiceFabricNodeType</span><span class="sxs-lookup"><span data-stu-id="51a18-295">Remove-AzServiceFabricNodeType</span></span>
-    - <span data-ttu-id="51a18-296">Remove-AzServiceFabricSetting</span><span class="sxs-lookup"><span data-stu-id="51a18-296">Remove-AzServiceFabricSetting</span></span>
-    - <span data-ttu-id="51a18-297">Set-AzServiceFabricSetting</span><span class="sxs-lookup"><span data-stu-id="51a18-297">Set-AzServiceFabricSetting</span></span>
-    - <span data-ttu-id="51a18-298">Set-AzServiceFabricUpgradeType</span><span class="sxs-lookup"><span data-stu-id="51a18-298">Set-AzServiceFabricUpgradeType</span></span>
-    - <span data-ttu-id="51a18-299">Update-AzServiceFabricDurability</span><span class="sxs-lookup"><span data-stu-id="51a18-299">Update-AzServiceFabricDurability</span></span>
-    - <span data-ttu-id="51a18-300">Update-AzServiceFabricReliability</span><span class="sxs-lookup"><span data-stu-id="51a18-300">Update-AzServiceFabricReliability</span></span>
+- <span data-ttu-id="51590-282">다음 cmdlet 반환 형식이 변경되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-282">The following cmdlet return types have been changed:</span></span>
+  - <span data-ttu-id="51590-283">`ApplicationHealthPolicy` 형식의 속성 `ServiceTypeHealthPolicies`가 제거되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-283">The property `ServiceTypeHealthPolicies` of type `ApplicationHealthPolicy` has been removed.</span></span>
+  - <span data-ttu-id="51590-284">`ClusterUpgradeDeltaHealthPolicy` 형식의 속성 `ApplicationHealthPolicies`가 제거되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-284">The property `ApplicationHealthPolicies` of type `ClusterUpgradeDeltaHealthPolicy` has been removed.</span></span>
+  - <span data-ttu-id="51590-285">`ClusterUpgradePolicy` 형식의 속성 `OverrideUserUpgradePolicy`가 제거되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-285">The property `OverrideUserUpgradePolicy` of type `ClusterUpgradePolicy` has been removed.</span></span>
+  - <span data-ttu-id="51590-286">이러한 변경 내용은 다음 cmdlet에 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="51590-286">These changes affect the following cmdlets:</span></span>
+    - <span data-ttu-id="51590-287">Add-AzServiceFabricClientCertificate</span><span class="sxs-lookup"><span data-stu-id="51590-287">Add-AzServiceFabricClientCertificate</span></span>
+    - <span data-ttu-id="51590-288">Add-AzServiceFabricClusterCertificate</span><span class="sxs-lookup"><span data-stu-id="51590-288">Add-AzServiceFabricClusterCertificate</span></span>
+    - <span data-ttu-id="51590-289">Add-AzServiceFabricNode</span><span class="sxs-lookup"><span data-stu-id="51590-289">Add-AzServiceFabricNode</span></span>
+    - <span data-ttu-id="51590-290">Add-AzServiceFabricNodeType</span><span class="sxs-lookup"><span data-stu-id="51590-290">Add-AzServiceFabricNodeType</span></span>
+    - <span data-ttu-id="51590-291">Get-AzServiceFabricCluster</span><span class="sxs-lookup"><span data-stu-id="51590-291">Get-AzServiceFabricCluster</span></span>
+    - <span data-ttu-id="51590-292">Remove-AzServiceFabricClientCertificate</span><span class="sxs-lookup"><span data-stu-id="51590-292">Remove-AzServiceFabricClientCertificate</span></span>
+    - <span data-ttu-id="51590-293">Remove-AzServiceFabricClusterCertificate</span><span class="sxs-lookup"><span data-stu-id="51590-293">Remove-AzServiceFabricClusterCertificate</span></span>
+    - <span data-ttu-id="51590-294">Remove-AzServiceFabricNode</span><span class="sxs-lookup"><span data-stu-id="51590-294">Remove-AzServiceFabricNode</span></span>
+    - <span data-ttu-id="51590-295">Remove-AzServiceFabricNodeType</span><span class="sxs-lookup"><span data-stu-id="51590-295">Remove-AzServiceFabricNodeType</span></span>
+    - <span data-ttu-id="51590-296">Remove-AzServiceFabricSetting</span><span class="sxs-lookup"><span data-stu-id="51590-296">Remove-AzServiceFabricSetting</span></span>
+    - <span data-ttu-id="51590-297">Set-AzServiceFabricSetting</span><span class="sxs-lookup"><span data-stu-id="51590-297">Set-AzServiceFabricSetting</span></span>
+    - <span data-ttu-id="51590-298">Set-AzServiceFabricUpgradeType</span><span class="sxs-lookup"><span data-stu-id="51590-298">Set-AzServiceFabricUpgradeType</span></span>
+    - <span data-ttu-id="51590-299">Update-AzServiceFabricDurability</span><span class="sxs-lookup"><span data-stu-id="51590-299">Update-AzServiceFabricDurability</span></span>
+    - <span data-ttu-id="51590-300">Update-AzServiceFabricReliability</span><span class="sxs-lookup"><span data-stu-id="51590-300">Update-AzServiceFabricReliability</span></span>
 
-### <a name="azsql-previously-azurermsql"></a><span data-ttu-id="51a18-301">Az.Sql(이전에는 AzureRM.Sql)</span><span class="sxs-lookup"><span data-stu-id="51a18-301">Az.Sql (previously AzureRM.Sql)</span></span>
+### <a name="azsql-previously-azurermsql"></a><span data-ttu-id="51590-301">Az.Sql(이전에는 AzureRM.Sql)</span><span class="sxs-lookup"><span data-stu-id="51590-301">Az.Sql (previously AzureRM.Sql)</span></span>
 
-- <span data-ttu-id="51a18-302">`Set-AzSqlDatabaseBackupLongTermRetentionPolicy` cmdlet에서 `State`, `ResourceId` 매개 변수 제거</span><span class="sxs-lookup"><span data-stu-id="51a18-302">Removed `State` and `ResourceId` parameters from `Set-AzSqlDatabaseBackupLongTermRetentionPolicy` cmdlet</span></span>
-- <span data-ttu-id="51a18-303">사용되지 않는 cmdlet 제거: `Get/Set-AzSqlServerBackupLongTermRetentionVault`, `Get/Start/Stop-AzSqlServerUpgrade`, `Get/Set-AzSqlDatabaseAuditingPolicy`, `Get/Set-AzSqlServerAuditingPolicy`, `Remove-AzSqlDatabaseAuditing`, `Remove-AzSqlServerAuditing`</span><span class="sxs-lookup"><span data-stu-id="51a18-303">Removed deprecated cmdlets: `Get/Set-AzSqlServerBackupLongTermRetentionVault`, `Get/Start/Stop-AzSqlServerUpgrade`, `Get/Set-AzSqlDatabaseAuditingPolicy`, `Get/Set-AzSqlServerAuditingPolicy`, `Remove-AzSqlDatabaseAuditing`, `Remove-AzSqlServerAuditing`</span></span>
-- <span data-ttu-id="51a18-304">사용되지 않는 매개 변수 `Current`을 `Get-AzSqlDatabaseBackupLongTermRetentionPolicy` cmdlet에서 제거</span><span class="sxs-lookup"><span data-stu-id="51a18-304">Removed deprecated parameter `Current` from `Get-AzSqlDatabaseBackupLongTermRetentionPolicy` cmdlet</span></span>
-- <span data-ttu-id="51a18-305">사용되지 않는 매개 변수 `DatabaseName`을 `Get-AzSqlServerServiceObjective` cmdlet에서 제거</span><span class="sxs-lookup"><span data-stu-id="51a18-305">Removed deprecated parameter `DatabaseName` from `Get-AzSqlServerServiceObjective` cmdlet</span></span>
-- <span data-ttu-id="51a18-306">사용되지 않는 매개 변수 `PrivilegedLogin`을 `Set-AzSqlDatabaseDataMaskingPolicy` cmdlet에서 제거</span><span class="sxs-lookup"><span data-stu-id="51a18-306">Removed deprecated parameter `PrivilegedLogin` from `Set-AzSqlDatabaseDataMaskingPolicy` cmdlet</span></span>
+- <span data-ttu-id="51590-302">`Set-AzSqlDatabaseBackupLongTermRetentionPolicy` cmdlet에서 `State`, `ResourceId` 매개 변수 제거</span><span class="sxs-lookup"><span data-stu-id="51590-302">Removed `State` and `ResourceId` parameters from `Set-AzSqlDatabaseBackupLongTermRetentionPolicy` cmdlet</span></span>
+- <span data-ttu-id="51590-303">사용되지 않는 cmdlet 제거: `Get/Set-AzSqlServerBackupLongTermRetentionVault`, `Get/Start/Stop-AzSqlServerUpgrade`, `Get/Set-AzSqlDatabaseAuditingPolicy`, `Get/Set-AzSqlServerAuditingPolicy`, `Remove-AzSqlDatabaseAuditing`, `Remove-AzSqlServerAuditing`</span><span class="sxs-lookup"><span data-stu-id="51590-303">Removed deprecated cmdlets: `Get/Set-AzSqlServerBackupLongTermRetentionVault`, `Get/Start/Stop-AzSqlServerUpgrade`, `Get/Set-AzSqlDatabaseAuditingPolicy`, `Get/Set-AzSqlServerAuditingPolicy`, `Remove-AzSqlDatabaseAuditing`, `Remove-AzSqlServerAuditing`</span></span>
+- <span data-ttu-id="51590-304">사용되지 않는 매개 변수 `Current`을 `Get-AzSqlDatabaseBackupLongTermRetentionPolicy` cmdlet에서 제거</span><span class="sxs-lookup"><span data-stu-id="51590-304">Removed deprecated parameter `Current` from `Get-AzSqlDatabaseBackupLongTermRetentionPolicy` cmdlet</span></span>
+- <span data-ttu-id="51590-305">사용되지 않는 매개 변수 `DatabaseName`을 `Get-AzSqlServerServiceObjective` cmdlet에서 제거</span><span class="sxs-lookup"><span data-stu-id="51590-305">Removed deprecated parameter `DatabaseName` from `Get-AzSqlServerServiceObjective` cmdlet</span></span>
+- <span data-ttu-id="51590-306">사용되지 않는 매개 변수 `PrivilegedLogin`을 `Set-AzSqlDatabaseDataMaskingPolicy` cmdlet에서 제거</span><span class="sxs-lookup"><span data-stu-id="51590-306">Removed deprecated parameter `PrivilegedLogin` from `Set-AzSqlDatabaseDataMaskingPolicy` cmdlet</span></span>
 
-### <a name="azstorage-previously-azurestorage-and-azurermstorage"></a><span data-ttu-id="51a18-307">Az.Storage(이전에는 Azure.Storage 및 AzureRM.Storage)</span><span class="sxs-lookup"><span data-stu-id="51a18-307">Az.Storage (previously Azure.Storage and AzureRM.Storage)</span></span>
+### <a name="azstorage-previously-azurestorage-and-azurermstorage"></a><span data-ttu-id="51590-307">Az.Storage(이전에는 Azure.Storage 및 AzureRM.Storage)</span><span class="sxs-lookup"><span data-stu-id="51590-307">Az.Storage (previously Azure.Storage and AzureRM.Storage)</span></span>
 
-- <span data-ttu-id="51a18-308">스토리지 계정 이름만 사용하여 Oauth 스토리지 컨텍스트를 만들 수 있도록 기본 매개 변수 집합이 `OAuthParameterSet`으로 변경되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-308">To support creating an Oauth storage context with only the storage account name, the default parameter set has been changed to `OAuthParameterSet`</span></span>
-  - <span data-ttu-id="51a18-309">예: `$ctx = New-AzureStorageContext -StorageAccountName $accountName`</span><span class="sxs-lookup"><span data-stu-id="51a18-309">Example: `$ctx = New-AzureStorageContext -StorageAccountName $accountName`</span></span>
-- <span data-ttu-id="51a18-310">`Location` 매개 변수가 `Get-AzStorageUsage` cmdlet에서 필수 항목이 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-310">The `Location` parameter has become mandatory in the `Get-AzStorageUsage` cmdlet</span></span>
-- <span data-ttu-id="51a18-311">이제 Storage API 메서드는 동기 API 호출 대신 작업 기반 비동기 패턴(TAP)을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-311">The Storage API methods now use the Task-based Asynchronous Pattern (TAP), instead of synchronous API calls.</span></span> <span data-ttu-id="51a18-312">다음 예제에서는 새 비동기 명령을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-312">The following examples demonstrate the new asynchronous commands:</span></span>
+- <span data-ttu-id="51590-308">스토리지 계정 이름만 사용하여 Oauth 스토리지 컨텍스트를 만들 수 있도록 기본 매개 변수 집합이 `OAuthParameterSet`으로 변경되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-308">To support creating an Oauth storage context with only the storage account name, the default parameter set has been changed to `OAuthParameterSet`</span></span>
+  - <span data-ttu-id="51590-309">예: `$ctx = New-AzureStorageContext -StorageAccountName $accountName`</span><span class="sxs-lookup"><span data-stu-id="51590-309">Example: `$ctx = New-AzureStorageContext -StorageAccountName $accountName`</span></span>
+- <span data-ttu-id="51590-310">`Location` 매개 변수가 `Get-AzStorageUsage` cmdlet에서 필수 항목이 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-310">The `Location` parameter has become mandatory in the `Get-AzStorageUsage` cmdlet</span></span>
+- <span data-ttu-id="51590-311">이제 Storage API 메서드는 동기 API 호출 대신 작업 기반 비동기 패턴(TAP)을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="51590-311">The Storage API methods now use the Task-based Asynchronous Pattern (TAP), instead of synchronous API calls.</span></span> <span data-ttu-id="51590-312">다음 예제에서는 새 비동기 명령을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="51590-312">The following examples demonstrate the new asynchronous commands:</span></span>
 
-#### <a name="blob-snapshot"></a><span data-ttu-id="51a18-313">Blob 스냅샷</span><span class="sxs-lookup"><span data-stu-id="51a18-313">Blob Snapshot</span></span>
+#### <a name="blob-snapshot"></a><span data-ttu-id="51590-313">Blob 스냅샷</span><span class="sxs-lookup"><span data-stu-id="51590-313">Blob Snapshot</span></span>
 
-<span data-ttu-id="51a18-314">AzureRM:</span><span class="sxs-lookup"><span data-stu-id="51a18-314">AzureRM:</span></span>
+<span data-ttu-id="51590-314">AzureRM:</span><span class="sxs-lookup"><span data-stu-id="51590-314">AzureRM:</span></span>
 
 ```azurepowershell-interactive
 $b = Get-AzureStorageBlob -Container $containerName -Blob $blobName -Context $ctx
 $b.ICloudBlob.Snapshot()
 ```
 
-<span data-ttu-id="51a18-315">Az:</span><span class="sxs-lookup"><span data-stu-id="51a18-315">Az:</span></span>
+<span data-ttu-id="51590-315">Az:</span><span class="sxs-lookup"><span data-stu-id="51590-315">Az:</span></span>
 
 ```azurepowershell-interactive
 $b = Get-AzStorageBlob -Container $containerName -Blob $blobName -Context $ctx
@@ -388,16 +389,16 @@ $task.Wait()
 $snapshot = $task.Result
 ```
 
-#### <a name="share-snapshot"></a><span data-ttu-id="51a18-316">스냅샷 공유</span><span class="sxs-lookup"><span data-stu-id="51a18-316">Share Snapshot</span></span>
+#### <a name="share-snapshot"></a><span data-ttu-id="51590-316">스냅샷 공유</span><span class="sxs-lookup"><span data-stu-id="51590-316">Share Snapshot</span></span>
 
-<span data-ttu-id="51a18-317">AzureRM:</span><span class="sxs-lookup"><span data-stu-id="51a18-317">AzureRM:</span></span>
+<span data-ttu-id="51590-317">AzureRM:</span><span class="sxs-lookup"><span data-stu-id="51590-317">AzureRM:</span></span>
 
 ```azurepowershell-interactive
 $Share = Get-AzureStorageShare -Name $containerName -Context $ctx
 $snapshot = $Share.Snapshot()
 ```
 
-<span data-ttu-id="51a18-318">Az:</span><span class="sxs-lookup"><span data-stu-id="51a18-318">Az:</span></span>
+<span data-ttu-id="51590-318">Az:</span><span class="sxs-lookup"><span data-stu-id="51590-318">Az:</span></span>
 
 ```azurepowershell-interactive
 $Share = Get-AzStorageShare -Name $containerName -Context $ctx
@@ -406,16 +407,16 @@ $task.Wait()
 $snapshot = $task.Result
 ```
 
-#### <a name="undelete-soft-deleted-blob"></a><span data-ttu-id="51a18-319">일시 삭제된 Blob 삭제 취소</span><span class="sxs-lookup"><span data-stu-id="51a18-319">Undelete soft-deleted blob</span></span>
+#### <a name="undelete-soft-deleted-blob"></a><span data-ttu-id="51590-319">일시 삭제된 Blob 삭제 취소</span><span class="sxs-lookup"><span data-stu-id="51590-319">Undelete soft-deleted blob</span></span>
 
-<span data-ttu-id="51a18-320">AzureRM:</span><span class="sxs-lookup"><span data-stu-id="51a18-320">AzureRM:</span></span>
+<span data-ttu-id="51590-320">AzureRM:</span><span class="sxs-lookup"><span data-stu-id="51590-320">AzureRM:</span></span>
 
 ```azurepowershell-interactive
 $b = Get-AzureStorageBlob -Container $containerName -Blob $blobName -IncludeDeleted -Context $ctx
 $b.ICloudBlob.Undelete()
 ```
 
-<span data-ttu-id="51a18-321">Az:</span><span class="sxs-lookup"><span data-stu-id="51a18-321">Az:</span></span>
+<span data-ttu-id="51590-321">Az:</span><span class="sxs-lookup"><span data-stu-id="51590-321">Az:</span></span>
 
 ```azurepowershell-interactive
 $b = Get-AzStorageBlob -Container $containerName -Blob $blobName -IncludeDeleted -Context $ctx
@@ -423,9 +424,9 @@ $task = $b.ICloudBlob.UndeleteAsync()
 $task.Wait()
 ```
 
-#### <a name="set-blob-tier"></a><span data-ttu-id="51a18-322">BLOB 계층 설정</span><span class="sxs-lookup"><span data-stu-id="51a18-322">Set Blob Tier</span></span>
+#### <a name="set-blob-tier"></a><span data-ttu-id="51590-322">BLOB 계층 설정</span><span class="sxs-lookup"><span data-stu-id="51590-322">Set Blob Tier</span></span>
 
-<span data-ttu-id="51a18-323">AzureRM:</span><span class="sxs-lookup"><span data-stu-id="51a18-323">AzureRM:</span></span>
+<span data-ttu-id="51590-323">AzureRM:</span><span class="sxs-lookup"><span data-stu-id="51590-323">AzureRM:</span></span>
 
 ```azurepowershell-interactive
 $blockBlob = Get-AzureStorageBlob -Container $containerName -Blob $blockBlobName -Context $ctx
@@ -435,7 +436,7 @@ $pageBlob = Get-AzureStorageBlob -Container $containerName -Blob $pageBlobName -
 $pageBlob.ICloudBlob.SetPremiumBlobTier("P4")
 ```
 
-<span data-ttu-id="51a18-324">Az:</span><span class="sxs-lookup"><span data-stu-id="51a18-324">Az:</span></span>
+<span data-ttu-id="51590-324">Az:</span><span class="sxs-lookup"><span data-stu-id="51590-324">Az:</span></span>
 
 ```azurepowershell-interactive
 $blockBlob = Get-AzStorageBlob -Container $containerName -Blob $blockBlobName -Context $ctx
@@ -447,6 +448,6 @@ $task = $pageBlob.ICloudBlob.SetPremiumBlobTierAsync("P4")
 $task.Wait()
 ```
 
-### <a name="azwebsites-previously-azurermwebsites"></a><span data-ttu-id="51a18-325">Az.Websites(이전에는 AzureRM.Websites)</span><span class="sxs-lookup"><span data-stu-id="51a18-325">Az.Websites (previously AzureRM.Websites)</span></span>
+### <a name="azwebsites-previously-azurermwebsites"></a><span data-ttu-id="51590-325">Az.Websites(이전에는 AzureRM.Websites)</span><span class="sxs-lookup"><span data-stu-id="51590-325">Az.Websites (previously AzureRM.Websites)</span></span>
 
-- <span data-ttu-id="51a18-326">사용되지 않는 속성을 `PSAppServicePlan`, `PSCertificate`, `PSCloningInfo`, `PSSite` 개체에서 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="51a18-326">Removed deprecated properties from the `PSAppServicePlan`, `PSCertificate`, `PSCloningInfo`, and `PSSite` objects</span></span>
+- <span data-ttu-id="51590-326">사용되지 않는 속성을 `PSAppServicePlan`, `PSCertificate`, `PSCloningInfo`, `PSSite` 개체에서 제거했습니다.</span><span class="sxs-lookup"><span data-stu-id="51590-326">Removed deprecated properties from the `PSAppServicePlan`, `PSCertificate`, `PSCloningInfo`, and `PSSite` objects</span></span>
