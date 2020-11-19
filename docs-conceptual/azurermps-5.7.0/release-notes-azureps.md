@@ -7,10 +7,10 @@ ms.workload: ''
 ms.date: 2/20/2018
 ms.custom: devx-track-azurepowershell
 ms.openlocfilehash: e6dd28596cdc4f18ddcd3de7886d222ed588caff
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.sourcegitcommit: 6071038ed955107220a01156550a541bf68d0266
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
+ms.lasthandoff: 11/13/2020
 ms.locfileid: "89243670"
 ---
 # <a name="azure-powershell-release-notes"></a>Azure PowerShell 릴리스 정보

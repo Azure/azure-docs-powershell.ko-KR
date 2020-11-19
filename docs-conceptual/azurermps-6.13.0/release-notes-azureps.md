@@ -7,10 +7,10 @@ ms.workload: ''
 ms.date: 08/28/2018
 ms.custom: devx-track-azurepowershell
 ms.openlocfilehash: 189b360f8825b7de93b67b0b2cbe670d00187327
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.sourcegitcommit: 6071038ed955107220a01156550a541bf68d0266
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
+ms.lasthandoff: 11/13/2020
 ms.locfileid: "89241358"
 ---
 # <a name="release-notes"></a>릴리스 정보
