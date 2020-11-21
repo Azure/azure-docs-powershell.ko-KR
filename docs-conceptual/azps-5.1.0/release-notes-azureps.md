@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.date: 03/10/2020
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: 280486e45dad73c935f03cedc619c0de762deb12
-ms.sourcegitcommit: d81c3b0f0f7289104be03869eb675128b61db7d3
+ms.openlocfilehash: b37d25f8efb6c0a5e590617a5ba84a5a5bf18660
+ms.sourcegitcommit: ec731e58b7de3eb14df6d3bf308df92154125bbb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94715396"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95005826"
 ---
 # <a name="azure-powershell-release-notes"></a>Azure PowerShell 릴리스 정보
 
@@ -795,7 +795,7 @@ ms.locfileid: "94715396"
 * 다중 스레드 실행에서 'Connect-AzAccount'가 실패할 수 있는 문제 해결 [#11201]
 
 #### <a name="azaks"></a>Az.Aks
-* 이전에 사용하던 [AccessProfile API](https://docs.microsoft.com/rest/api/aks/managedclusters/getaccessprofile)를 [ListClusterAdmin](https://docs.microsoft.com/rest/api/aks/managedclusters/listclusteradmincredentials) 및 [ListClusterUser](https://docs.microsoft.com/rest/api/aks/managedclusters/listclusterusercredentials) API 호출로 대체
+* 이전에 사용하던 [AccessProfile API](/rest/api/aks/managedclusters/getaccessprofile)를 [ListClusterAdmin](/rest/api/aks/managedclusters/listclusteradmincredentials) 및 [ListClusterUser](/rest/api/aks/managedclusters/listclusterusercredentials) API 호출로 대체
 
 #### <a name="azbatch"></a>Az.Batch
 * 'Microsoft.Azure.Management.Batch' SDK 버전 11.0.0을 사용하도록 Az.Batch 업데이트
@@ -1313,7 +1313,7 @@ ms.locfileid: "94715396"
 
 ## <a name="0100-preview---april-2020"></a>0.10.0-preview - 2020년 4월
 ### <a name="general"></a>일반
-* 이제 Az 모듈이 Azure Stack Hub에서 미리 보기로 제공됩니다. 따라서 Linux 및 macOS와의 플랫폼 간 호환성이 지원됩니다. Azure Stack Hub는 이제 Az 모듈을 사용하여 PowerShell Core를 지원합니다. 자세한 내용은 [여기](https://aka.ms/az4AzureStack)를 참조하세요.
+* 이제 Az 모듈이 Azure Stack Hub에서 미리 보기로 제공됩니다. 따라서 Linux 및 macOS와의 플랫폼 간 호환성이 지원됩니다. Azure Stack Hub는 이제 Az 모듈을 사용하여 PowerShell Core를 지원합니다. 자세한 내용은 [여기](/azure-stack/operator/powershell-install-az-module)를 참조하세요.
 * Az 모듈은 2019-03-01-hybrid 프로필을 지원합니다.
   - Az.Billing
   - Az.Compute
@@ -1328,7 +1328,7 @@ ms.locfileid: "94715396"
   - Az.Websites
 * Azure Stack Hub와 함께 작동하는 az용 새 PowerShell 모듈 3개(Az.Databox, Az.IotHub 및 Az.EventHub)가 도입되었습니다.
 * AzureRM을 Az로 변경하는 것과 같은 사소한 변경을 수행하면 명령이 비교적 동일하게 유지됩니다.
-* Azure Stack Hub에 대한 PowerShell 설명서의 업데이트된 링크는 [여기](https://aka.ms/InstallASHPowerShell)에서 찾을 수 있습니다.
+* Azure Stack Hub에 대한 PowerShell 설명서의 업데이트된 링크는 [여기](/azure-stack/operator/powershell-install-az-module)에서 찾을 수 있습니다.
 
 ## <a name="370---march-2020"></a>3.7.0 - 2020년 3월
 #### <a name="azaccounts"></a>Az.Accounts
@@ -2911,7 +2911,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
     - Set-AzScheduledQueryRule
     - Update-AzScheduledQueryRule
     - Remove-AzScheduledQueryRule
-    - SQR API에 대한 [자세한 내용](https://docs.microsoft.com/rest/api/monitor/scheduledqueryrules)
+    - SQR API에 대한 [자세한 내용](/rest/api/monitor/scheduledqueryrules)
     - GenV2(비 클래식) 메트릭 기반 경고 규칙에 대한 cmdlet을 포함하도록 Az.Monitor.md가 업데이트됨
 
 #### <a name="aznetwork"></a>Az.Network
