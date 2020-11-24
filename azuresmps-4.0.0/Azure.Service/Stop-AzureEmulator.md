@@ -3,12 +3,12 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 43E2C42E-16A3-426E-A7C4-33942F06F908
 online version: ''
 schema: 2.0.0
-ms.openlocfilehash: bd94462eb89cff6b4cec97f05911e27dbb05c920
-ms.sourcegitcommit: 56ed085a868afa8263f8eb0f755b5822f5c29532
+ms.openlocfilehash: 501a164fc4470a3d4fd6163050fba495ce3d2705
+ms.sourcegitcommit: 25eca7b5f5480758aa2cd830458900cf91cf673c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "94045766"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95515095"
 ---
 # Stop-AzureEmulator
 
