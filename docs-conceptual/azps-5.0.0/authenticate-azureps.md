@@ -3,15 +3,15 @@ title: Azure PowerShell로 로그인
 description: Azure PowerShell 사용자나 서비스 주체로 로그인 또는 Azure 리소스에 대한 관리 ID로 로그인하는 방법.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 7/7/2020
+ms.date: 11/23/2020
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: 2ec432ae2823bb59f32ca7801a44a9da48db9fac
-ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
+ms.openlocfilehash: a5bff1a5c22d5cd93cc3548a470e123daf5e129e
+ms.sourcegitcommit: 25eca7b5f5480758aa2cd830458900cf91cf673c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93407666"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95515078"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Azure PowerShell로 로그인
 
@@ -31,7 +31,7 @@ Azure PowerShell에서는 여러 인증 방법을 지원합니다. 시작하는 
 Connect-AzAccount
 ```
 
-이 cmdlet은 PowerShell 버전 6 이상에서 실행할 경우 토큰 문자열을 표시합니다. 로그인하려면 이 문자열을 복사하여 웹 브라우저에서 [microsoft.com/devicelogin](https://microsoft.com/devicelogin)에 붙여넣습니다. 그러면 PowerShell 세션이 인증되어 Azure에 연결됩니다. Windows PowerShell에서 토큰 문자열을 받도록 `UseDeviceAuthentication` 매개 변수를 지정할 수 있습니다.
+Az PowerShell 모듈 5.0.0부터 이 cmdlet은 기본적으로 대화형 브라우저 기반 로그인 프롬프트를 표시합니다. `UseDeviceAuthentication` 매개 변수를 지정하여 이전에 PowerShell 버전 6 이상에 대한 기본값이었던 토큰 문자열을 수신할 수 있습니다.
 
 > [!IMPORTANT]
 > Active Directory Domain Services 인증 구현 및 보안 문제의 변경으로 인해 Azure PowerShell에서 사용자 이름/암호 자격 증명이 제거되었습니다. 자동화 목적으로 자격 증명 권한 부여를 사용하는 경우 대신 [서비스 주체](create-azure-service-principal-azureps.md)를 생성하세요.
