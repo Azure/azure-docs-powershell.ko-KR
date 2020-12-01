@@ -9,7 +9,7 @@
 - name: 시작하기
   href: get-started-azureps.md
 - name: Cloud Shell
-  href: 'https://docs.microsoft.com/azure/cloud-shell/overview'
+  href: /azure/cloud-shell/overview
 - name: 로그인
   items:
     - name: 인증 방법
