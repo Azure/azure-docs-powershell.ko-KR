@@ -8,22 +8,22 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 03/04/2020
-ms.openlocfilehash: ef034424c72d88b3ceb28956da9ca56e4a7f3941
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 0ee905b741c9f79b4f831bb4ea628f97566b2f1d
+ms.sourcegitcommit: 071b8c40c837ed4b2d65ce778339110d9e0899ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "79402717"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96427278"
 ---
-# <a name="azure-stack-module-181"></a><span data-ttu-id="da483-103">Azure Stack 모듈 1.8.1</span><span class="sxs-lookup"><span data-stu-id="da483-103">Azure Stack Module 1.8.1</span></span>
+# <a name="azure-stack-module-181"></a><span data-ttu-id="bbd49-103">Azure Stack 모듈 1.8.1</span><span class="sxs-lookup"><span data-stu-id="bbd49-103">Azure Stack Module 1.8.1</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="da483-104">요구 사항:</span><span class="sxs-lookup"><span data-stu-id="da483-104">Requirements:</span></span>
+## <a name="requirements"></a><span data-ttu-id="bbd49-104">요구 사항:</span><span class="sxs-lookup"><span data-stu-id="bbd49-104">Requirements:</span></span>
 
-<span data-ttu-id="da483-105">지원되는 최소 Azure Stack 버전은 1910입니다.</span><span class="sxs-lookup"><span data-stu-id="da483-105">Minimum supported Azure Stack version is 1910.</span></span>
+<span data-ttu-id="bbd49-105">지원되는 최소 Azure Stack 버전은 1910입니다.</span><span class="sxs-lookup"><span data-stu-id="bbd49-105">Minimum supported Azure Stack version is 1910.</span></span>
 
-<span data-ttu-id="da483-106">참고: 이전 버전의 Azure Stack인 경우 [Azure Stack Powershell 설치](https://docs.microsoft.com/azure/azure-stack/azure-stack-powershell-install#install-azure-stack-powershell)를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="da483-106">Note: For earlier versions of Azure Stack check [Install Azure Stack Powershell](https://docs.microsoft.com/azure/azure-stack/azure-stack-powershell-install#install-azure-stack-powershell)</span></span>
+<span data-ttu-id="bbd49-106">참고: 이전 버전의 Azure Stack인 경우 [Azure Stack Powershell 설치](/azure/azure-stack/azure-stack-powershell-install#install-azure-stack-powershell)를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="bbd49-106">Note: For earlier versions of Azure Stack check [Install Azure Stack Powershell](/azure/azure-stack/azure-stack-powershell-install#install-azure-stack-powershell)</span></span>
 
-## <a name="install"></a><span data-ttu-id="da483-107">설치</span><span class="sxs-lookup"><span data-stu-id="da483-107">Install</span></span>
+## <a name="install"></a><span data-ttu-id="bbd49-107">설치</span><span class="sxs-lookup"><span data-stu-id="bbd49-107">Install</span></span>
 
 ```powershell
 # Remove previous versions of AzureStack and AzureRM modules
@@ -37,6 +37,6 @@ Use-AzureRmProfile -Profile 2019-03-01-hybrid -Force
 Install-Module -Name AzureStack -RequiredVersion 1.8.1
 ```
 
-## <a name="release-notes"></a><span data-ttu-id="da483-108">릴리스 정보</span><span class="sxs-lookup"><span data-stu-id="da483-108">Release Notes</span></span>
+## <a name="release-notes"></a><span data-ttu-id="bbd49-108">릴리스 정보</span><span class="sxs-lookup"><span data-stu-id="bbd49-108">Release Notes</span></span>
 
-* <span data-ttu-id="da483-109">1910 업데이트 지원</span><span class="sxs-lookup"><span data-stu-id="da483-109">Supported with 1910 update</span></span>
+* <span data-ttu-id="bbd49-109">1910 업데이트 지원</span><span class="sxs-lookup"><span data-stu-id="bbd49-109">Supported with 1910 update</span></span>
