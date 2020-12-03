@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.date: 03/10/2020
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: 27073db862b83c5b95f2364355037c1ebd34a3b5
-ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
+ms.openlocfilehash: 5eac1bee53bfadf57d053ad60d6267657b145d67
+ms.sourcegitcommit: 071b8c40c837ed4b2d65ce778339110d9e0899ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93407496"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96427142"
 ---
 # <a name="azure-powershell-release-notes"></a>Azure PowerShell 릴리스 정보
 
@@ -689,7 +689,7 @@ ms.locfileid: "93407496"
 * 다중 스레드 실행에서 'Connect-AzAccount'가 실패할 수 있는 문제 해결 [#11201]
 
 #### <a name="azaks"></a>Az.Aks
-* 이전에 사용하던 [AccessProfile API](https://docs.microsoft.com/rest/api/aks/managedclusters/getaccessprofile)를 [ListClusterAdmin](https://docs.microsoft.com/rest/api/aks/managedclusters/listclusteradmincredentials) 및 [ListClusterUser](https://docs.microsoft.com/rest/api/aks/managedclusters/listclusterusercredentials) API 호출로 대체
+* 이전에 사용하던 [AccessProfile API](/rest/api/aks/managedclusters/getaccessprofile)를 [ListClusterAdmin](/rest/api/aks/managedclusters/listclusteradmincredentials) 및 [ListClusterUser](/rest/api/aks/managedclusters/listclusterusercredentials) API 호출로 대체
 
 #### <a name="azbatch"></a>Az.Batch
 * 'Microsoft.Azure.Management.Batch' SDK 버전 11.0.0을 사용하도록 Az.Batch 업데이트
@@ -1207,7 +1207,7 @@ ms.locfileid: "93407496"
 
 ## <a name="0100-preview---april-2020"></a>0.10.0-preview - 2020년 4월
 ### <a name="general"></a>일반
-* 이제 Az 모듈이 Azure Stack Hub에서 미리 보기로 제공됩니다. 따라서 Linux 및 macOS와의 플랫폼 간 호환성이 지원됩니다. Azure Stack Hub는 이제 Az 모듈을 사용하여 PowerShell Core를 지원합니다. 자세한 내용은 [여기](https://aka.ms/az4AzureStack)를 참조하세요.
+* 이제 Az 모듈이 Azure Stack Hub에서 미리 보기로 제공됩니다. 따라서 Linux 및 macOS와의 플랫폼 간 호환성이 지원됩니다. Azure Stack Hub는 이제 Az 모듈을 사용하여 PowerShell Core를 지원합니다. 자세한 내용은 [여기](/azure-stack/operator/powershell-install-az-module)를 참조하세요.
 * Az 모듈은 2019-03-01-hybrid 프로필을 지원합니다.
   - Az.Billing
   - Az.Compute
@@ -1222,7 +1222,7 @@ ms.locfileid: "93407496"
   - Az.Websites
 * Azure Stack Hub와 함께 작동하는 az용 새 PowerShell 모듈 3개(Az.Databox, Az.IotHub 및 Az.EventHub)가 도입되었습니다.
 * AzureRM을 Az로 변경하는 것과 같은 사소한 변경을 수행하면 명령이 비교적 동일하게 유지됩니다.
-* Azure Stack Hub에 대한 PowerShell 설명서의 업데이트된 링크는 [여기](https://aka.ms/InstallASHPowerShell)에서 찾을 수 있습니다.
+* Azure Stack Hub에 대한 PowerShell 설명서의 업데이트된 링크는 [여기](/azure-stack/operator/powershell-install-az-module)에서 찾을 수 있습니다.
 
 ## <a name="370---march-2020"></a>3.7.0 - 2020년 3월
 #### <a name="azaccounts"></a>Az.Accounts
@@ -1770,7 +1770,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
     - `StorageContainerUrl` 기반 리소스 파일은 URL에 지정된 컨테이너를 일괄 처리 노드에 다운로드합니다.
 * **Get-AzBatchApplication** 으로 반환되는 `PSApplication`의 `ApplicationPackages` 속성이 제거되었습니다.
   - 이제 **Get-AzBatchApplicationPackage** 를 사용하여 애플리케이션 내부의 특정 패키지를 검색할 수 있습니다. 예: `Get-AzBatchApplication -AccountName myaccount -ResourceGroupName myresourcegroup -ApplicationId myapplication`
-* **Get-AzBatchApplicationPackage** , **New-AzBatchApplicationPackage** , **Remove-AzBatchApplicationPackage** , **Get-AzBatchApplication** , **New-AzBatchApplication** , **Remove-AzBatchApplication** 및 **Set-AzBatchApplication** 에서 `ApplicationId` 이름이 `ApplicationName`으로 변경되었습니다.
+* **Get-AzBatchApplicationPackage**, **New-AzBatchApplicationPackage**, **Remove-AzBatchApplicationPackage**, **Get-AzBatchApplication**, **New-AzBatchApplication**, **Remove-AzBatchApplication** 및 **Set-AzBatchApplication** 에서 `ApplicationId` 이름이 `ApplicationName`으로 변경되었습니다.
   - 이제 `ApplicationId`는 `ApplicationName`의 별칭입니다.
 * 새로운 `PSWindowsUserConfiguration` 속성이 `PSUserAccount`에 추가되었습니다.
 * `PSApplicationPackage`에서 `Version` 이름이 `Name`으로 변경되었습니다.
@@ -2080,9 +2080,9 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
 * 최신 모니터링 SDK, 즉, 0.24.1-preview를 가리킵니다.
    - 메트릭 cmdlet에 줄 바꿈하지 않는 변경 내용을 추가합니다. 즉, 단위 열거형은 여러 새 값을 지원합니다. 이러한 cmdlet은 읽기 전용이므로 cmdlet 입력이 변경되지 않습니다.
    - 이제 **ActionGroups** 요청의 api 버전은 **2019-06-01** 이고, 이전에는 **2018-03-01** 였습니다. 시나리오 테스트가 이 변경 내용에 맞게 업데이트되었습니다.
-   - **EmailReceiver** 및 **WebhookReceiver** 클래스에 대한 생성자가 새 필수 인수, 즉, **useCommonAlertSchema** 라는 부울 값을 추가했습니다. 현재 이 값은 cmdlet의 주요 변경 사항을 숨기도록 **false** 로 고정되었습니다. **참고** : 이 변경 사항은 경고 팀에서 유효성을 검사해야 하는 임시 변경 내용입니다.
-   - 이전 SDK에서 변경된 **Source** 클래스( **ScheduledQueryRuleSource** 클래스와 관련됨)의 생성자에 대한 인수 순서입니다. 이번 변화로 인해 두 개의 단위 테스트를 수정해야 했습니다. 즉, 두 단위 테스트가 컴파일되었지만 테스트를 통과하지 못했습니다.
-   - 이전 SDK에서 변경된 **AlertingAction** 클래스( **ScheduledQueryRuleSource** 클래스와 관련됨)의 생성자에 대한 인수 순서입니다. 이번 변화로 인해 두 개의 단위 테스트를 수정해야 했습니다. 즉, 두 단위 테스트가 컴파일되었지만 테스트를 통과하지 못했습니다.
+   - **EmailReceiver** 및 **WebhookReceiver** 클래스에 대한 생성자가 새 필수 인수, 즉, **useCommonAlertSchema** 라는 부울 값을 추가했습니다. 현재 이 값은 cmdlet의 주요 변경 사항을 숨기도록 **false** 로 고정되었습니다. **참고**: 이 변경 사항은 경고 팀에서 유효성을 검사해야 하는 임시 변경 내용입니다.
+   - 이전 SDK에서 변경된 **Source** 클래스(**ScheduledQueryRuleSource** 클래스와 관련됨)의 생성자에 대한 인수 순서입니다. 이번 변화로 인해 두 개의 단위 테스트를 수정해야 했습니다. 즉, 두 단위 테스트가 컴파일되었지만 테스트를 통과하지 못했습니다.
+   - 이전 SDK에서 변경된 **AlertingAction** 클래스(**ScheduledQueryRuleSource** 클래스와 관련됨)의 생성자에 대한 인수 순서입니다. 이번 변화로 인해 두 개의 단위 테스트를 수정해야 했습니다. 즉, 두 단위 테스트가 컴파일되었지만 테스트를 통과하지 못했습니다.
 * 메트릭 경고 V2에 대한 동적 임계값 기준 지원
     - AzMetricAlertRuleV2Criteria: 이제 동적 임계값 조건도 만듭니다.
     - Add-AzMetricAlertRuleV2: 이제 동적 임계값 조건도 수락합니다.
@@ -2805,7 +2805,7 @@ DatabaseName 대신 PartnerDatabaseName이 있는지 확인하도록 New-AzSqlDa
     - Set-AzScheduledQueryRule
     - Update-AzScheduledQueryRule
     - Remove-AzScheduledQueryRule
-    - SQR API에 대한 [자세한 내용](https://docs.microsoft.com/rest/api/monitor/scheduledqueryrules)
+    - SQR API에 대한 [자세한 내용](/rest/api/monitor/scheduledqueryrules)
     - GenV2(비 클래식) 메트릭 기반 경고 규칙에 대한 cmdlet을 포함하도록 Az.Monitor.md가 업데이트됨
 
 #### <a name="aznetwork"></a>Az.Network

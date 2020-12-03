@@ -8,12 +8,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 08/06/2020
-ms.openlocfilehash: 754038a312a20e0dd87075bdeb51b13a1f1810a1
-ms.sourcegitcommit: 09eb4dbfcad6fce303b793dafe9bebdef589db03
+ms.openlocfilehash: 10eaf23e5134ea9788a81477038d735fe3bd59e0
+ms.sourcegitcommit: 071b8c40c837ed4b2d65ce778339110d9e0899ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88022969"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96426989"
 ---
 # <a name="azure-stack-hub-module-202"></a>Azure Stack Hub 모듈 2.0.2
 
@@ -21,7 +21,7 @@ ms.locfileid: "88022969"
 
 지원되는 최소 Azure Stack Hub 버전은 2002입니다.
 
-참고: 이전 버전의 Azure Stack인 경우 [Azure Stack Powershell 설치](https://docs.microsoft.com/azure/azure-stack/azure-stack-powershell-install#install-azure-stack-powershell)를 확인하세요.
+참고: 이전 버전의 Azure Stack인 경우 [Azure Stack Powershell 설치](/azure/azure-stack/azure-stack-powershell-install#install-azure-stack-powershell)를 확인하세요.
 
 ## <a name="install"></a>설치
 
@@ -45,4 +45,4 @@ Install-Module -Name AzureStack -RequiredVersion 2.0.2-preview -AllowPrerelease
 
 * 2002 업데이트가 지원됩니다.  
 
-  Azure Stack Hub 2.0.0은 호환성이 손상되는 변경입니다. 이 모듈은 AzureRM 모듈이 아니라 Az 모듈을 사용합니다. [Azure Stack Hub에서 AzureRM을 Azure PowerShell Az로 마이그레이션](https://aka.ms/AA7qsji)에서 마이그레이션 가이드 및 호환성이 손상되는 변경 목록을 찾을 수 있습니다.
+  Azure Stack Hub 2.0.0은 호환성이 손상되는 변경입니다. 이 모듈은 AzureRM 모듈이 아니라 Az 모듈을 사용합니다. [Azure Stack Hub에서 AzureRM을 Azure PowerShell Az로 마이그레이션](/azure-stack/operator/azure-stack-powershell-install)에서 마이그레이션 가이드 및 호환성이 손상되는 변경 목록을 찾을 수 있습니다.

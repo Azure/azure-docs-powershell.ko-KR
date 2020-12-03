@@ -6,12 +6,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: 9812987dcc10bf5ef65ceef9195218c84042e114
-ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
+ms.openlocfilehash: de95b2e32a6b99a3978a3c8db9d12a6563b02e4b
+ms.sourcegitcommit: 071b8c40c837ed4b2d65ce778339110d9e0899ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93408907"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96427669"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>새로운 Azure PowerShell Az 모듈 소개
 
@@ -41,14 +41,14 @@ Azure 지원을 모든 플랫폼에 제공하기 위해 노력하고 있습니�
 
 PowerShell의 최신 Azure 기능을 계속 유지하려면 가능한 한 빨리 Az 모듈로 마이그레이션해야 합니다. AzureRM에 대한 대체 모듈로 Az 모듈을 설치할 준비가 되지 않았으면 Az를 사용하여 실험할 수 있는 몇 가지 옵션이 있습니다.
 
-- [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview)이 있는 `PowerShell` 환경을 사용합니다. Azure Cloud Shell은 Az 모듈이 설치되고 `Enable-AzureRM` 호환성 별칭을 사용하도록 설정된 상태로 제공되는 브라우저 기반 셸 환경입니다.
+- [Azure Cloud Shell](/azure/cloud-shell/overview)이 있는 `PowerShell` 환경을 사용합니다. Azure Cloud Shell은 Az 모듈이 설치되고 `Enable-AzureRM` 호환성 별칭을 사용하도록 설정된 상태로 제공되는 브라우저 기반 셸 환경입니다.
 - Windows용 PowerShell 5.1과 함께 설치된 AzureRM 모듈을 유지하는 한편, PowerShell 6.x 이상용 Az 모듈을 설치합니다. Windows용 PowerShell 5.1과 PowerShell 6.x 이상은 별도의 모듈 컬렉션을 사용합니다. 지침에 따라 [최신 버전의 PowerShell](/powershell/scripting/install/installing-powershell)을 설치한 다음, PowerShell 6.x 이상에서 [Az 모듈을 설치](install-az-ps.md)합니다.
 
 기존 AzureRM 설치에서 업그레이드하려면 다음을 수행합니다.
 
 1. [Azure PowerShell AzureRM 모듈 제거](/powershell/azure/uninstall-az-ps#uninstall-the-azurerm-module)
 2. [Azure PowerShell Az 모듈 설치](install-az-ps.md)
-3. **선택 사항** : 새 명령 집합을 습득하면서 [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias)를 사용하여 AzureRM cmdlet에 대한 별칭을 추가할 수 있는 호환성 모드를 사용하도록 설정합니다. 자세한 내용은 다음 섹션 또는 [AzureRM에서 Az로 마이그레이션 시작](migrate-from-azurerm-to-az.md)을 참조하세요.
+3. **선택 사항**: 새 명령 집합을 습득하면서 [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias)를 사용하여 AzureRM cmdlet에 대한 별칭을 추가할 수 있는 호환성 모드를 사용하도록 설정합니다. 자세한 내용은 다음 섹션 또는 [AzureRM에서 Az로 마이그레이션 시작](migrate-from-azurerm-to-az.md)을 참조하세요.
 
 ## <a name="migrate-existing-scripts-to-az"></a>기존 스크립트를 Az로 마이그레이션
 

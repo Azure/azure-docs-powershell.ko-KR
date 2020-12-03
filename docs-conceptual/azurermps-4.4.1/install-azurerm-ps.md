@@ -5,12 +5,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/27/2018
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 3f4b05352ef5e5c7f32495d002a78aadd3e056e1
-ms.sourcegitcommit: 038cb42a3bd8c009bc57c8c1c252e66fa170c84b
+ms.openlocfilehash: c4aa030a7d95f5b22ceeff9438af506ced5c8cb5
+ms.sourcegitcommit: 071b8c40c837ed4b2d65ce778339110d9e0899ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523294"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96428043"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>PowerShellGet으로 Azure PowerShell을 설치
 
@@ -149,7 +149,7 @@ At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PSModule.psm
 Install-Module -Name AzureRM -AllowClobber
 ```
 
-자세한 내용은 [Install-Module](https://msdn.microsoft.com/powershell/reference/5.1/PowerShellGet/install-module)에 대한 도움말 항목을 참조하세요.
+자세한 내용은 [Install-Module](/powershell/module/powershellget/install-module)에 대한 도움말 항목을 참조하세요.
 
 ### <a name="installing-module-versions-side-by-side"></a>단계별 모듈 버전 설치
 
