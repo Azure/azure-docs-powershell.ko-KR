@@ -8,12 +8,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 02/24/2020
-ms.openlocfilehash: ec406c80de6b457f7e340a23fe8caf2ab83be46a
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: e19fea440025e7a00a037e360ac95ff8e0e62129
+ms.sourcegitcommit: 071b8c40c837ed4b2d65ce778339110d9e0899ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "78264413"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96428013"
 ---
 # <a name="azure-stack-module-180"></a>Azure Stack 모듈 1.8.0
 
@@ -21,7 +21,7 @@ ms.locfileid: "78264413"
 
 지원되는 최소 Azure Stack 버전은 1910입니다.
 
-참고: 이전 버전의 Azure Stack인 경우 [Azure Stack Powershell 설치](https://docs.microsoft.com/azure/azure-stack/azure-stack-powershell-install#install-azure-stack-powershell)를 확인하세요.
+참고: 이전 버전의 Azure Stack인 경우 [Azure Stack Powershell 설치](/azure/azure-stack/azure-stack-powershell-install#install-azure-stack-powershell)를 확인하세요.
 
 ## <a name="install"></a>설치
 
@@ -40,7 +40,7 @@ Install-Module -Name AzureStack -RequiredVersion 1.8.0
 ## <a name="release-notes"></a>릴리스 정보
 
 * 1910 업데이트 지원
-* 변경 내용은 다음과 같습니다.
+* 변경 사항에는 다음이 포함됩니다.
 
     - **새 DRP 관리 모듈**: DRP(배포 리소스 공급자)를 사용하여 Azure Stack Hub에 대한 리소스 공급자 오케스트레이션 배포를 수행할 수 있습니다. 이러한 명령은 Azure Resource Manager 레이어와 상호 작용하여 DRP와 상호 작용합니다.
 
