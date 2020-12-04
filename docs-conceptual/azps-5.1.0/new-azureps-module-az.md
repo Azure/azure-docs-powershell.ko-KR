@@ -1,71 +1,87 @@
 ---
-title: Azure PowerShell Az 모듈 소개
-description: AzureRM 모듈을 대체하는 새로운 Azure PowerShell 모듈 Az을 소개합니다.
-ms.date: 05/20/2020
+title: Azure Az PowerShell 모듈 소개
+description: Azure와 상호 작용하는 데 권장되는 모듈이자 AzureRM PowerShell 모듈을 대체하는 Az PowerShell 모듈을 소개합니다.
+ms.date: 12/1/2020
 ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: 4bf05058f576e7a4844f693384b4fa4aea08a042
-ms.sourcegitcommit: ec731e58b7de3eb14df6d3bf308df92154125bbb
+ms.openlocfilehash: d7f5b75f195f6315fc65666647c407795f5c6956
+ms.sourcegitcommit: cd243c8f6dc02dbd6234e764b065643dfd31dd8b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95005809"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96502609"
 ---
-# <a name="introducing-the-new-azure-powershell-az-module"></a>새로운 Azure PowerShell Az 모듈 소개
+# <a name="introducing-the-azure-az-powershell-module"></a>Azure Az PowerShell 모듈 소개
 
-2018년 12월부터 Azure PowerShell Az 모듈은 일반 릴리스로 출시되며 이는 Azure와 상호 작용하기 위한 예정된 PowerShell 모듈입니다. Az는 짧아진 명령과 향상된 안정성을 제공하며, 여러 플랫폼을 지원합니다. Az는 또한 AzureRM과 기능 패리티를 가지고 있어 간편한 마이그레이션 경로를 제공합니다.
+## <a name="overview"></a>개요
+
+Az PowerShell 모듈은 PowerShell에서 직접 Azure 리소스를 관리하기 위한 cmdlet 세트입니다. PowerShell은 Azure 리소스를 관리(예: CI/CD 파이프라인)하는 데 활용할 수 있는 강력한 자동화 기능을 제공합니다.
+
+Az PowerShell 모듈은 AzureRM을 대체하며 Azure와 상호 작용하는 데 권장되는 버전입니다.
+
+다음 방법 중 하나로 Az PowerShell 모듈을 사용할 수 있습니다.
+
+* [PowerShellGet을 통해 Az PowerShell 모듈을 설치합니다](install-az-ps.md)(권장 옵션).
+* [MSI를 통해 Az PowerShell 모듈을 설치합니다](install-az-ps-msi.md).
+* [Azure Cloud Shell을 사용합니다](/azure/cloud-shell/overview).
+* [Az PowerShell Docker 컨테이너를 사용합니다](azureps-in-docker.md).
+
+## <a name="features"></a>기능
+
+Az PowerShell 모듈은 다음과 같은 이점을 제공합니다.
+
+* 보안 및 안정성
+  * 토큰 캐시 암호화
+  * ADKS 2019 지원
+  * 중간자(man-in-the-middle) 공격을 차단하는 보안 메커니즘
+  * 연속 액세스 평가와 같은 기능 지원(2021년에 도입 예정)
+* 모든 Azure 서비스 지원
+  * 한 모듈을 각 Azure 서비스에 사용 가능
+  * AzureRM 이후 여러 버그 수정 및 API 버전 업그레이드
+* 추가된 여러 가지 새 기능
+  * Cloud Shell 및 플랫폼 간 지원
+  * 액세스 토큰을 가져와서 Azure 리소스에 액세스하는 데 사용 가능
+  * 이스케이프 해치 유형 작업을 위한 일반 Az cmdlet
 
 > [!NOTE]
-> 모든 플랫폼에서 Azure PowerShell과 함께 사용할 것을 권장하는 PowerShell 버전은 PowerShell 7.x 이상입니다.
+> 모든 플랫폼에서 Az PowerShell과 함께 사용할 것을 권장하는 PowerShell 버전은 PowerShell 7 이상입니다.
 
-최신 Az 모듈을 사용하는 Azure PowerShell은 Windows, macOS 및 Linux를 비롯한 모든 플랫폼에서 PowerShell 6.2.4 이상과 함께 작동합니다. Windows에서는 PowerShell 5.1 버전과 호환됩니다.
+Az PowerShell 모듈은 .NET Standard 라이브러리를 기반으로 하며 Windows, macOS 및 Linux를 비롯한 모든 플랫폼에서 PowerShell 7 이상과 함께 작동합니다. Windows PowerShell 5.1과도 호환됩니다.
 
-Az는 새로운 모듈이기 때문에 버전이 1.0.0으로 다시 설정되었습니다.
+저희는 모든 플랫폼에 Azure 지원을 제공하고 모든 Az PowerShell 모듈이 모든 플랫폼에서 작동할 수 있도록 최선을 다하고 있습니다.
 
-## <a name="why-a-new-module"></a>새 모듈인 이유는?
+## <a name="upgrade-your-environment-to-az"></a>현재 환경을 Az로 업그레이드
 
-주요 업데이트는 불편할 수 있으므로 PowerShell의 Azure와 상호 작용할 수 있는 새 cmdlet이 포함된 새 모듈 세트를 도입하기로 결정한 이유를 알 수 있도록 해야 합니다.
+PowerShell의 최신 Azure 기능을 계속 유지하려면 Az 모듈로 마이그레이션해야 합니다. AzureRM에 대한 대체 모듈로 Az 모듈을 설치할 준비가 되지 않았으면 Az를 사용하여 실험할 수 있는 몇 가지 옵션이 있습니다.
 
-가장 크고 중요한 변화는 PowerShell이 [PowerShell](/powershell/scripting/overview)이 도입된 이후 .NET 표준 라이브러리에 기반한 여러 플랫폼에서 사용할 수 있는 제품이 되었다는 것입니다.
-Azure 지원을 모든 플랫폼에 제공하기 위해 노력하고 있습니다. 즉 .NET Standard를 사용하고 PowerShell Core와 호환되도록 Azure PowerShell 모듈을 업데이트해야 합니다. 기존 AzureRM 모듈을 사용하고 이러한 지원을 추가하기 위해 복잡한 변경을 도입하는 대신 Az 모듈을 만들었습니다.
-
-또한 새 모듈을 만듦으로써 엔지니어들이 cmdlet 및 모듈의 디자인과 이름을 일관적으로 유지할 수 있게 되었습니다. 이제 모든 모듈이 `Az.` 접두사로 시작하고, 모든 cmdlet에서 _동사_-`Az`_명사_ 형식을 사용합니다. 이전에는 cmdlet 이름이 더 길었을 뿐 아니라 cmdlet 이름이 일치하지 않았습니다.
-
-모듈 수도 감소했습니다. 동일한 서비스에서 작동하는 일부 모듈이 함께 출시되었습니다. 이제 관리 평면 및 데이터 평면 cmdlet은 해당 서비스의 단일 모듈에 모두 포함됩니다. 종속성 및 가져오기를 수동으로 관리하는 사용자에게는 이 작업이 훨씬 간단해집니다.
-
-팀에서 새 Azure PowerShell 모듈을 구축하는 데 필요한 중요한 작업을 변경함으로써 그 어느 때보다 훨씬 쉽고, 더 많은 플랫폼에서 PowerShell cmdlet을 통해 Azure를 사용할 수 있도록 노력했습니다.
-
-## <a name="upgrade-to-az"></a>Az로 업그레이드
-
-PowerShell의 최신 Azure 기능을 계속 유지하려면 가능한 한 빨리 Az 모듈로 마이그레이션해야 합니다. AzureRM에 대한 대체 모듈로 Az 모듈을 설치할 준비가 되지 않았으면 Az를 사용하여 실험할 수 있는 몇 가지 옵션이 있습니다.
-
-- [Azure Cloud Shell](/azure/cloud-shell/overview)이 있는 `PowerShell` 환경을 사용합니다. Azure Cloud Shell은 Az 모듈이 설치되고 `Enable-AzureRM` 호환성 별칭을 사용하도록 설정된 상태로 제공되는 브라우저 기반 셸 환경입니다.
-- Windows용 PowerShell 5.1과 함께 설치된 AzureRM 모듈을 유지하는 한편, PowerShell 6.2.4 이상용 Az 모듈을 설치합니다. Windows용 PowerShell 5.1과 PowerShell 6.2.4 이상은 별도의 모듈 컬렉션을 사용합니다. 지침에 따라 [최신 버전의 PowerShell](/powershell/scripting/install/installing-powershell)을 설치한 다음, PowerShell 6.2.4 이상에서 [Az 모듈을 설치](install-az-ps.md)합니다.
+* [Azure Cloud Shell](/azure/cloud-shell/overview)이 있는 `PowerShell` 환경을 사용합니다. Azure Cloud Shell은 Az 모듈이 설치되고 `Enable-AzureRM` 호환성 별칭을 사용하도록 설정된 상태로 제공되는 브라우저 기반 셸 환경입니다.
+* Windows PowerShell 5.1에서 설치한 AzureRM 모듈을 그대로 두고 PowerShell 7 이상에서 Az 모듈을 설치하세요. Windows PowerShell 5.1과 PowerShell 7 이상은 별도의 모듈 컬렉션을 사용합니다. 지침에 따라 [최신 버전의 PowerShell](/powershell/scripting/install/installing-powershell)을 설치한 다음, PowerShell 7 이상에서 [Az 모듈을 설치](install-az-ps.md)합니다.
 
 기존 AzureRM 설치에서 업그레이드하려면 다음을 수행합니다.
 
 1. [Azure PowerShell AzureRM 모듈 제거](/powershell/azure/uninstall-az-ps#uninstall-the-azurerm-module)
-2. [Azure PowerShell Az 모듈 설치](install-az-ps.md)
-3. **선택 사항**: 새 명령 집합을 습득하면서 [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias)를 사용하여 AzureRM cmdlet에 대한 별칭을 추가할 수 있는 호환성 모드를 사용하도록 설정합니다. 자세한 내용은 다음 섹션 또는 [AzureRM에서 Az로 마이그레이션 시작](migrate-from-azurerm-to-az.md)을 참조하세요.
+1. [Azure PowerShell Az 모듈 설치](install-az-ps.md)
+1. **선택 사항**: 새 명령 집합을 습득하면서 [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias)를 사용하여 AzureRM cmdlet에 대한 별칭을 추가할 수 있는 호환성 모드를 사용하도록 설정합니다. 자세한 내용은 다음 섹션 또는 [AzureRM에서 Az로 마이그레이션 시작](migrate-from-azurerm-to-az.md)을 참조하세요.
 
-## <a name="migrate-existing-scripts-to-az"></a>기존 스크립트를 Az로 마이그레이션
+## <a name="migrate-existing-scripts-from-azurerm-to-az"></a>기존 스크립트를 AzureRM에서 Az로 마이그레이션
 
-새로운 cmdlet 이름은 쉽게 익힐 수 있도록 되었습니다. cmdlet 이름에 `AzureRm` 또는 `Azure`를 사용하는 대신 `Az`를 사용합니다. 예를 들어, 이전 명령 `New-AzureRMVm`은 `New-AzVm`이 됩니다.
-마이그레이션은 단순히 새 cmdlet 이름을 습득하는 데서 그치지 않습니다. 이름이 바뀐 모듈, 매개 변수 및 기타 중요한 변경이 있습니다.
+스크립트가 여전히 AzureRM 모듈을 기반으로 하는 분들을 위해 마이그레이션에 도움이 되는 다음과 같은 몇 가지 리소스를 준비해 두었습니다.
 
-AzureRM에서 Az로 마이그레이션하는 프로세스를 도와주기 위해 다음과 같이 여러 리소스가 준비되어 있습니다.
+* [AzureRM에서 Az로 마이그레이션 시작](migrate-from-azurerm-to-az.md)
+* [AzureRM에서 Az 1.0.0으로의 호환성이 손상되는 변경 전체 목록](migrate-az-1.0.0.md)
+* [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias) cmdlet
 
-- [AzureRM에서 Az로 마이그레이션 시작](migrate-from-azurerm-to-az.md)
-- [AzureRM에서 Az 1.0.0으로의 호환성이 손상되는 변경 전체 목록](migrate-az-1.0.0.md)
-- [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias) cmdlet
+## <a name="supportability"></a>지원 가능성
 
-Az 모듈에는 새 구문으로 업데이트하는 동안 기존 스크립트를 사용할 수 있게 하는 호환성 모드가 있습니다. [Enable-AzureRmAlias](/powershell/module/az.accounts/enable-azurermalias) cmdlet은 별칭을 통해 호환성 모드를 사용하도록 설정하여 Az로의 전체 마이그레이션을 수행하는 동안 최소한의 수정으로 기존 스크립트를 사용할 수 있게 합니다. 기본적으로 `Enable-AzureRmAlias`는 현재 PowerShell 세션에만 호환성 별칭을 사용하도록 설정합니다. PowerShell 세션 전체에서 호환성 별칭을 유지하려면 `Scope` 매개 변수를 사용합니다. 자세한 내용은 [Enable-AzureRmAlias 참조 설명서](/powershell/module/az.accounts/enable-azurermalias)를 확인하세요.
+Az는 가장 최신 버전의 Azure용 PowerShell 모듈입니다. 문제 또는 기능 요청은 [GitHub 리포지토리](https://github.com/Azure/azure-powershell)에서 직접 기록할 수 있습니다. 또는 지원 계약을 맺은 경우에는 Microsoft 지원을 통해 기록할 수 있습니다. 기능 요청은 최신 버전의 Az에서 구현됩니다. 중요한 문제는 Az의 마지막 두 개 버전에서 구현됩니다.
 
-> [!IMPORTANT]
-> cmdlet 이름이 별칭으로 지정되어 있더라도 여전히 Az cmdlet에 대한 새(또는 이름이 바뀐) 매개 변수가 있거나 반환 값이 변경되었을 수 있습니다. 별칭을 사용하도록 설정하여 마이그레이션을 처리할 것으로 기대하지 마세요! 업데이트가 필요할 수 있는 스크립트의 위치를 찾으려면 [호환성이 손상되는 변경 전체 목록](migrate-az-1.0.0.md)을 참조하세요.
+AzureRM은 더 이상 새 cmdlet 또는 기능을 받지 않습니다. 그러나 AzureRM 모듈은 여전히 공식적으로 유지되며 2020년 2월까지 중요한 수정이 이루어집니다.
 
-## <a name="continued-support-for-azurerm"></a>지속적인 AzureRM 지원
+## <a name="data-collection"></a>데이터 수집
 
-AzureRM은 더 이상 새 cmdlet 또는 기능을 받지 않습니다. 그러나 AzureRM 모듈은 여전히 공식적으로 유지되며 2020년 12월까지 버그 수정도 이루어집니다.
+Azure PowerShell은 기본적으로 원격 분석 데이터를 수집합니다. Microsoft는 수집된 데이터를 집계하여 사용 패턴을 식별하고, 일반적인 문제를 식별하고, Azure PowerShell 환경을 개선시킵니다.
+Microsoft Azure PowerShell은 프라이빗 또는 개인 데이터를 수집하지 않습니다. 예를 들어 사용 데이터는 성공률이 낮은 cmdlet과 같은 문제를 식별하고 작업의 우선 순위를 지정하는 데 도움이 됩니다.
+
+이 데이터가 제공하는 인사이트가 많은 도움이 되지만, 사용 데이터를 제공하는 데 찬성하지 않는 분들도 있다는 것을 잘 알고 있습니다. [`Disable-AzDataCollection`](/powershell/module/az.accounts/disable-azdatacollection) cmdlet을 사용하여 데이터 수집을 사용하지 않도록 설정할 수 있습니다. [개인정보처리방침](https://privacy.microsoft.com/privacystatement)에서 자세한 내용을 확인할 수 있습니다.
