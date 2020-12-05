@@ -6,12 +6,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: d7f5b75f195f6315fc65666647c407795f5c6956
-ms.sourcegitcommit: cd243c8f6dc02dbd6234e764b065643dfd31dd8b
+ms.openlocfilehash: a3b74531ff71ed0e9ac473831b71efb6f29d6e66
+ms.sourcegitcommit: 7887e040bdeb2f55c035a3169cd0d9d807ab186e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/02/2020
-ms.locfileid: "96502609"
+ms.locfileid: "96536547"
 ---
 # <a name="introducing-the-azure-az-powershell-module"></a>Azure Az PowerShell 모듈 소개
 
@@ -34,7 +34,7 @@ Az PowerShell 모듈은 다음과 같은 이점을 제공합니다.
 
 * 보안 및 안정성
   * 토큰 캐시 암호화
-  * ADKS 2019 지원
+  * ADFS 2019 지원
   * 중간자(man-in-the-middle) 공격을 차단하는 보안 메커니즘
   * 연속 액세스 평가와 같은 기능 지원(2021년에 도입 예정)
 * 모든 Azure 서비스 지원
