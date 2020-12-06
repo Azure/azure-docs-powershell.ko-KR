@@ -6,12 +6,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: a3b74531ff71ed0e9ac473831b71efb6f29d6e66
-ms.sourcegitcommit: 7887e040bdeb2f55c035a3169cd0d9d807ab186e
+ms.openlocfilehash: d922affd608ebfce41f9608ec82d565d6afe9f7f
+ms.sourcegitcommit: 3ef9f7f6c20af98282a0499b1527c291ee54011b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96536547"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617722"
 ---
 # <a name="introducing-the-azure-az-powershell-module"></a>Azure Az PowerShell 모듈 소개
 
@@ -77,7 +77,7 @@ PowerShell의 최신 Azure 기능을 계속 유지하려면 Az 모듈로 마이�
 
 Az는 가장 최신 버전의 Azure용 PowerShell 모듈입니다. 문제 또는 기능 요청은 [GitHub 리포지토리](https://github.com/Azure/azure-powershell)에서 직접 기록할 수 있습니다. 또는 지원 계약을 맺은 경우에는 Microsoft 지원을 통해 기록할 수 있습니다. 기능 요청은 최신 버전의 Az에서 구현됩니다. 중요한 문제는 Az의 마지막 두 개 버전에서 구현됩니다.
 
-AzureRM은 더 이상 새 cmdlet 또는 기능을 받지 않습니다. 그러나 AzureRM 모듈은 여전히 공식적으로 유지되며 2020년 2월까지 중요한 수정이 이루어집니다.
+AzureRM은 더 이상 새 cmdlet 또는 기능을 받지 않습니다. 그러나 AzureRM 모듈은 여전히 공식적으로 유지 관리되며 2021년 2월까지 중요한 수정이 이루어집니다.
 
 ## <a name="data-collection"></a>데이터 수집
 
