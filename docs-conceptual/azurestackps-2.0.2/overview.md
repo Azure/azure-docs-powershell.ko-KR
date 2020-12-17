@@ -8,12 +8,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 08/06/2020
-ms.openlocfilehash: 10eaf23e5134ea9788a81477038d735fe3bd59e0
-ms.sourcegitcommit: 071b8c40c837ed4b2d65ce778339110d9e0899ab
+ms.openlocfilehash: ec4591e4f44fa56b7482d2dec3f525cb02dbd94b
+ms.sourcegitcommit: a24069b411d3a6011067770430b6dcdd4b2c2159
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96426989"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97532262"
 ---
 # <a name="azure-stack-hub-module-202"></a>Azure Stack Hub 모듈 2.0.2
 
@@ -31,7 +31,7 @@ Get-Module -Name Azure* -ListAvailable | Uninstall-Module -Force -Verbose -Error
 Get-Module -Name Azs.* -ListAvailable | Uninstall-Module -Force -Verbose -ErrorAction Continue
 Get-Module -Name Az.* -ListAvailable | Uninstall-Module -Force -Verbose -ErrorAction Continue
 
-Install-Module -Name Az.BootStrapper -Force -AllowPrerelease
+Install-Module -Name Az.BootStrapper -Force -AllowPrerelease -SkipPublisherCheck
 
 # Install and import the API Version Modules required by Azure Stack into the current PowerShell session.
 Use-AzProfile -Profile 2019-03-01-hybrid -Force

@@ -4,14 +4,14 @@ description: AzureRM에서 새 Az PowerShell 모듈로 Azure PowerShell 스크�
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
-ms.date: 12/1/2020
-ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: bc37d0b73db0e6df226788795730730c077fcefa
-ms.sourcegitcommit: 04221336bc9eed46c05ed1e828a6811534d4b4ab
+ms.date: 12/15/2020
+ms.custom: devx-track-azurepowershell, contperf-fy21q2
+ms.openlocfilehash: 6bccaf9a628f67b8945516bae70f07939cdce8f7
+ms.sourcegitcommit: a24069b411d3a6011067770430b6dcdd4b2c2159
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96856778"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97532245"
 ---
 # <a name="migrate-azure-powershell-from-azurerm-to-az"></a>Azure PowerShell을 AzureRM에서 Az로 마이그레이션
 
@@ -91,5 +91,5 @@ Az 모듈에는 새 구문으로 업데이트하는 동안 기존 스크립트�
 
 ## <a name="next-steps"></a>다음 단계
 
-[AzureRM 제거](uninstall-az-ps.md#uninstall-the-azurerm-module)
-[Azure PowerShell 설치](install-az-ps.md)
+* [AzureRM 제거](uninstall-az-ps.md#uninstall-the-azurerm-module)
+* [Azure PowerShell 설치](install-az-ps.md)
