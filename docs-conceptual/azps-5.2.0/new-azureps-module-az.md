@@ -6,12 +6,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: d922affd608ebfce41f9608ec82d565d6afe9f7f
-ms.sourcegitcommit: 04221336bc9eed46c05ed1e828a6811534d4b4ab
+ms.openlocfilehash: 9021a1d8fdc73aedb87b17631f8e67cb8ef79166
+ms.sourcegitcommit: a6d92493a8d1b81b85f4db2a38f271134be5e6c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96856418"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97353855"
 ---
 # <a name="introducing-the-azure-az-powershell-module"></a>Azure Az PowerShell 모듈 소개
 
@@ -34,16 +34,17 @@ Az PowerShell 모듈은 다음과 같은 이점을 제공합니다.
 
 * 보안 및 안정성
   * 토큰 캐시 암호화
-  * ADFS 2019 지원
-  * 중간자(man-in-the-middle) 공격을 차단하는 보안 메커니즘
+  * 중간자(man-in-the-middle) 공격 유형 방지
+  * ADFS 2019를 사용한 인증 지원
+  * PowerShell 7의 사용자 이름 및 암호 인증
   * 연속 액세스 평가와 같은 기능 지원(2021년에 도입 예정)
 * 모든 Azure 서비스 지원
-  * 한 모듈을 각 Azure 서비스에 사용 가능
+  * 일반적으로 사용 가능한 모든 Azure 서비스에는 각각의 지원 PowerShell 모듈이 있습니다.
   * AzureRM 이후 여러 버그 수정 및 API 버전 업그레이드
-* 추가된 여러 가지 새 기능
+* 새로운 기능
   * Cloud Shell 및 플랫폼 간 지원
   * 액세스 토큰을 가져와서 Azure 리소스에 액세스하는 데 사용 가능
-  * 이스케이프 해치 유형 작업을 위한 일반 Az cmdlet
+  * Azure 리소스를 사용하여 고급 REST 작업에 사용할 수 있는 cmdlet
 
 > [!NOTE]
 > 모든 플랫폼에서 Az PowerShell과 함께 사용할 것을 권장하는 PowerShell 버전은 PowerShell 7 이상입니다.

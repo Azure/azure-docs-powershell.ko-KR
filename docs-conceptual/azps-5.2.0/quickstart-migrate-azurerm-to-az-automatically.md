@@ -6,13 +6,13 @@ ms.service: azure-powershell
 ms.topic: quickstart
 ms.custom: devx-track-azurepowershell
 ms.author: mirobb
-ms.date: 09/11/2020
-ms.openlocfilehash: 5945b573d467f1ff64e327c52124ffed1e4305aa
-ms.sourcegitcommit: 04221336bc9eed46c05ed1e828a6811534d4b4ab
+ms.date: 12/10/2020
+ms.openlocfilehash: 6752fa0376c2f8887511455f56add0859f8961c8
+ms.sourcegitcommit: 076ff98abc48e072eb1727532817487bac7507c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96856394"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97488532"
 ---
 # <a name="quickstart-automatically-migrate-powershell-scripts-from-azurerm-to-the-az-powershell-module"></a>빠른 시작: AzureRM에서 Az PowerShell 모듈로 PowerShell 스크립트 자동 마이그레이션
 
@@ -20,8 +20,6 @@ ms.locfileid: "96856394"
 
 > [!IMPORTANT]
 > Az.Tools.Migration PowerShell 모듈은 현재 공개 미리 보기로 제공됩니다. 이 미리 보기 버전은 서비스 수준 계약 없이 제공됩니다. 프로덕션 워크로드에는 권장되지 않습니다. 특정 기능이 지원되지 않거나 기능이 제한될 수 있습니다. 자세한 내용은 [Microsoft Azure Preview에 대한 추가 사용 약관](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)을 참조하세요.
-
-`azure-powershell-migration` 리포지토리에서 [GitHub 문제](https://github.com/Azure/azure-powershell-migration/issues)를 통해 Az.Tools.Migration PowerShell 모듈에 대한 피드백 및 문제를 보고합니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -34,57 +32,109 @@ ms.locfileid: "96856394"
 
 ## <a name="step-1-generate-an-upgrade-plan"></a>1단계: 업그레이드 계획 생성
 
-`New-AzUpgradeModulePlan` cmdlet을 사용하여 스크립트 및 모듈을 Az PowerShell 모듈로 마이그레이션하기 위한 업그레이드 계획을 생성할 수 있습니다. 업그레이드 계획에는 AzureRM에서 Az PowerShell cmdlet으로 이동할 때 변경이 필요한 특정 파일 및 오프셋 포인트가 자세히 설명되어 있습니다.
+**`New-AzUpgradeModulePlan`** cmdlet을 사용하여 스크립트 및 모듈을 Az PowerShell 모듈로 마이그레이션하기 위한 업그레이드 계획을 생성할 수 있습니다. 이 cmdlet은 기존 스크립트를 변경하지 않습니다. 특정 스크립트를 대상으로 하는 **`FilePath`** 매개 변수를 사용하고 특정 폴더의 모든 스크립트를 대상으로 하려면 **`DirectoryPath`** 매개 변수를 사용합니다.
 
 > [!NOTE]
-> `New-AzUpgradeModulePlan` cmdlet은 계획을 실행하지 않고 업그레이드 단계만 생성합니다.
+> **`New-AzUpgradeModulePlan`** cmdlet은 계획을 실행하지 않고 업그레이드 단계만 생성합니다.
 
-```powershell
-#  Generate an upgrade plan for the specified PowerShell script and save it to a variable.
-$Plan = New-AzUpgradeModulePlan -FromAzureRmVersion 6.13.1 -ToAzVersion 4.6.1 -FilePath 'C:\Scripts\my-azure-script.ps1'
-```
+다음 예에서는 _`C:\Scripts`_ 폴더에 있는 모든 스크립트에 대한 계획을 생성합니다. **`OutVariable`** 매개 변수가 지정되었으므로 결과가 반환되고 **`Plan`** 이라는 변수에 동시에 저장됩니다.
 
 ```powershell
 # Generate an upgrade plan for all the scripts and module files in the specified folder and save it to a variable.
-$Plan = New-AzUpgradeModulePlan -FromAzureRmVersion 6.13.1 -ToAzVersion 4.6.1 -DirectoryPath 'C:\Scripts'
+New-AzUpgradeModulePlan -FromAzureRmVersion 6.13.1 -ToAzVersion 4.6.1 -DirectoryPath 'C:\Scripts' -OutVariable Plan
 ```
 
-업그레이드 계획 결과를 검토합니다.
+다음 출력에서 볼 수 있듯이 업그레이드 계획에는 AzureRM에서 Az PowerShell cmdlet으로 이동할 때 변경이 필요한 특정 파일 및 오프셋 포인트가 자세히 설명되어 있습니다.
 
-```powershell
-# Show the entire upgrade plan
-$Plan
+```Output
+Order Location                                                   UpgradeType     PlanResult             Original
+----- --------                                                   -----------     ----------             --------
+1     compute-create-dockerhost.ps1:59:24                        CmdletParameter ReadyToUpgrade         ExtensionName
+2     compute-create-dockerhost.ps1:59:1                         Cmdlet          ReadyToUpgrade         Set-AzureRmVM...
+3     compute-create-dockerhost.ps1:54:1                         Cmdlet          ReadyToUpgrade         New-AzureRmVM
+4     compute-create-dockerhost.ps1:51:1                         Cmdlet          ReadyToUpgrade         Add-AzureRmVM...
+5     compute-create-dockerhost.ps1:47:1                         Cmdlet          ReadyToUpgrade         Add-AzureRmVM...
+6     compute-create-dockerhost.ps1:46:1                         Cmdlet          ReadyToUpgrade         Set-AzureRmVM...
+7     compute-create-dockerhost.ps1:45:1                         Cmdlet          ReadyToUpgrade         Set-AzureRmVM...
+8     compute-create-dockerhost.ps1:44:13                        Cmdlet          ReadyToUpgrade         New-AzureRmVM...
+9     compute-create-dockerhost.ps1:40:8                         Cmdlet          ReadyToUpgrade         New-AzureRmNe...
+10    compute-create-dockerhost.ps1:36:8                         Cmdlet          ReadyToUpgrade         New-AzureRmNe...
+11    compute-create-dockerhost.ps1:31:16                        Cmdlet          ReadyToUpgrade         New-AzureRmNe...
+12    compute-create-dockerhost.ps1:26:15                        Cmdlet          ReadyToUpgrade         New-AzureRmNe...
+13    compute-create-dockerhost.ps1:22:8                         Cmdlet          ReadyToUpgrade         New-AzureRmPu...
+14    compute-create-dockerhost.ps1:18:9                         Cmdlet          ReadyToUpgrade         New-AzureRmVi...
+15    compute-create-dockerhost.ps1:15:17                        Cmdlet          ReadyToUpgrade         New-AzureRmVi...
+16    compute-create-dockerhost.ps1:12:1                         Cmdlet          ReadyToUpgrade         New-AzureRmRe...
+17    compute-create-windowsvm-quick.ps1:18:3                    CmdletParameter ReadyToUpgrade         ImageName
+18    compute-create-windowsvm-quick.ps1:14:1                    Cmdlet          ReadyToUpgrade         New-AzureRmVM
+19    compute-create-windowsvm-quick.ps1:11:1                    Cmdlet          ReadyToUpgrade         New-AzureRmRe...
+20    compute-create-wordpress-mysql.ps1:59:24                   CmdletParameter ReadyToUpgrade         ExtensionName
+...
 ```
 
-다음 명령을 실행하여 경고나 오류가 발생한 명령에 대한 결과를 필터링합니다. 업그레이드를 수행하기 전에 큰 결과 집합에서 오류를 신속하게 식별하는 데 도움이 될 수 있습니다.
+업그레이드를 수행하기 전에 계획 결과를 보고 문제를 해결해야 합니다. 다음 예에서는 스크립트와 해당 스크립트의 항목 목록을 반환하여 스크립트가 자동으로 업그레이드되지 않도록 합니다.
 
 ```powershell
 # Filter plan results to only warnings and errors
 $Plan | Where-Object PlanResult -ne ReadyToUpgrade | Format-List
 ```
 
+다음 출력에 표시된 항목은 문제를 먼저 수동으로 수정하지 않으면 자동으로 업그레이드되지 않습니다. 자동으로 업그레이드할 수 없는 알려진 문제에는 스플래팅을 사용하는 명령이 있습니다.
+
+```Output
+Order                  : 42
+UpgradeType            : CmdletParameter
+PlanResult             : ErrorParameterNotFound
+PlanSeverity           : Error
+PlanResultReason       : Parameter was not found in Get-AzResource or it's aliases.
+SourceCommand          : CommandReference
+SourceCommandParameter : CommandReferenceParameter
+Location               : devtestlab-add-marketplace-image-to-lab.ps1:14:74
+FullPath               : C:\Scripts\devtestlab-add-marketplace-image-to-lab.ps1
+StartOffset            : 556
+Original               : ResourceNameEquals
+Replacement            :
+```
+
 ## <a name="step-2-perform-the-upgrade"></a>2단계: 업그레이드 수행
-
-업그레이드 계획은 `Invoke-AzUpgradeModulePlan` cmdlet을 실행할 때 실행됩니다. 이 명령은 `New-AzUpgradeModulePlan` cmdlet에 의해 식별된 오류를 제외하고 지정된 파일 또는 폴더의 업그레이드를 수행합니다.
-
-이 명령을 사용하려면 파일을 수정할지 또는 새 파일을 원본 파일과 함께 저장할지를 지정해야 합니다(원본은 그대로 둠).
 
 > [!CAUTION]
 > 실행 취소 작업은 없습니다. 업그레이드하려는 PowerShell 스크립트 및 모듈의 백업 복사본이 항상 있는지 확인합니다.
 
+계획에 만족하면 **`Invoke-AzUpgradeModulePlan`** cmdlet으로 업그레이드가 수행됩니다. 원래 스크립트가 변경되지 않도록 하려면 **`FileEditMode`** 매개 변수 값에서 **`SaveChangesToNewFiles`** 를 지정합니다. 이 모드를 사용하는 경우 파일 이름에 _`_az_upgraded`_ 가 추가된 각 스크립트의 복사본을 생성하여 업그레이드를 수행합니다.
+
 > [!WARNING]
-> `-FileEditMode ModifyExistingFiles` 옵션이 지정되면 `Invoke-AzUpgradeModulePlan` cmdlet은 파괴적입니다! `New-AzUpgradeModulePlan` cmdlet에 의해 생성된 모듈 업그레이드 계획에 따라 스크립트 및 함수를 수정합니다. 비파괴적 옵션의 경우 `-FileEditMode SaveChangesToNewFiles`를 대신 지정합니다.
+> **`-FileEditMode ModifyExistingFiles`** 옵션이 지정되면 **`Invoke-AzUpgradeModulePlan`** cmdlet은 파괴적입니다. **`New-AzUpgradeModulePlan`** cmdlet에 의해 생성된 모듈 업그레이드 계획에 따라 스크립트 및 함수를 수정합니다. 비파괴적 옵션의 경우 **`-FileEditMode SaveChangesToNewFiles`** 를 대신 지정합니다.
 
 ```powershell
 # Execute the automatic upgrade plan and save the results to a variable.
-$Results = Invoke-AzUpgradeModulePlan -Plan $Plan -FileEditMode SaveChangesToNewFiles
+Invoke-AzUpgradeModulePlan -Plan $Plan -FileEditMode SaveChangesToNewFiles -OutVariable Results
 ```
 
-업그레이드 작업 결과를 검토합니다.
-
-```powershell
-# Show the results for the entire upgrade operation
-$Results
+```Output
+Order Location                                                   UpgradeType     UpgradeResult    Original
+----- --------                                                   -----------     -------------    --------
+1     compute-create-dockerhost.ps1:59:24                        CmdletParameter UpgradeCompleted ExtensionName
+2     compute-create-dockerhost.ps1:59:1                         Cmdlet          UpgradeCompleted Set-AzureRmVMExtens...
+3     compute-create-dockerhost.ps1:54:1                         Cmdlet          UpgradeCompleted New-AzureRmVM
+4     compute-create-dockerhost.ps1:51:1                         Cmdlet          UpgradeCompleted Add-AzureRmVMSshPub...
+5     compute-create-dockerhost.ps1:47:1                         Cmdlet          UpgradeCompleted Add-AzureRmVMNetwor...
+6     compute-create-dockerhost.ps1:46:1                         Cmdlet          UpgradeCompleted Set-AzureRmVMSource...
+7     compute-create-dockerhost.ps1:45:1                         Cmdlet          UpgradeCompleted Set-AzureRmVMOperat...
+8     compute-create-dockerhost.ps1:44:13                        Cmdlet          UpgradeCompleted New-AzureRmVMConfig
+9     compute-create-dockerhost.ps1:40:8                         Cmdlet          UpgradeCompleted New-AzureRmNetworkI...
+10    compute-create-dockerhost.ps1:36:8                         Cmdlet          UpgradeCompleted New-AzureRmNetworkS...
+11    compute-create-dockerhost.ps1:31:16                        Cmdlet          UpgradeCompleted New-AzureRmNetworkS...
+12    compute-create-dockerhost.ps1:26:15                        Cmdlet          UpgradeCompleted New-AzureRmNetworkS...
+13    compute-create-dockerhost.ps1:22:8                         Cmdlet          UpgradeCompleted New-AzureRmPublicIp...
+14    compute-create-dockerhost.ps1:18:9                         Cmdlet          UpgradeCompleted New-AzureRmVirtualN...
+15    compute-create-dockerhost.ps1:15:17                        Cmdlet          UpgradeCompleted New-AzureRmVirtualN...
+16    compute-create-dockerhost.ps1:12:1                         Cmdlet          UpgradeCompleted New-AzureRmResource...
+17    compute-create-windowsvm-quick.ps1:18:3                    CmdletParameter UpgradeCompleted ImageName
+18    compute-create-windowsvm-quick.ps1:14:1                    Cmdlet          UpgradeCompleted New-AzureRmVM
+19    compute-create-windowsvm-quick.ps1:11:1                    Cmdlet          UpgradeCompleted New-AzureRmResource...
+20    compute-create-wordpress-mysql.ps1:59:24                   CmdletParameter UpgradeCompleted ExtensionName
+...
 ```
 
 오류가 반환되면 다음 명령을 사용하여 오류 결과를 자세히 살펴볼 수 있습니다.
@@ -94,12 +144,31 @@ $Results
 $Results | Where-Object UpgradeResult -ne UpgradeCompleted | Format-List
 ```
 
+```Output
+Order                  : 42
+UpgradeType            : CmdletParameter
+UpgradeResult          : UnableToUpgrade
+UpgradeSeverity        : Error
+UpgradeResultReason    : Parameter was not found in Get-AzResource or it's aliases.
+SourceCommand          : CommandReference
+SourceCommandParameter : CommandReferenceParameter
+Location               : devtestlab-add-marketplace-image-to-lab.ps1:14:74
+FullPath               : C:\Scripts\devtestlab-add-marketplace-image-to-lab.ps1
+StartOffset            : 556
+Original               : ResourceNameEquals
+Replacement            :
+```
+
 ## <a name="limitations"></a>제한 사항
 
 * 스플랫(splat)된 매개 변수 집합에 대한 자동화된 매개 변수 이름 업데이트는 지원되지 않습니다. 업그레이드 계획 생성 중에 발견되면 경고가 반환됩니다.
 * 파일 I/O 작업은 기본 인코딩을 사용합니다. 비정상적인 파일 인코딩 상황으로 인해 문제가 발생할 수 있습니다.
 * Pester 단위 테스트 모의 문에 인수로 전달된 AzureRM cmdlet은 검색되지 않습니다.
 * 현재 Az PowerShell 모듈 버전 4.6.1만 대상으로 지원됩니다.
+
+## <a name="how-to-report-issues"></a>문제를 보고하는 방법
+
+`azure-powershell-migration` 리포지토리에서 [GitHub 문제](https://github.com/Azure/azure-powershell-migration/issues)를 통해 Az.Tools.Migration PowerShell 모듈에 대한 피드백 및 문제를 보고합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
