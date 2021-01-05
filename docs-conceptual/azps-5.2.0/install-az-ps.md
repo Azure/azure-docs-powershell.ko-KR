@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.date: 05/14/2020
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: f7a1658cdcafd1e8d6cba51ead26f9ddaa8c4c56
-ms.sourcegitcommit: 04221336bc9eed46c05ed1e828a6811534d4b4ab
+ms.openlocfilehash: ae26b84ecf02ff90ddfbbc2960aed448f37f2a6a
+ms.sourcegitcommit: e4f2cb406f0ea7bcdb48e130966eabba4d0f9a67
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96856819"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665442"
 ---
 # <a name="install-azure-powershell"></a>Azure Powershell 설치
 
@@ -44,6 +44,8 @@ Windows의 PowerShell 5.1에서 Azure PowerShell을 사용하려면 다음을 �
 > [!WARNING]
 > Windows에서 PowerShell 5.1용 AzureRM과 Az 모듈을 동시에 설치할 수 없습니다. 시스템에서 AzureRM을 사용할 수 있도록 유지해야 하는 경우 PowerShell 6.2.4 이상용 Az 모듈을 설치합니다.
 
+### <a name="install-for-current-user"></a>현재 사용자용 설치
+
 기본 설치 방법은 PowerShellGet cmdlet을 사용하는 것입니다. 현재 사용자에 대해서만 Az 모듈을 설치합니다. 이는 추천되는 설치 방법입니다. 이 방법은 Windows, macOS 및 Linux 플랫폼에서 동일하게 작동합니다. PowerShell 세션에서 다음 명령을 실행합니다.
 
 ```powershell-interactive
@@ -68,6 +70,8 @@ Are you sure you want to install the modules from 'PSGallery'?
 ```
 
 설치를 계속하려면 `Yes` 또는 `Yes to All`로 답변합니다.
+
+### <a name="install-for-all-users"></a>모든 사용자용 설치
 
 시스템의 모든 사용자에 대해 모듈을 설치하려면 관리자 권한이 필요합니다. Windows에서 **관리자 권한으로 실행** 을 사용하여 PowerShell 세션을 시작하거나 macOS 또는 Linux에서 `sudo` 명령을 사용합니다.
 
