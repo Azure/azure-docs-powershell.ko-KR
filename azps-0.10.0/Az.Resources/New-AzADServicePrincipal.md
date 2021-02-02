@@ -6,132 +6,132 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzADServicePrincipal.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzADServicePrincipal.md
-ms.openlocfilehash: 96ff12056167adaabcb828e2fedfe0c78d59e963
-ms.sourcegitcommit: 375232b84336ef5e13052504deaa43f5bd4b7f65
+ms.openlocfilehash: cd82db28fbf9902b0dedf9415290d769db3ea231
+ms.sourcegitcommit: e680033f216d86cd91a1dfdb8328d32f4c99d21a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "94311723"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251594"
 ---
-# <span data-ttu-id="f15ae-101">New-AzADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="f15ae-101">New-AzADServicePrincipal</span></span>
+# <span data-ttu-id="1079f-101">New-AzADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="1079f-101">New-AzADServicePrincipal</span></span>
 
-## <span data-ttu-id="f15ae-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="f15ae-102">SYNOPSIS</span></span>
-<span data-ttu-id="f15ae-103">새 azure active directory service principal을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-103">Creates a new azure active directory service principal.</span></span>
+## <span data-ttu-id="1079f-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="1079f-102">SYNOPSIS</span></span>
+<span data-ttu-id="1079f-103">새 Azure Active Directory 서비스 주체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-103">Creates a new azure active directory service principal.</span></span>
 
-## <span data-ttu-id="f15ae-104">구문과</span><span class="sxs-lookup"><span data-stu-id="f15ae-104">SYNTAX</span></span>
+## <span data-ttu-id="1079f-104">구문</span><span class="sxs-lookup"><span data-stu-id="1079f-104">SYNTAX</span></span>
 
-### <span data-ttu-id="f15ae-105">SimpleParameterSet (기본값)</span><span class="sxs-lookup"><span data-stu-id="f15ae-105">SimpleParameterSet (Default)</span></span>
+### <span data-ttu-id="1079f-105">SimpleParameterSet(기본값)</span><span class="sxs-lookup"><span data-stu-id="1079f-105">SimpleParameterSet (Default)</span></span>
 ```
 New-AzADServicePrincipal [-ApplicationId <Guid>] [-DisplayName <String>] [-Password <SecureString>]
  [-StartDate <DateTime>] [-EndDate <DateTime>] [-Scope <String>] [-Role <String>] [-SkipAssignment]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="f15ae-106">ApplicationWithoutCredentialParameterSet</span><span class="sxs-lookup"><span data-stu-id="f15ae-106">ApplicationWithoutCredentialParameterSet</span></span>
+### <span data-ttu-id="1079f-106">ApplicationWithoutCredentialParameterSet</span><span class="sxs-lookup"><span data-stu-id="1079f-106">ApplicationWithoutCredentialParameterSet</span></span>
 ```
 New-AzADServicePrincipal -ApplicationId <Guid> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="f15ae-107">ApplicationWithPasswordPlainParameterSet</span><span class="sxs-lookup"><span data-stu-id="f15ae-107">ApplicationWithPasswordPlainParameterSet</span></span>
+### <span data-ttu-id="1079f-107">ApplicationWithPasswordPlainParameterSet</span><span class="sxs-lookup"><span data-stu-id="1079f-107">ApplicationWithPasswordPlainParameterSet</span></span>
 ```
 New-AzADServicePrincipal -ApplicationId <Guid> -Password <SecureString> [-StartDate <DateTime>]
  [-EndDate <DateTime>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="f15ae-108">ApplicationWithPasswordCredentialParameterSet</span><span class="sxs-lookup"><span data-stu-id="f15ae-108">ApplicationWithPasswordCredentialParameterSet</span></span>
+### <span data-ttu-id="1079f-108">ApplicationWithPasswordCredentialParameterSet</span><span class="sxs-lookup"><span data-stu-id="1079f-108">ApplicationWithPasswordCredentialParameterSet</span></span>
 ```
 New-AzADServicePrincipal -ApplicationId <Guid> -PasswordCredential <PSADPasswordCredential[]>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="f15ae-109">ApplicationWithKeyPlainParameterSet</span><span class="sxs-lookup"><span data-stu-id="f15ae-109">ApplicationWithKeyPlainParameterSet</span></span>
+### <span data-ttu-id="1079f-109">ApplicationWithKeyPlainParameterSet</span><span class="sxs-lookup"><span data-stu-id="1079f-109">ApplicationWithKeyPlainParameterSet</span></span>
 ```
 New-AzADServicePrincipal -ApplicationId <Guid> -CertValue <String> [-StartDate <DateTime>]
  [-EndDate <DateTime>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="f15ae-110">ApplicationWithKeyCredentialParameterSet</span><span class="sxs-lookup"><span data-stu-id="f15ae-110">ApplicationWithKeyCredentialParameterSet</span></span>
+### <span data-ttu-id="1079f-110">ApplicationWithKeyCredentialParameterSet</span><span class="sxs-lookup"><span data-stu-id="1079f-110">ApplicationWithKeyCredentialParameterSet</span></span>
 ```
 New-AzADServicePrincipal -ApplicationId <Guid> -KeyCredential <PSADKeyCredential[]>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="f15ae-111">DisplayNameWithoutCredentialParameterSet</span><span class="sxs-lookup"><span data-stu-id="f15ae-111">DisplayNameWithoutCredentialParameterSet</span></span>
+### <span data-ttu-id="1079f-111">DisplayNameWithoutCredentialParameterSet</span><span class="sxs-lookup"><span data-stu-id="1079f-111">DisplayNameWithoutCredentialParameterSet</span></span>
 ```
 New-AzADServicePrincipal -DisplayName <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="f15ae-112">DisplayNameWithPasswordPlainParameterSet</span><span class="sxs-lookup"><span data-stu-id="f15ae-112">DisplayNameWithPasswordPlainParameterSet</span></span>
+### <span data-ttu-id="1079f-112">DisplayNameWithPasswordPlainParameterSet</span><span class="sxs-lookup"><span data-stu-id="1079f-112">DisplayNameWithPasswordPlainParameterSet</span></span>
 ```
 New-AzADServicePrincipal -DisplayName <String> -Password <SecureString> [-StartDate <DateTime>]
  [-EndDate <DateTime>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="f15ae-113">DisplayNameWithPasswordCredentialParameterSet</span><span class="sxs-lookup"><span data-stu-id="f15ae-113">DisplayNameWithPasswordCredentialParameterSet</span></span>
+### <span data-ttu-id="1079f-113">DisplayNameWithPasswordCredentialParameterSet</span><span class="sxs-lookup"><span data-stu-id="1079f-113">DisplayNameWithPasswordCredentialParameterSet</span></span>
 ```
 New-AzADServicePrincipal -DisplayName <String> -PasswordCredential <PSADPasswordCredential[]>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="f15ae-114">DisplayNameWithKeyPlainParameterSet</span><span class="sxs-lookup"><span data-stu-id="f15ae-114">DisplayNameWithKeyPlainParameterSet</span></span>
+### <span data-ttu-id="1079f-114">DisplayNameWithKeyPlainParameterSet</span><span class="sxs-lookup"><span data-stu-id="1079f-114">DisplayNameWithKeyPlainParameterSet</span></span>
 ```
 New-AzADServicePrincipal -DisplayName <String> -CertValue <String> [-StartDate <DateTime>]
  [-EndDate <DateTime>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="f15ae-115">DisplayNameWithKeyCredentialParameterSet</span><span class="sxs-lookup"><span data-stu-id="f15ae-115">DisplayNameWithKeyCredentialParameterSet</span></span>
+### <span data-ttu-id="1079f-115">DisplayNameWithKeyCredentialParameterSet</span><span class="sxs-lookup"><span data-stu-id="1079f-115">DisplayNameWithKeyCredentialParameterSet</span></span>
 ```
 New-AzADServicePrincipal -DisplayName <String> -KeyCredential <PSADKeyCredential[]>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="f15ae-116">ApplicationObjectWithoutCredentialParameterSet</span><span class="sxs-lookup"><span data-stu-id="f15ae-116">ApplicationObjectWithoutCredentialParameterSet</span></span>
+### <span data-ttu-id="1079f-116">ApplicationObjectWithoutCredentialParameterSet</span><span class="sxs-lookup"><span data-stu-id="1079f-116">ApplicationObjectWithoutCredentialParameterSet</span></span>
 ```
 New-AzADServicePrincipal -ApplicationObject <PSADApplication> [-DefaultProfile <IAzureContextContainer>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="f15ae-117">ApplicationObjectWithPasswordPlainParameterSet</span><span class="sxs-lookup"><span data-stu-id="f15ae-117">ApplicationObjectWithPasswordPlainParameterSet</span></span>
+### <span data-ttu-id="1079f-117">ApplicationObjectWithPasswordPlainParameterSet</span><span class="sxs-lookup"><span data-stu-id="1079f-117">ApplicationObjectWithPasswordPlainParameterSet</span></span>
 ```
 New-AzADServicePrincipal -ApplicationObject <PSADApplication> -Password <SecureString>
  [-StartDate <DateTime>] [-EndDate <DateTime>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
-### <span data-ttu-id="f15ae-118">ApplicationObjectWithPasswordCredentialParameterSet</span><span class="sxs-lookup"><span data-stu-id="f15ae-118">ApplicationObjectWithPasswordCredentialParameterSet</span></span>
+### <span data-ttu-id="1079f-118">ApplicationObjectWithPasswordCredentialParameterSet</span><span class="sxs-lookup"><span data-stu-id="1079f-118">ApplicationObjectWithPasswordCredentialParameterSet</span></span>
 ```
 New-AzADServicePrincipal -ApplicationObject <PSADApplication>
  -PasswordCredential <PSADPasswordCredential[]> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
-### <span data-ttu-id="f15ae-119">ApplicationObjectWithKeyPlainParameterSet</span><span class="sxs-lookup"><span data-stu-id="f15ae-119">ApplicationObjectWithKeyPlainParameterSet</span></span>
+### <span data-ttu-id="1079f-119">ApplicationObjectWithKeyPlainParameterSet</span><span class="sxs-lookup"><span data-stu-id="1079f-119">ApplicationObjectWithKeyPlainParameterSet</span></span>
 ```
 New-AzADServicePrincipal -ApplicationObject <PSADApplication> -CertValue <String> [-StartDate <DateTime>]
  [-EndDate <DateTime>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="f15ae-120">ApplicationObjectWithKeyCredentialParameterSet</span><span class="sxs-lookup"><span data-stu-id="f15ae-120">ApplicationObjectWithKeyCredentialParameterSet</span></span>
+### <span data-ttu-id="1079f-120">ApplicationObjectWithKeyCredentialParameterSet</span><span class="sxs-lookup"><span data-stu-id="1079f-120">ApplicationObjectWithKeyCredentialParameterSet</span></span>
 ```
 New-AzADServicePrincipal -ApplicationObject <PSADApplication> -KeyCredential <PSADKeyCredential[]>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="f15ae-121">설명은</span><span class="sxs-lookup"><span data-stu-id="f15ae-121">DESCRIPTION</span></span>
-<span data-ttu-id="f15ae-122">새 azure active directory service principal을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-122">Creates a new azure active directory service principal.</span></span> <span data-ttu-id="f15ae-123">사용자가 매개 변수에 대 한 기본값을 제공 하지 않는 경우 기본 매개 변수 집합에는 기본 값이 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-123">The default parameter set uses default values for parameters if the user does not provide one for them.</span></span> <span data-ttu-id="f15ae-124">사용 되는 기본값에 대 한 자세한 내용은 아래의 해당 매개 변수에 대 한 설명을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="f15ae-124">For more information on the default values used, please see the description for the given parameters below.</span></span>
-<span data-ttu-id="f15ae-125">이 cmdlet에는 and 매개 변수를 사용 하 여 서비스 사용자에 게 역할을 할당 하는 기능이 있습니다 `Role` `Scope` . 이러한 매개 변수 중 하나도 제공 하지 않으면 서비스 사용자에 게 역할이 할당 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-125">This cmdlet has the ability to assign a role to the service principal with the `Role` and `Scope` parameters; if neither of these parameters are provided, no role will be assigned to the service principal.</span></span> <span data-ttu-id="f15ae-126">`Role`And `Scope` 매개 변수의 기본값은 각각 "참가자"이 고, 현재 구독은 사용자가 두 매개 _note_ 변수 중 하나에 대 한 값을 제공 하는 경우에만 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-126">The default values for the `Role` and `Scope` parameters are "Contributor" and the current subscription, respectively ( _note_ : the defaults are only used when the user provides a value for one of the two parameters, but not the other).</span></span>
-<span data-ttu-id="f15ae-127">또한 cmdlet은 응용 프로그램을 암시적으로 만들고 해당 속성 (ApplicationId이 제공 되지 않은 경우)을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-127">The cmdlet also implicitly creates an application and sets its properties (if the ApplicationId is not provided).</span></span> <span data-ttu-id="f15ae-128">응용 프로그램별 매개 변수를 업데이트 하려면 Set-AzADApplication cmdlet을 사용 하세요.</span><span class="sxs-lookup"><span data-stu-id="f15ae-128">In order to update the application specific parameters please use Set-AzADApplication cmdlet.</span></span>
+## <span data-ttu-id="1079f-121">설명</span><span class="sxs-lookup"><span data-stu-id="1079f-121">DESCRIPTION</span></span>
+<span data-ttu-id="1079f-122">새 Azure Active Directory 서비스 주체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-122">Creates a new azure active directory service principal.</span></span> <span data-ttu-id="1079f-123">사용자가 매개 변수를 제공하지 않는 경우 기본 매개 변수 집합은 매개 변수에 대한 기본값을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-123">The default parameter set uses default values for parameters if the user does not provide one for them.</span></span> <span data-ttu-id="1079f-124">사용되는 기본값에 대한 자세한 내용은 아래 제공된 매개 변수에 대한 설명을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1079f-124">For more information on the default values used, please see the description for the given parameters below.</span></span>
+<span data-ttu-id="1079f-125">이 cmdlet에는 매개 변수 및 매개 변수를 사용하여 서비스 주체에 역할을 할당할 수 있습니다. 이러한 매개 변수가 제공되지 않은 경우 서비스 주체에 역할이 `Role` `Scope` 할당되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-125">This cmdlet has the ability to assign a role to the service principal with the `Role` and `Scope` parameters; if neither of these parameters are provided, no role will be assigned to the service principal.</span></span> <span data-ttu-id="1079f-126">매개 변수 및 매개 변수의 기본값은 각각 "기여자" 및 현재 구독입니다(참고: 기본값은 사용자가 두 매개 변수 중 하나에 값을 제공하는 경우만 사용되지만 다른 하나는 제공되지 `Role` `Scope` 않습니다).</span><span class="sxs-lookup"><span data-stu-id="1079f-126">The default values for the `Role` and `Scope` parameters are "Contributor" and the current subscription, respectively (_note_: the defaults are only used when the user provides a value for one of the two parameters, but not the other).</span></span>
+<span data-ttu-id="1079f-127">또한 cmdlet은 암시적으로 애플리케이션을 만들고 해당 속성을 설정합니다(ApplicationId가 제공되지 않은 경우).</span><span class="sxs-lookup"><span data-stu-id="1079f-127">The cmdlet also implicitly creates an application and sets its properties (if the ApplicationId is not provided).</span></span> <span data-ttu-id="1079f-128">애플리케이션 특정 매개 변수를 업데이트하기 위해 Set-AzADApplication cmdlet을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-128">In order to update the application specific parameters please use Set-AzADApplication cmdlet.</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="f15ae-129">**새-AzADServicePrincipal** 명령을 사용 하 여 서비스 사용자를 만드는 경우 출력에는 보호 해야 하는 자격 증명이 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-129">When you create a service principal using the **New-AzADServicePrincipal** command, the output includes credentials that you must protect.</span></span> <span data-ttu-id="f15ae-130">이러한 자격 증명을 코드에 포함 하지 않도록 하거나 자격 증명을 소스 제어에 체크 인해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-130">Be sure that you do not include these credentials in your code or check the credentials into your source control.</span></span> <span data-ttu-id="f15ae-131">다른 방법으로는 자격 증명을 사용할 필요가 없도록 [관리 되는 id](/azure/active-directory/managed-identities-azure-resources/overview) 를 사용 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-131">As an alternative, consider using [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) to avoid the need to use credentials.</span></span>
+> <span data-ttu-id="1079f-129">**New-AzADServicePrincipal** 명령을 사용하여 서비스 주체를 만들 때 출력에는 보호해야 하는 자격 증명이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-129">When you create a service principal using the **New-AzADServicePrincipal** command, the output includes credentials that you must protect.</span></span> <span data-ttu-id="1079f-130">또는 관리 ID를 [](/azure/active-directory/managed-identities-azure-resources/overview) 사용하여 자격 증명을 사용할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-130">As an alternative, consider using [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) to avoid the need to use credentials.</span></span>
 >
-> <span data-ttu-id="f15ae-132">기본적으로 **AzADServicePrincipal** 는 구독 범위에서 [참가자](/azure/role-based-access-control/built-in-roles#contributor) 역할을 서비스 사용자에 게 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-132">By default, **New-AzADServicePrincipal** assigns the [Contributor](/azure/role-based-access-control/built-in-roles#contributor) role to the service principal at the subscription scope.</span></span> <span data-ttu-id="f15ae-133">손상 된 서비스 보안 주체의 위험을 줄이려면 더 구체적인 역할을 할당 하 고 리소스 또는 리소스 그룹으로 범위를 좁힙니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-133">To reduce your risk of a compromised service principal, assign a more specific role and narrow the scope to a resource or resource group.</span></span> <span data-ttu-id="f15ae-134">자세한 내용은 [역할 할당을 추가 하는 단계를](/azure/role-based-access-control/role-assignments-steps) 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="f15ae-134">See [Steps to add a role assignment](/azure/role-based-access-control/role-assignments-steps) for more information.</span></span>
+> <span data-ttu-id="1079f-131">기본적으로 **New-AzADServicePrincipal은** 구독 [](/azure/role-based-access-control/built-in-roles#contributor) 범위의 서비스 주체에 기여자 역할을 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-131">By default, **New-AzADServicePrincipal** assigns the [Contributor](/azure/role-based-access-control/built-in-roles#contributor) role to the service principal at the subscription scope.</span></span> <span data-ttu-id="1079f-132">손상된 서비스 주체의 위험을 줄이기 위해 보다 구체적인 역할을 할당하고 리소스 또는 리소스 그룹으로 범위를 좁힐 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-132">To reduce your risk of a compromised service principal, assign a more specific role and narrow the scope to a resource or resource group.</span></span> <span data-ttu-id="1079f-133">자세한 [내용은 역할 할당을 추가하는](/azure/role-based-access-control/role-assignments-steps) 단계를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1079f-133">See [Steps to add a role assignment](/azure/role-based-access-control/role-assignments-steps) for more information.</span></span>
 
-## <span data-ttu-id="f15ae-135">예제의</span><span class="sxs-lookup"><span data-stu-id="f15ae-135">EXAMPLES</span></span>
+## <span data-ttu-id="1079f-134">예제</span><span class="sxs-lookup"><span data-stu-id="1079f-134">EXAMPLES</span></span>
 
-### <span data-ttu-id="f15ae-136">예제 1-간단한 광고 서비스 사용자 만들기</span><span class="sxs-lookup"><span data-stu-id="f15ae-136">Example 1 - Simple AD service principal creation</span></span>
+### <span data-ttu-id="1079f-135">예제 1 - 간단한 AD 서비스 주체 만들기</span><span class="sxs-lookup"><span data-stu-id="1079f-135">Example 1 - Simple AD service principal creation</span></span>
 
 ```
 PS C:\> New-AzADServicePrincipal
@@ -144,9 +144,9 @@ Id                    : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
 Type                  : ServicePrincipal
 ```
 
-<span data-ttu-id="f15ae-137">위의 명령은 제공 되지 않은 매개 변수에 대 한 기본값을 사용 하 여 광고 서비스 사용자를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-137">The above command creates an AD service principal using default values for parameters not provided.</span></span> <span data-ttu-id="f15ae-138">응용 프로그램 id가 제공 되지 않았으므로 서비스 사용자를 위해 응용 프로그램이 생성 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-138">Since an application id was not provided, an application was created for the service principal.</span></span> <span data-ttu-id="f15ae-139">Or에 대 한 값이 제공 되지 않았으므로 `Role` `Scope` 만든 서비스 주체에는 권한이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-139">Since no values were provided for `Role` or `Scope`, the created service principal does not have any permissions.</span></span>
+<span data-ttu-id="1079f-136">위의 명령은 제공되지 않은 매개 변수에 대한 기본값을 사용하여 AD 서비스 주체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-136">The above command creates an AD service principal using default values for parameters not provided.</span></span> <span data-ttu-id="1079f-137">애플리케이션 ID가 제공되지 않은 경우 서비스 주체에 대한 애플리케이션이 생성되었습니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-137">Since an application id was not provided, an application was created for the service principal.</span></span> <span data-ttu-id="1079f-138">값이 제공되지 않은 경우 또는 생성된 서비스 `Role` `Scope` 주체에는 권한이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-138">Since no values were provided for `Role` or `Scope`, the created service principal does not have any permissions.</span></span>
 
-### <span data-ttu-id="f15ae-140">예제 2-지정 된 역할 및 기본 범위의 간단한 광고 서비스 사용자 만들기</span><span class="sxs-lookup"><span data-stu-id="f15ae-140">Example 2 - Simple AD service principal creation with a specified role and default scope</span></span>
+### <span data-ttu-id="1079f-139">예제 2 - 지정된 역할 및 기본 범위를 통해 간단한 AD 서비스 주체 만들기</span><span class="sxs-lookup"><span data-stu-id="1079f-139">Example 2 - Simple AD service principal creation with a specified role and default scope</span></span>
 
 ```
 PS C:\> New-AzADServicePrincipal -Role Reader
@@ -161,9 +161,9 @@ Type                  : ServicePrincipal
 WARNING: Assigning role 'Reader' over scope '/subscriptions/zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz' to the new service principal.
 ```
 
-<span data-ttu-id="f15ae-141">위의 명령은 제공 되지 않은 매개 변수에 대 한 기본값을 사용 하 여 광고 서비스 사용자를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-141">The above command creates an AD service principal using the default values for parameters not provided.</span></span> <span data-ttu-id="f15ae-142">응용 프로그램 id가 제공 되지 않았으므로 서비스 사용자를 위해 응용 프로그램이 생성 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-142">Since the application id was not provided, an application was created for the service principal.</span></span> <span data-ttu-id="f15ae-143">서비스 사용자가 현재 구독에 대해 "읽기" 권한으로 생성 되었습니다 (매개 변수에 대 한 값이 제공 되지 않았으므로 `Scope` ).</span><span class="sxs-lookup"><span data-stu-id="f15ae-143">The service principal was created with "Reader" permissions over the current subscription (since no value was provided for the `Scope` parameter).</span></span>
+<span data-ttu-id="1079f-140">위의 명령은 제공되지 않은 매개 변수에 대한 기본값을 사용하여 AD 서비스 주체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-140">The above command creates an AD service principal using the default values for parameters not provided.</span></span> <span data-ttu-id="1079f-141">애플리케이션 ID가 제공되지 않은 경우 서비스 주체에 대한 애플리케이션이 생성되었습니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-141">Since the application id was not provided, an application was created for the service principal.</span></span> <span data-ttu-id="1079f-142">매개 변수에 대한 값이 제공되지 않았습니다. 현재 구독에 대한 "읽기 권한자" 권한으로 서비스 주체가 `Scope` 생성되었습니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-142">The service principal was created with "Reader" permissions over the current subscription (since no value was provided for the `Scope` parameter).</span></span>
 
-### <span data-ttu-id="f15ae-144">예제 3-지정 된 범위 및 기본 역할을 가진 간단한 광고 서비스 사용자 만들기</span><span class="sxs-lookup"><span data-stu-id="f15ae-144">Example 3 - Simple AD service principal creation with a specified scope and default role</span></span>
+### <span data-ttu-id="1079f-143">예제 3 - 지정된 범위 및 기본 역할을 통해 간단한 AD 서비스 주체 만들기</span><span class="sxs-lookup"><span data-stu-id="1079f-143">Example 3 - Simple AD service principal creation with a specified scope and default role</span></span>
 
 ```
 PS C:\> New-AzADServicePrincipal -Scope /subscriptions/zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz/resourceGroups/myResourceGroup
@@ -178,9 +178,9 @@ Type                  : ServicePrincipal
 WARNING: Assigning role 'Contributor' over scope '/subscriptions/zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz/resourceGroups/myResourceGroup' to the new service principal.
 ```
 
-<span data-ttu-id="f15ae-145">위의 명령은 제공 되지 않은 매개 변수에 대 한 기본값을 사용 하 여 광고 서비스 사용자를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-145">The above command creates an AD service principal using the default values for parameters not provided.</span></span> <span data-ttu-id="f15ae-146">응용 프로그램 id가 제공 되지 않았으므로 서비스 사용자를 위해 응용 프로그램이 생성 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-146">Since the application id was not provided, an application was created for the service principal.</span></span> <span data-ttu-id="f15ae-147">제공 된 리소스 그룹 범위를 통해 서비스 사용자가 "참가자" 권한으로 생성 되었습니다 (매개 변수에 대 한 값이 제공 되지 않았으므로 `Role` ).</span><span class="sxs-lookup"><span data-stu-id="f15ae-147">The service principal was created with "Contributor" permissions (since no value was provided for the `Role` parameter) over the provided resource group scope.</span></span>
+<span data-ttu-id="1079f-144">위의 명령은 제공되지 않은 매개 변수에 대한 기본값을 사용하여 AD 서비스 주체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-144">The above command creates an AD service principal using the default values for parameters not provided.</span></span> <span data-ttu-id="1079f-145">애플리케이션 ID가 제공되지 않은 경우 서비스 주체에 대한 애플리케이션이 생성되었습니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-145">Since the application id was not provided, an application was created for the service principal.</span></span> <span data-ttu-id="1079f-146">제공된 리소스 그룹 범위에 대해 "기여자" 권한(매개 변수에 대한 값이 제공되지 아니기 때문에)을 사용하여 서비스 `Role` 주체가 생성되었습니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-146">The service principal was created with "Contributor" permissions (since no value was provided for the `Role` parameter) over the provided resource group scope.</span></span>
 
-### <span data-ttu-id="f15ae-148">예제 4-단순 광고 서비스 주도자 만들기 지정 된 범위 및 역할</span><span class="sxs-lookup"><span data-stu-id="f15ae-148">Example 4 - Simple AD service principal creation with a specified scope and role</span></span>
+### <span data-ttu-id="1079f-147">예제 4 - 지정된 범위 및 역할을 통해 간단한 AD 서비스 주체 만들기</span><span class="sxs-lookup"><span data-stu-id="1079f-147">Example 4 - Simple AD service principal creation with a specified scope and role</span></span>
 
 ```
 PS C:\> New-AzADServicePrincipal -Role Reader -Scope /subscriptions/zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz/resourceGroups/myResourceGroup
@@ -195,9 +195,9 @@ Type                  : ServicePrincipal
 WARNING: Assigning role 'Reader' over scope '/subscriptions/zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz/resourceGroups/myResourceGroup' to the new service principal.
 ```
 
-<span data-ttu-id="f15ae-149">위의 명령은 제공 되지 않은 매개 변수에 대 한 기본값을 사용 하 여 광고 서비스 사용자를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-149">The above command creates an AD service principal using the default values for parameters not provided.</span></span> <span data-ttu-id="f15ae-150">응용 프로그램 id가 제공 되지 않았으므로 서비스 사용자를 위해 응용 프로그램이 생성 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-150">Since the application id was not provided, an application was created for the service principal.</span></span> <span data-ttu-id="f15ae-151">서비스 사용자가 제공 된 리소스 그룹 범위에 대해 "읽기" 권한을 사용 하 여 만들어졌습니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-151">The service principal was created with "Reader" permissions over the provided resource group scope.</span></span>
+<span data-ttu-id="1079f-148">위의 명령은 제공되지 않은 매개 변수에 대한 기본값을 사용하여 AD 서비스 주체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-148">The above command creates an AD service principal using the default values for parameters not provided.</span></span> <span data-ttu-id="1079f-149">애플리케이션 ID가 제공되지 않은 경우 서비스 주체에 대한 애플리케이션이 생성되었습니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-149">Since the application id was not provided, an application was created for the service principal.</span></span> <span data-ttu-id="1079f-150">제공된 리소스 그룹 범위에 대한 "읽기 권한자" 권한으로 서비스 주체가 생성되었습니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-150">The service principal was created with "Reader" permissions over the provided resource group scope.</span></span>
 
-### <span data-ttu-id="f15ae-152">예제 5-역할을 할당 하 여 응용 프로그램 id를 사용 하 여 새 광고 서비스 사용자 만들기</span><span class="sxs-lookup"><span data-stu-id="f15ae-152">Example 5 - Create a new AD service principal using application id with role assignment</span></span>
+### <span data-ttu-id="1079f-151">예제 5 - 역할 할당과 함께 애플리케이션 ID를 사용하여 새 AD 서비스 주체 만들기</span><span class="sxs-lookup"><span data-stu-id="1079f-151">Example 5 - Create a new AD service principal using application id with role assignment</span></span>
 
 ```
 PS C:\> New-AzADServicePrincipal -ApplicationId 34a28ad2-dec4-4a41-bc3b-d22ddf90000e
@@ -209,22 +209,22 @@ Id                    : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
 Type                  : ServicePrincipal
 ```
 
-<span data-ttu-id="f15ae-153">응용 프로그램 id가 ' 4a28ad2-3| 4-4a41-bc3b-d22ddf90000e ' 인 응용 프로그램에 대 한 새 광고 서비스 사용자를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-153">Creates a new AD service principal for the application with application id '34a28ad2-dec4-4a41-bc3b-d22ddf90000e'.</span></span> <span data-ttu-id="f15ae-154">Or에 대 한 값이 제공 되지 않았으므로 `Role` `Scope` 만든 서비스 주체에는 권한이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-154">Since no values were provided for `Role` or `Scope`, the created service principal does not have any permissions.</span></span>
+<span data-ttu-id="1079f-152">애플리케이션 ID '34a28ad2-dec4-4a41-bc3b-d22ddf90000e'를 통해 애플리케이션에 대한 새 AD 서비스 주체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-152">Creates a new AD service principal for the application with application id '34a28ad2-dec4-4a41-bc3b-d22ddf90000e'.</span></span> <span data-ttu-id="1079f-153">값이 제공되지 않은 경우 또는 생성된 서비스 `Role` `Scope` 주체에는 권한이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-153">Since no values were provided for `Role` or `Scope`, the created service principal does not have any permissions.</span></span>
 
-### <span data-ttu-id="f15ae-155">예제 6-파이핑을 사용 하 여 새 광고 서비스 사용자 만들기</span><span class="sxs-lookup"><span data-stu-id="f15ae-155">Example 6 - Create a new AD service principal using piping</span></span>
+### <span data-ttu-id="1079f-154">예제 6 - 파이핑을 사용하여 새 AD 서비스 주체 만들기</span><span class="sxs-lookup"><span data-stu-id="1079f-154">Example 6 - Create a new AD service principal using piping</span></span>
 
 ```
 PS C:\> Get-AzADApplication -ObjectId 3ede3c26-b443-4e0b-9efc-b05e68338dc3 | New-AzADServicePrincipal
 ```
 
-<span data-ttu-id="f15ae-156">개체 id가 ' 3ede3c26-b443-4e0b-9efc-b05e68338dc3 ' 인 응용 프로그램을 가져오고 해당 응용 프로그램에 대 한 새 광고 서비스 사용자를 만들기 위해 New-AzADServicePrincipal cmdlet에 대 한 파이프를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-156">Gets the application with object id '3ede3c26-b443-4e0b-9efc-b05e68338dc3' and pipes that to the New-AzADServicePrincipal cmdlet to create a new AD service principal for that application.</span></span>
+<span data-ttu-id="1079f-155">개체 ID가 '3ede3c26-b443-4e0b-9efc-b05e68338dc3'인 애플리케이션을 만들고 New-AzADServicePrincipal cmdlet에 파이프하여 해당 애플리케이션에 대한 새 AD 서비스 주체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-155">Gets the application with object id '3ede3c26-b443-4e0b-9efc-b05e68338dc3' and pipes that to the New-AzADServicePrincipal cmdlet to create a new AD service principal for that application.</span></span>
 
-## <span data-ttu-id="f15ae-157">변수</span><span class="sxs-lookup"><span data-stu-id="f15ae-157">PARAMETERS</span></span>
+## <span data-ttu-id="1079f-156">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="1079f-156">PARAMETERS</span></span>
 
-### <span data-ttu-id="f15ae-158">-ApplicationId</span><span class="sxs-lookup"><span data-stu-id="f15ae-158">-ApplicationId</span></span>
-<span data-ttu-id="f15ae-159">테 넌 트의 서비스 사용자에 대 한 고유한 응용 프로그램 id입니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-159">The unique application id for a service principal in a tenant.</span></span>
-<span data-ttu-id="f15ae-160">만든 후에는이 속성을 변경할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-160">Once created this property cannot be changed.</span></span>
-<span data-ttu-id="f15ae-161">응용 프로그램 id가 지정 되지 않은 경우 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-161">If an application id is not specified, one will be generated.</span></span>
+### <span data-ttu-id="1079f-157">-ApplicationId</span><span class="sxs-lookup"><span data-stu-id="1079f-157">-ApplicationId</span></span>
+<span data-ttu-id="1079f-158">테넌트의 서비스 주체에 대한 고유한 애플리케이션 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-158">The unique application id for a service principal in a tenant.</span></span>
+<span data-ttu-id="1079f-159">만든 후 이 속성을 변경할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-159">Once created this property cannot be changed.</span></span>
+<span data-ttu-id="1079f-160">애플리케이션 ID를 지정하지 않으면 애플리케이션 ID가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-160">If an application id is not specified, one will be generated.</span></span>
 
 ```yaml
 Type: System.Guid
@@ -250,8 +250,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="f15ae-162">-ApplicationObject</span><span class="sxs-lookup"><span data-stu-id="f15ae-162">-ApplicationObject</span></span>
-<span data-ttu-id="f15ae-163">서비스 사용자를 만들 응용 프로그램을 나타내는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-163">The object representing the application for which the service principal is created.</span></span>
+### <span data-ttu-id="1079f-161">-ApplicationObject</span><span class="sxs-lookup"><span data-stu-id="1079f-161">-ApplicationObject</span></span>
+<span data-ttu-id="1079f-162">서비스 주체가 생성되는 애플리케이션을 나타내는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-162">The object representing the application for which the service principal is created.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication
@@ -265,9 +265,9 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="f15ae-164">-CertValue</span><span class="sxs-lookup"><span data-stu-id="f15ae-164">-CertValue</span></span>
-<span data-ttu-id="f15ae-165">"비대칭" 자격 증명 형식의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-165">The value of the "asymmetric" credential type.</span></span>
-<span data-ttu-id="f15ae-166">Base 64 인코딩된 인증서를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-166">It represents the base 64 encoded certificate.</span></span>
+### <span data-ttu-id="1079f-163">-CertValue</span><span class="sxs-lookup"><span data-stu-id="1079f-163">-CertValue</span></span>
+<span data-ttu-id="1079f-164">"비대칭" 자격 증명 형식의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-164">The value of the "asymmetric" credential type.</span></span>
+<span data-ttu-id="1079f-165">기본 64로 인코딩된 인증서를 나타났습니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-165">It represents the base 64 encoded certificate.</span></span>
 
 ```yaml
 Type: System.String
@@ -293,8 +293,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="f15ae-167">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="f15ae-167">-DefaultProfile</span></span>
-<span data-ttu-id="f15ae-168">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독</span><span class="sxs-lookup"><span data-stu-id="f15ae-168">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+### <span data-ttu-id="1079f-166">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="1079f-166">-DefaultProfile</span></span>
+<span data-ttu-id="1079f-167">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독</span><span class="sxs-lookup"><span data-stu-id="1079f-167">The credentials, account, tenant, and subscription used for communication with azure</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
@@ -308,8 +308,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="f15ae-169">-DisplayName</span><span class="sxs-lookup"><span data-stu-id="f15ae-169">-DisplayName</span></span>
-<span data-ttu-id="f15ae-170">서비스 사용자의 식별 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-170">The friendly name of the service principal.</span></span> <span data-ttu-id="f15ae-171">표시 이름이 제공 되지 않은 경우이 값은 기본적으로 ' azure-powershell-MM-dd-yyyy-mm-dd-ss ' 이며, 여기서 접미사는 응용 프로그램을 만드는 데 걸리는 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-171">If a display name is not provided, this value will default to 'azure-powershell-MM-dd-yyyy-HH-mm-ss', where the suffix is the time of application creation.</span></span>
+### <span data-ttu-id="1079f-168">-DisplayName</span><span class="sxs-lookup"><span data-stu-id="1079f-168">-DisplayName</span></span>
+<span data-ttu-id="1079f-169">서비스 주체의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-169">The friendly name of the service principal.</span></span> <span data-ttu-id="1079f-170">표시 이름을 지정하지 않은 경우 이 값은 기본적으로 'azure-powershell-MM-dd-yy-HH-mm-ss'로 설정됩니다. 여기서 접미사는 애플리케이션을 만들 때입니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-170">If a display name is not provided, this value will default to 'azure-powershell-MM-dd-yyyy-HH-mm-ss', where the suffix is the time of application creation.</span></span>
 
 ```yaml
 Type: System.String
@@ -335,9 +335,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="f15ae-172">-EndDate</span><span class="sxs-lookup"><span data-stu-id="f15ae-172">-EndDate</span></span>
-<span data-ttu-id="f15ae-173">자격 증명 사용의 유효 종료 날짜입니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-173">The effective end date of the credential usage.</span></span>
-<span data-ttu-id="f15ae-174">기본 끝 날짜 값은 오늘부터 1 년입니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-174">The default end date value is one year from today.</span></span> <span data-ttu-id="f15ae-175">"비대칭" 형식 자격 증명의 경우 X509 인증서가 유효한 날짜 이전으로 설정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-175">For an "asymmetric" type credential, this must be set to on or before the date that the X509 certificate is valid.</span></span>
+### <span data-ttu-id="1079f-171">-EndDate</span><span class="sxs-lookup"><span data-stu-id="1079f-171">-EndDate</span></span>
+<span data-ttu-id="1079f-172">자격 증명 사용의 유효 종료 날짜입니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-172">The effective end date of the credential usage.</span></span>
+<span data-ttu-id="1079f-173">기본 종료 날짜 값은 오늘부터 1년입니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-173">The default end date value is one year from today.</span></span> <span data-ttu-id="1079f-174">"비대칭" 형식 자격 증명의 경우 X509 인증서가 유효한 날짜 또는 그 이전으로 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-174">For an "asymmetric" type credential, this must be set to on or before the date that the X509 certificate is valid.</span></span>
 
 ```yaml
 Type: System.DateTime
@@ -363,8 +363,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="f15ae-176">-KeyCredential</span><span class="sxs-lookup"><span data-stu-id="f15ae-176">-KeyCredential</span></span>
-<span data-ttu-id="f15ae-177">응용 프로그램과 연결 된 키 자격 증명의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-177">The collection of key credentials associated with the application.</span></span>
+### <span data-ttu-id="1079f-175">-KeyCredential</span><span class="sxs-lookup"><span data-stu-id="1079f-175">-KeyCredential</span></span>
+<span data-ttu-id="1079f-176">애플리케이션과 연결된 키 자격 증명의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-176">The collection of key credentials associated with the application.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADKeyCredential[]
@@ -390,8 +390,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="f15ae-178">-암호</span><span class="sxs-lookup"><span data-stu-id="f15ae-178">-Password</span></span>
-<span data-ttu-id="f15ae-179">서비스 사용자와 연결할 암호입니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-179">The password to be associated with the service principal.</span></span> <span data-ttu-id="f15ae-180">암호를 제공 하지 않으면 임의의 GUID가 생성 되어 암호로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-180">If a password is not provided, a random GUID will be generated and used as the password.</span></span>
+### <span data-ttu-id="1079f-177">-Password</span><span class="sxs-lookup"><span data-stu-id="1079f-177">-Password</span></span>
+<span data-ttu-id="1079f-178">서비스 주체와 연결될 암호입니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-178">The password to be associated with the service principal.</span></span> <span data-ttu-id="1079f-179">암호를 입력하지 않은 경우 임의의 GUID가 생성되어 암호로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-179">If a password is not provided, a random GUID will be generated and used as the password.</span></span>
 
 ```yaml
 Type: System.Security.SecureString
@@ -429,8 +429,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="f15ae-181">-PasswordCredential</span><span class="sxs-lookup"><span data-stu-id="f15ae-181">-PasswordCredential</span></span>
-<span data-ttu-id="f15ae-182">응용 프로그램과 연결 된 암호 자격 증명 모음입니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-182">The collection of password credentials associated with the application.</span></span>
+### <span data-ttu-id="1079f-180">-PasswordCredential</span><span class="sxs-lookup"><span data-stu-id="1079f-180">-PasswordCredential</span></span>
+<span data-ttu-id="1079f-181">애플리케이션과 연결된 암호 자격 증명의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-181">The collection of password credentials associated with the application.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADPasswordCredential[]
@@ -456,8 +456,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="f15ae-183">-역할</span><span class="sxs-lookup"><span data-stu-id="f15ae-183">-Role</span></span>
-<span data-ttu-id="f15ae-184">서비스 사용자가 범위를 초과 하는 역할입니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-184">The role that the service principal has over the scope.</span></span> <span data-ttu-id="f15ae-185">값이 `Scope` 제공 되지만 값이 제공 되지 않으면 `Role` 기본적으로 `Role` ' 참가자 ' 역할이 지정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-185">If a value for `Scope` is provided, but no value is provided for `Role`, then `Role` will default to the 'Contributor' role.</span></span>
+### <span data-ttu-id="1079f-182">-Role</span><span class="sxs-lookup"><span data-stu-id="1079f-182">-Role</span></span>
+<span data-ttu-id="1079f-183">서비스 주체가 범위를 통해 있는 역할입니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-183">The role that the service principal has over the scope.</span></span> <span data-ttu-id="1079f-184">값이 제공되지만 값이 제공되지 않습니다. 그러면 기본적으로 `Scope` `Role` `Role` '기여자' 역할이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-184">If a value for `Scope` is provided, but no value is provided for `Role`, then `Role` will default to the 'Contributor' role.</span></span>
 
 ```yaml
 Type: System.String
@@ -471,8 +471,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="f15ae-186">-범위</span><span class="sxs-lookup"><span data-stu-id="f15ae-186">-Scope</span></span>
-<span data-ttu-id="f15ae-187">서비스 사용자에 게 사용 권한이 있는 범위입니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-187">The scope that the service principal has permissions on.</span></span> <span data-ttu-id="f15ae-188">값이 `Role` 제공 되지만 값이 제공 되지 않으면 `Scope` `Scope` 현재 구독이 기본값으로 지정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-188">If a value for `Role` is provided, but no value is provided for `Scope`, then `Scope` will default to the current subscription.</span></span>
+### <span data-ttu-id="1079f-185">-Scope</span><span class="sxs-lookup"><span data-stu-id="1079f-185">-Scope</span></span>
+<span data-ttu-id="1079f-186">서비스 주체에 권한이 있는 범위입니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-186">The scope that the service principal has permissions on.</span></span> <span data-ttu-id="1079f-187">값이 제공되지만 값이 제공되지 않습니다. 그러면 현재 구독이 `Role` `Scope` `Scope` 기본값으로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-187">If a value for `Role` is provided, but no value is provided for `Scope`, then `Scope` will default to the current subscription.</span></span>
 
 ```yaml
 Type: System.String
@@ -486,8 +486,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="f15ae-189">-SkipAssignment</span><span class="sxs-lookup"><span data-stu-id="f15ae-189">-SkipAssignment</span></span>
-<span data-ttu-id="f15ae-190">설정 하는 경우 서비스 사용자에 대 한 기본 역할 할당 만들기를 건너뜁니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-190">If set, will skip creating the default role assignment for the service principal.</span></span>
+### <span data-ttu-id="1079f-188">-SkipAssignment</span><span class="sxs-lookup"><span data-stu-id="1079f-188">-SkipAssignment</span></span>
+<span data-ttu-id="1079f-189">설정된 경우 서비스 주체에 대한 기본 역할 할당 만들기를 건너뜁습니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-189">If set, will skip creating the default role assignment for the service principal.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -501,9 +501,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="f15ae-191">-시작 날짜</span><span class="sxs-lookup"><span data-stu-id="f15ae-191">-StartDate</span></span>
-<span data-ttu-id="f15ae-192">자격 증명 사용의 유효 시작 날짜입니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-192">The effective start date of the credential usage.</span></span>
-<span data-ttu-id="f15ae-193">기본 시작 날짜 값은 오늘입니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-193">The default start date value is today.</span></span> <span data-ttu-id="f15ae-194">"비대칭" 형식 자격 증명의 경우 X509 인증서가 유효한 날짜 또는 그 이후에이를 설정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-194">For an "asymmetric" type credential, this must be set to on or after the date that the X509 certificate is valid from.</span></span>
+### <span data-ttu-id="1079f-190">-StartDate</span><span class="sxs-lookup"><span data-stu-id="1079f-190">-StartDate</span></span>
+<span data-ttu-id="1079f-191">자격 증명 사용의 유효 시작 날짜입니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-191">The effective start date of the credential usage.</span></span>
+<span data-ttu-id="1079f-192">기본 시작 날짜 값은 오늘입니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-192">The default start date value is today.</span></span> <span data-ttu-id="1079f-193">"비대칭" 형식 자격 증명의 경우 X509 인증서가 유효한 날짜 또는 그 이후로 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-193">For an "asymmetric" type credential, this must be set to on or after the date that the X509 certificate is valid from.</span></span>
 
 ```yaml
 Type: System.DateTime
@@ -529,8 +529,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="f15ae-195">-확인</span><span class="sxs-lookup"><span data-stu-id="f15ae-195">-Confirm</span></span>
-<span data-ttu-id="f15ae-196">Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-196">Prompts you for confirmation before running the cmdlet.</span></span>
+### <span data-ttu-id="1079f-194">-Confirm</span><span class="sxs-lookup"><span data-stu-id="1079f-194">-Confirm</span></span>
+<span data-ttu-id="1079f-195">cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-195">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -544,9 +544,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="f15ae-197">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="f15ae-197">-WhatIf</span></span>
-<span data-ttu-id="f15ae-198">Cmdlet이 실행 되는 경우의 동작을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-198">Shows what would happen if the cmdlet runs.</span></span>
-<span data-ttu-id="f15ae-199">Cmdlet이 실행 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-199">The cmdlet is not run.</span></span>
+### <span data-ttu-id="1079f-196">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="1079f-196">-WhatIf</span></span>
+<span data-ttu-id="1079f-197">cmdlet이 실행되는 경우의 결과 표시</span><span class="sxs-lookup"><span data-stu-id="1079f-197">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="1079f-198">cmdlet이 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-198">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -560,48 +560,48 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="f15ae-200">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="f15ae-200">CommonParameters</span></span>
-<span data-ttu-id="f15ae-201">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="f15ae-201">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="f15ae-202">자세한 내용은 about_CommonParameters (을 참조 하세요 http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="f15ae-202">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="1079f-199">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="1079f-199">CommonParameters</span></span>
+<span data-ttu-id="1079f-200">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="1079f-200">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="1079f-201">자세한 내용은 다음 about_CommonParameters http://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1079f-201">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="f15ae-203">입력</span><span class="sxs-lookup"><span data-stu-id="f15ae-203">INPUTS</span></span>
+## <span data-ttu-id="1079f-202">입력</span><span class="sxs-lookup"><span data-stu-id="1079f-202">INPUTS</span></span>
 
-### <span data-ttu-id="f15ae-204">시스템 Guid</span><span class="sxs-lookup"><span data-stu-id="f15ae-204">System.Guid</span></span>
+### <span data-ttu-id="1079f-203">System.Guid</span><span class="sxs-lookup"><span data-stu-id="1079f-203">System.Guid</span></span>
 
-### <span data-ttu-id="f15ae-205">System. 문자열</span><span class="sxs-lookup"><span data-stu-id="f15ae-205">System.String</span></span>
+### <span data-ttu-id="1079f-204">System.String</span><span class="sxs-lookup"><span data-stu-id="1079f-204">System.String</span></span>
 
-### <span data-ttu-id="f15ae-206">Microsoft.Azure.Graph.RBAC.Version1_6 ActiveDirectory Adapplication</span><span class="sxs-lookup"><span data-stu-id="f15ae-206">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication</span></span>
-<span data-ttu-id="f15ae-207">매개 변수: ApplicationObject (ByValue)</span><span class="sxs-lookup"><span data-stu-id="f15ae-207">Parameters: ApplicationObject (ByValue)</span></span>
+### <span data-ttu-id="1079f-205">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication</span><span class="sxs-lookup"><span data-stu-id="1079f-205">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication</span></span>
+<span data-ttu-id="1079f-206">매개 변수: ApplicationObject(ByValue)</span><span class="sxs-lookup"><span data-stu-id="1079f-206">Parameters: ApplicationObject (ByValue)</span></span>
 
-### <span data-ttu-id="f15ae-208">Microsoft.Azure.Graph.RBAC.Version1_6 ActiveDirectory Adpasswordcredential []</span><span class="sxs-lookup"><span data-stu-id="f15ae-208">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADPasswordCredential[]</span></span>
+### <span data-ttu-id="1079f-207">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADPasswordCredential[]</span><span class="sxs-lookup"><span data-stu-id="1079f-207">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADPasswordCredential[]</span></span>
 
-### <span data-ttu-id="f15ae-209">Microsoft.Azure.Graph.RBAC.Version1_6 ActiveDirectory Adkeycredential []</span><span class="sxs-lookup"><span data-stu-id="f15ae-209">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADKeyCredential[]</span></span>
+### <span data-ttu-id="1079f-208">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADKeyCredential[]</span><span class="sxs-lookup"><span data-stu-id="1079f-208">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADKeyCredential[]</span></span>
 
-### <span data-ttu-id="f15ae-210">System.webserver</span><span class="sxs-lookup"><span data-stu-id="f15ae-210">System.Security.SecureString</span></span>
+### <span data-ttu-id="1079f-209">System.Security.SecureString</span><span class="sxs-lookup"><span data-stu-id="1079f-209">System.Security.SecureString</span></span>
 
-### <span data-ttu-id="f15ae-211">시스템. 날짜/시간</span><span class="sxs-lookup"><span data-stu-id="f15ae-211">System.DateTime</span></span>
+### <span data-ttu-id="1079f-210">System.DateTime</span><span class="sxs-lookup"><span data-stu-id="1079f-210">System.DateTime</span></span>
 
-## <span data-ttu-id="f15ae-212">출력</span><span class="sxs-lookup"><span data-stu-id="f15ae-212">OUTPUTS</span></span>
+## <span data-ttu-id="1079f-211">출력</span><span class="sxs-lookup"><span data-stu-id="1079f-211">OUTPUTS</span></span>
 
-### <span data-ttu-id="f15ae-213">Microsoft.Azure.Graph.RBAC.Version1_6 ActiveDirectory Adserviceprincipal</span><span class="sxs-lookup"><span data-stu-id="f15ae-213">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal</span></span>
+### <span data-ttu-id="1079f-212">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="1079f-212">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal</span></span>
 
-### <span data-ttu-id="f15ae-214">PSADServicePrincipalWrapper에 대 한 권한 부여.</span><span class="sxs-lookup"><span data-stu-id="f15ae-214">Microsoft.Azure.Commands.Resources.Models.Authorization.PSADServicePrincipalWrapper</span></span>
+### <span data-ttu-id="1079f-213">Microsoft.Azure.Commands.Resources.Models.Authorization.PSADServicePrincipalWrapper</span><span class="sxs-lookup"><span data-stu-id="1079f-213">Microsoft.Azure.Commands.Resources.Models.Authorization.PSADServicePrincipalWrapper</span></span>
 
-## <span data-ttu-id="f15ae-215">상속자</span><span class="sxs-lookup"><span data-stu-id="f15ae-215">NOTES</span></span>
-<span data-ttu-id="f15ae-216">키워드: azure, Az, arm, resource, 관리, 관리자, 리소스, 그룹, 서식 파일, 배포</span><span class="sxs-lookup"><span data-stu-id="f15ae-216">Keywords: azure, Az, arm, resource, management, manager, resource, group, template, deployment</span></span>
+## <span data-ttu-id="1079f-214">참고 사항</span><span class="sxs-lookup"><span data-stu-id="1079f-214">NOTES</span></span>
+<span data-ttu-id="1079f-215">키워드: azure, Az, arm, 리소스, 관리, 관리자, 리소스, 그룹, 템플릿, 배포</span><span class="sxs-lookup"><span data-stu-id="1079f-215">Keywords: azure, Az, arm, resource, management, manager, resource, group, template, deployment</span></span>
 
-## <span data-ttu-id="f15ae-217">관련 링크</span><span class="sxs-lookup"><span data-stu-id="f15ae-217">RELATED LINKS</span></span>
+## <span data-ttu-id="1079f-216">관련 링크</span><span class="sxs-lookup"><span data-stu-id="1079f-216">RELATED LINKS</span></span>
 
-[<span data-ttu-id="f15ae-218">제거-AzADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="f15ae-218">Remove-AzADServicePrincipal</span></span>](./Remove-AzADServicePrincipal.md)
+[<span data-ttu-id="1079f-217">Remove-AzADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="1079f-217">Remove-AzADServicePrincipal</span></span>](./Remove-AzADServicePrincipal.md)
 
-[<span data-ttu-id="f15ae-219">Get-AzADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="f15ae-219">Get-AzADServicePrincipal</span></span>](./Get-AzADServicePrincipal.md)
+[<span data-ttu-id="1079f-218">Get-AzADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="1079f-218">Get-AzADServicePrincipal</span></span>](./Get-AzADServicePrincipal.md)
 
-[<span data-ttu-id="f15ae-220">새로운 AzADApplication</span><span class="sxs-lookup"><span data-stu-id="f15ae-220">New-AzADApplication</span></span>](./New-AzADApplication.md)
+[<span data-ttu-id="1079f-219">New-AzADApplication</span><span class="sxs-lookup"><span data-stu-id="1079f-219">New-AzADApplication</span></span>](./New-AzADApplication.md)
 
-[<span data-ttu-id="f15ae-221">제거-AzADApplication</span><span class="sxs-lookup"><span data-stu-id="f15ae-221">Remove-AzADApplication</span></span>](./Remove-AzADApplication.md)
+[<span data-ttu-id="1079f-220">Remove-AzADApplication</span><span class="sxs-lookup"><span data-stu-id="1079f-220">Remove-AzADApplication</span></span>](./Remove-AzADApplication.md)
 
-[<span data-ttu-id="f15ae-222">Get-AzADSpCredential</span><span class="sxs-lookup"><span data-stu-id="f15ae-222">Get-AzADSpCredential</span></span>](./Get-AzADSpCredential.md)
+[<span data-ttu-id="1079f-221">Get-AzADSpCredential</span><span class="sxs-lookup"><span data-stu-id="1079f-221">Get-AzADSpCredential</span></span>](./Get-AzADSpCredential.md)
 
-[<span data-ttu-id="f15ae-223">새로운 AzADSpCredential</span><span class="sxs-lookup"><span data-stu-id="f15ae-223">New-AzADSpCredential</span></span>](./New-AzADSpCredential.md)
+[<span data-ttu-id="1079f-222">New-AzADSpCredential</span><span class="sxs-lookup"><span data-stu-id="1079f-222">New-AzADSpCredential</span></span>](./New-AzADSpCredential.md)
 
-[<span data-ttu-id="f15ae-224">제거-AzADSpCredential</span><span class="sxs-lookup"><span data-stu-id="f15ae-224">Remove-AzADSpCredential</span></span>](./Remove-AzADSpCredential.md)
+[<span data-ttu-id="1079f-223">Remove-AzADSpCredential</span><span class="sxs-lookup"><span data-stu-id="1079f-223">Remove-AzADSpCredential</span></span>](./Remove-AzADSpCredential.md)
 
