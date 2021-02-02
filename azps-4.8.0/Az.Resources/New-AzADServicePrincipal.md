@@ -6,21 +6,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzADServicePrincipal.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzADServicePrincipal.md
-ms.openlocfilehash: 3c96ab0cdcc25e0e1c9b4a343cd68420654d934c
-ms.sourcegitcommit: 375232b84336ef5e13052504deaa43f5bd4b7f65
+ms.openlocfilehash: 9fc7b3de271188c2f8ebd0be3293892a6fae56e3
+ms.sourcegitcommit: e680033f216d86cd91a1dfdb8328d32f4c99d21a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "94311726"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251780"
 ---
 # New-AzADServicePrincipal
 
 ## SYNOPSIS
-새 Azure active directory service principal을 만듭니다.
+새 Azure Active Directory 서비스 주체를 만듭니다.
 
-## 구문과
+## 구문
 
-### SimpleParameterSet (기본값)
+### SimpleParameterSet(기본값)
 
 ```
 New-AzADServicePrincipal [-ApplicationId <Guid>] [-DisplayName <String>] [-StartDate <DateTime>]
@@ -126,20 +126,20 @@ New-AzADServicePrincipal -ApplicationObject <PSADApplication> -KeyCredential <PS
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## 설명은
+## 설명
 
-새 Azure active directory service principal을 만듭니다. 매개 변수를 제공 하지 않은 경우 기본 매개 변수 집합에서 기본 값을 사용 합니다. 기본값에 대 한 자세한 내용은 각 매개 변수에 대 한 설명을 참조 하세요. 이 cmdlet에는 **역할** 및 **범위** 매개 변수를 사용 하 여 서비스 사용자에 게 역할을 할당 하는 기능이 있습니다. 둘 다 생략 하면 참가자 역할이 서비스 사용자에 게 할당 됩니다. **Role** 및 **Scope** 매개 변수의 기본값은 현재 구독에 대 한 **참가자** 입니다. 이 cmdlet은 응용 프로그램을 만들고 ApplicationId이 제공 되지 않은 경우 해당 속성을 설정 합니다. 응용 프로그램 관련 매개 변수를 업데이트 하려면 [AzADApplication](./update-azadapplication.md) cmdlet을 사용 합니다.
+새 Azure Active Directory 서비스 주체를 만듭니다. 기본 매개 변수 집합은 매개 변수가 제공되지 않은 경우 기본값을 사용합니다. 기본값에 대한 자세한 내용은 각 매개 변수에 대한 설명을 참조하세요. 이 cmdlet에는 역할 및 범위 매개 변수를 사용하여 서비스 주체에 역할을 **할당할** **수** 있습니다. 둘 다 생략하면 기여자 역할이 서비스 주체에 할당됩니다. 역할 및 범위  매개  변수의 기본값은 현재 **구독에 대한** 참가자입니다. 이 cmdlet은 애플리케이션을 만들고 ApplicationId가 제공되지 않은 경우 해당 속성을 설정합니다. 애플리케이션별 매개 변수를 업데이트하기 위해 [Update-AzADApplication](./update-azadapplication.md) cmdlet을 사용합니다.
 
 > [!WARNING]
-> **새-AzADServicePrincipal** 명령을 사용 하 여 서비스 사용자를 만드는 경우 출력에는 보호 해야 하는 자격 증명이 포함 됩니다. 이러한 자격 증명을 코드에 포함 하지 않도록 하거나 자격 증명을 소스 제어에 체크 인해야 합니다. 다른 방법으로는 자격 증명을 사용할 필요가 없도록 [관리 되는 id](/azure/active-directory/managed-identities-azure-resources/overview) 를 사용 하는 것이 좋습니다.
+> **New-AzADServicePrincipal** 명령을 사용하여 서비스 주체를 만들 때 출력에는 보호해야 하는 자격 증명이 포함됩니다. 또는 관리 ID를 [](/azure/active-directory/managed-identities-azure-resources/overview) 사용하여 자격 증명을 사용할 필요가 없습니다.
 >
-> 기본적으로 **AzADServicePrincipal** 는 구독 범위에서 [참가자](/azure/role-based-access-control/built-in-roles#contributor) 역할을 서비스 사용자에 게 할당 합니다. 손상 된 서비스 보안 주체의 위험을 줄이려면 더 구체적인 역할을 할당 하 고 리소스 또는 리소스 그룹으로 범위를 좁힙니다. 자세한 내용은 [역할 할당을 추가 하는 단계를](/azure/role-based-access-control/role-assignments-steps) 참조 하세요.
+> 기본적으로 **New-AzADServicePrincipal은** 구독 [](/azure/role-based-access-control/built-in-roles#contributor) 범위의 서비스 주체에 기여자 역할을 할당합니다. 손상된 서비스 주체의 위험을 줄이기 위해 보다 구체적인 역할을 할당하고 리소스 또는 리소스 그룹으로 범위를 좁힐 수 있습니다. 자세한 [내용은 역할 할당을 추가하는](/azure/role-based-access-control/role-assignments-steps) 단계를 참조하세요.
 
-## 예제의
+## 예제
 
-### 예제 1: 간단한 광고 서비스 사용자 만들기
+### 예제 1: 간단한 AD 서비스 주체 만들기
 
-다음 예에서는 지정 되지 않은 매개 변수에 대 한 기본값을 사용 하 여 광고 서비스 사용자를 만듭니다. 응용 프로그램 ID가 제공 되지 않으므로 서비스 사용자를 위해 응용 프로그램이 생성 됩니다. **역할** 또는 **범위** 에 대 한 값은 제공 되지 않으므로 만든 서비스 사용자에 게는 현재 구독에 대 한 **참가자** 역할이 할당 됩니다.
+다음 예제에서는 지정되지 않은 매개 변수에 대한 기본값을 사용하여 AD 서비스 주체를 만듭니다. 애플리케이션 ID가 제공되지 않은 경우 서비스 주체에 대한 애플리케이션이 만들어집니다. 역할 또는 범위에 대한 값이 제공되지 않습니다.  생성된 서비스 주체에는 현재 구독에 대한 참가자 역할이 할당됩니다. 
 
 ```powershell
 New-AzADServicePrincipal
@@ -154,9 +154,9 @@ Id                    : 00000000-0000-0000-0000-000000000000
 Type                  : ServicePrincipal
 ```
 
-### 예제 2: 지정 된 역할 및 기본 범위를 사용 하 여 간단한 광고 서비스 사용자 만들기
+### 예제 2: 지정된 역할 및 기본 범위를 통해 간단한 AD 서비스 주체 만들기
 
-다음 예에서는 지정 되지 않은 매개 변수에 대 한 기본값을 사용 하 여 광고 서비스 사용자를 만듭니다. 응용 프로그램 ID가 제공 되지 않으므로 서비스 사용자를 위해 응용 프로그램이 생성 됩니다. **범위** 매개 변수에 대 한 값이 제공 되지 않았으므로 현재 구독에 대 한 **읽기** 권한이 있는 서비스 사용자가 만들어집니다.
+다음 예제에서는 지정되지 않은 매개 변수에 대한 기본값을 사용하여 AD 서비스 주체를 만듭니다. 애플리케이션 ID가 제공되지 않은 경우 서비스 주체에 대한 애플리케이션이 만들어집니다. 범위 매개 변수에  대한 값이 제공되지 않고 현재 구독에 대한 읽기 권한자 권한으로 서비스 **주체가** 만들어집니다.
 
 ```powershell
 New-AzADServicePrincipal -Role Reader
@@ -173,9 +173,9 @@ Type                  : ServicePrincipal
 WARNING: Assigning role 'Reader' over scope '/subscriptions/00000000-0000-0000-0000-000000000000' to the new service principal.
 ```
 
-### 예제 3: 지정 된 범위 및 기본 역할을 사용 하 여 간단한 광고 서비스 사용자 만들기
+### 예제 3: 지정된 범위 및 기본 역할을 통해 간단한 AD 서비스 주체 만들기
 
-다음 예에서는 지정 되지 않은 매개 변수에 대 한 기본값을 사용 하 여 광고 서비스 사용자를 만듭니다. 응용 프로그램 ID가 제공 되지 않으므로 서비스 사용자를 위해 응용 프로그램이 생성 됩니다. **역할** 매개 변수에 대 한 값이 제공 되지 않았으므로 서비스 사용자는 제공 된 리소스 그룹 범위에 대 한 **참가자** 권한을 사용 하 여 만들어집니다.
+다음 예제에서는 지정되지 않은 매개 변수에 대한 기본값을 사용하여 AD 서비스 주체를 만듭니다. 애플리케이션 ID가 제공되지 않은 경우 서비스 주체에 대한 애플리케이션이 만들어집니다. 서비스 주체는  역할 매개 변수에 대한 값이 제공되지 않고 제공된 리소스 그룹 범위에 대한 참가자 권한으로 **만들어집니다.**
 
 ```powershell
 New-AzADServicePrincipal -Scope /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup
@@ -192,9 +192,9 @@ Type                  : ServicePrincipal
 WARNING: Assigning role 'Contributor' over scope '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup' to the new service principal.
 ```
 
-### 예제 4: 지정 된 범위와 역할이 있는 간단한 광고 서비스 사용자 만들기
+### 예제 4: 지정된 범위 및 역할을 통해 간단한 AD 서비스 주체 만들기
 
-다음 예에서는 지정 되지 않은 매개 변수에 대 한 기본값을 사용 하 여 광고 서비스 사용자를 만듭니다. 응용 프로그램 ID가 제공 되지 않으므로 서비스 사용자를 위해 응용 프로그램이 생성 됩니다. 제공 된 리소스 그룹 범위에 대 한 **읽기** 권한으로 서비스 사용자가 만들어집니다.
+다음 예제에서는 지정되지 않은 매개 변수에 대한 기본값을 사용하여 AD 서비스 주체를 만듭니다. 애플리케이션 ID가 제공되지 않은 경우 서비스 주체에 대한 애플리케이션이 만들어집니다. 서비스 주체는 제공된 리소스 그룹 범위에 **대한 읽기** 권한자 권한으로 만들어집니다.
 
 ```powershell
 New-AzADServicePrincipal -Role Reader -Scope /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup
@@ -211,9 +211,9 @@ Type                  : ServicePrincipal
 WARNING: Assigning role 'Reader' over scope '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup' to the new service principal.
 ```
 
-### 예제 5: 역할을 할당 하 여 응용 프로그램 ID를 사용 하 여 새 광고 서비스 사용자 만들기
+### 예제 5: 역할 할당과 함께 애플리케이션 ID를 사용하여 새 AD 서비스 주체 만들기
 
-다음 예제에서는 응용 프로그램 ID가 ' 00000000-0000-0000-0000-000000000000 ' 인 응용 프로그램에 대 한 새 광고 서비스 사용자를 만듭니다. **역할** 또는 **범위** 에 대 한 값은 제공 되지 않으므로 만든 서비스 사용자에 게는 현재 구독에 대 한 **참가자** 역할이 할당 됩니다.
+다음 예제에서는 애플리케이션 ID가 '000000000-0000-0000-0000-0000-000000000000'인 애플리케이션에 대한 새 AD 서비스 주체를 만듭니다. 역할 또는 범위에 대한 값이 제공되지 않습니다.  생성된 서비스 주체에는 현재 구독에 대한 참가자 역할이 할당됩니다. 
 
 ```powershell
 New-AzADServicePrincipal -ApplicationId 00000000-0000-0000-0000-000000000000
@@ -227,17 +227,17 @@ Id                    : 00000000-0000-0000-0000-000000000000
 Type                  : ServicePrincipal
 ```
 
-### 예제 6: 파이핑을 사용 하 여 새 광고 서비스 사용자 만들기
+### 예제 6: 파이핑을 사용하여 새 AD 서비스 주체 만들기
 
-다음 예제에서는 [Get-AzADApplication](./get-azadapplication.md) cmdlet을 사용 하 여 개체 ID가 ' 3ede3c26-b443-4e0b-9efc-b05e68338dc3 ' 인 응용 프로그램을 검색 합니다. 결과는 `New-AzADServicePrincipal` 해당 응용 프로그램에 대 한 새 광고 서비스 사용자를 만들기 위해 cmdlet에 파이프라인으로 생성 됩니다.
+다음 예제에서는 [Get-AzADApplication](./get-azadapplication.md) cmdlet을 사용하여 개체 ID '3ede3c26-b443-4e0b-9efc-b05e68338dc3'을 사용하여 애플리케이션을 검색합니다. 결과는 cmdlet에 파이프하여 애플리케이션에 대한 새 AD 서비스 `New-AzADServicePrincipal` 주체를 생성합니다.
 
 ```powershell
 Get-AzADApplication -ObjectId 3ede3c26-b443-4e0b-9efc-b05e68338dc3 | New-AzADServicePrincipal
 ```
 
-### 예제 7: DisplayName 및 password 자격 증명을 사용 하 여 새 광고 서비스 사용자 만들기
+### 예제 7: DisplayName 및 암호 자격 증명을 사용하여 새 AD 서비스 주체 만들기
 
-다음 예에서는 이름 **ServicePrincipalName** 와 **StrongPassworld! 23** 의 비밀 번호를 사용 하 여 새 응용 프로그램을 만듭니다. 생성 된 응용 프로그램을 기반으로 서비스 사용자를 만듭니다. 시작 날짜 및 종료 날짜가 암호 자격 증명에 추가 됩니다.
+다음 예제에서는 **ServicePrincipalName** 이름과 **StrongPassworld!23의** 암호를 사용하여 새 애플리케이션을 만듭니다. 생성된 애플리케이션을 기반으로 서비스 주체가 만들어집니다. 시작 날짜 및 종료 날짜가 암호 자격 증명에 추가됩니다.
 
 ```powershell
 $credentials = New-Object -TypeName Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential -Property @{
@@ -254,9 +254,9 @@ Id                    : 00000000-0000-0000-0000-000000000000
 Type                  :
 ```
 
-### 예제 8: DisplayName 및 일반 키 자격 증명을 사용 하 여 새 광고 서비스 사용자 만들기
+### 예제 8: DisplayName 및 일반 키 자격 증명을 사용하여 새 AD 서비스 주체 만들기
 
-다음 예제에서는 **ServicePrincipalName** 이름 및 인증서를 사용 하 여 새 응용 프로그램을 만듭니다 **$cert**. 생성 된 응용 프로그램을 기반으로 서비스 사용자를 만듭니다. 끝 날짜가 키 자격 증명에 추가 됩니다.
+다음 예제에서는 **ServicePrincipalName** 이름과 인증서 이름을 지정하여 새 애플리케이션을 **$cert.** 만든 애플리케이션을 기반으로 서비스 주체가 만들어집니다. 종료 날짜가 키 자격 증명에 추가됩니다.
 
 ```powershell
 $cert = 'public certificate as Base64 encoded string'
@@ -272,11 +272,11 @@ Id                    : 00000000-0000-0000-0000-000000000000
 Type                  :
 ```
 
-## 변수
+## PARAMETERS
 
 ### -ApplicationId
 
-테 넌 트의 서비스 사용자에 대 한 고유한 응용 프로그램 ID입니다. 만든 후에는이 속성을 변경할 수 없습니다. 기존 응용 프로그램의 응용 프로그램 ID를 지정 하지 않으면 응용 프로그램이 만들어집니다.
+테넌트의 서비스 주체에 대한 고유한 애플리케이션 ID입니다. 만든 후 이 속성을 변경할 수 없습니다. 기존 애플리케이션에 대한 애플리케이션 ID를 지정하지 않으면 애플리케이션이 만들어집니다.
 
 ```yaml
 Type: System.Guid
@@ -304,7 +304,7 @@ Accept wildcard characters: False
 
 ### -ApplicationObject
 
-서비스 사용자를 만들 응용 프로그램을 나타내는 개체입니다.
+서비스 주체가 생성되는 애플리케이션을 나타내는 개체입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
@@ -320,7 +320,7 @@ Accept wildcard characters: False
 
 ### -CertValue
 
-비대칭 자격 증명 형식의 값입니다. 이는 Base64로 인코딩된 인증서를 나타냅니다.
+비대칭 자격 증명 형식의 값입니다. Base64로 인코딩된 인증서를 나타났습니다.
 
 ```yaml
 Type: System.String
@@ -348,7 +348,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -364,7 +364,7 @@ Accept wildcard characters: False
 
 ### -DisplayName
 
-서비스 사용자의 식별 이름입니다. 표시 이름이 제공 되지 않은 경우이 값은 기본적으로 **azure-** i d-mm-dd-yyyy-ss 이며, 여기서 접미사는 응용 프로그램을 만드는 데 걸리는 시간입니다.
+서비스 주체의 이름입니다. 표시 이름을 지정하지 않은 경우 이 값은 기본적으로 접미사는 애플리케이션을 만들 때인 **azure-powershell-MM-dd-yy-HH-mm-ss로** 설정됩니다.
 
 ```yaml
 Type: System.String
@@ -392,8 +392,8 @@ Accept wildcard characters: False
 
 ### -EndDate
 
-자격 증명 사용의 유효 종료 날짜입니다. 기본 끝 날짜 값은 오늘부터 1 년입니다.
-비대칭 형식 자격 증명의 경우이를 X509 인증서가 유효한 날짜 또는 그 이전으로 설정 해야 합니다.
+자격 증명 사용의 유효 종료 날짜입니다. 기본 종료 날짜 값은 오늘부터 1년입니다.
+비대칭 형식 자격 증명의 경우 X509 인증서가 유효한 날짜 또는 그 이전으로 설정해야 합니다.
 
 ```yaml
 Type: System.DateTime
@@ -421,7 +421,7 @@ Accept wildcard characters: False
 
 ### -KeyCredential
 
-응용 프로그램과 연결 된 키 자격 증명의 컬렉션입니다.
+애플리케이션과 연결된 키 자격 증명의 컬렉션입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ActiveDirectory.PSADKeyCredential[]
@@ -449,7 +449,7 @@ Accept wildcard characters: False
 
 ### -PasswordCredential
 
-응용 프로그램과 연결 된 암호 자격 증명 모음입니다.
+애플리케이션과 연결된 암호 자격 증명의 컬렉션입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential[]
@@ -475,9 +475,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -역할
+### -Role
 
-서비스 사용자가 범위를 초과 하는 역할입니다. 값을 지정 하지 않으면 **역할** 은 기본적으로 **기여자** 역할을 합니다.
+서비스 주체가 범위를 통해 있는 역할입니다. 값이 제공되지 않고 **역할은** 기본적으로 기여자 **역할로 설정됩니다.**
 
 ```yaml
 Type: System.String
@@ -491,9 +491,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -범위
+### -Scope
 
-서비스 사용자에 게 사용 권한이 있는 범위입니다. 값을 지정 하지 않으면 현재 구독이 기본적으로 **Scope** 로 설정 됩니다.
+서비스 주체에 대한 권한이 있는 범위입니다. 값이 제공되지 않고 **범위는** 기본적으로 현재 구독으로 설정됩니다.
 
 ```yaml
 Type: System.String
@@ -509,7 +509,7 @@ Accept wildcard characters: False
 
 ### -SkipAssignment
 
-설정 된 경우 서비스 사용자에 대 한 기본 역할 할당 만들기를 건너뜁니다.
+설정된 경우 서비스 주체에 대한 기본 역할 할당 만들기를 건너뜁.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -523,9 +523,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -시작 날짜
+### -StartDate
 
-자격 증명 사용의 유효 시작 날짜입니다. 기본 시작 날짜 값은 오늘입니다. 비대칭 형식 자격 증명의 경우 X509 인증서를 사용할 수 있는 날짜 또는 그 이후에이를 설정 해야 합니다.
+자격 증명 사용의 유효 시작 날짜입니다. 기본 시작 날짜 값은 오늘입니다. 비대칭 형식 자격 증명의 경우 X509 인증서가 유효한 날짜 또는 그 이후로 설정해야 합니다.
 
 ```yaml
 Type: System.DateTime
@@ -551,9 +551,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -확인
+### -Confirm
 
-Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.
+cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -569,7 +569,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Cmdlet이 실행 되는 경우의 동작을 보여 줍니다. Cmdlet이 실행 되지 않습니다.
+cmdlet이 실행되는 경우의 결과 표시 cmdlet이 실행되지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -584,43 +584,43 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters)을 참조 하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](/powershell/module/microsoft.powershell.core/about/about_commonparameters)about_CommonParameters.
 ## 입력
 
-### 시스템 Guid
+### System.Guid
 
-### System. 문자열
+### System.String
 
-### ActiveDirectory PSADApplication 프로그램
+### Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
 
-### ActiveDirectory PSADPasswordCredential []
+### Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential[]
 
-### ActiveDirectory PSADKeyCredential []
+### Microsoft.Azure.Commands.ActiveDirectory.PSADKeyCredential[]
 
-### 시스템. 날짜/시간
+### System.DateTime
 
 ## 출력
 
-### ActiveDirectory PSADServicePrincipal
+### Microsoft.Azure.Commands.ActiveDirectory.PSADServicePrincipal
 
-### PSADServicePrincipalWrapper에 대 한 권한 부여.
+### Microsoft.Azure.Commands.Resources.Models.Authorization.PSADServicePrincipalWrapper
 
-## 상속자
+## 참고 사항
 
-키워드: azure, azurerm, arm, resource, 관리, 관리자, 리소스, 그룹, 서식 파일, 배포
+키워드: azure, azurerm, arm, 리소스, 관리, 관리자, 리소스, 그룹, 템플릿, 배포
 
 ## 관련 링크
 
-[제거-AzADServicePrincipal](./Remove-AzADServicePrincipal.md)
+[Remove-AzADServicePrincipal](./Remove-AzADServicePrincipal.md)
 
 [Get-AzADServicePrincipal](./Get-AzADServicePrincipal.md)
 
-[새로운 AzADApplication](./New-AzADApplication.md)
+[New-AzADApplication](./New-AzADApplication.md)
 
-[제거-AzADApplication](./Remove-AzADApplication.md)
+[Remove-AzADApplication](./Remove-AzADApplication.md)
 
 [Get-AzADSpCredential](./Get-AzADSpCredential.md)
 
-[새로운 AzADSpCredential](./New-AzADSpCredential.md)
+[New-AzADSpCredential](./New-AzADSpCredential.md)
 
-[제거-AzADSpCredential](./Remove-AzADSpCredential.md)
+[Remove-AzADSpCredential](./Remove-AzADSpCredential.md)

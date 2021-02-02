@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzADServicePrincipal.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzADServicePrincipal.md
-ms.openlocfilehash: 6d268c2378c93bcfb98e64c654880e8055bcede8
-ms.sourcegitcommit: 68451baa389791703e666d95469602c5652609ee
+ms.openlocfilehash: e7c77dc4daf38634e7661f4579dd5bbcc81d0443
+ms.sourcegitcommit: e680033f216d86cd91a1dfdb8328d32f4c99d21a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "98490431"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251831"
 ---
 # New-AzADServicePrincipal
 
@@ -131,7 +131,7 @@ New-AzADServicePrincipal -ApplicationObject <PSADApplication> -KeyCredential <PS
 새 Azure Active Directory 서비스 주체를 만듭니다. 기본 매개 변수 집합은 매개 변수가 제공되지 않은 경우 기본값을 사용합니다. 기본값에 대한 자세한 내용은 각 매개 변수에 대한 설명을 참조하세요. 이 cmdlet에는 역할 및 범위 매개 변수를 사용하여 서비스 주체에 역할을 **할당할** **수** 있습니다. 둘 다 생략하면 기여자 역할이 서비스 주체에 할당됩니다. 역할 및 범위  매개  변수의 기본값은 현재 **구독에 대한** 참가자입니다. 이 cmdlet은 애플리케이션을 만들고 ApplicationId가 제공되지 않은 경우 해당 속성을 설정합니다. 애플리케이션별 매개 변수를 업데이트하기 위해 [Update-AzADApplication](./update-azadapplication.md) cmdlet을 사용합니다.
 
 > [!WARNING]
-> **New-AzADServicePrincipal** 명령을 사용하여 서비스 주체를 만들 때 출력에는 보호해야 하는 자격 증명이 포함됩니다. 코드에 이러한 자격 증명을 포함하지 않는지 또는 소스 제어에 자격 증명을 검사해야 합니다. 또는 관리 ID를 [](/azure/active-directory/managed-identities-azure-resources/overview) 사용하여 자격 증명을 사용할 필요가 없습니다.
+> **New-AzADServicePrincipal** 명령을 사용하여 서비스 주체를 만들 때 출력에는 보호해야 하는 자격 증명이 포함됩니다. 또는 관리 ID를 [](/azure/active-directory/managed-identities-azure-resources/overview) 사용하여 자격 증명을 사용할 필요가 없습니다.
 >
 > 기본적으로 **New-AzADServicePrincipal은** 구독 [](/azure/role-based-access-control/built-in-roles#contributor) 범위의 서비스 주체에 기여자 역할을 할당합니다. 손상된 서비스 주체의 위험을 줄이기 위해 보다 구체적인 역할을 할당하고 리소스 또는 리소스 그룹으로 범위를 좁힐 수 있습니다. 자세한 [내용은 역할 할당을 추가하는](/azure/role-based-access-control/role-assignments-steps) 단계를 참조하세요.
 
@@ -173,9 +173,9 @@ Type                  : ServicePrincipal
 WARNING: Assigning role 'Reader' over scope '/subscriptions/00000000-0000-0000-0000-000000000000' to the new service principal.
 ```
 
-### 예제 3: 지정된 범위 및 기본 역할로 간단한 AD 서비스 주체 만들기
+### 예제 3: 지정된 범위 및 기본 역할을 통해 간단한 AD 서비스 주체 만들기
 
-다음 예제에서는 지정되지 않은 매개 변수에 대한 기본값을 사용하여 AD 서비스 주체를 만듭니다. 애플리케이션 ID가 제공되지 않은 경우 서비스 주체에 대한 애플리케이션이 만들어집니다. 서비스 주체는  제공된 리소스 그룹 범위에 대한 기여자 권한으로 생성됩니다. 역할 매개 변수에 대한 값이 **제공되지** 않습니다.
+다음 예제에서는 지정되지 않은 매개 변수에 대한 기본값을 사용하여 AD 서비스 주체를 만듭니다. 애플리케이션 ID가 제공되지 않은 경우 서비스 주체에 대한 애플리케이션이 만들어집니다. 서비스 주체는  역할 매개 변수에 대한 값이 제공되지 않고 제공된 리소스 그룹 범위에 대한 참가자 권한으로 **만들어집니다.**
 
 ```powershell
 New-AzADServicePrincipal -Scope /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup
@@ -194,7 +194,7 @@ WARNING: Assigning role 'Contributor' over scope '/subscriptions/00000000-0000-0
 
 ### 예제 4: 지정된 범위 및 역할을 통해 간단한 AD 서비스 주체 만들기
 
-다음 예제에서는 지정되지 않은 매개 변수에 대한 기본값을 사용하여 AD 서비스 주체를 만듭니다. 애플리케이션 ID가 제공되지 않은 경우 서비스 주체에 대한 애플리케이션이 만들어집니다. 서비스 주체는 제공된 리소스 그룹 **범위에 대한 읽기** 권한자 권한으로 만들어집니다.
+다음 예제에서는 지정되지 않은 매개 변수에 대한 기본값을 사용하여 AD 서비스 주체를 만듭니다. 애플리케이션 ID가 제공되지 않은 경우 서비스 주체에 대한 애플리케이션이 만들어집니다. 서비스 주체는 제공된 리소스 그룹 범위에 **대한 읽기** 권한자 권한으로 만들어집니다.
 
 ```powershell
 New-AzADServicePrincipal -Role Reader -Scope /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup
@@ -213,7 +213,7 @@ WARNING: Assigning role 'Reader' over scope '/subscriptions/00000000-0000-0000-0
 
 ### 예제 5: 역할 할당과 함께 애플리케이션 ID를 사용하여 새 AD 서비스 주체 만들기
 
-다음 예제에서는 애플리케이션 ID가 '000000000-0000-0000-0000-0000-00000000000'인 애플리케이션에 대한 새 AD 서비스 주체를 만듭니다. 역할 또는 범위에 대한 값이 제공되지 않습니다.  생성된 서비스 주체에는 현재 구독에 대한 참가자 역할이 할당됩니다. 
+다음 예제에서는 애플리케이션 ID가 '000000000-0000-0000-0000-0000-000000000000'인 애플리케이션에 대한 새 AD 서비스 주체를 만듭니다. 역할 또는 범위에 대한 값이 제공되지 않습니다.  생성된 서비스 주체에는 현재 구독에 대한 참가자 역할이 할당됩니다. 
 
 ```powershell
 New-AzADServicePrincipal -ApplicationId 00000000-0000-0000-0000-000000000000
