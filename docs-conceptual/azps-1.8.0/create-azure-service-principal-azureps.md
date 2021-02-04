@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.date: 04/23/2019
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: 65cf13200c46a955762f4c92b6822033a3723aa8
-ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
+ms.openlocfilehash: 9fb0384aa88575c1526b5c7194c07bfb8c1a6c84
+ms.sourcegitcommit: e680033f216d86cd91a1dfdb8328d32f4c99d21a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93408789"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251723"
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Azure PowerShell을 사용하여 Azure 서비스 주체 만들기
 
@@ -22,7 +22,7 @@ Azure 서비스 주체는 애플리케이션, 호스팅된 서비스 및 자동�
 이 문서에서는 Azure PowerShell을 사용하여 서비스 주체를 만들고, 정보를 가져오고, 다시 설정하는 단계를 보여 줍니다.
 
 > [!WARNING]
-> [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal) 명령을 사용하여 서비스 주체를 만들면 보호해야 하는 자격 증명이 출력에 포함됩니다. 이러한 자격 증명을 코드에 포함하지 않도록 하거나 소스 제어에 자격 증명을 확인해야 합니다. 또는 자격 증명을 사용할 필요가 없도록 [관리 ID](/azure/active-directory/managed-identities-azure-resources/overview)를 사용하는 것이 좋습니다.
+> [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal) 명령을 사용하여 서비스 주체를 만들면 보호해야 하는 자격 증명이 출력에 포함됩니다. 또는 자격 증명을 사용할 필요가 없도록 [관리 ID](/azure/active-directory/managed-identities-azure-resources/overview)를 사용하는 것이 좋습니다.
 >
 > 기본적으로 [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal)은 구독 범위에서 서비스 주체에 [Contributor](/azure/role-based-access-control/built-in-roles#contributor) 역할을 할당합니다. 서비스 주체가 손상될 위험을 줄이려면 보다 구체적인 역할을 할당하고 범위를 리소스 또는 리소스 그룹으로 좁힙니다. 자세한 내용은 [역할 할당을 추가하는 단계](/azure/role-based-access-control/role-assignments-steps)를 참조하세요.
 
@@ -113,9 +113,9 @@ Azure PowerShell은 역할 할당을 관리하는 다음과 같은 cmdlet이 있
 * [New-AzRoleAssignment](/powershell/module/az.resources/new-azroleassignment)
 * [Remove-AzRoleAssignment](/powershell/module/az.resources/remove-azroleassignment)
 
-서비스 주체의 기본 역할은 **참가자** 입니다. 이 역할에는 Azure 계정에서 읽고 쓸 수 있는 모든 권한이 있습니다. **Reader** (읽기 권한자) 역할은 읽기 전용 액세스 권한으로 더 제한적입니다.  RBAC(역할 기반 액세스 제어)와 역할에 대한 자세한 내용은 [RBAC: 기본 제공 역할](/azure/active-directory/role-based-access-built-in-roles)을 참조하세요.
+서비스 주체의 기본 역할은 **참가자** 입니다. 이 역할에는 Azure 계정에서 읽고 쓸 수 있는 모든 권한이 있습니다. **Reader**(읽기 권한자) 역할은 읽기 전용 액세스 권한으로 더 제한적입니다.  RBAC(역할 기반 액세스 제어)와 역할에 대한 자세한 내용은 [RBAC: 기본 제공 역할](/azure/active-directory/role-based-access-built-in-roles)을 참조하세요.
 
-다음 예제에서는 **Reader** 역할을 추가하고 **Contributor** (기여자) 역할을 제거합니다.
+다음 예제에서는 **Reader** 역할을 추가하고 **Contributor**(기여자) 역할을 제거합니다.
 
 ```azurepowershell-interactive
 New-AzRoleAssignment -ApplicationId <service principal application ID> -RoleDefinitionName "Reader"

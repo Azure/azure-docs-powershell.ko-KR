@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.service: azure-powershell
 ms.date: 06/17/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: a5640ded6fc8c6478084374f7808450f6a99d6e5
-ms.sourcegitcommit: 68451baa389791703e666d95469602c5652609ee
+ms.openlocfilehash: 1879fea883c796dae26e353adeab908c8acdb967
+ms.sourcegitcommit: e680033f216d86cd91a1dfdb8328d32f4c99d21a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97894151"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251882"
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Azure PowerShell을 사용하여 Azure 서비스 주체 만들기
 
@@ -22,7 +22,7 @@ Azure 서비스 주체는 애플리케이션, 호스팅된 서비스 및 자동�
 이 문서에서는 Azure PowerShell을 사용하여 서비스 주체를 만들고, 정보를 가져오고, 다시 설정하는 단계를 보여 줍니다.
 
 > [!WARNING]
-> [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal) 명령을 사용하여 서비스 주체를 만들면 보호해야 하는 자격 증명이 출력에 포함됩니다. 이러한 자격 증명을 코드에 포함하지 않도록 하거나 소스 제어에 자격 증명을 확인해야 합니다. 또는 자격 증명을 사용할 필요가 없도록 [관리 ID](/azure/active-directory/managed-identities-azure-resources/overview)를 사용하는 것이 좋습니다.
+> [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal) 명령을 사용하여 서비스 주체를 만들면 보호해야 하는 자격 증명이 출력에 포함됩니다. 또는 자격 증명을 사용할 필요가 없도록 [관리 ID](/azure/active-directory/managed-identities-azure-resources/overview)를 사용하는 것이 좋습니다.
 >
 > 기본적으로 [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal)은 구독 범위에서 서비스 주체에 [Contributor](/azure/role-based-access-control/built-in-roles#contributor) 역할을 할당합니다. 서비스 주체가 손상될 위험을 줄이려면 보다 구체적인 역할을 할당하고 범위를 리소스 또는 리소스 그룹으로 좁힙니다. 자세한 내용은 [역할 할당을 추가하는 단계](/azure/role-based-access-control/role-assignments-steps)를 참조하세요.
 
