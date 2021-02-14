@@ -1,0 +1,376 @@
+### YamlMime:Tutorial
+title: Azure PowerShell로 가상 머신 만들기
+metadata:
+  title: Azure PowerShell로 가상 머신 만들기
+  description: 가상 머신을 만들어서 Azure PowerShell을 시작합니다.
+  audience: Developer
+  level: Beginner
+  displayType: two-column
+  interactive: azurepowershell
+  ms.date: 12/13/2018
+  ms.author: mirobb
+  author: mikefrobbins
+  manager: barbkess
+  ms.devlang: azure-powershell
+  ms.prod: powershell
+  ms.technology: azure-powershell
+  ms.topic: tutorial
+  clicktale: true
+  ms.openlocfilehash: f0a86f5eb970528bd4119f8487f724745a6e044c
+  ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 02/09/2021
+  ms.locfileid: "100012242"
+items:
+- durationInMinutes: 1
+  content: >-
+    이 자습서에서는 Azure PowerShell에서 가상 머신을 설정하는 방법과 관련된 모든 단계를 알아봅니다. 또한 이 자습서에는 출력 쿼리, Azure 리소스 재사용 및 리소스 정리가 포함됩니다.
+
+
+    이 자습서는 Azure Cloud Shell을 통해 제공되는 대화형 환경을 사용해서 완료할 수 있으며, [Azure PowerShell을 로컬에서 설치](install-az-ps.md)할 수도 있습니다.
+
+
+    **Ctrl+Shift+V**(macOS의 경우 **Cmd+Shift+V**)를 사용하여 Azure Cloud Shell에 자습서 텍스트를 붙여넣습니다.
+- durationInMinutes: 1
+  title: 로그인
+  content: >-
+    로컬 설치된 Azure PowerShell을 사용할 경우, 다른 단계를 수행하기 전에 로그인해야 합니다.
+
+
+    ```powershell-interactive
+
+    Connect-AzAccount
+
+    ```
+
+
+    터미널에 표시된 단계를 수행하여 로그인 프로세스를 완료하십시오.
+- durationInMinutes: 1
+  title: 리소스 그룹 만들기
+  content: >-
+    Azure에서 모든 리소스는 리소스 관리 그룹에 할당되어 있습니다. 리소스 그룹은 총체적으로 작업을 쉽게 수행할 수 있게 해주는 논리적인 리소스 그룹을 제공합니다.
+
+    이 자습서에서 생성되는 모든 리소스는 이름이 `TutorialResources`인 단일 그룹에 포함됩니다.
+
+
+    ```powershell-interactive
+
+    New-AzResourceGroup -Name TutorialResources -Location eastus
+
+    ```
+
+
+    ```Output
+
+    ResourceGroupName : TutorialResources
+
+    Location          : eastus
+
+    ProvisioningState : Succeeded
+
+    Tags              :
+
+    ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/TutorialResources
+
+    ```
+- durationInMinutes: 1
+  title: VM에 대한 관리자 자격 증명 만들기
+  content: >-
+    새 가상 머신을 만들기 전에 Windows VM의 관리자 계정에 대한 사용자 이름과 암호가 포함된 자격 증명 개체를 만들어야 합니다.
+
+
+    ```powershell-interactive
+
+    $cred = Get-Credential -Message "Enter a username and password for the virtual machine."
+
+    ```
+
+
+    메시지가 표시되면 사용자 이름 및 암호를 입력합니다. 결과로 생성된 자격 증명 개체는 다음 단계에서 매개 변수로 전달됩니다.
+
+
+    ```Output
+
+    Windows PowerShell credential request.
+
+    Enter a username and password for the virtual machine.
+
+    User: tutorAdmin
+
+    Password for user tutorAdmin: *********
+
+    ```
+- durationInMinutes: 4
+  title: 가상 머신 만들기
+  content: >-
+    Azure에서 가상 머신은 여러 종속성을 갖습니다. Azure PowerShell은 사용자가 지정하는 명령줄 인수를 기준으로 이러한 리소스를 만듭니다. 가독성을 위해 [PowerShell 스플랫](/powershell/module/microsoft.powershell.core/about/about_splatting)을 사용하여 Azure PowerShell cmdlet에 매개 변수를 전달합니다.
+
+
+    Windows를 실행하는 새 가상 머신을 만듭니다.
+
+
+    ```powershell-interactive
+
+    $vmParams = @{
+      ResourceGroupName = 'TutorialResources'
+      Name = 'TutorialVM1'
+      Location = 'eastus'
+      ImageName = 'Win2016Datacenter'
+      PublicIpAddressName = 'tutorialPublicIp'
+      Credential = $cred
+      OpenPorts = 3389
+    }
+
+    $newVM1 = New-AzVM @vmParams
+
+    ```
+
+    VM이 생성될 때 사용된 매개 변수 값 및 생성된 Azure 리소스를 확인할 수 있습니다.
+
+    PowerShell은 아래와 같이 진행률 표시줄을 표시합니다.
+
+
+    ```Output
+     Creating Azure resources
+      39% \
+      [ooooooooooooooooooooooooooooooooooo                                                                 ]
+
+      Creating TutorialVM1 virtual machine.
+    ```
+
+
+    VM이 준비되면 Azure Portal에서 또는 \$newVM1 변수를 검사하여 결과를 볼 수 있습니다.
+
+
+    ```powershell-interactive
+
+    $newVM1
+
+    ```
+
+
+    ```Output
+
+    ResourceGroupName : TutorialResources
+
+    Id                : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/TutorialResources/providers/Microsoft.Compute/virtualMachines/TutorialVM1
+
+    VmId              : 12345678-9abc-def0-1234-56789abcedf0
+
+    Name              : TutorialVM1
+
+    Type              : Microsoft.Compute/virtualMachines
+
+    Location          : eastus
+
+    Tags              : {}
+
+    HardwareProfile   : {VmSize}
+
+    NetworkProfile    : {NetworkInterfaces}
+
+    OSProfile         : {ComputerName, AdminUsername, WindowsConfiguration, Secrets}
+
+    ProvisioningState : Succeeded
+
+    StorageProfile    : {ImageReference, OsDisk, DataDisks}
+
+    ```
+
+
+    중괄호 안에 나열된 속성 값은 중첩된 개체입니다. 다음 단계에서는 이러한 중첩된 개체에서 특정 값을 보는 방법을 보여줍니다.
+- durationInMinutes: 5
+  title: 쿼리를 사용하여 가상 머신 정보 가져오기
+  content: >-
+    방금 만든 VM에서 몇 가지 자세한 정보를 가져오겠습니다. 이 예제에서는 만든 VM 및 관리자 계정 이름을 확인합니다.
+
+
+    ```powershell-interactive
+
+    $newVM1.OSProfile | Select-Object ComputerName,AdminUserName
+
+    ```
+
+
+    ```Output
+
+    ComputerName AdminUsername
+
+    ------------ -------------
+
+    TutorialVM1  tutorialAdmin
+
+    ```
+
+
+    다른 Azure PowerShell 명령을 사용하여 네트워크 구성에 대한 특정 정보를 가져올 수 있습니다.
+
+
+    ```powershell-interactive
+
+    $newVM1 | Get-AzNetworkInterface |
+      Select-Object -ExpandProperty IpConfigurations |
+        Select-Object Name,PrivateIpAddress
+    ```
+
+
+    이 예제에서는 PowerShell 파이프라인을 사용하여 \$newVM1 개체를 `Get-AzNetworkInterface` cmdlet으로 전송합니다. 결과로 생성된 네트워크 인터페이스 개체에서 중첩된 IpConfigurations 개체를 선택합니다. IpConfigurations 개체에서 이름 및 PrivateIpAddress 속성을 선택합니다.
+
+
+    ```Output
+
+    Name        PrivateIpAddress
+
+    ----        ----------------
+
+    TutorialVM1 192.168.1.4
+
+    ```
+
+
+    VM이 실행되고 있는지 확인하려면 원격 데스크톱을 통해 연결해야 합니다. 이를 위해 공용 IP 주소를 알고 있어야 합니다.
+
+
+    ```powershell-interactive
+
+    $publicIp = Get-AzPublicIpAddress -Name tutorialPublicIp -ResourceGroupName TutorialResources
+
+
+    $publicIp | Select-Object Name,IpAddress,@{label='FQDN';expression={$_.DnsSettings.Fqdn}}
+
+    ```
+
+
+    이 예제에서는 `Get-AzPublicIpAddress`를 사용하여 \$publicIp 변수에 결과를 저장합니다. 이 변수에서 속성을 선택하고 식을 사용하여 중첩된 Fqdn 속성을 검색합니다.
+
+
+    ```Output
+
+    Name             IpAddress           FQDN
+
+    ----             ---------           ----
+
+    tutorialPublicIp <PUBLIC_IP_ADDRESS> tutorialvm1-8a0999.eastus.cloudapp.azure.com
+
+    ```
+
+
+    로컬 컴퓨터에서 원격 데스크톱을 통해 VM에 연결하려면 다음 명령을 실행할 수 있습니다.
+
+
+    ```powershell-interactive
+
+    mstsc.exe /v <PUBLIC_IP_ADDRESS>
+
+    ```
+
+
+    개체 속성을 쿼리하는 방법에 대한 자세한 내용은 [Azure 리소스에 대한 쿼리](./queries-azureps.md)를 참조하세요.
+- durationInMinutes: 4
+  title: 기존 서브넷에 새 가상 머신 만들기
+  content: >-
+    두 번째 가상 머신은 기존 서브넷을 사용합니다.
+
+
+    ```powershell-interactive
+
+    $vm2Params = @{
+      ResourceGroupName = 'TutorialResources'
+      Name = 'TutorialVM2'
+      ImageName = 'Win2016Datacenter'
+      VirtualNetworkName = 'TutorialVM1'
+      SubnetName = 'TutorialVM1'
+      PublicIpAddressName = 'tutorialPublicIp2'
+      Credential = $cred
+      OpenPorts = 3389
+    }
+
+    $newVM2 = New-AzVM @vm2Params
+
+
+    $newVM2
+
+    ```
+
+
+    ```Output
+
+    ResourceGroupName        : TutorialResources
+
+    Id                       : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/TutorialResources/providers/Microsoft.Compute/virtualMachines/TutorialVM2
+
+    VmId                     : 12345678-9abc-def0-1234-56789abcedf1
+
+    Name                     : TutorialVM2
+
+    Type                     : Microsoft.Compute/virtualMachines
+
+    Location                 : eastus
+
+    Tags                     : {}
+
+    HardwareProfile          : {VmSize}
+
+    NetworkProfile           : {NetworkInterfaces}
+
+    OSProfile                : {ComputerName, AdminUsername, WindowsConfiguration, Secrets}
+
+    ProvisioningState        : Succeeded
+
+    StorageProfile           : {ImageReference, OsDisk, DataDisks}
+
+    FullyQualifiedDomainName : tutorialvm2-dfa5af.eastus.cloudapp.azure.com
+
+    ```
+
+
+    \$newVM2 개체의 FullyQualifiedDomainName 속성에 반환되기 때문에 새 VM의 공용 IP 주소를 가져오는 몇 가지 단계를 건너뛸 수 있습니다. 원격 데스크톱을 사용하여 연결하려면 다음 명령을 사용합니다.
+
+
+    ```powershell-interactive
+
+    mstsc.exe /v $newVM2.FullyQualifiedDomainName
+
+    ```
+- durationInMinutes: 4
+  title: 정리
+  content: >-
+    이제 자습서가 완료되었으므로, 생성된 리소스를 정리해야 합니다. `Remove-AzResource` 명령을 사용하여 개별 리소스를 삭제할 수 있지만, 리소스 그룹에 있는 모든 리소스를 제거하는 가장 안전한 방법은 `Remove-AzResourceGroup` 명령을 사용하여 그룹을 삭제하는 것입니다.
+
+
+    ```powershell-interactive
+
+    $job = Remove-AzResourceGroup -Name TutorialResources -Force -AsJob
+
+
+    $job
+
+    ```
+
+
+    ```Output
+
+    Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
+
+    --     ----            -------------   -----         -----------     --------             -------
+
+    1      Long Running... AzureLongRun... Running       True            localhost            Remove-AzResource...
+
+    ```
+
+
+    이 명령은 자습서 진행 중 생성된 리소스를 삭제하며, 올바른 순서로 리소스 할당을 취소할 수 있도록 보장합니다. `-AsJob` 매개 변수는 삭제가 수행되는 동안 PowerShell이 차단되지 않도록 유지합니다. 삭제가 완료될 때까지 대기하려면 다음 명령을 사용합니다.
+
+
+    ```powershell-interactive
+
+    Wait-Job -Id $job.Id
+
+    ```
+
+
+    정리가 완료되면 자습서가 완료됩니다. 계속해서 학습한 모든 항목들에 대한 요약 내용을 살펴보고 다음 단계를 진행하는 데 도움이 되는 리소스 링크를 확인하십시오.
+- durationInMinutes: 1
+  title: 요약
+  content: "\n축하합니다! 새로운 또는 기존의 리소스, 사용된 식 및 Azure PowerShell 명령을 사용하여 VM을 만드는 방법을 알아보고, 셸 변수에 저장할 데이터를 캡처하고, Azure VM에 대해 생성되는 일부 리소스를 살펴보았습니다.\n\n앞으로 진행할 내용은 Azure PowerShell을 사용하려는 방법에 따라 달라집니다. 이 자습서에 포함된 기능들에 대해서는 여러 자료를 통해 더 자세히 학습할 수 있습니다.\n\n### <a name=\"in-depth-azure-powershell-documentation\"></a>PowerShell 심층 설명서\n\n전체 [Azure PowerShell 설명서](/powershell/azure/new-azureps-module-az?view=azps-4.1.0) 집합을 탐색하는 데 시간이 걸릴 수 있습니다.\n\n이 자습서에서 사용한 명령에 대한 자세한 내용은 다음 아티클을 참조하세요.\n\n- [New-AzResourceGroup](/powershell/module/Az.resources/new-Azresourcegroup)\n- [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential)\n- [New-AzVM](/powershell/module/Az.compute/new-Azvm)\n- [Select-Object](/powershell/module/microsoft.powershell.utility/select-object)\n- [Get-AzPublicIpAddress](/powershell/module/Az.network/get-AzPublicIpAddress)\n- [Remove-AzResourceGroup](/powershell/module/Az.resources/Remove-AzResourceGroup)\n- [Wait-Job](/powershell/module/microsoft.powershell.core/wait-job)\n\n또한 자습서에 표시된 기능에 대해 보다 자세한 아티클도 있습니다.\n\n- [PowerShell 스플랫](/powershell/module/microsoft.powershell.core/about/about_splatting)\n- [쿼리](queries-azureps.md)\n- [서식 지정](formatting-output.md)\n- [PowerShell 작업 사용](using-psjobs.md)\n\n### <a name=\"sample-scripts\"></a>샘플 스크립트\n\n지금 바로 특정 작업을 시작하려면 해당 샘플 스크립트를 확인하십시오.\n\n- [Linux Virtual Machines](/azure/virtual-machines/linux/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [Windows Virtual Machines](/azure/virtual-machines/windows/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [Cosmos DB](/azure/cosmos-db/powershell-samples?toc=%2fpowershell%2fmodules%2ftoc.json)\n\n### <a name=\"feedback\"></a>사용자 의견\n\n피드백, 제안 사항 또는 질문이 있는 경우 여러 방법을 통해 연락할 수 있습니다.\n\n* `Send-Feedback`은 팀에 자유 형식의 피드백을 제공할 수 있는 Azure PowerShell의 기본 제공 명령입니다.\n* [Azure PowerShell 리포지토리](https://github.com/Azure/azure-powershell/issues)에서 기능 요청 또는 버그 보고서를 작성합니다.\n* 질문 또는 설명이 필요한 경우에는 [Azure PowerShell 설명서 리포지토리](https://github.com/MicrosoftDocs/azure-docs-powershell/issues)에서 문제를 작성합니다.\n\nAzure PowerShell을 마음껏 사용하세요!"
