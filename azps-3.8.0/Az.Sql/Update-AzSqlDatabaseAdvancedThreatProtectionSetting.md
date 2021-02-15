@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/Update
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Update-AzSqlDatabaseAdvancedThreatProtectionSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Update-AzSqlDatabaseAdvancedThreatProtectionSetting.md
-ms.openlocfilehash: 1bd5906ac4736fc2aace122070edfebe1e59fe3f
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: baa3e3d4b272bccab5fe33b9af05edc9ed254236
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "93878710"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100402544"
 ---
-# <span data-ttu-id="9ef77-101">Update-AzSqlDatabaseAdvancedThreatProtectionSetting</span><span class="sxs-lookup"><span data-stu-id="9ef77-101">Update-AzSqlDatabaseAdvancedThreatProtectionSetting</span></span>
+# <span data-ttu-id="4f272-101">Update-AzSqlDatabaseAdvancedThreatProtectionSetting</span><span class="sxs-lookup"><span data-stu-id="4f272-101">Update-AzSqlDatabaseAdvancedThreatProtectionSetting</span></span>
 
-## <span data-ttu-id="9ef77-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="9ef77-102">SYNOPSIS</span></span>
-<span data-ttu-id="9ef77-103">데이터베이스에 고급 위협 보호 설정을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-103">Sets a advanced threat protection settings on a database.</span></span>
+## <span data-ttu-id="4f272-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="4f272-102">SYNOPSIS</span></span>
+<span data-ttu-id="4f272-103">데이터베이스에서 고급 위협 방지 설정을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-103">Sets a advanced threat protection settings on a database.</span></span>
 
-## <span data-ttu-id="9ef77-104">구문과</span><span class="sxs-lookup"><span data-stu-id="9ef77-104">SYNTAX</span></span>
+## <span data-ttu-id="4f272-104">구문</span><span class="sxs-lookup"><span data-stu-id="4f272-104">SYNTAX</span></span>
 
 ```
 Update-AzSqlDatabaseAdvancedThreatProtectionSetting [-PassThru] [-NotificationRecipientsEmails <String>]
@@ -27,25 +27,25 @@ Update-AzSqlDatabaseAdvancedThreatProtectionSetting [-PassThru] [-NotificationRe
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="9ef77-105">설명은</span><span class="sxs-lookup"><span data-stu-id="9ef77-105">DESCRIPTION</span></span>
-<span data-ttu-id="9ef77-106">**AzSqlDatabaseAdvancedThreatProtectionSetting** Cmdlet은 Azure SQL 데이터베이스에서 고급 위협 방지 설정을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-106">The **Update-AzSqlDatabaseAdvancedThreatProtectionSetting** cmdlet sets a advanced threat protection settings on an Azure SQL database.</span></span>
-<span data-ttu-id="9ef77-107">데이터베이스에서 고급 위협 보호를 사용 하도록 설정 하려면 해당 데이터베이스에 대 한 감사 설정을 사용 하도록 설정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-107">In order to enable advanced threat protection on a database an auditing settings must be enabled on that database.</span></span>
-<span data-ttu-id="9ef77-108">이 cmdlet을 사용 하려면 *ResourceGroupName* , *ServerName* 및 *DatabaseName* 매개 변수를 지정 하 여 데이터베이스를 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-108">To use this cmdlet, specify the *ResourceGroupName* , *ServerName* and *DatabaseName* parameters to identify the database.</span></span>
-<span data-ttu-id="9ef77-109">이 cmdlet은 Azure의 SQL Server 스트레치 데이터베이스 서비스 에서도 지원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-109">This cmdlet is also supported by the SQL Server Stretch Database service on Azure.</span></span>
+## <span data-ttu-id="4f272-105">설명</span><span class="sxs-lookup"><span data-stu-id="4f272-105">DESCRIPTION</span></span>
+<span data-ttu-id="4f272-106">**Update-AzSqlDatabaseAdvancedThreatProtectionSetting** cmdlet은 Azure SQL 데이터베이스에서 고급 위협 보호 설정을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-106">The **Update-AzSqlDatabaseAdvancedThreatProtectionSetting** cmdlet sets a advanced threat protection settings on an Azure SQL database.</span></span>
+<span data-ttu-id="4f272-107">데이터베이스에서 고급 위협 방지를 사용하려면 해당 데이터베이스에서 감사 설정을 사용하도록 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-107">In order to enable advanced threat protection on a database an auditing settings must be enabled on that database.</span></span>
+<span data-ttu-id="4f272-108">이 cmdlet을 사용하려면 *ResourceGroupName,* *ServerName* 및 *DatabaseName* 매개 변수를 지정하여 데이터베이스를 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-108">To use this cmdlet, specify the *ResourceGroupName*, *ServerName* and *DatabaseName* parameters to identify the database.</span></span>
+<span data-ttu-id="4f272-109">이 cmdlet은 Azure의 SQL Server Stretch Database 서비스에서도 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-109">This cmdlet is also supported by the SQL Server Stretch Database service on Azure.</span></span>
 
-## <span data-ttu-id="9ef77-110">예제의</span><span class="sxs-lookup"><span data-stu-id="9ef77-110">EXAMPLES</span></span>
+## <span data-ttu-id="4f272-110">예제</span><span class="sxs-lookup"><span data-stu-id="4f272-110">EXAMPLES</span></span>
 
-### <span data-ttu-id="9ef77-111">예제 1: 데이터베이스에 대 한 고급 위협 보호 설정 설정</span><span class="sxs-lookup"><span data-stu-id="9ef77-111">Example 1: Set the advanced threat protection settings for a database</span></span>
+### <span data-ttu-id="4f272-111">예제 1: 데이터베이스에 대한 고급 위협 방지 설정 설정</span><span class="sxs-lookup"><span data-stu-id="4f272-111">Example 1: Set the advanced threat protection settings for a database</span></span>
 ```
 PS C:\>Update-AzSqlDatabaseAdvancedThreatProtectionSetting -ResourceGroupName "ResourceGroup11" -ServerName "Server01" -DatabaseName "Database01" -NotificationRecipientsEmails "admin01@contoso.com;secadmin@contoso.com" -EmailAdmins $False -ExcludedDetectionType "Sql_Injection_Vulnerability", "SQL_Injection" -StorageAccountName "mystorageAccount"
 ```
 
-<span data-ttu-id="9ef77-112">이 명령은 Server01 라는 서버의 Database01 이라는 데이터베이스에 대 한 고급 위협 보호 설정을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-112">This command sets the advanced threat protection settings for a database named Database01 on the server named Server01.</span></span>
+<span data-ttu-id="4f272-112">이 명령은 Server01이라는 서버에서 Database01이라는 데이터베이스에 대한 고급 위협 보호 설정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-112">This command sets the advanced threat protection settings for a database named Database01 on the server named Server01.</span></span>
 
-## <span data-ttu-id="9ef77-113">변수</span><span class="sxs-lookup"><span data-stu-id="9ef77-113">PARAMETERS</span></span>
+## <span data-ttu-id="4f272-113">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="4f272-113">PARAMETERS</span></span>
 
-### <span data-ttu-id="9ef77-114">-DatabaseName</span><span class="sxs-lookup"><span data-stu-id="9ef77-114">-DatabaseName</span></span>
-<span data-ttu-id="9ef77-115">설정이 설정 된 데이터베이스의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-115">Specifies the name of the database where the settings is set.</span></span>
+### <span data-ttu-id="4f272-114">-DatabaseName</span><span class="sxs-lookup"><span data-stu-id="4f272-114">-DatabaseName</span></span>
+<span data-ttu-id="4f272-115">설정이 설정된 데이터베이스의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-115">Specifies the name of the database where the settings is set.</span></span>
 
 ```yaml
 Type: System.String
@@ -59,8 +59,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9ef77-116">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="9ef77-116">-DefaultProfile</span></span>
-<span data-ttu-id="9ef77-117">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독</span><span class="sxs-lookup"><span data-stu-id="9ef77-117">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+### <span data-ttu-id="4f272-116">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="4f272-116">-DefaultProfile</span></span>
+<span data-ttu-id="4f272-117">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독</span><span class="sxs-lookup"><span data-stu-id="4f272-117">The credentials, account, tenant, and subscription used for communication with azure</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -74,8 +74,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9ef77-118">-EmailAdmins</span><span class="sxs-lookup"><span data-stu-id="9ef77-118">-EmailAdmins</span></span>
-<span data-ttu-id="9ef77-119">고급 위협 방지 설정이 전자 메일을 사용 하 여 관리자에 게 연락 하는지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-119">Specifies whether the advanced threat protection settings contacts administrators by using email.</span></span>
+### <span data-ttu-id="4f272-118">-EmailAdmins</span><span class="sxs-lookup"><span data-stu-id="4f272-118">-EmailAdmins</span></span>
+<span data-ttu-id="4f272-119">고급 위협 방지 설정이 전자 메일을 사용하여 관리자에게 연락하는지 여부를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-119">Specifies whether the advanced threat protection settings contacts administrators by using email.</span></span>
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -89,13 +89,13 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9ef77-120">-ExcludedDetectionType</span><span class="sxs-lookup"><span data-stu-id="9ef77-120">-ExcludedDetectionType</span></span>
-<span data-ttu-id="9ef77-121">설정에서 제외할 검색 유형의 배열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-121">Specifies an array of detection types to exclude from the settings.</span></span>
-<span data-ttu-id="9ef77-122">이 매개 변수에 허용 되는 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-122">The acceptable values for this parameter are:</span></span>
-- <span data-ttu-id="9ef77-123">Sql_Injection</span><span class="sxs-lookup"><span data-stu-id="9ef77-123">Sql_Injection</span></span> 
-- <span data-ttu-id="9ef77-124">Sql_Injection_Vulnerability</span><span class="sxs-lookup"><span data-stu-id="9ef77-124">Sql_Injection_Vulnerability</span></span> 
-- <span data-ttu-id="9ef77-125">Access_Anomaly</span><span class="sxs-lookup"><span data-stu-id="9ef77-125">Access_Anomaly</span></span> 
-- <span data-ttu-id="9ef77-126">않아야</span><span class="sxs-lookup"><span data-stu-id="9ef77-126">None</span></span>
+### <span data-ttu-id="4f272-120">-ExcludedDetectionType</span><span class="sxs-lookup"><span data-stu-id="4f272-120">-ExcludedDetectionType</span></span>
+<span data-ttu-id="4f272-121">설정에서 제외할 검색 유형의 배열을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-121">Specifies an array of detection types to exclude from the settings.</span></span>
+<span data-ttu-id="4f272-122">이 매개 변수에 허용되는 값은</span><span class="sxs-lookup"><span data-stu-id="4f272-122">The acceptable values for this parameter are:</span></span>
+- <span data-ttu-id="4f272-123">Sql_Injection</span><span class="sxs-lookup"><span data-stu-id="4f272-123">Sql_Injection</span></span>
+- <span data-ttu-id="4f272-124">Sql_Injection_Vulnerability</span><span class="sxs-lookup"><span data-stu-id="4f272-124">Sql_Injection_Vulnerability</span></span>
+- <span data-ttu-id="4f272-125">Access_Anomaly</span><span class="sxs-lookup"><span data-stu-id="4f272-125">Access_Anomaly</span></span>
+- <span data-ttu-id="4f272-126">없음</span><span class="sxs-lookup"><span data-stu-id="4f272-126">None</span></span>
 
 ```yaml
 Type: System.String[]
@@ -109,8 +109,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9ef77-127">-NotificationRecipientsEmails</span><span class="sxs-lookup"><span data-stu-id="9ef77-127">-NotificationRecipientsEmails</span></span>
-<span data-ttu-id="9ef77-128">설정이 알림을 보내는 세미콜론으로 구분 된 전자 메일 주소 목록을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-128">Specifies a semicolon-separated list of email addresses to which the settings sends alerts.</span></span>
+### <span data-ttu-id="4f272-127">-NotificationRecipientsEmails</span><span class="sxs-lookup"><span data-stu-id="4f272-127">-NotificationRecipientsEmails</span></span>
+<span data-ttu-id="4f272-128">설정에서 경고를 보내는 세미코론으로 구분된 전자 메일 주소 목록을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-128">Specifies a semicolon-separated list of email addresses to which the settings sends alerts.</span></span>
 
 ```yaml
 Type: System.String
@@ -124,9 +124,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9ef77-129">-PassThru</span><span class="sxs-lookup"><span data-stu-id="9ef77-129">-PassThru</span></span>
-<span data-ttu-id="9ef77-130">작업 중인 항목을 나타내는 개체를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-130">Returns an object representing the item with which you are working.</span></span>
-<span data-ttu-id="9ef77-131">기본적으로이 cmdlet은 출력을 생성 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-131">By default, this cmdlet does not generate any output.</span></span>
+### <span data-ttu-id="4f272-129">-PassThru</span><span class="sxs-lookup"><span data-stu-id="4f272-129">-PassThru</span></span>
+<span data-ttu-id="4f272-130">작업하는 항목을 나타내는 개체를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-130">Returns an object representing the item with which you are working.</span></span>
+<span data-ttu-id="4f272-131">기본적으로 이 cmdlet은 출력을 생성하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-131">By default, this cmdlet does not generate any output.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -140,8 +140,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9ef77-132">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="9ef77-132">-ResourceGroupName</span></span>
-<span data-ttu-id="9ef77-133">서버가 할당 된 리소스 그룹의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-133">Specifies the name of the resource group to which the server is assigned.</span></span>
+### <span data-ttu-id="4f272-132">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="4f272-132">-ResourceGroupName</span></span>
+<span data-ttu-id="4f272-133">서버가 할당된 리소스 그룹의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-133">Specifies the name of the resource group to which the server is assigned.</span></span>
 
 ```yaml
 Type: System.String
@@ -155,8 +155,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9ef77-134">-보존 기간</span><span class="sxs-lookup"><span data-stu-id="9ef77-134">-RetentionInDays</span></span>
-<span data-ttu-id="9ef77-135">감사 로그 보존 일 수</span><span class="sxs-lookup"><span data-stu-id="9ef77-135">The number of retention days for the audit logs</span></span>
+### <span data-ttu-id="4f272-134">-RetentionInDays</span><span class="sxs-lookup"><span data-stu-id="4f272-134">-RetentionInDays</span></span>
+<span data-ttu-id="4f272-135">감사 로그의 보존 기간(일)</span><span class="sxs-lookup"><span data-stu-id="4f272-135">The number of retention days for the audit logs</span></span>
 
 ```yaml
 Type: System.Nullable`1[System.UInt32]
@@ -170,8 +170,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9ef77-136">-ServerName</span><span class="sxs-lookup"><span data-stu-id="9ef77-136">-ServerName</span></span>
-<span data-ttu-id="9ef77-137">서버의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-137">Specifies the name of the server.</span></span>
+### <span data-ttu-id="4f272-136">-ServerName</span><span class="sxs-lookup"><span data-stu-id="4f272-136">-ServerName</span></span>
+<span data-ttu-id="4f272-137">서버의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-137">Specifies the name of the server.</span></span>
 
 ```yaml
 Type: System.String
@@ -185,8 +185,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9ef77-138">-StorageAccountName</span><span class="sxs-lookup"><span data-stu-id="9ef77-138">-StorageAccountName</span></span>
-<span data-ttu-id="9ef77-139">사용할 저장소 계정의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-139">Specifies the name of the storage account to be used.</span></span> <span data-ttu-id="9ef77-140">와일드 카드는 허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-140">Wildcards are not permitted.</span></span> <span data-ttu-id="9ef77-141">이 매개 변수는 필요 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-141">This parameter is not required.</span></span> <span data-ttu-id="9ef77-142">이 매개 변수를 제공 하지 않으면 cmdlet은 이전에 데이터베이스의 고급 위협 보호 설정의 일부로 정의 된 저장소 계정을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-142">When this parameter is not provided, the cmdlet will use the storage account that was defined previously as part of the advanced threat protection settings of the database.</span></span> <span data-ttu-id="9ef77-143">데이터베이스 고급 위협 방지 설정을 처음 정의 하 고이 매개 변수를 제공 하지 않으면 cmdlet이 실패 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-143">If this is the first time a database advanced threat protection settings is defined and this parameter is not provided, the cmdlet will fail.</span></span>
+### <span data-ttu-id="4f272-138">-StorageAccountName</span><span class="sxs-lookup"><span data-stu-id="4f272-138">-StorageAccountName</span></span>
+<span data-ttu-id="4f272-139">사용할 저장소 계정의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-139">Specifies the name of the storage account to be used.</span></span> <span data-ttu-id="4f272-140">와일드카드는 허용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-140">Wildcards are not permitted.</span></span> <span data-ttu-id="4f272-141">이 매개 변수는 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-141">This parameter is not required.</span></span> <span data-ttu-id="4f272-142">이 매개 변수가 제공되지 않은 경우 cmdlet은 데이터베이스의 고급 위협 보호 설정의 일부로 이전에 정의된 저장소 계정을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-142">When this parameter is not provided, the cmdlet will use the storage account that was defined previously as part of the advanced threat protection settings of the database.</span></span> <span data-ttu-id="4f272-143">데이터베이스 고급 위협 방지 설정이 처음으로 정의되고 이 매개 변수가 제공되지 않은 경우 cmdlet이 실패합니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-143">If this is the first time a database advanced threat protection settings is defined and this parameter is not provided, the cmdlet will fail.</span></span>
 
 ```yaml
 Type: System.String
@@ -200,8 +200,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9ef77-144">-확인</span><span class="sxs-lookup"><span data-stu-id="9ef77-144">-Confirm</span></span>
-<span data-ttu-id="9ef77-145">Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-145">Prompts you for confirmation before running the cmdlet.</span></span>
+### <span data-ttu-id="4f272-144">-Confirm</span><span class="sxs-lookup"><span data-stu-id="4f272-144">-Confirm</span></span>
+<span data-ttu-id="4f272-145">cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-145">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -215,9 +215,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9ef77-146">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="9ef77-146">-WhatIf</span></span>
-<span data-ttu-id="9ef77-147">Cmdlet이 실행 되는 경우의 동작을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-147">Shows what would happen if the cmdlet runs.</span></span>
-<span data-ttu-id="9ef77-148">Cmdlet이 실행 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-148">The cmdlet is not run.</span></span>
+### <span data-ttu-id="4f272-146">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="4f272-146">-WhatIf</span></span>
+<span data-ttu-id="4f272-147">cmdlet이 실행되는 경우의 결과 표시</span><span class="sxs-lookup"><span data-stu-id="4f272-147">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="4f272-148">cmdlet이 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-148">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -231,31 +231,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="9ef77-149">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="9ef77-149">CommonParameters</span></span>
-<span data-ttu-id="9ef77-150">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ef77-150">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="9ef77-151">자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="9ef77-151">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="4f272-149">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="4f272-149">CommonParameters</span></span>
+<span data-ttu-id="4f272-150">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="4f272-150">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="4f272-151">자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.</span><span class="sxs-lookup"><span data-stu-id="4f272-151">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="9ef77-152">입력</span><span class="sxs-lookup"><span data-stu-id="9ef77-152">INPUTS</span></span>
+## <span data-ttu-id="4f272-152">입력</span><span class="sxs-lookup"><span data-stu-id="4f272-152">INPUTS</span></span>
 
-### <span data-ttu-id="9ef77-153">System. 문자열</span><span class="sxs-lookup"><span data-stu-id="9ef77-153">System.String</span></span>
+### <span data-ttu-id="4f272-153">System.String</span><span class="sxs-lookup"><span data-stu-id="4f272-153">System.String</span></span>
 
-### <span data-ttu-id="9ef77-154">시스템 Null 허용 ' 1 [[CoreLib, Version = 4.0.0.0, Culture = 중립, PublicKeyToken = 7cec85d7bea7798e]]</span><span class="sxs-lookup"><span data-stu-id="9ef77-154">System.Nullable\`1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span></span>
+### <span data-ttu-id="4f272-154">System.Nullable'1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span><span class="sxs-lookup"><span data-stu-id="4f272-154">System.Nullable\`1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span></span>
 
-### <span data-ttu-id="9ef77-155">ThreatDetection. DetectionType []/. \*</span><span class="sxs-lookup"><span data-stu-id="9ef77-155">Microsoft.Azure.Commands.Sql.ThreatDetection.Model.DetectionType[]</span></span>
+### <span data-ttu-id="4f272-155">Microsoft.Azure.Commands.Sql.ThreatDetection.Model.DetectionType[]</span><span class="sxs-lookup"><span data-stu-id="4f272-155">Microsoft.Azure.Commands.Sql.ThreatDetection.Model.DetectionType[]</span></span>
 
-### <span data-ttu-id="9ef77-156">시스템 Null 허용 ' 1 [[System.webserver, System.webserver, CoreLib, Version = 4.0.0.0, Culture = 중립, PublicKeyToken = 7cec85d7bea7798e]]</span><span class="sxs-lookup"><span data-stu-id="9ef77-156">System.Nullable\`1[[System.UInt32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span></span>
+### <span data-ttu-id="4f272-156">System.Nullable'1[[System.UInt32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span><span class="sxs-lookup"><span data-stu-id="4f272-156">System.Nullable\`1[[System.UInt32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span></span>
 
-## <span data-ttu-id="9ef77-157">출력</span><span class="sxs-lookup"><span data-stu-id="9ef77-157">OUTPUTS</span></span>
+## <span data-ttu-id="4f272-157">출력</span><span class="sxs-lookup"><span data-stu-id="4f272-157">OUTPUTS</span></span>
 
-### <span data-ttu-id="9ef77-158">ThreatDetection. DatabaseThreatDetectionsettingsModel에 대 한</span><span class="sxs-lookup"><span data-stu-id="9ef77-158">Microsoft.Azure.Commands.Sql.ThreatDetection.Model.DatabaseThreatDetectionsettingsModel</span></span>
+### <span data-ttu-id="4f272-158">Microsoft.Azure.Commands.Sql.ThreatDetection.Model.DatabaseThreatDetectionsettingsModel</span><span class="sxs-lookup"><span data-stu-id="4f272-158">Microsoft.Azure.Commands.Sql.ThreatDetection.Model.DatabaseThreatDetectionsettingsModel</span></span>
 
-## <span data-ttu-id="9ef77-159">상속자</span><span class="sxs-lookup"><span data-stu-id="9ef77-159">NOTES</span></span>
+## <span data-ttu-id="4f272-159">참고 사항</span><span class="sxs-lookup"><span data-stu-id="4f272-159">NOTES</span></span>
 
-## <span data-ttu-id="9ef77-160">관련 링크</span><span class="sxs-lookup"><span data-stu-id="9ef77-160">RELATED LINKS</span></span>
+## <span data-ttu-id="4f272-160">관련 링크</span><span class="sxs-lookup"><span data-stu-id="4f272-160">RELATED LINKS</span></span>
 
-[<span data-ttu-id="9ef77-161">Get-AzSqlDatabaseThreatDetectionsettings</span><span class="sxs-lookup"><span data-stu-id="9ef77-161">Get-AzSqlDatabaseThreatDetectionsettings</span></span>](./Get-AzSqlServerThreatDetectionsettings.md)
-
-[<span data-ttu-id="9ef77-162">제거-AzSqlDatabaseThreatDetectionsettings</span><span class="sxs-lookup"><span data-stu-id="9ef77-162">Remove-AzSqlDatabaseThreatDetectionsettings</span></span>](./Remove-AzSqlDatabaseThreatDetectionsettings.md)
-
-[<span data-ttu-id="9ef77-163">SQL 데이터베이스 설명서</span><span class="sxs-lookup"><span data-stu-id="9ef77-163">SQL Database Documentation</span></span>](https://docs.microsoft.com/azure/sql-database/)
-
-
+[<span data-ttu-id="4f272-161">SQL 데이터베이스 설명서</span><span class="sxs-lookup"><span data-stu-id="4f272-161">SQL Database Documentation</span></span>](https://docs.microsoft.com/azure/sql-database/)
