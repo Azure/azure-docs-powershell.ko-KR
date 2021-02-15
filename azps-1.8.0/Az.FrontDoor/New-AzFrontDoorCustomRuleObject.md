@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorCustomRuleObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorCustomRuleObject.md
-ms.openlocfilehash: 19f8215f8feaa1765da871f0fa38cc0120d842ea
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 8602bd4636e3e6034552f48a6f6514a453b816a0
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93868402"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100400674"
 ---
 # New-AzFrontDoorCustomRuleObject
 
 ## SYNOPSIS
-WAF 정책 만들기에 대 한 CustomRule 개체 만들기
+WAF 정책 만들기를 위한 CustomRule 개체 만들기
 
-## 구문과
+## 구문
 
 ```
 New-AzFrontDoorCustomRuleObject -Name <String> -RuleType <PSCustomRuleType>
@@ -26,10 +26,10 @@ New-AzFrontDoorCustomRuleObject -Name <String> -RuleType <PSCustomRuleType>
  [<CommonParameters>]
 ```
 
-## 설명은
-WAF 정책 만들기에 대 한 CustomRule 개체 만들기
+## 설명
+WAF 정책 만들기를 위한 CustomRule 개체 만들기
 
-## 예제의
+## 예제
 
 ### 예제 1
 ```powershell
@@ -42,11 +42,11 @@ Rule1 MatchRule  Block        2                          1
 
 CustomRule 개체 만들기
 
-## 변수
+## PARAMETERS
 
-### -작업
+### -Action
 작업 유형입니다.
-사용할 수 있는 값은 다음과 같습니다. ' 허용 ', ' 차단 ', ' 로그 '
+가능한 값은 'Allow', 'Block', 'Log'입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.FrontDoor.Models.PSAction
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -76,7 +76,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### MatchCondition
+### -MatchCondition
 일치 조건 목록입니다.
 
 ```yaml
@@ -91,8 +91,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -이름
-규칙 이름
+### -Name
+규칙의 이름
 
 ```yaml
 Type: System.String
@@ -106,8 +106,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -우선 순위
-규칙의 우선 순위를 설명 합니다.
+### -Priority
+규칙의 우선 순위를 설명합니다.
 
 ```yaml
 Type: System.Int32
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -RateLimitDurationInMinutes
-속도 제한 기간 기본값-1 분
+속도 제한 기간입니다. 기본값 - 1분
 
 ```yaml
 Type: System.Int32
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -RateLimitThreshold
-속도 제한 thresold
+속도 제한 제한
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 
 ### -RuleType
 규칙의 유형입니다.
-사용할 수 있는 값은 다음과 같습니다. ' MatchRule ', ' RateLimitRule '
+가능한 값은 'MatchRule', 'RateLimitRule'입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.FrontDoor.Models.PSCustomRuleType
@@ -169,19 +169,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](https://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
-### 않아야
+### 없음
 
 ## 출력
 
-### FrontDoor. PSCustomRule/.
+### Microsoft.Azure.Commands.FrontDoor.Models.PSCustomRule
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
-[새로운 AzFrontDoorFireWallPolicy](./New-AzFrontDoorFireWallPolicy.md) 
- [Set-AzFrontDoorFireWallPolicy](./Set-AzFrontDoorFireWallPolicy.md)
+[New-AzFrontDoorFireWallPolicy](./New-AzFrontDoorFireWallPolicy.md) 
+ [Update-AzFrontDoorFireWallPolicy](./Update-AzFrontDoorFireWallPolicy.md)
