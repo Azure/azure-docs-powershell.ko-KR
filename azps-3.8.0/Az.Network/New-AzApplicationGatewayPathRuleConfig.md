@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayPathRuleConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayPathRuleConfig.md
-ms.openlocfilehash: cbd69ff20e32d93ff5d9f9f7c4959568f627c7e0
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: f06dbac5e7c7a67acc38c5357351905fab0ed141
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94044804"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100402561"
 ---
 # New-AzApplicationGatewayPathRuleConfig
 
 ## SYNOPSIS
-응용 프로그램 게이트웨이 경로 규칙을 만듭니다.
+애플리케이션 게이트웨이 경로 규칙을 만듭니다.
 
-## 구문과
+## 구문
 
 ### SetByResourceId
 ```
@@ -38,12 +38,12 @@ New-AzApplicationGatewayPathRuleConfig -Name <String> -Paths <String[]>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## 설명은
-**새 AzApplicationGatewayPathRuleConfig** cmdlet은 응용 프로그램 게이트웨이 경로 규칙을 만듭니다.
-이 cmdlet에서 만든 규칙을 URL 경로 맵 구성 설정 컬렉션에 추가 하 고 게이트웨이에 할당할 수 있습니다.
-경로 맵 구성 설정은 응용 프로그램 게이트웨이 부하 분산에 사용 됩니다.
+## 설명
+**New-AzApplicationGatewayPathRuleConfig** cmdlet은 애플리케이션 게이트웨이 경로 규칙을 만듭니다.
+이 cmdlet에서 만든 규칙은 URL 경로 맵 구성 설정의 컬렉션에 추가한 다음 게이트웨이에 할당할 수 있습니다.
+경로 맵 구성 설정은 애플리케이션 게이트웨이 부하 분산에 사용됩니다.
 
-## 예제의
+## 예제
 
 ### 예제 1
 ```
@@ -54,31 +54,31 @@ PS C:\> $PathRuleConfig = New-AzApplicationGatewayPathRuleConfig -Name "base" -P
 PS C:\> Add-AzApplicationGatewayUrlPathMapConfig -ApplicationGateway $Gateway -Name "ContosoUrlPathMap" -PathRules $PathRuleConfig -DefaultBackendAddressPool $AddressPool -DefaultBackendHttpSettings $HttpSettings
 ```
 
-이러한 명령은 새 응용 프로그램 게이트웨이 경로 규칙을 만든 다음 **추가-AzApplicationGatewayUrlPathMapConfig** cmdlet을 사용 하 여 해당 규칙을 응용 프로그램 게이트웨이에 할당 합니다.
-이렇게 하려면 첫 번째 명령은 게이트웨이 ContosoApplicationGateway에 대 한 개체 참조를 만듭니다.
-이 개체 참조는 $Gateway 라는 변수에 저장 됩니다.
-다음 두 명령은 백 엔드 주소 풀 및 백 엔드 HTTP 설정 개체를 만듭니다. 경로 규칙 개체를 만들기 위해서는 이러한 개체 (변수 $AddressPool 및 $HttpSettings에 저장)가 필요 합니다.
-네 번째 명령은 path 규칙 개체를 만들고 $PathRuleConfig 라는 변수에 저장 됩니다.
-다섯 번째 명령은 **AzApplicationGatewayUrlPathMapConfig 추가** 를 사용 하 여 구성 설정 및 해당 설정에 포함 된 새 경로 규칙을 ContosoApplicationGateway에 추가 합니다.
+이러한 명령은 새 애플리케이션 게이트웨이 경로 규칙을 만든 다음 **Add-AzApplicationGatewayUrlPathMapConfig** cmdlet을 사용하여 애플리케이션 게이트웨이에 해당 규칙을 할당합니다.
+이를 위해 첫 번째 명령은 ContosoApplicationGateway 게이트웨이에 대한 개체 참조를 만듭니다.
+이 개체 참조는 $Gateway.
+다음 두 명령은 백end 주소 풀 및 백end HTTP 설정 개체를 만듭니다. 경로 규칙 개체를 만들기 위해 이러한 개체($AddressPool 및 $HttpSettings 변수에 저장)가 필요합니다.
+네 번째 명령은 경로 규칙 개체를 만들고 경로 규칙이라는 변수에 $PathRuleConfig.
+다섯 번째 명령은 **Add-AzApplicationGatewayUrlPathMapConfig를** 사용하여 구성 설정 및 해당 설정 내에 포함된 새 경로 규칙을 ContosoApplicationGateway에 추가합니다.
 
 ### 예제 2
 ```
 PS C:\> $PathRuleConfig = New-AzApplicationGatewayPathRuleConfig -Name "base" -Paths "/base" -BackendAddressPool $AddressPool -BackendHttpSettings $HttpSettings -FirewallPolicy $firewallPolicy
 ```
 
-이러한 명령은 이름이 "base" 인 경로 규칙을 만들고, 경로를 "$AddressPool BackendAddressPool"로 "/base"로 사용 하 고, $HttpSettings BackendHttpSettings와 $firewallPolicy FirewallPolicy로, 그리고 해당 설정 내에 포함 된 새 경로 규칙을 ContosoApplicationGateway에 적용 합니다.
+이 명령은 "base"로, 경로는 "/base"로, BackendAddressPool은 $AddressPool, BackendHttpSettings는 $HttpSettings, FirewallPolicy는 $firewallPolicy.ngs로, ContosoApplicationGateway에 대한 해당 설정 내에 포함된 새 경로 규칙으로 경로 규칙을 만듭니다.
 
-## 변수
+## PARAMETERS
 
 ### -BackendAddressPool
-게이트웨이 경로 규칙 구성 설정에 추가할 백 엔드 주소 풀 설정 컬렉션에 대 한 개체 참조를 지정 합니다.
-다음과 같은 New-AzApplicationGatewayBackendAddressPool cmdlet 및 구문을 사용 하 여이 개체 참조를 만들 수 있습니다. `$AddressPool = New-AzApplicationGatewayBackendAddressPool -Name "ContosoAddressPool" -BackendIPAddresses "192.168.1.1", "192.168.1.2"`
-앞의 명령은 두 개의 IP 주소 (192.16.1.1 및 192.168.1.2)를 주소 풀에 추가 합니다.
-IP 주소는 인용 부호로 묶여 있고 쉼표로 구분 됩니다.
-결과 변수인 $AddressPool는 *DefaultBackendAddressPool* 매개 변수의 매개 변수 값으로 사용할 수 있습니다.
-백 엔드 주소 풀은 백 엔드 서버의 IP 주소를 나타냅니다.
-이러한 IP 주소는 가상 네트워크 서브넷에 속하거나 공용 IP 주소 여야 합니다.
-이 매개 변수를 사용 하는 경우 동일한 명령에서 *DefaultBackendAddressPoolId* 매개 변수를 사용할 수 없습니다.
+게이트웨이 경로 규칙 구성 설정에 추가할 백안 주소 풀 설정의 컬렉션에 대한 개체 참조를 지정합니다.
+이 개체 참조는 이와 유사한 New-AzApplicationGatewayBackendAddressPool cmdlet 및 구문을 사용하여 만들 수 있습니다. `$AddressPool = New-AzApplicationGatewayBackendAddressPool -Name "ContosoAddressPool" -BackendIPAddresses "192.168.1.1", "192.168.1.2"`
+이전 명령은 주소 풀에 두 개의 IP 주소(192.16.1.1 및 192.168.1.2)를 추가합니다.
+IP 주소는 따옴표로 묶고 콤마를 사용하여 구분됩니다.
+그러면 결과 변수인 $AddressPool *DefaultBackendAddressPool* 매개 변수에 대한 매개 변수 값으로 사용할 수 있습니다.
+백end 주소 풀은 백end 서버의 IP 주소를 나타 내는 것입니다.
+이러한 IP 주소는 가상 네트워크 서브넷에 속하거나 공용 IP 주소에 속해야 합니다.
+이 매개 변수를 사용하는 경우 동일한 명령에서 *DefaultBackendAddressPoolId* 매개 변수를 사용할 수 없습니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool
@@ -93,11 +93,11 @@ Accept wildcard characters: False
 ```
 
 ### -BackendAddressPoolId
-게이트웨이 경로 규칙 구성 설정에 추가할 수 있는 기존 백엔드 주소 풀의 ID를 지정 합니다.
-주소 풀 Id는 Get-AzApplicationGatewayBackendAddressPool cmdlet을 사용 하 여 반환할 수 있습니다.
-ID를 설정한 후에는 *DefaultBackendAddressPool* 매개 변수 대신 *DefaultBackendAddressPoolId* 매개 변수를 사용할 수 있습니다.
-예를 들어:-DefaultBackendAddressPoolId "/subscriptions/39c54063-01d3-4abf-8f4c-234777bc1f10/resourceGroups/appgw-rg/providers/Microsoft.Network/applicationGateways/appgwtest/backendAddressPools/ContosoAddressPool" 백 엔드 주소 풀은 백 엔드 서버의 IP 주소를 나타냅니다.
-이러한 IP 주소는 가상 네트워크 서브넷에 속하거나 공용 IP 주소 여야 합니다.
+게이트웨이 경로 규칙 구성 설정에 추가할 수 있는 기존 백드 주소 풀의 ID를 지정합니다.
+주소 풀 IDD는 Get-AzApplicationGatewayBackendAddressPool 수 있습니다.
+ID가 있는 후 *DefaultBackendAddressPool 매개 변수 대신 DefaultBackendAddressPoolId* 매개 변수를 사용할 *수* 있습니다.
+예: -DefaultBackendAddressPoolId "/subscriptions/39c54063-01d3-4abf-8f4c-234777bc1f10/resourceGroups/appgw-rg/providers/Microsoft.Network/applicationGateways/appgwtest/backendAddressPools/ContosoAddressPool" 백end 주소 풀은 백end 서버의 IP 주소를 나타남
+이러한 IP 주소는 가상 네트워크 서브넷에 속하거나 공용 IP 주소에 속해야 합니다.
 
 ```yaml
 Type: System.String
@@ -112,9 +112,9 @@ Accept wildcard characters: False
 ```
 
 ### -BackendHttpSettings
-게이트웨이 경로 규칙 구성 설정에 추가할 백 엔드 HTTP 설정 컬렉션에 대 한 개체 참조를 지정 합니다.
-다음과 같은 New-AzApplicationGatewayBackendHttpSettings cmdlet 및 구문을 사용 하 여이 개체 참조를 만들 수 있습니다. $HttpSettings = New-AzApplicationGatewayBackendHttpSettings-Name "ContosoHttpSettings"--포트 80-프로토콜 "Http"-CookieBasedAffinity "사용 안 함" 결과 변수 $HttpSettings는 *DefaultBackendAddressPool* 매개 변수의 매개 변수 값으로 사용할 수 있습니다.-DefaultBackendHttpSettings $HttpSettings 백 엔드 Http 설정에 대해 포트, 프로토콜 및 쿠키 기반 선호도와 같은 속성을 구성 합니다.
-이 매개 변수를 사용 하는 경우 동일한 명령에서 *DefaultBackendHttpSettingsId* 매개 변수를 사용할 수 없습니다.
+게이트웨이 경로 규칙 구성 설정에 추가할 백end HTTP 설정 컬렉션에 대한 개체 참조를 지정합니다.
+New-AzApplicationGatewayBackendHttpSettings cmdlet과 비슷한 구문을 사용하여 이 개체 참조를 만들 수 있습니다. $HttpSettings = New-AzApplicationGatewayBackendHttpSettings -Name "ContosoHttpSettings" -Port 80 -Protocol "Http" -CookieBasedAffinity "Disabled" 결과 변수 $HttpSettings *DefaultBackendAddressPool* 매개 변수에 대한 매개 변수 값으로 사용할 수 있습니다. -DefaultBackendHttpSettings $HttpSettings 백 $HttpSettings HTTP 설정은 백end 풀에 대한 포트, 프로토콜 및 쿠키 기반 속성과 같은 속성을 구성합니다.
+이 매개 변수를 사용하는 경우 동일한 명령에서 *DefaultBackendHttpSettingsId 매개* 변수를 사용할 수 없습니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings
@@ -129,11 +129,11 @@ Accept wildcard characters: False
 ```
 
 ### -BackendHttpSettingsId
-게이트웨이 경로 규칙 구성 설정에 추가할 수 있는 기존 백 엔드 HTTP 설정 컬렉션의 ID를 지정 합니다.
-HTTP 설정 Id는 Get-AzApplicationGatewayBackendHttpSettings cmdlet을 사용 하 여 반환할 수 있습니다.
-ID를 설정한 후에는 *DefaultBackendHttpSettings* 매개 변수 대신 *DefaultBackendHttpSettingsId* 매개 변수를 사용할 수 있습니다.
-예를 들어,-DefaultBackendSettings Id "/subscriptions/39c54063-01d3-4abf-8f4c-234777bc1f10/resourceGroups/appgw-rg/providers/Microsoft.Network/applicationGateways/appgwtest/backendHttpSettingsCollection/ContosoHttpSettings" 백 엔드 HTTP 설정은 포트, 프로토콜 및 백 엔드 풀에 대 한 쿠키 기반 선호도와 같은 속성을 구성 합니다.
-이 매개 변수를 사용 하는 경우 동일한 명령에서 *DefaultBackendHttpSettings* 매개 변수를 사용할 수 없습니다.
+게이트웨이 경로 규칙 구성 설정에 추가할 수 있는 기존 백end HTTP 설정 컬렉션의 ID를 지정합니다.
+HTTP 설정은 Get-AzApplicationGatewayBackendHttpSettings cmdlet을 사용하여 반환할 수 있습니다.
+ID가 있는 후 *DefaultBackendHttpSettings 매개 변수 대신 DefaultBackendHttpSettingsId* 매개 변수를 사용할 *수* 있습니다.
+예: -DefaultBackendSettings Id "/subscriptions/39c54063-01d3-4abf-8f4c-234777bc1f10/resourceGroups/appgw-rg/providers/Microsoft.Network/applicationGateways/appgwtest/backendHttpSettingsCollection/ContosoHttpSettings" 백end HTTP 설정은 포트, 프로토콜 등의 속성을 구성합니다. 백end 풀에 대한 쿠키 기반의 취미입니다.
+이 매개 변수를 사용하는 경우 동일한 명령에서 *DefaultBackendHttpSettings 매개* 변수를 사용할 수 없습니다.
 
 ```yaml
 Type: System.String
@@ -148,9 +148,9 @@ Accept wildcard characters: False
 ```
 
 ### -FirewallPolicy
-최상위 수준의 방화벽 정책에 대 한 개체 참조를 지정 합니다. New-AzApplicationGatewayWebApplicationFirewallPolicy cmdlet을 사용 하 여 개체 참조를 만들 수 있습니다.
-$firewallPolicy = New-AzApplicationGatewayFirewallPolicy-Name "wafPolicy1"-ResourceGroup "rgName" 위를 사용 하 여 만든 방화벽 정책은 경로 규칙 수준에서 참조 될 수 있습니다. 위의 명령으로 기본 정책 설정 및 관리 되는 규칙을 만듭니다.
-기본값 대신 사용자는 각각 New-AzApplicationGatewayFirewallPolicySettings 및 New-AzApplicationGatewayFirewallPolicyManagedRules을 사용 하 여 PolicySettings, ManagedRules를 지정할 수 있습니다.
+최상위 방화벽 정책에 대한 개체 참조를 지정합니다. 개체 참조는 cmdlet을 사용하여 New-AzApplicationGatewayWebApplicationFirewallPolicy 있습니다.
+$firewallPolicy = New-AzApplicationGatewayFirewallPolicy -Name "wafPolicy1" -ResourceGroup "rgName" 위의 commandlet을 사용하여 만든 방화벽 정책을 경로 규칙 수준에서 참조할 수 있습니다. 위의 명령은 기본 정책 설정 및 관리 규칙을 만들 것입니다.
+사용자는 기본값 대신 각각 정책 및 데이터 형식을 사용하여 PolicySettings, ManagedRules를 New-AzApplicationGatewayFirewallPolicySettings New-AzApplicationGatewayFirewallPolicyManagedRules 있습니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayWebApplicationFirewallPolicy
@@ -164,9 +164,9 @@ Accept wildcard characters: False
 ```
 
 ### -FirewallPolicyId
-기존 상위 수준 웹 응용 프로그램 방화벽 리소스의 ID를 지정 합니다.
-방화벽 정책 Id는 Get-AzApplicationGatewayWebApplicationFirewallPolicy cmdlet을 사용 하 여 반환할 수 있습니다. ID를 설정한 후에는 *FirewallPolicy* 매개 변수 대신 *FirewallPolicyId* 매개 변수를 사용할 수 있습니다.
-예를 들어-FirewallPolicyId "/subscriptions/<구독 id>/Resourcegroup/<리소스 그룹-id>/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/ <firewallPolicyName> "
+기존 최상위 웹 애플리케이션 방화벽 리소스의 ID를 지정합니다.
+Get-AzApplicationGatewayWebApplicationFirewallPolicy cmdlet을 사용하여 방화벽 정책 Get-AzApplicationGatewayWebApplicationFirewallPolicy 있습니다. ID가 있는 경우 *FirewallPolicy* 매개 변수 대신 *FirewallPolicyId* 매개 변수를 사용할 수 있습니다.
+예: -FirewallPolicyId "/subscriptions/<subscription-id>/resourceGroups/<resource-group-id>/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/ <firewallPolicyName> "
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayWebApplicationFirewallPolicy
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -194,8 +194,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -이름
-이 cmdlet이 만드는 경로 규칙 구성의 이름을 지정 합니다.
+### -Name
+이 cmdlet에서 만드는 경로 규칙 구성의 이름을 지정합니다.
 
 ```yaml
 Type: System.String
@@ -209,8 +209,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -경로
-하나 이상의 응용 프로그램 게이트웨이 경로 규칙을 지정 합니다.
+### -Paths
+하나 이상의 애플리케이션 게이트웨이 경로 규칙을 지정합니다.
 
 ```yaml
 Type: System.String[]
@@ -240,7 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -RedirectConfigurationId
-응용 프로그램 게이트웨이 RedirectConfiguration의 ID입니다.
+Application Gateway RedirectConfiguration의 ID
 
 ```yaml
 Type: System.String
@@ -270,7 +270,7 @@ Accept wildcard characters: False
 ```
 
 ### -RewriteRuleSetId
-응용 프로그램 게이트웨이 RewriteRuleSet의 ID입니다.
+Application Gateway RewriteRuleSet의 ID
 
 ```yaml
 Type: System.String
@@ -285,35 +285,34 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 about_CommonParameters (을 참조 하세요 http://go.microsoft.com/fwlink/?LinkID=113216) .
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 다음 about_CommonParameters http://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.
 
 ## 입력
 
-### 않아야
+### 없음
 
 ## 출력
 
-### PSApplicationGatewayPathRule에 대 한.
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayPathRule
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
-[추가-AzApplicationGatewayUrlPathMapConfig](./Add-AzApplicationGatewayUrlPathMapConfig.md)
+[Add-AzApplicationGatewayUrlPathMapConfig](./Add-AzApplicationGatewayUrlPathMapConfig.md)
 
 [Get-AzApplicationGateway](./Get-AzApplicationGateway.md)
 
 [Get-AzApplicationGatewayUrlPathMapConfig](./Get-AzApplicationGatewayUrlPathMapConfig.md)
 
-[새로운 AzApplicationGatewayBackendAddressPool](./New-AzApplicationGatewayBackendAddressPool.md)
+[New-AzApplicationGatewayBackendAddressPool](./New-AzApplicationGatewayBackendAddressPool.md)
 
-[새로운 AzApplicationGatewayBackendHttpSettings](./New-AzApplicationGatewayBackendHttpSettings.md)
 
-[새로운 AzApplicationGatewayPathRuleConfig](./New-AzApplicationGatewayPathRuleConfig.md)
+[New-AzApplicationGatewayPathRuleConfig](./New-AzApplicationGatewayPathRuleConfig.md)
 
-[새로운 AzApplicationGatewayUrlPathMapConfig](./New-AzApplicationGatewayUrlPathMapConfig.md)
+[New-AzApplicationGatewayUrlPathMapConfig](./New-AzApplicationGatewayUrlPathMapConfig.md)
 
-[제거-AzApplicationGatewayUrlPathMapConfig](./Remove-AzApplicationGatewayUrlPathMapConfig.md)
+[Remove-AzApplicationGatewayUrlPathMapConfig](./Remove-AzApplicationGatewayUrlPathMapConfig.md)
 
 [Set-AzApplicationGatewayUrlPathMapConfig](./Set-AzApplicationGatewayUrlPathMapConfig.md)
 
