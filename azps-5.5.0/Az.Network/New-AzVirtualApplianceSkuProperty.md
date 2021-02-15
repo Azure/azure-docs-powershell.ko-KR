@@ -1,0 +1,114 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+Module Name: Az.Network
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azvirtualapplianceskuproperty
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzVirtualApplianceSkuProperty.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzVirtualApplianceSkuProperty.md
+ms.openlocfilehash: cfe9fb07854fcc5850e1c5f73f4da7fe43f172a8
+ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100193564"
+---
+# <span data-ttu-id="8469a-101">New-AzVirtualApplianceSkuProperty</span><span class="sxs-lookup"><span data-stu-id="8469a-101">New-AzVirtualApplianceSkuProperty</span></span>
+
+## <span data-ttu-id="8469a-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="8469a-102">SYNOPSIS</span></span>
+<span data-ttu-id="8469a-103">리소스에 대한 네트워크 가상 어플라이언스 SKU를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="8469a-103">Define a Network Virtual Appliance sku for the resource.</span></span>
+
+## <span data-ttu-id="8469a-104">구문</span><span class="sxs-lookup"><span data-stu-id="8469a-104">SYNTAX</span></span>
+
+```
+New-AzVirtualApplianceSkuProperty -VendorName <String> -BundledScaleUnit <String> -MarketPlaceVersion <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="8469a-105">설명</span><span class="sxs-lookup"><span data-stu-id="8469a-105">DESCRIPTION</span></span>
+<span data-ttu-id="8469a-106">New-AzVirtualApplianceSkuProperties 명령은 네트워크 가상 어플라이언스 리소스에 대한 SKU를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="8469a-106">The New-AzVirtualApplianceSkuProperties command defines a Sku for Network Virtual Appliance resource.</span></span>
+
+## <span data-ttu-id="8469a-107">예제</span><span class="sxs-lookup"><span data-stu-id="8469a-107">EXAMPLES</span></span>
+
+### <span data-ttu-id="8469a-108">예제 1</span><span class="sxs-lookup"><span data-stu-id="8469a-108">Example 1</span></span>
+```powershell
+PS C:\> $var=New-AzVirtualApplianceSkuProperty -VendorName "barracudasdwanrelease" -BundledScaleUnit 1 -MarketPlaceVersion 'latest'
+```
+
+<span data-ttu-id="8469a-109">가상 어플라이언스 SKU 속성 개체를 만들어 New-AzNetworkVirtualAppliance.</span><span class="sxs-lookup"><span data-stu-id="8469a-109">Create a Virtual Appliance Sku Properties object to be used with New-AzNetworkVirtualAppliance command.</span></span> 
+
+## <span data-ttu-id="8469a-110">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="8469a-110">PARAMETERS</span></span>
+
+### <span data-ttu-id="8469a-111">-BundledScaleUnit</span><span class="sxs-lookup"><span data-stu-id="8469a-111">-BundledScaleUnit</span></span>
+<span data-ttu-id="8469a-112">번들 배율 단위입니다.</span><span class="sxs-lookup"><span data-stu-id="8469a-112">The bundled scale unit.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="8469a-113">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="8469a-113">-DefaultProfile</span></span>
+<span data-ttu-id="8469a-114">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="8469a-114">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="8469a-115">-MarketPlaceVersion</span><span class="sxs-lookup"><span data-stu-id="8469a-115">-MarketPlaceVersion</span></span>
+<span data-ttu-id="8469a-116">시장 장소 버전입니다.</span><span class="sxs-lookup"><span data-stu-id="8469a-116">The market place version.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="8469a-117">-VendorName</span><span class="sxs-lookup"><span data-stu-id="8469a-117">-VendorName</span></span>
+<span data-ttu-id="8469a-118">공급업체의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="8469a-118">The name of the vendor.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: Name
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="8469a-119">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="8469a-119">CommonParameters</span></span>
+<span data-ttu-id="8469a-120">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="8469a-120">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="8469a-121">자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.</span><span class="sxs-lookup"><span data-stu-id="8469a-121">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="8469a-122">입력</span><span class="sxs-lookup"><span data-stu-id="8469a-122">INPUTS</span></span>
+
+### <span data-ttu-id="8469a-123">없음</span><span class="sxs-lookup"><span data-stu-id="8469a-123">None</span></span>
+
+## <span data-ttu-id="8469a-124">출력</span><span class="sxs-lookup"><span data-stu-id="8469a-124">OUTPUTS</span></span>
+
+### <span data-ttu-id="8469a-125">Microsoft.Azure.Commands.Network.Models.PSVirtualApplianceSkuProperties</span><span class="sxs-lookup"><span data-stu-id="8469a-125">Microsoft.Azure.Commands.Network.Models.PSVirtualApplianceSkuProperties</span></span>
+
+## <span data-ttu-id="8469a-126">참고 사항</span><span class="sxs-lookup"><span data-stu-id="8469a-126">NOTES</span></span>
+
+## <span data-ttu-id="8469a-127">관련 링크</span><span class="sxs-lookup"><span data-stu-id="8469a-127">RELATED LINKS</span></span>
