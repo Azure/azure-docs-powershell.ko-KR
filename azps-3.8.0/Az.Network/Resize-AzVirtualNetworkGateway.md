@@ -6,34 +6,34 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/re
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Resize-AzVirtualNetworkGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Resize-AzVirtualNetworkGateway.md
-ms.openlocfilehash: dd48af6a0f20cafea5911adb629a83323faa94a6
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 31ec0453b0ce64c27d1bb37d4bf6c0f100a8c760
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94043933"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100411758"
 ---
 # Resize-AzVirtualNetworkGateway
 
 ## SYNOPSIS
-기존 가상 네트워크 게이트웨이의 크기를 조정 합니다.
+기존 가상 네트워크 게이트웨이의 수를 변경합니다.
 
-## 구문과
+## 구문
 
 ```
 Resize-AzVirtualNetworkGateway -VirtualNetworkGateway <PSVirtualNetworkGateway> -GatewaySku <String>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## 설명은
-**크기 조정-AzVirtualNetworkGateway** cmdlet을 사용 하 여 가상 네트워크 게이트웨이의 SKU (stock 보관 단위)를 변경할 수 있습니다.
-Sku는 처리량, 허용 되는 최대 IP 터널 수 등의 게이트웨이 기능을 결정 합니다.
-Azure는 Basic, Standard, 고성능, VpnGw1, VpnGw2, VpnGw3, VpnGw1AZ, VpnGw2AZ, VpnGw3AZ, ErGw1AZ, ErGw2AZ, ErGw3AZ Sku (간혹 소형, 중형, 대형 Sku 라고도 함)를 지원 합니다.
-각 SKU 유형의 기능에 대 한 자세한 내용은을 참조 https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-about-vpngateways/ 하세요.
-Sku는 가격 및 기능에 차이가 있다는 점에 유의 하세요.
-자세한 내용은을 참조 https://azure.microsoft.com/en-us/pricing/details/vpn-gateway/ 하세요.
+## 설명
+**Resize-AzVirtualNetworkGateway** cmdlet을 사용하면 가상 네트워크 게이트웨이에 대한 SKU(주식 유지 단위)를 변경할 수 있습니다.
+SKUS는 허용되는 최대 IP 터널 수 및 같은 것을 포함하여 게이트웨이의 기능을 파악합니다.
+Azure는 Basic, Standard, High-Performance, VpnGw1, VpnGw2, VpnGw3, VpnGw1AZ, VpnGw2AZ, VpnGw3AZ, ErGw1AZ, ErGw2AZ, ErGw3AZ SKUS(Small, Medium 및 Large SKUS라고도 합니다)를 지원
+각 SKU 유형의 기능에 대한 자세한 내용은 https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-about-vpngateways/ 다음을 참조하세요.
+SKUS는 가격 책정 및 기능도 다릅니다.
+자세한 내용은 https://azure.microsoft.com/en-us/pricing/details/vpn-gateway/ 다음을 참조하세요.
 
-## 예제의
+## 예제
 
 ### 예제 1: 가상 네트워크 게이트웨이의 크기 변경
 ```
@@ -41,14 +41,14 @@ PS C:\>$Gateway = Get-AzVirtualNetworkGateway -Name "ContosoVirtualGateway"
 PS C:\> Resize-AzVirtualNetworkGateway -VirtualNetworkGateway $Gateway -GatewaySku "Basic"
 ```
 
-이 예제에서는 ContosoVirtualGateway 이라는 가상 네트워크 게이트웨이의 크기를 변경 합니다.
-첫 번째 명령은 ContosoVirtualGateway에 대 한 개체 참조를 만듭니다. 이 개체 참조는 $Gateway 라는 변수에 저장 됩니다.
-그런 다음 두 번째 명령은 **AzVirtualNetworkGateway** cmdlet을 사용 하 여 하이 *속성을* Basic으로 설정 합니다.
+이 예제에서는 ContosoVirtualGateway라는 가상 네트워크 게이트웨이의 크기를 변경합니다.
+첫 번째 명령은 ContosoVirtualGateway에 대한 개체 참조를 만듭니다. 이 개체 참조는 $Gateway.
+두 번째 명령은 **Resize-AzVirtualNetworkGateway** cmdlet을 사용하여 *GatewaySku* 속성을 Basic으로 설정합니다.
 
-## 변수
+## PARAMETERS
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -62,11 +62,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -게이트웨이 Sku
-게이트웨이 SKU의 새로운 유형을 지정 합니다.
-이 매개 변수에 허용 되는 값은 다음과 같습니다.
-- 기본적
-- 표준이
+### -GatewaySku
+새 유형의 게이트웨이 SKU를 지정합니다.
+이 매개 변수에 허용되는 값은
+- 기본
+- 표준
 - 고성능
 - VpnGw1
 - VpnGw2
@@ -92,8 +92,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetworkGateway
-크기를 조정할 가상 네트워크 게이트웨이에 대 한 개체 참조를 지정 합니다.
-Get-AzVirtualNetworkGateway를 사용 하 고 게이트웨이의 이름을 지정 하 여이 개체 참조를 만들 수 있습니다.
+변경될 가상 네트워크 게이트웨이에 대한 개체 참조를 지정합니다.
+이 개체 참조는 Get-AzVirtualNetworkGateway 게이트웨이의 이름을 지정하여 만들 수 있습니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway
@@ -108,33 +108,32 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 about_CommonParameters (을 참조 하세요 http://go.microsoft.com/fwlink/?LinkID=113216) .
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 다음 about_CommonParameters http://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.
 
 ## 입력
 
-### PSVirtualNetworkGateway에 대 한.
+### Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway
 
-### System. 문자열
+### System.String
 
 ## 출력
 
-### PSVirtualNetworkGateway에 대 한.
+### Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway
 
-## 상속자
-기본/표준/HighPerformance Sku에서 new VpnGw1/VpnGw2/VpnGw3 Sku로 크기를 조정할 수 없습니다. VpnGw1AZ/VpnGw2AZ/VpnGw3AZ 또는 ErGw1AZ/ErGw2AZ/ErGw3AZ에는 추가 크기 조정이 허용 되지 않습니다. 크기 조정에는 SKU ' 계열 '에만 사용할 수 있습니다. 예를 들어 VpnGw1AZ에서 VpnGw2AZ/VpnGw3AZ로 크기를 조정 하거나 ErGw1AZ에서 ErGw2AZ/ErGw3AZ로 크기를 조정할 수 있습니다. https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways지침은을 참조 하세요.
+## 참고 사항
+Basic/Standard/HighPerformance SKUS에서 새 VpnGw1/VpnGw2/VpnGw3 SKUS로는 변경할 수 없습니다. VpnGw1AZ/VpnGw2AZ/VpnGw3AZ 또는 ErGw1AZ/ErGw2AZ/ErGw2AZ/ErGw3AZ에서/VpnGw3AZ로/에 대한 추가적 재조정은 허용되지 않습니다. SKU '시리즈' 내에서만 허용됩니다. 예: VpnGw1AZ는 VpnGw2AZ/VpnGw3AZ에서 또는 VpnGw3AZ에서, ErGw1AZ는 ErGw2AZ/ErGw3AZ에서 또는 그 범위에서 또는 그로/에서의 SKU로만 허용됩니다. 지침을 https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways 참조하세요.
 
 ## 관련 링크
 
 [Get-AzVirtualNetworkGateway](./Get-AzVirtualNetworkGateway.md)
 
-[새로운 AzVirtualNetworkGateway](./New-AzVirtualNetworkGateway.md)
+[New-AzVirtualNetworkGateway](./New-AzVirtualNetworkGateway.md)
 
-[제거-AzVirtualNetworkGateway](./Remove-AzVirtualNetworkGateway.md)
+[Remove-AzVirtualNetworkGateway](./Remove-AzVirtualNetworkGateway.md)
 
-[다시 설정-AzVirtualNetworkGateway](./Reset-AzVirtualNetworkGateway.md)
+[Reset-AzVirtualNetworkGateway](./Reset-AzVirtualNetworkGateway.md)
 
 [Set-AzVirtualNetworkGateway](./Set-AzVirtualNetworkGateway.md)
 
 [Get-AzVpnClientPackage](./Get-AzVpnClientPackage.md)
 
-[Set-AzVirtualNetworkGatewayVpnClientConfig](./Set-AzVirtualNetworkGatewayVpnClientConfig.md)
