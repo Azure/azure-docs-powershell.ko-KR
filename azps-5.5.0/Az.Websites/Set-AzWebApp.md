@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/s
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/Set-AzWebApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/Set-AzWebApp.md
-ms.openlocfilehash: 2028132e427bdba3fd49c20b9e7944eff90a9aa5
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: 5594e43b2e6c67e9df5b526f753557edd8a4d5ea
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100197228"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100414733"
 ---
 # Set-AzWebApp
 
@@ -63,7 +63,7 @@ PS C:\> Set-AzWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebAp
 
 ### 예제 3
 
-Azure 웹앱을 수정합니다. (자동Generated)
+Azure 웹앱을 수정합니다. (자동 재생)
 
 ```powershell <!-- Aladdin Generated Example --> 
 Set-AzWebApp -AppSettings <Hashtable> -Name 'ContosoWebApp' -ResourceGroupName 'Default-Web-WestUS'
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppSettings
-앱 설정 해시테이블. 기존 앱 설정이 대체됩니다. 이 설정은 제공되지 않은 설정을 제거합니다.
+앱 설정 해시테이블. 기존 앱 설정이 대체됩니다. 이 설정은 제공되지 않은 모든 설정을 제거합니다.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignIdentity
-기존 Azure 웹앱 또는 functionapp에서 MSI 사용/사용 안 하도록 설정
+기존 azure webapp 또는 functionapp에서 MSI 사용/사용 안 하도록 설정
 
 ```yaml
 Type: System.Boolean
@@ -597,4 +597,3 @@ Default-Web-WestUS의 값을 웹앱의 리소스 그룹 이름으로 바꾸고 C
 
 [Stop-AzWebApp](./Stop-AzWebApp.md)
 
-[New-AzResource](./New-AzResource.md)
