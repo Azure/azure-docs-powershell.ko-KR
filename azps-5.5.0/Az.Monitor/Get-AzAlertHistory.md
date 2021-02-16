@@ -6,31 +6,31 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzAlertHistory.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzAlertHistory.md
-ms.openlocfilehash: 666d63d6b40e6b031d3439adde8f3f843c3cdd93
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: 762b0540c9e6483aebbc58bbe9fe71701fb390fa
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100203511"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398515"
 ---
-# <span data-ttu-id="3bf06-101">Get-AzAlertHistory</span><span class="sxs-lookup"><span data-stu-id="3bf06-101">Get-AzAlertHistory</span></span>
+# <span data-ttu-id="8c115-101">Get-AzAlertHistory</span><span class="sxs-lookup"><span data-stu-id="8c115-101">Get-AzAlertHistory</span></span>
 
-## <span data-ttu-id="3bf06-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="3bf06-102">SYNOPSIS</span></span>
-<span data-ttu-id="3bf06-103">클래식 경고 규칙의 기록을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="3bf06-103">Gets the history of classic alert rules.</span></span>
+## <span data-ttu-id="8c115-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="8c115-102">SYNOPSIS</span></span>
+<span data-ttu-id="8c115-103">클래식 경고 규칙의 기록을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="8c115-103">Gets the history of classic alert rules.</span></span>
 
-## <span data-ttu-id="3bf06-104">구문</span><span class="sxs-lookup"><span data-stu-id="3bf06-104">SYNTAX</span></span>
+## <span data-ttu-id="8c115-104">구문</span><span class="sxs-lookup"><span data-stu-id="8c115-104">SYNTAX</span></span>
 
 ```
 Get-AzAlertHistory [-ResourceId <String>] [-StartTime <DateTime>] [-EndTime <DateTime>] [-Status <String>]
  [-Caller <String>] [-DetailedOutput] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="3bf06-105">설명</span><span class="sxs-lookup"><span data-stu-id="3bf06-105">DESCRIPTION</span></span>
-<span data-ttu-id="3bf06-106">**Get-AzAlertHistory** cmdlet은 클래식 경고 규칙이 활성화, 비활성화, 발생, 해결될 때의 기록을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="3bf06-106">The **Get-AzAlertHistory** cmdlet gets the history of classic alert rules as they are enabled, disabled, fired, resolved, and so on.</span></span>
+## <span data-ttu-id="8c115-105">설명</span><span class="sxs-lookup"><span data-stu-id="8c115-105">DESCRIPTION</span></span>
+<span data-ttu-id="8c115-106">**Get-AzAlertHistory** cmdlet은 클래식 경고 규칙이 활성화, 비활성화, 발생, 해결될 때의 기록을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="8c115-106">The **Get-AzAlertHistory** cmdlet gets the history of classic alert rules as they are enabled, disabled, fired, resolved, and so on.</span></span>
 
-## <span data-ttu-id="3bf06-107">예제</span><span class="sxs-lookup"><span data-stu-id="3bf06-107">EXAMPLES</span></span>
+## <span data-ttu-id="8c115-107">예제</span><span class="sxs-lookup"><span data-stu-id="8c115-107">EXAMPLES</span></span>
 
-### <span data-ttu-id="3bf06-108">예제 1: 경고 기록을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="3bf06-108">Example 1: Get the alert history</span></span>
+### <span data-ttu-id="8c115-108">예제 1: 경고 기록을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="8c115-108">Example 1: Get the alert history</span></span>
 ```
 PS C:\>Get-AzAlertHistory -StartTime 2015-02-11T11:00:00 -EndTime 2015-02-11T12:00:00 -DetailedOutput
 Authorization        : 
@@ -170,9 +170,9 @@ SubscriptionId       : b93fb07a-6f93-30be-bf3e-4f0deca15f4f
 SubStatus            :
 ```
 
-<span data-ttu-id="3bf06-109">이 명령은 현재 구독에 대해 지정된 시간 프레임에 대한 경고 기록을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="3bf06-109">This command gets the alert history for the specified time frame for the current subscription.</span></span>
+<span data-ttu-id="8c115-109">이 명령은 현재 구독에 대해 지정된 시간 프레임에 대한 경고 기록을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="8c115-109">This command gets the alert history for the specified time frame for the current subscription.</span></span>
 
-### <span data-ttu-id="3bf06-110">예제 2: 지정된 리소스에 대한 경고 기록을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="3bf06-110">Example 2: Get alert history for a specified resource</span></span>
+### <span data-ttu-id="8c115-110">예제 2: 지정된 리소스에 대한 경고 기록을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="8c115-110">Example 2: Get alert history for a specified resource</span></span>
 ```
 PS C:\>Get-AzAlertHistory -StartTime 2015-02-11T11:00:00 -EndTime 2015-02-11T12:00:00 -ResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.insights/alertrules/checkrule3-4b135401-a30c-4224-ae21-fa53a5bd253d" -DetailedOutput
 
@@ -268,12 +268,12 @@ SubscriptionId       : b93fb07a-6f93-30be-bf3e-4f0deca15f4f
 SubStatus            :
 ```
 
-<span data-ttu-id="3bf06-111">이 명령은 지정된 리소스에 대한 경고 규칙 관련 이벤트를 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="3bf06-111">This command gets the alert rule-related events for a specified resource.</span></span>
+<span data-ttu-id="8c115-111">이 명령은 지정된 리소스에 대한 경고 규칙 관련 이벤트를 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="8c115-111">This command gets the alert rule-related events for a specified resource.</span></span>
 
-## <span data-ttu-id="3bf06-112">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="3bf06-112">PARAMETERS</span></span>
+## <span data-ttu-id="8c115-112">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="8c115-112">PARAMETERS</span></span>
 
-### <span data-ttu-id="3bf06-113">-Caller</span><span class="sxs-lookup"><span data-stu-id="3bf06-113">-Caller</span></span>
-<span data-ttu-id="3bf06-114">호출자 지정.</span><span class="sxs-lookup"><span data-stu-id="3bf06-114">Specifies the caller.</span></span>
+### <span data-ttu-id="8c115-113">-Caller</span><span class="sxs-lookup"><span data-stu-id="8c115-113">-Caller</span></span>
+<span data-ttu-id="8c115-114">호출자 지정.</span><span class="sxs-lookup"><span data-stu-id="8c115-114">Specifies the caller.</span></span>
 
 ```yaml
 Type: System.String
@@ -287,8 +287,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3bf06-115">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="3bf06-115">-DefaultProfile</span></span>
-<span data-ttu-id="3bf06-116">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독</span><span class="sxs-lookup"><span data-stu-id="3bf06-116">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+### <span data-ttu-id="8c115-115">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="8c115-115">-DefaultProfile</span></span>
+<span data-ttu-id="8c115-116">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독</span><span class="sxs-lookup"><span data-stu-id="8c115-116">The credentials, account, tenant, and subscription used for communication with azure</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -302,8 +302,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3bf06-117">-DetailedOutput</span><span class="sxs-lookup"><span data-stu-id="3bf06-117">-DetailedOutput</span></span>
-<span data-ttu-id="3bf06-118">출력에 전체 세부 정보를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="3bf06-118">Displays full details in the output.</span></span>
+### <span data-ttu-id="8c115-117">-DetailedOutput</span><span class="sxs-lookup"><span data-stu-id="8c115-117">-DetailedOutput</span></span>
+<span data-ttu-id="8c115-118">출력에 전체 세부 정보를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="8c115-118">Displays full details in the output.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -317,9 +317,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3bf06-119">-EndTime</span><span class="sxs-lookup"><span data-stu-id="3bf06-119">-EndTime</span></span>
-<span data-ttu-id="3bf06-120">로컬 시간으로 쿼리의 종료 시간을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3bf06-120">Specifies the end time of the query in local time.</span></span>
-<span data-ttu-id="3bf06-121">기본값은 현재 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="3bf06-121">The default is the current time.</span></span>
+### <span data-ttu-id="8c115-119">-EndTime</span><span class="sxs-lookup"><span data-stu-id="8c115-119">-EndTime</span></span>
+<span data-ttu-id="8c115-120">로컬 시간으로 쿼리의 종료 시간을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="8c115-120">Specifies the end time of the query in local time.</span></span>
+<span data-ttu-id="8c115-121">기본값은 현재 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="8c115-121">The default is the current time.</span></span>
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -333,8 +333,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3bf06-122">-ResourceId</span><span class="sxs-lookup"><span data-stu-id="3bf06-122">-ResourceId</span></span>
-<span data-ttu-id="3bf06-123">규칙이 연결된 리소스 ID를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3bf06-123">Specifies the resource ID the rule is associated with.</span></span>
+### <span data-ttu-id="8c115-122">-ResourceId</span><span class="sxs-lookup"><span data-stu-id="8c115-122">-ResourceId</span></span>
+<span data-ttu-id="8c115-123">규칙이 연결된 리소스 ID를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="8c115-123">Specifies the resource ID the rule is associated with.</span></span>
 
 ```yaml
 Type: System.String
@@ -348,9 +348,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3bf06-124">-StartTime</span><span class="sxs-lookup"><span data-stu-id="3bf06-124">-StartTime</span></span>
-<span data-ttu-id="3bf06-125">로컬 시간으로 쿼리의 시작 시간을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3bf06-125">Specifies the start time of the query in local time.</span></span>
-<span data-ttu-id="3bf06-126">기본값은 현재 현지 시간에서 1시간을 -1로 합니다.</span><span class="sxs-lookup"><span data-stu-id="3bf06-126">The default is the current local time minus one hour.</span></span>
+### <span data-ttu-id="8c115-124">-StartTime</span><span class="sxs-lookup"><span data-stu-id="8c115-124">-StartTime</span></span>
+<span data-ttu-id="8c115-125">로컬 시간으로 쿼리의 시작 시간을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="8c115-125">Specifies the start time of the query in local time.</span></span>
+<span data-ttu-id="8c115-126">기본값은 현재 현지 시간에서 1시간을 -1로 입니다.</span><span class="sxs-lookup"><span data-stu-id="8c115-126">The default is the current local time minus one hour.</span></span>
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -364,8 +364,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3bf06-127">-Status</span><span class="sxs-lookup"><span data-stu-id="3bf06-127">-Status</span></span>
-<span data-ttu-id="3bf06-128">상태를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3bf06-128">Specifies the status.</span></span>
+### <span data-ttu-id="8c115-127">-Status</span><span class="sxs-lookup"><span data-stu-id="8c115-127">-Status</span></span>
+<span data-ttu-id="8c115-128">상태를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="8c115-128">Specifies the status.</span></span>
 
 ```yaml
 Type: System.String
@@ -379,33 +379,32 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="3bf06-129">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="3bf06-129">CommonParameters</span></span>
-<span data-ttu-id="3bf06-130">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="3bf06-130">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="3bf06-131">자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.</span><span class="sxs-lookup"><span data-stu-id="3bf06-131">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="8c115-129">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="8c115-129">CommonParameters</span></span>
+<span data-ttu-id="8c115-130">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="8c115-130">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="8c115-131">자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.</span><span class="sxs-lookup"><span data-stu-id="8c115-131">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="3bf06-132">입력</span><span class="sxs-lookup"><span data-stu-id="3bf06-132">INPUTS</span></span>
+## <span data-ttu-id="8c115-132">입력</span><span class="sxs-lookup"><span data-stu-id="8c115-132">INPUTS</span></span>
 
-### <span data-ttu-id="3bf06-133">System.String</span><span class="sxs-lookup"><span data-stu-id="3bf06-133">System.String</span></span>
+### <span data-ttu-id="8c115-133">System.String</span><span class="sxs-lookup"><span data-stu-id="8c115-133">System.String</span></span>
 
-### <span data-ttu-id="3bf06-134">System.Nullable'1[[System.DateTime, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span><span class="sxs-lookup"><span data-stu-id="3bf06-134">System.Nullable\`1[[System.DateTime, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span></span>
+### <span data-ttu-id="8c115-134">System.Nullable'1[[System.DateTime, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span><span class="sxs-lookup"><span data-stu-id="8c115-134">System.Nullable\`1[[System.DateTime, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span></span>
 
-### <span data-ttu-id="3bf06-135">System.Management.Automation.SwitchParameter</span><span class="sxs-lookup"><span data-stu-id="3bf06-135">System.Management.Automation.SwitchParameter</span></span>
+### <span data-ttu-id="8c115-135">System.Management.Automation.SwitchParameter</span><span class="sxs-lookup"><span data-stu-id="8c115-135">System.Management.Automation.SwitchParameter</span></span>
 
-## <span data-ttu-id="3bf06-136">출력</span><span class="sxs-lookup"><span data-stu-id="3bf06-136">OUTPUTS</span></span>
+## <span data-ttu-id="8c115-136">출력</span><span class="sxs-lookup"><span data-stu-id="8c115-136">OUTPUTS</span></span>
 
-### <span data-ttu-id="3bf06-137">Microsoft.Azure.Commands.Insights.OutputClasses.PSEventData</span><span class="sxs-lookup"><span data-stu-id="3bf06-137">Microsoft.Azure.Commands.Insights.OutputClasses.PSEventData</span></span>
+### <span data-ttu-id="8c115-137">Microsoft.Azure.Commands.Insights.OutputClasses.PSEventData</span><span class="sxs-lookup"><span data-stu-id="8c115-137">Microsoft.Azure.Commands.Insights.OutputClasses.PSEventData</span></span>
 
-## <span data-ttu-id="3bf06-138">참고 사항</span><span class="sxs-lookup"><span data-stu-id="3bf06-138">NOTES</span></span>
+## <span data-ttu-id="8c115-138">참고 사항</span><span class="sxs-lookup"><span data-stu-id="8c115-138">NOTES</span></span>
 
-## <span data-ttu-id="3bf06-139">관련 링크</span><span class="sxs-lookup"><span data-stu-id="3bf06-139">RELATED LINKS</span></span>
+## <span data-ttu-id="8c115-139">관련 링크</span><span class="sxs-lookup"><span data-stu-id="8c115-139">RELATED LINKS</span></span>
 
-[<span data-ttu-id="3bf06-140">Add-AzLogAlertRule</span><span class="sxs-lookup"><span data-stu-id="3bf06-140">Add-AzLogAlertRule</span></span>](./Add-AzLogAlertRule.md)
 
-[<span data-ttu-id="3bf06-141">Add-AzMetricAlertRule</span><span class="sxs-lookup"><span data-stu-id="3bf06-141">Add-AzMetricAlertRule</span></span>](./Add-AzMetricAlertRule.md)
+[<span data-ttu-id="8c115-140">Add-AzMetricAlertRule</span><span class="sxs-lookup"><span data-stu-id="8c115-140">Add-AzMetricAlertRule</span></span>](./Add-AzMetricAlertRule.md)
 
-[<span data-ttu-id="3bf06-142">Add-AzWebtestAlertRule</span><span class="sxs-lookup"><span data-stu-id="3bf06-142">Add-AzWebtestAlertRule</span></span>](./Add-AzWebtestAlertRule.md)
+[<span data-ttu-id="8c115-141">Add-AzWebtestAlertRule</span><span class="sxs-lookup"><span data-stu-id="8c115-141">Add-AzWebtestAlertRule</span></span>](./Add-AzWebtestAlertRule.md)
 
-[<span data-ttu-id="3bf06-143">Get-AzAlertRule</span><span class="sxs-lookup"><span data-stu-id="3bf06-143">Get-AzAlertRule</span></span>](./Get-AzAlertRule.md)
+[<span data-ttu-id="8c115-142">Get-AzAlertRule</span><span class="sxs-lookup"><span data-stu-id="8c115-142">Get-AzAlertRule</span></span>](./Get-AzAlertRule.md)
 
-[<span data-ttu-id="3bf06-144">Remove-AzAlertRule</span><span class="sxs-lookup"><span data-stu-id="3bf06-144">Remove-AzAlertRule</span></span>](./Remove-AzAlertRule.md)
+[<span data-ttu-id="8c115-143">Remove-AzAlertRule</span><span class="sxs-lookup"><span data-stu-id="8c115-143">Remove-AzAlertRule</span></span>](./Remove-AzAlertRule.md)
 
 
