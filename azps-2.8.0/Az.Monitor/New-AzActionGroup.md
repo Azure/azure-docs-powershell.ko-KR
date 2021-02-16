@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzActionGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzActionGroup.md
-ms.openlocfilehash: 1377e1fe5f96754f4b20858cc1930039246bd8be
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 47ab8423de29a1cdfeb7edb268560bb28cfc8ac7
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93870433"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100411401"
 ---
-# <span data-ttu-id="d701c-101">New-AzActionGroup</span><span class="sxs-lookup"><span data-stu-id="d701c-101">New-AzActionGroup</span></span>
+# <span data-ttu-id="21ce6-101">New-AzActionGroup</span><span class="sxs-lookup"><span data-stu-id="21ce6-101">New-AzActionGroup</span></span>
 
-## <span data-ttu-id="d701c-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="d701c-102">SYNOPSIS</span></span>
-<span data-ttu-id="d701c-103">메모리에 ActionGroup reference 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="d701c-103">Creates an ActionGroup reference object in memory.</span></span>
+## <span data-ttu-id="21ce6-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="21ce6-102">SYNOPSIS</span></span>
+<span data-ttu-id="21ce6-103">메모리에 ActionGroup 참조 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="21ce6-103">Creates an ActionGroup reference object in memory.</span></span>
 
-## <span data-ttu-id="d701c-104">구문과</span><span class="sxs-lookup"><span data-stu-id="d701c-104">SYNTAX</span></span>
+## <span data-ttu-id="21ce6-104">구문</span><span class="sxs-lookup"><span data-stu-id="21ce6-104">SYNTAX</span></span>
 
 ```
 New-AzActionGroup -ActionGroupId <String>
@@ -26,22 +26,22 @@ New-AzActionGroup -ActionGroupId <String>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="d701c-105">설명은</span><span class="sxs-lookup"><span data-stu-id="d701c-105">DESCRIPTION</span></span>
-<span data-ttu-id="d701c-106">**AzActionGroup** cmdlet은 메모리에 작업 그룹 참조 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="d701c-106">The **New-AzActionGroup** cmdlet creates an action group reference object in memory.</span></span>
+## <span data-ttu-id="21ce6-105">설명</span><span class="sxs-lookup"><span data-stu-id="21ce6-105">DESCRIPTION</span></span>
+<span data-ttu-id="21ce6-106">**New-AzActionGroup** cmdlet은 메모리에 작업 그룹 참조 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="21ce6-106">The **New-AzActionGroup** cmdlet creates an action group reference object in memory.</span></span>
 
-## <span data-ttu-id="d701c-107">예제의</span><span class="sxs-lookup"><span data-stu-id="d701c-107">EXAMPLES</span></span>
+## <span data-ttu-id="21ce6-107">예제</span><span class="sxs-lookup"><span data-stu-id="21ce6-107">EXAMPLES</span></span>
 
-### <span data-ttu-id="d701c-108">예제 1: 메모리에 작업 그룹 참조 개체 만들기</span><span class="sxs-lookup"><span data-stu-id="d701c-108">Example 1: Create an action group reference object in memory</span></span>
+### <span data-ttu-id="21ce6-108">예제 1: 메모리에 작업 그룹 참조 개체 만들기</span><span class="sxs-lookup"><span data-stu-id="21ce6-108">Example 1: Create an action group reference object in memory</span></span>
 ```
 PS C:\>$dict = New-Object "System.Collections.Generic.Dictionary``2[System.String,System.String]"
 PS C:\>$dict.Add('key1', 'value1')
 PS C:\>$actionGrp1 = New-AzActionGroup -ActionGroupId 'actiongr1' -WebhookProperty $dict
 ```
 
-## <span data-ttu-id="d701c-109">변수</span><span class="sxs-lookup"><span data-stu-id="d701c-109">PARAMETERS</span></span>
+## <span data-ttu-id="21ce6-109">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="21ce6-109">PARAMETERS</span></span>
 
-### <span data-ttu-id="d701c-110">-ActionGroupId</span><span class="sxs-lookup"><span data-stu-id="d701c-110">-ActionGroupId</span></span>
-<span data-ttu-id="d701c-111">작업 그룹의 Id/이름입니다.</span><span class="sxs-lookup"><span data-stu-id="d701c-111">The Id/name of the action group.</span></span>
+### <span data-ttu-id="21ce6-110">-ActionGroupId</span><span class="sxs-lookup"><span data-stu-id="21ce6-110">-ActionGroupId</span></span>
+<span data-ttu-id="21ce6-111">작업 그룹의 ID/이름입니다.</span><span class="sxs-lookup"><span data-stu-id="21ce6-111">The Id/name of the action group.</span></span>
 
 ```yaml
 Type: System.String
@@ -55,8 +55,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d701c-112">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="d701c-112">-DefaultProfile</span></span>
-<span data-ttu-id="d701c-113">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독</span><span class="sxs-lookup"><span data-stu-id="d701c-113">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+### <span data-ttu-id="21ce6-112">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="21ce6-112">-DefaultProfile</span></span>
+<span data-ttu-id="21ce6-113">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독</span><span class="sxs-lookup"><span data-stu-id="21ce6-113">The credentials, account, tenant, and subscription used for communication with azure</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -70,8 +70,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d701c-114">-WebhookProperty</span><span class="sxs-lookup"><span data-stu-id="d701c-114">-WebhookProperty</span></span>
-<span data-ttu-id="d701c-115">작업 그룹의 webhook 속성</span><span class="sxs-lookup"><span data-stu-id="d701c-115">The webhook properties of the action group</span></span>
+### <span data-ttu-id="21ce6-114">-WebhookProperty</span><span class="sxs-lookup"><span data-stu-id="21ce6-114">-WebhookProperty</span></span>
+<span data-ttu-id="21ce6-115">작업 그룹의 웹후크 속성</span><span class="sxs-lookup"><span data-stu-id="21ce6-115">The webhook properties of the action group</span></span>
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
@@ -85,32 +85,32 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d701c-116">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="d701c-116">CommonParameters</span></span>
-<span data-ttu-id="d701c-117">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="d701c-117">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="d701c-118">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="d701c-118">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="21ce6-116">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="21ce6-116">CommonParameters</span></span>
+<span data-ttu-id="21ce6-117">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="21ce6-117">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="21ce6-118">자세한 내용은 [다음](https://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.</span><span class="sxs-lookup"><span data-stu-id="21ce6-118">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="d701c-119">입력</span><span class="sxs-lookup"><span data-stu-id="d701c-119">INPUTS</span></span>
+## <span data-ttu-id="21ce6-119">입력</span><span class="sxs-lookup"><span data-stu-id="21ce6-119">INPUTS</span></span>
 
-### <span data-ttu-id="d701c-120">System. 문자열</span><span class="sxs-lookup"><span data-stu-id="d701c-120">System.String</span></span>
+### <span data-ttu-id="21ce6-120">System.String</span><span class="sxs-lookup"><span data-stu-id="21ce6-120">System.String</span></span>
 
-### <span data-ttu-id="d701c-121">System.webserver. Dictionary ' 2 [[4.0.0.0], CoreLib, Version =, Culture = 중립, PublicKeyToken = 7cec85d7bea7798e], [System.webserver,, CoreLib, Version = 4.0.0.0, Culture = 중립, PublicKeyToken = 7cec85d7bea7798e]]</span><span class="sxs-lookup"><span data-stu-id="d701c-121">System.Collections.Generic.Dictionary\`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span></span>
+### <span data-ttu-id="21ce6-121">System.Collections.Generic.Dictionary'2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span><span class="sxs-lookup"><span data-stu-id="21ce6-121">System.Collections.Generic.Dictionary\`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span></span>
 
-## <span data-ttu-id="d701c-122">출력</span><span class="sxs-lookup"><span data-stu-id="d701c-122">OUTPUTS</span></span>
+## <span data-ttu-id="21ce6-122">출력</span><span class="sxs-lookup"><span data-stu-id="21ce6-122">OUTPUTS</span></span>
 
-### <span data-ttu-id="d701c-123">Microsoft. 관리. 관리자. ActivityLogAlertActionGroup</span><span class="sxs-lookup"><span data-stu-id="d701c-123">Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertActionGroup</span></span>
+### <span data-ttu-id="21ce6-123">Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertActionGroup</span><span class="sxs-lookup"><span data-stu-id="21ce6-123">Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertActionGroup</span></span>
 
-## <span data-ttu-id="d701c-124">상속자</span><span class="sxs-lookup"><span data-stu-id="d701c-124">NOTES</span></span>
+## <span data-ttu-id="21ce6-124">참고 사항</span><span class="sxs-lookup"><span data-stu-id="21ce6-124">NOTES</span></span>
 
-## <span data-ttu-id="d701c-125">관련 링크</span><span class="sxs-lookup"><span data-stu-id="d701c-125">RELATED LINKS</span></span>
+## <span data-ttu-id="21ce6-125">관련 링크</span><span class="sxs-lookup"><span data-stu-id="21ce6-125">RELATED LINKS</span></span>
 
-[<span data-ttu-id="d701c-126">Set-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="d701c-126">Set-AzActivityLogAlert</span></span>](./Set-AzActivityLogAlert.md)
+[<span data-ttu-id="21ce6-126">Set-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="21ce6-126">Set-AzActivityLogAlert</span></span>](./Set-AzActivityLogAlert.md)
 
-[<span data-ttu-id="d701c-127">Enable-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="d701c-127">Enable-AzActivityLogAlert</span></span>](./Enable-AzActivityLogAlert.md)
+[<span data-ttu-id="21ce6-127">Enable-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="21ce6-127">Enable-AzActivityLogAlert</span></span>](./Enable-AzActivityLogAlert.md)
 
-[<span data-ttu-id="d701c-128">Disable-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="d701c-128">Disable-AzActivityLogAlert</span></span>](./Disable-AzActivityLogAlert.md)
+[<span data-ttu-id="21ce6-128">Disable-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="21ce6-128">Disable-AzActivityLogAlert</span></span>](./Disable-AzActivityLogAlert.md)
 
-[<span data-ttu-id="d701c-129">Get-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="d701c-129">Get-AzActivityLogAlert</span></span>](./Get-AzActivityLogAlert.md)
+[<span data-ttu-id="21ce6-129">Get-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="21ce6-129">Get-AzActivityLogAlert</span></span>](./Get-AzActivityLogAlert.md)
 
-[<span data-ttu-id="d701c-130">제거-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="d701c-130">Remove-AzActivityLogAlert</span></span>](./Remove-AzActivityLogAlert.md)
+[<span data-ttu-id="21ce6-130">Remove-AzActivityLogAlert</span><span class="sxs-lookup"><span data-stu-id="21ce6-130">Remove-AzActivityLogAlert</span></span>](./Remove-AzActivityLogAlert.md)
 
-[<span data-ttu-id="d701c-131">새로운 AzActivityLogAlertCondition</span><span class="sxs-lookup"><span data-stu-id="d701c-131">New-AzActivityLogAlertCondition</span></span>](./Get-AzActivityLogAlertCondition.md)
+
 
