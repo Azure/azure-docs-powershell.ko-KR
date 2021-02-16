@@ -6,105 +6,105 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Remove-AzADServicePrincipal.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Remove-AzADServicePrincipal.md
-ms.openlocfilehash: 966b9baf35f1719f29fda6355a9675739693314f
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.openlocfilehash: bd58a044db49cdd0cedf2872e97e64662a49372c
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "93876404"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398226"
 ---
-# <span data-ttu-id="d1633-101">Remove-AzADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="d1633-101">Remove-AzADServicePrincipal</span></span>
+# <span data-ttu-id="43b36-101">Remove-AzADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="43b36-101">Remove-AzADServicePrincipal</span></span>
 
-## <span data-ttu-id="d1633-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="d1633-102">SYNOPSIS</span></span>
-<span data-ttu-id="d1633-103">Azure active directory 서비스 사용자를 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1633-103">Deletes the azure active directory service principal.</span></span>
+## <span data-ttu-id="43b36-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="43b36-102">SYNOPSIS</span></span>
+<span data-ttu-id="43b36-103">Azure Active Directory 서비스 주체가 삭제됩니다.</span><span class="sxs-lookup"><span data-stu-id="43b36-103">Deletes the azure active directory service principal.</span></span>
 
-## <span data-ttu-id="d1633-104">구문과</span><span class="sxs-lookup"><span data-stu-id="d1633-104">SYNTAX</span></span>
+## <span data-ttu-id="43b36-104">구문</span><span class="sxs-lookup"><span data-stu-id="43b36-104">SYNTAX</span></span>
 
-### <span data-ttu-id="d1633-105">ObjectIdParameterSet (기본값)</span><span class="sxs-lookup"><span data-stu-id="d1633-105">ObjectIdParameterSet (Default)</span></span>
+### <span data-ttu-id="43b36-105">ObjectIdParameterSet(기본값)</span><span class="sxs-lookup"><span data-stu-id="43b36-105">ObjectIdParameterSet (Default)</span></span>
 ```
 Remove-AzADServicePrincipal -ObjectId <Guid> [-PassThru] [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="d1633-106">ApplicationIdParameterSet</span><span class="sxs-lookup"><span data-stu-id="d1633-106">ApplicationIdParameterSet</span></span>
+### <span data-ttu-id="43b36-106">ApplicationIdParameterSet</span><span class="sxs-lookup"><span data-stu-id="43b36-106">ApplicationIdParameterSet</span></span>
 ```
 Remove-AzADServicePrincipal -ApplicationId <Guid> [-PassThru] [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="d1633-107">SPNParameterSet</span><span class="sxs-lookup"><span data-stu-id="d1633-107">SPNParameterSet</span></span>
+### <span data-ttu-id="43b36-107">SPNParameterSet</span><span class="sxs-lookup"><span data-stu-id="43b36-107">SPNParameterSet</span></span>
 ```
 Remove-AzADServicePrincipal -ServicePrincipalName <String> [-PassThru] [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="d1633-108">DisplayNameParameterSet</span><span class="sxs-lookup"><span data-stu-id="d1633-108">DisplayNameParameterSet</span></span>
+### <span data-ttu-id="43b36-108">DisplayNameParameterSet</span><span class="sxs-lookup"><span data-stu-id="43b36-108">DisplayNameParameterSet</span></span>
 ```
 Remove-AzADServicePrincipal -DisplayName <String> [-PassThru] [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="d1633-109">InputObjectParameterSet</span><span class="sxs-lookup"><span data-stu-id="d1633-109">InputObjectParameterSet</span></span>
+### <span data-ttu-id="43b36-109">InputObjectParameterSet</span><span class="sxs-lookup"><span data-stu-id="43b36-109">InputObjectParameterSet</span></span>
 ```
 Remove-AzADServicePrincipal -InputObject <PSADServicePrincipal> [-PassThru] [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="d1633-110">ApplicationObjectParameterSet</span><span class="sxs-lookup"><span data-stu-id="d1633-110">ApplicationObjectParameterSet</span></span>
+### <span data-ttu-id="43b36-110">ApplicationObjectParameterSet</span><span class="sxs-lookup"><span data-stu-id="43b36-110">ApplicationObjectParameterSet</span></span>
 ```
 Remove-AzADServicePrincipal -ApplicationObject <PSADApplication> [-PassThru] [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="d1633-111">설명은</span><span class="sxs-lookup"><span data-stu-id="d1633-111">DESCRIPTION</span></span>
-<span data-ttu-id="d1633-112">Azure active directory 서비스 사용자를 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1633-112">Deletes the azure active directory service principal.</span></span>
+## <span data-ttu-id="43b36-111">설명</span><span class="sxs-lookup"><span data-stu-id="43b36-111">DESCRIPTION</span></span>
+<span data-ttu-id="43b36-112">Azure Active Directory 서비스 주체가 삭제됩니다.</span><span class="sxs-lookup"><span data-stu-id="43b36-112">Deletes the azure active directory service principal.</span></span>
 
-## <span data-ttu-id="d1633-113">예제의</span><span class="sxs-lookup"><span data-stu-id="d1633-113">EXAMPLES</span></span>
+## <span data-ttu-id="43b36-113">예제</span><span class="sxs-lookup"><span data-stu-id="43b36-113">EXAMPLES</span></span>
 
-### <span data-ttu-id="d1633-114">예제 1-개체 id 별 서비스 사용자 제거</span><span class="sxs-lookup"><span data-stu-id="d1633-114">Example 1 - Remove a service principal by object id</span></span>
+### <span data-ttu-id="43b36-114">예제 1 - 개체 ID로 서비스 주체 제거</span><span class="sxs-lookup"><span data-stu-id="43b36-114">Example 1 - Remove a service principal by object id</span></span>
 
 ```
 PS C:\> Remove-AzADServicePrincipal -ObjectId 61b5d8ea-fdc6-40a2-8d5b-ad447c678d45
 ```
 
-<span data-ttu-id="d1633-115">개체 id가 ' 61b5d8ea-fdc6-40a2-8d5b-ad447c678d45 ' 인 서비스 사용자를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1633-115">Removes the service principal with object id '61b5d8ea-fdc6-40a2-8d5b-ad447c678d45'.</span></span>
+<span data-ttu-id="43b36-115">개체 ID가 '61b5d8ea-fdc6-40a2-8d5b-ad447c678d45'인 서비스 주체가 제거됩니다.</span><span class="sxs-lookup"><span data-stu-id="43b36-115">Removes the service principal with object id '61b5d8ea-fdc6-40a2-8d5b-ad447c678d45'.</span></span>
 
-### <span data-ttu-id="d1633-116">예제 2-응용 프로그램 id로 서비스 사용자 제거</span><span class="sxs-lookup"><span data-stu-id="d1633-116">Example 2 - Remove a service principal by application id</span></span>
+### <span data-ttu-id="43b36-116">예제 2 - 애플리케이션 ID로 서비스 주체 제거</span><span class="sxs-lookup"><span data-stu-id="43b36-116">Example 2 - Remove a service principal by application id</span></span>
 
 ```
 PS C:\> Remove-AzADServicePrincipal -ApplicationId 9263469e-d328-4321-8646-3e3e75d20e76
 ```
 
-<span data-ttu-id="d1633-117">응용 프로그램 id가 ' 9263469e-d328-4321-8646-3e3e75d20e76 ' 인 서비스 사용자를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1633-117">Removes the service principal with application id '9263469e-d328-4321-8646-3e3e75d20e76'.</span></span>
+<span data-ttu-id="43b36-117">애플리케이션 ID가 '9263469e-d328-4321-8646-3e3e75d20e76'인 서비스 주체가 제거됩니다.</span><span class="sxs-lookup"><span data-stu-id="43b36-117">Removes the service principal with application id '9263469e-d328-4321-8646-3e3e75d20e76'.</span></span>
 
-### <span data-ttu-id="d1633-118">예제 3-SPN에서 서비스 사용자 제거</span><span class="sxs-lookup"><span data-stu-id="d1633-118">Example 3 - Remove a service principal by SPN</span></span>
+### <span data-ttu-id="43b36-118">예제 3 - SPN에서 서비스 주체 제거</span><span class="sxs-lookup"><span data-stu-id="43b36-118">Example 3 - Remove a service principal by SPN</span></span>
 
 ```
 PS C:\> Remove-AzADServicePrincipal -ServicePrincipalName MyServicePrincipal
 ```
 
-<span data-ttu-id="d1633-119">서비스 사용자 이름이 "MyServicePrincipal" 인 서비스 사용자를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1633-119">Remove the service principal with service principal name "MyServicePrincipal"</span></span>
+<span data-ttu-id="43b36-119">서비스 주체 이름이 "MyServicePrincipal"인 서비스 주체 제거</span><span class="sxs-lookup"><span data-stu-id="43b36-119">Remove the service principal with service principal name "MyServicePrincipal"</span></span>
 
-### <span data-ttu-id="d1633-120">예제 4-파이핑을 통해 서비스 사용자 제거</span><span class="sxs-lookup"><span data-stu-id="d1633-120">Example 4 - Remove a service principal by piping</span></span>
+### <span data-ttu-id="43b36-120">예제 4 - 파이핑을 사용하여 서비스 주체 제거</span><span class="sxs-lookup"><span data-stu-id="43b36-120">Example 4 - Remove a service principal by piping</span></span>
 
 ```
 PS C:\> Get-AzADServicePrincipal -ObjectId 61b5d8ea-fdc6-40a2-8d5b-ad447c678d45 | Remove-AzADServicePrincipal
 ```
 
-<span data-ttu-id="d1633-121">개체 id가 ' 61b5d8ea-fdc6-40a2-8d5b-ad447c678d45 ' 인 서비스 사용자를 가져오고 해당 서비스 사용자를 제거 하기 위해 Remove-AzADServicePrincipal cmdlet에 대 한 파이프를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="d1633-121">Gets the service principal with object id '61b5d8ea-fdc6-40a2-8d5b-ad447c678d45' and pipes that to the Remove-AzADServicePrincipal cmdlet to remove that service principal.</span></span>
+<span data-ttu-id="43b36-121">개체 ID가 '61b5d8ea-fdc6-40a2-8d5b-ad447c678d45'인 서비스 주체 및 해당 서비스 주체 제거를 위해 Remove-AzADServicePrincipal cmdlet에 파이프합니다.</span><span class="sxs-lookup"><span data-stu-id="43b36-121">Gets the service principal with object id '61b5d8ea-fdc6-40a2-8d5b-ad447c678d45' and pipes that to the Remove-AzADServicePrincipal cmdlet to remove that service principal.</span></span>
 
-### <span data-ttu-id="d1633-122">예제 5-응용 프로그램을 파이핑 하 여 서비스 사용자 제거</span><span class="sxs-lookup"><span data-stu-id="d1633-122">Example 5 - Remove a service principal by piping an application</span></span>
+### <span data-ttu-id="43b36-122">예제 5 - 애플리케이션을 파이핑하여 서비스 주체 제거</span><span class="sxs-lookup"><span data-stu-id="43b36-122">Example 5 - Remove a service principal by piping an application</span></span>
 
 ```
 PS C:\> Get-AzApplication -ApplicationId 9263469e-d328-4321-8646-3e3e75d20e76 | Remove-AzADServicePrincipal
 ```
 
-<span data-ttu-id="d1633-123">응용 프로그램 id가 ' 9263469e-d328-4321-8646-3e3e75d20e76 ' 인 응용 프로그램을 가져오고 해당 응용 프로그램과 연결 된 서비스 사용자를 제거 하기 위해 Remove-AzADServicePrincipal cmdlet에 대 한 파이프를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="d1633-123">Gets the application with application id '9263469e-d328-4321-8646-3e3e75d20e76' and pipes that to the Remove-AzADServicePrincipal cmdlet to remove the service principal associated with that application.</span></span>
+<span data-ttu-id="43b36-123">애플리케이션 ID가 '9263469e-d328-4321-8646-3e3e75d20e76'인 애플리케이션을, Remove-AzADServicePrincipal cmdlet에 파이프하여 해당 애플리케이션과 연결된 서비스 주체가 제거됩니다.</span><span class="sxs-lookup"><span data-stu-id="43b36-123">Gets the application with application id '9263469e-d328-4321-8646-3e3e75d20e76' and pipes that to the Remove-AzADServicePrincipal cmdlet to remove the service principal associated with that application.</span></span>
 
-## <span data-ttu-id="d1633-124">변수</span><span class="sxs-lookup"><span data-stu-id="d1633-124">PARAMETERS</span></span>
+## <span data-ttu-id="43b36-124">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="43b36-124">PARAMETERS</span></span>
 
-### <span data-ttu-id="d1633-125">-ApplicationId</span><span class="sxs-lookup"><span data-stu-id="d1633-125">-ApplicationId</span></span>
-<span data-ttu-id="d1633-126">서비스 사용자 응용 프로그램 id입니다.</span><span class="sxs-lookup"><span data-stu-id="d1633-126">The service principal application id.</span></span>
+### <span data-ttu-id="43b36-125">-ApplicationId</span><span class="sxs-lookup"><span data-stu-id="43b36-125">-ApplicationId</span></span>
+<span data-ttu-id="43b36-126">서비스 주체 애플리케이션 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="43b36-126">The service principal application id.</span></span>
 
 ```yaml
 Type: System.Guid
@@ -118,8 +118,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d1633-127">-ApplicationObject</span><span class="sxs-lookup"><span data-stu-id="d1633-127">-ApplicationObject</span></span>
-<span data-ttu-id="d1633-128">서비스 사용자가 제거 되 고 있는 응용 프로그램 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="d1633-128">The application object whose service principal is being removed.</span></span>
+### <span data-ttu-id="43b36-127">-ApplicationObject</span><span class="sxs-lookup"><span data-stu-id="43b36-127">-ApplicationObject</span></span>
+<span data-ttu-id="43b36-128">서비스 주체가 제거되는 애플리케이션 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="43b36-128">The application object whose service principal is being removed.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication
@@ -133,8 +133,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d1633-129">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="d1633-129">-DefaultProfile</span></span>
-<span data-ttu-id="d1633-130">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독</span><span class="sxs-lookup"><span data-stu-id="d1633-130">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+### <span data-ttu-id="43b36-129">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="43b36-129">-DefaultProfile</span></span>
+<span data-ttu-id="43b36-130">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독</span><span class="sxs-lookup"><span data-stu-id="43b36-130">The credentials, account, tenant, and subscription used for communication with azure</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
@@ -148,8 +148,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d1633-131">-DisplayName</span><span class="sxs-lookup"><span data-stu-id="d1633-131">-DisplayName</span></span>
-<span data-ttu-id="d1633-132">서비스 주체의 표시 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="d1633-132">The display name of the service principal.</span></span>
+### <span data-ttu-id="43b36-131">-DisplayName</span><span class="sxs-lookup"><span data-stu-id="43b36-131">-DisplayName</span></span>
+<span data-ttu-id="43b36-132">서비스 주체의 표시 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="43b36-132">The display name of the service principal.</span></span>
 
 ```yaml
 Type: System.String
@@ -163,8 +163,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d1633-133">-Force</span><span class="sxs-lookup"><span data-stu-id="d1633-133">-Force</span></span>
-<span data-ttu-id="d1633-134">확인 하지 않고 서비스 사용자 삭제로 전환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1633-134">Switch to delete service principal without a confirmation.</span></span>
+### <span data-ttu-id="43b36-133">-Force</span><span class="sxs-lookup"><span data-stu-id="43b36-133">-Force</span></span>
+<span data-ttu-id="43b36-134">확인 없이 서비스 주체 삭제로 전환합니다.</span><span class="sxs-lookup"><span data-stu-id="43b36-134">Switch to delete service principal without a confirmation.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -178,8 +178,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d1633-135">-InputObject</span><span class="sxs-lookup"><span data-stu-id="d1633-135">-InputObject</span></span>
-<span data-ttu-id="d1633-136">서비스 사용자 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="d1633-136">The service principal object.</span></span>
+### <span data-ttu-id="43b36-135">-InputObject</span><span class="sxs-lookup"><span data-stu-id="43b36-135">-InputObject</span></span>
+<span data-ttu-id="43b36-136">서비스 주체 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="43b36-136">The service principal object.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal
@@ -193,8 +193,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d1633-137">-ObjectId</span><span class="sxs-lookup"><span data-stu-id="d1633-137">-ObjectId</span></span>
-<span data-ttu-id="d1633-138">삭제할 서비스 주체의 개체 id입니다.</span><span class="sxs-lookup"><span data-stu-id="d1633-138">The object id of the service principal to delete.</span></span>
+### <span data-ttu-id="43b36-137">-ObjectId</span><span class="sxs-lookup"><span data-stu-id="43b36-137">-ObjectId</span></span>
+<span data-ttu-id="43b36-138">삭제할 서비스 주체의 개체 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="43b36-138">The object id of the service principal to delete.</span></span>
 
 ```yaml
 Type: System.Guid
@@ -208,8 +208,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d1633-139">-PassThru</span><span class="sxs-lookup"><span data-stu-id="d1633-139">-PassThru</span></span>
-<span data-ttu-id="d1633-140">지정 된 경우 삭제 된 서비스 사용자를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1633-140">If specified, returns the deleted service principal.</span></span>
+### <span data-ttu-id="43b36-139">-PassThru</span><span class="sxs-lookup"><span data-stu-id="43b36-139">-PassThru</span></span>
+<span data-ttu-id="43b36-140">지정된 경우 삭제된 서비스 주체가 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="43b36-140">If specified, returns the deleted service principal.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -223,8 +223,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d1633-141">-ServicePrincipalName</span><span class="sxs-lookup"><span data-stu-id="d1633-141">-ServicePrincipalName</span></span>
-<span data-ttu-id="d1633-142">서비스 사용자 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="d1633-142">The service principal name.</span></span>
+### <span data-ttu-id="43b36-141">-ServicePrincipalName</span><span class="sxs-lookup"><span data-stu-id="43b36-141">-ServicePrincipalName</span></span>
+<span data-ttu-id="43b36-142">서비스 주체 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="43b36-142">The service principal name.</span></span>
 
 ```yaml
 Type: System.String
@@ -238,8 +238,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d1633-143">-확인</span><span class="sxs-lookup"><span data-stu-id="d1633-143">-Confirm</span></span>
-<span data-ttu-id="d1633-144">Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1633-144">Prompts you for confirmation before running the cmdlet.</span></span>
+### <span data-ttu-id="43b36-143">-Confirm</span><span class="sxs-lookup"><span data-stu-id="43b36-143">-Confirm</span></span>
+<span data-ttu-id="43b36-144">cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="43b36-144">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -253,9 +253,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d1633-145">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="d1633-145">-WhatIf</span></span>
-<span data-ttu-id="d1633-146">Cmdlet이 실행 되는 경우의 동작을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d1633-146">Shows what would happen if the cmdlet runs.</span></span>
-<span data-ttu-id="d1633-147">Cmdlet이 실행 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d1633-147">The cmdlet is not run.</span></span>
+### <span data-ttu-id="43b36-145">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="43b36-145">-WhatIf</span></span>
+<span data-ttu-id="43b36-146">cmdlet이 실행되는 경우의 결과 표시</span><span class="sxs-lookup"><span data-stu-id="43b36-146">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="43b36-147">cmdlet이 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="43b36-147">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -269,36 +269,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d1633-148">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="d1633-148">CommonParameters</span></span>
-<span data-ttu-id="d1633-149">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1633-149">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="d1633-150">자세한 내용은 about_CommonParameters (을 참조 하세요 http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="d1633-150">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="43b36-148">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="43b36-148">CommonParameters</span></span>
+<span data-ttu-id="43b36-149">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="43b36-149">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="43b36-150">자세한 내용은 다음 about_CommonParameters http://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="43b36-150">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="d1633-151">입력</span><span class="sxs-lookup"><span data-stu-id="d1633-151">INPUTS</span></span>
+## <span data-ttu-id="43b36-151">입력</span><span class="sxs-lookup"><span data-stu-id="43b36-151">INPUTS</span></span>
 
-### <span data-ttu-id="d1633-152">시스템 Guid</span><span class="sxs-lookup"><span data-stu-id="d1633-152">System.Guid</span></span>
+### <span data-ttu-id="43b36-152">System.Guid</span><span class="sxs-lookup"><span data-stu-id="43b36-152">System.Guid</span></span>
 
-### <span data-ttu-id="d1633-153">System. 문자열</span><span class="sxs-lookup"><span data-stu-id="d1633-153">System.String</span></span>
+### <span data-ttu-id="43b36-153">System.String</span><span class="sxs-lookup"><span data-stu-id="43b36-153">System.String</span></span>
 
-### <span data-ttu-id="d1633-154">Microsoft.Azure.Graph.RBAC.Version1_6 ActiveDirectory Adserviceprincipal</span><span class="sxs-lookup"><span data-stu-id="d1633-154">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal</span></span>
-<span data-ttu-id="d1633-155">매개 변수: InputObject (ByValue)</span><span class="sxs-lookup"><span data-stu-id="d1633-155">Parameters: InputObject (ByValue)</span></span>
+### <span data-ttu-id="43b36-154">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="43b36-154">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal</span></span>
+<span data-ttu-id="43b36-155">매개 변수: InputObject(ByValue)</span><span class="sxs-lookup"><span data-stu-id="43b36-155">Parameters: InputObject (ByValue)</span></span>
 
-### <span data-ttu-id="d1633-156">Microsoft.Azure.Graph.RBAC.Version1_6 ActiveDirectory Adapplication</span><span class="sxs-lookup"><span data-stu-id="d1633-156">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication</span></span>
-<span data-ttu-id="d1633-157">매개 변수: ApplicationObject (ByValue)</span><span class="sxs-lookup"><span data-stu-id="d1633-157">Parameters: ApplicationObject (ByValue)</span></span>
+### <span data-ttu-id="43b36-156">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication</span><span class="sxs-lookup"><span data-stu-id="43b36-156">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication</span></span>
+<span data-ttu-id="43b36-157">매개 변수: ApplicationObject(ByValue)</span><span class="sxs-lookup"><span data-stu-id="43b36-157">Parameters: ApplicationObject (ByValue)</span></span>
 
-## <span data-ttu-id="d1633-158">출력</span><span class="sxs-lookup"><span data-stu-id="d1633-158">OUTPUTS</span></span>
+## <span data-ttu-id="43b36-158">출력</span><span class="sxs-lookup"><span data-stu-id="43b36-158">OUTPUTS</span></span>
 
-### <span data-ttu-id="d1633-159">Microsoft.Azure.Graph.RBAC.Version1_6 ActiveDirectory Adserviceprincipal</span><span class="sxs-lookup"><span data-stu-id="d1633-159">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal</span></span>
+### <span data-ttu-id="43b36-159">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="43b36-159">Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal</span></span>
 
-## <span data-ttu-id="d1633-160">상속자</span><span class="sxs-lookup"><span data-stu-id="d1633-160">NOTES</span></span>
-<span data-ttu-id="d1633-161">키워드: azure, Az, arm, resource, 관리, 관리자, 리소스, 그룹, 서식 파일, 배포</span><span class="sxs-lookup"><span data-stu-id="d1633-161">Keywords: azure, Az, arm, resource, management, manager, resource, group, template, deployment</span></span>
+## <span data-ttu-id="43b36-160">참고 사항</span><span class="sxs-lookup"><span data-stu-id="43b36-160">NOTES</span></span>
+<span data-ttu-id="43b36-161">키워드: azure, Az, arm, 리소스, 관리, 관리자, 리소스, 그룹, 템플릿, 배포</span><span class="sxs-lookup"><span data-stu-id="43b36-161">Keywords: azure, Az, arm, resource, management, manager, resource, group, template, deployment</span></span>
 
-## <span data-ttu-id="d1633-162">관련 링크</span><span class="sxs-lookup"><span data-stu-id="d1633-162">RELATED LINKS</span></span>
+## <span data-ttu-id="43b36-162">관련 링크</span><span class="sxs-lookup"><span data-stu-id="43b36-162">RELATED LINKS</span></span>
 
-[<span data-ttu-id="d1633-163">새로운 AzADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="d1633-163">New-AzADServicePrincipal</span></span>](./New-AzADServicePrincipal.md)
+[<span data-ttu-id="43b36-163">New-AzADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="43b36-163">New-AzADServicePrincipal</span></span>](./New-AzADServicePrincipal.md)
 
-[<span data-ttu-id="d1633-164">Get-AzADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="d1633-164">Get-AzADServicePrincipal</span></span>](./Get-AzADServicePrincipal.md)
+[<span data-ttu-id="43b36-164">Get-AzADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="43b36-164">Get-AzADServicePrincipal</span></span>](./Get-AzADServicePrincipal.md)
 
-[<span data-ttu-id="d1633-165">Set-AzADServicePrincipal</span><span class="sxs-lookup"><span data-stu-id="d1633-165">Set-AzADServicePrincipal</span></span>](./Set-AzADServicePrincipal.md)
 
-[<span data-ttu-id="d1633-166">제거-AzADApplication</span><span class="sxs-lookup"><span data-stu-id="d1633-166">Remove-AzADApplication</span></span>](./Remove-AzADApplication.md)
+[<span data-ttu-id="43b36-165">Remove-AzADApplication</span><span class="sxs-lookup"><span data-stu-id="43b36-165">Remove-AzADApplication</span></span>](./Remove-AzADApplication.md)
 
-[<span data-ttu-id="d1633-167">제거-AzADAppCredential</span><span class="sxs-lookup"><span data-stu-id="d1633-167">Remove-AzADAppCredential</span></span>](./Remove-AzADAppCredential.md)
+[<span data-ttu-id="43b36-166">Remove-AzADAppCredential</span><span class="sxs-lookup"><span data-stu-id="43b36-166">Remove-AzADAppCredential</span></span>](./Remove-AzADAppCredential.md)
