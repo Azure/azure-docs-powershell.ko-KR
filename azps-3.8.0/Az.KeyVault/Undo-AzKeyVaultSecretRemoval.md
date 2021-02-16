@@ -5,40 +5,40 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/u
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Undo-AzKeyVaultSecretRemoval.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Undo-AzKeyVaultSecretRemoval.md
-ms.openlocfilehash: 1eca5a380dc71a5bd801c21bb7e7f556fcff0d35
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 9513cba1532ec70acb77cdf97d19de25db36434f
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "93878262"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100397937"
 ---
-# <span data-ttu-id="8897d-101">Undo-AzKeyVaultSecretRemoval</span><span class="sxs-lookup"><span data-stu-id="8897d-101">Undo-AzKeyVaultSecretRemoval</span></span>
+# <span data-ttu-id="0367d-101">Undo-AzKeyVaultSecretRemoval</span><span class="sxs-lookup"><span data-stu-id="0367d-101">Undo-AzKeyVaultSecretRemoval</span></span>
 
-## <span data-ttu-id="8897d-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="8897d-102">SYNOPSIS</span></span>
-<span data-ttu-id="8897d-103">키 자격 증명 모음에서 삭제 된 비밀을 활성 상태로 복구 합니다.</span><span class="sxs-lookup"><span data-stu-id="8897d-103">Recovers a deleted secret in a key vault into an active state.</span></span>
+## <span data-ttu-id="0367d-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="0367d-102">SYNOPSIS</span></span>
+<span data-ttu-id="0367d-103">키 자격 증명 모음에서 삭제된 비밀을 활성 상태로 복구합니다.</span><span class="sxs-lookup"><span data-stu-id="0367d-103">Recovers a deleted secret in a key vault into an active state.</span></span>
 
-## <span data-ttu-id="8897d-104">구문과</span><span class="sxs-lookup"><span data-stu-id="8897d-104">SYNTAX</span></span>
+## <span data-ttu-id="0367d-104">구문</span><span class="sxs-lookup"><span data-stu-id="0367d-104">SYNTAX</span></span>
 
-### <span data-ttu-id="8897d-105">기본값 (기본값)</span><span class="sxs-lookup"><span data-stu-id="8897d-105">Default (Default)</span></span>
+### <span data-ttu-id="0367d-105">기본값(기본값)</span><span class="sxs-lookup"><span data-stu-id="0367d-105">Default (Default)</span></span>
 ```
 Undo-AzKeyVaultSecretRemoval [-VaultName] <String> [-Name] <String> [-DefaultProfile <IAzureContextContainer>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="8897d-106">InputObject</span><span class="sxs-lookup"><span data-stu-id="8897d-106">InputObject</span></span>
+### <span data-ttu-id="0367d-106">InputObject</span><span class="sxs-lookup"><span data-stu-id="0367d-106">InputObject</span></span>
 ```
 Undo-AzKeyVaultSecretRemoval [-InputObject] <PSDeletedKeyVaultSecretIdentityItem>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="8897d-107">설명은</span><span class="sxs-lookup"><span data-stu-id="8897d-107">DESCRIPTION</span></span>
-<span data-ttu-id="8897d-108">**AzKeyVaultSecretRemoval** cmdlet은 이전에 삭제 된 비밀을 복구 합니다.</span><span class="sxs-lookup"><span data-stu-id="8897d-108">The **Undo-AzKeyVaultSecretRemoval** cmdlet will recover a previously deleted secret.</span></span>
-<span data-ttu-id="8897d-109">복구 된 비밀은 활성 상태가 되며, 모든 일반 비밀 작업에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8897d-109">The recovered secret will be active and can be used for all normal secret operations.</span></span>
-<span data-ttu-id="8897d-110">이 작업을 수행 하려면 호출자에 게 ' 복구 ' 권한이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8897d-110">Caller needs to have 'recover' permission in order to perform this operation.</span></span>
+## <span data-ttu-id="0367d-107">설명</span><span class="sxs-lookup"><span data-stu-id="0367d-107">DESCRIPTION</span></span>
+<span data-ttu-id="0367d-108">**Undo-AzKeyVaultSecretRemoval** cmdlet은 이전에 삭제된 비밀을 복구합니다.</span><span class="sxs-lookup"><span data-stu-id="0367d-108">The **Undo-AzKeyVaultSecretRemoval** cmdlet will recover a previously deleted secret.</span></span>
+<span data-ttu-id="0367d-109">복구된 비밀은 활성화됩니다. 모든 일반 비밀 작업에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0367d-109">The recovered secret will be active and can be used for all normal secret operations.</span></span>
+<span data-ttu-id="0367d-110">이 작업을 수행하려면 호출자에 '복구' 권한이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="0367d-110">Caller needs to have 'recover' permission in order to perform this operation.</span></span>
 
-## <span data-ttu-id="8897d-111">예제의</span><span class="sxs-lookup"><span data-stu-id="8897d-111">EXAMPLES</span></span>
+## <span data-ttu-id="0367d-111">예제</span><span class="sxs-lookup"><span data-stu-id="0367d-111">EXAMPLES</span></span>
 
-### <span data-ttu-id="8897d-112">예제 1</span><span class="sxs-lookup"><span data-stu-id="8897d-112">Example 1</span></span>
+### <span data-ttu-id="0367d-112">예제 1</span><span class="sxs-lookup"><span data-stu-id="0367d-112">Example 1</span></span>
 ```powershell
 PS C:\> Undo-AzKeyVaultSecretRemoval -VaultName 'MyKeyVault' -Name 'MySecret'
 
@@ -55,12 +55,12 @@ Content Type :
 Tags         :
 ```
 
-<span data-ttu-id="8897d-113">이 명령을 사용 하면 이전에 삭제 된 비밀 ' MySecret '가 활성 및 사용 가능한 상태로 복구 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8897d-113">This command will recover the secret 'MySecret' that was previously deleted, into an active and usable state.</span></span>
+<span data-ttu-id="0367d-113">이 명령은 이전에 삭제된 'MySecret' 비밀을 활성 및 사용 가능한 상태로 복구합니다.</span><span class="sxs-lookup"><span data-stu-id="0367d-113">This command will recover the secret 'MySecret' that was previously deleted, into an active and usable state.</span></span>
 
-## <span data-ttu-id="8897d-114">변수</span><span class="sxs-lookup"><span data-stu-id="8897d-114">PARAMETERS</span></span>
+## <span data-ttu-id="0367d-114">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="0367d-114">PARAMETERS</span></span>
 
-### <span data-ttu-id="8897d-115">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="8897d-115">-DefaultProfile</span></span>
-<span data-ttu-id="8897d-116">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독</span><span class="sxs-lookup"><span data-stu-id="8897d-116">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+### <span data-ttu-id="0367d-115">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="0367d-115">-DefaultProfile</span></span>
+<span data-ttu-id="0367d-116">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독</span><span class="sxs-lookup"><span data-stu-id="0367d-116">The credentials, account, tenant, and subscription used for communication with azure</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -74,8 +74,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8897d-117">-InputObject</span><span class="sxs-lookup"><span data-stu-id="8897d-117">-InputObject</span></span>
-<span data-ttu-id="8897d-118">비밀 개체 삭제 됨</span><span class="sxs-lookup"><span data-stu-id="8897d-118">Deleted secret object</span></span>
+### <span data-ttu-id="0367d-117">-InputObject</span><span class="sxs-lookup"><span data-stu-id="0367d-117">-InputObject</span></span>
+<span data-ttu-id="0367d-118">비밀 개체 삭제</span><span class="sxs-lookup"><span data-stu-id="0367d-118">Deleted secret object</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultSecretIdentityItem
@@ -89,9 +89,9 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8897d-119">-이름</span><span class="sxs-lookup"><span data-stu-id="8897d-119">-Name</span></span>
-<span data-ttu-id="8897d-120">비밀 이름.</span><span class="sxs-lookup"><span data-stu-id="8897d-120">Secret name.</span></span>
-<span data-ttu-id="8897d-121">Cmdlet은 자격 증명 정보, 현재 선택 된 환경 및 비밀 이름 으로부터 비밀의 FQDN을 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="8897d-121">Cmdlet constructs the FQDN of a secret from vault name, currently selected environment and secret name.</span></span>
+### <span data-ttu-id="0367d-119">-Name</span><span class="sxs-lookup"><span data-stu-id="0367d-119">-Name</span></span>
+<span data-ttu-id="0367d-120">비밀 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="0367d-120">Secret name.</span></span>
+<span data-ttu-id="0367d-121">Cmdlet은 자격 증명 모음 이름, 현재 선택한 환경 및 비밀 이름에서 비밀의 FQDN을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="0367d-121">Cmdlet constructs the FQDN of a secret from vault name, currently selected environment and secret name.</span></span>
 
 ```yaml
 Type: System.String
@@ -105,9 +105,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8897d-122">-VaultName</span><span class="sxs-lookup"><span data-stu-id="8897d-122">-VaultName</span></span>
-<span data-ttu-id="8897d-123">자격 증명 모음 이름</span><span class="sxs-lookup"><span data-stu-id="8897d-123">Vault name.</span></span>
-<span data-ttu-id="8897d-124">Cmdlet은 이름 및 현재 선택 된 환경을 기준으로 자격 증명 모음의 FQDN을 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="8897d-124">Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.</span></span>
+### <span data-ttu-id="0367d-122">-VaultName</span><span class="sxs-lookup"><span data-stu-id="0367d-122">-VaultName</span></span>
+<span data-ttu-id="0367d-123">자격 증명 모음 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="0367d-123">Vault name.</span></span>
+<span data-ttu-id="0367d-124">Cmdlet은 이름 및 현재 선택한 환경을 기반으로 자격 증명 모음의 FQDN을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="0367d-124">Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.</span></span>
 
 ```yaml
 Type: System.String
@@ -121,8 +121,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8897d-125">-확인</span><span class="sxs-lookup"><span data-stu-id="8897d-125">-Confirm</span></span>
-<span data-ttu-id="8897d-126">Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="8897d-126">Prompts you for confirmation before running the cmdlet.</span></span>
+### <span data-ttu-id="0367d-125">-Confirm</span><span class="sxs-lookup"><span data-stu-id="0367d-125">-Confirm</span></span>
+<span data-ttu-id="0367d-126">cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="0367d-126">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -136,9 +136,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8897d-127">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="8897d-127">-WhatIf</span></span>
-<span data-ttu-id="8897d-128">Cmdlet이 실행 되는 경우의 동작을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8897d-128">Shows what would happen if the cmdlet runs.</span></span>
-<span data-ttu-id="8897d-129">Cmdlet이 실행 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8897d-129">The cmdlet is not run.</span></span>
+### <span data-ttu-id="0367d-127">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="0367d-127">-WhatIf</span></span>
+<span data-ttu-id="0367d-128">cmdlet이 실행되는 경우의 결과 표시</span><span class="sxs-lookup"><span data-stu-id="0367d-128">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="0367d-129">cmdlet이 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0367d-129">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -152,23 +152,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8897d-130">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="8897d-130">CommonParameters</span></span>
-<span data-ttu-id="8897d-131">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="8897d-131">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="8897d-132">자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="8897d-132">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="0367d-130">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="0367d-130">CommonParameters</span></span>
+<span data-ttu-id="0367d-131">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="0367d-131">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="0367d-132">자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.</span><span class="sxs-lookup"><span data-stu-id="0367d-132">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="8897d-133">입력</span><span class="sxs-lookup"><span data-stu-id="8897d-133">INPUTS</span></span>
+## <span data-ttu-id="0367d-133">입력</span><span class="sxs-lookup"><span data-stu-id="0367d-133">INPUTS</span></span>
 
-### <span data-ttu-id="8897d-134">Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultSecretIdentityItem</span><span class="sxs-lookup"><span data-stu-id="8897d-134">Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultSecretIdentityItem</span></span>
+### <span data-ttu-id="0367d-134">Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultSecretIdentityItem</span><span class="sxs-lookup"><span data-stu-id="0367d-134">Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultSecretIdentityItem</span></span>
 
-## <span data-ttu-id="8897d-135">출력</span><span class="sxs-lookup"><span data-stu-id="8897d-135">OUTPUTS</span></span>
+## <span data-ttu-id="0367d-135">출력</span><span class="sxs-lookup"><span data-stu-id="0367d-135">OUTPUTS</span></span>
 
-### <span data-ttu-id="8897d-136">Microsoft. KeyVault. PSKeyVaultSecret</span><span class="sxs-lookup"><span data-stu-id="8897d-136">Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultSecret</span></span>
+### <span data-ttu-id="0367d-136">Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultSecret</span><span class="sxs-lookup"><span data-stu-id="0367d-136">Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultSecret</span></span>
 
-## <span data-ttu-id="8897d-137">상속자</span><span class="sxs-lookup"><span data-stu-id="8897d-137">NOTES</span></span>
+## <span data-ttu-id="0367d-137">참고 사항</span><span class="sxs-lookup"><span data-stu-id="0367d-137">NOTES</span></span>
 
-## <span data-ttu-id="8897d-138">관련 링크</span><span class="sxs-lookup"><span data-stu-id="8897d-138">RELATED LINKS</span></span>
+## <span data-ttu-id="0367d-138">관련 링크</span><span class="sxs-lookup"><span data-stu-id="0367d-138">RELATED LINKS</span></span>
 
-[<span data-ttu-id="8897d-139">제거-AzKeyVaultSecret</span><span class="sxs-lookup"><span data-stu-id="8897d-139">Remove-AzKeyVaultSecret</span></span>](./Remove-AzKeyVaultSecret.md)
+[<span data-ttu-id="0367d-139">Remove-AzKeyVaultSecret</span><span class="sxs-lookup"><span data-stu-id="0367d-139">Remove-AzKeyVaultSecret</span></span>](./Remove-AzKeyVaultSecret.md)
 
-[<span data-ttu-id="8897d-140">추가-AzKeyVaultSecret</span><span class="sxs-lookup"><span data-stu-id="8897d-140">Add-AzKeyVaultSecret</span></span>](./Add-AzKeyVaultSecret.md)
 
-[<span data-ttu-id="8897d-141">Get-AzKeyVaultSecret</span><span class="sxs-lookup"><span data-stu-id="8897d-141">Get-AzKeyVaultSecret</span></span>](./Get-AzKeyVaultSecret.md)
+[<span data-ttu-id="0367d-140">Get-AzKeyVaultSecret</span><span class="sxs-lookup"><span data-stu-id="0367d-140">Get-AzKeyVaultSecret</span></span>](./Get-AzKeyVaultSecret.md)
