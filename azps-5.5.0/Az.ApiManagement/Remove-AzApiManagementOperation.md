@@ -1,59 +1,52 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/remove-azapimanagementapirelease
+ms.assetid: A4A8D996-72A2-4154-98DA-5F84CAA010B9
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/remove-azapimanagementoperation
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementApiRelease.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementApiRelease.md
-ms.openlocfilehash: 9673df14bdd0f5b7d0e946170a155231e8c4e751
-ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementOperation.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementOperation.md
+ms.openlocfilehash: 153eb354ae8ba0f033a34010658b0d851572ddd6
+ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100412659"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100195353"
 ---
-# Remove-AzApiManagementApiRelease
+# Remove-AzApiManagementOperation
 
 ## SYNOPSIS
-특정 API 릴리스를 제거합니다.
+기존 작업을 제거합니다.
 
 ## 구문
 
-### ByApiReleaseId(기본값)
 ```
-Remove-AzApiManagementApiRelease -Context <PsApiManagementContext> -ApiId <String> -ReleaseId <String>
- [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByInputObject
-```
-Remove-AzApiManagementApiRelease -InputObject <PsApiManagementApiRelease> [-PassThru]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-AzApiManagementOperation -Context <PsApiManagementContext> -ApiId <String> [-ApiRevision <String>]
+ -OperationId <String> [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## 설명
-
-**Remove-AzAzureRmApiManagementApiRelease** cmdlet은 기존 API 릴리스를 제거합니다.
+**Remove-AzApiManagementOperation** cmdlet은 기존 작업을 제거합니다.
 
 ## 예제
 
-### 예제 1: API 릴리스 제거
+### 예제 1: 기존 API 작업 제거
 ```powershell
 PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
-PS C:\>Remove-AzAzureRmApiManagementApiRelease -Context $apimContext -ApiId "echo-api" -ReleaseId "2"
+PS C:\>Remove-AzApiManagementOperation -Context $apimContext -ApiId "0123456789" -OperationId "9876543210" -Force
 ```
 
-이 명령은 지정된 ApiId 및 ReleaseId를 사용하여 API 릴리스를 제거합니다.
+이 명령은 기존 API 작업을 제거합니다.
 
 ## PARAMETERS
 
 ### -ApiId
-API의 식별자입니다.
-이 매개 변수는 필수입니다.
+API의 식별자를 지정합니다.
 
 ```yaml
 Type: System.String
-Parameter Sets: ByApiReleaseId
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -63,13 +56,27 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ApiRevision
+API 개정의 식별자입니다. 이 매개 변수는 선택 사항입니다. 지정하지 않으면 현재 활성 API 개정에서 작업이 제거됩니다.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Context
-PsApiManagementContext의 인스턴스입니다.
-이 매개 변수는 필수입니다.
+**PsApiManagementContext의 인스턴스를 지정합니다.**
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-Parameter Sets: ByApiReleaseId
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -94,24 +101,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InputObject
-PsApiManagementApiRelease의 인스턴스입니다. 이 매개 변수는 필수입니다.
+### -OperationId
+API 작업의 식별자를 지정합니다.
 
 ```yaml
-Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiRelease
-Parameter Sets: ByInputObject
+Type: System.String
+Parameter Sets: (All)
 Aliases:
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
 ### -PassThru
-지정된 경우 작업이 성공하는 경우 true를 기록합니다.
-이 매개 변수는 선택 사항입니다.
+이 cmdlet이 성공하는 경우 $True 값이 반환되거나, 그렇지 않으면 $False 반환합니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -119,22 +125,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReleaseId
-API 릴리스의 식별자입니다.
-이 매개 변수는 필수입니다.
-
-```yaml
-Type: System.String
-Parameter Sets: ByApiReleaseId
-Aliases:
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -151,7 +141,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -167,7 +157,7 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -179,9 +169,9 @@ Accept wildcard characters: False
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 
-### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiRelease
-
 ### System.String
+
+### System.Management.Automation.SwitchParameter
 
 ## 출력
 
@@ -191,8 +181,10 @@ Accept wildcard characters: False
 
 ## 관련 링크
 
-[Get-AzApiManagementApiRelease](./Get-AzApiManagementApiRelease.md)
+[Get-AzApiManagementOperation](./Get-AzApiManagementOperation.md)
 
-[New-AzApiManagementApiRelease](./New-AzApiManagementApiRelease.md)
+[New-AzApiManagementOperation](./New-AzApiManagementOperation.md)
 
-[Update-AzApiManagementApiRelease](./Update-AzApiManagementApiRelease.md)
+[Set-AzApiManagementOperation](./Set-AzApiManagementOperation.md)
+
+

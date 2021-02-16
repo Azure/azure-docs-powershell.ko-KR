@@ -1,59 +1,52 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/remove-azapimanagementapirelease
+ms.assetid: 9B261CD8-5209-4C14-A6F8-97D61B641642
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/remove-azapimanagementcertificate
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementApiRelease.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementApiRelease.md
-ms.openlocfilehash: 9673df14bdd0f5b7d0e946170a155231e8c4e751
-ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementCertificate.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementCertificate.md
+ms.openlocfilehash: ab1623addbb415b1aa2f6a104904629d94b518d6
+ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100412659"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100195356"
 ---
-# Remove-AzApiManagementApiRelease
+# Remove-AzApiManagementCertificate
 
 ## SYNOPSIS
-특정 API 릴리스를 제거합니다.
+API Management 인증서를 제거합니다.
 
 ## 구문
 
-### ByApiReleaseId(기본값)
 ```
-Remove-AzApiManagementApiRelease -Context <PsApiManagementContext> -ApiId <String> -ReleaseId <String>
- [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByInputObject
-```
-Remove-AzApiManagementApiRelease -InputObject <PsApiManagementApiRelease> [-PassThru]
+Remove-AzApiManagementCertificate -Context <PsApiManagementContext> -CertificateId <String> [-PassThru]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## 설명
-
-**Remove-AzAzureRmApiManagementApiRelease** cmdlet은 기존 API 릴리스를 제거합니다.
+**Remove-AzApiManagementCertificate** cmdlet은 Azure API Management 인증서를 제거합니다.
 
 ## 예제
 
-### 예제 1: API 릴리스 제거
+### 예제 1: 인증서 제거
 ```powershell
 PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
-PS C:\>Remove-AzAzureRmApiManagementApiRelease -Context $apimContext -ApiId "echo-api" -ReleaseId "2"
+PS C:\>Remove-AzApiManagementCertificate -Context $ApiMgmtContext -CertificateId "0123456789" -Force
 ```
 
-이 명령은 지정된 ApiId 및 ReleaseId를 사용하여 API 릴리스를 제거합니다.
+이 명령은 지정된 API Management 인증서를 제거합니다.
+Force *매개* 변수가 지정되어 있기 때문에 확인이 필요하지 않습니다.
 
 ## PARAMETERS
 
-### -ApiId
-API의 식별자입니다.
-이 매개 변수는 필수입니다.
+### -CertificateId
+제거할 인증서의 ID를 지정합니다.
 
 ```yaml
 Type: System.String
-Parameter Sets: ByApiReleaseId
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -64,12 +57,11 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-PsApiManagementContext의 인스턴스입니다.
-이 매개 변수는 필수입니다.
+**PsApiManagementContext 개체를 지정합니다.**
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-Parameter Sets: ByApiReleaseId
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -94,24 +86,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InputObject
-PsApiManagementApiRelease의 인스턴스입니다. 이 매개 변수는 필수입니다.
-
-```yaml
-Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiRelease
-Parameter Sets: ByInputObject
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -PassThru
-지정된 경우 작업이 성공하는 경우 true를 기록합니다.
-이 매개 변수는 선택 사항입니다.
+passthru
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -119,22 +95,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReleaseId
-API 릴리스의 식별자입니다.
-이 매개 변수는 필수입니다.
-
-```yaml
-Type: System.String
-Parameter Sets: ByApiReleaseId
-Aliases:
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -151,7 +111,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -167,7 +127,7 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -179,9 +139,9 @@ Accept wildcard characters: False
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 
-### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiRelease
-
 ### System.String
+
+### System.Management.Automation.SwitchParameter
 
 ## 출력
 
@@ -191,8 +151,10 @@ Accept wildcard characters: False
 
 ## 관련 링크
 
-[Get-AzApiManagementApiRelease](./Get-AzApiManagementApiRelease.md)
+[Get-AzApiManagementCertificate](./Get-AzApiManagementCertificate.md)
 
-[New-AzApiManagementApiRelease](./New-AzApiManagementApiRelease.md)
+[New-AzApiManagementCertificate](./New-AzApiManagementCertificate.md)
 
-[Update-AzApiManagementApiRelease](./Update-AzApiManagementApiRelease.md)
+[Set-AzApiManagementCertificate](./Set-AzApiManagementCertificate.md)
+
+
