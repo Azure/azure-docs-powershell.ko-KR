@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzAlertHistory.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzAlertHistory.md
-ms.openlocfilehash: 666d63d6b40e6b031d3439adde8f3f843c3cdd93
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: 762b0540c9e6483aebbc58bbe9fe71701fb390fa
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100203511"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398515"
 ---
 # Get-AzAlertHistory
 
@@ -350,7 +350,7 @@ Accept wildcard characters: False
 
 ### -StartTime
 로컬 시간으로 쿼리의 시작 시간을 지정합니다.
-기본값은 현재 현지 시간에서 1시간을 -1로 합니다.
+기본값은 현재 현지 시간에서 1시간을 -1로 입니다.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -398,7 +398,6 @@ Accept wildcard characters: False
 
 ## 관련 링크
 
-[Add-AzLogAlertRule](./Add-AzLogAlertRule.md)
 
 [Add-AzMetricAlertRule](./Add-AzMetricAlertRule.md)
 
