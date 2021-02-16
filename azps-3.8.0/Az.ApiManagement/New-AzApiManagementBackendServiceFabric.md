@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementBackendServiceFabric.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementBackendServiceFabric.md
-ms.openlocfilehash: ced4c9708d2ac7f82144e1965beb36a250bbe369
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 352e40aa64adf5eea98950ac9271f0237e634ab6
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94042247"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398141"
 ---
 # New-AzApiManagementBackendServiceFabric
 
 ## SYNOPSIS
-의 개체를 만듭니다. `PsApiManagementServiceFabric`
+다음의 개체를 만듭니다. `PsApiManagementServiceFabric`
 
-## 구문과
+## 구문
 
 ```
 New-AzApiManagementBackendServiceFabric -ManagementEndpoint <String[]> -ClientCertificateThumbprint <String>
@@ -25,13 +25,13 @@ New-AzApiManagementBackendServiceFabric -ManagementEndpoint <String[]> -ClientCe
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## 설명은
+## 설명
 
-**AzApiManagementBackendServiceFabric** cmdlet은 `PsApiManagementServiceFabric` Cmdlet **New-AzApiManagementBackend** 및 **Set-AzApiManagementBackend** 에 사용할 개체를 만듭니다.
+**New-AzApiManagementBackendServiceFabric** `PsApiManagementServiceFabric` cmdlet은 **New-AzApiManagementBackend** 및 **Set-AzApiManagementBackend** cmdlet에 사용할 개체를 만듭니다.
 
-## 예제의
+## 예제
 
-### 예제 1: 백엔드 서비스 패브릭 In-Memory 개체 만들기
+### 예제 1: 백end Service Fabric 개체 In-Memory 만들기
 ```powershell
 PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
 PS C:\>$ManagementEndpoints = 'https://sfbackend-01.net:443', 'https://sfbackend-02.net:443'
@@ -41,12 +41,12 @@ PS C:\>$serviceFabric = New-AzApiManagementBackendServiceFabric -ManagementEndpo
 PS C:\>$backend = New-AzApiManagementBackend -Context  $apimContext -BackendId 123 -Url 'https://contoso.com/awesomeapi' -Protocol http -ServiceFabricCluster $serviceFabric -Description "service fabric backend" -PassThru
 ```
 
-백 엔드 서비스 패브릭 계약을 만듭니다.
+백end Service Fabric 계약을 만듭니다.
 
-## 변수
+## PARAMETERS
 
 ### -ClientCertificateThumbprint
-관리 끝점에 대 한 클라이언트 인증서 지문입니다.
+관리 엔드포인트에 대한 클라이언트 인증서 지문입니다.
 이 매개 변수는 필수입니다.
 
 ```yaml
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagementEndpoint
-서비스 패브릭 클러스터 관리 끝점입니다.
+Service Fabric 클러스터 관리 엔드포인트입니다.
 이 매개 변수는 필수입니다.
 
 ```yaml
@@ -93,8 +93,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPartitionResolutionRetry
-서비스 패브릭 파티션을 확인할 때 최대 다시 시도 횟수입니다.
-이 매개 변수는 선택 사항이 며 기본값은 5입니다.
+Service Fabric 파티션을 만들 때 최대 재시도 횟수입니다.
+이 매개 변수는 선택 사항이며 기본값은 5입니다.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerCertificateThumbprint
-클러스터 관리 서비스에서 tls 통신에 사용 하는 인증서의 지문입니다. 이 매개 변수는 선택 사항입니다.
+TLS 통신에 사용하는 인증서 클러스터 관리 서비스의 지문입니다. 이 매개 변수는 선택 사항입니다.
 
 ```yaml
 Type: System.String[]
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerX509Name
-서버 X509 인증서 이름 컬렉션
+서버 X509 인증서 이름 컬렉션입니다.
 이 매개 변수는 선택 사항입니다.
 
 ```yaml
@@ -140,26 +140,26 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
-### System. 문자열
+### System.String
 
 ## 출력
 
-### ApiManagement. ServiceManagement. \ PsApiManagementServiceFabric
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementServiceFabric
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
-[Get-AzApiManagementBackend](./Get-AzApiManagementBackend)
+[Get-AzApiManagementBackend](./Get-AzApiManagementBackend.md)
 
-[새로운 AzApiManagementBackend](./New-AzApiManagementBackend.md)
+[New-AzApiManagementBackend](./New-AzApiManagementBackend.md)
 
-[새로운 AzApiManagementBackendProxy](./New-AzApiManagementBackendProxy.md)
+[New-AzApiManagementBackendProxy](./New-AzApiManagementBackendProxy.md)
 
 [Set-AzApiManagementBackend](./Set-AzApiManagementBackend.md)
 
-[제거-AzApiManagementBackend](./Remove-AzApiManagementBackend.md)
+[Remove-AzApiManagementBackend](./Remove-AzApiManagementBackend.md)

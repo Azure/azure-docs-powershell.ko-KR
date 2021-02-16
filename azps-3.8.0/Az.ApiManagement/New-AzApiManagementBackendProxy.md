@@ -5,31 +5,31 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementBackendProxy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementBackendProxy.md
-ms.openlocfilehash: d7afe10975003dcc8c82156d03adc1aa022b505c
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: d7757e277c6465622279937f72c45a1bec07684a
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94042248"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398158"
 ---
 # New-AzApiManagementBackendProxy
 
 ## SYNOPSIS
-새 백 엔드 프록시 개체를 만듭니다.
+새 백end 프록시 개체를 만듭니다.
 
-## 구문과
+## 구문
 
 ```
 New-AzApiManagementBackendProxy -Url <String> [-ProxyCredential <PSCredential>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## 설명은
-새 백엔드 엔터티를 만들 때 파이프 될 수 있는 새 백 엔드 프록시 개체를 만듭니다.
+## 설명
+새 백end 엔터티를 만들 때 파이프할 수 있는 새 백 엔드 프록시 개체를 만듭니다.
 
-## 예제의
+## 예제
 
-### 백 엔드 프록시 In-Memory 개체 만들기
+### 백end 프록시 In-Memory 개체 만들기
 ```powershell
 PS C:\>$secpassword = ConvertTo-SecureString "PlainTextPassword" -AsPlainText -Force
 PS C:\>$proxyCreds = New-Object System.Management.Automation.PSCredential ("foo", $secpassword)
@@ -40,12 +40,12 @@ PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default
 PS C:\>$backend = New-AzApiManagementBackend -Context  $apimContext -BackendId 123 -Url 'https://contoso.com/awesomeapi' -Protocol http -Title "first backend" -SkipCertificateChainValidation $true -Proxy $credential -Description "backend with proxy server"
 ```
 
-백 엔드 프록시 개체를 만들고 백 엔드를 설정 합니다.
+백end 프록시 개체를 만들고 백end를 설정
 
-## 변수
+## PARAMETERS
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyCredential
-백엔드 프록시에 연결 하는 데 사용 되는 자격 증명 이 매개 변수는 선택 사항입니다.
+백end 프록시에 연결하는 데 사용되는 자격 증명입니다. 이 매개 변수는 선택 사항입니다.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Url
-전화를 백 엔드로 착신 이동할 때 사용할 프록시 서버의 Url입니다.
+백end에 호출을 전달할 때 사용할 프록시 서버의 URL입니다.
 이 매개 변수는 필수입니다.
 
 ```yaml
@@ -91,26 +91,26 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
-### 않아야
+### 없음
 
 ## 출력
 
-### ApiManagement. ServiceManagement. \ PsApiManagementBackendProxy
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackendProxy
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
-[Get-AzApiManagementBackend](./Get-AzApiManagementBackend)
+[Get-AzApiManagementBackend](./Get-AzApiManagementBackend.md)
 
-[새로운 AzApiManagementBackend](./New-AzApiManagementBackend.md)
+[New-AzApiManagementBackend](./New-AzApiManagementBackend.md)
 
-[새로운 AzApiManagementBackendCredential](./New-AzApiManagementBackendCredential.md)
+[New-AzApiManagementBackendCredential](./New-AzApiManagementBackendCredential.md)
 
 [Set-AzApiManagementBackend](./Set-AzApiManagementBackend.md)
 
-[제거-AzApiManagementBackend](./Remove-AzApiManagementBackend.md)
+[Remove-AzApiManagementBackend](./Remove-AzApiManagementBackend.md)
