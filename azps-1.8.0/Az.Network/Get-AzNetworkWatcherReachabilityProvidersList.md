@@ -5,53 +5,53 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNetworkWatcherReachabilityProvidersList.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNetworkWatcherReachabilityProvidersList.md
-ms.openlocfilehash: cf35292be5005a957e245370a5b15b78bb7d4fa6
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 227bd70bd67ff29015223becc6788f5043ae4776
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93700519"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100400317"
 ---
-# <span data-ttu-id="4623d-101">Get-AzNetworkWatcherReachabilityProvidersList</span><span class="sxs-lookup"><span data-stu-id="4623d-101">Get-AzNetworkWatcherReachabilityProvidersList</span></span>
+# <span data-ttu-id="667bb-101">Get-AzNetworkWatcherReachabilityProvidersList</span><span class="sxs-lookup"><span data-stu-id="667bb-101">Get-AzNetworkWatcherReachabilityProvidersList</span></span>
 
-## <span data-ttu-id="4623d-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="4623d-102">SYNOPSIS</span></span>
-<span data-ttu-id="4623d-103">지정 된 Azure 지역에 대해 사용 가능한 모든 인터넷 서비스 공급자를 나열 합니다.</span><span class="sxs-lookup"><span data-stu-id="4623d-103">Lists all available internet service providers for a specified Azure region.</span></span>
+## <span data-ttu-id="667bb-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="667bb-102">SYNOPSIS</span></span>
+<span data-ttu-id="667bb-103">지정된 Azure 지역에 사용 가능한 모든 인터넷 서비스 공급자를 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="667bb-103">Lists all available internet service providers for a specified Azure region.</span></span>
 
-## <span data-ttu-id="4623d-104">구문과</span><span class="sxs-lookup"><span data-stu-id="4623d-104">SYNTAX</span></span>
+## <span data-ttu-id="667bb-104">구문</span><span class="sxs-lookup"><span data-stu-id="667bb-104">SYNTAX</span></span>
 
-### <span data-ttu-id="4623d-105">SetByName (기본값)</span><span class="sxs-lookup"><span data-stu-id="4623d-105">SetByName (Default)</span></span>
+### <span data-ttu-id="667bb-105">SetByName(기본값)</span><span class="sxs-lookup"><span data-stu-id="667bb-105">SetByName (Default)</span></span>
 ```
 Get-AzNetworkWatcherReachabilityProvidersList -NetworkWatcherName <String> -ResourceGroupName <String>
  [-Location <String[]>] [-Country <String>] [-State <String>] [-City <String>] [-AsJob]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="4623d-106">SetByResource</span><span class="sxs-lookup"><span data-stu-id="4623d-106">SetByResource</span></span>
+### <span data-ttu-id="667bb-106">SetByResource</span><span class="sxs-lookup"><span data-stu-id="667bb-106">SetByResource</span></span>
 ```
 Get-AzNetworkWatcherReachabilityProvidersList -NetworkWatcher <PSNetworkWatcher> [-Location <String[]>]
  [-Country <String>] [-State <String>] [-City <String>] [-AsJob] [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
 ```
 
-### <span data-ttu-id="4623d-107">SetByLocation</span><span class="sxs-lookup"><span data-stu-id="4623d-107">SetByLocation</span></span>
+### <span data-ttu-id="667bb-107">SetByLocation</span><span class="sxs-lookup"><span data-stu-id="667bb-107">SetByLocation</span></span>
 ```
 Get-AzNetworkWatcherReachabilityProvidersList -NetworkWatcherLocation <String> [-Location <String[]>]
  [-Country <String>] [-State <String>] [-City <String>] [-AsJob] [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
 ```
 
-### <span data-ttu-id="4623d-108">SetByResourceId</span><span class="sxs-lookup"><span data-stu-id="4623d-108">SetByResourceId</span></span>
+### <span data-ttu-id="667bb-108">SetByResourceId</span><span class="sxs-lookup"><span data-stu-id="667bb-108">SetByResourceId</span></span>
 ```
 Get-AzNetworkWatcherReachabilityProvidersList -ResourceId <String> [-Location <String[]>] [-Country <String>]
  [-State <String>] [-City <String>] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="4623d-109">설명은</span><span class="sxs-lookup"><span data-stu-id="4623d-109">DESCRIPTION</span></span>
-<span data-ttu-id="4623d-110">Get-AzNetworkWatcherReachabilityProvidersList에는 지정 된 Azure 지역에 대해 사용 가능한 모든 인터넷 서비스 공급자가 나열 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4623d-110">The Get-AzNetworkWatcherReachabilityProvidersList lists all available internet service providers for a specified Azure region.</span></span>
+## <span data-ttu-id="667bb-109">설명</span><span class="sxs-lookup"><span data-stu-id="667bb-109">DESCRIPTION</span></span>
+<span data-ttu-id="667bb-110">이 Get-AzNetworkWatcherReachabilityProvidersList 지정된 Azure 지역에 사용 가능한 모든 인터넷 서비스 공급자를 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="667bb-110">The Get-AzNetworkWatcherReachabilityProvidersList lists all available internet service providers for a specified Azure region.</span></span>
 
-## <span data-ttu-id="4623d-111">예제의</span><span class="sxs-lookup"><span data-stu-id="4623d-111">EXAMPLES</span></span>
+## <span data-ttu-id="667bb-111">예제</span><span class="sxs-lookup"><span data-stu-id="667bb-111">EXAMPLES</span></span>
 
-### <span data-ttu-id="4623d-112">예제 1</span><span class="sxs-lookup"><span data-stu-id="4623d-112">Example 1</span></span>
+### <span data-ttu-id="667bb-112">예제 1</span><span class="sxs-lookup"><span data-stu-id="667bb-112">Example 1</span></span>
 ```
 PS C:\> $nw = Get-AzNetworkWatcher -Name NetworkWatcher -ResourceGroupName NetworkWatcherRG
 PS C:\> Get-AzNetworkWatcherReachabilityProvidersList -NetworkWatcher $nw -Location "West US" -Country "United States" -State "washington" -City "seattle"
@@ -79,12 +79,12 @@ PS C:\> Get-AzNetworkWatcherReachabilityProvidersList -NetworkWatcher $nw -Locat
 ]
 ```
 
-<span data-ttu-id="4623d-113">미국 내에서 Azure Data Center에 대해 시애틀에 있는 사용 가능한 모든 공급자 목록을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="4623d-113">Lists all available providers in Seattle, WA for Azure Data Center in West US.</span></span>
+<span data-ttu-id="667bb-113">미국 서부의 Azure 데이터 센터용 시애틀, WA에서 사용 가능한 모든 공급자를 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="667bb-113">Lists all available providers in Seattle, WA for Azure Data Center in West US.</span></span>
 
-## <span data-ttu-id="4623d-114">변수</span><span class="sxs-lookup"><span data-stu-id="4623d-114">PARAMETERS</span></span>
+## <span data-ttu-id="667bb-114">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="667bb-114">PARAMETERS</span></span>
 
-### <span data-ttu-id="4623d-115">-AsJob</span><span class="sxs-lookup"><span data-stu-id="4623d-115">-AsJob</span></span>
-<span data-ttu-id="4623d-116">백그라운드에서 cmdlet 실행</span><span class="sxs-lookup"><span data-stu-id="4623d-116">Run cmdlet in the background</span></span>
+### <span data-ttu-id="667bb-115">-AsJob</span><span class="sxs-lookup"><span data-stu-id="667bb-115">-AsJob</span></span>
+<span data-ttu-id="667bb-116">백그라운드에서 cmdlet 실행</span><span class="sxs-lookup"><span data-stu-id="667bb-116">Run cmdlet in the background</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -98,8 +98,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4623d-117">-구/군/시</span><span class="sxs-lookup"><span data-stu-id="4623d-117">-City</span></span>
-<span data-ttu-id="4623d-118">구/군/시의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="4623d-118">The name of the city.</span></span>
+### <span data-ttu-id="667bb-117">-City</span><span class="sxs-lookup"><span data-stu-id="667bb-117">-City</span></span>
+<span data-ttu-id="667bb-118">도시 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="667bb-118">The name of the city.</span></span>
 
 ```yaml
 Type: System.String
@@ -113,8 +113,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4623d-119">-국가</span><span class="sxs-lookup"><span data-stu-id="4623d-119">-Country</span></span>
-<span data-ttu-id="4623d-120">국가의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="4623d-120">The name of the country.</span></span>
+### <span data-ttu-id="667bb-119">-Country</span><span class="sxs-lookup"><span data-stu-id="667bb-119">-Country</span></span>
+<span data-ttu-id="667bb-120">국가 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="667bb-120">The name of the country.</span></span>
 
 ```yaml
 Type: System.String
@@ -128,8 +128,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4623d-121">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="4623d-121">-DefaultProfile</span></span>
-<span data-ttu-id="4623d-122">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="4623d-122">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+### <span data-ttu-id="667bb-121">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="667bb-121">-DefaultProfile</span></span>
+<span data-ttu-id="667bb-122">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="667bb-122">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -143,8 +143,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4623d-123">-위치</span><span class="sxs-lookup"><span data-stu-id="4623d-123">-Location</span></span>
-<span data-ttu-id="4623d-124">쿼리 범위를 지정 하는 선택적 Azure 지역입니다.</span><span class="sxs-lookup"><span data-stu-id="4623d-124">Optional Azure regions to scope the query to.</span></span>
+### <span data-ttu-id="667bb-123">-Location</span><span class="sxs-lookup"><span data-stu-id="667bb-123">-Location</span></span>
+<span data-ttu-id="667bb-124">쿼리 범위를 지정하는 선택적 Azure 지역입니다.</span><span class="sxs-lookup"><span data-stu-id="667bb-124">Optional Azure regions to scope the query to.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -158,8 +158,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4623d-125">-NetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="4623d-125">-NetworkWatcher</span></span>
-<span data-ttu-id="4623d-126">네트워크 감시자 리소스.</span><span class="sxs-lookup"><span data-stu-id="4623d-126">The network watcher resource.</span></span>
+### <span data-ttu-id="667bb-125">-NetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="667bb-125">-NetworkWatcher</span></span>
+<span data-ttu-id="667bb-126">네트워크 감시자 리소스입니다.</span><span class="sxs-lookup"><span data-stu-id="667bb-126">The network watcher resource.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
@@ -173,8 +173,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4623d-127">-NetworkWatcherLocation</span><span class="sxs-lookup"><span data-stu-id="4623d-127">-NetworkWatcherLocation</span></span>
-<span data-ttu-id="4623d-128">네트워크 감시자의 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="4623d-128">Location of the network watcher.</span></span>
+### <span data-ttu-id="667bb-127">-NetworkWatcherLocation</span><span class="sxs-lookup"><span data-stu-id="667bb-127">-NetworkWatcherLocation</span></span>
+<span data-ttu-id="667bb-128">네트워크 감시자 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="667bb-128">Location of the network watcher.</span></span>
 
 ```yaml
 Type: System.String
@@ -188,8 +188,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4623d-129">-NetworkWatcherName</span><span class="sxs-lookup"><span data-stu-id="4623d-129">-NetworkWatcherName</span></span>
-<span data-ttu-id="4623d-130">네트워크 감시자의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="4623d-130">The name of network watcher.</span></span>
+### <span data-ttu-id="667bb-129">-NetworkWatcherName</span><span class="sxs-lookup"><span data-stu-id="667bb-129">-NetworkWatcherName</span></span>
+<span data-ttu-id="667bb-130">Network Watcher의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="667bb-130">The name of network watcher.</span></span>
 
 ```yaml
 Type: System.String
@@ -203,8 +203,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4623d-131">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="4623d-131">-ResourceGroupName</span></span>
-<span data-ttu-id="4623d-132">네트워크 감시자 리소스 그룹의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="4623d-132">The name of the network watcher resource group.</span></span>
+### <span data-ttu-id="667bb-131">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="667bb-131">-ResourceGroupName</span></span>
+<span data-ttu-id="667bb-132">Network Watcher 리소스 그룹의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="667bb-132">The name of the network watcher resource group.</span></span>
 
 ```yaml
 Type: System.String
@@ -218,8 +218,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4623d-133">-ResourceId</span><span class="sxs-lookup"><span data-stu-id="4623d-133">-ResourceId</span></span>
-<span data-ttu-id="4623d-134">네트워크 감시자 리소스의 Id입니다.</span><span class="sxs-lookup"><span data-stu-id="4623d-134">The Id of network watcher resource.</span></span>
+### <span data-ttu-id="667bb-133">-ResourceId</span><span class="sxs-lookup"><span data-stu-id="667bb-133">-ResourceId</span></span>
+<span data-ttu-id="667bb-134">Network Watcher 리소스의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="667bb-134">The Id of network watcher resource.</span></span>
 
 ```yaml
 Type: System.String
@@ -233,8 +233,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4623d-135">-상태</span><span class="sxs-lookup"><span data-stu-id="4623d-135">-State</span></span>
-<span data-ttu-id="4623d-136">상태의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="4623d-136">The name of the state.</span></span>
+### <span data-ttu-id="667bb-135">-State</span><span class="sxs-lookup"><span data-stu-id="667bb-135">-State</span></span>
+<span data-ttu-id="667bb-136">상태의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="667bb-136">The name of the state.</span></span>
 
 ```yaml
 Type: System.String
@@ -248,74 +248,74 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4623d-137">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="4623d-137">CommonParameters</span></span>
-<span data-ttu-id="4623d-138">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="4623d-138">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="4623d-139">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="4623d-139">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="667bb-137">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="667bb-137">CommonParameters</span></span>
+<span data-ttu-id="667bb-138">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="667bb-138">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="667bb-139">자세한 내용은 [다음](https://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.</span><span class="sxs-lookup"><span data-stu-id="667bb-139">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="4623d-140">입력</span><span class="sxs-lookup"><span data-stu-id="4623d-140">INPUTS</span></span>
+## <span data-ttu-id="667bb-140">입력</span><span class="sxs-lookup"><span data-stu-id="667bb-140">INPUTS</span></span>
 
-### <span data-ttu-id="4623d-141">Microsoft. 네트워크 모델. PSNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="4623d-141">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher</span></span>
+### <span data-ttu-id="667bb-141">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="667bb-141">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher</span></span>
 
-### <span data-ttu-id="4623d-142">System. 문자열</span><span class="sxs-lookup"><span data-stu-id="4623d-142">System.String</span></span>
+### <span data-ttu-id="667bb-142">System.String</span><span class="sxs-lookup"><span data-stu-id="667bb-142">System.String</span></span>
 
-## <span data-ttu-id="4623d-143">출력</span><span class="sxs-lookup"><span data-stu-id="4623d-143">OUTPUTS</span></span>
+## <span data-ttu-id="667bb-143">출력</span><span class="sxs-lookup"><span data-stu-id="667bb-143">OUTPUTS</span></span>
 
-### <span data-ttu-id="4623d-144">PSAvailableProvidersList에 대 한.</span><span class="sxs-lookup"><span data-stu-id="4623d-144">Microsoft.Azure.Commands.Network.Models.PSAvailableProvidersList</span></span>
+### <span data-ttu-id="667bb-144">Microsoft.Azure.Commands.Network.Models.PSAvailableProvidersList</span><span class="sxs-lookup"><span data-stu-id="667bb-144">Microsoft.Azure.Commands.Network.Models.PSAvailableProvidersList</span></span>
 
-## <span data-ttu-id="4623d-145">상속자</span><span class="sxs-lookup"><span data-stu-id="4623d-145">NOTES</span></span>
-<span data-ttu-id="4623d-146">키워드: azure, azurerm, arm, resource, 관리, 관리자, 네트워크, 네트워킹, 네트워크 감시자, next, 홉</span><span class="sxs-lookup"><span data-stu-id="4623d-146">Keywords: azure, azurerm, arm, resource, management, manager, network, networking, network watcher, next, hop</span></span> 
+## <span data-ttu-id="667bb-145">참고 사항</span><span class="sxs-lookup"><span data-stu-id="667bb-145">NOTES</span></span>
+<span data-ttu-id="667bb-146">키워드: azure, azurerm, arm, 리소스, 관리, 관리자, 네트워크, 네트워킹, 네트워크 감시자, 다음, 홉</span><span class="sxs-lookup"><span data-stu-id="667bb-146">Keywords: azure, azurerm, arm, resource, management, manager, network, networking, network watcher, next, hop</span></span> 
 
-## <span data-ttu-id="4623d-147">관련 링크</span><span class="sxs-lookup"><span data-stu-id="4623d-147">RELATED LINKS</span></span>
+## <span data-ttu-id="667bb-147">관련 링크</span><span class="sxs-lookup"><span data-stu-id="667bb-147">RELATED LINKS</span></span>
 
-[<span data-ttu-id="4623d-148">새로운 AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="4623d-148">New-AzNetworkWatcher</span></span>](./New-AzNetworkWatcher.md)
+[<span data-ttu-id="667bb-148">New-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="667bb-148">New-AzNetworkWatcher</span></span>](./New-AzNetworkWatcher.md)
 
-[<span data-ttu-id="4623d-149">Get-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="4623d-149">Get-AzNetworkWatcher</span></span>](./Get-AzNetworkWatcher.md)
+[<span data-ttu-id="667bb-149">Get-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="667bb-149">Get-AzNetworkWatcher</span></span>](./Get-AzNetworkWatcher.md)
 
-[<span data-ttu-id="4623d-150">제거-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="4623d-150">Remove-AzNetworkWatcher</span></span>](./Remove-AzNetworkWatcher.md)
+[<span data-ttu-id="667bb-150">Remove-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="667bb-150">Remove-AzNetworkWatcher</span></span>](./Remove-AzNetworkWatcher.md)
 
-[<span data-ttu-id="4623d-151">Get-AzNetworkWatcherNextHop</span><span class="sxs-lookup"><span data-stu-id="4623d-151">Get-AzNetworkWatcherNextHop</span></span>](./Get-AzNetworkWatcherNextHop.md)
+[<span data-ttu-id="667bb-151">Get-AzNetworkWatcherNextHop</span><span class="sxs-lookup"><span data-stu-id="667bb-151">Get-AzNetworkWatcherNextHop</span></span>](./Get-AzNetworkWatcherNextHop.md)
 
-[<span data-ttu-id="4623d-152">Get-AzNetworkWatcherSecurityGroupView</span><span class="sxs-lookup"><span data-stu-id="4623d-152">Get-AzNetworkWatcherSecurityGroupView</span></span>](./Get-AzNetworkWatcherSecurityGroupView.md)
+[<span data-ttu-id="667bb-152">Get-AzNetworkWatcherSecurityGroupView</span><span class="sxs-lookup"><span data-stu-id="667bb-152">Get-AzNetworkWatcherSecurityGroupView</span></span>](./Get-AzNetworkWatcherSecurityGroupView.md)
 
-[<span data-ttu-id="4623d-153">Get-AzNetworkWatcherTopology</span><span class="sxs-lookup"><span data-stu-id="4623d-153">Get-AzNetworkWatcherTopology</span></span>](./Get-AzNetworkWatcherTopology.md)
+[<span data-ttu-id="667bb-153">Get-AzNetworkWatcherTopology</span><span class="sxs-lookup"><span data-stu-id="667bb-153">Get-AzNetworkWatcherTopology</span></span>](./Get-AzNetworkWatcherTopology.md)
 
-[<span data-ttu-id="4623d-154">시작-AzNetworkWatcherResourceTroubleshooting</span><span class="sxs-lookup"><span data-stu-id="4623d-154">Start-AzNetworkWatcherResourceTroubleshooting</span></span>](./Start-AzNetworkWatcherResourceTroubleshooting.md)
+[<span data-ttu-id="667bb-154">Start-AzNetworkWatcherResourceTroubleshooting</span><span class="sxs-lookup"><span data-stu-id="667bb-154">Start-AzNetworkWatcherResourceTroubleshooting</span></span>](./Start-AzNetworkWatcherResourceTroubleshooting.md)
 
-[<span data-ttu-id="4623d-155">새로운 AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="4623d-155">New-AzNetworkWatcherPacketCapture</span></span>](./New-AzNetworkWatcherPacketCapture.md)
+[<span data-ttu-id="667bb-155">New-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="667bb-155">New-AzNetworkWatcherPacketCapture</span></span>](./New-AzNetworkWatcherPacketCapture.md)
 
-[<span data-ttu-id="4623d-156">새로운 AzPacketCaptureFilterConfig</span><span class="sxs-lookup"><span data-stu-id="4623d-156">New-AzPacketCaptureFilterConfig</span></span>](./New-AzPacketCaptureFilterConfig.md)
+[<span data-ttu-id="667bb-156">New-AzPacketCaptureFilterConfig</span><span class="sxs-lookup"><span data-stu-id="667bb-156">New-AzPacketCaptureFilterConfig</span></span>](./New-AzPacketCaptureFilterConfig.md)
 
-[<span data-ttu-id="4623d-157">Get-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="4623d-157">Get-AzNetworkWatcherPacketCapture</span></span>](./Get-AzNetworkWatcherPacketCapture.md)
+[<span data-ttu-id="667bb-157">Get-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="667bb-157">Get-AzNetworkWatcherPacketCapture</span></span>](./Get-AzNetworkWatcherPacketCapture.md)
 
-[<span data-ttu-id="4623d-158">제거-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="4623d-158">Remove-AzNetworkWatcherPacketCapture</span></span>](./Remove-AzNetworkWatcherPacketCapture.md)
+[<span data-ttu-id="667bb-158">Remove-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="667bb-158">Remove-AzNetworkWatcherPacketCapture</span></span>](./Remove-AzNetworkWatcherPacketCapture.md)
 
-[<span data-ttu-id="4623d-159">중지-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="4623d-159">Stop-AzNetworkWatcherPacketCapture</span></span>](./Stop-AzNetworkWatcherPacketCapture.md)
+[<span data-ttu-id="667bb-159">Stop-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="667bb-159">Stop-AzNetworkWatcherPacketCapture</span></span>](./Stop-AzNetworkWatcherPacketCapture.md)
 
-[<span data-ttu-id="4623d-160">새로운 AzNetworkWatcherProtocolConfiguration</span><span class="sxs-lookup"><span data-stu-id="4623d-160">New-AzNetworkWatcherProtocolConfiguration</span></span>](./New-AzNetworkWatcherProtocolConfiguration.md)
+[<span data-ttu-id="667bb-160">New-AzNetworkWatcherProtocolConfiguration</span><span class="sxs-lookup"><span data-stu-id="667bb-160">New-AzNetworkWatcherProtocolConfiguration</span></span>](./New-AzNetworkWatcherProtocolConfiguration.md)
 
-[<span data-ttu-id="4623d-161">테스트-AzNetworkWatcherIPFlow</span><span class="sxs-lookup"><span data-stu-id="4623d-161">Test-AzNetworkWatcherIPFlow</span></span>](./Test-AzNetworkWatcherIPFlow.md)
+[<span data-ttu-id="667bb-161">Test-AzNetworkWatcherIPFlow</span><span class="sxs-lookup"><span data-stu-id="667bb-161">Test-AzNetworkWatcherIPFlow</span></span>](./Test-AzNetworkWatcherIPFlow.md)
 
-[<span data-ttu-id="4623d-162">테스트-AzNetworkWatcherConnectivity</span><span class="sxs-lookup"><span data-stu-id="4623d-162">Test-AzNetworkWatcherConnectivity</span></span>](./Test-AzNetworkWatcherConnectivity.md)
+[<span data-ttu-id="667bb-162">Test-AzNetworkWatcherConnectivity</span><span class="sxs-lookup"><span data-stu-id="667bb-162">Test-AzNetworkWatcherConnectivity</span></span>](./Test-AzNetworkWatcherConnectivity.md)
 
-[<span data-ttu-id="4623d-163">중지-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="4623d-163">Stop-AzNetworkWatcherConnectionMonitor</span></span>](./Stop-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="667bb-163">Stop-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="667bb-163">Stop-AzNetworkWatcherConnectionMonitor</span></span>](./Stop-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="4623d-164">시작-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="4623d-164">Start-AzNetworkWatcherConnectionMonitor</span></span>](./Start-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="667bb-164">Start-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="667bb-164">Start-AzNetworkWatcherConnectionMonitor</span></span>](./Start-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="4623d-165">Set-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="4623d-165">Set-AzNetworkWatcherConnectionMonitor</span></span>](./Set-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="667bb-165">Set-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="667bb-165">Set-AzNetworkWatcherConnectionMonitor</span></span>](./Set-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="4623d-166">Set-AzNetworkWatcherConfigFlowLog</span><span class="sxs-lookup"><span data-stu-id="4623d-166">Set-AzNetworkWatcherConfigFlowLog</span></span>](./Set-AzNetworkWatcherConfigFlowLog.md)
+[<span data-ttu-id="667bb-166">Set-AzNetworkWatcherConfigFlowLog</span><span class="sxs-lookup"><span data-stu-id="667bb-166">Set-AzNetworkWatcherConfigFlowLog</span></span>](./Set-AzNetworkWatcherConfigFlowLog.md)
 
-[<span data-ttu-id="4623d-167">제거-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="4623d-167">Remove-AzNetworkWatcherConnectionMonitor</span></span>](./Remove-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="667bb-167">Remove-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="667bb-167">Remove-AzNetworkWatcherConnectionMonitor</span></span>](./Remove-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="4623d-168">새로운 AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="4623d-168">New-AzNetworkWatcherConnectionMonitor</span></span>](./New-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="667bb-168">New-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="667bb-168">New-AzNetworkWatcherConnectionMonitor</span></span>](./New-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="4623d-169">Get-AzNetworkWatcherTroubleshootingResult</span><span class="sxs-lookup"><span data-stu-id="4623d-169">Get-AzNetworkWatcherTroubleshootingResult</span></span>](./Get-AzNetworkWatcherTroubleshootingResult.md)
+[<span data-ttu-id="667bb-169">Get-AzNetworkWatcherTroubleshootingResult</span><span class="sxs-lookup"><span data-stu-id="667bb-169">Get-AzNetworkWatcherTroubleshootingResult</span></span>](./Get-AzNetworkWatcherTroubleshootingResult.md)
 
-[<span data-ttu-id="4623d-170">Get-AzNetworkWatcherReachabilityReport</span><span class="sxs-lookup"><span data-stu-id="4623d-170">Get-AzNetworkWatcherReachabilityReport</span></span>](./Get-AzNetworkWatcherReachabilityReport.md)
+[<span data-ttu-id="667bb-170">Get-AzNetworkWatcherReachabilityReport</span><span class="sxs-lookup"><span data-stu-id="667bb-170">Get-AzNetworkWatcherReachabilityReport</span></span>](./Get-AzNetworkWatcherReachabilityReport.md)
 
-[<span data-ttu-id="4623d-171">Get-AzNetworkWatcherReachabilityProvidersList</span><span class="sxs-lookup"><span data-stu-id="4623d-171">Get-AzNetworkWatcherReachabilityProvidersList</span></span>](./Get-AzNetworkWatcherReachabilityProvidersList.md)
+[<span data-ttu-id="667bb-171">Get-AzNetworkWatcherReachabilityProvidersList</span><span class="sxs-lookup"><span data-stu-id="667bb-171">Get-AzNetworkWatcherReachabilityProvidersList</span></span>](./Get-AzNetworkWatcherReachabilityProvidersList.md)
 
-[<span data-ttu-id="4623d-172">Get-AzNetworkWatcherFlowLogStatus</span><span class="sxs-lookup"><span data-stu-id="4623d-172">Get-AzNetworkWatcherFlowLogStatus</span></span>](./Get-AzNetworkWatcherFlowLogStatus.md)
+[<span data-ttu-id="667bb-172">Get-AzNetworkWatcherFlowLogStatus</span><span class="sxs-lookup"><span data-stu-id="667bb-172">Get-AzNetworkWatcherFlowLogStatus</span></span>](./Get-AzNetworkWatcherFlowLogStatus.md)
 
-[<span data-ttu-id="4623d-173">Get-AzNetworkWatcherConnectionMonitorReport</span><span class="sxs-lookup"><span data-stu-id="4623d-173">Get-AzNetworkWatcherConnectionMonitorReport</span></span>](./Get-AzNetworkWatcherConnectionMonitorReport)
+[<span data-ttu-id="667bb-173">Get-AzNetworkWatcherConnectionMonitorReport</span><span class="sxs-lookup"><span data-stu-id="667bb-173">Get-AzNetworkWatcherConnectionMonitorReport</span></span>](./Get-AzNetworkWatcherConnectionMonitorReport.md)
 
-[<span data-ttu-id="4623d-174">Get-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="4623d-174">Get-AzNetworkWatcherConnectionMonitor</span></span>](./Get-AzNetworkWatcherConnectionMonitor)
+[<span data-ttu-id="667bb-174">Get-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="667bb-174">Get-AzNetworkWatcherConnectionMonitor</span></span>](./Get-AzNetworkWatcherConnectionMonitor.md)
