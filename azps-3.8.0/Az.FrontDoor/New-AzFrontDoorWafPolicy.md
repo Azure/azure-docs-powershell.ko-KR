@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafPolicy.md
-ms.openlocfilehash: 2e78b132019b19725a5261d58a760b3eb9988bb2
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 2d3811b5605b6f4923abd58c64d8d870ede8d334
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94044355"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100403853"
 ---
 # New-AzFrontDoorWafPolicy
 
 ## SYNOPSIS
 WAF 정책 만들기
 
-## 구문과
+## 구문
 
 ```
 New-AzFrontDoorWafPolicy -ResourceGroupName <String> -Name <String> [-EnabledState <PSEnabledState>]
@@ -26,10 +26,10 @@ New-AzFrontDoorWafPolicy -ResourceGroupName <String> -Name <String> [-EnabledSta
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## 설명은
-**AzFrontDoorWafPolicy** cmdlet은 현재 구독 아래의 지정 된 리소스 그룹에 새 AZURE waf 정책을 만듭니다.
+## 설명
+**New-AzFrontDoorWafPolicy** cmdlet은 현재 구독의 지정된 리소스 그룹에 새 Azure WAF 정책을 만듭니다.
 
-## 예제의
+## 예제
 
 ### 예제 1: WAF 정책 만들기
 ```powershell
@@ -42,7 +42,7 @@ Name         PolicyMode PolicyEnabledState RedirectUrl
 
 WAF 정책 만들기
 
-## 변수
+## PARAMETERS
 
 ### -CustomBlockResponseBody
 사용자 지정 응답 본문
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Customrule
-정책 내의 사용자 지정 규칙
+정책 내 사용자 지정 규칙
 
 ```yaml
 Type: Microsoft.Azure.Commands.FrontDoor.Models.PSCustomRule[]
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -105,8 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledState
-정책이 사용 상태로 설정 되어 있는지 또는 사용 안 함 상태 인지 여부
-사용할 수 있는 값은 다음과 같습니다. ' Disabled ', ' Enabled '
+정책이 활성화된 상태인지 또는 비활성화된 상태인지 여부입니다.
+가능한 값은 'Disabled', 'Enabled'입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.FrontDoor.Models.PSEnabledState
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedRule
-정책 내 관리 규칙
+정책 내에서 관리되는 규칙
 
 ```yaml
 Type: Microsoft.Azure.Commands.FrontDoor.Models.PSManagedRule[]
@@ -136,9 +136,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -모드
-정책 수준의 검색 모드 또는 방지 모드에 있는 경우에 대해 설명 합니다.
-사용할 수 있는 값은 다음과 같습니다. ' 예방 ', ' 감지 '
+### -Mode
+정책 수준에서 검색 모드 또는 방지 모드에 있는 경우를 설명합니다.
+가능한 값은 다음과 같습니다. '방지', '검색'
 
 ```yaml
 Type: System.String
@@ -152,7 +152,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -이름
+### -Name
 WebApplicationFireWallPolicy 이름입니다.
 
 ```yaml
@@ -167,7 +167,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### 로 RedirectUrl
+### -RedirectUrl
 리디렉션 URL
 
 ```yaml
@@ -197,8 +197,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -확인
-Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.
+### -Confirm
+cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -213,8 +213,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Cmdlet이 실행 되는 경우의 동작을 보여 줍니다.
-Cmdlet이 실행 되지 않습니다.
+cmdlet이 실행되는 경우의 결과 표시
+cmdlet이 실행되지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -229,22 +229,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
-### 않아야
+### 없음
 
 ## 출력
 
-### FrontDoor. PSPolicy.
+### Microsoft.Azure.Commands.FrontDoor.Models.PSPolicy
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
-[Set-AzFrontDoorWafPolicy](./Set-AzFrontDoorWafPolicy.md) 
- [Get-AzFrontDoorWafPolicy](./Get-AzFrontDoorWafPolicy.md) 
- [제거-AzFrontDoorWafPolicy](./Remove-AzFrontDoorWafPolicy.md) 
- [새로운 AzFrontDoorWafManagedRuleObject](./New-AzFrontDoorWafManagedRuleObject.md) 
- [새로운 AzFrontDoorWafCustomRuleObject](./New-AzFrontDoorWafManagedRuleObject.md)
+[Get-AzFrontDoorWafPolicy](./Get-AzFrontDoorWafPolicy.md) 
+ [Remove-AzFrontDoorWafPolicy](./Remove-AzFrontDoorWafPolicy.md) 
+ [Update-AzFrontDoorWafPolicy](./Update-AzFrontDoorWafPolicy.md) 
+ [New-AzFrontDoorWafManagedRuleObject](./New-AzFrontDoorWafManagedRuleObject.md) 
+ [New-AzFrontDoorWafCustomRuleObject](./New-AzFrontDoorWafManagedRuleObject.md)

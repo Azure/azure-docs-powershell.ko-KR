@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafManagedRuleObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafManagedRuleObject.md
-ms.openlocfilehash: 6e56ff9b174ec13d0844a1ac860d34043f8b73cf
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 7c9ace339da9639404072fd802782aee43d8ab37
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94043836"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100403955"
 ---
 # New-AzFrontDoorWafManagedRuleObject
 
 ## SYNOPSIS
-WAF 정책 만들기에 대 한 ManagedRule 개체 만들기
+WAF 정책 만들기를 위한 ManagedRule 개체 만들기
 
-## 구문과
+## 구문
 
 ```
 New-AzFrontDoorWafManagedRuleObject -Type <String> -Version <String>
@@ -25,10 +25,10 @@ New-AzFrontDoorWafManagedRuleObject -Type <String> -Version <String>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## 설명은
-WAF 정책 만들기에 대 한 ManagedRule 개체 만들기
+## 설명
+WAF 정책 만들기를 위한 ManagedRule 개체 만들기
 
-## 예제의
+## 예제
 
 ### 예제 1
 ```powershell
@@ -48,10 +48,10 @@ RuleGroupOverrides RuleSetType    RuleSetVersion
 
 ManagedRule 개체 만들기
 
-## 변수
+## PARAMETERS
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -제외
-전용
+제외
 
 ```yaml
 Type: Microsoft.Azure.Commands.FrontDoor.Models.PSManagedRuleExclusion[]
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuleGroupOverride
-Azure 관리 공급자 재정의 구성 목록
+Azure 관리되는 공급자 오버라이드 구성 목록
 
 ```yaml
 Type: Microsoft.Azure.Commands.FrontDoor.Models.PSAzureRuleGroupOverride[]
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-규칙 집합의 유형입니다.
+규칙시트의 유형
 
 ```yaml
 Type: System.String
@@ -110,8 +110,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -버전
-버전 규칙 집합
+### -Version
+규칙시트의 버전
 
 ```yaml
 Type: System.String
@@ -126,20 +126,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
-### 않아야
+### 없음
 
 ## 출력
 
-### FrontDoor를 통해 PSAzureManagedRule
+### Microsoft.Azure.Commands.FrontDoor.Models.PSAzureManagedRule
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
-[새로운 AzFrontDoorWafPolicy](./New-AzFrontDoorWafPolicy.md) 
- [Set-AzFrontDoorWafPolicy](./Set-AzFrontDoorWafPolicy.md) 
- [새로운 AzFrontDoorWafRuleGroupOverrideObject](./New-AzFrontDoorWafRuleGroupOverrideObject.md)
+[New-AzFrontDoorWafPolicy](./New-AzFrontDoorWafPolicy.md) 
+ [Update-AzFrontDoorWafPolicy](./Update-AzFrontDoorWafPolicy.md) 
+ [New-AzFrontDoorWafRuleGroupOverrideObject](./New-AzFrontDoorWafRuleGroupOverrideObject.md)

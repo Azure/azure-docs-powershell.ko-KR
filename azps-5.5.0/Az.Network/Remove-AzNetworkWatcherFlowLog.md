@@ -1,54 +1,63 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/remove-aznetworkwatcherpacketcapture
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/remove-aznetworkwatcherflowlog
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzNetworkWatcherPacketCapture.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzNetworkWatcherPacketCapture.md
-ms.openlocfilehash: d6d11590699b52bb7245222ddaa01fbc42938d22
-ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzNetworkWatcherFlowLog.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzNetworkWatcherFlowLog.md
+ms.openlocfilehash: 9906af7da12f76650ebbe45ff764da78c90ef340
+ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100414002"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100193481"
 ---
-# Remove-AzNetworkWatcherPacketCapture
+# Remove-AzNetworkWatcherFlowLog
 
 ## SYNOPSIS
-패킷 캡처 리소스를 제거합니다.
+지정된 흐름 로그 리소스를 삭제합니다.
 
 ## 구문
 
-### SetByResource(기본값)
+### SetByName(기본값)
 ```
-Remove-AzNetworkWatcherPacketCapture -NetworkWatcher <PSNetworkWatcher> -PacketCaptureName <String> [-PassThru]
- [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-AzNetworkWatcherFlowLog -NetworkWatcherName <String> -ResourceGroupName <String> -Name <String>
+ [-PassThru] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SetByName
+### SetByResource
 ```
-Remove-AzNetworkWatcherPacketCapture -NetworkWatcherName <String> -ResourceGroupName <String>
- -PacketCaptureName <String> [-PassThru] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Remove-AzNetworkWatcherFlowLog -NetworkWatcher <PSNetworkWatcher> -Name <String> [-PassThru] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByLocation
 ```
-Remove-AzNetworkWatcherPacketCapture -Location <String> -PacketCaptureName <String> [-PassThru] [-AsJob]
+Remove-AzNetworkWatcherFlowLog -Location <String> -Name <String> [-PassThru] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetByResourceId
+```
+Remove-AzNetworkWatcherFlowLog -ResourceId <String> [-PassThru] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetByInputObject
+```
+Remove-AzNetworkWatcherFlowLog -InputObject <PSFlowLogResource> [-PassThru] [-AsJob]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## 설명
-이 Remove-AzNetworkWatcherPacketCapture 캡처 리소스를 제거합니다. Remove-AzNetworkWatcherPacketCapture를 Stop-AzNetworkWatcherPacketCapture 호출하기 전에 호출을 호출하는 것이 좋습니다. 패킷 캡처 세션이 실행 중일 때 Remove-AzNetworkWatcherPacketCapture 캡처가 저장되지 않을 수 있습니다. 제거하기 전에 세션이 중지된 경우 캡처 데이터가 포함된 .cap 파일은 제거되지 않습니다. 
+지정된 흐름 로그 리소스를 삭제합니다.
 
 ## 예제
 
-### 예제 1: 패킷 캡처 세션 제거
+### 예제 1
+```powershell
+PS C:\> Remove-AzNetworkWatcherFlowLog -Location eastus -Name pstest
 ```
-Remove-AzNetworkWatcherPacketCapture -NetworkWatcher $networkWatcher -PacketCaptureName "PacketCaptureTest"
-```
-
-이 예제에서는 "PacketCaptureTest"라는 기존 패킷 캡처 세션을 제거합니다.
 
 ## PARAMETERS
 
@@ -56,7 +65,7 @@ Remove-AzNetworkWatcherPacketCapture -NetworkWatcher $networkWatcher -PacketCapt
 백그라운드에서 cmdlet 실행
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -71,7 +80,7 @@ Accept wildcard characters: False
 Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzContext, AzureRmContext, AzureCredential
 
@@ -82,13 +91,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InputObject
+흐름 로그 개체입니다.
+
+```yaml
+Type: PSFlowLogResource
+Parameter Sets: SetByInputObject
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -Location
 네트워크 감시자 위치입니다.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: SetByLocation
 Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+흐름 로그 이름입니다.
+
+```yaml
+Type: String
+Parameter Sets: SetByName, SetByResource, SetByLocation
+Aliases: FlowLogName
 
 Required: True
 Position: Named
@@ -101,7 +140,7 @@ Accept wildcard characters: False
 네트워크 감시자 리소스입니다.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
+Type: PSNetworkWatcher
 Parameter Sets: SetByResource
 Aliases:
 
@@ -116,43 +155,28 @@ Accept wildcard characters: False
 Network Watcher의 이름입니다.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: SetByName
-Aliases: Name
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -PacketCaptureName
-패킷 캡처 이름입니다.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
 Aliases:
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -PassThru
-작업하는 항목을 나타내는 개체를 반환합니다.
+{{ PassThru 설명 채우기 }}
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -161,8 +185,23 @@ Accept wildcard characters: False
 Network Watcher 리소스 그룹의 이름입니다.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: SetByName
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceId
+리소스 ID입니다.
+
+```yaml
+Type: String
+Parameter Sets: SetByResourceId
 Aliases:
 
 Required: True
@@ -176,13 +215,13 @@ Accept wildcard characters: False
 cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -192,19 +231,19 @@ cmdlet이 실행되는 경우의 결과 표시
 cmdlet이 실행되지 않습니다.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 다음 about_CommonParameters http://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
@@ -212,12 +251,13 @@ Accept wildcard characters: False
 
 ### System.String
 
+### Microsoft.Azure.Commands.Network.Models.PSFlowLogResource
+
 ## 출력
 
 ### System.Boolean
 
 ## 참고 사항
-키워드: azure, azurerm, arm, 리소스, 관리, 관리자, 네트워크, 네트워킹, 네트워크 감시자, 패킷, 캡처, 트래픽, 제거
 
 ## 관련 링크
 
@@ -273,4 +313,10 @@ Accept wildcard characters: False
 
 [Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport.md)
 
-[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor.md)
+[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor)
+
+[New-AzNetworkWatcherFlowLog](./New-AzNetworkWatcherFlowLog.md)
+
+[Set-AzNetworkWatcherFlowLog](./Set-AzNetworkWatcherFlowLog.md)
+
+[Get-AzNetworkWatcherFlowLog](./Get-AzNetworkWatcherFlowLog)
