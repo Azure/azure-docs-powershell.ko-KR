@@ -5,21 +5,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNetworkWatcherPacketCapture.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNetworkWatcherPacketCapture.md
-ms.openlocfilehash: 35222774bf5b18cfb18ecfc5479f0d6e11636b99
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: e836bb8738b594e09c65568cc0f454a476db9d34
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "93878141"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100408885"
 ---
 # Get-AzNetworkWatcherPacketCapture
 
 ## SYNOPSIS
-패킷 캡처 리소스의 정보 및 속성 및 상태를 가져옵니다.
+패킷 캡처 리소스의 정보 및 속성 및 상태를 얻습니다.
 
-## 구문과
+## 구문
 
-### SetByResource (기본값)
+### SetByResource(기본값)
 ```
 Get-AzNetworkWatcherPacketCapture -NetworkWatcher <PSNetworkWatcher> [-PacketCaptureName <String>] [-AsJob]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -37,12 +37,12 @@ Get-AzNetworkWatcherPacketCapture -Location <String> [-PacketCaptureName <String
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## 설명은
-Get-AzNetworkWatcherPacketCapture는 패킷 캡처 리소스의 속성 및 상태를 가져옵니다.
+## 설명
+이 Get-AzNetworkWatcherPacketCapture 패킷 캡처 리소스의 속성 및 상태를 얻습니다.
 
-## 예제의
+## 예제
 
-### 예제 1: 여러 필터를 사용 하 여 패킷 캡처를 만들고 해당 상태를 검색 합니다.
+### 예제 1: 여러 필터가 있는 패킷 캡처 만들기 및 해당 상태 검색
 ```
 $nw = Get-AzResource | Where {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" } 
 $networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName 
@@ -56,19 +56,19 @@ New-AzNetworkWatcherPacketCapture -NetworkWatcher $networkWatcher -TargetVirtual
 Get-AzNetworkWatcherPacketCapture -NetworkWatcher $networkWatcher -PacketCaptureName "PacketCaptureTest"
 ```
 
-이 예제에서는 여러 필터 및 시간 제한을 사용 하 여 "PacketCaptureTest" 라는 패킷 캡처를 만듭니다. 세션이 완료 되 면 지정 된 저장소 계정에 저장 됩니다. 그런 다음 Get-AzNetworkWatcherPacketCapture를 호출 하 여 캡처 세션의 상태를 검색 합니다. 참고: 패킷 캡처를 만들려면 대상 가상 컴퓨터에 Azure 네트워크 감시자 확장을 설치 해야 합니다.
+이 예제에서는 여러 필터와 시간 제한이 있는 "PacketCaptureTest"라는 패킷 캡처를 만듭니다. 세션이 완료되면 지정된 저장소 계정에 저장됩니다. 그런 다음 Get-AzNetworkWatcherPacketCapture 세션의 상태를 검색합니다. 참고: 패킷 캡처를 만들 대상 가상 머신에 Azure Network Watcher 확장을 설치해야 합니다.
 
 >[!NOTE]
->New-AzNetworkWatcherPacketCapture 명령에서 직접 패킷 캡처에 대 한 참조를 만들면 모든 속성이 포함 되지 않습니다. Get-AzNetworkWatcherPacketCapture 명령을 호출 하 여 패킷 캡처의 모든 속성을 가져올 수 있습니다.
+>New-AzNetworkWatcherPacketCapture 명령에서 직접 패킷 캡처에 대한 참조를 만드는 경우 모든 속성이 없는 것입니다. Get-AzNetworkWatcherPacketCapture 명령을 호출하여 패킷 캡처의 모든 속성을 얻을 수 있습니다.
 
-### 예제 2: 여러 필터를 사용 하 여 패킷 캡처를 만들고 해당 상태를 검색 합니다.
+### 예제 2: 여러 필터가 있는 패킷 캡처 만들기 및 해당 상태 검색
 ```
 Get-AzNetworkWatcherPacketCapture -ResourceGroupName rg1 -NetworkWatcherName nw1 -PacketCaptureName PacketCapture*
 ```
 
-이 cmdlet은 nw1 네트워크 감시자에서 "PacketCapture"로 시작 하는 모든 PacketCaptures를 반환 합니다.
+이 cmdlet은 nw1 Network Watcher에서 "PacketCapture"로 시작하는 모든 PacketCaptures를 반환합니다.
 
-## 변수
+## PARAMETERS
 
 ### -AsJob
 백그라운드에서 cmdlet 실행
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -100,8 +100,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -위치
-네트워크 감시자의 위치입니다.
+### -Location
+네트워크 감시자 위치입니다.
 
 ```yaml
 Type: System.String
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkWatcher
-네트워크 감시자 리소스.
+네트워크 감시자 리소스입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkWatcherName
-네트워크 감시자의 이름입니다.
+Network Watcher의 이름입니다.
 
 ```yaml
 Type: System.String
@@ -161,7 +161,7 @@ Accept wildcard characters: True
 ```
 
 ### -ResourceGroupName
-네트워크 감시자 리소스 그룹의 이름입니다.
+Network Watcher 리소스 그룹의 이름입니다.
 
 ```yaml
 Type: System.String
@@ -176,28 +176,28 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
-### Microsoft. 네트워크 모델. PSNetworkWatcher
+### Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
 
-### System. 문자열
+### System.String
 
 ## 출력
 
-### PSGetPacketCaptureResult에 대 한.
+### Microsoft.Azure.Commands.Network.Models.PSGetPacketCaptureResult
 
-## 상속자
-키워드: azure, azurerm, arm, resource, 관리, 관리자, 네트워크, 네트워킹, 네트워크 감시자, 패킷, 캡처, 트래픽
+## 참고 사항
+키워드: azure, azurerm, arm, 리소스, 관리, 관리자, 네트워크, 네트워킹, 네트워크 감시자, 패킷, 캡처, 트래픽
 
 ## 관련 링크
 
-[새로운 AzNetworkWatcher](./New-AzNetworkWatcher.md)
+[New-AzNetworkWatcher](./New-AzNetworkWatcher.md)
 
 [Get-AzNetworkWatcher](./Get-AzNetworkWatcher.md)
 
-[제거-AzNetworkWatcher](./Remove-AzNetworkWatcher.md)
+[Remove-AzNetworkWatcher](./Remove-AzNetworkWatcher.md)
 
 [Get-AzNetworkWatcherNextHop](./Get-AzNetworkWatcherNextHop.md)
 
@@ -205,35 +205,35 @@ Accept wildcard characters: False
 
 [Get-AzNetworkWatcherTopology](./Get-AzNetworkWatcherTopology.md)
 
-[시작-AzNetworkWatcherResourceTroubleshooting](./Start-AzNetworkWatcherResourceTroubleshooting.md)
+[Start-AzNetworkWatcherResourceTroubleshooting](./Start-AzNetworkWatcherResourceTroubleshooting.md)
 
-[새로운 AzNetworkWatcherPacketCapture](./New-AzNetworkWatcherPacketCapture.md)
+[New-AzNetworkWatcherPacketCapture](./New-AzNetworkWatcherPacketCapture.md)
 
-[새로운 AzPacketCaptureFilterConfig](./New-AzPacketCaptureFilterConfig.md)
+[New-AzPacketCaptureFilterConfig](./New-AzPacketCaptureFilterConfig.md)
 
 [Get-AzNetworkWatcherPacketCapture](./Get-AzNetworkWatcherPacketCapture.md)
 
-[제거-AzNetworkWatcherPacketCapture](./Remove-AzNetworkWatcherPacketCapture.md)
+[Remove-AzNetworkWatcherPacketCapture](./Remove-AzNetworkWatcherPacketCapture.md)
 
-[중지-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)
+[Stop-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)
 
-[새로운 AzNetworkWatcherProtocolConfiguration](./New-AzNetworkWatcherProtocolConfiguration.md)
+[New-AzNetworkWatcherProtocolConfiguration](./New-AzNetworkWatcherProtocolConfiguration.md)
 
-[테스트-AzNetworkWatcherIPFlow](./Test-AzNetworkWatcherIPFlow.md)
+[Test-AzNetworkWatcherIPFlow](./Test-AzNetworkWatcherIPFlow.md)
 
-[테스트-AzNetworkWatcherConnectivity](./Test-AzNetworkWatcherConnectivity.md)
+[Test-AzNetworkWatcherConnectivity](./Test-AzNetworkWatcherConnectivity.md)
 
-[중지-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md)
+[Stop-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md)
 
-[시작-AzNetworkWatcherConnectionMonitor](./Start-AzNetworkWatcherConnectionMonitor.md)
+[Start-AzNetworkWatcherConnectionMonitor](./Start-AzNetworkWatcherConnectionMonitor.md)
 
 [Set-AzNetworkWatcherConnectionMonitor](./Set-AzNetworkWatcherConnectionMonitor.md)
 
 [Set-AzNetworkWatcherConfigFlowLog](./Set-AzNetworkWatcherConfigFlowLog.md)
 
-[제거-AzNetworkWatcherConnectionMonitor](./Remove-AzNetworkWatcherConnectionMonitor.md)
+[Remove-AzNetworkWatcherConnectionMonitor](./Remove-AzNetworkWatcherConnectionMonitor.md)
 
-[새로운 AzNetworkWatcherConnectionMonitor](./New-AzNetworkWatcherConnectionMonitor.md)
+[New-AzNetworkWatcherConnectionMonitor](./New-AzNetworkWatcherConnectionMonitor.md)
 
 [Get-AzNetworkWatcherTroubleshootingResult](./Get-AzNetworkWatcherTroubleshootingResult.md)
 
@@ -243,7 +243,7 @@ Accept wildcard characters: False
 
 [Get-AzNetworkWatcherFlowLogStatus](./Get-AzNetworkWatcherFlowLogStatus.md)
 
-[Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport)
+[Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport.md)
 
-[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor)
+[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor.md)
 
