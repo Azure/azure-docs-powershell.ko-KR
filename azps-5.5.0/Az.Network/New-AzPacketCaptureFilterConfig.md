@@ -1,48 +1,47 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-aznetworkwatcher
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azpacketcapturefilterconfig
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkWatcher.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkWatcher.md
-ms.openlocfilehash: dbc1f3e942a95adf0cb56721ec1a2666da9b9188
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzPacketCaptureFilterConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzPacketCaptureFilterConfig.md
+ms.openlocfilehash: d7dac006abf09ec7c80d4a7e7659405936a8d20e
 ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/14/2021
-ms.locfileid: "100414274"
+ms.locfileid: "100414223"
 ---
-# New-AzNetworkWatcher
+# New-AzPacketCaptureFilterConfig
 
 ## SYNOPSIS
-새 Network Watcher 리소스를 만듭니다.
+새 패킷 캡처 필터 개체를 만듭니다.
 
 ## 구문
 
 ```
-New-AzNetworkWatcher -Name <String> -ResourceGroupName <String> -Location <String> [-Tag <Hashtable>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-AzPacketCaptureFilterConfig [-Protocol <String>] [-RemoteIPAddress <String>] [-LocalIPAddress <String>]
+ [-LocalPort <String>] [-RemotePort <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## 설명
-New-AzNetworkWatcher cmdlet은 새 Network Watcher 리소스를 만듭니다.
+New-AzPacketCaptureFilterConfig cmdlet은 새 패킷 캡처 필터 개체를 만듭니다. 이 개체는 지정된 조건을 사용하여 패킷 캡처 세션 중에 캡처되는 패킷의 유형을 제한하는 데 사용됩니다. 이 New-AzNetworkWatcherPacketCapture cmdlet은 여러 필터 개체를 수락하여 구성 가능한 캡처 세션을 사용할 수 있습니다.
 
 ## 예제
 
-### 예제 1: Network Watcher 만들기
+### 예제 1: 여러 필터를 사용하여 패킷 캡처 만들기
 ```
-New-AzResourceGroup -Name NetworkWatcherRG -Location westcentralus
-New-AzNetworkWatcher -Name NetworkWatcher_westcentralus -ResourceGroup NetworkWatcherRG
+$nw = Get-AzResource | Where {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" } 
+$networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName 
 
-Name              : NetworkWatcher_westcentralus
-Id                : /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkWatchers/NetworkWatcher_westcentralus
-Etag              : W/"7cf1f2fe-8445-4aa7-9bf5-c15347282c39"
-Location          : westcentralus
-Tags              :
-ProvisioningState : Succeeded
+$storageAccount = Get-AzStorageAccount -ResourceGroupName contosoResourceGroup -Name contosostorage123
+
+$filter1 = New-AzPacketCaptureFilterConfig -Protocol TCP -RemoteIPAddress "1.1.1.1-255.255.255" -LocalIPAddress "10.0.0.3" -LocalPort "1-65535" -RemotePort "20;80;443"
+$filter2 = New-AzPacketCaptureFilterConfig -Protocol UDP 
+New-AzNetworkWatcherPacketCapture -NetworkWatcher $networkWatcher -TargetVirtualMachineId $vm.Id -PacketCaptureName "PacketCaptureTest" -StorageAccountId $storageAccount.id -TimeLimitInSeconds 60 -Filters $filter1, $filter2
 ```
 
-이 예제에서는 새로 만든 리소스 그룹 내에서 새 Network Watcher를 만듭니다. 구독당 지역당 하나의 Network Watcher만 만들 수 있습니다.
+이 예제에서는 여러 필터와 시간 제한이 있는 "PacketCaptureTest"라는 패킷 캡처를 만듭니다. 세션이 완료되면 지정된 저장소 계정에 저장됩니다. 참고: 패킷 캡처를 만들 대상 가상 머신에 Azure Network Watcher 확장을 설치해야 합니다.
 
 ## PARAMETERS
 
@@ -61,56 +60,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Location
-위치.
+### -LocalIPAddress
+필터링할 로컬 IP 주소를 지정합니다.
+예제 입력: 단일 주소 항목의 경우 "127.0.0.1"입니다.
+범위에 대한 "127.0.0.1-127.0.0.255"입니다.
+여러 항목에 대한 "127.0.0.1;127.0.0.5;"입니다.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-네트워크 감시자 이름입니다.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases: ResourceName
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-리소스 그룹 이름입니다.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Tag
-해시 테이블 형식의 키-값 쌍입니다. 예: @{key0="value0";key1=$null;key2="value2"}
-
-```yaml
-Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases:
 
@@ -121,34 +78,72 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Confirm
-cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.
+### -LocalPort
+필터링할 로컬 IP 주소를 지정합니다.
+예제 입력: 단일 주소 항목의 경우 "127.0.0.1"입니다.
+범위에 대한 "127.0.0.1-127.0.0.255"입니다.
+여러 항목에 대한 "127.0.0.1;127.0.0.5;"입니다.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: System.String
 Parameter Sets: (All)
-Aliases: cf
+Aliases:
 
 Required: False
 Position: Named
-Default value: False
-Accept pipeline input: False
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-cmdlet이 실행되는 경우의 결과 표시
-cmdlet이 실행되지 않습니다.
+### -Protocol
+필터링할 프로토콜을 지정합니다. 허용되는 값 "TCP","UDP","Any"
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: System.String
 Parameter Sets: (All)
-Aliases: wi
+Aliases:
 
 Required: False
 Position: Named
-Default value: False
-Accept pipeline input: False
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -RemoteIPAddress
+필터링할 원격 IP 주소를 지정합니다.
+예제 입력: 단일 주소 항목의 경우 "127.0.0.1"입니다.
+범위에 대한 "127.0.0.1-127.0.0.255"입니다.
+여러 항목에 대한 "127.0.0.1;127.0.0.5;"입니다.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RemotePort
+필터링할 원격 포트를 지정합니다.
+원격 포트 예제 입력: 단일 포트 항목의 경우 "80"입니다.
+범위의 경우 "80-85"입니다.
+여러 항목에 대한 "80;443;"입니다.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -159,14 +154,12 @@ Accept wildcard characters: False
 
 ### System.String
 
-### System.Collections.Hashtable
-
 ## 출력
 
-### Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
+### Microsoft.Azure.Commands.Network.Models.PSPacketCaptureFilter
 
 ## 참고 사항
-키워드: azure, azurerm, arm, 리소스, 관리, 관리자, 네트워크, 네트워킹, 네트워크 감시자
+키워드: azure, azurerm, arm, 리소스, 관리, 관리자, 네트워크, 네트워킹, 감시자, 패킷, 캡처, 트래픽, 필터 
 
 ## 관련 링크
 
