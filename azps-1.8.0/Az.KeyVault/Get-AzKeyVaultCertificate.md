@@ -6,21 +6,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/g
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificate.md
-ms.openlocfilehash: 5935706c341fac5f0b26d3e4965f226342c3dfc8
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: ccd2762449e24f881a3308c0d11476a1e4626fed
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93868005"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100402408"
 ---
 # Get-AzKeyVaultCertificate
 
 ## SYNOPSIS
-키 자격 증명 모음에서 인증서를 가져옵니다.
+키 자격 증명 모음에서 인증서를 얻습니다.
 
-## 구문과
+## 구문
 
-### ByName (기본값)
+### ByName(기본값)
 ```
 Get-AzKeyVaultCertificate [-VaultName] <String> [[-Name] <String>] [-InRemovedState] [-IncludePending]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -74,12 +74,12 @@ Get-AzKeyVaultCertificate [-ResourceId] <String> [-Name] <String> [-IncludeVersi
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## 설명은
-**AzKeyVaultCertificate** cmdlet은 지정 된 인증서 또는 Azure key vault의 키 자격 증명 모음에서 인증서의 버전을 가져옵니다.
+## 설명
+**Get-AzKeyVaultCertificate** cmdlet은 Azure Key Vault의 키 자격 증명 모음에서 지정된 인증서 또는 인증서 버전을 얻습니다.
 
-## 예제의
+## 예제
 
-### 예제 1: 인증서 가져오기
+### 예제 1: 인증서를 얻게 됩니다.
 ```powershell
 PS C:\> Get-AzKeyVaultCertificate -VaultName "ContosoKV01" -Name "TestCert01"
 Name        : testCert01
@@ -108,9 +108,9 @@ Created     : 2/8/2016 11:21:45 PM
 Updated     : 2/8/2016 11:21:45 PM
 ```
 
-이 명령은 ContosoKV01 이라는 키 보관소에서 TestCert01 라는 인증서를 가져옵니다.
+이 명령은 ContosoKV01이라는 키 자격 증명 모음에서 TestCert01이라는 인증서를 얻습니다.
 
-### 예제 2: 삭제 했지만이 키 보관소에는 제거 되지 않은 모든 인증서를 가져옵니다.
+### 예제 2: 이 키 자격 증명 모음에 대해 삭제했지만 제거되지 않은 모든 인증서를 얻습니다.
 ```powershell
 PS C:\> Get-AzKeyVaultCertificate -VaultName 'contoso' -InRemovedState
 
@@ -140,9 +140,9 @@ Version            :
 Id                 : https://contoso.vault.azure.net:443/certificates/test2
 ```
 
-이 명령은 Contoso 라는 키 보관소에서 이전에 삭제 했지만 제거 되지 않은 모든 인증서를 가져옵니다.
+이 명령은 Contoso라는 키 자격 증명 모음에서 이전에 삭제했지만 제거되지 않은 모든 인증서를 얻습니다.
 
-### 예제 3: 삭제 되었지만이 키 보관소에는 제거 되지 않은 인증서 MyCert 가져옵니다.
+### 예제 3: 이 키 자격 증명 모음에 대해 삭제했지만 제거되지 않은 인증서 MyCert를 얻습니다.
 ```powershell
 PS C:\> Get-AzKeyVaultCertificate -VaultName 'contoso' -Name 'test1' -InRemovedState
 
@@ -182,10 +182,10 @@ Version            : 7fe415d5518240c1a6fce89986b8d334
 Id                 : https://contoso.vault.azure.net:443/certificates/test1/7fe415d5518240c1a6fce89986b8d334
 ```
 
-이 명령은 Contoso 라는 키 보관소에서 이전에 삭제 되었지만 제거 되지 않은 ' MyCert ' 라는 인증서를 가져옵니다.
-이 명령은 삭제 날짜 등의 메타 데이터와 해당 인증서의 예정 된 제거 날짜 등을 반환 합니다.
+이 명령은 Contoso라는 키 자격 증명 모음에서 이전에 삭제했지만 제거되지 않은 'MyCert'라는 인증서를 얻습니다.
+이 명령은 삭제 날짜 및 이 삭제된 인증서의 예약된 제거 날짜와 같은 메타데이터를 반환합니다.
 
-### 예제 4: 필터링을 사용 하 여 인증서 목록 표시
+### 예제 4: 필터링을 사용하여 인증서 나열
 ```powershell
 PS C:\> Get-AzKeyVaultCertificate -VaultName "ContosoKV01" -Name "test*"
 
@@ -214,10 +214,10 @@ Id        : https://ContosoKV01.vault.azure.net:443/certificates/test2
 This command gets all certificates starting with "test" from the key vault named ContosoKV01.
 ```
 
-## 변수
+## PARAMETERS
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -232,7 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludePending
-출력에 보류 중인 인증서를 포함할지 여부를 지정 합니다.
+출력에 보류 중인 인증서를 포함할지 여부를 지정합니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeVersions
-이 작업이 모든 버전의 인증서를 가져옵니다.
+이 작업이 모든 버전의 인증서를 얻게 됐습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-KeyVault 개체.
+KeyVault 개체입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
@@ -277,7 +277,7 @@ Accept wildcard characters: False
 ```
 
 ### -InRemovedState
-출력에 이전에 삭제 된 인증서를 포함할지 여부를 지정 합니다.
+출력에 이전에 삭제된 인증서를 포함할지 여부를 지정합니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -291,8 +291,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -이름
-가져올 인증서의 이름을 지정 합니다.
+### -Name
+얻을 인증서의 이름을 지정합니다.
 
 ```yaml
 Type: System.String
@@ -319,7 +319,7 @@ Accept wildcard characters: True
 ```
 
 ### -ResourceId
-KeyVault 리소스 Id입니다.
+KeyVault 리소스 ID입니다.
 
 ```yaml
 Type: System.String
@@ -334,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-키 보관소의 이름을 지정 합니다.
+키 자격 증명 모음의 이름을 지정합니다.
 
 ```yaml
 Type: System.String
@@ -348,8 +348,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -버전
-인증서의 버전을 지정 합니다.
+### -Version
+인증서의 버전을 지정합니다.
 
 ```yaml
 Type: System.String
@@ -364,32 +364,31 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](https://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
-### Microsoft. KeyVault. 모델. PSKeyVault
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
 
-### System. 문자열
+### System.String
 
 ## 출력
 
-### Microsoft. KeyVault. PSKeyVaultCertificateIdentityItem
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificateIdentityItem
 
-### Microsoft. KeyVault. PSKeyVaultCertificate
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificate
 
 ### Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultCertificate
 
 ### Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultCertificateIdentityItem
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
-[추가-AzKeyVaultCertificate](./Add-AzKeyVaultCertificate.md)
+[Add-AzKeyVaultCertificate](./Add-AzKeyVaultCertificate.md)
 
-[가져오기-AzKeyVaultCertificate](./Import-AzKeyVaultCertificate.md)
+[Import-AzKeyVaultCertificate](./Import-AzKeyVaultCertificate.md)
 
-[제거-AzKeyVaultCertificate](./Remove-AzKeyVaultCertificate.md)
+[Remove-AzKeyVaultCertificate](./Remove-AzKeyVaultCertificate.md)
 
-[실행 취소-AzKeyVaultSecretCertificate](./Undo-AzKeyVaultSecretCertificate.md)

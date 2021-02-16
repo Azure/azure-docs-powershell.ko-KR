@@ -5,12 +5,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzDataCollectionRuleAssociation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzDataCollectionRuleAssociation.md
-ms.openlocfilehash: bdfc576c64b56d11ecf30f32e34f80b0ef6de866
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: b174fdec51ece178b2e49a8e6e33d1e74f62c61f
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100203426"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100402442"
 ---
 # New-AzDataCollectionRuleAssociation
 
@@ -49,7 +49,7 @@ New-AzDataCollectionRuleAssociation
 ## 설명
 **New-AzDataCollectionRuleAssociation** cmdlet은 DCRA(데이터 수집 규칙 연결)를 만듭니다.
 
-가상 머신에 DCR을 적용하기 위해 가상 머신에 대한 연결 만들기 가상 머신은 여러 DCRS에 연결될 수 있으며 DCR에는 여러 가상 머신이 연결되어 있을 수 있습니다. 이렇게 하면 각각 특정 요구 사항과 일치하는 DCRs 집합을 정의하고 해당 요구 사항이 적용되는 가상 머신에만 적용할 수 있습니다. DCRA 문서를 사용하여 ["Azure Monitor 에이전트에 대한](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/data-collection-rule-azure-monitor-agent) 데이터 수집 구성"은 다음과 있습니다.
+가상 머신에 DCR을 적용하기 위해 가상 머신에 대한 연결 만들기 가상 머신은 여러 DCRS에 연결될 수 있으며 DCR에는 여러 가상 머신이 연결되어 있을 수 있습니다. 이렇게 하면 각각 특정 요구 사항과 일치하는 DCRS 집합을 정의하고 해당 요구 사항이 적용되는 가상 머신에만 적용할 수 있습니다. 다음은 DCRA 문서를 사용하여 ["Azure Monitor 에이전트에 대한](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/data-collection-rule-azure-monitor-agent) 데이터 수집 구성"입니다.
 
 ## 예제
 
@@ -224,6 +224,5 @@ Accept wildcard characters: False
 
 ## 관련 링크
 
-[Set-AzDataCollectionRuleAssociation](./Set-AzDataCollectionRuleAssociation.md) 
- [Remove-AzDataCollectionRuleAssociation](./Remove-AzDataCollectionRuleAssociation.md) 
+[Remove-AzDataCollectionRuleAssociation](./Remove-AzDataCollectionRuleAssociation.md) 
  [Get-AzDataCollectionRuleAssociation](./Get-AzDataCollectionRuleAssociation.md)
