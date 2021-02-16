@@ -3,30 +3,30 @@ external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
 ms.assetid: 615D2C5D-AB31-45DB-9535-9B9C8E957322
 online version: ''
 schema: 2.0.0
-ms.openlocfilehash: 96b51b49d76093be96eeab26417f4a70f70c4627
-ms.sourcegitcommit: 56ed085a868afa8263f8eb0f755b5822f5c29532
+ms.openlocfilehash: 4a5701fc6308f1884bbf0237887a223a62a58669
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "94045592"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100411588"
 ---
 # Get-AzureSiteRecoveryNetwork
 
 ## SYNOPSIS
-현재 자격 증명 모음의 사이트 복구에서 관리 되는 네트워크에 대 한 정보를 가져옵니다.
+현재 자격 증명 모음에 대한 Site Recovery에서 관리하는 네트워크에 대한 정보를 얻습니다.
 
-## 구문과
+## 구문
 
 ```
 Get-AzureSiteRecoveryNetwork -Server <ASRServer> [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
-## 설명은
-**AzureSiteRecoveryNetwork** cmdlet은 현재 사이트 복구 자격 증명 모음에 대 한 Azure Site recovery 네트워크에 대 한 정보를 가져옵니다.
+## 설명
+**Get-AzureSiteRecoveryNetwork** cmdlet은 현재 Site Recovery 자격 증명 모음에 대한 Azure Site Recovery 네트워크에 대한 정보를 얻습니다.
 
-## 예제의
+## 예제
 
-### 예제 1: 사이트 복구 네트워크 가져오기
+### 예제 1: 사이트 복구 네트워크 얻기
 ```
 PS C:\> $Servers = Get-AzureSiteRecoveryServer
 PS C:\> Get-AzureSiteRecoveryNetwork -Server $Servers[0]
@@ -47,16 +47,16 @@ FabricType          : VMM
 VmNetworkSubnetList : {}
 ```
 
-첫 번째 명령 cmdlet은 **AzureSiteRecoveryServer** cmdlet을 사용 하 여 현재 Azure Site Recovery 자격 증명 모음에 대 한 서버를 가져옵니다.
-명령은 사이트 복구 서버를 $Servers 배열 변수에 저장 합니다.
+첫 번째 명령 cmdlet은 **Get-AzureSiteRecoveryServer** cmdlet을 사용하여 현재 Azure Site Recovery 자격 증명 모음에 대한 서버를 얻습니다.
+이 명령은 Site Recovery 서버를 $Servers 변수에 저장합니다.
 
-두 번째 명령은 $Servers 배열의 첫 번째 서버에 대 한 사이트 복구 네트워크를 가져옵니다.
+두 번째 명령은 $Servers 배열의 첫 번째 서버에 대한 사이트 복구 네트워크를 얻습니다.
 
-## 변수
+## PARAMETERS
 
-### -프로필
-이 cmdlet이 읽는 Azure 프로필을 지정 합니다.
-프로필을 지정 하지 않으면이 cmdlet은 로컬 기본 프로필을 읽습니다.
+### -Profile
+이 cmdlet이 읽을 Azure 프로필을 지정합니다.
+프로필을 지정하지 않으면 이 cmdlet은 로컬 기본 프로필에서 읽습니다.
 
 ```yaml
 Type: AzureSMProfile
@@ -70,8 +70,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -서버
-사이트 복구 서버를 지정 합니다.
+### -Server
+Site Recovery 서버를 지정합니다.
 
 ```yaml
 Type: ASRServer
@@ -86,16 +86,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 다음 about_CommonParameters https://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.
 
 ## 입력
 
 ## 출력
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
-[Azure Site Recovery 서비스 Cmdlet](./Azure.SiteRecoveryServices.md)
+
 
 
