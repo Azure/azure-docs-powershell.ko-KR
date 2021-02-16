@@ -6,21 +6,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ad
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Add-AzExpressRouteCircuitConnectionConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Add-AzExpressRouteCircuitConnectionConfig.md
-ms.openlocfilehash: a3b5b20eac34076dd6a5490a5d9cf1a5e2c49684
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: bc08305d7aa604dd9c7540573ffb5a199e85b287
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93700720"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100402136"
 ---
 # Add-AzExpressRouteCircuitConnectionConfig
 
 ## SYNOPSIS
-회로 연결 구성을 Express 경로 회로의 개인 피어 링에 추가 합니다. 
+Express Route 회로의 개인 피어링에 회로 연결 구성을 추가합니다. 
 
-## 구문과
+## 구문
 
-### SetByResource (기본값)
+### SetByResource(기본값)
 ```
 Add-AzExpressRouteCircuitConnectionConfig [-Name] <String> [-ExpressRouteCircuit] <PSExpressRouteCircuit>
  [-AddressPrefix] <String> [-AuthorizationKey <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
@@ -34,12 +34,12 @@ Add-AzExpressRouteCircuitConnectionConfig [-Name] <String> [-ExpressRouteCircuit
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## 설명은
-**AzExpressRouteCircuitConnectionConfig** cmdlet은 대상 경로 회로의 개인 피어 링에 회로 연결 구성을 추가 합니다. 이렇게 하면 지역 또는 구독에서 두 개의 Express 경로 회로를 피어 링 할 수 있습니다. **Add-AzExpressRouteCircuitPeeringConfig** 을 실행 한 후에는 Set-AzExpressRouteCircuit cmdlet을 호출 하 여 구성을 활성화 해야 한다는 점에 주의 하세요.
+## 설명
+**Add-AzExpressRouteCircuitConnectionConfig** cmdlet은 ExpressRoute 회로에 대한 개인 피어링에 회로 연결 구성을 추가합니다. 이렇게 하면 지역 또는 구독에서 두 Express Route 회로를 피어링할 수 있습니다. **Add-AzExpressRouteCircuitPeeringConfig를** 실행한 후 Set-AzExpressRouteCircuit cmdlet을 호출하여 구성을 활성화해야 합니다.
 
-## 예제의
+## 예제
 
-### 예제 1: 기존 Express 경로에 회로 연결 리소스 추가
+### 예제 1: 기존 ExpressRoute 회로에 회로 연결 리소스 추가
 ```
 $circuit_init = Get-AzExpressRouteCircuit -Name $initiatingCircuitName -ResourceGroupName $rg
 $circuit_peer = Get-AzExpressRouteCircuit -Name $peeringCircuitName -ResourceGroupName $rg
@@ -48,17 +48,17 @@ Add-AzExpressRouteCircuitConnectionConfig -Name $circuitConnectionName -ExpressR
 Set-AzExpressRouteCircuit -ExpressRouteCircuit $circuit_init
 ```
 
-### 예제 2: 파이프를 사용 하 여 기존 Express 경로 회로에 회로 연결 구성 추가
+### 예제 2: 기존 ExpressRoute 회로에 파이핑을 사용하여 회로 연결 구성 추가
 ```
 $circuit_peer = Get-AzExpressRouteCircuit -Name $peeringCircuitName -ResourceGroupName $rg
 $addressSpace = '60.0.0.0/29'
 Get-AzExpressRouteCircuit -Name $initiatingCircuitName -ResourceGroupName $rg|Add-AzExpressRouteCircuitConnectionConfig -Name $circuitConnectionName -PeerExpressRouteCircuitPeering $circuit_peer.Peerings[0].Id -AddressPrefix $addressSpace -AuthorizationKey $circuit_peer.Authorizations[0].AuthorizationKey |Set-AzExpressRouteCircuit
 ```
 
-## 변수
+## PARAMETERS
 
 ### -AddressPrefix
-Express 경로 회로 간에 VxLan 터널을 만들기 위한 최소/29 고객 주소 공간
+Express Route 회로 간에 VxLan 터널을 만드는 최소 /29개 고객 주소 공간
 
 ```yaml
 Type: System.String
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationKey
-다른 구독의 피어 Express 경로 회로에 대 한 인증 키 피어 회로에 대 한 권한 부여는 기존 명령을 사용 하 여 만들 수 있습니다.
+다른 구독에서 Express Route 회로를 피어링하는 권한 부여 키입니다. 기존 명령을 사용하여 피어 회로에 대한 권한 부여를 만들 수 있습니다.
 
 ```yaml
 Type: System.String
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressRouteCircuit
-수정 되는 Express 경로 회로입니다. **AzExpressRouteCircuit** cmdlet에서 반환 된 Azure 개체입니다.
+수정되는 ExpressRoute 회로입니다. **Get-AzExpressRouteCircuit** cmdlet에서 반환된 Azure 개체입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit
@@ -117,7 +117,7 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -이름
+### -Name
 추가할 회로 연결 리소스의 이름입니다.
 
 ```yaml
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -PeerExpressRouteCircuitPeering
-현재 회로와 peered 되는 원격 회로의 개인 피어 링에 대 한 리소스 Id입니다.
+현재 회로와 피어링될 원격 회로의 개인 피어링에 대한 리소스 ID입니다.
 
 ```yaml
 Type: System.String
@@ -147,8 +147,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -확인
-Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.
+### -Confirm
+cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Cmdlet이 실행 되는 경우의 동작을 보여 줍니다. Cmdlet이 실행 되지 않습니다.
+cmdlet이 실행되는 경우의 결과 표시 cmdlet이 실행되지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -178,19 +178,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 다음 about_CommonParameters https://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.
 
 ## 입력
 
-### PSExpressRouteCircuit에 대 한.
+### Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit
 
-### System. 문자열
+### System.String
 
 ## 출력
 
-### PSExpressRouteCircuit에 대 한.
+### Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
@@ -198,11 +198,11 @@ Accept wildcard characters: False
 
 [Get-AzExpressRouteCircuitConnectionConfig](Get-AzExpressRouteCircuitConnectionConfig.md)
 
-[제거-AzExpressRouteCircuitConnectionConfig](Remove-AzExpressRouteCircuitConnectionConfig.md)
+[Remove-AzExpressRouteCircuitConnectionConfig](Remove-AzExpressRouteCircuitConnectionConfig.md)
 
-[Set-AzExpressRouteCircuitConnectionConfig](Set-AzExpressRouteCircuitConnectionConfig.md)
 
-[새로운 AzExpressRouteCircuitConnectionConfig](New-AzExpressRouteCircuitConnectionConfig.md)
+
+
 
 [Set-AzExpressRouteCircuit](Set-AzExpressRouteCircuit.md)
 
