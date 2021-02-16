@@ -5,21 +5,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/te
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Test-AzNetworkWatcherConnectivity.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Test-AzNetworkWatcherConnectivity.md
-ms.openlocfilehash: d5adbad0f6b36375f38202fe9007e9a9f3ea19f5
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 35094be89adb21109cb75e53841a028776081916
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93872065"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100408392"
 ---
-# <span data-ttu-id="7590e-101">Test-AzNetworkWatcherConnectivity</span><span class="sxs-lookup"><span data-stu-id="7590e-101">Test-AzNetworkWatcherConnectivity</span></span>
+# <span data-ttu-id="ae368-101">Test-AzNetworkWatcherConnectivity</span><span class="sxs-lookup"><span data-stu-id="ae368-101">Test-AzNetworkWatcherConnectivity</span></span>
 
-## <span data-ttu-id="7590e-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="7590e-102">SYNOPSIS</span></span>
-<span data-ttu-id="7590e-103">지정 된 원본 VM 및 대상에 대 한 연결 정보를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="7590e-103">Returns connectivity information for a specified source VM and a destination.</span></span>
+## <span data-ttu-id="ae368-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="ae368-102">SYNOPSIS</span></span>
+<span data-ttu-id="ae368-103">지정된 원본 VM 및 대상에 대한 연결 정보를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="ae368-103">Returns connectivity information for a specified source VM and a destination.</span></span>
 
-## <span data-ttu-id="7590e-104">구문과</span><span class="sxs-lookup"><span data-stu-id="7590e-104">SYNTAX</span></span>
+## <span data-ttu-id="ae368-104">구문</span><span class="sxs-lookup"><span data-stu-id="ae368-104">SYNTAX</span></span>
 
-### <span data-ttu-id="7590e-105">SetByResource (기본값)</span><span class="sxs-lookup"><span data-stu-id="7590e-105">SetByResource (Default)</span></span>
+### <span data-ttu-id="ae368-105">SetByResource(기본값)</span><span class="sxs-lookup"><span data-stu-id="ae368-105">SetByResource (Default)</span></span>
 ```
 Test-AzNetworkWatcherConnectivity -NetworkWatcher <PSNetworkWatcher> -SourceId <String> [-SourcePort <Int32>]
  [-DestinationId <String>] [-DestinationAddress <String>] [-DestinationPort <Int32>]
@@ -27,7 +27,7 @@ Test-AzNetworkWatcherConnectivity -NetworkWatcher <PSNetworkWatcher> -SourceId <
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="7590e-106">SetByName</span><span class="sxs-lookup"><span data-stu-id="7590e-106">SetByName</span></span>
+### <span data-ttu-id="ae368-106">SetByName</span><span class="sxs-lookup"><span data-stu-id="ae368-106">SetByName</span></span>
 ```
 Test-AzNetworkWatcherConnectivity -NetworkWatcherName <String> -ResourceGroupName <String> -SourceId <String>
  [-SourcePort <Int32>] [-DestinationId <String>] [-DestinationAddress <String>] [-DestinationPort <Int32>]
@@ -35,7 +35,7 @@ Test-AzNetworkWatcherConnectivity -NetworkWatcherName <String> -ResourceGroupNam
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="7590e-107">SetByLocation</span><span class="sxs-lookup"><span data-stu-id="7590e-107">SetByLocation</span></span>
+### <span data-ttu-id="ae368-107">SetByLocation</span><span class="sxs-lookup"><span data-stu-id="ae368-107">SetByLocation</span></span>
 ```
 Test-AzNetworkWatcherConnectivity -Location <String> -SourceId <String> [-SourcePort <Int32>]
  [-DestinationId <String>] [-DestinationAddress <String>] [-DestinationPort <Int32>]
@@ -43,12 +43,12 @@ Test-AzNetworkWatcherConnectivity -Location <String> -SourceId <String> [-Source
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="7590e-108">설명은</span><span class="sxs-lookup"><span data-stu-id="7590e-108">DESCRIPTION</span></span>
-<span data-ttu-id="7590e-109">Test-AzNetworkWatcherConnectivity cmdlet은 지정 된 원본 VM 및 대상에 대 한 연결 정보를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="7590e-109">The Test-AzNetworkWatcherConnectivity cmdlet returns connectivity information for a specified source VM and a destination.</span></span> <span data-ttu-id="7590e-110">원본과 대상 간의 연결을 설정할 수 없는 경우 cmdlet은 문제에 대 한 세부 정보를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="7590e-110">If connectivity between the source and destination cannot be established, the cmdlet returns details about the issue.</span></span>
+## <span data-ttu-id="ae368-108">설명</span><span class="sxs-lookup"><span data-stu-id="ae368-108">DESCRIPTION</span></span>
+<span data-ttu-id="ae368-109">Test-AzNetworkWatcherConnectivity cmdlet은 지정된 원본 VM 및 대상에 대한 연결 정보를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="ae368-109">The Test-AzNetworkWatcherConnectivity cmdlet returns connectivity information for a specified source VM and a destination.</span></span> <span data-ttu-id="ae368-110">원본과 대상 간의 연결을 설정하지 못하면 cmdlet에서 문제의 세부 정보를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="ae368-110">If connectivity between the source and destination cannot be established, the cmdlet returns details about the issue.</span></span>
 
-## <span data-ttu-id="7590e-111">예제의</span><span class="sxs-lookup"><span data-stu-id="7590e-111">EXAMPLES</span></span>
+## <span data-ttu-id="ae368-111">예제</span><span class="sxs-lookup"><span data-stu-id="ae368-111">EXAMPLES</span></span>
 
-### <span data-ttu-id="7590e-112">예제 1: VM에서 웹 사이트로 네트워크 감시자 연결 테스트</span><span class="sxs-lookup"><span data-stu-id="7590e-112">Example 1: Test Network Watcher Connectivity from a VM to a website</span></span>
+### <span data-ttu-id="ae368-112">예제 1: VM에서 웹 사이트로 Network Watcher 연결 테스트</span><span class="sxs-lookup"><span data-stu-id="ae368-112">Example 1: Test Network Watcher Connectivity from a VM to a website</span></span>
 ```
 Test-AzNetworkWatcherConnectivity -NetworkWatcherName NetworkWatcher -ResourceGroupName NetworkWatcherRG -SourceId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ContosoRG/providers/Microsoft.Compute/virtualMachines/MultiTierApp0" -DestinationAddress "bing.com" -DestinationPort 80
 
@@ -81,12 +81,12 @@ Hops             : [
                    ]
 ```
 
-<span data-ttu-id="7590e-113">이 예제에서는 Azure의 VM에서 www.bing.com에 대 한 연결을 테스트 합니다.</span><span class="sxs-lookup"><span data-stu-id="7590e-113">In this example we test connectivity from a VM in Azure to www.bing.com.</span></span>
+<span data-ttu-id="ae368-113">이 예제에서는 Azure의 VM에서 VM으로의 연결을 www.bing.com.</span><span class="sxs-lookup"><span data-stu-id="ae368-113">In this example we test connectivity from a VM in Azure to www.bing.com.</span></span>
 
-## <span data-ttu-id="7590e-114">변수</span><span class="sxs-lookup"><span data-stu-id="7590e-114">PARAMETERS</span></span>
+## <span data-ttu-id="ae368-114">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="ae368-114">PARAMETERS</span></span>
 
-### <span data-ttu-id="7590e-115">-AsJob</span><span class="sxs-lookup"><span data-stu-id="7590e-115">-AsJob</span></span>
-<span data-ttu-id="7590e-116">백그라운드에서 cmdlet 실행</span><span class="sxs-lookup"><span data-stu-id="7590e-116">Run cmdlet in the background</span></span>
+### <span data-ttu-id="ae368-115">-AsJob</span><span class="sxs-lookup"><span data-stu-id="ae368-115">-AsJob</span></span>
+<span data-ttu-id="ae368-116">백그라운드에서 cmdlet 실행</span><span class="sxs-lookup"><span data-stu-id="ae368-116">Run cmdlet in the background</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -100,8 +100,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7590e-117">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="7590e-117">-DefaultProfile</span></span>
-<span data-ttu-id="7590e-118">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="7590e-118">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+### <span data-ttu-id="ae368-117">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="ae368-117">-DefaultProfile</span></span>
+<span data-ttu-id="ae368-118">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="ae368-118">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -115,8 +115,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7590e-119">-DestinationAddress</span><span class="sxs-lookup"><span data-stu-id="7590e-119">-DestinationAddress</span></span>
-<span data-ttu-id="7590e-120">연결을 시도 하는 데 사용할 리소스의 IP 주소 또는 URI입니다.</span><span class="sxs-lookup"><span data-stu-id="7590e-120">The IP address or URI the resource to which a connection attempt will be made.</span></span>
+### <span data-ttu-id="ae368-119">-DestinationAddress</span><span class="sxs-lookup"><span data-stu-id="ae368-119">-DestinationAddress</span></span>
+<span data-ttu-id="ae368-120">연결 시도를 할 리소스의 IP 주소 또는 URI입니다.</span><span class="sxs-lookup"><span data-stu-id="ae368-120">The IP address or URI the resource to which a connection attempt will be made.</span></span>
 
 ```yaml
 Type: System.String
@@ -130,8 +130,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7590e-121">-DestinationId</span><span class="sxs-lookup"><span data-stu-id="7590e-121">-DestinationId</span></span>
-<span data-ttu-id="7590e-122">연결 시도가 수행 될 리소스의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="7590e-122">The ID of the resource to which a connection attempt will be made.</span></span>
+### <span data-ttu-id="ae368-121">-DestinationId</span><span class="sxs-lookup"><span data-stu-id="ae368-121">-DestinationId</span></span>
+<span data-ttu-id="ae368-122">연결 시도를 할 리소스의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ae368-122">The ID of the resource to which a connection attempt will be made.</span></span>
 
 ```yaml
 Type: System.String
@@ -145,8 +145,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7590e-123">-DestinationPort</span><span class="sxs-lookup"><span data-stu-id="7590e-123">-DestinationPort</span></span>
-<span data-ttu-id="7590e-124">확인 연결을 수행할 포트입니다.</span><span class="sxs-lookup"><span data-stu-id="7590e-124">Port on which check connectivity will be performed.</span></span>
+### <span data-ttu-id="ae368-123">-DestinationPort</span><span class="sxs-lookup"><span data-stu-id="ae368-123">-DestinationPort</span></span>
+<span data-ttu-id="ae368-124">연결이 확인될 포트입니다.</span><span class="sxs-lookup"><span data-stu-id="ae368-124">Port on which check connectivity will be performed.</span></span>
 
 ```yaml
 Type: System.Int32
@@ -160,8 +160,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7590e-125">-위치</span><span class="sxs-lookup"><span data-stu-id="7590e-125">-Location</span></span>
-<span data-ttu-id="7590e-126">네트워크 감시자의 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="7590e-126">Location of the network watcher.</span></span>
+### <span data-ttu-id="ae368-125">-Location</span><span class="sxs-lookup"><span data-stu-id="ae368-125">-Location</span></span>
+<span data-ttu-id="ae368-126">네트워크 감시자 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="ae368-126">Location of the network watcher.</span></span>
 
 ```yaml
 Type: System.String
@@ -175,8 +175,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7590e-127">-NetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="7590e-127">-NetworkWatcher</span></span>
-<span data-ttu-id="7590e-128">네트워크 감시자 리소스.</span><span class="sxs-lookup"><span data-stu-id="7590e-128">The network watcher resource.</span></span>
+### <span data-ttu-id="ae368-127">-NetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="ae368-127">-NetworkWatcher</span></span>
+<span data-ttu-id="ae368-128">네트워크 감시자 리소스입니다.</span><span class="sxs-lookup"><span data-stu-id="ae368-128">The network watcher resource.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
@@ -190,8 +190,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7590e-129">-NetworkWatcherName</span><span class="sxs-lookup"><span data-stu-id="7590e-129">-NetworkWatcherName</span></span>
-<span data-ttu-id="7590e-130">네트워크 감시자의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="7590e-130">The name of network watcher.</span></span>
+### <span data-ttu-id="ae368-129">-NetworkWatcherName</span><span class="sxs-lookup"><span data-stu-id="ae368-129">-NetworkWatcherName</span></span>
+<span data-ttu-id="ae368-130">Network Watcher의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="ae368-130">The name of network watcher.</span></span>
 
 ```yaml
 Type: System.String
@@ -205,8 +205,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7590e-131">프로토콜 구성</span><span class="sxs-lookup"><span data-stu-id="7590e-131">-ProtocolConfiguration</span></span>
-<span data-ttu-id="7590e-132">확인 연결을 수행할 프로토콜 구성입니다.</span><span class="sxs-lookup"><span data-stu-id="7590e-132">Protocol configuration on which check connectivity will be performed.</span></span>
+### <span data-ttu-id="ae368-131">-ProtocolConfiguration</span><span class="sxs-lookup"><span data-stu-id="ae368-131">-ProtocolConfiguration</span></span>
+<span data-ttu-id="ae368-132">연결을 확인할 프로토콜 구성입니다.</span><span class="sxs-lookup"><span data-stu-id="ae368-132">Protocol configuration on which check connectivity will be performed.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSNetworkWatcherProtocolConfiguration
@@ -220,8 +220,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7590e-133">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="7590e-133">-ResourceGroupName</span></span>
-<span data-ttu-id="7590e-134">네트워크 감시자 리소스 그룹의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="7590e-134">The name of the network watcher resource group.</span></span>
+### <span data-ttu-id="ae368-133">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="ae368-133">-ResourceGroupName</span></span>
+<span data-ttu-id="ae368-134">Network Watcher 리소스 그룹의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="ae368-134">The name of the network watcher resource group.</span></span>
 
 ```yaml
 Type: System.String
@@ -235,8 +235,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7590e-135">-SourceId</span><span class="sxs-lookup"><span data-stu-id="7590e-135">-SourceId</span></span>
-<span data-ttu-id="7590e-136">연결 검사가 시작 되는 리소스의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="7590e-136">The ID of the resource from which a connectivity check will be initiated.</span></span>
+### <span data-ttu-id="ae368-135">-SourceId</span><span class="sxs-lookup"><span data-stu-id="ae368-135">-SourceId</span></span>
+<span data-ttu-id="ae368-136">연결 검사를 시작할 리소스의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ae368-136">The ID of the resource from which a connectivity check will be initiated.</span></span>
 
 ```yaml
 Type: System.String
@@ -250,8 +250,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7590e-137">-SourcePort</span><span class="sxs-lookup"><span data-stu-id="7590e-137">-SourcePort</span></span>
-<span data-ttu-id="7590e-138">연결 검사가 수행 되는 원본 포트입니다.</span><span class="sxs-lookup"><span data-stu-id="7590e-138">The source port from which a connectivity check will be performed.</span></span>
+### <span data-ttu-id="ae368-137">-SourcePort</span><span class="sxs-lookup"><span data-stu-id="ae368-137">-SourcePort</span></span>
+<span data-ttu-id="ae368-138">연결 검사를 수행할 원본 포트입니다.</span><span class="sxs-lookup"><span data-stu-id="ae368-138">The source port from which a connectivity check will be performed.</span></span>
 
 ```yaml
 Type: System.Int32
@@ -265,66 +265,66 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7590e-139">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="7590e-139">CommonParameters</span></span>
-<span data-ttu-id="7590e-140">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="7590e-140">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="7590e-141">자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="7590e-141">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="ae368-139">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="ae368-139">CommonParameters</span></span>
+<span data-ttu-id="ae368-140">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="ae368-140">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="ae368-141">자세한 내용은 다음 about_CommonParameters https://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ae368-141">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="7590e-142">입력</span><span class="sxs-lookup"><span data-stu-id="7590e-142">INPUTS</span></span>
+## <span data-ttu-id="ae368-142">입력</span><span class="sxs-lookup"><span data-stu-id="ae368-142">INPUTS</span></span>
 
-### <span data-ttu-id="7590e-143">Microsoft. 네트워크 모델. PSNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="7590e-143">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher</span></span>
+### <span data-ttu-id="ae368-143">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="ae368-143">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher</span></span>
 
-### <span data-ttu-id="7590e-144">System. 문자열</span><span class="sxs-lookup"><span data-stu-id="7590e-144">System.String</span></span>
+### <span data-ttu-id="ae368-144">System.String</span><span class="sxs-lookup"><span data-stu-id="ae368-144">System.String</span></span>
 
-### <span data-ttu-id="7590e-145">시스템. i i.</span><span class="sxs-lookup"><span data-stu-id="7590e-145">System.Int32</span></span>
+### <span data-ttu-id="ae368-145">System.Int32</span><span class="sxs-lookup"><span data-stu-id="ae368-145">System.Int32</span></span>
 
-## <span data-ttu-id="7590e-146">출력</span><span class="sxs-lookup"><span data-stu-id="7590e-146">OUTPUTS</span></span>
+## <span data-ttu-id="ae368-146">출력</span><span class="sxs-lookup"><span data-stu-id="ae368-146">OUTPUTS</span></span>
 
-### <span data-ttu-id="7590e-147">PSConnectivityInformation에 대 한.</span><span class="sxs-lookup"><span data-stu-id="7590e-147">Microsoft.Azure.Commands.Network.Models.PSConnectivityInformation</span></span>
+### <span data-ttu-id="ae368-147">Microsoft.Azure.Commands.Network.Models.PSConnectivityInformation</span><span class="sxs-lookup"><span data-stu-id="ae368-147">Microsoft.Azure.Commands.Network.Models.PSConnectivityInformation</span></span>
 
-## <span data-ttu-id="7590e-148">상속자</span><span class="sxs-lookup"><span data-stu-id="7590e-148">NOTES</span></span>
-<span data-ttu-id="7590e-149">키워드: azure, azurerm, arm, 리소스, 연결, 관리, 관리자, 네트워크, 네트워킹, 네트워크 감시자</span><span class="sxs-lookup"><span data-stu-id="7590e-149">Keywords: azure, azurerm, arm, resource, connectivity, management, manager, network, networking, network watcher</span></span>
+## <span data-ttu-id="ae368-148">참고 사항</span><span class="sxs-lookup"><span data-stu-id="ae368-148">NOTES</span></span>
+<span data-ttu-id="ae368-149">키워드: azure, azurerm, arm, 리소스, 연결, 관리, 관리자, 네트워크, 네트워킹, 네트워크 감시자</span><span class="sxs-lookup"><span data-stu-id="ae368-149">Keywords: azure, azurerm, arm, resource, connectivity, management, manager, network, networking, network watcher</span></span>
 
-## <span data-ttu-id="7590e-150">관련 링크</span><span class="sxs-lookup"><span data-stu-id="7590e-150">RELATED LINKS</span></span>
+## <span data-ttu-id="ae368-150">관련 링크</span><span class="sxs-lookup"><span data-stu-id="ae368-150">RELATED LINKS</span></span>
 
-<span data-ttu-id="7590e-151">[새로운 AzNetworkWatcher](./New-AzNetworkWatcher.md) 
+<span data-ttu-id="ae368-151">[New-AzNetworkWatcher](./New-AzNetworkWatcher.md) 
  [Get-AzNetworkWatcher](./Get-AzNetworkWatcher.md) 
- [제거-AzNetworkWatcher](./Remove-AzNetworkWatcher.md)</span><span class="sxs-lookup"><span data-stu-id="7590e-151">[New-AzNetworkWatcher](./New-AzNetworkWatcher.md)
+ [Remove-AzNetworkWatcher](./Remove-AzNetworkWatcher.md)</span><span class="sxs-lookup"><span data-stu-id="ae368-151">[New-AzNetworkWatcher](./New-AzNetworkWatcher.md)
 [Get-AzNetworkWatcher](./Get-AzNetworkWatcher.md)
 [Remove-AzNetworkWatcher](./Remove-AzNetworkWatcher.md)</span></span>
 
-<span data-ttu-id="7590e-152">[Get-AzNetworkWatcherNextHop](./Get-AzNetworkWatcherNextHop.md) 
+<span data-ttu-id="ae368-152">[Get-AzNetworkWatcherNextHop](./Get-AzNetworkWatcherNextHop.md) 
  [Get-AzNetworkWatcherSecurityGroupView](./Get-AzNetworkWatcherSecurityGroupView.md) 
  [Get-AzNetworkWatcherTopology](./Get-AzNetworkWatcherTopology.md) 
- [Get-AzNetworkWatcherTroubleshootingResult](./Get-AzNetworkWatcherTroubleshootingResult.md)</span><span class="sxs-lookup"><span data-stu-id="7590e-152">[Get-AzNetworkWatcherNextHop](./Get-AzNetworkWatcherNextHop.md)
+ [Get-AzNetworkWatcherTroubleshootingResult](./Get-AzNetworkWatcherTroubleshootingResult.md)</span><span class="sxs-lookup"><span data-stu-id="ae368-152">[Get-AzNetworkWatcherNextHop](./Get-AzNetworkWatcherNextHop.md)
 [Get-AzNetworkWatcherSecurityGroupView](./Get-AzNetworkWatcherSecurityGroupView.md)
 [Get-AzNetworkWatcherTopology](./Get-AzNetworkWatcherTopology.md)
 [Get-AzNetworkWatcherTroubleshootingResult](./Get-AzNetworkWatcherTroubleshootingResult.md)</span></span>
 
-<span data-ttu-id="7590e-153">[새로운 AzNetworkWatcherPacketCapture](./New-AzNetworkWatcherPacketCapture.md) 
- [새로운 AzPacketCaptureFilterConfig](./New-AzPacketCaptureFilterConfig.md) 
+<span data-ttu-id="ae368-153">[New-AzNetworkWatcherPacketCapture](./New-AzNetworkWatcherPacketCapture.md) 
+ [New-AzPacketCaptureFilterConfig](./New-AzPacketCaptureFilterConfig.md) 
  [Get-AzNetworkWatcherPacketCapture](./Get-AzNetworkWatcherPacketCapture.md) 
- [제거-AzNetworkWatcherPacketCapture](./Remove-AzNetworkWatcherPacketCapture.md) 
- [중지-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)</span><span class="sxs-lookup"><span data-stu-id="7590e-153">[New-AzNetworkWatcherPacketCapture](./New-AzNetworkWatcherPacketCapture.md)
+ [Remove-AzNetworkWatcherPacketCapture](./Remove-AzNetworkWatcherPacketCapture.md) 
+ [Stop-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)</span><span class="sxs-lookup"><span data-stu-id="ae368-153">[New-AzNetworkWatcherPacketCapture](./New-AzNetworkWatcherPacketCapture.md)
 [New-AzPacketCaptureFilterConfig](./New-AzPacketCaptureFilterConfig.md)
 [Get-AzNetworkWatcherPacketCapture](./Get-AzNetworkWatcherPacketCapture.md)
 [Remove-AzNetworkWatcherPacketCapture](./Remove-AzNetworkWatcherPacketCapture.md)
 [Stop-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)</span></span>
 
 
-<span data-ttu-id="7590e-154">[시작-AzNetworkWatcherResourceTroubleshooting](./Start-AzNetworkWatcherResourceTroubleshooting.md) 
- [새로운 AzNetworkWatcherProtocolConfiguration](./New-AzNetworkWatcherProtocolConfiguration.md) 
- [테스트-AzNetworkWatcherIPFlow](./Test-AzNetworkWatcherIPFlow.md) 
- [테스트-AzNetworkWatcherConnectivity](./Test-AzNetworkWatcherConnectivity.md) 
- [중지-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md) 
- [시작-AzNetworkWatcherConnectionMonitor](./Start-AzNetworkWatcherConnectionMonitor.md) 
+<span data-ttu-id="ae368-154">[Start-AzNetworkWatcherResourceTroubleshooting](./Start-AzNetworkWatcherResourceTroubleshooting.md) 
+ [New-AzNetworkWatcherProtocolConfiguration](./New-AzNetworkWatcherProtocolConfiguration.md) 
+ [Test-AzNetworkWatcherIPFlow](./Test-AzNetworkWatcherIPFlow.md) 
+ [Test-AzNetworkWatcherConnectivity](./Test-AzNetworkWatcherConnectivity.md) 
+ [Stop-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md) 
+ [Start-AzNetworkWatcherConnectionMonitor](./Start-AzNetworkWatcherConnectionMonitor.md) 
  [Set-AzNetworkWatcherConnectionMonitor](./Set-AzNetworkWatcherConnectionMonitor.md) 
  [Set-AzNetworkWatcherConfigFlowLog](./Set-AzNetworkWatcherConfigFlowLog.md) 
- [제거-AzNetworkWatcherConnectionMonitor](./Remove-AzNetworkWatcherConnectionMonitor.md) 
- [새로운 AzNetworkWatcherConnectionMonitor](./New-AzNetworkWatcherConnectionMonitor.md) 
+ [Remove-AzNetworkWatcherConnectionMonitor](./Remove-AzNetworkWatcherConnectionMonitor.md) 
+ [New-AzNetworkWatcherConnectionMonitor](./New-AzNetworkWatcherConnectionMonitor.md) 
  [Get-AzNetworkWatcherReachabilityReport](./Get-AzNetworkWatcherReachabilityReport.md) 
  [Get-AzNetworkWatcherReachabilityProvidersList](./Get-AzNetworkWatcherReachabilityProvidersList.md) 
  [Get-AzNetworkWatcherFlowLogStatus](./Get-AzNetworkWatcherFlowLogStatus.md) 
- [Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport) 
- [Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor)</span><span class="sxs-lookup"><span data-stu-id="7590e-154">[Start-AzNetworkWatcherResourceTroubleshooting](./Start-AzNetworkWatcherResourceTroubleshooting.md)
+ [Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport.md) 
+ [Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor.md)</span><span class="sxs-lookup"><span data-stu-id="ae368-154">[Start-AzNetworkWatcherResourceTroubleshooting](./Start-AzNetworkWatcherResourceTroubleshooting.md)
 [New-AzNetworkWatcherProtocolConfiguration](./New-AzNetworkWatcherProtocolConfiguration.md)
 [Test-AzNetworkWatcherIPFlow](./Test-AzNetworkWatcherIPFlow.md)
 [Test-AzNetworkWatcherConnectivity](./Test-AzNetworkWatcherConnectivity.md)
@@ -337,5 +337,5 @@ Accept wildcard characters: False
 [Get-AzNetworkWatcherReachabilityReport](./Get-AzNetworkWatcherReachabilityReport.md)
 [Get-AzNetworkWatcherReachabilityProvidersList](./Get-AzNetworkWatcherReachabilityProvidersList.md)
 [Get-AzNetworkWatcherFlowLogStatus](./Get-AzNetworkWatcherFlowLogStatus.md)
-[Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport)
-[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor)</span></span>
+[Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport.md)
+[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor.md)</span></span>
