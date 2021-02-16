@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ad
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Add-AzRouteFilterRuleConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Add-AzRouteFilterRuleConfig.md
-ms.openlocfilehash: 910b432382eb24f6c5eaf77d3e0c7fe3dc547413
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.openlocfilehash: ded23a30c078cd1d474310d73d94717d050f6824
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "93875660"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399280"
 ---
 # Add-AzRouteFilterRuleConfig
 
 ## SYNOPSIS
-경로 필터에 경로 필터 규칙을 추가 합니다.
+경로 필터에 경로 필터 규칙을 추가합니다.
 
-## 구문과
+## 구문
 
 ```
 Add-AzRouteFilterRuleConfig -RouteFilter <PSRouteFilter> [-Force] -Name <String> -Access <String>
@@ -25,24 +25,24 @@ Add-AzRouteFilterRuleConfig -RouteFilter <PSRouteFilter> [-Force] -Name <String>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## 설명은
-Add-AzRouteFilterRuleConfig cmdlet은 Azure 경로 필터에 경로 필터 규칙을 추가 합니다.
+## 설명
+Add-AzRouteFilterRuleConfig cmdlet은 Azure 경로 필터에 경로 필터 규칙을 추가합니다.
 
-## 예제의
+## 예제
 
-### --------------------------예제 1: 경로 필터에 경로 필터 규칙 추가--------------------------
+### -------------------------- 예제 1: -------------------------- 경로 필터 규칙 추가
 ```
 PS C:\>$RouteFilter = Get-AzRouteFilter -ResourceGroupName "ResourceGroup11" -Name "routefilter01"
                       PS C:\> Add-AzRouteFilterRuleConfig -Name "rule13" -Access Allow -RouteFilterRuleType Community -RouteFilter $RouteFilter
 ```
 
-첫 번째 명령은 Get-AzRouteFilter cmdlet을 사용 하 여 routefilter01 이라는 경로 필터를 가져옵니다.
-명령이 $RouteFilter 변수에 필터를 저장 합니다.
+첫 번째 명령은 Get-AzRouteFilter cmdlet을 사용하여 routefilter01이라는 경로 필터를 얻습니다.
+이 명령은 필터를 $RouteFilter 저장합니다.
 
-## 변수
+## PARAMETERS
 
 ### -Access
-경로 필터 규칙의 액세스를 지정 하 고, 유효한 값은 거부 또는 허용입니다.
+경로 필터 규칙의 액세스를 지정하고 유효한 값은 거부 또는 허용입니다.
 
 ```yaml
 Type: String
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -CommunityList
-경로 필터가 필터링 할 커뮤니티 값 목록
+경로 필터가 필터링할 커뮤니티 값 목록
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
 
 ```yaml
 Type: IAzureContextContainer
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-리소스를 overrite 할 때 확인 메시지 표시 안 함
+리소스를 덮어 사용하려는 경우 확인을 요청하지 않습니다.
 
 ```yaml
 Type: SwitchParameter
@@ -102,8 +102,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -이름
-경로 필터에 추가할 경로 필터 규칙의 이름을 지정 합니다.
+### -Name
+경로 필터에 추가할 경로 필터 규칙의 이름을 지정합니다.
 
 ```yaml
 Type: String
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -RouteFilter
-이 cmdlet이 경로 필터 규칙을 추가 하는 경로 필터를 지정 합니다.
+이 cmdlet에서 경로 필터 규칙을 추가하는 경로 필터를 지정합니다.
 
 ```yaml
 Type: PSRouteFilter
@@ -133,8 +133,8 @@ Accept wildcard characters: False
 ```
 
 ### -RouteFilterRuleType
-경로 필터 규칙 유형을 지정 합니다.
-유효한 값은 다음과 같습니다. 커뮤니티
+경로 필터 규칙 유형을 지정합니다.
+유효한 값은 커뮤니티입니다.
 
 ```yaml
 Type: String
@@ -149,8 +149,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -확인
-Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.
+### -Confirm
+cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.
 
 ```yaml
 Type: SwitchParameter
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Cmdlet이 실행 되는 경우의 동작을 보여 줍니다. Cmdlet이 실행 되지 않습니다.
+cmdlet이 실행되는 경우의 결과 표시 cmdlet이 실행되지 않습니다.
 
 ```yaml
 Type: SwitchParameter
@@ -180,19 +180,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 about_CommonParameters (을 참조 하세요 http://go.microsoft.com/fwlink/?LinkID=113216) .
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 다음 about_CommonParameters http://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.
 
 ## 입력
 
 ### PSRouteFilter
-' RouteFilter ' 매개 변수는 파이프라인에서 ' PSRouteFilter ' 형식의 값을 허용 합니다.
+매개 변수 'RouteFilter'는 파이프라인의 'PSRouteFilter' 형식 값을 허용합니다.
 
 ## 출력
 
-### PSRouteFilter에 대 한.
+### Microsoft.Azure.Commands.Network.Models.PSRouteFilter
 
-## 상속자
-키워드: azure, azurerm, arm, resource, 관리, 관리자, 네트워크, 네트워킹
+## 참고 사항
+키워드: azure, azurerm, arm, 리소스, 관리, 관리자, 네트워크, 네트워킹
 
 ## 관련 링크
 
@@ -200,11 +200,8 @@ Accept wildcard characters: False
 
 [Get-AzRouteFilter](./Get-AzRouteFilter.md)
 
-[새로운 AzRouteFilterRuleConfigConfig](./New-AzRouteFilterRuleConfigConfig.md)
 
-[제거-AzRouteFilterRuleConfigConfig](./Remove-AzRouteFilterRuleConfigConfig.md)
 
-[Set-AzRouteFilterRuleConfigConfig](./Set-AzRouteFilterRuleConfigConfig.md)
 
 [Set-AzRouteFilter](./Set-AzRouteFilter.md)
 
