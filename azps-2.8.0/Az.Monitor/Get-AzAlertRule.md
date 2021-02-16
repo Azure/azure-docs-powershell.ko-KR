@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzAlertRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzAlertRule.md
-ms.openlocfilehash: 9e1a0035a9736ac01963d150f06db9e510e51e17
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: fb485d185fdb1e04a40208408dbd5fd352e0905f
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93689321"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100406386"
 ---
 # Get-AzAlertRule
 
 ## SYNOPSIS
-알림 규칙을 가져옵니다.
+경고 규칙을 얻습니다.
 
-## 구문과
+## 구문
 
 ### GetByResourceGroup
 ```
@@ -38,39 +38,39 @@ Get-AzAlertRule -ResourceGroupName <String> -TargetResourceId <String> [-Detaile
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## 설명은
-**AzAlertRule** cmdlet은 이름 또는 URI 또는 지정 된 리소스 그룹의 모든 알림 규칙을 기준으로 경고 규칙을 가져옵니다.
+## 설명
+**Get-AzAlertRule** cmdlet은 이름 또는 URI 또는 지정된 리소스 그룹의 모든 경고 규칙에 따라 경고 규칙을 얻습니다.
 
-## 예제의
+## 예제
 
-### 예제 1: 리소스 그룹에 대 한 알림 규칙 가져오기
+### 예제 1: 리소스 그룹에 대한 경고 규칙 얻기
 ```
 PS C:\>Get-AzAlertRule -ResourceGroup "Default-Web-CentralUS"
 ```
 
-이 명령은 Default-CentralUS 이라는 리소스 그룹에 대 한 모든 알림 규칙을 가져옵니다.
-*DetailedOutput* 매개 변수가 지정 되지 않았으므로 출력에 규칙에 대 한 세부 정보가 포함 되어 있지 않습니다.
+이 명령은 Default-Web-CentralUS라는 리소스 그룹에 대한 모든 경고 규칙을 얻습니다.
+*DetailedOutput* 매개 변수가 지정되지 않은 경우 출력에 규칙에 대한 세부 정보가 포함되지 않습니다.
 
-### 예제 2: 이름으로 알림 규칙 가져오기
+### 예제 2: 이름으로 경고 규칙 얻기
 ```
 PS C:\>Get-AzAlertRule -ResourceGroup "Default-Web-CentralUS" -Name "myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8"
 ```
 
-이 명령은 myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8 라는 경고 규칙을 가져옵니다.
-*DetailedOutput* 매개 변수가 지정 되지 않았으므로 출력에는 알림 규칙에 대 한 기본 정보만 포함 됩니다.
+이 명령은 myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8이라는 경고 규칙을 얻습니다.
+*DetailedOutput* 매개 변수가 지정되지 않은 경우 출력에는 경고 규칙에 대한 기본 정보만 포함되어 있습니다.
 
-### 예제 3: 자세한 출력이 있는 이름으로 알림 규칙 가져오기
+### 예제 3: 자세한 출력이 있는 이름으로 경고 규칙 확인
 ```
 PS C:\>Get-AzAlertRule -ResourceGroup "Default-Web-CentralUS" -Name "myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8" -DetailedOutput
 ```
 
-이 명령은 myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8 라는 경고 규칙을 가져옵니다.
-*DetailedOutput* 매개 변수를 지정 하면 출력이 자세히 됩니다.
+이 명령은 myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8이라는 경고 규칙을 얻습니다.
+*DetailedOutput* 매개 변수가 지정되어 있으므로 출력이 자세히 설명되어 있습니다.
 
-## 변수
+## PARAMETERS
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -DetailedOutput
-출력에 전체 세부 정보를 표시 합니다.
+출력에 전체 세부 정보를 표시합니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -99,8 +99,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -이름
-가져올 알림 규칙의 이름을 지정 합니다.
+### -Name
+얻을 경고 규칙의 이름을 지정합니다.
 
 ```yaml
 Type: System.String
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-리소스 그룹의 이름을 지정 합니다.
+리소스 그룹의 이름을 지정합니다.
 
 ```yaml
 Type: System.String
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetResourceId
-대상 리소스의 ID를 지정 합니다.
+대상 리소스의 ID를 지정합니다.
 
 ```yaml
 Type: System.String
@@ -145,30 +145,29 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](https://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
-### System. 문자열
+### System.String
 
-### System.webserver 매개 변수
+### System.Management.Automation.SwitchParameter
 
 ## 출력
 
-### PSAlertRule를 통해 출력 합니다.
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSAlertRule
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
-[추가-AzLogAlertRule](./Add-AzLogAlertRule.md)
 
-[추가-AzMetricAlertRule](./Add-AzMetricAlertRule.md)
+[Add-AzMetricAlertRule](./Add-AzMetricAlertRule.md)
 
-[추가-AzWebtestAlertRule](./Add-AzWebtestAlertRule.md)
+[Add-AzWebtestAlertRule](./Add-AzWebtestAlertRule.md)
 
 [Get-AzAlertHistory](./Get-AzAlertHistory.md)
 
-[제거-AzAlertRule](./Remove-AzAlertRule.md)
+[Remove-AzAlertRule](./Remove-AzAlertRule.md)
 
 

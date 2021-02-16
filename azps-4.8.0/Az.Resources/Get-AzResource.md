@@ -6,22 +6,22 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzResource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzResource.md
-ms.openlocfilehash: e1748bb3dbb5c2bb86f02ef9ec58d0d1eec55ba9
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 2926aa351e7e9f1f9251c5a6e6a2292b27ef93b0
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94211947"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398192"
 ---
 # Get-AzResource
 
 ## SYNOPSIS
 
-리소스를 가져옵니다.
+리소스를 얻습니다.
 
-## 구문과
+## 구문
 
-### ByTagNameValueParameterSet (기본값)
+### ByTagNameValueParameterSet(기본값)
 ```
 Get-AzResource [-Name <String>] [-ResourceType <String>] [-ODataQuery <String>] [-ResourceGroupName <String>]
  [-TagName <String>] [-TagValue <String>] [-ExpandProperties] [-ApiVersion <String>] [-Pre]
@@ -41,13 +41,13 @@ Get-AzResource [-Name <String>] [-ResourceType <String>] [-ODataQuery <String>] 
  [<CommonParameters>]
 ```
 
-## 설명은
+## 설명
 
-**Get-AzResource** Cmdlet은 Azure 리소스를 가져옵니다.
+**Get-AzResource** cmdlet은 Azure 리소스를 얻습니다.
 
-## 예제의
+## 예제
 
-### 예제 1: 현재 구독의 모든 리소스 가져오기
+### 예제 1: 현재 구독의 모든 리소스 얻기
 
 ```
 PS C:\> Get-AzResource | ft
@@ -65,9 +65,9 @@ storage otherResourceGroup Microsoft.Storage/storageAccounts       eastus
 testVM2 otherResourceGroup Microsoft.Compute/virtualMachines       eastus
 ```
 
-이 명령은 현재 구독에 있는 모든 리소스를 가져옵니다.
+이 명령은 현재 구독의 모든 리소스를 얻습니다.
 
-### 예제 2: 리소스 그룹의 모든 리소스 가져오기
+### 예제 2: 리소스 그룹의 모든 리소스 얻기
 
 ```
 PS C:\> Get-AzResource -ResourceGroupName testRG | ft
@@ -82,9 +82,9 @@ ip     testRG            Microsoft.Network/publicIPAddresses     westus
 vnet   testRG            Microsoft.Network/virtualNetworks       westus
 ```
 
-이 명령은 리소스 그룹 "testRG"의 모든 리소스를 가져옵니다.
+이 명령은 리소스 그룹 "testRG"의 모든 리소스를 얻습니다.
 
-### 예제 3: 리소스 그룹이 제공 된 와일드 카드와 일치 하는 모든 리소스 가져오기
+### 예제 3: 리소스 그룹이 제공된 와일드카드와 일치하는 모든 리소스 얻기
 
 ```
 PS C:\> Get-AzResource -ResourceGroupName other* | ft
@@ -96,9 +96,9 @@ storage otherResourceGroup Microsoft.Storage/storageAccounts eastus
 testVM2 otherResourceGroup Microsoft.Compute/virtualMachines eastus
 ```
 
-이 명령은 리소스 그룹이 속한 모든 리소스를 일종 "other"를 사용 하 여 가져옵니다.
+이 명령은 리소스 그룹이 "other"를 사용하여 존재에 속한 모든 리소스를 얻습니다.
 
-### 예제 4: 지정 된 이름을 사용 하 여 모든 리소스 가져오기
+### 예제 4: 지정한 이름으로 모든 리소스 얻기
 
 ```
 PS C:\> Get-AzResource -Name testVM | fl
@@ -116,9 +116,9 @@ Tags              :
                     Status  Approved
 ```
 
-이 명령은 리소스 이름이 "testVM" 인 모든 리소스를 가져옵니다.
+이 명령은 리소스 이름이 "testVM"인 모든 리소스를 얻습니다.
 
-### 예제 5: 이름이 제공 된 와일드 카드와 일치 하는 모든 리소스 가져오기
+### 예제 5: 이름이 제공된 와일드카드와 일치하는 모든 리소스 얻기
 
 ```
 PS C:\> Get-AzResource -Name test* | ft
@@ -130,9 +130,9 @@ testKV  otherRG            Microsoft.KeyVault/vaults         eastus
 testVM2 otherResourceGroup Microsoft.Compute/virtualMachines eastus
 ```
 
-이 명령은 리소스 이름이 "test"로 시작 하는 모든 리소스를 가져옵니다.
+이 명령은 리소스 이름이 "test"로 시작하는 모든 리소스를 얻습니다.
 
-### 예제 6: 지정 된 리소스 형식의 모든 리소스 가져오기
+### 예제 6: 주어진 리소스 유형의 모든 리소스 얻기
 
 ```
 PS C:\> Get-AzResource -ResourceType Microsoft.Compute/virtualMachines | ft
@@ -143,9 +143,9 @@ testVM  testRG             Microsoft.Compute/virtualMachines westus
 testVM2 otherResourceGroup Microsoft.Compute/virtualMachines eastus
 ```
 
-이 명령은 현재 구독에서 가상 컴퓨터에 해당 하는 모든 리소스를 가져옵니다.
+이 명령은 가상 머신인 현재 구독의 모든 리소스를 얻습니다.
 
-### 예제 7: 리소스 id를 기준으로 리소스 가져오기
+### 예제 7: 리소스 ID로 리소스 얻기
 
 ```
 PS C:\> Get-AzResource -ResourceId /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testVM
@@ -163,9 +163,9 @@ Tags              :
                     Status  Approved
 ```
 
-이 명령은 리소스 그룹 "testRG"에 "testVM" 이라는 가상 컴퓨터용 제공 된 리소스 id를 사용 하 여 리소스를 가져옵니다.
+이 명령은 리소스 그룹 "testRG"에서 "testVM"이라는 가상 머신인 제공된 리소스 ID를 사용하여 리소스를 얻습니다.
 
-## 변수
+## PARAMETERS
 
 ### -ApiVersion
 
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpandProperties
-지정 된 경우 리소스의 속성을 확장 합니다.
+지정하면 리소스의 속성을 확장합니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -211,8 +211,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -이름
-검색할 리소스의 이름입니다. 이 매개 변수는 문자열의 시작 및/또는 끝에 와일드 카드를 지원 합니다.
+### -Name
+검색할 리소스의 이름입니다. 이 매개 변수는 문자열의 시작 및/또는 끝에 와일드카드를 지원합니다.
 
 ```yaml
 Type: System.String
@@ -255,7 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-검색 되는 리소스 그룹 (들)이 속해 있습니다. 이 매개 변수는 문자열의 시작 및/또는 끝에 와일드 카드를 지원 합니다.
+검색된 리소스가 속한 리소스 그룹입니다. 이 매개 변수는 문자열의 시작 및/또는 끝에 와일드카드를 지원합니다.
 
 ```yaml
 Type: System.String
@@ -270,7 +270,7 @@ Accept wildcard characters: True
 ```
 
 ### -ResourceId
-다음 예제와 같이 정규화 된 리소스 ID를 지정 합니다. `/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Compute/virtualMachines`
+다음 예제와 같이 정식 리소스 ID를 지정합니다. `/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Compute/virtualMachines`
 
 ```yaml
 Type: System.String
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
-검색할 리소스의 리소스 유형입니다. 예를 들어 Microsoft. Compute/virtualMachines
+검색할 리소스의 리소스 종류입니다. 예를 들어 Microsoft.Compute/virtualMachines
 
 ```yaml
 Type: System.String
@@ -299,9 +299,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### 태그
+### -Tag
 
-지정 된 Azure 태그가 있는 리소스를 가져옵니다. 이름 키 또는 이름 및 값 키를 사용 하 여 해시 테이블을 입력 합니다. 와일드 카드 문자는 지원 되지 않습니다. "Tag"는 리소스 및 리소스 그룹에 적용할 수 있는 이름-값 쌍입니다. 태그를 사용 하 여 부서나 비용 센터 등의 리소스를 분류 하거나 자원에 대 한 메모 또는 메모를 추적할 수 있습니다. 리소스에 태그를 추가 하려면 New-AzResource 또는 Set-AzResource cmdlet의 Tag 매개 변수를 사용 합니다. 미리 정의 된 태그를 만들려면 New-AzTag cmdlet을 사용 합니다. Windows PowerShell의 해시 테이블에 대 한 도움말을 보려면 ' Get-help about_Hashtables '을 실행 하세요.
+지정된 Azure 태그가 있는 리소스를 얻습니다. 이름 키 또는 이름 및 값 키가 있는 해시 테이블을 입력합니다. 와일드카드 문자는 지원되지 않습니다. "tag"는 리소스 및 리소스 그룹에 적용할 수 있는 이름-값 쌍입니다. 태그를 사용하여 부서 또는 비용 센터와 같은 리소스를 분류하거나 리소스에 대한 메모 또는 메모를 추적할 수 있습니다. 리소스에 태그를 추가하기 위해 New-AzResource cmdlet의 tag Set-AzResource 사용합니다. 미리 정의된 태그를 만들 경우 New-AzTag cmdlet을 사용 합니다. 다음에서 해시 테이블에 대한 도움말을 Windows PowerShell 'Get-Help about_Hashtables'를 실행합니다.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -315,7 +315,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -태그
+### -TagName
 검색할 리소스의 태그에 있는 키입니다.
 
 ```yaml
@@ -346,26 +346,25 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
-### System. 문자열
+### System.String
 
 ## 출력
 
-### SdkModels 리소스에 대 한 Microsoft.
+### Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSResource
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
-[찾기-AzResource](./Find-AzResource.md)
 
-[이동-AzResource](./Move-AzResource.md)
+[Move-AzResource](./Move-AzResource.md)
 
-[새로운 AzResource](./New-AzResource.md)
+[New-AzResource](./New-AzResource.md)
 
-[제거-AzResource](./Remove-AzResource.md)
+[Remove-AzResource](./Remove-AzResource.md)
 
 [Set-AzResource](./Set-AzResource.md)
