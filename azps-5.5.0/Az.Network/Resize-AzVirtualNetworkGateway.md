@@ -6,49 +6,49 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/re
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Resize-AzVirtualNetworkGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Resize-AzVirtualNetworkGateway.md
-ms.openlocfilehash: dd48af6a0f20cafea5911adb629a83323faa94a6
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: 31ec0453b0ce64c27d1bb37d4bf6c0f100a8c760
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100184244"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100405145"
 ---
-# <span data-ttu-id="643d1-101">Resize-AzVirtualNetworkGateway</span><span class="sxs-lookup"><span data-stu-id="643d1-101">Resize-AzVirtualNetworkGateway</span></span>
+# <span data-ttu-id="bc3dd-101">Resize-AzVirtualNetworkGateway</span><span class="sxs-lookup"><span data-stu-id="bc3dd-101">Resize-AzVirtualNetworkGateway</span></span>
 
-## <span data-ttu-id="643d1-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="643d1-102">SYNOPSIS</span></span>
-<span data-ttu-id="643d1-103">기존 가상 네트워크 게이트웨이의 수를 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="643d1-103">Resizes an existing virtual network gateway.</span></span>
+## <span data-ttu-id="bc3dd-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="bc3dd-102">SYNOPSIS</span></span>
+<span data-ttu-id="bc3dd-103">기존 가상 네트워크 게이트웨이의 수를 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="bc3dd-103">Resizes an existing virtual network gateway.</span></span>
 
-## <span data-ttu-id="643d1-104">구문</span><span class="sxs-lookup"><span data-stu-id="643d1-104">SYNTAX</span></span>
+## <span data-ttu-id="bc3dd-104">구문</span><span class="sxs-lookup"><span data-stu-id="bc3dd-104">SYNTAX</span></span>
 
 ```
 Resize-AzVirtualNetworkGateway -VirtualNetworkGateway <PSVirtualNetworkGateway> -GatewaySku <String>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="643d1-105">설명</span><span class="sxs-lookup"><span data-stu-id="643d1-105">DESCRIPTION</span></span>
-<span data-ttu-id="643d1-106">**Resize-AzVirtualNetworkGateway** cmdlet을 사용하면 가상 네트워크 게이트웨이에 대한 SKU(주식 유지 단위)를 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="643d1-106">The **Resize-AzVirtualNetworkGateway** cmdlet enables you to change the stock-keeping unit (SKU) for a virtual network gateway.</span></span>
-<span data-ttu-id="643d1-107">SKUS는 허용되는 최대 IP 터널 수 및 같은 것을 포함하여 게이트웨이의 기능을 파악합니다.</span><span class="sxs-lookup"><span data-stu-id="643d1-107">SKUs determine the capabilities of a gateway, including such things as throughput and the maximum number of IP tunnels that are allowed.</span></span>
-<span data-ttu-id="643d1-108">Azure는 Basic, Standard, High-Performance, VpnGw1, VpnGw2, VpnGw3, VpnGw1AZ, VpnGw2AZ, VpnGw3AZ, ErGw1AZ, ErGw2AZ, ErGw3AZ SKUS(Small, Medium 및 Large SKUS라고도 합니다)를 지원</span><span class="sxs-lookup"><span data-stu-id="643d1-108">Azure supports Basic, Standard, High-Performance, VpnGw1, VpnGw2, VpnGw3, VpnGw1AZ, VpnGw2AZ, VpnGw3AZ, ErGw1AZ, ErGw2AZ, ErGw3AZ SKUs (sometimes referred to as Small, Medium, and Large SKUs).</span></span>
-<span data-ttu-id="643d1-109">각 SKU 유형의 기능에 대한 자세한 내용은 다음을 https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-about-vpngateways/ 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="643d1-109">For detailed information about the capabilities of each SKU type, see https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-about-vpngateways/.</span></span>
-<span data-ttu-id="643d1-110">SKUS는 가격 책정 및 기능도 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="643d1-110">Keep in mind that SKUs differ in pricing as well as capabilities.</span></span>
-<span data-ttu-id="643d1-111">자세한 내용은 https://azure.microsoft.com/en-us/pricing/details/vpn-gateway/ 다음을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="643d1-111">For more information, see https://azure.microsoft.com/en-us/pricing/details/vpn-gateway/.</span></span>
+## <span data-ttu-id="bc3dd-105">설명</span><span class="sxs-lookup"><span data-stu-id="bc3dd-105">DESCRIPTION</span></span>
+<span data-ttu-id="bc3dd-106">**Resize-AzVirtualNetworkGateway** cmdlet을 사용하면 가상 네트워크 게이트웨이에 대한 SKU(주식 유지 단위)를 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bc3dd-106">The **Resize-AzVirtualNetworkGateway** cmdlet enables you to change the stock-keeping unit (SKU) for a virtual network gateway.</span></span>
+<span data-ttu-id="bc3dd-107">SKUS는 허용되는 최대 IP 터널 수 및 같은 것을 포함하여 게이트웨이의 기능을 파악합니다.</span><span class="sxs-lookup"><span data-stu-id="bc3dd-107">SKUs determine the capabilities of a gateway, including such things as throughput and the maximum number of IP tunnels that are allowed.</span></span>
+<span data-ttu-id="bc3dd-108">Azure는 Basic, Standard, High-Performance, VpnGw1, VpnGw2, VpnGw3, VpnGw1AZ, VpnGw2AZ, VpnGw3AZ, ErGw1AZ, ErGw2AZ, ErGw3AZ SKUS(Small, Medium 및 Large SKUS라고도 합니다)를 지원</span><span class="sxs-lookup"><span data-stu-id="bc3dd-108">Azure supports Basic, Standard, High-Performance, VpnGw1, VpnGw2, VpnGw3, VpnGw1AZ, VpnGw2AZ, VpnGw3AZ, ErGw1AZ, ErGw2AZ, ErGw3AZ SKUs (sometimes referred to as Small, Medium, and Large SKUs).</span></span>
+<span data-ttu-id="bc3dd-109">각 SKU 유형의 기능에 대한 자세한 내용은 https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-about-vpngateways/ 다음을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="bc3dd-109">For detailed information about the capabilities of each SKU type, see https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-about-vpngateways/.</span></span>
+<span data-ttu-id="bc3dd-110">SKUS는 가격 책정 및 기능도 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="bc3dd-110">Keep in mind that SKUs differ in pricing as well as capabilities.</span></span>
+<span data-ttu-id="bc3dd-111">자세한 내용은 https://azure.microsoft.com/en-us/pricing/details/vpn-gateway/ 다음을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="bc3dd-111">For more information, see https://azure.microsoft.com/en-us/pricing/details/vpn-gateway/.</span></span>
 
-## <span data-ttu-id="643d1-112">예제</span><span class="sxs-lookup"><span data-stu-id="643d1-112">EXAMPLES</span></span>
+## <span data-ttu-id="bc3dd-112">예제</span><span class="sxs-lookup"><span data-stu-id="bc3dd-112">EXAMPLES</span></span>
 
-### <span data-ttu-id="643d1-113">예제 1: 가상 네트워크 게이트웨이의 크기 변경</span><span class="sxs-lookup"><span data-stu-id="643d1-113">Example 1: Change the size of a virtual network gateway</span></span>
+### <span data-ttu-id="bc3dd-113">예제 1: 가상 네트워크 게이트웨이의 크기 변경</span><span class="sxs-lookup"><span data-stu-id="bc3dd-113">Example 1: Change the size of a virtual network gateway</span></span>
 ```
 PS C:\>$Gateway = Get-AzVirtualNetworkGateway -Name "ContosoVirtualGateway"
 PS C:\> Resize-AzVirtualNetworkGateway -VirtualNetworkGateway $Gateway -GatewaySku "Basic"
 ```
 
-<span data-ttu-id="643d1-114">이 예제에서는 ContosoVirtualGateway라는 가상 네트워크 게이트웨이의 크기를 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="643d1-114">This example changes the size of a virtual network gateway named ContosoVirtualGateway.</span></span>
-<span data-ttu-id="643d1-115">첫 번째 명령은 ContosoVirtualGateway에 대한 개체 참조를 만듭니다. 이 개체 참조는 $Gateway.</span><span class="sxs-lookup"><span data-stu-id="643d1-115">The first command creates an object reference to ContosoVirtualGateway; this object reference is stored in a variable named $Gateway.</span></span>
-<span data-ttu-id="643d1-116">두 번째 명령은 **Resize-AzVirtualNetworkGateway** cmdlet을 사용하여 *GatewaySku* 속성을 Basic으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="643d1-116">The second command then uses the **Resize-AzVirtualNetworkGateway** cmdlet to set the *GatewaySku* property to Basic.</span></span>
+<span data-ttu-id="bc3dd-114">이 예제에서는 ContosoVirtualGateway라는 가상 네트워크 게이트웨이의 크기를 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="bc3dd-114">This example changes the size of a virtual network gateway named ContosoVirtualGateway.</span></span>
+<span data-ttu-id="bc3dd-115">첫 번째 명령은 ContosoVirtualGateway에 대한 개체 참조를 만듭니다. 이 개체 참조는 $Gateway.</span><span class="sxs-lookup"><span data-stu-id="bc3dd-115">The first command creates an object reference to ContosoVirtualGateway; this object reference is stored in a variable named $Gateway.</span></span>
+<span data-ttu-id="bc3dd-116">두 번째 명령은 **Resize-AzVirtualNetworkGateway** cmdlet을 사용하여 *GatewaySku* 속성을 Basic으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="bc3dd-116">The second command then uses the **Resize-AzVirtualNetworkGateway** cmdlet to set the *GatewaySku* property to Basic.</span></span>
 
-## <span data-ttu-id="643d1-117">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="643d1-117">PARAMETERS</span></span>
+## <span data-ttu-id="bc3dd-117">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="bc3dd-117">PARAMETERS</span></span>
 
-### <span data-ttu-id="643d1-118">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="643d1-118">-DefaultProfile</span></span>
-<span data-ttu-id="643d1-119">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="643d1-119">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+### <span data-ttu-id="bc3dd-118">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="bc3dd-118">-DefaultProfile</span></span>
+<span data-ttu-id="bc3dd-119">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="bc3dd-119">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -62,21 +62,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="643d1-120">-GatewaySku</span><span class="sxs-lookup"><span data-stu-id="643d1-120">-GatewaySku</span></span>
-<span data-ttu-id="643d1-121">새 유형의 게이트웨이 SKU를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="643d1-121">Specifies the new type of gateway SKU.</span></span>
-<span data-ttu-id="643d1-122">이 매개 변수에 허용되는 값은</span><span class="sxs-lookup"><span data-stu-id="643d1-122">The acceptable values for this parameter are:</span></span>
-- <span data-ttu-id="643d1-123">기본</span><span class="sxs-lookup"><span data-stu-id="643d1-123">Basic</span></span>
-- <span data-ttu-id="643d1-124">표준</span><span class="sxs-lookup"><span data-stu-id="643d1-124">Standard</span></span>
-- <span data-ttu-id="643d1-125">고성능</span><span class="sxs-lookup"><span data-stu-id="643d1-125">High Performance</span></span>
-- <span data-ttu-id="643d1-126">VpnGw1</span><span class="sxs-lookup"><span data-stu-id="643d1-126">VpnGw1</span></span>
-- <span data-ttu-id="643d1-127">VpnGw2</span><span class="sxs-lookup"><span data-stu-id="643d1-127">VpnGw2</span></span>
-- <span data-ttu-id="643d1-128">VpnGw3</span><span class="sxs-lookup"><span data-stu-id="643d1-128">VpnGw3</span></span>
-- <span data-ttu-id="643d1-129">VpnGw1AZ</span><span class="sxs-lookup"><span data-stu-id="643d1-129">VpnGw1AZ</span></span> 
-- <span data-ttu-id="643d1-130">VpnGw2AZ</span><span class="sxs-lookup"><span data-stu-id="643d1-130">VpnGw2AZ</span></span> 
-- <span data-ttu-id="643d1-131">VpnGw3AZ</span><span class="sxs-lookup"><span data-stu-id="643d1-131">VpnGw3AZ</span></span> 
-- <span data-ttu-id="643d1-132">ErGw1AZ</span><span class="sxs-lookup"><span data-stu-id="643d1-132">ErGw1AZ</span></span> 
-- <span data-ttu-id="643d1-133">ErGw2AZ</span><span class="sxs-lookup"><span data-stu-id="643d1-133">ErGw2AZ</span></span> 
-- <span data-ttu-id="643d1-134">ErGw3AZ</span><span class="sxs-lookup"><span data-stu-id="643d1-134">ErGw3AZ</span></span> 
+### <span data-ttu-id="bc3dd-120">-GatewaySku</span><span class="sxs-lookup"><span data-stu-id="bc3dd-120">-GatewaySku</span></span>
+<span data-ttu-id="bc3dd-121">새 유형의 게이트웨이 SKU를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="bc3dd-121">Specifies the new type of gateway SKU.</span></span>
+<span data-ttu-id="bc3dd-122">이 매개 변수에 허용되는 값은</span><span class="sxs-lookup"><span data-stu-id="bc3dd-122">The acceptable values for this parameter are:</span></span>
+- <span data-ttu-id="bc3dd-123">기본</span><span class="sxs-lookup"><span data-stu-id="bc3dd-123">Basic</span></span>
+- <span data-ttu-id="bc3dd-124">표준</span><span class="sxs-lookup"><span data-stu-id="bc3dd-124">Standard</span></span>
+- <span data-ttu-id="bc3dd-125">고성능</span><span class="sxs-lookup"><span data-stu-id="bc3dd-125">High Performance</span></span>
+- <span data-ttu-id="bc3dd-126">VpnGw1</span><span class="sxs-lookup"><span data-stu-id="bc3dd-126">VpnGw1</span></span>
+- <span data-ttu-id="bc3dd-127">VpnGw2</span><span class="sxs-lookup"><span data-stu-id="bc3dd-127">VpnGw2</span></span>
+- <span data-ttu-id="bc3dd-128">VpnGw3</span><span class="sxs-lookup"><span data-stu-id="bc3dd-128">VpnGw3</span></span>
+- <span data-ttu-id="bc3dd-129">VpnGw1AZ</span><span class="sxs-lookup"><span data-stu-id="bc3dd-129">VpnGw1AZ</span></span> 
+- <span data-ttu-id="bc3dd-130">VpnGw2AZ</span><span class="sxs-lookup"><span data-stu-id="bc3dd-130">VpnGw2AZ</span></span> 
+- <span data-ttu-id="bc3dd-131">VpnGw3AZ</span><span class="sxs-lookup"><span data-stu-id="bc3dd-131">VpnGw3AZ</span></span> 
+- <span data-ttu-id="bc3dd-132">ErGw1AZ</span><span class="sxs-lookup"><span data-stu-id="bc3dd-132">ErGw1AZ</span></span> 
+- <span data-ttu-id="bc3dd-133">ErGw2AZ</span><span class="sxs-lookup"><span data-stu-id="bc3dd-133">ErGw2AZ</span></span> 
+- <span data-ttu-id="bc3dd-134">ErGw3AZ</span><span class="sxs-lookup"><span data-stu-id="bc3dd-134">ErGw3AZ</span></span> 
 
 ```yaml
 Type: System.String
@@ -91,9 +91,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="643d1-135">-VirtualNetworkGateway</span><span class="sxs-lookup"><span data-stu-id="643d1-135">-VirtualNetworkGateway</span></span>
-<span data-ttu-id="643d1-136">변경될 가상 네트워크 게이트웨이에 대한 개체 참조를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="643d1-136">Specifies an object reference to the virtual network gateway to be resized.</span></span>
-<span data-ttu-id="643d1-137">이 개체 참조는 Get-AzVirtualNetworkGateway 게이트웨이의 이름을 지정하여 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="643d1-137">You can create this object reference by using the Get-AzVirtualNetworkGateway and specifying the name of the gateway.</span></span>
+### <span data-ttu-id="bc3dd-135">-VirtualNetworkGateway</span><span class="sxs-lookup"><span data-stu-id="bc3dd-135">-VirtualNetworkGateway</span></span>
+<span data-ttu-id="bc3dd-136">변경될 가상 네트워크 게이트웨이에 대한 개체 참조를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="bc3dd-136">Specifies an object reference to the virtual network gateway to be resized.</span></span>
+<span data-ttu-id="bc3dd-137">이 개체 참조는 Get-AzVirtualNetworkGateway 게이트웨이의 이름을 지정하여 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bc3dd-137">You can create this object reference by using the Get-AzVirtualNetworkGateway and specifying the name of the gateway.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway
@@ -107,34 +107,33 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="643d1-138">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="643d1-138">CommonParameters</span></span>
-<span data-ttu-id="643d1-139">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="643d1-139">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="643d1-140">자세한 내용은 다음 about_CommonParameters http://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="643d1-140">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="bc3dd-138">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="bc3dd-138">CommonParameters</span></span>
+<span data-ttu-id="bc3dd-139">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="bc3dd-139">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="bc3dd-140">자세한 내용은 다음 about_CommonParameters http://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="bc3dd-140">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="643d1-141">입력</span><span class="sxs-lookup"><span data-stu-id="643d1-141">INPUTS</span></span>
+## <span data-ttu-id="bc3dd-141">입력</span><span class="sxs-lookup"><span data-stu-id="bc3dd-141">INPUTS</span></span>
 
-### <span data-ttu-id="643d1-142">Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway</span><span class="sxs-lookup"><span data-stu-id="643d1-142">Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway</span></span>
+### <span data-ttu-id="bc3dd-142">Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway</span><span class="sxs-lookup"><span data-stu-id="bc3dd-142">Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway</span></span>
 
-### <span data-ttu-id="643d1-143">System.String</span><span class="sxs-lookup"><span data-stu-id="643d1-143">System.String</span></span>
+### <span data-ttu-id="bc3dd-143">System.String</span><span class="sxs-lookup"><span data-stu-id="bc3dd-143">System.String</span></span>
 
-## <span data-ttu-id="643d1-144">출력</span><span class="sxs-lookup"><span data-stu-id="643d1-144">OUTPUTS</span></span>
+## <span data-ttu-id="bc3dd-144">출력</span><span class="sxs-lookup"><span data-stu-id="bc3dd-144">OUTPUTS</span></span>
 
-### <span data-ttu-id="643d1-145">Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway</span><span class="sxs-lookup"><span data-stu-id="643d1-145">Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway</span></span>
+### <span data-ttu-id="bc3dd-145">Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway</span><span class="sxs-lookup"><span data-stu-id="bc3dd-145">Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway</span></span>
 
-## <span data-ttu-id="643d1-146">참고 사항</span><span class="sxs-lookup"><span data-stu-id="643d1-146">NOTES</span></span>
-<span data-ttu-id="643d1-147">Basic/Standard/HighPerformance SKUS에서 새 VpnGw1/VpnGw2/VpnGw3 SKUS로는 변경할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="643d1-147">You cannot resize from Basic/Standard/HighPerformance SKUs to the new VpnGw1/VpnGw2/VpnGw3 SKUs.</span></span> <span data-ttu-id="643d1-148">VpnGw1AZ/VpnGw2AZ/VpnGw3AZ 또는 ErGw1AZ/ErGw2AZ/ErGw2AZ/ErGw3AZ에서/VpnGw3AZ로/에 대한 추가적 재조정은 허용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="643d1-148">Further resize is not allowed from/to VpnGw1AZ/VpnGw2AZ/VpnGw3AZ or ErGw1AZ/ErGw2AZ/ErGw3AZ.</span></span> <span data-ttu-id="643d1-149">SKU '시리즈' 내에서만 허용됩니다. 예: VpnGw1AZ는 VpnGw2AZ/VpnGw3AZ에서 또는 VpnGw3AZ에서, ErGw1AZ는 ErGw2AZ/ErGw3AZ에서 또는 그에 대한/ErGw3AZ로 또는 그 범위에서 ErGw1AZ로 또는 그에 대한/ErGw3AZ로 또는 그에 대한/ErGw1AZ로 또는 그에 대한 또는 그에 대한 재조정을 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="643d1-149">Resize is allowed only within the SKU 'series' e.g VpnGw1AZ can be resized to/from VpnGw2AZ/VpnGw3AZ and ErGw1AZ can be resized to/from ErGw2AZ/ErGw3AZ.</span></span> <span data-ttu-id="643d1-150">지침을 https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="643d1-150">See https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways for instructions.</span></span>
+## <span data-ttu-id="bc3dd-146">참고 사항</span><span class="sxs-lookup"><span data-stu-id="bc3dd-146">NOTES</span></span>
+<span data-ttu-id="bc3dd-147">Basic/Standard/HighPerformance SKUS에서 새 VpnGw1/VpnGw2/VpnGw3 SKUS로는 변경할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="bc3dd-147">You cannot resize from Basic/Standard/HighPerformance SKUs to the new VpnGw1/VpnGw2/VpnGw3 SKUs.</span></span> <span data-ttu-id="bc3dd-148">VpnGw1AZ/VpnGw2AZ/VpnGw3AZ 또는 ErGw1AZ/ErGw2AZ/ErGw2AZ/ErGw3AZ에서/VpnGw3AZ로/에 대한 추가적 재조정은 허용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="bc3dd-148">Further resize is not allowed from/to VpnGw1AZ/VpnGw2AZ/VpnGw3AZ or ErGw1AZ/ErGw2AZ/ErGw3AZ.</span></span> <span data-ttu-id="bc3dd-149">SKU '시리즈' 내에서만 허용됩니다. 예: VpnGw1AZ는 VpnGw2AZ/VpnGw3AZ에서 또는 VpnGw3AZ에서, ErGw1AZ는 ErGw2AZ/ErGw3AZ에서 또는 그 범위에서 또는 그로/에서의 SKU로만 허용됩니다.</span><span class="sxs-lookup"><span data-stu-id="bc3dd-149">Resize is allowed only within the SKU 'series' e.g VpnGw1AZ can be resized to/from VpnGw2AZ/VpnGw3AZ and ErGw1AZ can be resized to/from ErGw2AZ/ErGw3AZ.</span></span> <span data-ttu-id="bc3dd-150">지침을 https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="bc3dd-150">See https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways for instructions.</span></span>
 
-## <span data-ttu-id="643d1-151">관련 링크</span><span class="sxs-lookup"><span data-stu-id="643d1-151">RELATED LINKS</span></span>
+## <span data-ttu-id="bc3dd-151">관련 링크</span><span class="sxs-lookup"><span data-stu-id="bc3dd-151">RELATED LINKS</span></span>
 
-[<span data-ttu-id="643d1-152">Get-AzVirtualNetworkGateway</span><span class="sxs-lookup"><span data-stu-id="643d1-152">Get-AzVirtualNetworkGateway</span></span>](./Get-AzVirtualNetworkGateway.md)
+[<span data-ttu-id="bc3dd-152">Get-AzVirtualNetworkGateway</span><span class="sxs-lookup"><span data-stu-id="bc3dd-152">Get-AzVirtualNetworkGateway</span></span>](./Get-AzVirtualNetworkGateway.md)
 
-[<span data-ttu-id="643d1-153">New-AzVirtualNetworkGateway</span><span class="sxs-lookup"><span data-stu-id="643d1-153">New-AzVirtualNetworkGateway</span></span>](./New-AzVirtualNetworkGateway.md)
+[<span data-ttu-id="bc3dd-153">New-AzVirtualNetworkGateway</span><span class="sxs-lookup"><span data-stu-id="bc3dd-153">New-AzVirtualNetworkGateway</span></span>](./New-AzVirtualNetworkGateway.md)
 
-[<span data-ttu-id="643d1-154">Remove-AzVirtualNetworkGateway</span><span class="sxs-lookup"><span data-stu-id="643d1-154">Remove-AzVirtualNetworkGateway</span></span>](./Remove-AzVirtualNetworkGateway.md)
+[<span data-ttu-id="bc3dd-154">Remove-AzVirtualNetworkGateway</span><span class="sxs-lookup"><span data-stu-id="bc3dd-154">Remove-AzVirtualNetworkGateway</span></span>](./Remove-AzVirtualNetworkGateway.md)
 
-[<span data-ttu-id="643d1-155">Reset-AzVirtualNetworkGateway</span><span class="sxs-lookup"><span data-stu-id="643d1-155">Reset-AzVirtualNetworkGateway</span></span>](./Reset-AzVirtualNetworkGateway.md)
+[<span data-ttu-id="bc3dd-155">Reset-AzVirtualNetworkGateway</span><span class="sxs-lookup"><span data-stu-id="bc3dd-155">Reset-AzVirtualNetworkGateway</span></span>](./Reset-AzVirtualNetworkGateway.md)
 
-[<span data-ttu-id="643d1-156">Set-AzVirtualNetworkGateway</span><span class="sxs-lookup"><span data-stu-id="643d1-156">Set-AzVirtualNetworkGateway</span></span>](./Set-AzVirtualNetworkGateway.md)
+[<span data-ttu-id="bc3dd-156">Set-AzVirtualNetworkGateway</span><span class="sxs-lookup"><span data-stu-id="bc3dd-156">Set-AzVirtualNetworkGateway</span></span>](./Set-AzVirtualNetworkGateway.md)
 
-[<span data-ttu-id="643d1-157">Get-AzVpnClientPackage</span><span class="sxs-lookup"><span data-stu-id="643d1-157">Get-AzVpnClientPackage</span></span>](./Get-AzVpnClientPackage.md)
+[<span data-ttu-id="bc3dd-157">Get-AzVpnClientPackage</span><span class="sxs-lookup"><span data-stu-id="bc3dd-157">Get-AzVpnClientPackage</span></span>](./Get-AzVpnClientPackage.md)
 
-[<span data-ttu-id="643d1-158">Set-AzVirtualNetworkGatewayVpnClientConfig</span><span class="sxs-lookup"><span data-stu-id="643d1-158">Set-AzVirtualNetworkGatewayVpnClientConfig</span></span>](./Set-AzVirtualNetworkGatewayVpnClientConfig.md)
