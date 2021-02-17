@@ -6,49 +6,49 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.notificati
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHubListKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHubListKey.md
-ms.openlocfilehash: b8fdacf86de0e85c6f0ce241e743fc73066beb71
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 81e246162fc6c28cb23fa3015f92e43116759b4b
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94034789"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100413288"
 ---
-# <span data-ttu-id="36a84-101">Get-AzNotificationHubListKey</span><span class="sxs-lookup"><span data-stu-id="36a84-101">Get-AzNotificationHubListKey</span></span>
+# <span data-ttu-id="ad757-101">Get-AzNotificationHubListKey</span><span class="sxs-lookup"><span data-stu-id="ad757-101">Get-AzNotificationHubListKey</span></span>
 
-## <span data-ttu-id="36a84-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="36a84-102">SYNOPSIS</span></span>
-<span data-ttu-id="36a84-103">알림 허브 권한 부여 규칙과 연결 된 기본 및 보조 연결 문자열을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="36a84-103">Gets the primary and secondary connection strings associated with a notification hub authorization rule.</span></span>
+## <span data-ttu-id="ad757-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="ad757-102">SYNOPSIS</span></span>
+<span data-ttu-id="ad757-103">알림 허브 권한 부여 규칙과 연결된 기본 및 보조 연결 문자열을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="ad757-103">Gets the primary and secondary connection strings associated with a notification hub authorization rule.</span></span>
 
-## <span data-ttu-id="36a84-104">구문과</span><span class="sxs-lookup"><span data-stu-id="36a84-104">SYNTAX</span></span>
+## <span data-ttu-id="ad757-104">구문</span><span class="sxs-lookup"><span data-stu-id="ad757-104">SYNTAX</span></span>
 
 ```
 Get-AzNotificationHubListKey [-ResourceGroup] <String> [-Namespace] <String> [-NotificationHub] <String>
  [-AuthorizationRule] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="36a84-105">설명은</span><span class="sxs-lookup"><span data-stu-id="36a84-105">DESCRIPTION</span></span>
-<span data-ttu-id="36a84-106">**AzNotificationHubListKey** cmdlet은 알림 허브 Sa (공유 액세스 서명) 권한 부여 규칙의 기본 및 보조 연결 문자열을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="36a84-106">The **Get-AzNotificationHubListKey** cmdlet returns the primary and secondary connection strings of a notification hub Shared Access Signature (SAS) authorization rule.</span></span>
-<span data-ttu-id="36a84-107">권한 부여 규칙은 허브에 대 한 사용자 권한을 관리 합니다.</span><span class="sxs-lookup"><span data-stu-id="36a84-107">Authorization rules manage user rights to the hub.</span></span>
-<span data-ttu-id="36a84-108">각 규칙에는 기본 및 보조 연결 문자열이 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="36a84-108">Each rule includes a primary and a secondary connection string.</span></span>
-<span data-ttu-id="36a84-109">이러한 연결 문자열 (Uri)은 다음을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="36a84-109">These connection strings (URIs) perform the following:</span></span>
-- <span data-ttu-id="36a84-110">사용자를 리소스에 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="36a84-110">Point users to a resource.</span></span>
-- <span data-ttu-id="36a84-111">쿼리 매개 변수를 포함 하는 토큰을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="36a84-111">Include a token containing query parameters.</span></span>
-<span data-ttu-id="36a84-112">이러한 매개 변수 중 하나인 시그니처는 사용자를 인증 하 고 지정 된 수준의 액세스를 제공 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="36a84-112">One of these parameters, the signature, is used to authenticate the user and provide the specified level of access.</span></span>
+## <span data-ttu-id="ad757-105">설명</span><span class="sxs-lookup"><span data-stu-id="ad757-105">DESCRIPTION</span></span>
+<span data-ttu-id="ad757-106">**Get-AzNotificationHubListKey** cmdlet은 알림 허브 SAS(공유 액세스 서명) 권한 부여 규칙의 기본 및 보조 연결 문자열을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="ad757-106">The **Get-AzNotificationHubListKey** cmdlet returns the primary and secondary connection strings of a notification hub Shared Access Signature (SAS) authorization rule.</span></span>
+<span data-ttu-id="ad757-107">권한 부여 규칙은 허브에 대한 사용자 권한을 관리합니다.</span><span class="sxs-lookup"><span data-stu-id="ad757-107">Authorization rules manage user rights to the hub.</span></span>
+<span data-ttu-id="ad757-108">각 규칙에는 기본 및 보조 연결 문자열이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="ad757-108">Each rule includes a primary and a secondary connection string.</span></span>
+<span data-ttu-id="ad757-109">이러한 연결 문자열(UR)은 다음을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="ad757-109">These connection strings (URIs) perform the following:</span></span>
+- <span data-ttu-id="ad757-110">사용자가 리소스를 보게 합니다.</span><span class="sxs-lookup"><span data-stu-id="ad757-110">Point users to a resource.</span></span>
+- <span data-ttu-id="ad757-111">쿼리 매개 변수를 포함하는 토큰을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="ad757-111">Include a token containing query parameters.</span></span>
+<span data-ttu-id="ad757-112">이러한 매개 변수 중 하나인 서명은 사용자를 인증하고 지정된 수준의 액세스를 제공하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ad757-112">One of these parameters, the signature, is used to authenticate the user and provide the specified level of access.</span></span>
 
-## <span data-ttu-id="36a84-113">예제의</span><span class="sxs-lookup"><span data-stu-id="36a84-113">EXAMPLES</span></span>
+## <span data-ttu-id="ad757-113">예제</span><span class="sxs-lookup"><span data-stu-id="ad757-113">EXAMPLES</span></span>
 
-### <span data-ttu-id="36a84-114">예제 1: 권한 부여 규칙에 대 한 기본 및 보조 연결 문자열 가져오기</span><span class="sxs-lookup"><span data-stu-id="36a84-114">Example 1: Get the primary and secondary connection strings for an authorization rule</span></span>
+### <span data-ttu-id="ad757-114">예제 1: 권한 부여 규칙에 대한 기본 및 보조 연결 문자열을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="ad757-114">Example 1: Get the primary and secondary connection strings for an authorization rule</span></span>
 ```
 PS C:\>Get-AzNotificationHubListKey -Namespace "ContosoNamespace" -NotificationHub "ContosoInternalHub" -ResourceGroup "ContosoNotificationsGroup" -AuthorizationRule "ListenRule"
 ```
 
-<span data-ttu-id="36a84-115">이 명령은 ContosoInternalHub 알림 허브에 할당 된 규칙 인 권한 부여 규칙 ListenRule에 대 한 기본 및 보조 연결 문자열을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="36a84-115">This command gets the primary and secondary connection strings for the authorization rule ListenRule, a rule assigned to the ContosoInternalHub notification hub.</span></span>
-<span data-ttu-id="36a84-116">명령에 허브 네임 스페이스 및 리소스 그룹이 포함 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="36a84-116">The command must include the hub namespace and resource group.</span></span>
+<span data-ttu-id="ad757-115">이 명령은 ContosoInternalHub 알림 허브에 할당된 규칙인 ListenRule 권한 부여 규칙에 대한 기본 및 보조 연결 문자열을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="ad757-115">This command gets the primary and secondary connection strings for the authorization rule ListenRule, a rule assigned to the ContosoInternalHub notification hub.</span></span>
+<span data-ttu-id="ad757-116">명령에는 허브 네임스페이스 및 리소스 그룹이 포함되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ad757-116">The command must include the hub namespace and resource group.</span></span>
 
-## <span data-ttu-id="36a84-117">변수</span><span class="sxs-lookup"><span data-stu-id="36a84-117">PARAMETERS</span></span>
+## <span data-ttu-id="ad757-117">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="ad757-117">PARAMETERS</span></span>
 
-### <span data-ttu-id="36a84-118">-AuthorizationRule</span><span class="sxs-lookup"><span data-stu-id="36a84-118">-AuthorizationRule</span></span>
-<span data-ttu-id="36a84-119">SA (공유 액세스 서명) 인증 규칙의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="36a84-119">Specifies the name of a Shared Access Signature (SAS) authentication rule.</span></span>
-<span data-ttu-id="36a84-120">이러한 규칙은 사용자가 알림 허브에 대해 갖는 액세스 유형을 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="36a84-120">These rules determine the type of access that users have to the notification hub.</span></span>
+### <span data-ttu-id="ad757-118">-AuthorizationRule</span><span class="sxs-lookup"><span data-stu-id="ad757-118">-AuthorizationRule</span></span>
+<span data-ttu-id="ad757-119">SAS(공유 액세스 서명) 인증 규칙의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ad757-119">Specifies the name of a Shared Access Signature (SAS) authentication rule.</span></span>
+<span data-ttu-id="ad757-120">이러한 규칙은 사용자가 알림 허브에 대한 액세스 유형을 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="ad757-120">These rules determine the type of access that users have to the notification hub.</span></span>
 
 ```yaml
 Type: System.String
@@ -62,8 +62,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="36a84-121">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="36a84-121">-DefaultProfile</span></span>
-<span data-ttu-id="36a84-122">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독</span><span class="sxs-lookup"><span data-stu-id="36a84-122">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+### <span data-ttu-id="ad757-121">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="ad757-121">-DefaultProfile</span></span>
+<span data-ttu-id="ad757-122">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독</span><span class="sxs-lookup"><span data-stu-id="ad757-122">The credentials, account, tenant, and subscription used for communication with azure</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -77,9 +77,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="36a84-123">-Namespace</span><span class="sxs-lookup"><span data-stu-id="36a84-123">-Namespace</span></span>
-<span data-ttu-id="36a84-124">알림 허브가 할당 된 네임 스페이스를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="36a84-124">Specifies the namespace to which the notification hub is assigned.</span></span>
-<span data-ttu-id="36a84-125">네임 스페이스는 알림 허브를 그룹화 하 고 분류 하는 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="36a84-125">Namespaces provide a way to group and categorize notification hubs.</span></span>
+### <span data-ttu-id="ad757-123">-Namespace</span><span class="sxs-lookup"><span data-stu-id="ad757-123">-Namespace</span></span>
+<span data-ttu-id="ad757-124">알림 허브가 할당된 네임스페이스를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ad757-124">Specifies the namespace to which the notification hub is assigned.</span></span>
+<span data-ttu-id="ad757-125">네임스페이스는 알림 허브를 그룹화하고 분류하는 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ad757-125">Namespaces provide a way to group and categorize notification hubs.</span></span>
 
 ```yaml
 Type: System.String
@@ -93,9 +93,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="36a84-126">-NotificationHub</span><span class="sxs-lookup"><span data-stu-id="36a84-126">-NotificationHub</span></span>
-<span data-ttu-id="36a84-127">이 cmdlet이 권한 부여 규칙을 할당 하는 알림 허브를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="36a84-127">Specifies the notification hub that this cmdlet assigns an authorization rule to.</span></span>
-<span data-ttu-id="36a84-128">알림 허브는 해당 클라이언트에서 사용 하는 플랫폼에 관계 없이 여러 클라이언트로 푸시 알림을 보내는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="36a84-128">Notification hubs are used to send push notifications to multiple clients regardless of the platform used by those clients.</span></span>
+### <span data-ttu-id="ad757-126">-NotificationHub</span><span class="sxs-lookup"><span data-stu-id="ad757-126">-NotificationHub</span></span>
+<span data-ttu-id="ad757-127">이 cmdlet이 권한 부여 규칙을 할당하는 알림 허브를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ad757-127">Specifies the notification hub that this cmdlet assigns an authorization rule to.</span></span>
+<span data-ttu-id="ad757-128">알림 허브는 해당 클라이언트에서 사용하는 플랫폼에 관계없이 여러 클라이언트에 푸시 알림을 보내는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ad757-128">Notification hubs are used to send push notifications to multiple clients regardless of the platform used by those clients.</span></span>
 
 ```yaml
 Type: System.String
@@ -109,9 +109,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="36a84-129">-ResourceGroup</span><span class="sxs-lookup"><span data-stu-id="36a84-129">-ResourceGroup</span></span>
-<span data-ttu-id="36a84-130">알림 허브가 할당 된 리소스 그룹을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="36a84-130">Specifies the resource group to which the notification hub is assigned.</span></span>
-<span data-ttu-id="36a84-131">리소스 그룹은 관리 및 Azure 관리를 쉽게 할 수 있는 방식으로 네임 스페이스, 알림 허브, 권한 부여 규칙 등의 항목을 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="36a84-131">Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.</span></span>
+### <span data-ttu-id="ad757-129">-ResourceGroup</span><span class="sxs-lookup"><span data-stu-id="ad757-129">-ResourceGroup</span></span>
+<span data-ttu-id="ad757-130">알림 허브가 할당된 리소스 그룹을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ad757-130">Specifies the resource group to which the notification hub is assigned.</span></span>
+<span data-ttu-id="ad757-131">리소스 그룹은 인벤토리 관리 및 Azure 관리에 도움이 되는 방식으로 네임스페이스, 알림 허브 및 권한 부여 규칙과 같은 항목을 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="ad757-131">Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.</span></span>
 
 ```yaml
 Type: System.String
@@ -125,21 +125,20 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="36a84-132">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="36a84-132">CommonParameters</span></span>
-<span data-ttu-id="36a84-133">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="36a84-133">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="36a84-134">자세한 내용은 about_CommonParameters (을 참조 하세요 http://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="36a84-134">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="ad757-132">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="ad757-132">CommonParameters</span></span>
+<span data-ttu-id="ad757-133">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="ad757-133">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="ad757-134">자세한 내용은 다음 about_CommonParameters http://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ad757-134">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="36a84-135">입력</span><span class="sxs-lookup"><span data-stu-id="36a84-135">INPUTS</span></span>
+## <span data-ttu-id="ad757-135">입력</span><span class="sxs-lookup"><span data-stu-id="ad757-135">INPUTS</span></span>
 
-### <span data-ttu-id="36a84-136">System. 문자열</span><span class="sxs-lookup"><span data-stu-id="36a84-136">System.String</span></span>
+### <span data-ttu-id="ad757-136">System.String</span><span class="sxs-lookup"><span data-stu-id="ad757-136">System.String</span></span>
 
-## <span data-ttu-id="36a84-137">출력</span><span class="sxs-lookup"><span data-stu-id="36a84-137">OUTPUTS</span></span>
+## <span data-ttu-id="ad757-137">출력</span><span class="sxs-lookup"><span data-stu-id="ad757-137">OUTPUTS</span></span>
 
-### <span data-ttu-id="36a84-138">Microsoft. 관리.. i g m. 목록 키</span><span class="sxs-lookup"><span data-stu-id="36a84-138">Microsoft.Azure.Management.NotificationHubs.Models.ResourceListKeys</span></span>
+### <span data-ttu-id="ad757-138">Microsoft.Azure.Management.NotificationHubs.Models.ResourceListKeys</span><span class="sxs-lookup"><span data-stu-id="ad757-138">Microsoft.Azure.Management.NotificationHubs.Models.ResourceListKeys</span></span>
 
-## <span data-ttu-id="36a84-139">상속자</span><span class="sxs-lookup"><span data-stu-id="36a84-139">NOTES</span></span>
+## <span data-ttu-id="ad757-139">참고 사항</span><span class="sxs-lookup"><span data-stu-id="ad757-139">NOTES</span></span>
 
-## <span data-ttu-id="36a84-140">관련 링크</span><span class="sxs-lookup"><span data-stu-id="36a84-140">RELATED LINKS</span></span>
+## <span data-ttu-id="ad757-140">관련 링크</span><span class="sxs-lookup"><span data-stu-id="ad757-140">RELATED LINKS</span></span>
 
-[<span data-ttu-id="36a84-141">Get-AzNotificationHubAuthorizationRules</span><span class="sxs-lookup"><span data-stu-id="36a84-141">Get-AzNotificationHubAuthorizationRules</span></span>](./Get-AzNotificationHubAuthorizationRules.md)
 
 

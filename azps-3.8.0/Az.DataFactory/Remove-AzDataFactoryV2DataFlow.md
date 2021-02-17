@@ -5,45 +5,45 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.datafactor
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Remove-AzDataFactoryV2DataFlow.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Remove-AzDataFactoryV2DataFlow.md
-ms.openlocfilehash: 8b5b9e8cfd1909b0d91627a2c0600620f264da78
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: b441c354214775f3f6aad425513a953fbefe7810
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94033932"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100410976"
 ---
-# <span data-ttu-id="abeb0-101">Remove-AzDataFactoryV2DataFlow</span><span class="sxs-lookup"><span data-stu-id="abeb0-101">Remove-AzDataFactoryV2DataFlow</span></span>
+# <span data-ttu-id="0c6b1-101">Remove-AzDataFactoryV2DataFlow</span><span class="sxs-lookup"><span data-stu-id="0c6b1-101">Remove-AzDataFactoryV2DataFlow</span></span>
 
-## <span data-ttu-id="abeb0-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="abeb0-102">SYNOPSIS</span></span>
-<span data-ttu-id="abeb0-103">Data Factory에서 데이터 흐름을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="abeb0-103">Removes a data flow from Data Factory.</span></span>
+## <span data-ttu-id="0c6b1-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="0c6b1-102">SYNOPSIS</span></span>
+<span data-ttu-id="0c6b1-103">Data Factory에서 데이터 흐름을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="0c6b1-103">Removes a data flow from Data Factory.</span></span>
 
-## <span data-ttu-id="abeb0-104">구문과</span><span class="sxs-lookup"><span data-stu-id="abeb0-104">SYNTAX</span></span>
+## <span data-ttu-id="0c6b1-104">구문</span><span class="sxs-lookup"><span data-stu-id="0c6b1-104">SYNTAX</span></span>
 
-### <span data-ttu-id="abeb0-105">ByFactoryName (기본값)</span><span class="sxs-lookup"><span data-stu-id="abeb0-105">ByFactoryName (Default)</span></span>
+### <span data-ttu-id="0c6b1-105">ByFactoryName(기본값)</span><span class="sxs-lookup"><span data-stu-id="0c6b1-105">ByFactoryName (Default)</span></span>
 ```
 Remove-AzDataFactoryV2DataFlow [-Name] <String> [-Force] [-ResourceGroupName] <String>
  [-DataFactoryName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
-### <span data-ttu-id="abeb0-106">ByInputObject</span><span class="sxs-lookup"><span data-stu-id="abeb0-106">ByInputObject</span></span>
+### <span data-ttu-id="0c6b1-106">ByInputObject</span><span class="sxs-lookup"><span data-stu-id="0c6b1-106">ByInputObject</span></span>
 ```
 Remove-AzDataFactoryV2DataFlow [-InputObject] <PSDataset> [-Force] [-DefaultProfile <IAzureContextContainer>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="abeb0-107">ByResourceId</span><span class="sxs-lookup"><span data-stu-id="abeb0-107">ByResourceId</span></span>
+### <span data-ttu-id="0c6b1-107">ByResourceId</span><span class="sxs-lookup"><span data-stu-id="0c6b1-107">ByResourceId</span></span>
 ```
 Remove-AzDataFactoryV2DataFlow [-Force] [-ResourceId] <String> [-DefaultProfile <IAzureContextContainer>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="abeb0-108">설명은</span><span class="sxs-lookup"><span data-stu-id="abeb0-108">DESCRIPTION</span></span>
-<span data-ttu-id="abeb0-109">Remove-AzDataFactoryV2DataFlow cmdlet은 Azure Data Factory에서 데이터 흐름을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="abeb0-109">The Remove-AzDataFactoryV2DataFlow cmdlet removes a data flow from Azure Data Factory.</span></span>
+## <span data-ttu-id="0c6b1-108">설명</span><span class="sxs-lookup"><span data-stu-id="0c6b1-108">DESCRIPTION</span></span>
+<span data-ttu-id="0c6b1-109">이 Remove-AzDataFactoryV2DataFlow cmdlet은 Azure Data Factory에서 데이터 흐름을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="0c6b1-109">The Remove-AzDataFactoryV2DataFlow cmdlet removes a data flow from Azure Data Factory.</span></span>
 
-## <span data-ttu-id="abeb0-110">예제의</span><span class="sxs-lookup"><span data-stu-id="abeb0-110">EXAMPLES</span></span>
+## <span data-ttu-id="0c6b1-110">예제</span><span class="sxs-lookup"><span data-stu-id="0c6b1-110">EXAMPLES</span></span>
 
-### <span data-ttu-id="abeb0-111">예제 1</span><span class="sxs-lookup"><span data-stu-id="abeb0-111">Example 1</span></span>
+### <span data-ttu-id="0c6b1-111">예제 1</span><span class="sxs-lookup"><span data-stu-id="0c6b1-111">Example 1</span></span>
 ```powershell
 PS C:\WINDOWS\system32> Remove-AzDataFactoryV2DataFlow -ResourceGroupName adf -DataFactoryName WikiADF -DataFlowName "dataflow5"
 
@@ -53,12 +53,12 @@ Are you sure you want to remove data flow 'dataflow5' in data factory 'WikiADF'?
 PS C:\WINDOWS\system32>
 ```
 
-<span data-ttu-id="abeb0-112">이 명령은 WikiADF 이라는 data factory에서 dataflow5 라는 데이터 흐름을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="abeb0-112">This command removes the data flow named dataflow5 from the data factory named WikiADF.</span></span>
+<span data-ttu-id="0c6b1-112">이 명령은 WikiADF라는 데이터 팩터리에서 dataflow5라는 데이터 흐름을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="0c6b1-112">This command removes the data flow named dataflow5 from the data factory named WikiADF.</span></span>
 
-## <span data-ttu-id="abeb0-113">변수</span><span class="sxs-lookup"><span data-stu-id="abeb0-113">PARAMETERS</span></span>
+## <span data-ttu-id="0c6b1-113">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="0c6b1-113">PARAMETERS</span></span>
 
-### <span data-ttu-id="abeb0-114">-DataFactoryName</span><span class="sxs-lookup"><span data-stu-id="abeb0-114">-DataFactoryName</span></span>
-<span data-ttu-id="abeb0-115">Data factory 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="abeb0-115">The data factory name.</span></span>
+### <span data-ttu-id="0c6b1-114">-DataFactoryName</span><span class="sxs-lookup"><span data-stu-id="0c6b1-114">-DataFactoryName</span></span>
+<span data-ttu-id="0c6b1-115">데이터 팩터리 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="0c6b1-115">The data factory name.</span></span>
 
 ```yaml
 Type: System.String
@@ -72,8 +72,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abeb0-116">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="abeb0-116">-DefaultProfile</span></span>
-<span data-ttu-id="abeb0-117">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="abeb0-117">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+### <span data-ttu-id="0c6b1-116">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="0c6b1-116">-DefaultProfile</span></span>
+<span data-ttu-id="0c6b1-117">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="0c6b1-117">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -87,8 +87,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abeb0-118">-Force</span><span class="sxs-lookup"><span data-stu-id="abeb0-118">-Force</span></span>
-<span data-ttu-id="abeb0-119">확인 메시지를 표시 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="abeb0-119">Don't ask for confirmation.</span></span>
+### <span data-ttu-id="0c6b1-118">-Force</span><span class="sxs-lookup"><span data-stu-id="0c6b1-118">-Force</span></span>
+<span data-ttu-id="0c6b1-119">확인을 요청하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0c6b1-119">Don't ask for confirmation.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -102,8 +102,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abeb0-120">-InputObject</span><span class="sxs-lookup"><span data-stu-id="abeb0-120">-InputObject</span></span>
-<span data-ttu-id="abeb0-121">데이터 흐름 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="abeb0-121">The data flow object.</span></span>
+### <span data-ttu-id="0c6b1-120">-InputObject</span><span class="sxs-lookup"><span data-stu-id="0c6b1-120">-InputObject</span></span>
+<span data-ttu-id="0c6b1-121">데이터 흐름 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="0c6b1-121">The data flow object.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataset
@@ -117,8 +117,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abeb0-122">-이름</span><span class="sxs-lookup"><span data-stu-id="abeb0-122">-Name</span></span>
-<span data-ttu-id="abeb0-123">데이터 흐름 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="abeb0-123">The data flow name.</span></span>
+### <span data-ttu-id="0c6b1-122">-Name</span><span class="sxs-lookup"><span data-stu-id="0c6b1-122">-Name</span></span>
+<span data-ttu-id="0c6b1-123">데이터 흐름 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="0c6b1-123">The data flow name.</span></span>
 
 ```yaml
 Type: System.String
@@ -132,8 +132,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abeb0-124">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="abeb0-124">-ResourceGroupName</span></span>
-<span data-ttu-id="abeb0-125">리소스 그룹 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="abeb0-125">The resource group name.</span></span>
+### <span data-ttu-id="0c6b1-124">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="0c6b1-124">-ResourceGroupName</span></span>
+<span data-ttu-id="0c6b1-125">리소스 그룹 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="0c6b1-125">The resource group name.</span></span>
 
 ```yaml
 Type: System.String
@@ -147,8 +147,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abeb0-126">-ResourceId</span><span class="sxs-lookup"><span data-stu-id="abeb0-126">-ResourceId</span></span>
-<span data-ttu-id="abeb0-127">Azure 리소스 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="abeb0-127">The Azure resource ID.</span></span>
+### <span data-ttu-id="0c6b1-126">-ResourceId</span><span class="sxs-lookup"><span data-stu-id="0c6b1-126">-ResourceId</span></span>
+<span data-ttu-id="0c6b1-127">Azure 리소스 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="0c6b1-127">The Azure resource ID.</span></span>
 
 ```yaml
 Type: System.String
@@ -162,8 +162,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abeb0-128">-PassThru</span><span class="sxs-lookup"><span data-stu-id="abeb0-128">-PassThru</span></span>
-<span data-ttu-id="abeb0-129">지정 된 경우 대/소문자 구분 작업이 성공한 경우 true를 씁니다.</span><span class="sxs-lookup"><span data-stu-id="abeb0-129">If specified will write true in case operation succeeds.</span></span> <span data-ttu-id="abeb0-130">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="abeb0-130">This parameter is optional.</span></span>
+### <span data-ttu-id="0c6b1-128">-PassThru</span><span class="sxs-lookup"><span data-stu-id="0c6b1-128">-PassThru</span></span>
+<span data-ttu-id="0c6b1-129">지정된 경우 작업이 성공하는 경우 true를 기록합니다.</span><span class="sxs-lookup"><span data-stu-id="0c6b1-129">If specified will write true in case operation succeeds.</span></span> <span data-ttu-id="0c6b1-130">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="0c6b1-130">This parameter is optional.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -177,8 +177,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abeb0-131">-확인</span><span class="sxs-lookup"><span data-stu-id="abeb0-131">-Confirm</span></span>
-<span data-ttu-id="abeb0-132">Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="abeb0-132">Prompts you for confirmation before running the cmdlet.</span></span>
+### <span data-ttu-id="0c6b1-131">-Confirm</span><span class="sxs-lookup"><span data-stu-id="0c6b1-131">-Confirm</span></span>
+<span data-ttu-id="0c6b1-132">cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="0c6b1-132">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -192,9 +192,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abeb0-133">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="abeb0-133">-WhatIf</span></span>
-<span data-ttu-id="abeb0-134">Cmdlet이 실행 되는 경우의 동작을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="abeb0-134">Shows what would happen if the cmdlet runs.</span></span>
-<span data-ttu-id="abeb0-135">Cmdlet이 실행 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="abeb0-135">The cmdlet is not run.</span></span>
+### <span data-ttu-id="0c6b1-133">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="0c6b1-133">-WhatIf</span></span>
+<span data-ttu-id="0c6b1-134">cmdlet이 실행되는 경우의 결과 표시</span><span class="sxs-lookup"><span data-stu-id="0c6b1-134">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="0c6b1-135">cmdlet이 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0c6b1-135">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -208,27 +208,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="abeb0-136">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="abeb0-136">CommonParameters</span></span>
-<span data-ttu-id="abeb0-137">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="abeb0-137">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="abeb0-138">자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="abeb0-138">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="0c6b1-136">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="0c6b1-136">CommonParameters</span></span>
+<span data-ttu-id="0c6b1-137">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="0c6b1-137">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="0c6b1-138">자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.</span><span class="sxs-lookup"><span data-stu-id="0c6b1-138">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="abeb0-139">입력</span><span class="sxs-lookup"><span data-stu-id="abeb0-139">INPUTS</span></span>
+## <span data-ttu-id="0c6b1-139">입력</span><span class="sxs-lookup"><span data-stu-id="0c6b1-139">INPUTS</span></span>
 
-### <span data-ttu-id="abeb0-140">Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataset</span><span class="sxs-lookup"><span data-stu-id="abeb0-140">Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataset</span></span>
+### <span data-ttu-id="0c6b1-140">Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataset</span><span class="sxs-lookup"><span data-stu-id="0c6b1-140">Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataset</span></span>
 
-### <span data-ttu-id="abeb0-141">System. 문자열</span><span class="sxs-lookup"><span data-stu-id="abeb0-141">System.String</span></span>
+### <span data-ttu-id="0c6b1-141">System.String</span><span class="sxs-lookup"><span data-stu-id="0c6b1-141">System.String</span></span>
 
-## <span data-ttu-id="abeb0-142">출력</span><span class="sxs-lookup"><span data-stu-id="abeb0-142">OUTPUTS</span></span>
+## <span data-ttu-id="0c6b1-142">출력</span><span class="sxs-lookup"><span data-stu-id="0c6b1-142">OUTPUTS</span></span>
 
-### <span data-ttu-id="abeb0-143">시스템. i a o</span><span class="sxs-lookup"><span data-stu-id="abeb0-143">System.Void</span></span>
+### <span data-ttu-id="0c6b1-143">System.Void</span><span class="sxs-lookup"><span data-stu-id="0c6b1-143">System.Void</span></span>
 
-### <span data-ttu-id="abeb0-144">시스템 부울</span><span class="sxs-lookup"><span data-stu-id="abeb0-144">System.Boolean</span></span>
+### <span data-ttu-id="0c6b1-144">System.Boolean</span><span class="sxs-lookup"><span data-stu-id="0c6b1-144">System.Boolean</span></span>
 
-## <span data-ttu-id="abeb0-145">상속자</span><span class="sxs-lookup"><span data-stu-id="abeb0-145">NOTES</span></span>
-<span data-ttu-id="abeb0-146">키워드: azure, azurerm, arm, resource, 관리, manager, data, 팩토리</span><span class="sxs-lookup"><span data-stu-id="abeb0-146">Keywords: azure, azurerm, arm, resource, management, manager, data, factories</span></span>
+## <span data-ttu-id="0c6b1-145">참고 사항</span><span class="sxs-lookup"><span data-stu-id="0c6b1-145">NOTES</span></span>
+<span data-ttu-id="0c6b1-146">키워드: azure, azurerm, arm, 리소스, 관리, 관리자, 데이터, 팩터리</span><span class="sxs-lookup"><span data-stu-id="0c6b1-146">Keywords: azure, azurerm, arm, resource, management, manager, data, factories</span></span>
 
-## <span data-ttu-id="abeb0-147">관련 링크</span><span class="sxs-lookup"><span data-stu-id="abeb0-147">RELATED LINKS</span></span>
+## <span data-ttu-id="0c6b1-147">관련 링크</span><span class="sxs-lookup"><span data-stu-id="0c6b1-147">RELATED LINKS</span></span>
 
-[<span data-ttu-id="abeb0-148">Get-AzDataFactoryDataFlow</span><span class="sxs-lookup"><span data-stu-id="abeb0-148">Get-AzDataFactoryDataFlow</span></span>](./Get-AzDataFactoryDataFlow.md)
 
-[<span data-ttu-id="abeb0-149">Set-AzDataFactoryDataFlow</span><span class="sxs-lookup"><span data-stu-id="abeb0-149">Set-AzDataFactoryDataFlow</span></span>](./Set-AzDataFactoryDataFlow.md)
 
