@@ -6,21 +6,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzActionGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzActionGroup.md
-ms.openlocfilehash: c77585666187e9b55c14de1699140ca2f5cc6288
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 36d6a7ecb37338b12b68a37b07121a6ff376dd24
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93867341"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100403190"
 ---
 # Get-AzActionGroup
 
 ## SYNOPSIS
-작업 그룹을 가져옵니다.
+작업 그룹을 얻습니다.
 
-## 구문과
+## 구문
 
-### BySubscriptionOrResourceGroup (기본값)
+### BySubscriptionOrResourceGroup(기본값)
 ```
 Get-AzActionGroup [-ResourceGroupName <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
@@ -31,36 +31,36 @@ Get-AzActionGroup -ResourceGroupName <String> -Name <String> [-DefaultProfile <I
  [<CommonParameters>]
 ```
 
-## 설명은
-**Get-AzActionGroup** cmdlet은 하나 이상의 작업 그룹을 가져옵니다.
+## 설명
+**Get-AzActionGroup** cmdlet은 하나 이상의 작업 그룹을 얻습니다.
 
-## 예제의
+## 예제
 
-### 예제 1: 구독 ID를 기준으로 작업 그룹 가져오기
+### 예제 1: 구독 ID로 작업 그룹 얻기
 ```
 PS C:\>Get-AzActionGroup
 ```
 
-이 명령은 현재 구독에 대 한 모든 작업 그룹을 나열 합니다.
+이 명령은 현재 구독에 대한 모든 작업 그룹을 나열합니다.
 
-### 예제 2: 지정 된 리소스 그룹에 대 한 작업 그룹 가져오기
+### 예제 2: 주어진 리소스 그룹에 대한 작업 그룹 얻기
 ```
 PS C:\>Get-AzActionGroup -ResourceGroup "Default-activityLogAlerts"
 ```
 
-이 명령은 지정 된 리소스 그룹에 대 한 작업 그룹을 나열 합니다.
+이 명령은 주어진 리소스 그룹에 대한 작업 그룹을 나열합니다.
 
-### 예제 3: 작업 그룹 가져오기
+### 예제 3: 작업 그룹을 얻습니다.
 ```
 PS C:\>Get-AzActionGroup -ResourceGroup "Default-activityLogAlerts" -Name "actionGroup1"
 ```
 
-이 명령은 하나 (단일 요소를 포함 하는 목록) 작업 그룹을 나열 합니다.
+이 명령은 하나의 작업 그룹(단일 요소가 있는 목록)을 나열합니다.
 
-## 변수
+## PARAMETERS
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -74,7 +74,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -이름
+### -Name
 작업 그룹의 이름입니다.
 
 ```yaml
@@ -117,20 +117,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 다음 about_CommonParameters https://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.
 
 ## 입력
 
-### System. 문자열
+### System.String
 
 ## 출력
 
-### . Psactiongrou보도 정보 클래스.
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSActionGroupResource
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
 [Set-AzActionGroup](./Set-AzActionGroup.md) 
- [제거-AzActionGroup](./Remove-AzActionGroup.md) 
- [새로운 AzActionGroupReceiver](./AzureRmActionGroupReceiver.md)
+ [Remove-AzActionGroup](./Remove-AzActionGroup.md) 
+ [New-AzActionGroupReceiver](./New-AzActionGroupReceiver.md)

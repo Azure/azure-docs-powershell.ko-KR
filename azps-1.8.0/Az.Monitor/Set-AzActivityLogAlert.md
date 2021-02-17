@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/se
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Set-AzActivityLogAlert.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Set-AzActivityLogAlert.md
-ms.openlocfilehash: 0813f91a3d82a40bc5b8d02c0a1e3f9579e0067a
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 6c7b867add359edec8379f20e630c9aca5fed00e
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93700787"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100402884"
 ---
 # Set-AzActivityLogAlert
 
 ## SYNOPSIS
-기존 활동 로그 알림을 새로 만들거나 설정 합니다.
+새 활동 로그 경고를 생성하거나 기존 활동 로그 경고를 설정합니다.
 
-## 구문과
+## 구문
 
 ### SetByNameAndResourceGroup
 ```
@@ -51,15 +51,15 @@ Set-AzActivityLogAlert [-Scope <System.Collections.Generic.List`1[System.String]
  [<CommonParameters>]
 ```
 
-## 설명은
-**AzActivityLogAlert** cmdlet은 새 작업을 만들거나 기존 활동 로그 알림을 설정 합니다.
-태그, 조건, 작업의 경우 개체를 미리 생성 하 고 쉼표로 구분 된이 호출에 매개 변수로 전달 해야 합니다 (아래 예제 참조).
-이 cmdlet은 ShouldProcess 패턴을 구현 합니다 (예: 리소스를 실제로 만들거나 수정 하기 전에 사용자에 게 확인을 요청할 수 있음).
-**참고** :이 cmdlet 및 관련 항목은 사용 되지 않는 **추가 기능** (2017 11 월)을 대체 합니다.
+## 설명
+**Set-AzActivityLogAlert** cmdlet은 새 활동을 생성하거나 기존 활동 로그 경고를 설정합니다.
+태그, 조건 및 작업의 경우 개체를 미리 만들어 이 호출의 매개 변수로 콤마로 구분해야 합니다(아래 예제 참조).
+이 cmdlet은 ShouldProcess 패턴을 구현합니다. 즉, 실제로 리소스를 만들고 수정하기 전에 사용자로부터 확인을 요청할 수 있습니다.
+**참고:** 이 cmdlet 및 관련 cmdlet은 더 이상 사용이 불가능한(2017년 11월) **Add-AzLogAlertRule을 대체합니다.**
 
-## 예제의
+## 예제
 
-### 예제 1: 활동 로그 알림 만들기
+### 예제 1: 활동 로그 경고 만들기
 ```
 PS C:\>$location = 'Global'
 PS C:\>$alertName = 'myAlert'
@@ -72,10 +72,10 @@ PS C:\>$actionGrp1 = New-AzActionGroup -ActionGroupId 'actiongr1' -WebhookProper
 PS C:\>Set-AzActivityLogAlert -Location $location -Name $alertName -ResourceGroupName $resourceGroupName -Scope 'scope1','scope2' -Action $actionGrp1 -Condition $condition1, $condition2
 ```
 
-처음 4 개의 명령은 리프 조건과 작업 그룹을 만듭니다.
-마지막 명령은 조건과 작업 그룹을 사용 하 여 활동 로그 알림을 만듭니다.
+처음 네 개의 명령은 리프 조건 및 작업 그룹을 생성합니다.
+마지막 명령은 조건 및 작업 그룹을 사용하여 활동 로그 경고를 만듭니다.
 
-### 예제 2: 활동 로그 알림 만들기 사용 안 함
+### 예제 2: 활동 로그 경고를 사용할 수 없습니다.
 ```
 PS C:\>$location = 'Global'
 PS C:\>$alertName = 'myAlert'
@@ -88,10 +88,10 @@ PS C:\>$actionGrp1 = New-AzActionGroup -ActionGroupId 'actiongr1' -WebhookProper
 PS C:\>Set-AzActivityLogAlert -Location $location -Name $alertName -ResourceGroupName $resourceGroupName -Scope 'scope1','scope2' -Action $actionGrp1 -Condition $condition1, $condition2 -DisableAlert
 ```
 
-처음 4 개의 명령은 리프 조건과 작업 그룹을 만듭니다.
-마지막 명령은 조건과 작업 그룹을 사용 하 여 활동 로그 알림을 만들지만 알림을 사용 하지 않도록 설정 합니다.
+처음 네 개의 명령은 리프 조건 및 작업 그룹을 생성합니다.
+마지막 명령은 조건 및 작업 그룹을 사용하여 활동 로그 경고를 생성하지만 비활성화된 경고를 만듭니다.
 
-### 예제 3: 파이프 또는 InputObject 매개 변수의 값을 사용 하 여 활동 로그 알림을 설정 합니다.
+### 예제 3: 파이프 또는 InputObject 매개 변수의 값을 사용하여 활동 로그 경고 설정
 ```
 PS C:\>Get-AzActivityLogAlert -Name $alertName -ResourceGroupName $resourceGroupName | Set-AzActivityLogAlert
 PS C:\>$alert = Get-AzActivityLogAlert -Name $alertName -ResourceGroupName $resourceGroupName
@@ -100,19 +100,19 @@ PS C:\>$alert.Enabled = $false
 PS C:\>Set-AzActivityLogAlert -InputObject $alert
 ```
 
-첫 번째 명령은 nop과 비슷하지만 경고 규칙을 검색 하 고, 설명을 변경 하 고, 사용 하지 않도록 설정한 다음 InputObject 매개 변수를 사용 하 여 해당 변경 내용을 유지 하는 것과 동일한 값으로 경고를 설정 합니다.
+첫 번째 명령은 nop와 유사하며, 이미 포함된 동일한 값으로 경고를 설정하고 나머지 명령은 경고 규칙을 검색하고 설명을 변경하고 비활성화한 다음 InputObject 매개 변수를 사용하여 이러한 변경 내용을 유지
 
-### 예제 4: 파이프의 ResourceId 값을 사용 하 여 활동 로그 알림 설정
+### 예제 4: 파이프의 ResourceId 값을 사용하여 활동 로그 경고 설정
 ```
 PS C:\>Find-AzResource -ResourceGroupEquals "myResourceGroup" -ResourceNameEquals "myLogAlert" | Set-AzActivityLogAlert -DisableAlert
 ```
 
-지정 된 로그 알림 규칙이 있으면이 명령을 사용 하지 않도록 설정 합니다.
+주어진 로그 경고 규칙이 있는 경우 이 명령은 해당 규칙을 사용하지 않도록 설정합니다.
 
-## 변수
+## PARAMETERS
 
-### -작업
-활동 로그 알림에 대 한 작업 그룹의 목록입니다.
+### -Action
+활동 로그 경고에 대한 작업 그룹 목록입니다.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertActionGroup]
@@ -150,9 +150,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -조건
-활동 로그 알림에 대 한 조건 목록입니다.
-**참고** : 조건 목록에 "Category"와 같은 필드에 적어도 1이 있어야 합니다. 이 조건이 없는 경우 백 엔드는 400 (BadRequest)로 응답 합니다.
+### -Condition
+활동 로그 경고에 대한 조건 목록입니다.
+**참고:** 조건 목록에 필드가 "범주"와 같은 조건이 하나 이상 있어야 합니다. 이 조건이 없는 경우 백에는 400(BadRequest)으로 응답합니다.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertLeafCondition]
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -205,8 +205,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -설명
-알림 리소스에 대 한 설명입니다.
+### -Description
+경고 리소스에 대한 설명입니다.
 
 ```yaml
 Type: System.String
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableAlert
-사용 하지 않도록 설정 된 활동 로그 알림을 사용자가 만들 수 있습니다. 지정 하지 않으면 경고가 생성 됩니다.
+사용자가 비활성화된 활동 로그 경고를 만들 수 있습니다. 제공되지 않은 경우 경고가 사용하도록 설정됩니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-필요한 이름을 추출 하는 호출의 InputObject tags 속성 및 리소스 그룹 이름 속성을 설정 합니다.
+호출의 InputObject 태그 속성을 설정하여 필요한 이름 및 리소스 그룹 이름 속성을 추출합니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource
@@ -262,8 +262,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -위치
-활동 로그 경고가 존재 하는 위치입니다.
+### -Location
+활동 로그 경고가 있는 위치입니다.
 
 ```yaml
 Type: System.String
@@ -289,8 +289,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -이름
-활동 로그 알림의 이름입니다.
+### -Name
+활동 로그 경고의 이름입니다.
 
 ```yaml
 Type: System.String
@@ -305,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-알림 리소스가 있는 리소스 그룹의 이름입니다.
+경고 리소스가 존재할 리소스 그룹의 이름입니다.
 
 ```yaml
 Type: System.String
@@ -320,7 +320,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-필요한 이름, 리소스 그룹 이름 속성을 추출 하는 호출의 ResourceId 태그 속성을 설정 합니다.
+호출의 ResourceId 태그 속성을 설정하여 필요한 이름, 리소스 그룹 이름 속성을 추출합니다.
 
 ```yaml
 Type: System.String
@@ -334,8 +334,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -범위
-활동 로그 알림의 범위 목록입니다.
+### -Scope
+활동 로그 경고에 대한 범위 목록입니다.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -373,8 +373,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### 태그
-활동 로그 알림 리소스의 tags 속성을 설정 합니다.
+### -Tag
+활동 로그 경고 리소스의 태그 속성을 설정합니다.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
@@ -400,8 +400,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -확인
-Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.
+### -Confirm
+cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -416,7 +416,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Cmdlet이 실행 되는 경우의 동작을 보여 줍니다. Cmdlet이 실행 되지 않습니다.
+cmdlet이 실행되는 경우의 결과 표시 cmdlet이 실행되지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -431,27 +431,27 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 다음 about_CommonParameters https://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.
 
 ## 입력
 
-### System. 문자열
+### System.String
 
-### System.webserver. List ' 1 [[System.webserver], CoreLib, Version = 4.0.0.0, Culture = 중립, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Collections.Generic.List'1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### System.webserver. List ' 1 [[ActivityLogAlertLeafCondition, Microsoft azure.. t e l. i = 1.0.0.0, Culture = 중립, PublicKeyToken = null]] 목록입니다.
+### System.Collections.Generic.List'1[[Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertLeafCondition, Microsoft.Azure.PowerShell.Cmdlets.Monitor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
 
-### System.webserver. List ' 1 [[Microsoft. t e ...]. ActivityLogAlertActionGroup, Microsoft Azure. PowerShell, Culture = 중립, PublicKeyToken = null]]이 표시 됩니다.
+### System.Collections.Generic.List'1[[Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertActionGroup, Microsoft.Azure.PowerShell.Cmdlets.Monitor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
 
-### System.webserver. Dictionary ' 2 [[4.0.0.0], CoreLib, Version =, Culture = 중립, PublicKeyToken = 7cec85d7bea7798e], [System.webserver,, CoreLib, Version = 4.0.0.0, Culture = 중립, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Collections.Generic.Dictionary'2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### Microsoft Azure. OutputClasses. PSActivityLogAlertResource
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource
 
 ## 출력
 
-### Microsoft Azure. OutputClasses. PSActivityLogAlertResource
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
@@ -461,8 +461,6 @@ Accept wildcard characters: False
 
 [Get-AzActivityLogAlert](./Get-AzActivityLogAlert.md)
 
-[제거-AzActivityLogAlert](./Remove-AzActivityLogAlert.md)
+[Remove-AzActivityLogAlert](./Remove-AzActivityLogAlert.md)
 
-[새로운 AzActionGroup](./New-AzActionGroup.md)
-
-[새로운 AzActivityLogAlertCondition](./Get-AzActivityLogAlertCondition.md)
+[New-AzActionGroup](./New-AzActionGroup.md)

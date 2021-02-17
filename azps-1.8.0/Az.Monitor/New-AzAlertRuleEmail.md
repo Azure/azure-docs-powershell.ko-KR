@@ -6,55 +6,55 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzAlertRuleEmail.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzAlertRuleEmail.md
-ms.openlocfilehash: cfdd18a02a5e0507e86a37dee1e1662bb5094f37
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 063eccb7d42fdee26c642a866c2bce398c87662e
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93867286"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100403054"
 ---
 # New-AzAlertRuleEmail
 
 ## SYNOPSIS
-경고 규칙에 대 한 전자 메일 작업을 만듭니다.
+경고 규칙에 대한 전자 메일 작업을 만듭니다.
 
-## 구문과
+## 구문
 
 ```
 New-AzAlertRuleEmail [[-CustomEmail] <String[]>] [-SendToServiceOwner]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## 설명은
-**AzAlertRuleEmail** cmdlet은 경고 규칙에 대 한 전자 메일 작업을 만듭니다.
+## 설명
+**New-AzAlertRuleEmail** cmdlet은 경고 규칙에 대한 전자 메일 작업을 만듭니다.
 
-## 예제의
+## 예제
 
-### 예제 1: 서비스 소유자를 위한 알림 규칙 만들기 전자 메일 작업
+### 예제 1: 서비스 소유자에 대한 경고 규칙 전자 메일 작업 만들기
 ```
 PS C:\>New-AzAlertRuleEmail -SendToServiceOwners
 ```
 
-이 명령은 경고 규칙이 발생 했을 때 해당 서비스 소유자에 게 보낼 알림 규칙 전자 메일 작업을 만듭니다.
+이 명령은 경고 규칙이 실행된 경우 해당 서비스 소유자에 대해 보낼 경고 규칙 전자 메일 작업을 만듭니다.
 
-### 예제 2: 서비스를 지원 하지 않는 소유자를 위한 알림 규칙 만들기 전자 메일 작업
+### 예제 2: 비 서비스 소유자에 대한 경고 규칙 전자 메일 작업 만들기
 ```
 PS C:\>New-AzAlertRuleEmail -CustomEmails pattif@contoso.com,davidchew@contoso.net
 ```
 
-이 명령은 지정 된 전자 메일 주소에 대 한 알림 규칙 전자 메일 작업을 만들지만 서비스 소유자에 게는 해당 하지 않습니다.
+이 명령은 지정된 전자 메일 주소에 대한 경고 규칙 전자 메일 작업을 만들고 서비스 소유자에 대한 작업은 만듭니다.
 
-### 예제 3: 서비스 소유자 및 비 서비스 소유자에 대 한 알림 규칙 만들기 전자 메일 작업
+### 예제 3: 서비스 소유자 및 비 서비스 소유자에 대한 경고 규칙 전자 메일 작업 만들기
 ```
 PS C:\>New-AzAlertRuleEmail -CustomEmails pattif@contoso.net -SendToServiceOwners
 ```
 
-이 명령은 지정 된 주소와 해당 서비스 소유자에 대 한 알림 규칙 전자 메일 작업을 만듭니다.
+이 명령은 지정된 주소 및 해당 서비스 소유자에 대한 경고 규칙 전자 메일 작업을 만듭니다.
 
-## 변수
+## PARAMETERS
 
 ### -CustomEmail
-쉼표로 구분 된 전자 메일 주소 목록을 지정 합니다.
+콤마로 구분된 전자 메일 주소 목록을 지정합니다.
 
 ```yaml
 Type: System.String[]
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendToServiceOwner
-이 작업이 규칙이 실행 될 때 서비스 소유자에 게 전자 메일을 보내도록 지정 합니다.
+규칙이 발생하면 이 작업이 서비스 소유자에게 전자 메일을 보내고 있습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -99,28 +99,27 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 다음 about_CommonParameters https://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.
 
 ## 입력
 
-### System.webserver []
+### System.String[]
 
-### System.webserver 매개 변수
+### System.Management.Automation.SwitchParameter
 
 ## 출력
 
-### Microsoft. 경영진. 관리자. RuleEmailAction
+### Microsoft.Azure.Management.Monitor.Management.Models.RuleEmailAction
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
-[추가-AzLogAlertRule](./Add-AzLogAlertRule.md)
 
-[추가-AzMetricAlertRule](./Add-AzMetricAlertRule.md)
+[Add-AzMetricAlertRule](./Add-AzMetricAlertRule.md)
 
-[추가-AzWebtestAlertRule](./Add-AzWebtestAlertRule.md)
+[Add-AzWebtestAlertRule](./Add-AzWebtestAlertRule.md)
 
-[새로운 AzAlertRuleWebhook](./New-AzAlertRuleWebhook.md)
+[New-AzAlertRuleWebhook](./New-AzAlertRuleWebhook.md)
 
 
