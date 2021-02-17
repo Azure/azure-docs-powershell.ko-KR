@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Add-AzApiManagementRegion.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Add-AzApiManagementRegion.md
-ms.openlocfilehash: b180dabec976164eac70106b49378d832fb00db8
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: aebcb8be906811607aefee7dbdc2c7630b9e391e
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93689170"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100401184"
 ---
 # Add-AzApiManagementRegion
 
 ## SYNOPSIS
-PsApiManagement 인스턴스에 새 배포 영역을 추가 합니다.
+PsApiManagement 인스턴스에 새 배포 지역을 추가합니다.
 
-## 구문과
+## 구문
 
 ```
 Add-AzApiManagementRegion -ApiManagement <PsApiManagement> -Location <String> [-Sku <PsApiManagementSku>]
@@ -26,31 +26,31 @@ Add-AzApiManagementRegion -ApiManagement <PsApiManagement> -Location <String> [-
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## 설명은
-**AzApiManagementRegion** Cmdlet은 **PsApiManagementRegion** 형식의 새 인스턴스를 **ApiManagement. PsApiManagement** 유형의 제공 된 **additionalregions** 컬렉션에 추가 합니다..
-이 cmdlet은 자기 자신을 배포 하는 것이 아니라 메모리 내 **PsApiManagement** 인스턴스를 업데이트 합니다.
-API Management의 배포를 업데이트 하려면 수정 된 **PsApiManagement** 인스턴스를 Update-AzApiManagementDeployment에 전달 합니다.
+## 설명
+**Add-AzApiManagementRegion** cmdlet은 **Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement** 형식의 **제공된 인스턴스의 AdditionalRegions** 컬렉션에 **PsApiManagementRegion** 유형의 새 인스턴스를 추가합니다.
+이 cmdlet은 자체적으로 배포하지는 않지만 메모리 내 **PsApiManagement** 인스턴스를 업데이트합니다.
+API Management의 배포를 업데이트하기 위해 수정된 **PsApiManagement** 인스턴스를 Set-AzApiManagement에 전달합니다.
 
-## 예제의
+## 예제
 
-### 예제 1: PsApiManagement 인스턴스에 새 배포 영역 추가
+### 예제 1: PsApiManagement 인스턴스에 새 배포 지역 추가
 ```
 PS C:\>Add-AzApiManagementRegion -ApiManagement $ApiManagement -Location "East US" -Sku "Premium" -Capacity 2
 ```
 
-이 명령은 2 개의 premium SKU 단위와 동부 US 라는 지역 번호를 **PsApiManagement** 인스턴스에 추가 합니다.
+이 명령은 **PsApiManagement** 인스턴스에 두 개의 프리미엄 SKU 단위와 미국 동부라는 지역을 추가합니다.
 
-### 예제 2: PsApiManagement 인스턴스에 새 배포 영역 추가 후 배포 업데이트
+### 예제 2: PsApiManagement 인스턴스에 새 배포 지역 추가 및 배포 업데이트
 ```
-PS C:\>Get-AzApiManagement -ResourceGroupName "Contoso" -Name "ContosoApi" | Add-AzApiManagementRegion -Location "East US" -Sku "Premium" -Capacity 2 | Update-AzApiManagementDeployment
+PS C:\>Get-AzApiManagement -ResourceGroupName "Contoso" -Name "ContosoApi" | Add-AzApiManagementRegion -Location "East US" -Sku "Premium" -Capacity 2 | Set-AzApiManagement
 ```
 
-이 명령은 **PsApiManagement** 개체를 가져오고 동부 US 이라는 지역에 대해 두 개의 premium SKU 단위를 추가한 다음 배포를 업데이트 합니다.
+이 명령은 **PsApiManagement** 개체를, 미국 동부라는 지역에 대해 두 개의 프리미엄 SKU 단위를 추가한 다음, 배포를 업데이트합니다.
 
-## 변수
+## PARAMETERS
 
 ### -ApiManagement
-이 cmdlet이 추가 배포 영역을 추가 하는 **PsApiManagement** 인스턴스를 지정 합니다.
+이 cmdlet이 추가 배포 지역을 추가하는 **PsApiManagement** 인스턴스를 지정합니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement
@@ -64,8 +64,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### 용량
-배포 영역의 SKU 용량을 지정 합니다.
+### -Capacity
+배포 지역의 SKU 용량을 지정합니다.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -94,9 +94,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -위치
-Api Management 서비스에 대해 지원 되는 지역에서 새 배포 영역의 위치를 지정 합니다.
-유효한 위치를 얻으려면 cmdlet Get-AzResourceProvider ProviderNamespace "ApiManagement" |을 (를) 사용 하세요. 여기서 {$ _. ResourceTypes [0]. ResourceTypeName-eq "서비스"} | Select-Object 위치
+### -Location
+Api Management 서비스에 대해 지원되는 지역 중에서 새 배포 지역의 위치를 지정합니다.
+유효한 위치를 얻게 Get-AzResourceProvider -ProviderNamespace "Microsoft.ApiManagement" cmdlet을 | where {$_. ResourceTypes[0]. ResourceTypeName -eq "service"} | Select-Object 위치
 
 ```yaml
 Type: System.String
@@ -111,11 +111,11 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-배포 영역의 계층을 지정 합니다.
-유효한 값은 다음과 같습니다. 
-- 디벨로퍼
-- 표준이
-- Premium
+배포 지역의 계층을 지정합니다.
+유효한 값은
+- 개발자
+- 표준
+- 프리미엄
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSku]
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetwork
-가상 네트워크 구성을 지정 합니다.
+가상 네트워크 구성을 지정합니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork
@@ -146,25 +146,25 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 다음 about_CommonParameters https://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.
 
 ## 입력
 
-### ApiManagement. PsApiManagement/.
+### Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement
 
 ## 출력
 
-### ApiManagement. PsApiManagement/.
+### Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement
 
-## 상속자
-* Cmdlet은 파이프라인에 업데이트 된 **PsApiManagement** 인스턴스를 씁니다.
+## 참고 사항
+* cmdlet은 파이프라인에 업데이트된 **PsApiManagement 인스턴스를** 작성합니다.
 
 ## 관련 링크
 
-[제거-AzApiManagementRegion](./Remove-AzApiManagementRegion.md)
+[Remove-AzApiManagementRegion](./Remove-AzApiManagementRegion.md)
 
-[업데이트-AzApiManagementRegion](./Update-AzApiManagementRegion.md)
+[Update-AzApiManagementRegion](./Update-AzApiManagementRegion.md)
 
-[업데이트-AzApiManagementDeployment](./Update-AzApiManagementDeployment.md)
+[Set-AzApiManagement](./Set-AzApiManagement.md)
 
 
