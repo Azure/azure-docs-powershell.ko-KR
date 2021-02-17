@@ -6,48 +6,48 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/New-AzAlertRuleWebhook.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/New-AzAlertRuleWebhook.md
-ms.openlocfilehash: 420bfd3536c9bbf8bcfe075eb7ed56320788d3b3
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.openlocfilehash: 03a1ca397fb67daf4b7cf73700f54d6642dd9f2d
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "93875765"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399365"
 ---
 # New-AzAlertRuleWebhook
 
 ## SYNOPSIS
-알림 규칙 webhook을 만듭니다.
+경고 규칙 웹후크를 만듭니다.
 
-## 구문과
+## 구문
 
 ```
 New-AzAlertRuleWebhook [-ServiceUri] <String> [[-Property] <Hashtable>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## 설명은
-**AzAlertRuleWebhook** cmdlet은 알림 규칙 webhook을 만듭니다.
+## 설명
+**New-AzAlertRuleWebhook** cmdlet은 경고 규칙 웹후크를 만듭니다.
 
-## 예제의
+## 예제
 
-### 예제 1: 알림 규칙 webhook 만들기
+### 예제 1: 경고 규칙 웹후크 만들기
 ```
 PS C:\>New-AzAlertRuleWebhook -ServiceUri "http://contoso.com"
 ```
 
-이 명령은 서비스 URI만 지정 하 여 알림 규칙 webhook을 만듭니다.
+이 명령은 서비스 URI만 지정하여 경고 규칙 웹후크를 만듭니다.
 
-### 예제 2: 하나의 속성을 사용 하 여 webhook 만들기
+### 예제 2: 하나의 속성으로 웹후크 만들기
 ```
 PS C:\>$Actual = New-AzAlertRuleWebhook -ServiceUri "http://contoso.com" -Property @{prop1 = 'value1'}
 ```
 
-이 명령은 하나의 속성이 있는 Contoso.com에 대 한 알림 규칙 webhook을 만든 다음이를 $Actual 변수에 저장 합니다.
+이 명령은 하나의 속성이 있는 Contoso.com 대한 경고 규칙 웹후크를 만든 다음 $Actual 변수에 저장합니다.
 
-## 변수
+## PARAMETERS
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -61,8 +61,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -속성
-@ (Property1 = ' value1 ',.... 형식으로 속성 목록을 지정 합니다.
+### -Property
+@(property1 = 'value1',....) 형식의 속성 목록을 지정합니다.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceUri
-서비스 URI를 지정 합니다.
+서비스 URI를 지정합니다.
 
 ```yaml
 Type: System.String
@@ -92,30 +92,29 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
-### System. 문자열
+### System.String
 
-### System.webserver. 컬렉션 테이블
+### System.Collections.Hashtable
 
 ## 출력
 
-### RuleWebhookAction를 통해 관리 합니다.
+### Microsoft.Azure.Management.Monitor.Management.Models.RuleWebhookAction
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
-[추가-AzLogAlertRule](./Add-AzLogAlertRule.md)
 
-[추가-AzMetricAlertRule](./Add-AzMetricAlertRule.md)
+[Add-AzMetricAlertRule](./Add-AzMetricAlertRule.md)
 
-[추가-AzWebtestAlertRule](./Add-AzWebtestAlertRule.md)
+[Add-AzWebtestAlertRule](./Add-AzWebtestAlertRule.md)
 
-[새로운 AzAlertRuleEmail](./New-AzAlertRuleEmail.md)
+[New-AzAlertRuleEmail](./New-AzAlertRuleEmail.md)
 
-[새로운 AzAutoscaleWebhook](./New-AzAutoscaleWebhook.md)
+[New-AzAutoscaleWebhook](./New-AzAutoscaleWebhook.md)
 
 

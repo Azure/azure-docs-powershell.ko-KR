@@ -5,12 +5,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/new-az
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/New-AzSqlSyncMember.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/New-AzSqlSyncMember.md
-ms.openlocfilehash: 5846435df4921e425e12e908539849fda0bd2472
-ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
+ms.openlocfilehash: f7fc860711c5037e6ce6390f9fb7d79ddfa7d6ce
+ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100399535"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100196092"
 ---
 # New-AzSqlSyncMember
 
@@ -23,7 +23,8 @@ Azure SQL 데이터베이스 동기화 멤버를 만듭니다.
 ```
 New-AzSqlSyncMember -Name <String> -MemberDatabaseType <String> -MemberServerName <String>
  -MemberDatabaseName <String> -MemberDatabaseCredential <PSCredential> [-SyncDirection <String>]
- [-SyncGroupName] <String> [-ServerName] <String> [-DatabaseName] <String> [-ResourceGroupName] <String>
+ [-UsePrivateLinkConnection] [-SyncMemberAzureDatabaseResourceId <String>] [-SyncGroupName] <String>
+ [-ServerName] <String> [-DatabaseName] <String> [-ResourceGroupName] <String>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -31,14 +32,16 @@ New-AzSqlSyncMember -Name <String> -MemberDatabaseType <String> -MemberServerNam
 ```
 New-AzSqlSyncMember -Name <String> -MemberDatabaseType <String> -SyncAgentResourceGroupName <String>
  -SyncAgentServerName <String> -SyncAgentName <String> -SqlServerDatabaseId <String> [-SyncDirection <String>]
- [-SyncGroupName] <String> [-ServerName] <String> [-DatabaseName] <String> [-ResourceGroupName] <String>
+ [-UsePrivateLinkConnection] [-SyncMemberAzureDatabaseResourceId <String>] [-SyncGroupName] <String>
+ [-ServerName] <String> [-DatabaseName] <String> [-ResourceGroupName] <String>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### OnPremisesDatabaseSyncAgentResourceID
 ```
 New-AzSqlSyncMember -Name <String> -MemberDatabaseType <String> -SqlServerDatabaseId <String>
- -SyncAgentResourceID <String> [-SyncDirection <String>] [-SyncGroupName] <String> [-ServerName] <String>
+ -SyncAgentResourceID <String> [-SyncDirection <String>] [-UsePrivateLinkConnection]
+ [-SyncMemberAzureDatabaseResourceId <String>] [-SyncGroupName] <String> [-ServerName] <String>
  [-DatabaseName] <String> [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
@@ -341,6 +344,36 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -SyncMemberAzureDatabaseResourceId
+UsePrivateLinkConnection이 true로 설정된 경우 사용되는 동기화 멤버 데이터베이스에 대한 리소스 ID입니다.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UsePrivateLinkConnection
+이 동기화 멤버에 연결할 때 개인 링크 연결을 사용하세요.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.
 
@@ -373,7 +406,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](https://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
@@ -389,6 +422,7 @@ Accept wildcard characters: False
 
 [Get-AzSqlSyncMember](./Get-AzSqlSyncMember.md)
 
+[Update-AzSqlSyncMember](./Update-AzSqlSyncMember.md)
 
 [Remove-AzSqlSyncMember](./Remove-AzSqlSyncMember.md)
 
