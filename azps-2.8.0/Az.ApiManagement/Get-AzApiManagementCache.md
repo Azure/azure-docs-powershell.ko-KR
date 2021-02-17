@@ -5,21 +5,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementCache.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementCache.md
-ms.openlocfilehash: 8fd29b7ecbfda5115973b038a6560ad38d22f376
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 7f1913b5debcbe3ebd5ae436c3c30529b1fdc9d5
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93698121"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100404737"
 ---
 # Get-AzApiManagementCache
 
 ## SYNOPSIS
-캐시에 대 한 세부 정보를 가져옵니다.
+캐시의 세부 정보를 얻습니다.
 
-## 구문과
+## 구문
 
-### ContextParameterSet (기본값)
+### ContextParameterSet(기본값)
 ```
 Get-AzApiManagementCache -Context <PsApiManagementContext> [-CacheId <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -30,12 +30,12 @@ Get-AzApiManagementCache -Context <PsApiManagementContext> [-CacheId <String>]
 Get-AzApiManagementCache -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## 설명은
-Api Management 서비스에 구성 된 캐시에 대 한 세부 정보를 가져옵니다.
+## 설명
+Api Management 서비스에 구성된 캐시의 세부 정보를 얻습니다.
 
-## 예제의
+## 예제
 
-### 예제 1: 모든 캐시 가져오기
+### 예제 1: 모든 캐시를 얻습니다.
 ```powershell
 PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
 PS C:\>Get-AzApiManagementCache -Context $apimContext
@@ -51,9 +51,9 @@ ResourceGroupName : Api-Default-West-US
 ServiceName       : contoso
 ```
 
-Api Management 서비스에 구성 된 모든 캐시의 목록을 가져옵니다.
+Api Management 서비스에 구성된 모든 캐시의 목록을 얻습니다.
 
-### 예제 2: 식별자 westus에 지정 된 캐시 가져오기
+### 예제 2: 식별자 westus에 의해 지정된 캐시를 얻습니다.
 ```powershell
 PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
 PS C:\>Get-AzApiManagementCache -Context $apimContext -cacheId westus
@@ -69,13 +69,13 @@ ResourceGroupName : Api-Default-WestUS
 ServiceName       : contoso
 ```
 
-Westus에 대해 구성 된 지정 된 캐시에 대 한 세부 정보 가져오기
+westus에 대해 구성된 지정된 캐시의 세부 정보를 얻습니다.
 
-## 변수
+## PARAMETERS
 
 ### -CacheId
 캐시의 식별자입니다.
-지정 된 경우 식별자를 기준으로 캐시를 찾습니다.
+지정된 경우 식별자에 의해 캐시를 찾으려고 시도합니다.
 이 매개 변수는 선택 사항입니다.
 
 ```yaml
@@ -90,7 +90,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -컨텍스트
+### -Context
 PsApiManagementContext의 인스턴스입니다.
 이 매개 변수는 필수입니다.
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-캐시의 Arm 리소스 식별자입니다. 지정 된 경우 식별자를 기준으로 캐시를 찾습니다. 이 매개 변수는 필수입니다.
+캐시의 Arm 리소스 식별자입니다. 지정된 경우 식별자에 의해 캐시를 찾으려고 시도합니다. 이 매개 변수는 필수입니다.
 
 ```yaml
 Type: System.String
@@ -137,24 +137,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](https://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
-### ApiManagement. ServiceManagement. \ PsApiManagementContext
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 
-### System. 문자열
+### System.String
 
 ## 출력
 
-### ApiManagement. ServiceManagement. \ PsApiManagementCache
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementCache
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
-[Get-AzApiManagementCache](./Get-AzApiManagementCache)
+[New-AzApiManagementCache](./New-AzApiManagementCache.md)
 
-[Set-AzApiManagementCache](./Set-AzApiManagementCache.md)
+[Remove-AzApiManagementCache](./Remove-AzApiManagementCache.md)
 
-[제거-AzApiManagementCache](./Remove-AzApiManagementCache.md)
+[Update-AzApiManagementCache](./Update-AzApiManagementCache.md)
