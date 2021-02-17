@@ -1,12 +1,14 @@
 ---
 ms.topic: include
-ms.date: 09/03/2020
-ms.openlocfilehash: 7d25bfbc7b7efbb2a96209f6e485c07c2be2bd57
-ms.sourcegitcommit: 6071038ed955107220a01156550a541bf68d0266
+ms.date: 02/12/2021
+ms.openlocfilehash: 78920c064b776c4b2bc219a6d02810d34d64ae4f
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "89497132"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100514985"
 ---
 > [!IMPORTANT]
-> <span data-ttu-id="0a3ea-101">오래된 버전의 Azure PowerShell에 대한 웹 페이지에 도달했습니다.</span><span class="sxs-lookup"><span data-stu-id="0a3ea-101">You've reached a webpage for an outdated version of Azure PowerShell.</span></span> <span data-ttu-id="0a3ea-102">모든 버전의 AzureRM PowerShell 모듈이 최신 버전이 아니지만 계속 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="0a3ea-102">All versions of the AzureRM PowerShell module are outdated, but not out of support.</span></span> <span data-ttu-id="0a3ea-103">이제는 Az PowerShell 모듈이 Azure와 상호 작용하는 데 추천되는 PowerShell 모듈입니다.</span><span class="sxs-lookup"><span data-stu-id="0a3ea-103">The Az PowerShell module is now the recommended PowerShell module for interacting with Azure.</span></span> <span data-ttu-id="0a3ea-104">Az PowerShell 모듈을 시작하려면 [_Azure PowerShell 설치_](https://docs.microsoft.com/powershell/azure/install-az-ps)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0a3ea-104">To get started with the Az PowerShell module, see [_Install Azure PowerShell_](https://docs.microsoft.com/powershell/azure/install-az-ps).</span></span> <span data-ttu-id="0a3ea-105">Az PowerShell 모듈로 마이그레이션하는 방법에 대한 자세한 내용은 [_Azure PowerShell을 AzureRM에서 Azure로 마이그레이션_](https://aka.ms/azpsmigrate)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0a3ea-105">To learn how to migrate to the Az PowerShell module, see [_Migrate Azure PowerShell from AzureRM to Az_](https://aka.ms/azpsmigrate).</span></span>
+> <span data-ttu-id="ed90b-101">이제 Az PowerShell 모듈에는 AzureRM PowerShell 모듈 등의 모든 기능이 포함되어 있으므로 2024년 2월 29일에 AzureRM PowerShell 모듈은 사용 중지됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed90b-101">Because Az PowerShell modules now have all the capabilities of AzureRM PowerShell modules and more, we'll retire AzureRM PowerShell modules on 29 February 2024.</span></span>
+
+> <span data-ttu-id="ed90b-102">서비스 중단을 방지하려면 2024년 2월 29일까지 Az PowerShell 모듈을 사용하기 위해 AzureRM PowerShell 모듈을 사용하는 [스크립트를 업데이트하세요](https://aka.ms/azpsmigrate).</span><span class="sxs-lookup"><span data-stu-id="ed90b-102">To avoid service interruptions, [update your scripts](https://aka.ms/azpsmigrate) that use AzureRM PowerShell modules to use Az PowerShell modules by 29 February 2024.</span></span> <span data-ttu-id="ed90b-103">스크립트를 자동으로 업데이트하려면 [빠른 시작 가이드](/powershell/azure/quickstart-migrate-azurerm-to-az-automatically)를 따르세요.</span><span class="sxs-lookup"><span data-stu-id="ed90b-103">To automatically update your scripts, follow the [quickstart guide](/powershell/azure/quickstart-migrate-azurerm-to-az-automatically).</span></span>
