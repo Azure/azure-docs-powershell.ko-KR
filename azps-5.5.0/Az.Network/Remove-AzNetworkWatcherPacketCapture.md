@@ -1,64 +1,54 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/test-aznetworkwatcheripflow
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/remove-aznetworkwatcherpacketcapture
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Test-AzNetworkWatcherIPFlow.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Test-AzNetworkWatcherIPFlow.md
-ms.openlocfilehash: b16b405162a87c54c25f47b7e2a977a8e0022df5
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzNetworkWatcherPacketCapture.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzNetworkWatcherPacketCapture.md
+ms.openlocfilehash: d6d11590699b52bb7245222ddaa01fbc42938d22
 ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/14/2021
-ms.locfileid: "100415447"
+ms.locfileid: "100415481"
 ---
-# Test-AzNetworkWatcherIPFlow
+# Remove-AzNetworkWatcherPacketCapture
 
 ## SYNOPSIS
-패킷이 특정 대상에서 허용되거나 거부될지 여부를 반환합니다.
+패킷 캡처 리소스를 제거합니다.
 
 ## 구문
 
 ### SetByResource(기본값)
 ```
-Test-AzNetworkWatcherIPFlow -NetworkWatcher <PSNetworkWatcher> -TargetVirtualMachineId <String>
- -Direction <String> -Protocol <String> -RemoteIPAddress <String> -LocalIPAddress <String> -LocalPort <String>
- [-RemotePort <String>] [-TargetNetworkInterfaceId <String>] [-AsJob]
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Remove-AzNetworkWatcherPacketCapture -NetworkWatcher <PSNetworkWatcher> -PacketCaptureName <String> [-PassThru]
+ [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Test-AzNetworkWatcherIPFlow -NetworkWatcherName <String> -ResourceGroupName <String>
- -TargetVirtualMachineId <String> -Direction <String> -Protocol <String> -RemoteIPAddress <String>
- -LocalIPAddress <String> -LocalPort <String> [-RemotePort <String>] [-TargetNetworkInterfaceId <String>]
- [-AsJob] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Remove-AzNetworkWatcherPacketCapture -NetworkWatcherName <String> -ResourceGroupName <String>
+ -PacketCaptureName <String> [-PassThru] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SetByLocation
 ```
-Test-AzNetworkWatcherIPFlow -Location <String> -TargetVirtualMachineId <String> -Direction <String>
- -Protocol <String> -RemoteIPAddress <String> -LocalIPAddress <String> -LocalPort <String>
- [-RemotePort <String>] [-TargetNetworkInterfaceId <String>] [-AsJob]
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Remove-AzNetworkWatcherPacketCapture -Location <String> -PacketCaptureName <String> [-PassThru] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## 설명
-이 Test-AzNetworkWatcherIPFlow cmdlet은 지정된 VM 리소스 및 로컬 및 원격, IP 주소 및 포트를 사용하여 지정된 방향의 패킷에 대해 패킷이 허용되거나 거부되는지 여부를 반환합니다.
+이 Remove-AzNetworkWatcherPacketCapture 캡처 리소스를 제거합니다. Remove-AzNetworkWatcherPacketCapture를 Stop-AzNetworkWatcherPacketCapture 호출하기 전에 호출을 호출하는 것이 좋습니다. 패킷 캡처 세션이 실행 중일 때 Remove-AzNetworkWatcherPacketCapture 캡처가 저장되지 않을 수 있습니다. 제거하기 전에 세션이 중지된 경우 캡처 데이터가 포함된 .cap 파일은 제거되지 않습니다. 
 
 ## 예제
 
-### 예제 1: 실행 Test-AzNetworkWatcherIPFlow
+### 예제 1: 패킷 캡처 세션 제거
 ```
-$nw = Get-AzResource | Where {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" } 
-$networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName 
-$VM = Get-AzVM -ResourceGroupName testResourceGroup -Name VM0 
-$Nics = Get-AzNetworkInterface | Where-Object { $vm.NetworkProfile.NetworkInterfaces.Id -contains $_.Id }
-
-Test-AzNetworkWatcherIPFlow -NetworkWatcher $networkWatcher -TargetVirtualMachineId $VM.Id -Direction Outbound -Protocol TCP -LocalIPAddress $nics[0].IpConfigurations[0].PrivateIpAddress -LocalPort 6895 -RemoteIPAddress 204.79.197.200 -RemotePort 80
+Remove-AzNetworkWatcherPacketCapture -NetworkWatcher $networkWatcher -PacketCaptureName "PacketCaptureTest"
 ```
 
-이 구독에 대한 미국 중서부의 Network Watcher를 인용한 다음, VM과 연결된 네트워크 인터페이스를 얻습니다. 그런 다음 첫 번째 네트워크 인터페이스의 경우 Test-AzNetworkWatcherIPFlow IP에 대한 아웃바운드 연결을 위해 첫 번째 네트워크 인터페이스의 첫 번째 IP를 사용하여 실행합니다.
+이 예제에서는 "PacketCaptureTest"라는 기존 패킷 캡처 세션을 제거합니다.
 
 ## PARAMETERS
 
@@ -89,52 +79,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Direction
-방향.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-Accepted values: Inbound, Outbound
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LocalIPAddress
-로컬 IP 주소입니다.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -LocalPort
-로컬 포트.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -183,24 +127,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Protocol
-프로토콜.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-Accepted values: TCP, UDP
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteIPAddress
-원격 IP 주소입니다.
+### -PacketCaptureName
+패킷 캡처 이름입니다.
 
 ```yaml
 Type: System.String
@@ -214,18 +142,18 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -RemotePort
-원격 포트.
+### -PassThru
+작업하는 항목을 나타내는 개체를 반환합니다.
 
 ```yaml
-Type: System.String
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
+Default value: False
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -244,33 +172,34 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -TargetNetworkInterfaceId
-대상 네트워크 인터페이스 ID입니다.
+### -Confirm
+cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.
 
 ```yaml
-Type: System.String
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TargetVirtualMachineId
-대상 가상 머신 ID입니다.
+### -WhatIf
+cmdlet이 실행되는 경우의 결과 표시
+cmdlet이 실행되지 않습니다.
 
 ```yaml
-Type: System.String
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 
-Required: True
+Required: False
 Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
+Default value: False
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -285,10 +214,10 @@ Accept wildcard characters: False
 
 ## 출력
 
-### Microsoft.Azure.Commands.Network.Models.PSIPFlowVerifyResult
+### System.Boolean
 
 ## 참고 사항
-키워드: azure, azurerm, arm, 리소스, 관리, 관리자, 네트워크, 네트워킹, 네트워크 감시자, 흐름, IP 
+키워드: azure, azurerm, arm, 리소스, 관리, 관리자, 네트워크, 네트워킹, 네트워크 감시자, 패킷, 캡처, 트래픽, 제거
 
 ## 관련 링크
 
