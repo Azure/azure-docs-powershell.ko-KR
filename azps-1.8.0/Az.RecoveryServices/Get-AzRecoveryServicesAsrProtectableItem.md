@@ -5,21 +5,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryse
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesAsrProtectableItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesAsrProtectableItem.md
-ms.openlocfilehash: 4ea8bcb0e27c9ca44cc30f36005bdcccdbd20d61
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 31dc0a5e7fb9bba20aea6fb6395ec59ba54d0e2c
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93699732"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399841"
 ---
 # Get-AzRecoveryServicesAsrProtectableItem
 
 ## SYNOPSIS
-ASR 보호 컨테이너에서 보호 가능한 항목을 가져옵니다.
+ASR 보호 컨테이너에서 보호 가능한 항목을 얻습니다.
 
-## 구문과
+## 구문
 
-### ByObject (기본값)
+### ByObject(기본값)
 ```
 Get-AzRecoveryServicesAsrProtectableItem -ProtectionContainer <ASRProtectionContainer>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -37,17 +37,17 @@ Get-AzRecoveryServicesAsrProtectableItem -FriendlyName <String> -ProtectionConta
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## 설명은
-**AzRecoveryServicesAsrProtectableItem** Cmdlet은 Azure Site Recovery 보호 컨테이너에서 보호 가능한 항목을 가져옵니다.
+## 설명
+**Get-AzRecoveryServicesAsrProtectableItem** cmdlet은 Azure Site Recovery Protection 컨테이너에서 보호 가능한 항목을 얻습니다.
 
-## 예제의
+## 예제
 
 ### 예제 1
 ```
 PS C:\> $ProtectableItems = Get-AzRecoveryServicesAsrProtectableItem -ProtectionContainer $Container
 ```
 
-지정 된 ASR 보호 컨테이너의 보호 가능한 모든 항목을 가져옵니다.
+지정된 ASR 보호 컨테이너에 있는 보호 가능한 모든 항목을 얻습니다.
 
 ### 예제 2
 ```
@@ -70,7 +70,7 @@ ReplicationProtectedItemId    :
 SupportedReplicationProviders : {InMage, InMageAzureV2}
 ```
 
-지정 된 ASR 보호 컨테이너에서 보호 되는 항목을 가져오고 제공 된 이름을 사용 합니다.
+지정된 ASR 보호 컨테이너 및 지정된 친숙한 이름으로 보호 가능한 항목을 얻습니다.
 
 ### 예제 3
 ```
@@ -93,12 +93,12 @@ ReplicationProtectedItemId    :
 SupportedReplicationProviders : {InMage, InMageAzureV2}
 ```
 
-지정 된 ASR 보호 컨테이너의 보호 가능한 모든 항목을 가져옵니다.
+지정된 ASR 보호 컨테이너에 있는 보호 가능한 모든 항목을 얻습니다.
 
-## 변수
+## PARAMETERS
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
 
 
 ```yaml
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -FriendlyName
-ASR 보호 가능한 항목의 대화명을 지정 합니다.
+ASR 보호 가능한 항목의 이름을 지정합니다.
 
 ```yaml
 Type: System.String
@@ -128,8 +128,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -이름
-ASR 보호 가능한 항목의 이름을 지정 합니다.
+### -Name
+ASR 보호 가능한 항목의 이름을 지정합니다.
 
 ```yaml
 Type: System.String
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProtectionContainer
-Azure Site Recovery 보호 컨테이너 개체를 지정 합니다.
+Azure Site Recovery Protection 컨테이너 개체를 지정합니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectionContainer
@@ -159,20 +159,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 다음 about_CommonParameters https://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.
 
 ## 입력
 
-### SiteRecovery. ASRProtectionContainer에 대 한 서비스
+### Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectionContainer
 
 ## 출력
 
-### SiteRecovery. ASRProtectableItem에 대 한 서비스
+### Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectableItem
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
-[Get-AzRecoveryServicesAsrProtectionEntity](./Get-AzRecoveryServicesAsrProtectionEntity.md)
 
-[Set-AzRecoveryServicesAsrProtectionEntity](./Set-AzRecoveryServicesAsrProtectionEntity.md)

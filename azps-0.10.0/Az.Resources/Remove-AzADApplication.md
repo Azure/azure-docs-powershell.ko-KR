@@ -6,21 +6,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Remove-AzADApplication.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Remove-AzADApplication.md
-ms.openlocfilehash: 00c9d6e5a5a729ca5a5119b812873078acb38326
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.openlocfilehash: 956fcf09006e8e65d029bb5e380abc5de0e15c17
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "93876408"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399926"
 ---
 # Remove-AzADApplication
 
 ## SYNOPSIS
-Azure active directory 응용 프로그램을 삭제 합니다.
+Azure Active Directory 애플리케이션을 삭제합니다.
 
-## 구문과
+## 구문
 
-### ObjectIdParameterSet (기본값)
+### ObjectIdParameterSet(기본값)
 ```
 Remove-AzADApplication -ObjectId <Guid> [-PassThru] [-Force] [-DefaultProfile <IAzureContextContainer>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -44,39 +44,39 @@ Remove-AzADApplication -InputObject <PSADApplication> [-PassThru] [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## 설명은
-Azure active directory 응용 프로그램을 삭제 합니다.
+## 설명
+Azure Active Directory 애플리케이션을 삭제합니다.
 
-## 예제의
+## 예제
 
-### 예제 1-개체 id 별 응용 프로그램 제거
+### 예제 1 - 개체 ID로 애플리케이션 제거
 
 ```
 PS C:\> Remove-AzADApplication -ObjectId b4cd1619-80b3-4cfb-9f8f-9f2333425738
 ```
 
-테 넌 트에서 개체 id가 ' b4cd1619-80b3-4cfb-9f8f-9f2333425738 ' 인 응용 프로그램을 제거 합니다.
+테넌트에서 개체 ID가 'b4cd1619-80b3-4cfb-9f8f-9f2333425738'인 애플리케이션을 제거합니다.
 
-### 예제 2-응용 프로그램 id를 기준으로 응용 프로그램 제거
+### 예제 2 - 애플리케이션 ID로 애플리케이션 제거
 
 ```
 PS C:\> Remove-AzADApplication -ApplicationId f9c5ea4f-28f0-401a-a491-491a037fa346
 ```
 
-테 넌 트에서 응용 프로그램 id가 ' f9c5ea4f-28f0-401a-a491-491a037fa346 ' 인 응용 프로그램을 제거 합니다.
+테넌트에서 애플리케이션 ID가 'f9c5ea4f-28f0-401a-a491-491a037fa346'인 애플리케이션을 제거합니다.
 
-### 예제 3-파이핑을 기준으로 응용 프로그램 제거
+### 예제 3 - 파이핑을 사용하여 애플리케이션 제거
 
 ```
 PS C:\> Get-AzADApplication -ObjectId b4cd1619-80b3-4cfb-9f8f-9f2333425738 | Remove-AzADApplication
 ```
 
-개체 id가 ' b4cd1619-80b3-4cfb-9f8f-9f2333425738 ' 인 응용 프로그램을 가져오고, 테 넌 트에서 응용 프로그램을 제거 하도록 Remove-AzADApplication cmdlet에 대 한 파이프를 가져옵니다.
+개체 ID가 'b4cd1619-80b3-4cfb-9f8f-9f2333425738'인 애플리케이션을 Remove-AzADApplication cmdlet에 파이프하여 테넌트에서 애플리케이션을 제거합니다.
 
-## 변수
+## PARAMETERS
 
 ### -ApplicationId
-제거할 응용 프로그램의 응용 프로그램 id입니다.
+제거할 애플리케이션의 애플리케이션 ID입니다.
 
 ```yaml
 Type: System.Guid
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-응용 프로그램의 표시 이름입니다.
+애플리케이션의 표시 이름입니다.
 
 ```yaml
 Type: System.String
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-확인 없이 응용 프로그램 삭제로 전환 합니다.
+확인 없이 애플리케이션을 삭제하려면 전환합니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-제거할 응용 프로그램을 나타내는 개체입니다.
+제거할 애플리케이션을 나타내는 개체입니다.
 
 ```yaml
 Type: Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-삭제할 응용 프로그램의 개체 id입니다.
+삭제할 애플리케이션의 개체 ID입니다.
 
 ```yaml
 Type: System.Guid
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-명령이 성공적으로 실행 되 면 true를 반환 합니다.
+명령이 성공하면 이를 지정하면 true가 반환됩니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -180,8 +180,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -확인
-Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.
+### -Confirm
+cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -196,8 +196,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Cmdlet이 실행 되는 경우의 동작을 보여 줍니다.
-Cmdlet이 실행 되지 않습니다.
+cmdlet이 실행되는 경우의 결과 표시
+cmdlet이 실행되지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -212,31 +212,30 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 about_CommonParameters (을 참조 하세요 http://go.microsoft.com/fwlink/?LinkID=113216) .
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 다음 about_CommonParameters http://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.
 
 ## 입력
 
-### 시스템 Guid
+### System.Guid
 
-### System. 문자열
+### System.String
 
-### Microsoft.Azure.Graph.RBAC.Version1_6 ActiveDirectory Adapplication
-매개 변수: InputObject (ByValue)
+### Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication
+매개 변수: InputObject(ByValue)
 
 ## 출력
 
-### 시스템 부울
+### System.Boolean
 
-## 상속자
-키워드: azure, Az, arm, resource, 관리, 관리자, 리소스, 그룹, 서식 파일, 배포
+## 참고 사항
+키워드: azure, Az, arm, 리소스, 관리, 관리자, 리소스, 그룹, 템플릿, 배포
 
 ## 관련 링크
 
-[새로운 AzADApplication](./New-AzADApplication.md)
+[New-AzADApplication](./New-AzADApplication.md)
 
 [Get-AzADApplication](./Get-AzADApplication.md)
 
-[Set-AzADApplication](./Set-AzADApplication.md)
 
-[제거-AzADAppCredential](./Remove-AzADAppCredential.md)
+[Remove-AzADAppCredential](./Remove-AzADAppCredential.md)
 
