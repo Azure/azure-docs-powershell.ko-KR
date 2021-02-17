@@ -1,44 +1,46 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/remove-azapimanagementbackend
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/remove-azapimanagementapifromgateway
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementBackend.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementBackend.md
-ms.openlocfilehash: 35a6731848c7695a8c649d344abaf466437a34f9
-ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementApiFromGateway.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementApiFromGateway.md
+ms.openlocfilehash: 506287812f684a778fdb96e750aac34049912b58
+ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100401586"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100210344"
 ---
-# Remove-AzApiManagementBackend
+# Remove-AzApiManagementApiFromGateway
 
 ## SYNOPSIS
-백end를 제거합니다.
+게이트웨이에 API를 연결합니다.
 
 ## 구문
 
 ```
-Remove-AzApiManagementBackend -Context <PsApiManagementContext> -BackendId <String> [-PassThru]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-AzApiManagementApiFromGateway -Context <PsApiManagementContext> -GatewayId <String> -ApiId <String>
+ [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## 설명
-API Management에서 식별자가 지정한 백안을 제거합니다.
+**Remove-AzApiManagementApiFromGateway** cmdlet은 API를 게이트웨이에 연결합니다.
 
 ## 예제
 
-### 예제 1: 백end 123 제거
-```powershell
-PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
-PS C:\>Remove-AzApiManagementBackend -Context $apimContext -BackendId 123 -PassThru
+### 예제 1: 게이트웨이에서 API 제거
 ```
+PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+PS C:\>Remove-AzApiManagementApiFromGateway -Context $ApiMgmtContext -GatewayId "0123456789" -ApiId "0001" -PassThru
+```
+
+이 명령은 게이트웨이에서 지정된 API를 제거합니다.
 
 ## PARAMETERS
 
-### -BackendId
-기존 백end의 식별자입니다.
+### -ApiId
+게이트웨이에서 제거할 기존 API의 식별자입니다.
 이 매개 변수는 필수입니다.
 
 ```yaml
@@ -81,6 +83,22 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GatewayId
+API를 제거할 기존 게이트웨이의 식별자입니다.
+이 매개 변수는 필수입니다.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -132,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](https://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
@@ -149,13 +167,3 @@ Accept wildcard characters: False
 ## 참고 사항
 
 ## 관련 링크
-
-[Get-AzApiManagementBackend](./Get-AzApiManagementBackend.md)
-
-[New-AzApiManagementBackend](./New-AzApiManagementBackend.md)
-
-[New-AzApiManagementBackendCredential](./New-AzApiManagementBackendCredential.md)
-
-[New-AzApiManagementBackendProxy](./New-AzApiManagementBackendProxy.md)
-
-[Set-AzApiManagementBackend](./Set-AzApiManagementBackend.md)
