@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzExpressRouteCircuitRouteTableSummary.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzExpressRouteCircuitRouteTableSummary.md
-ms.openlocfilehash: 78807c8504452479eef0cbe25a8e33cb017f4b9e
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 19a96083bc24c1ae50759aadd1a87b5bf23fdf48
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94043376"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100408188"
 ---
-# <span data-ttu-id="c1e38-101">Get-AzExpressRouteCircuitRouteTableSummary</span><span class="sxs-lookup"><span data-stu-id="c1e38-101">Get-AzExpressRouteCircuitRouteTableSummary</span></span>
+# <span data-ttu-id="60bba-101">Get-AzExpressRouteCircuitRouteTableSummary</span><span class="sxs-lookup"><span data-stu-id="60bba-101">Get-AzExpressRouteCircuitRouteTableSummary</span></span>
 
-## <span data-ttu-id="c1e38-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="c1e38-102">SYNOPSIS</span></span>
-<span data-ttu-id="c1e38-103">Express 경로 회로에 대 한 라우트 테이블 요약을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="c1e38-103">Gets a route table summary of an ExpressRoute circuit.</span></span>
+## <span data-ttu-id="60bba-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="60bba-102">SYNOPSIS</span></span>
+<span data-ttu-id="60bba-103">ExpressRoute 회로의 경로 테이블 요약을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="60bba-103">Gets a route table summary of an ExpressRoute circuit.</span></span>
 
-## <span data-ttu-id="c1e38-104">구문과</span><span class="sxs-lookup"><span data-stu-id="c1e38-104">SYNTAX</span></span>
+## <span data-ttu-id="60bba-104">구문</span><span class="sxs-lookup"><span data-stu-id="60bba-104">SYNTAX</span></span>
 
 ```
 Get-AzExpressRouteCircuitRouteTableSummary -ResourceGroupName <String> -ExpressRouteCircuitName <String>
@@ -26,20 +26,20 @@ Get-AzExpressRouteCircuitRouteTableSummary -ResourceGroupName <String> -ExpressR
  [<CommonParameters>]
 ```
 
-## <span data-ttu-id="c1e38-105">설명은</span><span class="sxs-lookup"><span data-stu-id="c1e38-105">DESCRIPTION</span></span>
-<span data-ttu-id="c1e38-106">**AzExpressRouteCircuitRouteTableSummary** cmdlet은 특정 라우팅 컨텍스트에 대 한 BGP 인접 정보 요약을 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="c1e38-106">The **Get-AzExpressRouteCircuitRouteTableSummary** cmdlet retrieves a summary of BGP neighbor information for a particular routing context.</span></span> <span data-ttu-id="c1e38-107">이 정보는 라우팅 컨텍스트가 설정 된 시간과 피어 링 라우터에서 알린 경로 접두사의 수를 확인 하는 데 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="c1e38-107">This information is useful to determine for how long a routing context has been established and the number of route prefixes advertised by the peering router.</span></span>
+## <span data-ttu-id="60bba-105">설명</span><span class="sxs-lookup"><span data-stu-id="60bba-105">DESCRIPTION</span></span>
+<span data-ttu-id="60bba-106">**Get-AzExpressRouteCircuitRouteTableSummary** cmdlet은 특정 라우팅 컨텍스트에 대한 BGP 인접 정보의 요약을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="60bba-106">The **Get-AzExpressRouteCircuitRouteTableSummary** cmdlet retrieves a summary of BGP neighbor information for a particular routing context.</span></span> <span data-ttu-id="60bba-107">이 정보는 라우팅 컨텍스트가 설정되는 기간 및 피어링 라우터에서 보급하는 경로 연결의 수를 결정하는 데 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="60bba-107">This information is useful to determine for how long a routing context has been established and the number of route prefixes advertised by the peering router.</span></span>
 
-## <span data-ttu-id="c1e38-108">예제의</span><span class="sxs-lookup"><span data-stu-id="c1e38-108">EXAMPLES</span></span>
+## <span data-ttu-id="60bba-108">예제</span><span class="sxs-lookup"><span data-stu-id="60bba-108">EXAMPLES</span></span>
 
-### <span data-ttu-id="c1e38-109">예제 1: 기본 경로의 경로 요약 표시</span><span class="sxs-lookup"><span data-stu-id="c1e38-109">Example 1: Display the route summary for the primary path</span></span>
+### <span data-ttu-id="60bba-109">예제 1: 기본 경로에 대한 경로 요약 표시</span><span class="sxs-lookup"><span data-stu-id="60bba-109">Example 1: Display the route summary for the primary path</span></span>
 ```
 Get-AzExpressRouteCircuitRouteTableSummary -ResourceGroupName $RG -ExpressRouteCircuitName $CircuitName -DevicePath 'Primary'
 ```
 
-## <span data-ttu-id="c1e38-110">변수</span><span class="sxs-lookup"><span data-stu-id="c1e38-110">PARAMETERS</span></span>
+## <span data-ttu-id="60bba-110">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="60bba-110">PARAMETERS</span></span>
 
-### <span data-ttu-id="c1e38-111">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="c1e38-111">-DefaultProfile</span></span>
-<span data-ttu-id="c1e38-112">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="c1e38-112">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+### <span data-ttu-id="60bba-111">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="60bba-111">-DefaultProfile</span></span>
+<span data-ttu-id="60bba-112">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="60bba-112">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -53,8 +53,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c1e38-113">-DevicePath</span><span class="sxs-lookup"><span data-stu-id="c1e38-113">-DevicePath</span></span>
-<span data-ttu-id="c1e38-114">이 매개 변수에 허용 되는 값은 `Primary` 다음과 같습니다. `Secondary`</span><span class="sxs-lookup"><span data-stu-id="c1e38-114">The acceptable values for this parameter are: `Primary` or `Secondary`</span></span>
+### <span data-ttu-id="60bba-113">-DevicePath</span><span class="sxs-lookup"><span data-stu-id="60bba-113">-DevicePath</span></span>
+<span data-ttu-id="60bba-114">이 매개 변수에 허용되는 값은 `Primary``Secondary`</span><span class="sxs-lookup"><span data-stu-id="60bba-114">The acceptable values for this parameter are: `Primary` or `Secondary`</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.DevicePathEnum
@@ -69,8 +69,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c1e38-115">-ExpressRouteCircuitName</span><span class="sxs-lookup"><span data-stu-id="c1e38-115">-ExpressRouteCircuitName</span></span>
-<span data-ttu-id="c1e38-116">검사 되는 Express 경로 회로의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="c1e38-116">The name of the ExpressRoute circuit being examined.</span></span>
+### <span data-ttu-id="60bba-115">-ExpressRouteCircuitName</span><span class="sxs-lookup"><span data-stu-id="60bba-115">-ExpressRouteCircuitName</span></span>
+<span data-ttu-id="60bba-116">검사할 ExpressRoute 회로의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="60bba-116">The name of the ExpressRoute circuit being examined.</span></span>
 
 ```yaml
 Type: System.String
@@ -84,8 +84,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c1e38-117">-PeeringType</span><span class="sxs-lookup"><span data-stu-id="c1e38-117">-PeeringType</span></span>
-<span data-ttu-id="c1e38-118">이 매개 변수에 허용 되는 값은 `AzurePrivatePeering` , 및 등입니다. `AzurePublicPeering``MicrosoftPeering`</span><span class="sxs-lookup"><span data-stu-id="c1e38-118">The acceptable values for this parameter are: `AzurePrivatePeering`, `AzurePublicPeering`, and `MicrosoftPeering`</span></span>
+### <span data-ttu-id="60bba-117">-PeeringType</span><span class="sxs-lookup"><span data-stu-id="60bba-117">-PeeringType</span></span>
+<span data-ttu-id="60bba-118">이 매개 변수에 허용되는 값은 `AzurePrivatePeering` , `AzurePublicPeering` 및 `MicrosoftPeering`</span><span class="sxs-lookup"><span data-stu-id="60bba-118">The acceptable values for this parameter are: `AzurePrivatePeering`, `AzurePublicPeering`, and `MicrosoftPeering`</span></span>
 
 ```yaml
 Type: System.String
@@ -100,8 +100,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c1e38-119">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="c1e38-119">-ResourceGroupName</span></span>
-<span data-ttu-id="c1e38-120">Express 경로 회로가 포함 된 리소스 그룹의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="c1e38-120">The name of the resource group containing the ExpressRoute circuit.</span></span>
+### <span data-ttu-id="60bba-119">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="60bba-119">-ResourceGroupName</span></span>
+<span data-ttu-id="60bba-120">ExpressRoute 회로를 포함하는 리소스 그룹의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="60bba-120">The name of the resource group containing the ExpressRoute circuit.</span></span>
 
 ```yaml
 Type: System.String
@@ -115,23 +115,23 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="c1e38-121">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="c1e38-121">CommonParameters</span></span>
-<span data-ttu-id="c1e38-122">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="c1e38-122">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="c1e38-123">자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="c1e38-123">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="60bba-121">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="60bba-121">CommonParameters</span></span>
+<span data-ttu-id="60bba-122">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="60bba-122">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="60bba-123">자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.</span><span class="sxs-lookup"><span data-stu-id="60bba-123">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="c1e38-124">입력</span><span class="sxs-lookup"><span data-stu-id="c1e38-124">INPUTS</span></span>
+## <span data-ttu-id="60bba-124">입력</span><span class="sxs-lookup"><span data-stu-id="60bba-124">INPUTS</span></span>
 
-### <span data-ttu-id="c1e38-125">System. 문자열</span><span class="sxs-lookup"><span data-stu-id="c1e38-125">System.String</span></span>
+### <span data-ttu-id="60bba-125">System.String</span><span class="sxs-lookup"><span data-stu-id="60bba-125">System.String</span></span>
 
-## <span data-ttu-id="c1e38-126">출력</span><span class="sxs-lookup"><span data-stu-id="c1e38-126">OUTPUTS</span></span>
+## <span data-ttu-id="60bba-126">출력</span><span class="sxs-lookup"><span data-stu-id="60bba-126">OUTPUTS</span></span>
 
-### <span data-ttu-id="c1e38-127">PSExpressRouteCircuitRoutesTableSummary에 대 한.</span><span class="sxs-lookup"><span data-stu-id="c1e38-127">Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuitRoutesTableSummary</span></span>
+### <span data-ttu-id="60bba-127">Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuitRoutesTableSummary</span><span class="sxs-lookup"><span data-stu-id="60bba-127">Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuitRoutesTableSummary</span></span>
 
-## <span data-ttu-id="c1e38-128">상속자</span><span class="sxs-lookup"><span data-stu-id="c1e38-128">NOTES</span></span>
+## <span data-ttu-id="60bba-128">참고 사항</span><span class="sxs-lookup"><span data-stu-id="60bba-128">NOTES</span></span>
 
-## <span data-ttu-id="c1e38-129">관련 링크</span><span class="sxs-lookup"><span data-stu-id="c1e38-129">RELATED LINKS</span></span>
+## <span data-ttu-id="60bba-129">관련 링크</span><span class="sxs-lookup"><span data-stu-id="60bba-129">RELATED LINKS</span></span>
 
-[<span data-ttu-id="c1e38-130">Get-AzExpressRouteCircuitARPTable</span><span class="sxs-lookup"><span data-stu-id="c1e38-130">Get-AzExpressRouteCircuitARPTable</span></span>](Get-AzExpressRouteCircuitARPTable.md)
+[<span data-ttu-id="60bba-130">Get-AzExpressRouteCircuitARPTable</span><span class="sxs-lookup"><span data-stu-id="60bba-130">Get-AzExpressRouteCircuitARPTable</span></span>](Get-AzExpressRouteCircuitARPTable.md)
 
-[<span data-ttu-id="c1e38-131">Get-AzExpressRouteCircuitRouteTable</span><span class="sxs-lookup"><span data-stu-id="c1e38-131">Get-AzExpressRouteCircuitRouteTable</span></span>](Get-AzExpressRouteCircuitRouteTable.md)
+[<span data-ttu-id="60bba-131">Get-AzExpressRouteCircuitRouteTable</span><span class="sxs-lookup"><span data-stu-id="60bba-131">Get-AzExpressRouteCircuitRouteTable</span></span>](Get-AzExpressRouteCircuitRouteTable.md)
 
-[<span data-ttu-id="c1e38-132">Get-AzExpressRouteCircuitStats</span><span class="sxs-lookup"><span data-stu-id="c1e38-132">Get-AzExpressRouteCircuitStats</span></span>](Get-AzExpressRouteCircuitStats.md)
+[<span data-ttu-id="60bba-132">Get-AzExpressRouteCircuitStat</span><span class="sxs-lookup"><span data-stu-id="60bba-132">Get-AzExpressRouteCircuitStat</span></span>](Get-AzExpressRouteCircuitStat.md)
