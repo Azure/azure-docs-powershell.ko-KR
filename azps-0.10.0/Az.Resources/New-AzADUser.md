@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzADUser.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzADUser.md
-ms.openlocfilehash: f7127b97790736e69dd138b861b5239a907ab4e7
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.openlocfilehash: 213e488dde914a8e87b76d6c3765f5dbe99a527a
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "93876443"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399977"
 ---
 # New-AzADUser
 
 ## SYNOPSIS
-새 active directory 사용자를 만듭니다.
+새 Active Directory 사용자를 만듭니다.
 
-## 구문과
+## 구문
 
 ```
 New-AzADUser -DisplayName <String> -UserPrincipalName <String> -Password <SecureString>
@@ -26,24 +26,24 @@ New-AzADUser -DisplayName <String> -UserPrincipalName <String> -Password <Secure
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## 설명은
-새 active directory 사용자 (회사/학교 계정 popularly 조직 id 라고도 함)를 만듭니다.
-추가 정보: https://msdn.microsoft.com/en-us/library/azure/ad/graph/api/users-operations#CreateUser
+## 설명
+새 Active Directory 사용자(org-id라고도 하는 직장/학교 계정)를 만듭니다.
+자세한 내용은 https://msdn.microsoft.com/en-us/library/azure/ad/graph/api/users-operations#CreateUser
 
-## 예제의
+## 예제
 
-### 예제 1-새 광고 사용자 만들기
+### 예제 1 - 새 AD 사용자 만들기
 ```
 PS C:\> $SecureStringPassword = ConvertTo-SecureString -String "password" -AsPlainText -Force
 PS C:\> New-AzADUser -DisplayName "MyDisplayName" -UserPrincipalName "myemail@domain.com" -Password $SecureStringPassword -MailNickname "MyMailNickName"
 ```
 
-테 넌 트에 "MyDisplayName" 및 user principal name "" 이라는 이름의 새 광고 사용자를 만듭니다 myemail@domain.com .
+테넌트에서 "MyDisplayName" 및 사용자 계정 이름 ""으로 새 AD myemail@domain.com 사용자를 만듭니다.
 
-## 변수
+## PARAMETERS
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
@@ -58,8 +58,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-사용자의 주소록에 표시할 이름입니다.
-' 정 Wu ' 예제입니다.
+사용자의 주소부에 표시할 이름입니다.
+예제 'Alex Wu'.
 
 ```yaml
 Type: System.String
@@ -74,8 +74,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForceChangePasswordNextLogin
-사용자가 다음에 성공한 로그인 (true)에서 암호를 변경 해야 하는 경우에는이를 지정 해야 합니다.
-기본 동작 (false)은 다음 로그인에 대 한 암호를 변경 하지 않습니다.
+사용자가 다음에 성공한 로그인(true)에서 암호를 변경해야 하는 경우 지정해야 합니다.
+기본 동작은 성공한 다음 로그인 시 암호를 변경하지 않는 것입니다(false).
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -ImmutableId
-사용자의 upn (사용자 계정 이름) 속성에 페더레이션 도메인을 사용 하는 경우에만 지정 해야 합니다.
+사용자의 사용자 계정 이름(upn) 속성에 페더리된 도메인을 사용하는 경우만 지정해야 합니다.
 
 ```yaml
 Type: System.String
@@ -119,10 +119,10 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -암호
+### -Password
 사용자의 암호입니다.
-테 넌 트의 암호 복잡성 요구 사항을 충족 해야 합니다.
-강력한 암호를 설정 하는 것이 좋습니다.
+테넌트의 암호 복잡성 요구 사항을 충족해야 합니다.
+강력한 암호를 설정하는 것이 좋습니다.
 
 ```yaml
 Type: System.Security.SecureString
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 
 ### -UserPrincipalName
 사용자 계정 이름입니다.
-예-' someuser@contoso.com '.
+Example-' someuser@contoso.com '.
 
 ```yaml
 Type: System.String
@@ -152,8 +152,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -확인
-Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.
+### -Confirm
+cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -168,8 +168,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Cmdlet이 실행 되는 경우의 동작을 보여 줍니다.
-Cmdlet이 실행 되지 않습니다.
+cmdlet이 실행되는 경우의 결과 표시
+cmdlet이 실행되지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -184,26 +184,25 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 about_CommonParameters (을 참조 하세요 http://go.microsoft.com/fwlink/?LinkID=113216) .
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 다음 about_CommonParameters http://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.
 
 ## 입력
 
-### System. 문자열
+### System.String
 
-### System.webserver
+### System.Security.SecureString
 
-### System.webserver 매개 변수
+### System.Management.Automation.SwitchParameter
 
 ## 출력
 
-### Microsoft.Azure.Graph.RBAC.Version1_6 ActiveDirectory Aduser
+### Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADUser
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
 [Get-AzADUser](./Get-AzADUser.md)
 
-[Set-AzADUser](./Set-AzADUser.md)
 
-[제거-AzADUser](./Remove-AzADUser.md)
+[Remove-AzADUser](./Remove-AzADUser.md)
