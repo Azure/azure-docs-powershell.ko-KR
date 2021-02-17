@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementBackend.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementBackend.md
-ms.openlocfilehash: 4886e5e064276b73f571c81724b98a409930126a
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 1f78630f195fca7e08ed755dbaeb48e413c8f8d1
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93689104"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100401011"
 ---
-# <span data-ttu-id="a5ce8-101">New-AzApiManagementBackend</span><span class="sxs-lookup"><span data-stu-id="a5ce8-101">New-AzApiManagementBackend</span></span>
+# <span data-ttu-id="f6edc-101">New-AzApiManagementBackend</span><span class="sxs-lookup"><span data-stu-id="f6edc-101">New-AzApiManagementBackend</span></span>
 
-## <span data-ttu-id="a5ce8-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="a5ce8-102">SYNOPSIS</span></span>
-<span data-ttu-id="a5ce8-103">새 백엔드 엔터티를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-103">Creates a new backend entity.</span></span>
+## <span data-ttu-id="f6edc-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="f6edc-102">SYNOPSIS</span></span>
+<span data-ttu-id="f6edc-103">새 백 엔트 엔터티를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-103">Creates a new backend entity.</span></span>
 
-## <span data-ttu-id="a5ce8-104">구문과</span><span class="sxs-lookup"><span data-stu-id="a5ce8-104">SYNTAX</span></span>
+## <span data-ttu-id="f6edc-104">구문</span><span class="sxs-lookup"><span data-stu-id="f6edc-104">SYNTAX</span></span>
 
 ```
 New-AzApiManagementBackend -Context <PsApiManagementContext> [-BackendId <String>] -Protocol <String>
@@ -28,12 +28,12 @@ New-AzApiManagementBackend -Context <PsApiManagementContext> [-BackendId <String
  [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="a5ce8-105">설명은</span><span class="sxs-lookup"><span data-stu-id="a5ce8-105">DESCRIPTION</span></span>
-<span data-ttu-id="a5ce8-106">Api Management에 새 백엔드 엔터티를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-106">Creates a new backend entity in Api Management.</span></span>
+## <span data-ttu-id="f6edc-105">설명</span><span class="sxs-lookup"><span data-stu-id="f6edc-105">DESCRIPTION</span></span>
+<span data-ttu-id="f6edc-106">Api Management에서 새 백 엔트 엔터티를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-106">Creates a new backend entity in Api Management.</span></span>
 
-## <span data-ttu-id="a5ce8-107">예제의</span><span class="sxs-lookup"><span data-stu-id="a5ce8-107">EXAMPLES</span></span>
+## <span data-ttu-id="f6edc-107">예제</span><span class="sxs-lookup"><span data-stu-id="f6edc-107">EXAMPLES</span></span>
 
-### <span data-ttu-id="a5ce8-108">기본 권한 부여 스키마를 사용 하 여 백엔드 123 만들기</span><span class="sxs-lookup"><span data-stu-id="a5ce8-108">Create Backend 123 with a Basic Authorization Scheme</span></span>
+### <span data-ttu-id="f6edc-108">기본 권한 부여 체계를 사용하여 백end 123 만들기</span><span class="sxs-lookup"><span data-stu-id="f6edc-108">Create Backend 123 with a Basic Authorization Scheme</span></span>
 ```powershell
 PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
 PS C:\>$credential = New-AzApiManagementBackendCredential -AuthorizationHeaderScheme basic -AuthorizationHeaderParameter opensesame -Query @{"sv" = @('xx', 'bb'); "sr" = @('cc')} -Header @{"x-my-1" = @('val1', 'val2')}
@@ -41,14 +41,14 @@ PS C:\>$credential = New-AzApiManagementBackendCredential -AuthorizationHeaderSc
 PS C:\>$backend = New-AzApiManagementBackend -Context  $apimContext -BackendId 123 -Url 'https://contoso.com/awesomeapi' -Protocol http -Title "first backend" -SkipCertificateChainValidation $true -Credential $credential -Description "my backend"
 ```
 
-<span data-ttu-id="a5ce8-109">새 백 엔드 만들기</span><span class="sxs-lookup"><span data-stu-id="a5ce8-109">Creates a new Backend</span></span>
+<span data-ttu-id="f6edc-109">새 백end를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-109">Creates a new Backend</span></span>
 
-## <span data-ttu-id="a5ce8-110">변수</span><span class="sxs-lookup"><span data-stu-id="a5ce8-110">PARAMETERS</span></span>
+## <span data-ttu-id="f6edc-110">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="f6edc-110">PARAMETERS</span></span>
 
-### <span data-ttu-id="a5ce8-111">-BackendId</span><span class="sxs-lookup"><span data-stu-id="a5ce8-111">-BackendId</span></span>
-<span data-ttu-id="a5ce8-112">새 백 엔드의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-112">Identifier of new backend.</span></span>
-<span data-ttu-id="a5ce8-113">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-113">This parameter is optional.</span></span>
-<span data-ttu-id="a5ce8-114">지정 하지 않으면가 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-114">If not specified will be generated.</span></span>
+### <span data-ttu-id="f6edc-111">-BackendId</span><span class="sxs-lookup"><span data-stu-id="f6edc-111">-BackendId</span></span>
+<span data-ttu-id="f6edc-112">새 백end의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-112">Identifier of new backend.</span></span>
+<span data-ttu-id="f6edc-113">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-113">This parameter is optional.</span></span>
+<span data-ttu-id="f6edc-114">지정하지 않으면 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-114">If not specified will be generated.</span></span>
 
 ```yaml
 Type: System.String
@@ -62,9 +62,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="a5ce8-115">-컨텍스트</span><span class="sxs-lookup"><span data-stu-id="a5ce8-115">-Context</span></span>
-<span data-ttu-id="a5ce8-116">PsApiManagementContext의 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-116">Instance of PsApiManagementContext.</span></span>
-<span data-ttu-id="a5ce8-117">이 매개 변수는 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-117">This parameter is required.</span></span>
+### <span data-ttu-id="f6edc-115">-Context</span><span class="sxs-lookup"><span data-stu-id="f6edc-115">-Context</span></span>
+<span data-ttu-id="f6edc-116">PsApiManagementContext의 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-116">Instance of PsApiManagementContext.</span></span>
+<span data-ttu-id="f6edc-117">이 매개 변수는 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-117">This parameter is required.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -78,9 +78,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="a5ce8-118">-Credential</span><span class="sxs-lookup"><span data-stu-id="a5ce8-118">-Credential</span></span>
-<span data-ttu-id="a5ce8-119">백 엔드로 대화할 때 사용 해야 하는 자격 증명 세부 정보입니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-119">Credential details which should be used when talking to the Backend.</span></span>
-<span data-ttu-id="a5ce8-120">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-120">This parameter is optional.</span></span>
+### <span data-ttu-id="f6edc-118">-Credential</span><span class="sxs-lookup"><span data-stu-id="f6edc-118">-Credential</span></span>
+<span data-ttu-id="f6edc-119">백end와 대화할 때 사용할 자격 증명 세부 정보입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-119">Credential details which should be used when talking to the Backend.</span></span>
+<span data-ttu-id="f6edc-120">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-120">This parameter is optional.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackendCredential
@@ -94,8 +94,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="a5ce8-121">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="a5ce8-121">-DefaultProfile</span></span>
-<span data-ttu-id="a5ce8-122">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-122">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+### <span data-ttu-id="f6edc-121">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="f6edc-121">-DefaultProfile</span></span>
+<span data-ttu-id="f6edc-122">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-122">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -109,9 +109,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="a5ce8-123">-설명</span><span class="sxs-lookup"><span data-stu-id="a5ce8-123">-Description</span></span>
-<span data-ttu-id="a5ce8-124">백 엔드 설명입니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-124">Backend Description.</span></span>
-<span data-ttu-id="a5ce8-125">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-125">This parameter is optional.</span></span>
+### <span data-ttu-id="f6edc-123">-Description</span><span class="sxs-lookup"><span data-stu-id="f6edc-123">-Description</span></span>
+<span data-ttu-id="f6edc-124">백end 설명입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-124">Backend Description.</span></span>
+<span data-ttu-id="f6edc-125">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-125">This parameter is optional.</span></span>
 
 ```yaml
 Type: System.String
@@ -125,10 +125,10 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="a5ce8-126">-프로토콜</span><span class="sxs-lookup"><span data-stu-id="a5ce8-126">-Protocol</span></span>
-<span data-ttu-id="a5ce8-127">백 엔드 통신 프로토콜.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-127">Backend Communication protocol.</span></span>
-<span data-ttu-id="a5ce8-128">이 매개 변수는 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-128">This parameter is required.</span></span>
-<span data-ttu-id="a5ce8-129">유효한 값은 ' http ' 및 ' soap '입니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-129">Valid values are 'http' and 'soap'.</span></span>
+### <span data-ttu-id="f6edc-126">-Protocol</span><span class="sxs-lookup"><span data-stu-id="f6edc-126">-Protocol</span></span>
+<span data-ttu-id="f6edc-127">백end 통신 프로토콜입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-127">Backend Communication protocol.</span></span>
+<span data-ttu-id="f6edc-128">이 매개 변수는 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-128">This parameter is required.</span></span>
+<span data-ttu-id="f6edc-129">유효한 값은 'http' 및 'soap'입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-129">Valid values are 'http' and 'soap'.</span></span>
 
 ```yaml
 Type: System.String
@@ -143,9 +143,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="a5ce8-130">-프록시</span><span class="sxs-lookup"><span data-stu-id="a5ce8-130">-Proxy</span></span>
-<span data-ttu-id="a5ce8-131">백 엔드에 요청을 보내는 동안 사용할 프록시 서버 세부 정보입니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-131">Proxy Server details to be used while sending request to the Backend.</span></span>
-<span data-ttu-id="a5ce8-132">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-132">This parameter is optional.</span></span>
+### <span data-ttu-id="f6edc-130">-Proxy</span><span class="sxs-lookup"><span data-stu-id="f6edc-130">-Proxy</span></span>
+<span data-ttu-id="f6edc-131">백end에 요청을 보내는 동안 사용할 프록시 서버 세부 정보입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-131">Proxy Server details to be used while sending request to the Backend.</span></span>
+<span data-ttu-id="f6edc-132">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-132">This parameter is optional.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackendProxy
@@ -159,10 +159,10 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="a5ce8-133">-ResourceId</span><span class="sxs-lookup"><span data-stu-id="a5ce8-133">-ResourceId</span></span>
-<span data-ttu-id="a5ce8-134">외부 시스템 리소스의 관리 Uri입니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-134">Management Uri of the Resource in External System.</span></span>
-<span data-ttu-id="a5ce8-135">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-135">This parameter is optional.</span></span>
-<span data-ttu-id="a5ce8-136">이 url은 논리 앱, 함수 앱 또는 Api 앱의 Arm 리소스 Id 일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-136">This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.</span></span>
+### <span data-ttu-id="f6edc-133">-ResourceId</span><span class="sxs-lookup"><span data-stu-id="f6edc-133">-ResourceId</span></span>
+<span data-ttu-id="f6edc-134">외부 시스템의 리소스 관리 URI입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-134">Management Uri of the Resource in External System.</span></span>
+<span data-ttu-id="f6edc-135">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-135">This parameter is optional.</span></span>
+<span data-ttu-id="f6edc-136">이 URL은 Logic Apps, Function Apps 또는 Api Apps의 Arm 리소스 ID일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-136">This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.</span></span>
 
 ```yaml
 Type: System.String
@@ -176,8 +176,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="a5ce8-137">-ServiceFabricCluster</span><span class="sxs-lookup"><span data-stu-id="a5ce8-137">-ServiceFabricCluster</span></span>
-<span data-ttu-id="a5ce8-138">Service Fabric 클러스터 백 엔드 정보.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-138">Service Fabric Cluster Backend details.</span></span> <span data-ttu-id="a5ce8-139">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-139">This parameter is optional.</span></span>
+### <span data-ttu-id="f6edc-137">-ServiceFabricCluster</span><span class="sxs-lookup"><span data-stu-id="f6edc-137">-ServiceFabricCluster</span></span>
+<span data-ttu-id="f6edc-138">Service Fabric 클러스터 백end 세부 정보입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-138">Service Fabric Cluster Backend details.</span></span> <span data-ttu-id="f6edc-139">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-139">This parameter is optional.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementServiceFabric
@@ -191,9 +191,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="a5ce8-140">-SkipCertificateChainValidation</span><span class="sxs-lookup"><span data-stu-id="a5ce8-140">-SkipCertificateChainValidation</span></span>
-<span data-ttu-id="a5ce8-141">백 엔드로 대화 하는 경우 인증서 체인 유효성 검사를 건너뛸지 여부</span><span class="sxs-lookup"><span data-stu-id="a5ce8-141">Whether to Skip Certificate Chain Validation when talking to the Backend.</span></span>
-<span data-ttu-id="a5ce8-142">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-142">This parameter is optional.</span></span>
+### <span data-ttu-id="f6edc-140">-SkipCertificateChainValidation</span><span class="sxs-lookup"><span data-stu-id="f6edc-140">-SkipCertificateChainValidation</span></span>
+<span data-ttu-id="f6edc-141">백end와 대화할 때 인증서 체인 유효성 검사를 건너뛸지 여부입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-141">Whether to Skip Certificate Chain Validation when talking to the Backend.</span></span>
+<span data-ttu-id="f6edc-142">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-142">This parameter is optional.</span></span>
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -207,9 +207,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="a5ce8-143">-SkipCertificateNameValidation</span><span class="sxs-lookup"><span data-stu-id="a5ce8-143">-SkipCertificateNameValidation</span></span>
-<span data-ttu-id="a5ce8-144">백 엔드로 대화 하는 경우 인증서 이름 유효성 검사를 건너뛸지 여부</span><span class="sxs-lookup"><span data-stu-id="a5ce8-144">Whether to skip Certificate Name Validation when talking to the Backend.</span></span>
-<span data-ttu-id="a5ce8-145">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-145">This parameter is optional.</span></span>
+### <span data-ttu-id="f6edc-143">-SkipCertificateNameValidation</span><span class="sxs-lookup"><span data-stu-id="f6edc-143">-SkipCertificateNameValidation</span></span>
+<span data-ttu-id="f6edc-144">백end와 대화할 때 인증서 이름 유효성 검사를 건너뛸지 여부입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-144">Whether to skip Certificate Name Validation when talking to the Backend.</span></span>
+<span data-ttu-id="f6edc-145">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-145">This parameter is optional.</span></span>
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -223,9 +223,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="a5ce8-146">-Title</span><span class="sxs-lookup"><span data-stu-id="a5ce8-146">-Title</span></span>
-<span data-ttu-id="a5ce8-147">백 엔드 제목.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-147">Backend Title.</span></span>
-<span data-ttu-id="a5ce8-148">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-148">This parameter is optional.</span></span>
+### <span data-ttu-id="f6edc-146">-Title</span><span class="sxs-lookup"><span data-stu-id="f6edc-146">-Title</span></span>
+<span data-ttu-id="f6edc-147">백end 제목입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-147">Backend Title.</span></span>
+<span data-ttu-id="f6edc-148">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-148">This parameter is optional.</span></span>
 
 ```yaml
 Type: System.String
@@ -239,9 +239,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="a5ce8-149">-Url</span><span class="sxs-lookup"><span data-stu-id="a5ce8-149">-Url</span></span>
-<span data-ttu-id="a5ce8-150">백 엔드의 런타임 Url입니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-150">Runtime Url for the Backend.</span></span>
-<span data-ttu-id="a5ce8-151">이 매개 변수는 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-151">This parameter is required.</span></span>
+### <span data-ttu-id="f6edc-149">-Url</span><span class="sxs-lookup"><span data-stu-id="f6edc-149">-Url</span></span>
+<span data-ttu-id="f6edc-150">백end에 대한 런타임 URL입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-150">Runtime Url for the Backend.</span></span>
+<span data-ttu-id="f6edc-151">이 매개 변수는 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-151">This parameter is required.</span></span>
 
 ```yaml
 Type: System.String
@@ -255,8 +255,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="a5ce8-152">-확인</span><span class="sxs-lookup"><span data-stu-id="a5ce8-152">-Confirm</span></span>
-<span data-ttu-id="a5ce8-153">Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-153">Prompts you for confirmation before running the cmdlet.</span></span>
+### <span data-ttu-id="f6edc-152">-Confirm</span><span class="sxs-lookup"><span data-stu-id="f6edc-152">-Confirm</span></span>
+<span data-ttu-id="f6edc-153">cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-153">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -270,8 +270,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="a5ce8-154">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="a5ce8-154">-WhatIf</span></span>
-<span data-ttu-id="a5ce8-155">Cmdlet이 실행 되는 경우의 동작을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-155">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="a5ce8-156">Cmdlet이 실행 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-156">The cmdlet is not run.</span></span>
+### <span data-ttu-id="f6edc-154">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="f6edc-154">-WhatIf</span></span>
+<span data-ttu-id="f6edc-155">cmdlet이 실행되는 경우의 결과 표시</span><span class="sxs-lookup"><span data-stu-id="f6edc-155">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="f6edc-156">cmdlet이 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-156">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -285,38 +285,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="a5ce8-157">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="a5ce8-157">CommonParameters</span></span>
-<span data-ttu-id="a5ce8-158">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5ce8-158">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="a5ce8-159">자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="a5ce8-159">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="f6edc-157">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="f6edc-157">CommonParameters</span></span>
+<span data-ttu-id="f6edc-158">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="f6edc-158">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="f6edc-159">자세한 내용은 다음 about_CommonParameters https://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f6edc-159">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="a5ce8-160">입력</span><span class="sxs-lookup"><span data-stu-id="a5ce8-160">INPUTS</span></span>
+## <span data-ttu-id="f6edc-160">입력</span><span class="sxs-lookup"><span data-stu-id="f6edc-160">INPUTS</span></span>
 
-### <span data-ttu-id="a5ce8-161">ApiManagement. ServiceManagement. \ PsApiManagementContext</span><span class="sxs-lookup"><span data-stu-id="a5ce8-161">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext</span></span>
+### <span data-ttu-id="f6edc-161">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext</span><span class="sxs-lookup"><span data-stu-id="f6edc-161">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext</span></span>
 
-### <span data-ttu-id="a5ce8-162">System. 문자열</span><span class="sxs-lookup"><span data-stu-id="a5ce8-162">System.String</span></span>
+### <span data-ttu-id="f6edc-162">System.String</span><span class="sxs-lookup"><span data-stu-id="f6edc-162">System.String</span></span>
 
-### <span data-ttu-id="a5ce8-163">시스템 Null 허용 ' 1 [[CoreLib, Version = 4.0.0.0, Culture = 중립, PublicKeyToken = 7cec85d7bea7798e]]</span><span class="sxs-lookup"><span data-stu-id="a5ce8-163">System.Nullable\`1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span></span>
+### <span data-ttu-id="f6edc-163">System.Nullable'1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span><span class="sxs-lookup"><span data-stu-id="f6edc-163">System.Nullable\`1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span></span>
 
-### <span data-ttu-id="a5ce8-164">ApiManagement. ServiceManagement. \ PsApiManagementBackendCredential</span><span class="sxs-lookup"><span data-stu-id="a5ce8-164">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackendCredential</span></span>
+### <span data-ttu-id="f6edc-164">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackendCredential</span><span class="sxs-lookup"><span data-stu-id="f6edc-164">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackendCredential</span></span>
 
-### <span data-ttu-id="a5ce8-165">ApiManagement. ServiceManagement. \ PsApiManagementBackendProxy</span><span class="sxs-lookup"><span data-stu-id="a5ce8-165">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackendProxy</span></span>
+### <span data-ttu-id="f6edc-165">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackendProxy</span><span class="sxs-lookup"><span data-stu-id="f6edc-165">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackendProxy</span></span>
 
-### <span data-ttu-id="a5ce8-166">ApiManagement. ServiceManagement. \ PsApiManagementServiceFabric</span><span class="sxs-lookup"><span data-stu-id="a5ce8-166">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementServiceFabric</span></span>
+### <span data-ttu-id="f6edc-166">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementServiceFabric</span><span class="sxs-lookup"><span data-stu-id="f6edc-166">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementServiceFabric</span></span>
 
-## <span data-ttu-id="a5ce8-167">출력</span><span class="sxs-lookup"><span data-stu-id="a5ce8-167">OUTPUTS</span></span>
+## <span data-ttu-id="f6edc-167">출력</span><span class="sxs-lookup"><span data-stu-id="f6edc-167">OUTPUTS</span></span>
 
-### <span data-ttu-id="a5ce8-168">ApiManagement. ServiceManagement. \ PsApiManagementBackend</span><span class="sxs-lookup"><span data-stu-id="a5ce8-168">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackend</span></span>
+### <span data-ttu-id="f6edc-168">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackend</span><span class="sxs-lookup"><span data-stu-id="f6edc-168">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackend</span></span>
 
-## <span data-ttu-id="a5ce8-169">상속자</span><span class="sxs-lookup"><span data-stu-id="a5ce8-169">NOTES</span></span>
+## <span data-ttu-id="f6edc-169">참고 사항</span><span class="sxs-lookup"><span data-stu-id="f6edc-169">NOTES</span></span>
 
-## <span data-ttu-id="a5ce8-170">관련 링크</span><span class="sxs-lookup"><span data-stu-id="a5ce8-170">RELATED LINKS</span></span>
+## <span data-ttu-id="f6edc-170">관련 링크</span><span class="sxs-lookup"><span data-stu-id="f6edc-170">RELATED LINKS</span></span>
 
-[<span data-ttu-id="a5ce8-171">Get-AzApiManagementBackend</span><span class="sxs-lookup"><span data-stu-id="a5ce8-171">Get-AzApiManagementBackend</span></span>](./Get-AzApiManagementBackend)
+[<span data-ttu-id="f6edc-171">Get-AzApiManagementBackend</span><span class="sxs-lookup"><span data-stu-id="f6edc-171">Get-AzApiManagementBackend</span></span>](./Get-AzApiManagementBackend.md)
 
-[<span data-ttu-id="a5ce8-172">새로운 AzApiManagementBackendCredential</span><span class="sxs-lookup"><span data-stu-id="a5ce8-172">New-AzApiManagementBackendCredential</span></span>](./New-AzApiManagementBackendCredential.md)
+[<span data-ttu-id="f6edc-172">New-AzApiManagementBackendCredential</span><span class="sxs-lookup"><span data-stu-id="f6edc-172">New-AzApiManagementBackendCredential</span></span>](./New-AzApiManagementBackendCredential.md)
 
-[<span data-ttu-id="a5ce8-173">새로운 AzApiManagementBackendProxy</span><span class="sxs-lookup"><span data-stu-id="a5ce8-173">New-AzApiManagementBackendProxy</span></span>](./New-AzApiManagementBackendProxy.md)
+[<span data-ttu-id="f6edc-173">New-AzApiManagementBackendProxy</span><span class="sxs-lookup"><span data-stu-id="f6edc-173">New-AzApiManagementBackendProxy</span></span>](./New-AzApiManagementBackendProxy.md)
 
-[<span data-ttu-id="a5ce8-174">Set-AzApiManagementBackend</span><span class="sxs-lookup"><span data-stu-id="a5ce8-174">Set-AzApiManagementBackend</span></span>](./Set-AzApiManagementBackend.md)
+[<span data-ttu-id="f6edc-174">Set-AzApiManagementBackend</span><span class="sxs-lookup"><span data-stu-id="f6edc-174">Set-AzApiManagementBackend</span></span>](./Set-AzApiManagementBackend.md)
 
-[<span data-ttu-id="a5ce8-175">제거-AzApiManagementBackend</span><span class="sxs-lookup"><span data-stu-id="a5ce8-175">Remove-AzApiManagementBackend</span></span>](./Remove-AzApiManagementBackend.md)
+[<span data-ttu-id="f6edc-175">Remove-AzApiManagementBackend</span><span class="sxs-lookup"><span data-stu-id="f6edc-175">Remove-AzApiManagementBackend</span></span>](./Remove-AzApiManagementBackend.md)
 

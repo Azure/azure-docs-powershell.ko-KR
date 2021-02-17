@@ -6,32 +6,32 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementVirtualNetwork.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementVirtualNetwork.md
-ms.openlocfilehash: 67020f99129dfa920aa1bbc5e22ac59c16affb32
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 496e65438a2c0ef5f09bbf961535eaa842062f25
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93869470"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100400895"
 ---
-# <span data-ttu-id="62132-101">New-AzApiManagementVirtualNetwork</span><span class="sxs-lookup"><span data-stu-id="62132-101">New-AzApiManagementVirtualNetwork</span></span>
+# <span data-ttu-id="cecc4-101">New-AzApiManagementVirtualNetwork</span><span class="sxs-lookup"><span data-stu-id="cecc4-101">New-AzApiManagementVirtualNetwork</span></span>
 
-## <span data-ttu-id="62132-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="62132-102">SYNOPSIS</span></span>
-<span data-ttu-id="62132-103">PsApiManagementVirtualNetwork의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="62132-103">Creates an instance of PsApiManagementVirtualNetwork.</span></span>
+## <span data-ttu-id="cecc4-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="cecc4-102">SYNOPSIS</span></span>
+<span data-ttu-id="cecc4-103">PsApiManagementVirtualNetwork의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cecc4-103">Creates an instance of PsApiManagementVirtualNetwork.</span></span>
 
-## <span data-ttu-id="62132-104">구문과</span><span class="sxs-lookup"><span data-stu-id="62132-104">SYNTAX</span></span>
+## <span data-ttu-id="cecc4-104">구문</span><span class="sxs-lookup"><span data-stu-id="cecc4-104">SYNTAX</span></span>
 
 ```
 New-AzApiManagementVirtualNetwork -SubnetResourceId <String> [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
 ```
 
-## <span data-ttu-id="62132-105">설명은</span><span class="sxs-lookup"><span data-stu-id="62132-105">DESCRIPTION</span></span>
-<span data-ttu-id="62132-106">**AzApiManagementVirtualNetwork** Cmdlet은 **PsApiManagementVirtualNetwork** 의 인스턴스를 만드는 도우미 명령입니다.</span><span class="sxs-lookup"><span data-stu-id="62132-106">The **New-AzApiManagementVirtualNetwork** cmdlet is a helper command to create an instance of **PsApiManagementVirtualNetwork**.</span></span>
-<span data-ttu-id="62132-107">이 명령은 **AzApiManagementDeployment** cmdlet에 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="62132-107">This command is used with **Update-AzApiManagementDeployment** cmdlet.</span></span>
+## <span data-ttu-id="cecc4-105">설명</span><span class="sxs-lookup"><span data-stu-id="cecc4-105">DESCRIPTION</span></span>
+<span data-ttu-id="cecc4-106">**New-AzApiManagementVirtualNetwork** cmdlet은 **PsApiManagementVirtualNetwork의** 인스턴스를 만드는 도우미 명령입니다.</span><span class="sxs-lookup"><span data-stu-id="cecc4-106">The **New-AzApiManagementVirtualNetwork** cmdlet is a helper command to create an instance of **PsApiManagementVirtualNetwork**.</span></span>
+<span data-ttu-id="cecc4-107">이 명령은 **Set-AzApiManagement** cmdlet과 함께 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="cecc4-107">This command is used with **Set-AzApiManagement** cmdlet.</span></span>
 
-## <span data-ttu-id="62132-108">예제의</span><span class="sxs-lookup"><span data-stu-id="62132-108">EXAMPLES</span></span>
+## <span data-ttu-id="cecc4-108">예제</span><span class="sxs-lookup"><span data-stu-id="cecc4-108">EXAMPLES</span></span>
 
-### <span data-ttu-id="62132-109">예제 1: 가상 네트워크 만들기</span><span class="sxs-lookup"><span data-stu-id="62132-109">Example 1: Create a virtual network</span></span>
+### <span data-ttu-id="cecc4-109">예제 1: 가상 네트워크 만들기</span><span class="sxs-lookup"><span data-stu-id="cecc4-109">Example 1: Create a virtual network</span></span>
 ```
 PS C:\>$vnetName = "myvnet"
 PS C:\>$subnetName = "default"
@@ -42,20 +42,20 @@ PS C:\>$vnet = New-AzvirtualNetwork -Name $vnetName -ResourceGroupName $resource
 PS C:\>$virtualNetwork = New-AzApiManagementVirtualNetwork -Location $location -SubnetResourceId $vnet.Subnets[0].Id
 
 # Get the service
-PS C:\>$service = Get-AzApiManagement -ResourceGroupName $resourceGroupName -Name $apiManagementName    
+PS C:\>$service = Get-AzApiManagement -ResourceGroupName $resourceGroupName -Name $apiManagementName
 PS C:\>$service.VirtualNetwork = $virtualNetwork
 PS C:\>$service.VpnType = "External"
 
 # Update the Deployment with Virtual Network
-PS C:\>Update-AzApiManagementDeployment -ApiManagement $service
+PS C:\>Set-AzApiManagement -ApiManagement $service
 ```
 
-<span data-ttu-id="62132-110">이 예제에서는 가상 네트워크를 만든 다음 **AzApiManagementDeployment** cmdlet을 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="62132-110">This example creates a virtual network and then calls the **Update-AzApiManagementDeployment** cmdlet.</span></span>
+<span data-ttu-id="cecc4-110">이 예제에서는 가상 네트워크를 만든 다음 **Set-AzApiManagement** cmdlet을 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="cecc4-110">This example creates a virtual network and then calls the **Set-AzApiManagement** cmdlet.</span></span>
 
-## <span data-ttu-id="62132-111">변수</span><span class="sxs-lookup"><span data-stu-id="62132-111">PARAMETERS</span></span>
+## <span data-ttu-id="cecc4-111">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="cecc4-111">PARAMETERS</span></span>
 
-### <span data-ttu-id="62132-112">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="62132-112">-DefaultProfile</span></span>
-<span data-ttu-id="62132-113">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="62132-113">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+### <span data-ttu-id="cecc4-112">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="cecc4-112">-DefaultProfile</span></span>
+<span data-ttu-id="cecc4-113">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="cecc4-113">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -69,8 +69,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="62132-114">-SubnetResourceId</span><span class="sxs-lookup"><span data-stu-id="62132-114">-SubnetResourceId</span></span>
-<span data-ttu-id="62132-115">가상 네트워크의 서브넷 리소스 ID를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="62132-115">Specifies the subnet resource ID of the virtual network.</span></span>
+### <span data-ttu-id="cecc4-114">-SubnetResourceId</span><span class="sxs-lookup"><span data-stu-id="cecc4-114">-SubnetResourceId</span></span>
+<span data-ttu-id="cecc4-115">가상 네트워크의 서브넷 리소스 ID를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="cecc4-115">Specifies the subnet resource ID of the virtual network.</span></span>
 
 ```yaml
 Type: System.String
@@ -84,20 +84,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="62132-116">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="62132-116">CommonParameters</span></span>
-<span data-ttu-id="62132-117">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="62132-117">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="62132-118">자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="62132-118">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="cecc4-116">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="cecc4-116">CommonParameters</span></span>
+<span data-ttu-id="cecc4-117">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="cecc4-117">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="cecc4-118">자세한 내용은 다음 about_CommonParameters https://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cecc4-118">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="62132-119">입력</span><span class="sxs-lookup"><span data-stu-id="62132-119">INPUTS</span></span>
+## <span data-ttu-id="cecc4-119">입력</span><span class="sxs-lookup"><span data-stu-id="cecc4-119">INPUTS</span></span>
 
-### <span data-ttu-id="62132-120">않아야</span><span class="sxs-lookup"><span data-stu-id="62132-120">None</span></span>
+### <span data-ttu-id="cecc4-120">없음</span><span class="sxs-lookup"><span data-stu-id="cecc4-120">None</span></span>
 
-## <span data-ttu-id="62132-121">출력</span><span class="sxs-lookup"><span data-stu-id="62132-121">OUTPUTS</span></span>
+## <span data-ttu-id="cecc4-121">출력</span><span class="sxs-lookup"><span data-stu-id="cecc4-121">OUTPUTS</span></span>
 
-### <span data-ttu-id="62132-122">ApiManagement. PsApiManagementVirtualNetwork/.</span><span class="sxs-lookup"><span data-stu-id="62132-122">Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork</span></span>
+### <span data-ttu-id="cecc4-122">Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork</span><span class="sxs-lookup"><span data-stu-id="cecc4-122">Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork</span></span>
 
-## <span data-ttu-id="62132-123">상속자</span><span class="sxs-lookup"><span data-stu-id="62132-123">NOTES</span></span>
+## <span data-ttu-id="cecc4-123">참고 사항</span><span class="sxs-lookup"><span data-stu-id="cecc4-123">NOTES</span></span>
 
-## <span data-ttu-id="62132-124">관련 링크</span><span class="sxs-lookup"><span data-stu-id="62132-124">RELATED LINKS</span></span>
+## <span data-ttu-id="cecc4-124">관련 링크</span><span class="sxs-lookup"><span data-stu-id="cecc4-124">RELATED LINKS</span></span>
 
-[<span data-ttu-id="62132-125">업데이트-AzApiManagementDeployment</span><span class="sxs-lookup"><span data-stu-id="62132-125">Update-AzApiManagementDeployment</span></span>](./Update-AzApiManagementDeployment.md)
+[<span data-ttu-id="cecc4-125">Set-AzApiManagement</span><span class="sxs-lookup"><span data-stu-id="cecc4-125">Set-AzApiManagement</span></span>](./Set-AzApiManagement.md)
 
