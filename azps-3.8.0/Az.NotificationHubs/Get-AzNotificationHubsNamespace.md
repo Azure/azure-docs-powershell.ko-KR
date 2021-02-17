@@ -6,62 +6,62 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.notificati
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHubsNamespace.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHubsNamespace.md
-ms.openlocfilehash: 021f83895494fa56cbd60032c37eecdc0007460b
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 93ee8ceb15d3c07942f87c0187f4b04b8ac4aaa5
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "93877254"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100413305"
 ---
 # Get-AzNotificationHubsNamespace
 
 ## SYNOPSIS
-알림 허브 네임 스페이스에 대 한 정보를 가져옵니다.
+알림 허브 네임스페이스에 대한 정보를 얻습니다.
 
-## 구문과
+## 구문
 
 ```
 Get-AzNotificationHubsNamespace [[-ResourceGroup] <String>] [[-Namespace] <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## 설명은
-**AzNotificationHubsNamespace Cmdlet은** 알림 허브 네임 스페이스에 대 한 정보를 가져옵니다.
-이 cmdlet은 모든 네임 스페이스, 즉 지정 된 리소스 그룹에 할당 된 네임 스페이스에 대 한 정보를 가져올 수 있는 옵션을 제공 합니다. 특정 네임 스페이스에 대 한 정보를 반환 합니다.
-네임 스페이스는 알림 허브를 구성 하 고 관리 하는 데 도움이 되는 논리적 컨테이너입니다.
-하나 이상의 알림 허브 네임 스페이스가 있어야 합니다. 모든 알림 허브는 네임 스페이스에 할당 되어야 합니다.
-단일 네임 스페이스는 조직에서 하나의 네임 스페이스만 필요할 수 있다는 것을 의미 하는 여러 허브를 배치할 수 있습니다.
-그러나 허브를 더 효과적으로 구성 하거나 특정 개인에 게 선택한 허브 하위 집합을 관리할 수 있는 권한을 부여 하기 위해 여러 네임 스페이스를 사용할 수도 있습니다.
-**Get-AzNotificationHubsNamespace** cmdlet은 네임 스페이스 자체에 대 한 기본 정보를 반환 합니다.
-네임 스페이스에 연결 된 권한 부여 규칙에 대 한 정보를 얻으려면 Get-AzNotificationHubsNamespaceAuthorizationRules를 사용 합니다.
+## 설명
+**Get-AzNotificationHubsNamespace** cmdlet은 알림 허브 네임스페이스에 대한 정보를 얻습니다.
+이 cmdlet은 모든 네임스페이스에 대한 정보, 지정된 리소스 그룹에 할당된 네임스페이스에 대한 정보를 제공하는 옵션을 제공합니다. 또는 특정 네임스페이스에 대한 정보를 반환합니다.
+네임스페이스는 알림 허브를 구성하고 관리하는 데 도움이 되는 논리적 컨테이너입니다.
+알림 허브 네임스페이스가 하나 이상 있어야 합니다. 모든 알림 허브를 네임스페이스에 할당해야 합니다.
+단일 네임스페이스는 여러 허브를 사용할 수 있습니다. 즉, 조직에서 네임스페이스가 하나만 필요할 수 있습니다.
+그러나 허브를 보다 효율적으로 구성하거나 특정 개인에게 선택한 허브 하위 집합을 관리할 수 있는 권한을 부여하기 위해 여러 네임스페이스를 사용할 수도 있습니다.
+**Get-AzNotificationHubsNamespace** cmdlet은 네임스페이스 자체에 대한 기본 정보를 반환합니다.
+네임스페이스와 연결된 권한 부여 규칙에 대한 정보를 얻습니다. Get-AzNotificationHubsNamespaceAuthorizationRules를 사용하세요.
 
-## 예제의
+## 예제
 
-### 예제 1: 모든 알림 허브 네임 스페이스에 대 한 정보 가져오기
+### 예제 1: 모든 알림 허브 네임스페이스에 대한 정보 얻기
 ```
 PS C:\>Get-AzNotificationHubsNamespace
 ```
 
-이 명령은 모든 알림 허브 네임 스페이스에 대 한 정보를 반환 합니다.
+이 명령은 모든 알림 허브 네임스페이스에 대한 정보를 반환합니다.
 
-### 예제 2: 단일 알림 허브 네임 스페이스에 대 한 정보 가져오기
+### 예제 2: 단일 알림 허브 네임스페이스에 대한 정보 얻기
 ```
 PS C:\>Get-AzNotificationHubsNamespace -Namespace "ContosoNamespace"
 ```
 
-이 명령은 단일 알림 허브 네임 스페이스에 대 한 정보를 가져옵니다: ContosoNamespace.
+이 명령은 단일 알림 허브 네임스페이스인 ContosoNamespace에 대한 정보를 얻습니다.
 
-### 예제 3: 특정 네임 스페이스에 할당 된 모든 알림 허브에 대 한 정보 가져오기
+### 예제 3: 특정 네임스페이스에 할당된 모든 알림 허브에 대한 정보 얻기
 ```
 PS C:\>Get-AzNotificationHubsNamespace -ResourceGroup "ContosoNotificationsGroup"
 ```
 
-이 명령은 리소스 그룹 ContosoNotificationsGroup에 할당 된 모든 알림 허브 네임 스페이스에 대 한 정보를 가져옵니다.
+이 명령은 리소스 그룹 ContosoNotificationsGroup에 할당된 모든 알림 허브 네임스페이스에 대한 정보를 얻습니다.
 
-## 변수
+## PARAMETERS
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -76,8 +76,8 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-네임 스페이스에 대 한 고유한 이름을 지정 합니다.
-네임 스페이스는 알림 허브를 그룹화 하 고 분류 하는 방법을 제공 합니다.
+네임스페이스의 고유한 이름을 지정합니다.
+네임스페이스는 알림 허브를 그룹화하고 분류하는 방법을 제공합니다.
 
 ```yaml
 Type: System.String
@@ -92,8 +92,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-네임 스페이스를 할당할 리소스 그룹을 지정 합니다.
-리소스 그룹은 관리 및 Azure 관리를 쉽게 할 수 있는 방식으로 네임 스페이스, 알림 허브, 권한 부여 규칙 등의 항목을 구성 합니다.
+네임스페이스가 할당된 리소스 그룹을 지정합니다.
+리소스 그룹은 인벤토리 관리 및 Azure 관리에 도움이 되는 방식으로 네임스페이스, 알림 허브 및 권한 부여 규칙과 같은 항목을 구성합니다.
 
 ```yaml
 Type: System.String
@@ -108,25 +108,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 about_CommonParameters (을 참조 하세요 http://go.microsoft.com/fwlink/?LinkID=113216) .
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 다음 about_CommonParameters http://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.
 
 ## 입력
 
-### System. 문자열
+### System.String
 
 ## 출력
 
-### Microsoft. Azure. NamespaceAttributes
+### Microsoft.Azure.Commands.NotificationHubs.Models.NamespaceAttributes
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
-[Get-AzNotificationHubsNamespaceAuthorizationRules](./Get-AzNotificationHubsNamespaceAuthorizationRules.md)
 
-[새로운 AzNotificationHubsNamespace](./New-AzNotificationHubsNamespace.md)
+[New-AzNotificationHubsNamespace](./New-AzNotificationHubsNamespace.md)
 
-[제거-AzNotificationHubsNamespace](./Remove-AzNotificationHubsNamespace.md)
+[Remove-AzNotificationHubsNamespace](./Remove-AzNotificationHubsNamespace.md)
 
 [Set-AzNotificationHubsNamespace](./Set-AzNotificationHubsNamespace.md)
 

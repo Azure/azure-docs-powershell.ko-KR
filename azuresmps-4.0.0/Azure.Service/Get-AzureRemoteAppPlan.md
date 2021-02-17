@@ -3,34 +3,34 @@ external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 ms.assetid: A1599617-FAB8-42AE-B066-2B4682F0BA21
 online version: ''
 schema: 2.0.0
-ms.openlocfilehash: 6b5c05a33ea14df95945d9539e53602db8abd79c
-ms.sourcegitcommit: 56ed085a868afa8263f8eb0f755b5822f5c29532
+ms.openlocfilehash: e453d8051e2be4ef72cc4d005c403ea051a6cdce
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "94046578"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100410942"
 ---
 # Get-AzureRemoteAppPlan
 
 ## SYNOPSIS
-Azure RemoteApp 계획을 나열 합니다.
+Azure RemoteApp 계획을 나열합니다.
 
-## 구문과
+## 구문
 
 ```
 Get-AzureRemoteAppPlan [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
-## 설명은
-**AzureRemoteAppPlan** Cmdlet은 Azure RemoteApp 계획을 나열 합니다.
+## 설명
+**Get-AzureRemoteAppPlan** cmdlet은 Azure RemoteApp 계획을 나열합니다.
 
-## 예제의
+## 예제
 
-## 변수
+## PARAMETERS
 
-### -프로필
-이 cmdlet이 읽는 Azure 프로필을 지정 합니다.
-프로필을 지정 하지 않으면이 cmdlet은 로컬 기본 프로필을 읽습니다.
+### -Profile
+이 cmdlet이 읽을 Azure 프로필을 지정합니다.
+프로필을 지정하지 않으면 이 cmdlet은 로컬 기본 프로필에서 읽습니다.
 
 ```yaml
 Type: AzureSMProfile
@@ -45,16 +45,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 다음 about_CommonParameters https://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.
 
 ## 입력
 
 ## 출력
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
-[Azure RemoteApp Cmdlet](./Azure.RemoteApp.md)
+
 
 
