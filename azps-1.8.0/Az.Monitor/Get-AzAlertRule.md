@@ -6,71 +6,71 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzAlertRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzAlertRule.md
-ms.openlocfilehash: 4b5a4a5577c6227f317047489e60d3ac04a30ce0
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 7164c1f37c3205e3bc2d71f2b820290217aff432
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93867334"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100403105"
 ---
-# <span data-ttu-id="aaa9e-101">Get-AzAlertRule</span><span class="sxs-lookup"><span data-stu-id="aaa9e-101">Get-AzAlertRule</span></span>
+# <span data-ttu-id="08770-101">Get-AzAlertRule</span><span class="sxs-lookup"><span data-stu-id="08770-101">Get-AzAlertRule</span></span>
 
-## <span data-ttu-id="aaa9e-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="aaa9e-102">SYNOPSIS</span></span>
-<span data-ttu-id="aaa9e-103">알림 규칙을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="aaa9e-103">Gets alert rules.</span></span>
+## <span data-ttu-id="08770-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="08770-102">SYNOPSIS</span></span>
+<span data-ttu-id="08770-103">경고 규칙을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="08770-103">Gets alert rules.</span></span>
 
-## <span data-ttu-id="aaa9e-104">구문과</span><span class="sxs-lookup"><span data-stu-id="aaa9e-104">SYNTAX</span></span>
+## <span data-ttu-id="08770-104">구문</span><span class="sxs-lookup"><span data-stu-id="08770-104">SYNTAX</span></span>
 
-### <span data-ttu-id="aaa9e-105">GetByResourceGroup</span><span class="sxs-lookup"><span data-stu-id="aaa9e-105">GetByResourceGroup</span></span>
+### <span data-ttu-id="08770-105">GetByResourceGroup</span><span class="sxs-lookup"><span data-stu-id="08770-105">GetByResourceGroup</span></span>
 ```
 Get-AzAlertRule -ResourceGroupName <String> [-DetailedOutput] [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
 ```
 
-### <span data-ttu-id="aaa9e-106">GetByName</span><span class="sxs-lookup"><span data-stu-id="aaa9e-106">GetByName</span></span>
+### <span data-ttu-id="08770-106">GetByName</span><span class="sxs-lookup"><span data-stu-id="08770-106">GetByName</span></span>
 ```
 Get-AzAlertRule -ResourceGroupName <String> -Name <String> [-DetailedOutput]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="aaa9e-107">GetByResourceUri</span><span class="sxs-lookup"><span data-stu-id="aaa9e-107">GetByResourceUri</span></span>
+### <span data-ttu-id="08770-107">GetByResourceUri</span><span class="sxs-lookup"><span data-stu-id="08770-107">GetByResourceUri</span></span>
 ```
 Get-AzAlertRule -ResourceGroupName <String> -TargetResourceId <String> [-DetailedOutput]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="aaa9e-108">설명은</span><span class="sxs-lookup"><span data-stu-id="aaa9e-108">DESCRIPTION</span></span>
-<span data-ttu-id="aaa9e-109">**AzAlertRule** cmdlet은 이름 또는 URI 또는 지정 된 리소스 그룹의 모든 알림 규칙을 기준으로 경고 규칙을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="aaa9e-109">The **Get-AzAlertRule** cmdlet gets an alert rule by its name or URI, or all alert rules from a specified resource group.</span></span>
+## <span data-ttu-id="08770-108">설명</span><span class="sxs-lookup"><span data-stu-id="08770-108">DESCRIPTION</span></span>
+<span data-ttu-id="08770-109">**Get-AzAlertRule** cmdlet은 이름 또는 URI 또는 지정된 리소스 그룹의 모든 경고 규칙에 따라 경고 규칙을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="08770-109">The **Get-AzAlertRule** cmdlet gets an alert rule by its name or URI, or all alert rules from a specified resource group.</span></span>
 
-## <span data-ttu-id="aaa9e-110">예제의</span><span class="sxs-lookup"><span data-stu-id="aaa9e-110">EXAMPLES</span></span>
+## <span data-ttu-id="08770-110">예제</span><span class="sxs-lookup"><span data-stu-id="08770-110">EXAMPLES</span></span>
 
-### <span data-ttu-id="aaa9e-111">예제 1: 리소스 그룹에 대 한 알림 규칙 가져오기</span><span class="sxs-lookup"><span data-stu-id="aaa9e-111">Example 1: Get alert rules for a resource group</span></span>
+### <span data-ttu-id="08770-111">예제 1: 리소스 그룹에 대한 경고 규칙 얻기</span><span class="sxs-lookup"><span data-stu-id="08770-111">Example 1: Get alert rules for a resource group</span></span>
 ```
 PS C:\>Get-AzAlertRule -ResourceGroup "Default-Web-CentralUS"
 ```
 
-<span data-ttu-id="aaa9e-112">이 명령은 Default-CentralUS 이라는 리소스 그룹에 대 한 모든 알림 규칙을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="aaa9e-112">This command gets all of the alert rules for the resource group named Default-Web-CentralUS.</span></span>
-<span data-ttu-id="aaa9e-113">*DetailedOutput* 매개 변수가 지정 되지 않았으므로 출력에 규칙에 대 한 세부 정보가 포함 되어 있지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="aaa9e-113">The output does not contain details about the rules because the *DetailedOutput* parameter is not specified.</span></span>
+<span data-ttu-id="08770-112">이 명령은 Default-Web-CentralUS라는 리소스 그룹에 대한 모든 경고 규칙을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="08770-112">This command gets all of the alert rules for the resource group named Default-Web-CentralUS.</span></span>
+<span data-ttu-id="08770-113">*DetailedOutput* 매개 변수가 지정되지 않은 경우 출력에 규칙에 대한 세부 정보가 포함되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="08770-113">The output does not contain details about the rules because the *DetailedOutput* parameter is not specified.</span></span>
 
-### <span data-ttu-id="aaa9e-114">예제 2: 이름으로 알림 규칙 가져오기</span><span class="sxs-lookup"><span data-stu-id="aaa9e-114">Example 2: Get an alert rule by name</span></span>
+### <span data-ttu-id="08770-114">예제 2: 이름으로 경고 규칙 얻기</span><span class="sxs-lookup"><span data-stu-id="08770-114">Example 2: Get an alert rule by name</span></span>
 ```
 PS C:\>Get-AzAlertRule -ResourceGroup "Default-Web-CentralUS" -Name "myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8"
 ```
 
-<span data-ttu-id="aaa9e-115">이 명령은 myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8 라는 경고 규칙을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="aaa9e-115">This command gets the alert rule named myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8.</span></span>
-<span data-ttu-id="aaa9e-116">*DetailedOutput* 매개 변수가 지정 되지 않았으므로 출력에는 알림 규칙에 대 한 기본 정보만 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="aaa9e-116">Because the *DetailedOutput* parameter is not specified, the output contains only basic information about the alert rule.</span></span>
+<span data-ttu-id="08770-115">이 명령은 myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8이라는 경고 규칙을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="08770-115">This command gets the alert rule named myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8.</span></span>
+<span data-ttu-id="08770-116">*DetailedOutput* 매개 변수가 지정되지 않은 경우 출력에는 경고 규칙에 대한 기본 정보만 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08770-116">Because the *DetailedOutput* parameter is not specified, the output contains only basic information about the alert rule.</span></span>
 
-### <span data-ttu-id="aaa9e-117">예제 3: 자세한 출력이 있는 이름으로 알림 규칙 가져오기</span><span class="sxs-lookup"><span data-stu-id="aaa9e-117">Example 3: Get an alert rule by name with detailed output</span></span>
+### <span data-ttu-id="08770-117">예제 3: 자세한 출력이 있는 이름으로 경고 규칙 확인</span><span class="sxs-lookup"><span data-stu-id="08770-117">Example 3: Get an alert rule by name with detailed output</span></span>
 ```
 PS C:\>Get-AzAlertRule -ResourceGroup "Default-Web-CentralUS" -Name "myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8" -DetailedOutput
 ```
 
-<span data-ttu-id="aaa9e-118">이 명령은 myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8 라는 경고 규칙을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="aaa9e-118">This command gets the alert rule named myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8.</span></span>
-<span data-ttu-id="aaa9e-119">*DetailedOutput* 매개 변수를 지정 하면 출력이 자세히 됩니다.</span><span class="sxs-lookup"><span data-stu-id="aaa9e-119">The *DetailedOutput* parameter is specified, so the output is detailed.</span></span>
+<span data-ttu-id="08770-118">이 명령은 myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8이라는 경고 규칙을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="08770-118">This command gets the alert rule named myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8.</span></span>
+<span data-ttu-id="08770-119">*DetailedOutput* 매개 변수가 지정되어 있으므로 출력이 자세히 설명되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08770-119">The *DetailedOutput* parameter is specified, so the output is detailed.</span></span>
 
-## <span data-ttu-id="aaa9e-120">변수</span><span class="sxs-lookup"><span data-stu-id="aaa9e-120">PARAMETERS</span></span>
+## <span data-ttu-id="08770-120">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="08770-120">PARAMETERS</span></span>
 
-### <span data-ttu-id="aaa9e-121">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="aaa9e-121">-DefaultProfile</span></span>
-<span data-ttu-id="aaa9e-122">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독</span><span class="sxs-lookup"><span data-stu-id="aaa9e-122">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+### <span data-ttu-id="08770-121">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="08770-121">-DefaultProfile</span></span>
+<span data-ttu-id="08770-122">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독</span><span class="sxs-lookup"><span data-stu-id="08770-122">The credentials, account, tenant, and subscription used for communication with azure</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -84,8 +84,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="aaa9e-123">-DetailedOutput</span><span class="sxs-lookup"><span data-stu-id="aaa9e-123">-DetailedOutput</span></span>
-<span data-ttu-id="aaa9e-124">출력에 전체 세부 정보를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="aaa9e-124">Displays full details in the output.</span></span>
+### <span data-ttu-id="08770-123">-DetailedOutput</span><span class="sxs-lookup"><span data-stu-id="08770-123">-DetailedOutput</span></span>
+<span data-ttu-id="08770-124">출력에 전체 세부 정보를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="08770-124">Displays full details in the output.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -99,8 +99,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="aaa9e-125">-이름</span><span class="sxs-lookup"><span data-stu-id="aaa9e-125">-Name</span></span>
-<span data-ttu-id="aaa9e-126">가져올 알림 규칙의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="aaa9e-126">Specifies the name of the alert rule to get.</span></span>
+### <span data-ttu-id="08770-125">-Name</span><span class="sxs-lookup"><span data-stu-id="08770-125">-Name</span></span>
+<span data-ttu-id="08770-126">얻을 경고 규칙의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="08770-126">Specifies the name of the alert rule to get.</span></span>
 
 ```yaml
 Type: System.String
@@ -114,8 +114,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="aaa9e-127">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="aaa9e-127">-ResourceGroupName</span></span>
-<span data-ttu-id="aaa9e-128">리소스 그룹의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="aaa9e-128">Specifies the name of the resource group.</span></span>
+### <span data-ttu-id="08770-127">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="08770-127">-ResourceGroupName</span></span>
+<span data-ttu-id="08770-128">리소스 그룹의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="08770-128">Specifies the name of the resource group.</span></span>
 
 ```yaml
 Type: System.String
@@ -129,8 +129,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="aaa9e-129">-TargetResourceId</span><span class="sxs-lookup"><span data-stu-id="aaa9e-129">-TargetResourceId</span></span>
-<span data-ttu-id="aaa9e-130">대상 리소스의 ID를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="aaa9e-130">Specifies the ID of the target resource.</span></span>
+### <span data-ttu-id="08770-129">-TargetResourceId</span><span class="sxs-lookup"><span data-stu-id="08770-129">-TargetResourceId</span></span>
+<span data-ttu-id="08770-130">대상 리소스의 ID를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="08770-130">Specifies the ID of the target resource.</span></span>
 
 ```yaml
 Type: System.String
@@ -144,31 +144,30 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="aaa9e-131">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="aaa9e-131">CommonParameters</span></span>
-<span data-ttu-id="aaa9e-132">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="aaa9e-132">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="aaa9e-133">자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="aaa9e-133">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="08770-131">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="08770-131">CommonParameters</span></span>
+<span data-ttu-id="08770-132">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="08770-132">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="08770-133">자세한 내용은 다음 about_CommonParameters https://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="08770-133">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="aaa9e-134">입력</span><span class="sxs-lookup"><span data-stu-id="aaa9e-134">INPUTS</span></span>
+## <span data-ttu-id="08770-134">입력</span><span class="sxs-lookup"><span data-stu-id="08770-134">INPUTS</span></span>
 
-### <span data-ttu-id="aaa9e-135">System. 문자열</span><span class="sxs-lookup"><span data-stu-id="aaa9e-135">System.String</span></span>
+### <span data-ttu-id="08770-135">System.String</span><span class="sxs-lookup"><span data-stu-id="08770-135">System.String</span></span>
 
-### <span data-ttu-id="aaa9e-136">System.webserver 매개 변수</span><span class="sxs-lookup"><span data-stu-id="aaa9e-136">System.Management.Automation.SwitchParameter</span></span>
+### <span data-ttu-id="08770-136">System.Management.Automation.SwitchParameter</span><span class="sxs-lookup"><span data-stu-id="08770-136">System.Management.Automation.SwitchParameter</span></span>
 
-## <span data-ttu-id="aaa9e-137">출력</span><span class="sxs-lookup"><span data-stu-id="aaa9e-137">OUTPUTS</span></span>
+## <span data-ttu-id="08770-137">출력</span><span class="sxs-lookup"><span data-stu-id="08770-137">OUTPUTS</span></span>
 
-### <span data-ttu-id="aaa9e-138">PSAlertRule를 통해 출력 합니다.</span><span class="sxs-lookup"><span data-stu-id="aaa9e-138">Microsoft.Azure.Commands.Insights.OutputClasses.PSAlertRule</span></span>
+### <span data-ttu-id="08770-138">Microsoft.Azure.Commands.Insights.OutputClasses.PSAlertRule</span><span class="sxs-lookup"><span data-stu-id="08770-138">Microsoft.Azure.Commands.Insights.OutputClasses.PSAlertRule</span></span>
 
-## <span data-ttu-id="aaa9e-139">상속자</span><span class="sxs-lookup"><span data-stu-id="aaa9e-139">NOTES</span></span>
+## <span data-ttu-id="08770-139">참고 사항</span><span class="sxs-lookup"><span data-stu-id="08770-139">NOTES</span></span>
 
-## <span data-ttu-id="aaa9e-140">관련 링크</span><span class="sxs-lookup"><span data-stu-id="aaa9e-140">RELATED LINKS</span></span>
+## <span data-ttu-id="08770-140">관련 링크</span><span class="sxs-lookup"><span data-stu-id="08770-140">RELATED LINKS</span></span>
 
-[<span data-ttu-id="aaa9e-141">추가-AzLogAlertRule</span><span class="sxs-lookup"><span data-stu-id="aaa9e-141">Add-AzLogAlertRule</span></span>](./Add-AzLogAlertRule.md)
 
-[<span data-ttu-id="aaa9e-142">추가-AzMetricAlertRule</span><span class="sxs-lookup"><span data-stu-id="aaa9e-142">Add-AzMetricAlertRule</span></span>](./Add-AzMetricAlertRule.md)
+[<span data-ttu-id="08770-141">Add-AzMetricAlertRule</span><span class="sxs-lookup"><span data-stu-id="08770-141">Add-AzMetricAlertRule</span></span>](./Add-AzMetricAlertRule.md)
 
-[<span data-ttu-id="aaa9e-143">추가-AzWebtestAlertRule</span><span class="sxs-lookup"><span data-stu-id="aaa9e-143">Add-AzWebtestAlertRule</span></span>](./Add-AzWebtestAlertRule.md)
+[<span data-ttu-id="08770-142">Add-AzWebtestAlertRule</span><span class="sxs-lookup"><span data-stu-id="08770-142">Add-AzWebtestAlertRule</span></span>](./Add-AzWebtestAlertRule.md)
 
-[<span data-ttu-id="aaa9e-144">Get-AzAlertHistory</span><span class="sxs-lookup"><span data-stu-id="aaa9e-144">Get-AzAlertHistory</span></span>](./Get-AzAlertHistory.md)
+[<span data-ttu-id="08770-143">Get-AzAlertHistory</span><span class="sxs-lookup"><span data-stu-id="08770-143">Get-AzAlertHistory</span></span>](./Get-AzAlertHistory.md)
 
-[<span data-ttu-id="aaa9e-145">제거-AzAlertRule</span><span class="sxs-lookup"><span data-stu-id="aaa9e-145">Remove-AzAlertRule</span></span>](./Remove-AzAlertRule.md)
+[<span data-ttu-id="08770-144">Remove-AzAlertRule</span><span class="sxs-lookup"><span data-stu-id="08770-144">Remove-AzAlertRule</span></span>](./Remove-AzAlertRule.md)
 
 
