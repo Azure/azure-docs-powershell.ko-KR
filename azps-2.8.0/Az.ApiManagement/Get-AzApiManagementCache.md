@@ -5,37 +5,37 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementCache.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementCache.md
-ms.openlocfilehash: 8fd29b7ecbfda5115973b038a6560ad38d22f376
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 7f1913b5debcbe3ebd5ae436c3c30529b1fdc9d5
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93698121"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100404737"
 ---
-# <span data-ttu-id="41702-101">Get-AzApiManagementCache</span><span class="sxs-lookup"><span data-stu-id="41702-101">Get-AzApiManagementCache</span></span>
+# <span data-ttu-id="2f8aa-101">Get-AzApiManagementCache</span><span class="sxs-lookup"><span data-stu-id="2f8aa-101">Get-AzApiManagementCache</span></span>
 
-## <span data-ttu-id="41702-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="41702-102">SYNOPSIS</span></span>
-<span data-ttu-id="41702-103">캐시에 대 한 세부 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="41702-103">Get the details of the Cache.</span></span>
+## <span data-ttu-id="2f8aa-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="2f8aa-102">SYNOPSIS</span></span>
+<span data-ttu-id="2f8aa-103">캐시의 세부 정보를 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-103">Get the details of the Cache.</span></span>
 
-## <span data-ttu-id="41702-104">구문과</span><span class="sxs-lookup"><span data-stu-id="41702-104">SYNTAX</span></span>
+## <span data-ttu-id="2f8aa-104">구문</span><span class="sxs-lookup"><span data-stu-id="2f8aa-104">SYNTAX</span></span>
 
-### <span data-ttu-id="41702-105">ContextParameterSet (기본값)</span><span class="sxs-lookup"><span data-stu-id="41702-105">ContextParameterSet (Default)</span></span>
+### <span data-ttu-id="2f8aa-105">ContextParameterSet(기본값)</span><span class="sxs-lookup"><span data-stu-id="2f8aa-105">ContextParameterSet (Default)</span></span>
 ```
 Get-AzApiManagementCache -Context <PsApiManagementContext> [-CacheId <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="41702-106">ResourceIdParameterSet</span><span class="sxs-lookup"><span data-stu-id="41702-106">ResourceIdParameterSet</span></span>
+### <span data-ttu-id="2f8aa-106">ResourceIdParameterSet</span><span class="sxs-lookup"><span data-stu-id="2f8aa-106">ResourceIdParameterSet</span></span>
 ```
 Get-AzApiManagementCache -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="41702-107">설명은</span><span class="sxs-lookup"><span data-stu-id="41702-107">DESCRIPTION</span></span>
-<span data-ttu-id="41702-108">Api Management 서비스에 구성 된 캐시에 대 한 세부 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="41702-108">Get the details of the Cache configured in Api Management service.</span></span>
+## <span data-ttu-id="2f8aa-107">설명</span><span class="sxs-lookup"><span data-stu-id="2f8aa-107">DESCRIPTION</span></span>
+<span data-ttu-id="2f8aa-108">Api Management 서비스에 구성된 캐시의 세부 정보를 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-108">Get the details of the Cache configured in Api Management service.</span></span>
 
-## <span data-ttu-id="41702-109">예제의</span><span class="sxs-lookup"><span data-stu-id="41702-109">EXAMPLES</span></span>
+## <span data-ttu-id="2f8aa-109">예제</span><span class="sxs-lookup"><span data-stu-id="2f8aa-109">EXAMPLES</span></span>
 
-### <span data-ttu-id="41702-110">예제 1: 모든 캐시 가져오기</span><span class="sxs-lookup"><span data-stu-id="41702-110">Example 1: Get all Caches</span></span>
+### <span data-ttu-id="2f8aa-110">예제 1: 모든 캐시를 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-110">Example 1: Get all Caches</span></span>
 ```powershell
 PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
 PS C:\>Get-AzApiManagementCache -Context $apimContext
@@ -51,9 +51,9 @@ ResourceGroupName : Api-Default-West-US
 ServiceName       : contoso
 ```
 
-<span data-ttu-id="41702-111">Api Management 서비스에 구성 된 모든 캐시의 목록을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="41702-111">Gets a list of all the Caches configured in the Api Management service.</span></span>
+<span data-ttu-id="2f8aa-111">Api Management 서비스에 구성된 모든 캐시의 목록을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-111">Gets a list of all the Caches configured in the Api Management service.</span></span>
 
-### <span data-ttu-id="41702-112">예제 2: 식별자 westus에 지정 된 캐시 가져오기</span><span class="sxs-lookup"><span data-stu-id="41702-112">Example 2: Get the Cache specified by the Identifier westus</span></span>
+### <span data-ttu-id="2f8aa-112">예제 2: 식별자 westus에 의해 지정된 캐시를 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-112">Example 2: Get the Cache specified by the Identifier westus</span></span>
 ```powershell
 PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
 PS C:\>Get-AzApiManagementCache -Context $apimContext -cacheId westus
@@ -69,14 +69,14 @@ ResourceGroupName : Api-Default-WestUS
 ServiceName       : contoso
 ```
 
-<span data-ttu-id="41702-113">Westus에 대해 구성 된 지정 된 캐시에 대 한 세부 정보 가져오기</span><span class="sxs-lookup"><span data-stu-id="41702-113">Get the details of the specified Cache configured for westus</span></span>
+<span data-ttu-id="2f8aa-113">westus에 대해 구성된 지정된 캐시의 세부 정보를 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-113">Get the details of the specified Cache configured for westus</span></span>
 
-## <span data-ttu-id="41702-114">변수</span><span class="sxs-lookup"><span data-stu-id="41702-114">PARAMETERS</span></span>
+## <span data-ttu-id="2f8aa-114">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="2f8aa-114">PARAMETERS</span></span>
 
-### <span data-ttu-id="41702-115">-CacheId</span><span class="sxs-lookup"><span data-stu-id="41702-115">-CacheId</span></span>
-<span data-ttu-id="41702-116">캐시의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="41702-116">Identifier of a cache.</span></span>
-<span data-ttu-id="41702-117">지정 된 경우 식별자를 기준으로 캐시를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="41702-117">If specified will try to find cache by the identifier.</span></span>
-<span data-ttu-id="41702-118">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="41702-118">This parameter is optional.</span></span>
+### <span data-ttu-id="2f8aa-115">-CacheId</span><span class="sxs-lookup"><span data-stu-id="2f8aa-115">-CacheId</span></span>
+<span data-ttu-id="2f8aa-116">캐시의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-116">Identifier of a cache.</span></span>
+<span data-ttu-id="2f8aa-117">지정된 경우 식별자에 의해 캐시를 찾으려고 시도합니다.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-117">If specified will try to find cache by the identifier.</span></span>
+<span data-ttu-id="2f8aa-118">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-118">This parameter is optional.</span></span>
 
 ```yaml
 Type: System.String
@@ -90,9 +90,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="41702-119">-컨텍스트</span><span class="sxs-lookup"><span data-stu-id="41702-119">-Context</span></span>
-<span data-ttu-id="41702-120">PsApiManagementContext의 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="41702-120">Instance of PsApiManagementContext.</span></span>
-<span data-ttu-id="41702-121">이 매개 변수는 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="41702-121">This parameter is required.</span></span>
+### <span data-ttu-id="2f8aa-119">-Context</span><span class="sxs-lookup"><span data-stu-id="2f8aa-119">-Context</span></span>
+<span data-ttu-id="2f8aa-120">PsApiManagementContext의 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-120">Instance of PsApiManagementContext.</span></span>
+<span data-ttu-id="2f8aa-121">이 매개 변수는 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-121">This parameter is required.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -106,8 +106,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="41702-122">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="41702-122">-DefaultProfile</span></span>
-<span data-ttu-id="41702-123">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="41702-123">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+### <span data-ttu-id="2f8aa-122">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="2f8aa-122">-DefaultProfile</span></span>
+<span data-ttu-id="2f8aa-123">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-123">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -121,8 +121,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="41702-124">-ResourceId</span><span class="sxs-lookup"><span data-stu-id="41702-124">-ResourceId</span></span>
-<span data-ttu-id="41702-125">캐시의 Arm 리소스 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="41702-125">Arm Resource Identifier of a cache.</span></span> <span data-ttu-id="41702-126">지정 된 경우 식별자를 기준으로 캐시를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="41702-126">If specified will try to find cache by the identifier.</span></span> <span data-ttu-id="41702-127">이 매개 변수는 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="41702-127">This parameter is required.</span></span>
+### <span data-ttu-id="2f8aa-124">-ResourceId</span><span class="sxs-lookup"><span data-stu-id="2f8aa-124">-ResourceId</span></span>
+<span data-ttu-id="2f8aa-125">캐시의 Arm 리소스 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-125">Arm Resource Identifier of a cache.</span></span> <span data-ttu-id="2f8aa-126">지정된 경우 식별자에 의해 캐시를 찾으려고 시도합니다.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-126">If specified will try to find cache by the identifier.</span></span> <span data-ttu-id="2f8aa-127">이 매개 변수는 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-127">This parameter is required.</span></span>
 
 ```yaml
 Type: System.String
@@ -136,25 +136,25 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="41702-128">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="41702-128">CommonParameters</span></span>
-<span data-ttu-id="41702-129">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="41702-129">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="41702-130">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="41702-130">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="2f8aa-128">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="2f8aa-128">CommonParameters</span></span>
+<span data-ttu-id="2f8aa-129">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-129">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="2f8aa-130">자세한 내용은 [다음](https://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.</span><span class="sxs-lookup"><span data-stu-id="2f8aa-130">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="41702-131">입력</span><span class="sxs-lookup"><span data-stu-id="41702-131">INPUTS</span></span>
+## <span data-ttu-id="2f8aa-131">입력</span><span class="sxs-lookup"><span data-stu-id="2f8aa-131">INPUTS</span></span>
 
-### <span data-ttu-id="41702-132">ApiManagement. ServiceManagement. \ PsApiManagementContext</span><span class="sxs-lookup"><span data-stu-id="41702-132">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext</span></span>
+### <span data-ttu-id="2f8aa-132">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext</span><span class="sxs-lookup"><span data-stu-id="2f8aa-132">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext</span></span>
 
-### <span data-ttu-id="41702-133">System. 문자열</span><span class="sxs-lookup"><span data-stu-id="41702-133">System.String</span></span>
+### <span data-ttu-id="2f8aa-133">System.String</span><span class="sxs-lookup"><span data-stu-id="2f8aa-133">System.String</span></span>
 
-## <span data-ttu-id="41702-134">출력</span><span class="sxs-lookup"><span data-stu-id="41702-134">OUTPUTS</span></span>
+## <span data-ttu-id="2f8aa-134">출력</span><span class="sxs-lookup"><span data-stu-id="2f8aa-134">OUTPUTS</span></span>
 
-### <span data-ttu-id="41702-135">ApiManagement. ServiceManagement. \ PsApiManagementCache</span><span class="sxs-lookup"><span data-stu-id="41702-135">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementCache</span></span>
+### <span data-ttu-id="2f8aa-135">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementCache</span><span class="sxs-lookup"><span data-stu-id="2f8aa-135">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementCache</span></span>
 
-## <span data-ttu-id="41702-136">상속자</span><span class="sxs-lookup"><span data-stu-id="41702-136">NOTES</span></span>
+## <span data-ttu-id="2f8aa-136">참고 사항</span><span class="sxs-lookup"><span data-stu-id="2f8aa-136">NOTES</span></span>
 
-## <span data-ttu-id="41702-137">관련 링크</span><span class="sxs-lookup"><span data-stu-id="41702-137">RELATED LINKS</span></span>
+## <span data-ttu-id="2f8aa-137">관련 링크</span><span class="sxs-lookup"><span data-stu-id="2f8aa-137">RELATED LINKS</span></span>
 
-[<span data-ttu-id="41702-138">Get-AzApiManagementCache</span><span class="sxs-lookup"><span data-stu-id="41702-138">Get-AzApiManagementCache</span></span>](./Get-AzApiManagementCache)
+[<span data-ttu-id="2f8aa-138">New-AzApiManagementCache</span><span class="sxs-lookup"><span data-stu-id="2f8aa-138">New-AzApiManagementCache</span></span>](./New-AzApiManagementCache.md)
 
-[<span data-ttu-id="41702-139">Set-AzApiManagementCache</span><span class="sxs-lookup"><span data-stu-id="41702-139">Set-AzApiManagementCache</span></span>](./Set-AzApiManagementCache.md)
+[<span data-ttu-id="2f8aa-139">Remove-AzApiManagementCache</span><span class="sxs-lookup"><span data-stu-id="2f8aa-139">Remove-AzApiManagementCache</span></span>](./Remove-AzApiManagementCache.md)
 
-[<span data-ttu-id="41702-140">제거-AzApiManagementCache</span><span class="sxs-lookup"><span data-stu-id="41702-140">Remove-AzApiManagementCache</span></span>](./Remove-AzApiManagementCache.md)
+[<span data-ttu-id="2f8aa-140">Update-AzApiManagementCache</span><span class="sxs-lookup"><span data-stu-id="2f8aa-140">Update-AzApiManagementCache</span></span>](./Update-AzApiManagementCache.md)
