@@ -5,41 +5,41 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryse
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Import-AzRecoveryServicesAsrVaultSettingsFile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Import-AzRecoveryServicesAsrVaultSettingsFile.md
-ms.openlocfilehash: f630c8392ccfe68a399db80b7d55aef787fb48ef
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 68ae9b9ad54772ba4157e02ebe602f35b2b5fe64
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93699679"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399790"
 ---
-# <span data-ttu-id="d1993-101">Import-AzRecoveryServicesAsrVaultSettingsFile</span><span class="sxs-lookup"><span data-stu-id="d1993-101">Import-AzRecoveryServicesAsrVaultSettingsFile</span></span>
+# <span data-ttu-id="f3197-101">Import-AzRecoveryServicesAsrVaultSettingsFile</span><span class="sxs-lookup"><span data-stu-id="f3197-101">Import-AzRecoveryServicesAsrVaultSettingsFile</span></span>
 
-## <span data-ttu-id="d1993-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="d1993-102">SYNOPSIS</span></span>
-<span data-ttu-id="d1993-103">지정 된 ASR vault 설정 파일을 가져와 PowerShell 세션의 후속 ASR 작업에 대 한 자격 증명 컨텍스트 (PowerShell 세션 컨텍스트)를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1993-103">Imports the specified ASR vault settings file to set the vault context(PowerShell session context) for subsequent ASR operations in the PowerShell session.</span></span> 
+## <span data-ttu-id="f3197-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="f3197-102">SYNOPSIS</span></span>
+<span data-ttu-id="f3197-103">지정된 ASR 자격 증명 모음 설정 파일을 가져와서 PowerShell 세션에서 후속 ASR 작업에 대한 자격 증명 모음 컨텍스트(PowerShell 세션 컨텍스트)를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="f3197-103">Imports the specified ASR vault settings file to set the vault context(PowerShell session context) for subsequent ASR operations in the PowerShell session.</span></span> 
 
-## <span data-ttu-id="d1993-104">구문과</span><span class="sxs-lookup"><span data-stu-id="d1993-104">SYNTAX</span></span>
+## <span data-ttu-id="f3197-104">구문</span><span class="sxs-lookup"><span data-stu-id="f3197-104">SYNTAX</span></span>
 
 ```
 Import-AzRecoveryServicesAsrVaultSettingsFile [-Path] <String> [-DefaultProfile <IAzureContextContainer>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="d1993-105">설명은</span><span class="sxs-lookup"><span data-stu-id="d1993-105">DESCRIPTION</span></span>
-<span data-ttu-id="d1993-106">**AzRecoveryServicesAsrVaultSettingsFile** Cmdlet은 Azure Site Recovery 자격 증명 모음 설정 파일을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="d1993-106">The **Import-AzRecoveryServicesAsrVaultSettingsFile** cmdlet imports the Azure Site Recovery vault settings file.</span></span> <span data-ttu-id="d1993-107">자격 증명 모음 설정 파일은 현재 세션의 후속 Azure Site Recovery 작업에 대 한 자격 증명 모음 컨텍스트를 설정 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d1993-107">The vault settings file is used to set the vault context for subsequent Azure Site Recovery operations in the current session.</span></span>
+## <span data-ttu-id="f3197-105">설명</span><span class="sxs-lookup"><span data-stu-id="f3197-105">DESCRIPTION</span></span>
+<span data-ttu-id="f3197-106">**Import-AzRecoveryServicesAsrVaultSettingsFile** cmdlet은 Azure Site Recovery 자격 증명 모음 설정 파일을 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f3197-106">The **Import-AzRecoveryServicesAsrVaultSettingsFile** cmdlet imports the Azure Site Recovery vault settings file.</span></span> <span data-ttu-id="f3197-107">자격 증명 모음 설정 파일은 현재 세션에서 후속 Azure Site Recovery 작업에 대한 자격 증명 모음 컨텍스트를 설정하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="f3197-107">The vault settings file is used to set the vault context for subsequent Azure Site Recovery operations in the current session.</span></span>
 
-## <span data-ttu-id="d1993-108">예제의</span><span class="sxs-lookup"><span data-stu-id="d1993-108">EXAMPLES</span></span>
+## <span data-ttu-id="f3197-108">예제</span><span class="sxs-lookup"><span data-stu-id="f3197-108">EXAMPLES</span></span>
 
-### <span data-ttu-id="d1993-109">예제 1</span><span class="sxs-lookup"><span data-stu-id="d1993-109">Example 1</span></span>
+### <span data-ttu-id="f3197-109">예제 1</span><span class="sxs-lookup"><span data-stu-id="f3197-109">Example 1</span></span>
 ```
 PS C:\> $VaultSettings = Import-AzRecoveryServicesAsrVaultSettingsFile -Path $FilePath
 ```
 
-<span data-ttu-id="d1993-110">지정 된 복구 서비스 자격 증명 모음 설정 파일을 가져오고 가져온 자격 증명 모음의 설정을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1993-110">Imports the specified Recovery Services vault settings file and returns settings of the imported vault.</span></span>
+<span data-ttu-id="f3197-110">지정된 Recovery Services 자격 증명 모음 설정 파일을 가져오고 가져온 자격 증명 모음의 설정을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="f3197-110">Imports the specified Recovery Services vault settings file and returns settings of the imported vault.</span></span>
 
-## <span data-ttu-id="d1993-111">변수</span><span class="sxs-lookup"><span data-stu-id="d1993-111">PARAMETERS</span></span>
+## <span data-ttu-id="f3197-111">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="f3197-111">PARAMETERS</span></span>
 
-### <span data-ttu-id="d1993-112">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="d1993-112">-DefaultProfile</span></span>
-<span data-ttu-id="d1993-113">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="d1993-113">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+### <span data-ttu-id="f3197-112">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="f3197-112">-DefaultProfile</span></span>
+<span data-ttu-id="f3197-113">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="f3197-113">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
 
 
 ```yaml
@@ -54,9 +54,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d1993-114">-Path</span><span class="sxs-lookup"><span data-stu-id="d1993-114">-Path</span></span>
-<span data-ttu-id="d1993-115">ASR vault 설정 파일의 폴더 경로를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1993-115">Specifies the folder path of the ASR vault settings file.</span></span>
-<span data-ttu-id="d1993-116">이 파일은 복구 서비스 자격 증명 포털에서 다운로드 하 여 로컬에 저장할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d1993-116">This file can be downloaded from the Recovery Services vault portal and stored locally.</span></span>
+### <span data-ttu-id="f3197-114">-Path</span><span class="sxs-lookup"><span data-stu-id="f3197-114">-Path</span></span>
+<span data-ttu-id="f3197-115">ASR 자격 증명 모음 설정 파일의 폴더 경로를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="f3197-115">Specifies the folder path of the ASR vault settings file.</span></span>
+<span data-ttu-id="f3197-116">이 파일은 Recovery Services 자격 증명 모음 포털에서 다운로드하여 로컬로 저장할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f3197-116">This file can be downloaded from the Recovery Services vault portal and stored locally.</span></span>
 
 ```yaml
 Type: System.String
@@ -70,8 +70,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d1993-117">-확인</span><span class="sxs-lookup"><span data-stu-id="d1993-117">-Confirm</span></span>
-<span data-ttu-id="d1993-118">Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1993-118">Prompts you for confirmation before running the cmdlet.</span></span>
+### <span data-ttu-id="f3197-117">-Confirm</span><span class="sxs-lookup"><span data-stu-id="f3197-117">-Confirm</span></span>
+<span data-ttu-id="f3197-118">cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="f3197-118">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -85,8 +85,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d1993-119">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="d1993-119">-WhatIf</span></span>
-<span data-ttu-id="d1993-120">Cmdlet이 실행 되는 경우의 동작을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d1993-120">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="d1993-121">Cmdlet이 실행 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d1993-121">The cmdlet is not run.</span></span>
+### <span data-ttu-id="f3197-119">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="f3197-119">-WhatIf</span></span>
+<span data-ttu-id="f3197-120">cmdlet이 실행되는 경우의 결과 표시</span><span class="sxs-lookup"><span data-stu-id="f3197-120">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="f3197-121">cmdlet이 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f3197-121">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -100,19 +100,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d1993-122">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="d1993-122">CommonParameters</span></span>
-<span data-ttu-id="d1993-123">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1993-123">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="d1993-124">자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="d1993-124">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="f3197-122">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="f3197-122">CommonParameters</span></span>
+<span data-ttu-id="f3197-123">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="f3197-123">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="f3197-124">자세한 내용은 다음 about_CommonParameters https://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f3197-124">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="d1993-125">입력</span><span class="sxs-lookup"><span data-stu-id="d1993-125">INPUTS</span></span>
+## <span data-ttu-id="f3197-125">입력</span><span class="sxs-lookup"><span data-stu-id="f3197-125">INPUTS</span></span>
 
-### <span data-ttu-id="d1993-126">System. 문자열</span><span class="sxs-lookup"><span data-stu-id="d1993-126">System.String</span></span>
+### <span data-ttu-id="f3197-126">System.String</span><span class="sxs-lookup"><span data-stu-id="f3197-126">System.String</span></span>
 
-## <span data-ttu-id="d1993-127">출력</span><span class="sxs-lookup"><span data-stu-id="d1993-127">OUTPUTS</span></span>
+## <span data-ttu-id="f3197-127">출력</span><span class="sxs-lookup"><span data-stu-id="f3197-127">OUTPUTS</span></span>
 
-### <span data-ttu-id="d1993-128">SiteRecovery. ASRVaultSettings에 대 한 서비스</span><span class="sxs-lookup"><span data-stu-id="d1993-128">Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRVaultSettings</span></span>
+### <span data-ttu-id="f3197-128">Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRVaultSettings</span><span class="sxs-lookup"><span data-stu-id="f3197-128">Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRVaultSettings</span></span>
 
-## <span data-ttu-id="d1993-129">상속자</span><span class="sxs-lookup"><span data-stu-id="d1993-129">NOTES</span></span>
+## <span data-ttu-id="f3197-129">참고 사항</span><span class="sxs-lookup"><span data-stu-id="f3197-129">NOTES</span></span>
 
-## <span data-ttu-id="d1993-130">관련 링크</span><span class="sxs-lookup"><span data-stu-id="d1993-130">RELATED LINKS</span></span>
+## <span data-ttu-id="f3197-130">관련 링크</span><span class="sxs-lookup"><span data-stu-id="f3197-130">RELATED LINKS</span></span>
 
-[<span data-ttu-id="d1993-131">Get-AzRecoveryServicesAsrVaultSettingsFile</span><span class="sxs-lookup"><span data-stu-id="d1993-131">Get-AzRecoveryServicesAsrVaultSettingsFile</span></span>](./Get-AzRecoveryServicesAsrVaultSettingsFile.md)
