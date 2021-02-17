@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzADUser.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzADUser.md
-ms.openlocfilehash: cd8834dd329ab82e98316cb0d94b554eb3bb6c13
-ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
+ms.openlocfilehash: c7863e62330dc26d9733d21eb8e4d11753e06d1c
+ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100399654"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100208472"
 ---
 # New-AzADUser
 
@@ -32,8 +32,8 @@ New-AzADUser -DisplayName <String> -UserPrincipalName <String> -Password <Secure
 
 ## 예제
 
-### 예제 1 - 새 AD 사용자 만들기
-```
+### 예제 1: 새 AD 사용자 만들기
+```powershell
 PS C:\> $SecureStringPassword = ConvertTo-SecureString -String "password" -AsPlainText -Force
 PS C:\> New-AzADUser -DisplayName "MyDisplayName" -UserPrincipalName "myemail@domain.com" -Password $SecureStringPassword -MailNickname "MyMailNickName"
 ```
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 다음 about_CommonParameters https://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
@@ -204,5 +204,6 @@ Accept wildcard characters: False
 
 [Get-AzADUser](./Get-AzADUser.md)
 
+[Update-AzADUser](./Update-AzADUser.md)
 
 [Remove-AzADUser](./Remove-AzADUser.md)

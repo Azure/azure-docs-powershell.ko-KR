@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Remove-AzADApplication.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Remove-AzADApplication.md
-ms.openlocfilehash: 7b66dff3f59e3ad186bfc559343aebf484ff2bc2
-ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
+ms.openlocfilehash: e27dcc838499e742c887f60a30021d8ac99277f4
+ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100399621"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100208421"
 ---
 # Remove-AzADApplication
 
@@ -49,25 +49,25 @@ Azure Active Directory 애플리케이션을 삭제합니다.
 
 ## 예제
 
-### 예제 1 - 개체 ID로 애플리케이션 제거
+### 예제 1: 개체 ID로 애플리케이션 제거
 
-```
+```powershell
 PS C:\> Remove-AzADApplication -ObjectId b4cd1619-80b3-4cfb-9f8f-9f2333425738
 ```
 
 테넌트에서 개체 ID가 'b4cd1619-80b3-4cfb-9f8f-9f2333425738'인 애플리케이션을 제거합니다.
 
-### 예제 2 - 애플리케이션 ID로 애플리케이션 제거
+### 예제 2: 애플리케이션 ID로 애플리케이션 제거
 
-```
+```powershell
 PS C:\> Remove-AzADApplication -ApplicationId f9c5ea4f-28f0-401a-a491-491a037fa346
 ```
 
 테넌트에서 애플리케이션 ID가 'f9c5ea4f-28f0-401a-a491-491a037fa346'인 애플리케이션을 제거합니다.
 
-### 예제 3 - 파이핑을 사용하여 애플리케이션 제거
+### 예제 3: 파이핑을 사용하여 애플리케이션 제거
 
-```
+```powershell
 PS C:\> Get-AzADApplication -ObjectId b4cd1619-80b3-4cfb-9f8f-9f2333425738 | Remove-AzADApplication
 ```
 
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 다음 about_CommonParameters https://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
@@ -235,6 +235,7 @@ Accept wildcard characters: False
 
 [Get-AzADApplication](./Get-AzADApplication.md)
 
+[Update-AzADApplication](./Update-AzADApplication.md)
 
 [Remove-AzADAppCredential](./Remove-AzADAppCredential.md)
 
