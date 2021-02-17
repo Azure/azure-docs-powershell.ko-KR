@@ -5,21 +5,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementApiRelease.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementApiRelease.md
-ms.openlocfilehash: 31e2151e5c41a4e4c9d053174f9d598cd16680f0
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 51a24bcb0951aef7a3feb8b32d3d860d21839ad5
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93698003"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100407933"
 ---
 # Remove-AzApiManagementApiRelease
 
 ## SYNOPSIS
-특정 API 릴리스를 제거 합니다.
+특정 API 릴리스를 제거합니다.
 
-## 구문과
+## 구문
 
-### ByApiReleaseId (기본값)
+### ByApiReleaseId(기본값)
 ```
 Remove-AzApiManagementApiRelease -Context <PsApiManagementContext> -ApiId <String> -ReleaseId <String>
  [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -31,11 +31,11 @@ Remove-AzApiManagementApiRelease -InputObject <PsApiManagementApiRelease> [-Pass
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## 설명은
+## 설명
 
-**AzAzureRmApiManagementApiRelease** cmdlet은 기존 API 릴리스를 제거 합니다.
+**Remove-AzAzureRmApiManagementApiRelease** cmdlet은 기존 API 릴리스를 제거합니다.
 
-## 예제의
+## 예제
 
 ### 예제 1: API 릴리스 제거
 ```powershell
@@ -43,9 +43,9 @@ PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default
 PS C:\>Remove-AzAzureRmApiManagementApiRelease -Context $apimContext -ApiId "echo-api" -ReleaseId "2"
 ```
 
-이 명령은 지정 된 ApiId 및 ReleaseId를 사용 하 여 API Release를 제거 합니다.
+이 명령은 지정된 ApiId 및 ReleaseId를 사용하여 API 릴리스를 제거합니다.
 
-## 변수
+## PARAMETERS
 
 ### -ApiId
 API의 식별자입니다.
@@ -63,7 +63,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -컨텍스트
+### -Context
 PsApiManagementContext의 인스턴스입니다.
 이 매개 변수는 필수입니다.
 
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-지정 된 경우 대/소문자 구분 작업이 성공한 경우 true를 씁니다.
+지정된 경우 작업이 성공하는 경우 true를 기록합니다.
 이 매개 변수는 선택 사항입니다.
 
 ```yaml
@@ -141,8 +141,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -확인
-Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.
+### -Confirm
+cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -157,8 +157,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Cmdlet이 실행 되는 경우의 동작을 보여 줍니다.
-Cmdlet이 실행 되지 않습니다.
+cmdlet이 실행되는 경우의 결과 표시
+cmdlet이 실행되지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -173,26 +173,26 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](https://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
-### ApiManagement. ServiceManagement. \ PsApiManagementContext
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 
-### ApiManagement. ServiceManagement. \ PsApiManagementApiRelease
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiRelease
 
-### System. 문자열
+### System.String
 
 ## 출력
 
-### 시스템 부울
+### System.Boolean
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
 [Get-AzApiManagementApiRelease](./Get-AzApiManagementApiRelease.md)
 
-[새로운 AzApiManagementApiRelease](./New-AzApiManagementApiRelease.md)
+[New-AzApiManagementApiRelease](./New-AzApiManagementApiRelease.md)
 
-[Set-AzApiManagementApiRelease](./Set-AzApiManagementApiRelease.md)
+[Update-AzApiManagementApiRelease](./Update-AzApiManagementApiRelease.md)
