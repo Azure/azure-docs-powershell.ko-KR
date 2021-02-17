@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzADUser.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzADUser.md
-ms.openlocfilehash: ac2dfb864733d7bcb2b46e17d557fca57c7bb4b4
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: cd8834dd329ab82e98316cb0d94b554eb3bb6c13
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93699395"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399654"
 ---
-# <span data-ttu-id="4872b-101">New-AzADUser</span><span class="sxs-lookup"><span data-stu-id="4872b-101">New-AzADUser</span></span>
+# <span data-ttu-id="b2757-101">New-AzADUser</span><span class="sxs-lookup"><span data-stu-id="b2757-101">New-AzADUser</span></span>
 
-## <span data-ttu-id="4872b-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="4872b-102">SYNOPSIS</span></span>
-<span data-ttu-id="4872b-103">새 active directory 사용자를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4872b-103">Creates a new active directory user.</span></span>
+## <span data-ttu-id="b2757-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="b2757-102">SYNOPSIS</span></span>
+<span data-ttu-id="b2757-103">새 Active Directory 사용자를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b2757-103">Creates a new active directory user.</span></span>
 
-## <span data-ttu-id="4872b-104">구문과</span><span class="sxs-lookup"><span data-stu-id="4872b-104">SYNTAX</span></span>
+## <span data-ttu-id="b2757-104">구문</span><span class="sxs-lookup"><span data-stu-id="b2757-104">SYNTAX</span></span>
 
 ```
 New-AzADUser -DisplayName <String> -UserPrincipalName <String> -Password <SecureString> [-ImmutableId <String>]
@@ -26,24 +26,24 @@ New-AzADUser -DisplayName <String> -UserPrincipalName <String> -Password <Secure
  [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="4872b-105">설명은</span><span class="sxs-lookup"><span data-stu-id="4872b-105">DESCRIPTION</span></span>
-<span data-ttu-id="4872b-106">새 active directory 사용자 (회사/학교 계정 popularly 조직 id 라고도 함)를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4872b-106">Creates a new active directory user (work/school account also popularly known as org-id).</span></span>
-<span data-ttu-id="4872b-107">추가 정보: https://msdn.microsoft.com/en-us/library/azure/ad/graph/api/users-operations#CreateUser</span><span class="sxs-lookup"><span data-stu-id="4872b-107">For more information: https://msdn.microsoft.com/en-us/library/azure/ad/graph/api/users-operations#CreateUser</span></span>
+## <span data-ttu-id="b2757-105">설명</span><span class="sxs-lookup"><span data-stu-id="b2757-105">DESCRIPTION</span></span>
+<span data-ttu-id="b2757-106">새 Active Directory 사용자(org-id라고도 하는 직장/학교 계정)를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b2757-106">Creates a new active directory user (work/school account also popularly known as org-id).</span></span>
+<span data-ttu-id="b2757-107">자세한 내용은 https://msdn.microsoft.com/en-us/library/azure/ad/graph/api/users-operations#CreateUser</span><span class="sxs-lookup"><span data-stu-id="b2757-107">For more information: https://msdn.microsoft.com/en-us/library/azure/ad/graph/api/users-operations#CreateUser</span></span>
 
-## <span data-ttu-id="4872b-108">예제의</span><span class="sxs-lookup"><span data-stu-id="4872b-108">EXAMPLES</span></span>
+## <span data-ttu-id="b2757-108">예제</span><span class="sxs-lookup"><span data-stu-id="b2757-108">EXAMPLES</span></span>
 
-### <span data-ttu-id="4872b-109">예제 1-새 광고 사용자 만들기</span><span class="sxs-lookup"><span data-stu-id="4872b-109">Example 1 - Create a new AD user</span></span>
+### <span data-ttu-id="b2757-109">예제 1 - 새 AD 사용자 만들기</span><span class="sxs-lookup"><span data-stu-id="b2757-109">Example 1 - Create a new AD user</span></span>
 ```
 PS C:\> $SecureStringPassword = ConvertTo-SecureString -String "password" -AsPlainText -Force
 PS C:\> New-AzADUser -DisplayName "MyDisplayName" -UserPrincipalName "myemail@domain.com" -Password $SecureStringPassword -MailNickname "MyMailNickName"
 ```
 
-<span data-ttu-id="4872b-110">테 넌 트에 "MyDisplayName" 및 user principal name "" 이라는 이름의 새 광고 사용자를 만듭니다 myemail@domain.com .</span><span class="sxs-lookup"><span data-stu-id="4872b-110">Creates a new AD user with the name "MyDisplayName" and user principal name "myemail@domain.com" in a tenant.</span></span>
+<span data-ttu-id="b2757-110">테넌트에서 "MyDisplayName" 및 사용자 계정 이름 ""으로 새 AD myemail@domain.com 사용자를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b2757-110">Creates a new AD user with the name "MyDisplayName" and user principal name "myemail@domain.com" in a tenant.</span></span>
 
-## <span data-ttu-id="4872b-111">변수</span><span class="sxs-lookup"><span data-stu-id="4872b-111">PARAMETERS</span></span>
+## <span data-ttu-id="b2757-111">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="b2757-111">PARAMETERS</span></span>
 
-### <span data-ttu-id="4872b-112">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="4872b-112">-DefaultProfile</span></span>
-<span data-ttu-id="4872b-113">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독</span><span class="sxs-lookup"><span data-stu-id="4872b-113">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+### <span data-ttu-id="b2757-112">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="b2757-112">-DefaultProfile</span></span>
+<span data-ttu-id="b2757-113">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독</span><span class="sxs-lookup"><span data-stu-id="b2757-113">The credentials, account, tenant, and subscription used for communication with azure</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -57,9 +57,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4872b-114">-DisplayName</span><span class="sxs-lookup"><span data-stu-id="4872b-114">-DisplayName</span></span>
-<span data-ttu-id="4872b-115">사용자의 주소록에 표시할 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="4872b-115">The name to display in the address book for the user.</span></span>
-<span data-ttu-id="4872b-116">' 정 Wu ' 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="4872b-116">example 'Alex Wu'.</span></span>
+### <span data-ttu-id="b2757-114">-DisplayName</span><span class="sxs-lookup"><span data-stu-id="b2757-114">-DisplayName</span></span>
+<span data-ttu-id="b2757-115">사용자의 주소부에 표시할 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="b2757-115">The name to display in the address book for the user.</span></span>
+<span data-ttu-id="b2757-116">예제 'Alex Wu'.</span><span class="sxs-lookup"><span data-stu-id="b2757-116">example 'Alex Wu'.</span></span>
 
 ```yaml
 Type: System.String
@@ -73,9 +73,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4872b-117">-ForceChangePasswordNextLogin</span><span class="sxs-lookup"><span data-stu-id="4872b-117">-ForceChangePasswordNextLogin</span></span>
-<span data-ttu-id="4872b-118">사용자가 다음에 성공한 로그인 (true)에서 암호를 변경 해야 하는 경우에는이를 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4872b-118">It must be specified if the user must change the password on the next successful login (true).</span></span>
-<span data-ttu-id="4872b-119">기본 동작 (false)은 다음 로그인에 대 한 암호를 변경 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4872b-119">Default behavior is (false) to not change the password on the next successful login.</span></span>
+### <span data-ttu-id="b2757-117">-ForceChangePasswordNextLogin</span><span class="sxs-lookup"><span data-stu-id="b2757-117">-ForceChangePasswordNextLogin</span></span>
+<span data-ttu-id="b2757-118">사용자가 다음에 성공한 로그인(true)에서 암호를 변경해야 하는 경우 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b2757-118">It must be specified if the user must change the password on the next successful login (true).</span></span>
+<span data-ttu-id="b2757-119">기본 동작은 성공한 다음 로그인 시 암호를 변경하지 않는 것입니다(false).</span><span class="sxs-lookup"><span data-stu-id="b2757-119">Default behavior is (false) to not change the password on the next successful login.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -89,8 +89,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4872b-120">-ImmutableId</span><span class="sxs-lookup"><span data-stu-id="4872b-120">-ImmutableId</span></span>
-<span data-ttu-id="4872b-121">사용자의 upn (사용자 계정 이름) 속성에 페더레이션 도메인을 사용 하는 경우에만 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4872b-121">It needs to be specified only if you are using a federated domain for the user's user principal name (upn) property.</span></span>
+### <span data-ttu-id="b2757-120">-ImmutableId</span><span class="sxs-lookup"><span data-stu-id="b2757-120">-ImmutableId</span></span>
+<span data-ttu-id="b2757-121">사용자의 사용자 계정 이름(upn) 속성에 페더리된 도메인을 사용하는 경우만 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b2757-121">It needs to be specified only if you are using a federated domain for the user's user principal name (upn) property.</span></span>
 
 ```yaml
 Type: System.String
@@ -104,8 +104,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4872b-122">-MailNickname</span><span class="sxs-lookup"><span data-stu-id="4872b-122">-MailNickname</span></span>
-<span data-ttu-id="4872b-123">사용자의 메일 별칭입니다.</span><span class="sxs-lookup"><span data-stu-id="4872b-123">The mail alias for the user.</span></span>
+### <span data-ttu-id="b2757-122">-MailNickname</span><span class="sxs-lookup"><span data-stu-id="b2757-122">-MailNickname</span></span>
+<span data-ttu-id="b2757-123">사용자의 메일 별칭입니다.</span><span class="sxs-lookup"><span data-stu-id="b2757-123">The mail alias for the user.</span></span>
 
 ```yaml
 Type: System.String
@@ -119,10 +119,10 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4872b-124">-암호</span><span class="sxs-lookup"><span data-stu-id="4872b-124">-Password</span></span>
-<span data-ttu-id="4872b-125">사용자의 암호입니다.</span><span class="sxs-lookup"><span data-stu-id="4872b-125">Password for the user.</span></span>
-<span data-ttu-id="4872b-126">테 넌 트의 암호 복잡성 요구 사항을 충족 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4872b-126">It must meet the tenant's password complexity requirements.</span></span>
-<span data-ttu-id="4872b-127">강력한 암호를 설정 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="4872b-127">It is recommended to set a strong password.</span></span>
+### <span data-ttu-id="b2757-124">-Password</span><span class="sxs-lookup"><span data-stu-id="b2757-124">-Password</span></span>
+<span data-ttu-id="b2757-125">사용자의 암호입니다.</span><span class="sxs-lookup"><span data-stu-id="b2757-125">Password for the user.</span></span>
+<span data-ttu-id="b2757-126">테넌트의 암호 복잡성 요구 사항을 충족해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b2757-126">It must meet the tenant's password complexity requirements.</span></span>
+<span data-ttu-id="b2757-127">강력한 암호를 설정하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="b2757-127">It is recommended to set a strong password.</span></span>
 
 ```yaml
 Type: System.Security.SecureString
@@ -136,9 +136,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4872b-128">-UserPrincipalName</span><span class="sxs-lookup"><span data-stu-id="4872b-128">-UserPrincipalName</span></span>
-<span data-ttu-id="4872b-129">사용자 계정 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="4872b-129">The user principal name.</span></span>
-<span data-ttu-id="4872b-130">예-' someuser@contoso.com '.</span><span class="sxs-lookup"><span data-stu-id="4872b-130">Example-'someuser@contoso.com'.</span></span>
+### <span data-ttu-id="b2757-128">-UserPrincipalName</span><span class="sxs-lookup"><span data-stu-id="b2757-128">-UserPrincipalName</span></span>
+<span data-ttu-id="b2757-129">사용자 계정 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="b2757-129">The user principal name.</span></span>
+<span data-ttu-id="b2757-130">Example-' someuser@contoso.com '.</span><span class="sxs-lookup"><span data-stu-id="b2757-130">Example-'someuser@contoso.com'.</span></span>
 
 ```yaml
 Type: System.String
@@ -152,8 +152,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4872b-131">-확인</span><span class="sxs-lookup"><span data-stu-id="4872b-131">-Confirm</span></span>
-<span data-ttu-id="4872b-132">Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="4872b-132">Prompts you for confirmation before running the cmdlet.</span></span>
+### <span data-ttu-id="b2757-131">-Confirm</span><span class="sxs-lookup"><span data-stu-id="b2757-131">-Confirm</span></span>
+<span data-ttu-id="b2757-132">cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="b2757-132">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -167,9 +167,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4872b-133">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="4872b-133">-WhatIf</span></span>
-<span data-ttu-id="4872b-134">Cmdlet이 실행 되는 경우의 동작을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4872b-134">Shows what would happen if the cmdlet runs.</span></span>
-<span data-ttu-id="4872b-135">Cmdlet이 실행 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4872b-135">The cmdlet is not run.</span></span>
+### <span data-ttu-id="b2757-133">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="b2757-133">-WhatIf</span></span>
+<span data-ttu-id="b2757-134">cmdlet이 실행되는 경우의 결과 표시</span><span class="sxs-lookup"><span data-stu-id="b2757-134">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="b2757-135">cmdlet이 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b2757-135">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -183,27 +183,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4872b-136">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="4872b-136">CommonParameters</span></span>
-<span data-ttu-id="4872b-137">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="4872b-137">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="4872b-138">자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="4872b-138">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="b2757-136">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="b2757-136">CommonParameters</span></span>
+<span data-ttu-id="b2757-137">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="b2757-137">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="b2757-138">자세한 내용은 다음 about_CommonParameters https://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b2757-138">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="4872b-139">입력</span><span class="sxs-lookup"><span data-stu-id="4872b-139">INPUTS</span></span>
+## <span data-ttu-id="b2757-139">입력</span><span class="sxs-lookup"><span data-stu-id="b2757-139">INPUTS</span></span>
 
-### <span data-ttu-id="4872b-140">System. 문자열</span><span class="sxs-lookup"><span data-stu-id="4872b-140">System.String</span></span>
+### <span data-ttu-id="b2757-140">System.String</span><span class="sxs-lookup"><span data-stu-id="b2757-140">System.String</span></span>
 
-### <span data-ttu-id="4872b-141">System.webserver</span><span class="sxs-lookup"><span data-stu-id="4872b-141">System.Security.SecureString</span></span>
+### <span data-ttu-id="b2757-141">System.Security.SecureString</span><span class="sxs-lookup"><span data-stu-id="b2757-141">System.Security.SecureString</span></span>
 
-### <span data-ttu-id="4872b-142">System.webserver 매개 변수</span><span class="sxs-lookup"><span data-stu-id="4872b-142">System.Management.Automation.SwitchParameter</span></span>
+### <span data-ttu-id="b2757-142">System.Management.Automation.SwitchParameter</span><span class="sxs-lookup"><span data-stu-id="b2757-142">System.Management.Automation.SwitchParameter</span></span>
 
-## <span data-ttu-id="4872b-143">출력</span><span class="sxs-lookup"><span data-stu-id="4872b-143">OUTPUTS</span></span>
+## <span data-ttu-id="b2757-143">출력</span><span class="sxs-lookup"><span data-stu-id="b2757-143">OUTPUTS</span></span>
 
-### <span data-ttu-id="4872b-144">ActiveDirectory를 사용 하 여 명령을 이동할 때</span><span class="sxs-lookup"><span data-stu-id="4872b-144">Microsoft.Azure.Commands.ActiveDirectory.PSADUser</span></span>
+### <span data-ttu-id="b2757-144">Microsoft.Azure.Commands.ActiveDirectory.PSADUser</span><span class="sxs-lookup"><span data-stu-id="b2757-144">Microsoft.Azure.Commands.ActiveDirectory.PSADUser</span></span>
 
-## <span data-ttu-id="4872b-145">상속자</span><span class="sxs-lookup"><span data-stu-id="4872b-145">NOTES</span></span>
+## <span data-ttu-id="b2757-145">참고 사항</span><span class="sxs-lookup"><span data-stu-id="b2757-145">NOTES</span></span>
 
-## <span data-ttu-id="4872b-146">관련 링크</span><span class="sxs-lookup"><span data-stu-id="4872b-146">RELATED LINKS</span></span>
+## <span data-ttu-id="b2757-146">관련 링크</span><span class="sxs-lookup"><span data-stu-id="b2757-146">RELATED LINKS</span></span>
 
-[<span data-ttu-id="4872b-147">Get-AzADUser</span><span class="sxs-lookup"><span data-stu-id="4872b-147">Get-AzADUser</span></span>](./Get-AzADUser.md)
+[<span data-ttu-id="b2757-147">Get-AzADUser</span><span class="sxs-lookup"><span data-stu-id="b2757-147">Get-AzADUser</span></span>](./Get-AzADUser.md)
 
-[<span data-ttu-id="4872b-148">Set-AzADUser</span><span class="sxs-lookup"><span data-stu-id="4872b-148">Set-AzADUser</span></span>](./Set-AzADUser.md)
 
-[<span data-ttu-id="4872b-149">제거-AzADUser</span><span class="sxs-lookup"><span data-stu-id="4872b-149">Remove-AzADUser</span></span>](./Remove-AzADUser.md)
+[<span data-ttu-id="b2757-148">Remove-AzADUser</span><span class="sxs-lookup"><span data-stu-id="b2757-148">Remove-AzADUser</span></span>](./Remove-AzADUser.md)

@@ -5,21 +5,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkWatcherFlowLog.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkWatcherFlowLog.md
-ms.openlocfilehash: 33441112856ebdbcb12da237542ed3ce62a3944c
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 27476e310536f2bc849e66669fc80570731d21e1
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94041779"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100408630"
 ---
-# <span data-ttu-id="7b95f-101">New-AzNetworkWatcherFlowLog</span><span class="sxs-lookup"><span data-stu-id="7b95f-101">New-AzNetworkWatcherFlowLog</span></span>
+# <span data-ttu-id="043fc-101">New-AzNetworkWatcherFlowLog</span><span class="sxs-lookup"><span data-stu-id="043fc-101">New-AzNetworkWatcherFlowLog</span></span>
 
-## <span data-ttu-id="7b95f-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="7b95f-102">SYNOPSIS</span></span>
-<span data-ttu-id="7b95f-103">지정 된 네트워크 보안 그룹에 대 한 흐름 로그 리소스를 만들거나 업데이트 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-103">Create or update a flow log resource for the specified network security group.</span></span>
+## <span data-ttu-id="043fc-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="043fc-102">SYNOPSIS</span></span>
+<span data-ttu-id="043fc-103">지정된 네트워크 보안 그룹에 대한 흐름 로그 리소스를 만들거나 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-103">Create or update a flow log resource for the specified network security group.</span></span>
 
-## <span data-ttu-id="7b95f-104">구문과</span><span class="sxs-lookup"><span data-stu-id="7b95f-104">SYNTAX</span></span>
+## <span data-ttu-id="043fc-104">구문</span><span class="sxs-lookup"><span data-stu-id="043fc-104">SYNTAX</span></span>
 
-### <span data-ttu-id="7b95f-105">SetByName (기본값)</span><span class="sxs-lookup"><span data-stu-id="7b95f-105">SetByName (Default)</span></span>
+### <span data-ttu-id="043fc-105">SetByName(기본값)</span><span class="sxs-lookup"><span data-stu-id="043fc-105">SetByName (Default)</span></span>
 ```
 New-AzNetworkWatcherFlowLog -NetworkWatcherName <String> -ResourceGroupName <String> -Name <String>
  -TargetResourceId <String> -StorageId <String> -Enabled <Boolean> [-EnableRetention <Boolean>]
@@ -27,7 +27,7 @@ New-AzNetworkWatcherFlowLog -NetworkWatcherName <String> -ResourceGroupName <Str
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="7b95f-106">SetByResource</span><span class="sxs-lookup"><span data-stu-id="7b95f-106">SetByResource</span></span>
+### <span data-ttu-id="043fc-106">SetByResource</span><span class="sxs-lookup"><span data-stu-id="043fc-106">SetByResource</span></span>
 ```
 New-AzNetworkWatcherFlowLog -NetworkWatcher <PSNetworkWatcher> -Name <String> -TargetResourceId <String>
  -StorageId <String> -Enabled <Boolean> [-EnableRetention <Boolean>] [-RetentionPolicyDays <Int32>]
@@ -35,7 +35,7 @@ New-AzNetworkWatcherFlowLog -NetworkWatcher <PSNetworkWatcher> -Name <String> -T
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="7b95f-107">SetByResourceWithTA</span><span class="sxs-lookup"><span data-stu-id="7b95f-107">SetByResourceWithTA</span></span>
+### <span data-ttu-id="043fc-107">SetByResourceWithTA</span><span class="sxs-lookup"><span data-stu-id="043fc-107">SetByResourceWithTA</span></span>
 ```
 New-AzNetworkWatcherFlowLog -NetworkWatcher <PSNetworkWatcher> -Name <String> -TargetResourceId <String>
  -StorageId <String> -Enabled <Boolean> [-EnableRetention <Boolean>] [-RetentionPolicyDays <Int32>]
@@ -44,7 +44,7 @@ New-AzNetworkWatcherFlowLog -NetworkWatcher <PSNetworkWatcher> -Name <String> -T
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="7b95f-108">SetByNameWithTA</span><span class="sxs-lookup"><span data-stu-id="7b95f-108">SetByNameWithTA</span></span>
+### <span data-ttu-id="043fc-108">SetByNameWithTA</span><span class="sxs-lookup"><span data-stu-id="043fc-108">SetByNameWithTA</span></span>
 ```
 New-AzNetworkWatcherFlowLog -NetworkWatcherName <String> -ResourceGroupName <String> -Name <String>
  -TargetResourceId <String> -StorageId <String> -Enabled <Boolean> [-EnableRetention <Boolean>]
@@ -53,7 +53,7 @@ New-AzNetworkWatcherFlowLog -NetworkWatcherName <String> -ResourceGroupName <Str
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="7b95f-109">SetByLocation</span><span class="sxs-lookup"><span data-stu-id="7b95f-109">SetByLocation</span></span>
+### <span data-ttu-id="043fc-109">SetByLocation</span><span class="sxs-lookup"><span data-stu-id="043fc-109">SetByLocation</span></span>
 ```
 New-AzNetworkWatcherFlowLog -Location <String> -Name <String> -TargetResourceId <String> -StorageId <String>
  -Enabled <Boolean> [-EnableRetention <Boolean>] [-RetentionPolicyDays <Int32>] [-FormatType <String>]
@@ -61,7 +61,7 @@ New-AzNetworkWatcherFlowLog -Location <String> -Name <String> -TargetResourceId 
  [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="7b95f-110">SetByLocationWithTA</span><span class="sxs-lookup"><span data-stu-id="7b95f-110">SetByLocationWithTA</span></span>
+### <span data-ttu-id="043fc-110">SetByLocationWithTA</span><span class="sxs-lookup"><span data-stu-id="043fc-110">SetByLocationWithTA</span></span>
 ```
 New-AzNetworkWatcherFlowLog -Location <String> -Name <String> -TargetResourceId <String> -StorageId <String>
  -Enabled <Boolean> [-EnableRetention <Boolean>] [-RetentionPolicyDays <Int32>] [-FormatType <String>]
@@ -70,31 +70,31 @@ New-AzNetworkWatcherFlowLog -Location <String> -Name <String> -TargetResourceId 
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="7b95f-111">설명은</span><span class="sxs-lookup"><span data-stu-id="7b95f-111">DESCRIPTION</span></span>
-<span data-ttu-id="7b95f-112">New-AzNetworkWatcherFlowLog 명령은 지정 된 네트워크 보안 그룹에 대 한 흐름 로그 리소스를 만들거나 업데이트 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-112">New-AzNetworkWatcherFlowLog command creates or updates a flow log resource for the specified network security group.</span></span>
+## <span data-ttu-id="043fc-111">설명</span><span class="sxs-lookup"><span data-stu-id="043fc-111">DESCRIPTION</span></span>
+<span data-ttu-id="043fc-112">New-AzNetworkWatcherFlowLog 명령은 지정된 네트워크 보안 그룹에 대한 흐름 로그 리소스를 생성하거나 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-112">New-AzNetworkWatcherFlowLog command creates or updates a flow log resource for the specified network security group.</span></span>
 
-## <span data-ttu-id="7b95f-113">예제의</span><span class="sxs-lookup"><span data-stu-id="7b95f-113">EXAMPLES</span></span>
+## <span data-ttu-id="043fc-113">예제</span><span class="sxs-lookup"><span data-stu-id="043fc-113">EXAMPLES</span></span>
 
-### <span data-ttu-id="7b95f-114">예제 1</span><span class="sxs-lookup"><span data-stu-id="7b95f-114">Example 1</span></span>
+### <span data-ttu-id="043fc-114">예제 1</span><span class="sxs-lookup"><span data-stu-id="043fc-114">Example 1</span></span>
 ```powershell
 PS C:\> New-AzNetworkWatcherFlowLog -Location eastus -Name pstest -TargetResourceId /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/MyFlowLog/providers/Microsoft.Network/networkSecurityGroups/MyNSG -StorageId /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/FlowLogsV2Demo/providers/Microsoft.Storage/storageAccounts/MyStorage -Enabled $true -EnableRetention $true -RetentionPolicyDays 5 -FormatVersion 2 -EnableTrafficAnalytics -TrafficAnalyticsWorkspaceId /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourcegroups/flowlogsv2demo/providers/Microsoft.OperationalInsights/workspaces/MyWorkspace
 ```
 
-<span data-ttu-id="7b95f-115">이름: pstest Id:/subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/NetworkWatcherRG/provid t e m/networkWatchers/NetworkWatcher_eastus/FlowLogs/pstest Etag: W/ProvisioningState: 성공 위치: e us TargetResourceId:/subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/MyFlowLog/provide rs/Microsoft./networkSecurityGroups StorageId: MyNSG s/Microsoft. Storage/Storageid/MySTorage 활성화 됨: 실제 보존 정책: {"일": true} 형식: {"Type": "JSON", "Version": 2} FlowAnalyticsConfiguration: {"networkWatcherFlowAnalyticsConfiguration": {"Enabled": True, "workspaceId": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb", "workspaceRegion": "": "workspaceResourceId oups//subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourcegr/", "FlowLogsV2Demo": 60}}</span><span class="sxs-lookup"><span data-stu-id="7b95f-115">Name                       : pstest Id                         : /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/NetworkWatcherRG/provid ers/Microsoft.Network/networkWatchers/NetworkWatcher_eastus/FlowLogs/pstest Etag                       : W/"f6047360-d797-4ca6-a9ec-28b5aec5c768" ProvisioningState          : Succeeded Location                   : eastus TargetResourceId           : /subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/MyFlowLog/provide rs/Microsoft.Network/networkSecurityGroups/MyNSG StorageId                  : /subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/FlowLogsV2Demo/provider s/Microsoft.Storage/storageAccounts/MySTorage Enabled                    : True RetentionPolicy            : { "Days": 5, "Enabled": true } Format                     : { "Type": "JSON", "Version": 2 } FlowAnalyticsConfiguration : { "networkWatcherFlowAnalyticsConfiguration": { "enabled": true, "workspaceId": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb", "workspaceRegion": "eastus", "workspaceResourceId": "/subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourcegr oups/flowlogsv2demo/providers/Microsoft.OperationalInsights/workspaces/MyWorkspace", "trafficAnalyticsInterval": 60 } }</span></span>
+<span data-ttu-id="043fc-115">Name : pstest Id : /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/NetworkWatcherRG/provid ers/Microsoft.Network/networkWatchers/NetworkWatcher_eastus/FlowLogs/pstest Etag : W/"f6047360-d797-4ca6-a9ec-28b5aec5c768" ProvisioningState : Succeeded Location : eastus TargetResourceId : /subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/MyFlowLog/provide rs/Microsoft.Network/networkSecurityGroups/MyNSG StorageId : /subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/FlowLogsV2Demo/provider s/Microsoft.Storage/storageAccounts/MySTorage Enabled : True RetentionPolicy : { "Days": 5, "Enabled": true } Format : { "Type": "JSON", "Version": 2 } FlowAnalyticsConfiguration : { "networkWatcherFlowAnalyticsConfiguration": { "enabled": true, "workspaceId": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb", "workspaceRegion": "eastus", "workspaceResourceId": "/subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourcegr oups/flowlogsv2demo/providers/Microsoft.OperationalInsights/workspaces/MyWorkspace", "trafficAnalyticsInterval": 60 } }</span><span class="sxs-lookup"><span data-stu-id="043fc-115">Name                       : pstest Id                         : /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/NetworkWatcherRG/provid ers/Microsoft.Network/networkWatchers/NetworkWatcher_eastus/FlowLogs/pstest Etag                       : W/"f6047360-d797-4ca6-a9ec-28b5aec5c768" ProvisioningState          : Succeeded Location                   : eastus TargetResourceId           : /subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/MyFlowLog/provide rs/Microsoft.Network/networkSecurityGroups/MyNSG StorageId                  : /subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/FlowLogsV2Demo/provider s/Microsoft.Storage/storageAccounts/MySTorage Enabled                    : True RetentionPolicy            : { "Days": 5, "Enabled": true } Format                     : { "Type": "JSON", "Version": 2 } FlowAnalyticsConfiguration : { "networkWatcherFlowAnalyticsConfiguration": { "enabled": true, "workspaceId": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb", "workspaceRegion": "eastus", "workspaceResourceId": "/subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourcegr oups/flowlogsv2demo/providers/Microsoft.OperationalInsights/workspaces/MyWorkspace", "trafficAnalyticsInterval": 60 } }</span></span>
 
-### <span data-ttu-id="7b95f-116">예제 2</span><span class="sxs-lookup"><span data-stu-id="7b95f-116">Example 2</span></span>
+### <span data-ttu-id="043fc-116">예제 2</span><span class="sxs-lookup"><span data-stu-id="043fc-116">Example 2</span></span>
 ```powershell
 PS C:\> New-AzNetworkWatcherFlowLog -Location eastus -Name pstest -TargetResourceId /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/MyFlowLog/providers/Microsoft.Network/networkSecurityGroups/MyNSG -StorageId /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/FlowLogsV2Demo/providers/Microsoft.Storage/storageAccounts/MyStorage -Enabled $false -EnableTrafficAnalytics:$false
 ```
 
-<span data-ttu-id="7b95f-117">TrafficAnalytics가 구성 된 flowLog 리소스를 사용 하지 않도록 설정 하려면 TrafficAnalytics도 사용 하지 않도록 설정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-117">If you want to disable flowLog resource for which TrafficAnalytics is configured, it is necessary to disable TrafficAnalytics as well.</span></span> <span data-ttu-id="7b95f-118">예제 2와 같이 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-118">It can be done like in the example 2.</span></span>
+<span data-ttu-id="043fc-117">TrafficAnalytics가 구성된 flowLog 리소스를 사용하지 않도록 설정하려는 경우 TrafficAnalytics도 사용하지 않도록 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-117">If you want to disable flowLog resource for which TrafficAnalytics is configured, it is necessary to disable TrafficAnalytics as well.</span></span> <span data-ttu-id="043fc-118">예제 2와 같이 수행될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-118">It can be done like in the example 2.</span></span>
 
-<span data-ttu-id="7b95f-119">이름: pstest Id:/subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/NetworkWatcherRG/provid? t e m/networkWatchers/NetworkWatcher_eastus/FlowLogs/pstest Etag: W/"f6047360-d797-4ca6-a9ec-28b5aec5c768" ProvisioningState: 성공 위치: e<c13> us TargetResourceId:/subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/MyFlowLog/provide rs/Microsoft. 네트워크/networkSecurityGroups/MyNSG StorageId:/subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/FlowLogsV2Demo/provider s/Microsoft. 저장소/Storageid/MySTorage 사용: False 보존 정책: 0, "사용": False} 형식: {"Type": "JSON", "Version": 1} FlowAnalyticsConfiguration: {"networkWatcherFlowAnalyticsConfiguration": {"Enabled": False, "trafficAnalyticsInterval": 60}}</span><span class="sxs-lookup"><span data-stu-id="7b95f-119">Name                       : pstest Id                         : /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/NetworkWatcherRG/provid ers/Microsoft.Network/networkWatchers/NetworkWatcher_eastus/FlowLogs/pstest Etag                       : W/"f6047360-d797-4ca6-a9ec-28b5aec5c768" ProvisioningState          : Succeeded Location                   : eastus TargetResourceId           : /subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/MyFlowLog/provide rs/Microsoft.Network/networkSecurityGroups/MyNSG StorageId                  : /subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/FlowLogsV2Demo/provider s/Microsoft.Storage/storageAccounts/MySTorage Enabled                    : False RetentionPolicy            : { "Days": 0, "Enabled": false } Format                     : { "Type": "JSON", "Version": 1 } FlowAnalyticsConfiguration : { "networkWatcherFlowAnalyticsConfiguration": { "enabled": false, "trafficAnalyticsInterval": 60 } }</span></span>
+<span data-ttu-id="043fc-119">이름 : pstest Id : /subscriptions/bbbbbb-bbbb-bbbb-bbbb-bbbb-bb/resourceGroups/NetworkWatcherRG/provid ers/Microsoft.Network/networkWatchers/NetworkWatcher_eastus/FlowLogs/pstest Etag : W/"f6047360-d797-4ca6-a9ec-28b5aec5c768" ProvisioningState : Succeeded Location : eastus TargetResourceId : /subscriptions/56abfbd6-ec72-4ce9-8 31f-bc2b6f2c5505/resourceGroups/MyFlowLog/provide rs/Microsoft.Network/networkSecurityGroups/MyNSG StorageId : /subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/FlowLogsV2Demo/provider s/Microsoft.Storage/storageAccounts/MySTorage Enabled : False RetentionPolicy : { "Days": 0, "Enabled": false } Format : { "Type": "JSON", "Version": 1 } FlowAnalyticsConfiguration : { "networkWatcherFlowAnalyticsConfiguration": { "enabled": false, "trafficAnalyticsInterval": 60 } }</span><span class="sxs-lookup"><span data-stu-id="043fc-119">Name                       : pstest Id                         : /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/NetworkWatcherRG/provid ers/Microsoft.Network/networkWatchers/NetworkWatcher_eastus/FlowLogs/pstest Etag                       : W/"f6047360-d797-4ca6-a9ec-28b5aec5c768" ProvisioningState          : Succeeded Location                   : eastus TargetResourceId           : /subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/MyFlowLog/provide rs/Microsoft.Network/networkSecurityGroups/MyNSG StorageId                  : /subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/FlowLogsV2Demo/provider s/Microsoft.Storage/storageAccounts/MySTorage Enabled                    : False RetentionPolicy            : { "Days": 0, "Enabled": false } Format                     : { "Type": "JSON", "Version": 1 } FlowAnalyticsConfiguration : { "networkWatcherFlowAnalyticsConfiguration": { "enabled": false, "trafficAnalyticsInterval": 60 } }</span></span>
 
-## <span data-ttu-id="7b95f-120">변수</span><span class="sxs-lookup"><span data-stu-id="7b95f-120">PARAMETERS</span></span>
+## <span data-ttu-id="043fc-120">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="043fc-120">PARAMETERS</span></span>
 
-### <span data-ttu-id="7b95f-121">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="7b95f-121">-DefaultProfile</span></span>
-<span data-ttu-id="7b95f-122">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-122">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+### <span data-ttu-id="043fc-121">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="043fc-121">-DefaultProfile</span></span>
+<span data-ttu-id="043fc-122">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-122">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
 
 ```yaml
 Type: IAzureContextContainer
@@ -108,8 +108,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7b95f-123">-사용</span><span class="sxs-lookup"><span data-stu-id="7b95f-123">-Enabled</span></span>
-<span data-ttu-id="7b95f-124">흐름 로깅을 사용 하거나 사용 하지 않도록 설정 하는 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-124">Flag to enable/disable flow logging.</span></span>
+### <span data-ttu-id="043fc-123">-Enabled</span><span class="sxs-lookup"><span data-stu-id="043fc-123">-Enabled</span></span>
+<span data-ttu-id="043fc-124">흐름 로깅을 사용/사용하지 않도록 설정하는 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-124">Flag to enable/disable flow logging.</span></span>
 
 ```yaml
 Type: Boolean
@@ -123,8 +123,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7b95f-125">-EnableRetention</span><span class="sxs-lookup"><span data-stu-id="7b95f-125">-EnableRetention</span></span>
-<span data-ttu-id="7b95f-126">보존을 설정/해제 하는 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-126">Flag to enable/disable retention.</span></span>
+### <span data-ttu-id="043fc-125">-EnableRetention</span><span class="sxs-lookup"><span data-stu-id="043fc-125">-EnableRetention</span></span>
+<span data-ttu-id="043fc-126">보존을 사용/사용하지 않도록 설정하는 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-126">Flag to enable/disable retention.</span></span>
 
 ```yaml
 Type: Boolean
@@ -138,8 +138,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7b95f-127">-EnableTrafficAnalytics</span><span class="sxs-lookup"><span data-stu-id="7b95f-127">-EnableTrafficAnalytics</span></span>
-<span data-ttu-id="7b95f-128">TrafficAnalytics를 사용 하거나 사용 하지 않도록 설정 하는 플래그</span><span class="sxs-lookup"><span data-stu-id="7b95f-128">Flag to enable/disable TrafficAnalytics</span></span>
+### <span data-ttu-id="043fc-127">-EnableTrafficAnalytics</span><span class="sxs-lookup"><span data-stu-id="043fc-127">-EnableTrafficAnalytics</span></span>
+<span data-ttu-id="043fc-128">TrafficAnalytics를 사용/사용하지 않도록 설정하는 플래그</span><span class="sxs-lookup"><span data-stu-id="043fc-128">Flag to enable/disable TrafficAnalytics</span></span>
 
 ```yaml
 Type: SwitchParameter
@@ -153,8 +153,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7b95f-129">-Force</span><span class="sxs-lookup"><span data-stu-id="7b95f-129">-Force</span></span>
-<span data-ttu-id="7b95f-130">리소스를 덮어쓰려고 할 때 확인 메시지 표시 안 함</span><span class="sxs-lookup"><span data-stu-id="7b95f-130">Do not ask for confirmation if you want to overwrite a resource</span></span>
+### <span data-ttu-id="043fc-129">-Force</span><span class="sxs-lookup"><span data-stu-id="043fc-129">-Force</span></span>
+<span data-ttu-id="043fc-130">리소스를 덮어 사용하려는 경우 확인을 요청하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-130">Do not ask for confirmation if you want to overwrite a resource</span></span>
 
 ```yaml
 Type: SwitchParameter
@@ -168,9 +168,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7b95f-131">-FormatType</span><span class="sxs-lookup"><span data-stu-id="7b95f-131">-FormatType</span></span>
-<span data-ttu-id="7b95f-132">흐름 로그의 파일 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-132">The file type of flow log.</span></span>
-<span data-ttu-id="7b95f-133">현재 ' JSON ' 값만 지원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-133">The only supported value now is 'JSON'.</span></span>
+### <span data-ttu-id="043fc-131">-FormatType</span><span class="sxs-lookup"><span data-stu-id="043fc-131">-FormatType</span></span>
+<span data-ttu-id="043fc-132">흐름 로그의 파일 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-132">The file type of flow log.</span></span>
+<span data-ttu-id="043fc-133">이제 지원되는 유일한 값은 'JSON'입니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-133">The only supported value now is 'JSON'.</span></span>
 
 ```yaml
 Type: String
@@ -184,8 +184,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7b95f-134">-FormatVersion</span><span class="sxs-lookup"><span data-stu-id="7b95f-134">-FormatVersion</span></span>
-<span data-ttu-id="7b95f-135">흐름 로그의 버전 (개정)입니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-135">The version (revision) of the flow log.</span></span>
+### <span data-ttu-id="043fc-134">-FormatVersion</span><span class="sxs-lookup"><span data-stu-id="043fc-134">-FormatVersion</span></span>
+<span data-ttu-id="043fc-135">흐름 로그의 버전(버전)입니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-135">The version (revision) of the flow log.</span></span>
 
 ```yaml
 Type: Int32
@@ -199,8 +199,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7b95f-136">-위치</span><span class="sxs-lookup"><span data-stu-id="7b95f-136">-Location</span></span>
-<span data-ttu-id="7b95f-137">네트워크 감시자의 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-137">Location of the network watcher.</span></span>
+### <span data-ttu-id="043fc-136">-Location</span><span class="sxs-lookup"><span data-stu-id="043fc-136">-Location</span></span>
+<span data-ttu-id="043fc-137">네트워크 감시자 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-137">Location of the network watcher.</span></span>
 
 ```yaml
 Type: String
@@ -214,8 +214,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7b95f-138">-이름</span><span class="sxs-lookup"><span data-stu-id="7b95f-138">-Name</span></span>
-<span data-ttu-id="7b95f-139">흐름 로그 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-139">The flow log name.</span></span>
+### <span data-ttu-id="043fc-138">-Name</span><span class="sxs-lookup"><span data-stu-id="043fc-138">-Name</span></span>
+<span data-ttu-id="043fc-139">흐름 로그 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-139">The flow log name.</span></span>
 
 ```yaml
 Type: String
@@ -229,8 +229,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7b95f-140">-NetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="7b95f-140">-NetworkWatcher</span></span>
-<span data-ttu-id="7b95f-141">네트워크 감시자 리소스.</span><span class="sxs-lookup"><span data-stu-id="7b95f-141">The network watcher resource.</span></span>
+### <span data-ttu-id="043fc-140">-NetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="043fc-140">-NetworkWatcher</span></span>
+<span data-ttu-id="043fc-141">네트워크 감시자 리소스입니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-141">The network watcher resource.</span></span>
 
 ```yaml
 Type: PSNetworkWatcher
@@ -244,8 +244,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7b95f-142">-NetworkWatcherName</span><span class="sxs-lookup"><span data-stu-id="7b95f-142">-NetworkWatcherName</span></span>
-<span data-ttu-id="7b95f-143">네트워크 감시자의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-143">The name of network watcher.</span></span>
+### <span data-ttu-id="043fc-142">-NetworkWatcherName</span><span class="sxs-lookup"><span data-stu-id="043fc-142">-NetworkWatcherName</span></span>
+<span data-ttu-id="043fc-143">Network Watcher의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-143">The name of network watcher.</span></span>
 
 ```yaml
 Type: String
@@ -259,8 +259,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7b95f-144">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="7b95f-144">-ResourceGroupName</span></span>
-<span data-ttu-id="7b95f-145">네트워크 감시자 리소스 그룹의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-145">The name of the network watcher resource group.</span></span>
+### <span data-ttu-id="043fc-144">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="043fc-144">-ResourceGroupName</span></span>
+<span data-ttu-id="043fc-145">Network Watcher 리소스 그룹의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-145">The name of the network watcher resource group.</span></span>
 
 ```yaml
 Type: String
@@ -274,8 +274,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7b95f-146">-보존 기간</span><span class="sxs-lookup"><span data-stu-id="7b95f-146">-RetentionPolicyDays</span></span>
-<span data-ttu-id="7b95f-147">흐름 로그 기록을 유지할 일 수입니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-147">Number of days to retain flow log records.</span></span>
+### <span data-ttu-id="043fc-146">-RetentionPolicyDays</span><span class="sxs-lookup"><span data-stu-id="043fc-146">-RetentionPolicyDays</span></span>
+<span data-ttu-id="043fc-147">흐름 로그 레코드를 보존할 일 수입니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-147">Number of days to retain flow log records.</span></span>
 
 ```yaml
 Type: Int32
@@ -289,8 +289,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7b95f-148">-StorageId</span><span class="sxs-lookup"><span data-stu-id="7b95f-148">-StorageId</span></span>
-<span data-ttu-id="7b95f-149">흐름 로그를 저장 하는 데 사용 되는 저장소 계정의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-149">ID of the storage account which is used to store the flow log.</span></span>
+### <span data-ttu-id="043fc-148">-StorageId</span><span class="sxs-lookup"><span data-stu-id="043fc-148">-StorageId</span></span>
+<span data-ttu-id="043fc-149">흐름 로그를 저장하는 데 사용되는 저장소 계정의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-149">ID of the storage account which is used to store the flow log.</span></span>
 
 ```yaml
 Type: String
@@ -304,8 +304,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7b95f-150">태그</span><span class="sxs-lookup"><span data-stu-id="7b95f-150">-Tag</span></span>
-<span data-ttu-id="7b95f-151">리소스 태그를 나타내는 hashtable입니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-151">A hashtable which represents resource tags.</span></span>
+### <span data-ttu-id="043fc-150">-Tag</span><span class="sxs-lookup"><span data-stu-id="043fc-150">-Tag</span></span>
+<span data-ttu-id="043fc-151">리소스 태그를 나타내는 해시테이블입니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-151">A hashtable which represents resource tags.</span></span>
 
 ```yaml
 Type: Hashtable
@@ -319,8 +319,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7b95f-152">-TargetResourceId</span><span class="sxs-lookup"><span data-stu-id="7b95f-152">-TargetResourceId</span></span>
-<span data-ttu-id="7b95f-153">흐름 로그가 적용 되는 네트워크 보안 그룹의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-153">ID of network security group to which flow log will be applied.</span></span>
+### <span data-ttu-id="043fc-152">-TargetResourceId</span><span class="sxs-lookup"><span data-stu-id="043fc-152">-TargetResourceId</span></span>
+<span data-ttu-id="043fc-153">흐름 로그를 적용할 네트워크 보안 그룹의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-153">ID of network security group to which flow log will be applied.</span></span>
 
 ```yaml
 Type: String
@@ -334,8 +334,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7b95f-154">-TrafficAnalyticsInterval</span><span class="sxs-lookup"><span data-stu-id="7b95f-154">-TrafficAnalyticsInterval</span></span>
-<span data-ttu-id="7b95f-155">TA 서비스에서 분석을 수행 하는 빈도를 결정 하는 간격 (분)입니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-155">The interval in minutes which would decide how frequently TA service should do flow analytics.</span></span>
+### <span data-ttu-id="043fc-154">-TrafficAnalyticsInterval</span><span class="sxs-lookup"><span data-stu-id="043fc-154">-TrafficAnalyticsInterval</span></span>
+<span data-ttu-id="043fc-155">TA 서비스가 흐름 분석을 얼마나 자주 해야 하는지 결정하는 분 간격입니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-155">The interval in minutes which would decide how frequently TA service should do flow analytics.</span></span>
 
 ```yaml
 Type: Int32
@@ -349,8 +349,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7b95f-156">-TrafficAnalyticsWorkspaceId</span><span class="sxs-lookup"><span data-stu-id="7b95f-156">-TrafficAnalyticsWorkspaceId</span></span>
-<span data-ttu-id="7b95f-157">첨부 된 작업 영역의 리소스 Id입니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-157">Resource Id of the attached workspace.</span></span>
+### <span data-ttu-id="043fc-156">-TrafficAnalyticsWorkspaceId</span><span class="sxs-lookup"><span data-stu-id="043fc-156">-TrafficAnalyticsWorkspaceId</span></span>
+<span data-ttu-id="043fc-157">연결된 작업 영역의 리소스 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-157">Resource Id of the attached workspace.</span></span>
 
 ```yaml
 Type: String
@@ -364,8 +364,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7b95f-158">-확인</span><span class="sxs-lookup"><span data-stu-id="7b95f-158">-Confirm</span></span>
-<span data-ttu-id="7b95f-159">Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-159">Prompts you for confirmation before running the cmdlet.</span></span>
+### <span data-ttu-id="043fc-158">-Confirm</span><span class="sxs-lookup"><span data-stu-id="043fc-158">-Confirm</span></span>
+<span data-ttu-id="043fc-159">cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-159">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: SwitchParameter
@@ -379,9 +379,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7b95f-160">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="7b95f-160">-WhatIf</span></span>
-<span data-ttu-id="7b95f-161">Cmdlet이 실행 되는 경우의 동작을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-161">Shows what would happen if the cmdlet runs.</span></span>
-<span data-ttu-id="7b95f-162">Cmdlet이 실행 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-162">The cmdlet is not run.</span></span>
+### <span data-ttu-id="043fc-160">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="043fc-160">-WhatIf</span></span>
+<span data-ttu-id="043fc-161">cmdlet이 실행되는 경우의 결과 표시</span><span class="sxs-lookup"><span data-stu-id="043fc-161">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="043fc-162">cmdlet이 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-162">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: SwitchParameter
@@ -395,77 +395,77 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="7b95f-163">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="7b95f-163">CommonParameters</span></span>
-<span data-ttu-id="7b95f-164">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b95f-164">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="7b95f-165">자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="7b95f-165">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="043fc-163">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="043fc-163">CommonParameters</span></span>
+<span data-ttu-id="043fc-164">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="043fc-164">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="043fc-165">자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.</span><span class="sxs-lookup"><span data-stu-id="043fc-165">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="7b95f-166">입력</span><span class="sxs-lookup"><span data-stu-id="7b95f-166">INPUTS</span></span>
+## <span data-ttu-id="043fc-166">입력</span><span class="sxs-lookup"><span data-stu-id="043fc-166">INPUTS</span></span>
 
-### <span data-ttu-id="7b95f-167">Microsoft. 네트워크 모델. PSNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="7b95f-167">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher</span></span>
+### <span data-ttu-id="043fc-167">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="043fc-167">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher</span></span>
 
-## <span data-ttu-id="7b95f-168">출력</span><span class="sxs-lookup"><span data-stu-id="7b95f-168">OUTPUTS</span></span>
+## <span data-ttu-id="043fc-168">출력</span><span class="sxs-lookup"><span data-stu-id="043fc-168">OUTPUTS</span></span>
 
-### <span data-ttu-id="7b95f-169">Microsoft. 네트워크 모델. PSFlowLogResource</span><span class="sxs-lookup"><span data-stu-id="7b95f-169">Microsoft.Azure.Commands.Network.Models.PSFlowLogResource</span></span>
+### <span data-ttu-id="043fc-169">Microsoft.Azure.Commands.Network.Models.PSFlowLogResource</span><span class="sxs-lookup"><span data-stu-id="043fc-169">Microsoft.Azure.Commands.Network.Models.PSFlowLogResource</span></span>
 
-## <span data-ttu-id="7b95f-170">상속자</span><span class="sxs-lookup"><span data-stu-id="7b95f-170">NOTES</span></span>
+## <span data-ttu-id="043fc-170">참고 사항</span><span class="sxs-lookup"><span data-stu-id="043fc-170">NOTES</span></span>
 
-## <span data-ttu-id="7b95f-171">관련 링크</span><span class="sxs-lookup"><span data-stu-id="7b95f-171">RELATED LINKS</span></span>
+## <span data-ttu-id="043fc-171">관련 링크</span><span class="sxs-lookup"><span data-stu-id="043fc-171">RELATED LINKS</span></span>
 
-[<span data-ttu-id="7b95f-172">새로운 AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="7b95f-172">New-AzNetworkWatcher</span></span>](./New-AzNetworkWatcher.md)
+[<span data-ttu-id="043fc-172">New-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="043fc-172">New-AzNetworkWatcher</span></span>](./New-AzNetworkWatcher.md)
 
-[<span data-ttu-id="7b95f-173">Get-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="7b95f-173">Get-AzNetworkWatcher</span></span>](./Get-AzNetworkWatcher.md)
+[<span data-ttu-id="043fc-173">Get-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="043fc-173">Get-AzNetworkWatcher</span></span>](./Get-AzNetworkWatcher.md)
 
-[<span data-ttu-id="7b95f-174">제거-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="7b95f-174">Remove-AzNetworkWatcher</span></span>](./Remove-AzNetworkWatcher.md)
+[<span data-ttu-id="043fc-174">Remove-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="043fc-174">Remove-AzNetworkWatcher</span></span>](./Remove-AzNetworkWatcher.md)
 
-[<span data-ttu-id="7b95f-175">Get-AzNetworkWatcherNextHop</span><span class="sxs-lookup"><span data-stu-id="7b95f-175">Get-AzNetworkWatcherNextHop</span></span>](./Get-AzNetworkWatcherNextHop.md)
+[<span data-ttu-id="043fc-175">Get-AzNetworkWatcherNextHop</span><span class="sxs-lookup"><span data-stu-id="043fc-175">Get-AzNetworkWatcherNextHop</span></span>](./Get-AzNetworkWatcherNextHop.md)
 
-[<span data-ttu-id="7b95f-176">Get-AzNetworkWatcherSecurityGroupView</span><span class="sxs-lookup"><span data-stu-id="7b95f-176">Get-AzNetworkWatcherSecurityGroupView</span></span>](./Get-AzNetworkWatcherSecurityGroupView.md)
+[<span data-ttu-id="043fc-176">Get-AzNetworkWatcherSecurityGroupView</span><span class="sxs-lookup"><span data-stu-id="043fc-176">Get-AzNetworkWatcherSecurityGroupView</span></span>](./Get-AzNetworkWatcherSecurityGroupView.md)
 
-[<span data-ttu-id="7b95f-177">Get-AzNetworkWatcherTopology</span><span class="sxs-lookup"><span data-stu-id="7b95f-177">Get-AzNetworkWatcherTopology</span></span>](./Get-AzNetworkWatcherTopology.md)
+[<span data-ttu-id="043fc-177">Get-AzNetworkWatcherTopology</span><span class="sxs-lookup"><span data-stu-id="043fc-177">Get-AzNetworkWatcherTopology</span></span>](./Get-AzNetworkWatcherTopology.md)
 
-[<span data-ttu-id="7b95f-178">시작-AzNetworkWatcherResourceTroubleshooting</span><span class="sxs-lookup"><span data-stu-id="7b95f-178">Start-AzNetworkWatcherResourceTroubleshooting</span></span>](./Start-AzNetworkWatcherResourceTroubleshooting.md)
+[<span data-ttu-id="043fc-178">Start-AzNetworkWatcherResourceTroubleshooting</span><span class="sxs-lookup"><span data-stu-id="043fc-178">Start-AzNetworkWatcherResourceTroubleshooting</span></span>](./Start-AzNetworkWatcherResourceTroubleshooting.md)
 
-[<span data-ttu-id="7b95f-179">새로운 AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="7b95f-179">New-AzNetworkWatcherPacketCapture</span></span>](./New-AzNetworkWatcherPacketCapture.md)
+[<span data-ttu-id="043fc-179">New-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="043fc-179">New-AzNetworkWatcherPacketCapture</span></span>](./New-AzNetworkWatcherPacketCapture.md)
 
-[<span data-ttu-id="7b95f-180">새로운 AzPacketCaptureFilterConfig</span><span class="sxs-lookup"><span data-stu-id="7b95f-180">New-AzPacketCaptureFilterConfig</span></span>](./New-AzPacketCaptureFilterConfig.md)
+[<span data-ttu-id="043fc-180">New-AzPacketCaptureFilterConfig</span><span class="sxs-lookup"><span data-stu-id="043fc-180">New-AzPacketCaptureFilterConfig</span></span>](./New-AzPacketCaptureFilterConfig.md)
 
-[<span data-ttu-id="7b95f-181">Get-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="7b95f-181">Get-AzNetworkWatcherPacketCapture</span></span>](./Get-AzNetworkWatcherPacketCapture.md)
+[<span data-ttu-id="043fc-181">Get-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="043fc-181">Get-AzNetworkWatcherPacketCapture</span></span>](./Get-AzNetworkWatcherPacketCapture.md)
 
-[<span data-ttu-id="7b95f-182">제거-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="7b95f-182">Remove-AzNetworkWatcherPacketCapture</span></span>](./Remove-AzNetworkWatcherPacketCapture.md)
+[<span data-ttu-id="043fc-182">Remove-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="043fc-182">Remove-AzNetworkWatcherPacketCapture</span></span>](./Remove-AzNetworkWatcherPacketCapture.md)
 
-[<span data-ttu-id="7b95f-183">중지-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="7b95f-183">Stop-AzNetworkWatcherPacketCapture</span></span>](./Stop-AzNetworkWatcherPacketCapture.md)
+[<span data-ttu-id="043fc-183">Stop-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="043fc-183">Stop-AzNetworkWatcherPacketCapture</span></span>](./Stop-AzNetworkWatcherPacketCapture.md)
 
-[<span data-ttu-id="7b95f-184">새로운 AzNetworkWatcherProtocolConfiguration</span><span class="sxs-lookup"><span data-stu-id="7b95f-184">New-AzNetworkWatcherProtocolConfiguration</span></span>](./New-AzNetworkWatcherProtocolConfiguration.md)
+[<span data-ttu-id="043fc-184">New-AzNetworkWatcherProtocolConfiguration</span><span class="sxs-lookup"><span data-stu-id="043fc-184">New-AzNetworkWatcherProtocolConfiguration</span></span>](./New-AzNetworkWatcherProtocolConfiguration.md)
 
-[<span data-ttu-id="7b95f-185">테스트-AzNetworkWatcherIPFlow</span><span class="sxs-lookup"><span data-stu-id="7b95f-185">Test-AzNetworkWatcherIPFlow</span></span>](./Test-AzNetworkWatcherIPFlow.md)
+[<span data-ttu-id="043fc-185">Test-AzNetworkWatcherIPFlow</span><span class="sxs-lookup"><span data-stu-id="043fc-185">Test-AzNetworkWatcherIPFlow</span></span>](./Test-AzNetworkWatcherIPFlow.md)
 
-[<span data-ttu-id="7b95f-186">테스트-AzNetworkWatcherConnectivity</span><span class="sxs-lookup"><span data-stu-id="7b95f-186">Test-AzNetworkWatcherConnectivity</span></span>](./Test-AzNetworkWatcherConnectivity.md)
+[<span data-ttu-id="043fc-186">Test-AzNetworkWatcherConnectivity</span><span class="sxs-lookup"><span data-stu-id="043fc-186">Test-AzNetworkWatcherConnectivity</span></span>](./Test-AzNetworkWatcherConnectivity.md)
 
-[<span data-ttu-id="7b95f-187">중지-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="7b95f-187">Stop-AzNetworkWatcherConnectionMonitor</span></span>](./Stop-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="043fc-187">Stop-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="043fc-187">Stop-AzNetworkWatcherConnectionMonitor</span></span>](./Stop-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="7b95f-188">시작-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="7b95f-188">Start-AzNetworkWatcherConnectionMonitor</span></span>](./Start-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="043fc-188">Start-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="043fc-188">Start-AzNetworkWatcherConnectionMonitor</span></span>](./Start-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="7b95f-189">Set-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="7b95f-189">Set-AzNetworkWatcherConnectionMonitor</span></span>](./Set-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="043fc-189">Set-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="043fc-189">Set-AzNetworkWatcherConnectionMonitor</span></span>](./Set-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="7b95f-190">Set-AzNetworkWatcherConfigFlowLog</span><span class="sxs-lookup"><span data-stu-id="7b95f-190">Set-AzNetworkWatcherConfigFlowLog</span></span>](./Set-AzNetworkWatcherConfigFlowLog.md)
+[<span data-ttu-id="043fc-190">Set-AzNetworkWatcherConfigFlowLog</span><span class="sxs-lookup"><span data-stu-id="043fc-190">Set-AzNetworkWatcherConfigFlowLog</span></span>](./Set-AzNetworkWatcherConfigFlowLog.md)
 
-[<span data-ttu-id="7b95f-191">제거-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="7b95f-191">Remove-AzNetworkWatcherConnectionMonitor</span></span>](./Remove-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="043fc-191">Remove-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="043fc-191">Remove-AzNetworkWatcherConnectionMonitor</span></span>](./Remove-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="7b95f-192">새로운 AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="7b95f-192">New-AzNetworkWatcherConnectionMonitor</span></span>](./New-AzNetworkWatcherConnectionMonitor.md)
+[<span data-ttu-id="043fc-192">New-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="043fc-192">New-AzNetworkWatcherConnectionMonitor</span></span>](./New-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="7b95f-193">Get-AzNetworkWatcherTroubleshootingResult</span><span class="sxs-lookup"><span data-stu-id="7b95f-193">Get-AzNetworkWatcherTroubleshootingResult</span></span>](./Get-AzNetworkWatcherTroubleshootingResult.md)
+[<span data-ttu-id="043fc-193">Get-AzNetworkWatcherTroubleshootingResult</span><span class="sxs-lookup"><span data-stu-id="043fc-193">Get-AzNetworkWatcherTroubleshootingResult</span></span>](./Get-AzNetworkWatcherTroubleshootingResult.md)
 
-[<span data-ttu-id="7b95f-194">Get-AzNetworkWatcherReachabilityReport</span><span class="sxs-lookup"><span data-stu-id="7b95f-194">Get-AzNetworkWatcherReachabilityReport</span></span>](./Get-AzNetworkWatcherReachabilityReport.md)
+[<span data-ttu-id="043fc-194">Get-AzNetworkWatcherReachabilityReport</span><span class="sxs-lookup"><span data-stu-id="043fc-194">Get-AzNetworkWatcherReachabilityReport</span></span>](./Get-AzNetworkWatcherReachabilityReport.md)
 
-[<span data-ttu-id="7b95f-195">Get-AzNetworkWatcherReachabilityProvidersList</span><span class="sxs-lookup"><span data-stu-id="7b95f-195">Get-AzNetworkWatcherReachabilityProvidersList</span></span>](./Get-AzNetworkWatcherReachabilityProvidersList.md)
+[<span data-ttu-id="043fc-195">Get-AzNetworkWatcherReachabilityProvidersList</span><span class="sxs-lookup"><span data-stu-id="043fc-195">Get-AzNetworkWatcherReachabilityProvidersList</span></span>](./Get-AzNetworkWatcherReachabilityProvidersList.md)
 
-[<span data-ttu-id="7b95f-196">Get-AzNetworkWatcherFlowLogStatus</span><span class="sxs-lookup"><span data-stu-id="7b95f-196">Get-AzNetworkWatcherFlowLogStatus</span></span>](./Get-AzNetworkWatcherFlowLogStatus.md)
+[<span data-ttu-id="043fc-196">Get-AzNetworkWatcherFlowLogStatus</span><span class="sxs-lookup"><span data-stu-id="043fc-196">Get-AzNetworkWatcherFlowLogStatus</span></span>](./Get-AzNetworkWatcherFlowLogStatus.md)
 
-[<span data-ttu-id="7b95f-197">Get-AzNetworkWatcherConnectionMonitorReport</span><span class="sxs-lookup"><span data-stu-id="7b95f-197">Get-AzNetworkWatcherConnectionMonitorReport</span></span>](./Get-AzNetworkWatcherConnectionMonitorReport)
+[<span data-ttu-id="043fc-197">Get-AzNetworkWatcherConnectionMonitorReport</span><span class="sxs-lookup"><span data-stu-id="043fc-197">Get-AzNetworkWatcherConnectionMonitorReport</span></span>](./Get-AzNetworkWatcherConnectionMonitorReport.md)
 
-[<span data-ttu-id="7b95f-198">Get-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="7b95f-198">Get-AzNetworkWatcherConnectionMonitor</span></span>](./Get-AzNetworkWatcherConnectionMonitor)
+[<span data-ttu-id="043fc-198">Get-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="043fc-198">Get-AzNetworkWatcherConnectionMonitor</span></span>](./Get-AzNetworkWatcherConnectionMonitor.md)
 
-[<span data-ttu-id="7b95f-199">Get-AzNetworkWatcherFlowLog</span><span class="sxs-lookup"><span data-stu-id="7b95f-199">Get-AzNetworkWatcherFlowLog</span></span>](./Get-AzNetworkWatcherFlowLog)
+[<span data-ttu-id="043fc-199">Get-AzNetworkWatcherFlowLog</span><span class="sxs-lookup"><span data-stu-id="043fc-199">Get-AzNetworkWatcherFlowLog</span></span>](./Get-AzNetworkWatcherFlowLog.md)
 
-[<span data-ttu-id="7b95f-200">Set-AzNetworkWatcherFlowLog</span><span class="sxs-lookup"><span data-stu-id="7b95f-200">Set-AzNetworkWatcherFlowLog</span></span>](./Set-AzNetworkWatcherFlowLog)
+[<span data-ttu-id="043fc-200">Set-AzNetworkWatcherFlowLog</span><span class="sxs-lookup"><span data-stu-id="043fc-200">Set-AzNetworkWatcherFlowLog</span></span>](./Set-AzNetworkWatcherFlowLog.md)
 
-[<span data-ttu-id="7b95f-201">제거-AzNetworkWatcherFlowLog</span><span class="sxs-lookup"><span data-stu-id="7b95f-201">Remove-AzNetworkWatcherFlowLog</span></span>](./Remove-AzNetworkWatcherFlowLog)
+[<span data-ttu-id="043fc-201">Remove-AzNetworkWatcherFlowLog</span><span class="sxs-lookup"><span data-stu-id="043fc-201">Remove-AzNetworkWatcherFlowLog</span></span>](./Remove-AzNetworkWatcherFlowLog.md)
