@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/g
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificate.md
-ms.openlocfilehash: 002cfba4a5660fa8996c30ff83a1011da669539b
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: 92409b30e7a81f5d41a0af8ebb6466eb1e3053c9
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100192388"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100405162"
 ---
 # Get-AzKeyVaultCertificate
 
@@ -79,7 +79,7 @@ Get-AzKeyVaultCertificate [-ResourceId] <String> [-Name] <String> [-IncludeVersi
 
 ## 예제
 
-### 예제 1: 인증서 얻기
+### 예제 1: 인증서를 얻게 됩니다.
 ```powershell
 PS C:\> Get-AzKeyVaultCertificate -VaultName "ContosoKV01" -Name "TestCert01"
 Name        : testCert01
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeVersions
-이 작업에서 모든 버전의 인증서를 얻게 됐습니다.
+이 작업이 모든 버전의 인증서를 얻게 됐습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -407,4 +407,3 @@ Accept wildcard characters: False
 
 [Remove-AzKeyVaultCertificate](./Remove-AzKeyVaultCertificate.md)
 
-[Undo-AzKeyVaultSecretCertificate](./Undo-AzKeyVaultSecretCertificate.md)
