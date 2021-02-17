@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-az
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlServerAdvancedThreatProtectionSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlServerAdvancedThreatProtectionSetting.md
-ms.openlocfilehash: 94963c8c5d61c91e2d53cdf7b12cc333acc566a3
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: a9d2d82ae9b35b79701d071fa7598cf40b185cd5
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100183300"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100413203"
 ---
 # Get-AzSqlServerAdvancedThreatProtectionSetting
 
@@ -27,11 +27,11 @@ Get-AzSqlServerAdvancedThreatProtectionSetting -ServerName <String> [-ResourceGr
 
 ## 설명
 **Get-AzSqlServerAdvancedThreatProtectionSetting** cmdlet은 Azure SQL 서버의 고급 위협 보호 설정을 얻습니다.
-이 cmdlet을 사용하려면 *ResourceGroupName* 및 *ServerName* 매개 변수를 지정하여 이 cmdlet이 설정을 받을 서버를 식별합니다.
+이 cmdlet을 사용하려면 *ResourceGroupName* 및 *ServerName* 매개 변수를 지정하여 이 cmdlet에서 설정을 얻을 서버를 식별합니다.
 
 ## 예제
 
-### 예제 1: 서버에 대한 고급 위협 방지 설정 얻기
+### 예제 1: 서버에 대한 고급 위협 보호 설정 사용
 ```
 PS C:\>Get-AzSqlServerAdvancedThreatProtectionSetting -ResourceGroupName "ResourceGroup11" -ServerName "Server01"
 ResourceGroupName            : ResourceGroup11
@@ -140,7 +140,6 @@ Accept wildcard characters: False
 
 ## 관련 링크
 
-[Remove-AzSqlDatabaseAdvancedThreatProtectionSetting](./Remove-AzSqlDatabaseAdvancedThreatProtectionSetting.md)
 
 [SQL 데이터베이스 설명서](https://docs.microsoft.com/azure/sql-database/)
 
