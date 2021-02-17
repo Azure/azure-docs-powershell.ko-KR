@@ -5,21 +5,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.kusto/get-
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Kusto/Kusto/help/Get-AzKustoCluster.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Kusto/Kusto/help/Get-AzKustoCluster.md
-ms.openlocfilehash: a68604e9701a6ae2c251edf3f2a0935df5ffa94f
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: c5c7cdffc8b329fdff426f48f60869ca6821f32d
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93689572"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100401354"
 ---
 # Get-AzKustoCluster
 
 ## SYNOPSIS
-모든 Kusto 리소스 그룹의 클러스터를 나열 하거나 특정 kusto 클러스터를 가져옵니다.
+리소스 그룹의 모든 Kusto 클러스터를 나열하거나 특정 Kusto 클러스터를 얻습니다.
 
-## 구문과
+## 구문
 
-### Byclusterorresourcegrou구독 (기본값)
+### ByClusterOrResourceGroupOrSubscription(기본값)
 ```
 Get-AzKustoCluster -ResourceGroupName <String> [-Name <String>] [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
@@ -30,25 +30,25 @@ Get-AzKustoCluster -ResourceGroupName <String> [-Name <String>] [-DefaultProfile
 Get-AzKustoCluster -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## 설명은
-모든 Kusto 리소스 그룹의 클러스터를 나열 하거나 특정 kusto 클러스터를 가져옵니다.
+## 설명
+리소스 그룹의 모든 Kusto 클러스터를 나열하거나 특정 Kusto 클러스터를 얻습니다.
 
-## 예제의
+## 예제
 
-### 예제 1-리소스 그룹에 모든 Kusto 클러스터 나열
+### 예제 1 - 리소스 그룹의 모든 Kusto 클러스터 나열
 
-유형: Microsoft. Kusto/클러스터 Id:/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testrg/providers/Microsoft.Kusto/Clusters/mykustocluster1 ResourceGroup: testrg Name: mykustocluster1 Location: 중부 US 용량: 3 Sku: D13_v2 ProvisioningState: 성공 상태: 실행 태그: {} Uri: https://mykustocluster1.centralus.kusto.windows.net DataIngestionUri: https://ingest-mykustocluster1.centralus.kusto.windows.net
+형식 : Microsoft.Kusto/Clusters ID : /subscriptions/xxxxxxxxx-xxxx-xxxx-xxxx-xxx/resourceGroups/testrg/providers/Microsoft..Kusto/Clusters/mykustocluster1 ResourceGroup : testrg Name : mykustocluster1 Location : Central US Capacity : 3 Sku : D13_v2 ProvisioningState : Succeeded State : Running Tag : {} Uri : `https://mykustocluster1.centralus.kusto.windows.net` DataIngestionUri : `https://ingest-mykustocluster1.centralus.kusto.windows.net`
 
-유형: Microsoft. Kusto/클러스터 Id:/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testrg/providers/Microsoft.Kusto/Clusters/mykustocluster2 ResourceGroup: testrg Name: mykustocluster2 Location: 중부 US 용량: 5 Sku: D13_v2 ProvisioningState: 성공 상태: 실행 태그: {} Uri: https://mykustocluster2.centralus.kusto.windows.net DataIngestionUri: https://ingest-mykustocluster2.centralus.kusto.windows.net
+형식 : Microsoft.Kusto/Clusters ID : /subscriptions/xxxxxxxxx-xxxx-xxxx-xxxx-xxx/resourceGroups/testrg/providers/Microsoft..Kusto/Clusters/mykustocluster2 ResourceGroup : testrg Name : mykustocluster2 Location : Central US Capacity : 5 Sku : D13_v2 ProvisioningState : Succeeded State : Running Tag : {} Uri : `https://mykustocluster2.centralus.kusto.windows.net` DataIngestionUri : `https://ingest-mykustocluster2.centralus.kusto.windows.net`
 
 
 ```
 PS C:\> Get-AzKustoCluster -ResourceGroupName testrg
 ```
 
-위의 명령은 리소스 그룹 "testrg"에 모든 Kusto 클러스터를 나열 합니다.
+위의 명령은 리소스 그룹 "testrg"의 모든 Kusto 클러스터를 나열합니다.
 
-### 예제 2-이름으로 특정 Kusto 클러스터 가져오기
+### 예제 2 - 이름으로 특정 Kusto 클러스터를 얻습니다.
 
 ```
 PS C:\> Get-AzKustoCluster -ResourceGroupName testrg -Name mykustocluster
@@ -67,9 +67,9 @@ Uri               : https://mykustocluster.centralus.kusto.windows.net
 DataIngestionUri  : https://ingest-mykustocluster.centralus.kusto.windows.net
 ```
 
-위의 명령은 리소스 그룹 "testrg"에서 "mykustocluster" 이라는 Kusto 클러스터를 반환 합니다.
+위의 명령은 리소스 그룹 "testrg"에서 "mykustocluster"라는 Kusto 클러스터를 반환합니다.
 
-### 예제 3-리소스 id를 기준으로 특정 Kusto 클러스터 가져오기
+### 예제 3 - 리소스 ID로 특정 Kusto 클러스터를 얻습니다.
 
 ```
 PS C:\> Get-AzKustoCluster -ResourceId /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testrg/providers/Microsoft.Kusto/clusters/mykustocluster
@@ -87,12 +87,12 @@ Uri               : https://mykustocluster.centralus.kusto.windows.net
 DataIngestionUri  : https://ingest-mykustocluster.centralus.kusto.windows.net
 ```
 
-위의 명령은 리소스 그룹 "testrg"에서 "mykustocluster" 이라는 Kusto 클러스터를 반환 합니다.
+위의 명령은 리소스 그룹 "testrg"에서 "mykustocluster"라는 Kusto 클러스터를 반환합니다.
 
-## 변수
+## PARAMETERS
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -106,7 +106,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -이름
+### -Name
 특정 클러스터의 이름입니다.
 
 ```yaml
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-사용자가 클러스터를 검색 하려는 리소스 그룹의 이름입니다.
+사용자가 클러스터를 검색하려는 리소스 그룹의 이름입니다.
 
 ```yaml
 Type: System.String
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-클러스터 ResourceID에 대 한 kusto
+Kusto 클러스터 ResourceID.
 
 ```yaml
 Type: System.String
@@ -152,16 +152,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 다음 about_CommonParameters https://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.
 
 ## 입력
 
-### System. 문자열
+### System.String
 
 ## 출력
 
-### PSKustoCluster를 위한 명령입니다.
+### Microsoft.Azure.Commands.Kusto.Models.PSKustoCluster
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크

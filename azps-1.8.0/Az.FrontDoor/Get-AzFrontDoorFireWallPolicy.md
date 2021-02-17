@@ -5,29 +5,29 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/Get-AzFrontDoorFireWallPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/Get-AzFrontDoorFireWallPolicy.md
-ms.openlocfilehash: e8fe8fb59ee56e457c49d959c07db08cad62bb5a
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 5933d860ca2badce2d9576409dd1553153bb1e84
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93868421"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100401507"
 ---
 # Get-AzFrontDoorFireWallPolicy
 
 ## SYNOPSIS
-WAF 정책 가져오기
+WAF 정책 얻기
 
-## 구문과
+## 구문
 
 ```
 Get-AzFrontDoorFireWallPolicy -ResourceGroupName <String> [-Name <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## 설명은
-**AzFrontDoorFireWallPolicy** cmdletget은 현재 구독 아래의 리소스 그룹에서 waf 정책을 가져옵니다.
+## 설명
+**Get-AzFrontDoorFireWallPolicy** cmdletGet은 현재 구독의 리소스 그룹에서 WAF 정책을 얻습니다.
 
-## 예제의
+## 예제
 
 ### 예제 1
 ```powershell
@@ -38,7 +38,7 @@ Name         PolicyMode PolicyEnabledState CustomBlockResponseStatusCode Redirec
 {policyName} Prevention            Enabled                           403 https://www.bing.com/
 ```
 
-$resourceGroupName에 $policyName 이라는 WAF 정책을 가져옵니다.
+다음에서 $policyName WAF 정책을 $resourceGroupName
 
 ### 예제 2
 ```powershell
@@ -51,12 +51,12 @@ Name         PolicyMode PolicyEnabledState CustomBlockResponseStatusCode Redirec
 {policyName} Detection             Enabled                           404
 ```
 
-$resourceGroupName에서 모든 WAF 정책 가져오기
+다음의 모든 WAF 정책을 $resourceGroupName
 
-## 변수
+## PARAMETERS
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -70,7 +70,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -이름
+### -Name
 FireWallPolicy 이름입니다.
 
 ```yaml
@@ -101,20 +101,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](https://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
-### 않아야
+### 없음
 
 ## 출력
 
-### FrontDoor. PSPolicy.
+### Microsoft.Azure.Commands.FrontDoor.Models.PSPolicy
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
-[새로운 AzFrontDoorFireWallPolicy](./New-AzFrontDoorFireWallPolicy.md) 
- [Set-AzFrontDoorFireWallPolicy](./Set-AzFrontDoorFireWallPolicy.md) 
- [제거-AzFrontDoorFireWallPolicy](./Remove-AzFrontDoorFireWallPolicy.md)
+[New-AzFrontDoorFireWallPolicy](./New-AzFrontDoorFireWallPolicy.md) 
+ [Remove-AzFrontDoorFireWallPolicy](./Remove-AzFrontDoorFireWallPolicy.md) 
+ [Update-AzFrontDoorFireWallPolicy](./Update-AzFrontDoorFireWallPolicy.md)

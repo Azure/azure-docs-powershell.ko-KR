@@ -1,56 +1,72 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/remove-aznetworkwatcher
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznetworkwatcherpacketcapture
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzNetworkWatcher.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzNetworkWatcher.md
-ms.openlocfilehash: fb2dfd74e4807aab76fb48a4593a8a46c4fe6f3f
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNetworkWatcherPacketCapture.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNetworkWatcherPacketCapture.md
+ms.openlocfilehash: e836bb8738b594e09c65568cc0f454a476db9d34
 ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/14/2021
-ms.locfileid: "100412880"
+ms.locfileid: "100412829"
 ---
-# Remove-AzNetworkWatcher
+# Get-AzNetworkWatcherPacketCapture
 
 ## SYNOPSIS
-Network Watcher를 제거합니다.
+패킷 캡처 리소스의 정보 및 속성 및 상태를 얻습니다.
 
 ## 구문
 
-### SetByResource
+### SetByResource(기본값)
 ```
-Remove-AzNetworkWatcher -NetworkWatcher <PSNetworkWatcher> [-PassThru] [-AsJob]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Get-AzNetworkWatcherPacketCapture -NetworkWatcher <PSNetworkWatcher> [-PacketCaptureName <String>] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Remove-AzNetworkWatcher -Name <String> -ResourceGroupName <String> [-PassThru] [-AsJob]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Get-AzNetworkWatcherPacketCapture -NetworkWatcherName <String> -ResourceGroupName <String>
+ [-PacketCaptureName <String>] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### SetByLocation
 ```
-Remove-AzNetworkWatcher -Location <String> [-PassThru] [-AsJob] [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Get-AzNetworkWatcherPacketCapture -Location <String> [-PacketCaptureName <String>] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## 설명
-Remove-AzNetworkWatcher cmdlet은 Network Watcher 리소스를 제거합니다.
+이 Get-AzNetworkWatcherPacketCapture 패킷 캡처 리소스의 속성 및 상태를 얻습니다.
 
 ## 예제
 
-### 예제 1: Network Watcher 만들기 및 삭제
+### 예제 1: 여러 필터가 있는 패킷 캡처 만들기 및 해당 상태 검색
 ```
-New-AzResourceGroup -Name NetworkWatcherRG -Location westcentralus
-New-AzNetworkWatcher -Name NetworkWatcher_westcentralus -ResourceGroup NetworkWatcherRG -Location westcentralus
-Remove-AzNetworkWatcher -Name NetworkWatcher_westcentralus -ResourceGroup NetworkWatcherRG
+$nw = Get-AzResource | Where {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" } 
+$networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName 
+
+$storageAccount = Get-AzStorageAccount -ResourceGroupName contosoResourceGroup -Name contosostorage123
+
+$filter1 = New-AzPacketCaptureFilterConfig -Protocol TCP -RemoteIPAddress "1.1.1.1-255.255.255" -LocalIPAddress "10.0.0.3" -LocalPort "1-65535" -RemotePort "20;80;443"
+$filter2 = New-AzPacketCaptureFilterConfig -Protocol UDP 
+New-AzNetworkWatcherPacketCapture -NetworkWatcher $networkWatcher -TargetVirtualMachineId $vm.Id -PacketCaptureName "PacketCaptureTest" -StorageAccountId $storageAccount.id -TimeLimitInSeconds 60 -Filters $filter1, $filter2
+
+Get-AzNetworkWatcherPacketCapture -NetworkWatcher $networkWatcher -PacketCaptureName "PacketCaptureTest"
 ```
 
-이 예제에서는 리소스 그룹에 Network Watcher를 만든 다음 즉시 삭제합니다. 구독당 지역당 하나의 Network Watcher만 만들 수 있습니다.
-가상 네트워크를 삭제하는 경우 프롬프트를 표시하지 않습니다. -Force 플래그를 사용 합니다.
+이 예제에서는 여러 필터와 시간 제한이 있는 "PacketCaptureTest"라는 패킷 캡처를 만듭니다. 세션이 완료되면 지정된 저장소 계정에 저장됩니다. 그런 다음 Get-AzNetworkWatcherPacketCapture 세션의 상태를 검색합니다. 참고: 패킷 캡처를 만들 대상 가상 머신에 Azure Network Watcher 확장을 설치해야 합니다.
+
+>[!NOTE]
+>New-AzNetworkWatcherPacketCapture 명령에서 직접 패킷 캡처에 대한 참조를 만드는 경우 모든 속성이 없는 것입니다. Get-AzNetworkWatcherPacketCapture 명령을 호출하여 패킷 캡처의 모든 속성을 얻을 수 있습니다.
+
+### 예제 2: 여러 필터가 있는 패킷 캡처 만들기 및 해당 상태 검색
+```
+Get-AzNetworkWatcherPacketCapture -ResourceGroupName rg1 -NetworkWatcherName nw1 -PacketCaptureName PacketCapture*
+```
+
+이 cmdlet은 nw1 Network Watcher에서 "PacketCapture"로 시작하는 모든 PacketCaptures를 반환합니다.
 
 ## PARAMETERS
 
@@ -99,21 +115,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Name
-리소스 이름입니다.
-
-```yaml
-Type: System.String
-Parameter Sets: SetByName
-Aliases: ResourceName
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -NetworkWatcher
 네트워크 감시자 리소스입니다.
 
@@ -129,23 +130,38 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -PassThru
-작업하는 항목을 나타내는 개체를 반환합니다.
+### -NetworkWatcherName
+Network Watcher의 이름입니다.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: System.String
+Parameter Sets: SetByName
+Aliases: Name
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -PacketCaptureName
+패킷 캡처 이름입니다.
+
+```yaml
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ResourceGroupName
-리소스 그룹 이름입니다.
+Network Watcher 리소스 그룹의 이름입니다.
 
 ```yaml
 Type: System.String
@@ -159,39 +175,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Confirm
-cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-cmdlet이 실행되는 경우의 결과 표시
-cmdlet이 실행되지 않습니다.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 다음 about_CommonParameters http://go.microsoft.com/fwlink/?LinkID=113216) 참조하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
@@ -201,10 +186,10 @@ Accept wildcard characters: False
 
 ## 출력
 
-### System.Boolean
+### Microsoft.Azure.Commands.Network.Models.PSGetPacketCaptureResult
 
 ## 참고 사항
-키워드: azure, azurerm, arm, 리소스, 관리, 관리자, 네트워크, 네트워킹, 네트워크 감시자
+키워드: azure, azurerm, arm, 리소스, 관리, 관리자, 네트워크, 네트워킹, 네트워크 감시자, 패킷, 캡처, 트래픽
 
 ## 관련 링크
 
@@ -261,3 +246,4 @@ Accept wildcard characters: False
 [Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport.md)
 
 [Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor.md)
+
