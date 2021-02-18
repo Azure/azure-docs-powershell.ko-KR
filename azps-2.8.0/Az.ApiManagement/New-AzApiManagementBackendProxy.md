@@ -5,31 +5,31 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementBackendProxy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementBackendProxy.md
-ms.openlocfilehash: 2ce3863a546af0f8c9da3c37a75b540d2a859da1
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 2230785968fd0e2d84587914641390306948bef4
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93698060"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100410653"
 ---
-# <span data-ttu-id="bf9bf-101">New-AzApiManagementBackendProxy</span><span class="sxs-lookup"><span data-stu-id="bf9bf-101">New-AzApiManagementBackendProxy</span></span>
+# <span data-ttu-id="5565a-101">New-AzApiManagementBackendProxy</span><span class="sxs-lookup"><span data-stu-id="5565a-101">New-AzApiManagementBackendProxy</span></span>
 
-## <span data-ttu-id="bf9bf-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="bf9bf-102">SYNOPSIS</span></span>
-<span data-ttu-id="bf9bf-103">새 백 엔드 프록시 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="bf9bf-103">Creates a new Backend Proxy Object.</span></span>
+## <span data-ttu-id="5565a-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="5565a-102">SYNOPSIS</span></span>
+<span data-ttu-id="5565a-103">새 백end 프록시 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="5565a-103">Creates a new Backend Proxy Object.</span></span>
 
-## <span data-ttu-id="bf9bf-104">구문과</span><span class="sxs-lookup"><span data-stu-id="bf9bf-104">SYNTAX</span></span>
+## <span data-ttu-id="5565a-104">구문</span><span class="sxs-lookup"><span data-stu-id="5565a-104">SYNTAX</span></span>
 
 ```
 New-AzApiManagementBackendProxy -Url <String> [-ProxyCredential <PSCredential>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="bf9bf-105">설명은</span><span class="sxs-lookup"><span data-stu-id="bf9bf-105">DESCRIPTION</span></span>
-<span data-ttu-id="bf9bf-106">새 백엔드 엔터티를 만들 때 파이프 될 수 있는 새 백 엔드 프록시 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="bf9bf-106">Creates a new Backend Proxy Object which can be piped when creating a new Backend entity.</span></span>
+## <span data-ttu-id="5565a-105">설명</span><span class="sxs-lookup"><span data-stu-id="5565a-105">DESCRIPTION</span></span>
+<span data-ttu-id="5565a-106">새 백end 엔터티를 만들 때 파이프할 수 있는 새 백 엔드 프록시 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="5565a-106">Creates a new Backend Proxy Object which can be piped when creating a new Backend entity.</span></span>
 
-## <span data-ttu-id="bf9bf-107">예제의</span><span class="sxs-lookup"><span data-stu-id="bf9bf-107">EXAMPLES</span></span>
+## <span data-ttu-id="5565a-107">예제</span><span class="sxs-lookup"><span data-stu-id="5565a-107">EXAMPLES</span></span>
 
-### <span data-ttu-id="bf9bf-108">백 엔드 프록시 In-Memory 개체 만들기</span><span class="sxs-lookup"><span data-stu-id="bf9bf-108">Create a Backend Proxy In-Memory Object</span></span>
+### <span data-ttu-id="5565a-108">백end 프록시 In-Memory 개체 만들기</span><span class="sxs-lookup"><span data-stu-id="5565a-108">Create a Backend Proxy In-Memory Object</span></span>
 ```powershell
 PS C:\>$secpassword = ConvertTo-SecureString "PlainTextPassword" -AsPlainText -Force
 PS C:\>$proxyCreds = New-Object System.Management.Automation.PSCredential ("foo", $secpassword)
@@ -40,12 +40,12 @@ PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default
 PS C:\>$backend = New-AzApiManagementBackend -Context  $apimContext -BackendId 123 -Url 'https://contoso.com/awesomeapi' -Protocol http -Title "first backend" -SkipCertificateChainValidation $true -Proxy $credential -Description "backend with proxy server"
 ```
 
-<span data-ttu-id="bf9bf-109">백 엔드 프록시 개체를 만들고 백 엔드를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="bf9bf-109">Creates a Backend Proxy Object and sets up Backend</span></span>
+<span data-ttu-id="5565a-109">백end 프록시 개체를 만들고 백end를 설정</span><span class="sxs-lookup"><span data-stu-id="5565a-109">Creates a Backend Proxy Object and sets up Backend</span></span>
 
-## <span data-ttu-id="bf9bf-110">변수</span><span class="sxs-lookup"><span data-stu-id="bf9bf-110">PARAMETERS</span></span>
+## <span data-ttu-id="5565a-110">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="5565a-110">PARAMETERS</span></span>
 
-### <span data-ttu-id="bf9bf-111">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="bf9bf-111">-DefaultProfile</span></span>
-<span data-ttu-id="bf9bf-112">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="bf9bf-112">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+### <span data-ttu-id="5565a-111">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="5565a-111">-DefaultProfile</span></span>
+<span data-ttu-id="5565a-112">Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="5565a-112">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -59,8 +59,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="bf9bf-113">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="bf9bf-113">-ProxyCredential</span></span>
-<span data-ttu-id="bf9bf-114">백엔드 프록시에 연결 하는 데 사용 되는 자격 증명</span><span class="sxs-lookup"><span data-stu-id="bf9bf-114">Credentials used to connect to Backend Proxy.</span></span> <span data-ttu-id="bf9bf-115">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="bf9bf-115">This parameter is optional.</span></span>
+### <span data-ttu-id="5565a-113">-ProxyCredential</span><span class="sxs-lookup"><span data-stu-id="5565a-113">-ProxyCredential</span></span>
+<span data-ttu-id="5565a-114">백end 프록시에 연결하는 데 사용되는 자격 증명입니다.</span><span class="sxs-lookup"><span data-stu-id="5565a-114">Credentials used to connect to Backend Proxy.</span></span> <span data-ttu-id="5565a-115">이 매개 변수는 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="5565a-115">This parameter is optional.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -74,9 +74,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="bf9bf-116">-Url</span><span class="sxs-lookup"><span data-stu-id="bf9bf-116">-Url</span></span>
-<span data-ttu-id="bf9bf-117">전화를 백 엔드로 착신 이동할 때 사용할 프록시 서버의 Url입니다.</span><span class="sxs-lookup"><span data-stu-id="bf9bf-117">Url of the Proxy server to be used when forwarding calls to Backend.</span></span>
-<span data-ttu-id="bf9bf-118">이 매개 변수는 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="bf9bf-118">This parameter is required.</span></span>
+### <span data-ttu-id="5565a-116">-Url</span><span class="sxs-lookup"><span data-stu-id="5565a-116">-Url</span></span>
+<span data-ttu-id="5565a-117">백end에 호출을 전달할 때 사용할 프록시 서버의 URL입니다.</span><span class="sxs-lookup"><span data-stu-id="5565a-117">Url of the Proxy server to be used when forwarding calls to Backend.</span></span>
+<span data-ttu-id="5565a-118">이 매개 변수는 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="5565a-118">This parameter is required.</span></span>
 
 ```yaml
 Type: System.String
@@ -90,27 +90,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="bf9bf-119">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="bf9bf-119">CommonParameters</span></span>
-<span data-ttu-id="bf9bf-120">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="bf9bf-120">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="bf9bf-121">자세한 내용은 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="bf9bf-121">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="5565a-119">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="5565a-119">CommonParameters</span></span>
+<span data-ttu-id="5565a-120">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="5565a-120">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="5565a-121">자세한 내용은 [다음](https://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.</span><span class="sxs-lookup"><span data-stu-id="5565a-121">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="bf9bf-122">입력</span><span class="sxs-lookup"><span data-stu-id="bf9bf-122">INPUTS</span></span>
+## <span data-ttu-id="5565a-122">입력</span><span class="sxs-lookup"><span data-stu-id="5565a-122">INPUTS</span></span>
 
-### <span data-ttu-id="bf9bf-123">않아야</span><span class="sxs-lookup"><span data-stu-id="bf9bf-123">None</span></span>
+### <span data-ttu-id="5565a-123">없음</span><span class="sxs-lookup"><span data-stu-id="5565a-123">None</span></span>
 
-## <span data-ttu-id="bf9bf-124">출력</span><span class="sxs-lookup"><span data-stu-id="bf9bf-124">OUTPUTS</span></span>
+## <span data-ttu-id="5565a-124">출력</span><span class="sxs-lookup"><span data-stu-id="5565a-124">OUTPUTS</span></span>
 
-### <span data-ttu-id="bf9bf-125">ApiManagement. ServiceManagement. \ PsApiManagementBackendProxy</span><span class="sxs-lookup"><span data-stu-id="bf9bf-125">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackendProxy</span></span>
+### <span data-ttu-id="5565a-125">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackendProxy</span><span class="sxs-lookup"><span data-stu-id="5565a-125">Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackendProxy</span></span>
 
-## <span data-ttu-id="bf9bf-126">상속자</span><span class="sxs-lookup"><span data-stu-id="bf9bf-126">NOTES</span></span>
+## <span data-ttu-id="5565a-126">참고 사항</span><span class="sxs-lookup"><span data-stu-id="5565a-126">NOTES</span></span>
 
-## <span data-ttu-id="bf9bf-127">관련 링크</span><span class="sxs-lookup"><span data-stu-id="bf9bf-127">RELATED LINKS</span></span>
+## <span data-ttu-id="5565a-127">관련 링크</span><span class="sxs-lookup"><span data-stu-id="5565a-127">RELATED LINKS</span></span>
 
-[<span data-ttu-id="bf9bf-128">Get-AzApiManagementBackend</span><span class="sxs-lookup"><span data-stu-id="bf9bf-128">Get-AzApiManagementBackend</span></span>](./Get-AzApiManagementBackend)
+[<span data-ttu-id="5565a-128">Get-AzApiManagementBackend</span><span class="sxs-lookup"><span data-stu-id="5565a-128">Get-AzApiManagementBackend</span></span>](./Get-AzApiManagementBackend.md)
 
-[<span data-ttu-id="bf9bf-129">새로운 AzApiManagementBackend</span><span class="sxs-lookup"><span data-stu-id="bf9bf-129">New-AzApiManagementBackend</span></span>](./New-AzApiManagementBackend.md)
+[<span data-ttu-id="5565a-129">New-AzApiManagementBackend</span><span class="sxs-lookup"><span data-stu-id="5565a-129">New-AzApiManagementBackend</span></span>](./New-AzApiManagementBackend.md)
 
-[<span data-ttu-id="bf9bf-130">새로운 AzApiManagementBackendCredential</span><span class="sxs-lookup"><span data-stu-id="bf9bf-130">New-AzApiManagementBackendCredential</span></span>](./New-AzApiManagementBackendCredential.md)
+[<span data-ttu-id="5565a-130">New-AzApiManagementBackendCredential</span><span class="sxs-lookup"><span data-stu-id="5565a-130">New-AzApiManagementBackendCredential</span></span>](./New-AzApiManagementBackendCredential.md)
 
-[<span data-ttu-id="bf9bf-131">Set-AzApiManagementBackend</span><span class="sxs-lookup"><span data-stu-id="bf9bf-131">Set-AzApiManagementBackend</span></span>](./Set-AzApiManagementBackend.md)
+[<span data-ttu-id="5565a-131">Set-AzApiManagementBackend</span><span class="sxs-lookup"><span data-stu-id="5565a-131">Set-AzApiManagementBackend</span></span>](./Set-AzApiManagementBackend.md)
 
-[<span data-ttu-id="bf9bf-132">제거-AzApiManagementBackend</span><span class="sxs-lookup"><span data-stu-id="bf9bf-132">Remove-AzApiManagementBackend</span></span>](./Remove-AzApiManagementBackend.md)
+[<span data-ttu-id="5565a-132">Remove-AzApiManagementBackend</span><span class="sxs-lookup"><span data-stu-id="5565a-132">Remove-AzApiManagementBackend</span></span>](./Remove-AzApiManagementBackend.md)
