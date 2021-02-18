@@ -6,21 +6,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/r
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Remove-AzKeyVaultAccessPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Remove-AzKeyVaultAccessPolicy.md
-ms.openlocfilehash: e084894c26cee1a619f418437986593fe86876bb
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: e19565aa8ae249acf61fce67f0a2b54e20143758
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94056311"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100410160"
 ---
 # Remove-AzKeyVaultAccessPolicy
 
 ## SYNOPSIS
-키 자격 증명 모음에서 사용자 또는 응용 프로그램에 대 한 모든 사용 권한을 제거 합니다.
+키 자격 증명 모음에서 사용자 또는 애플리케이션에 대한 모든 권한을 제거합니다.
 
-## 구문과
+## 구문
 
-### ByUserPrincipalName (기본값)
+### ByUserPrincipalName(기본값)
 ```
 Remove-AzKeyVaultAccessPolicy [-VaultName] <String> [[-ResourceGroupName] <String>] -UserPrincipalName <String>
  [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -115,14 +115,14 @@ Remove-AzKeyVaultAccessPolicy [-ResourceId] <String> [-EnabledForDeployment] [-E
  [<CommonParameters>]
 ```
 
-## 설명은
-**AzKeyVaultAccessPolicy** cmdlet은 사용자 또는 응용 프로그램 또는 모든 사용자 및 응용 프로그램에 대 한 모든 권한을 키 자격 증명 모음에서 제거 합니다.
-모든 권한을 제거 해도 키 자격 증명 모음이 포함 된 Azure 구독 소유자는 해당 키 자격 증명 모음에 대 한 사용 권한을 추가할 수 있습니다.
-이 cmdlet에 대해 리소스 그룹을 지정 하는 것은 선택 사항 이지만 성능 향상을 위해 이러한 작업을 수행 해야 한다는 점에 유의 하세요.
+## 설명
+**Remove-AzKeyVaultAccessPolicy** cmdlet은 사용자 또는 애플리케이션 또는 키 자격 증명 모음의 모든 사용자 및 애플리케이션에 대한 모든 권한을 제거합니다.
+모든 권한을 제거한 경우에도 키 자격 증명 모음이 포함된 Azure 구독의 소유자는 키 자격 증명 모음에 권한을 추가할 수 있습니다.
+이 cmdlet에 대해 리소스 그룹을 지정하는 것은 선택 사항이지만 성능을 향상하기 위해 이 작업을 해야 합니다.
 
-## 예제의
+## 예제
 
-### 예제 1: 사용자에 대 한 사용 권한 제거
+### 예제 1: 사용자에 대한 권한 제거
 ```powershell
 PS C:\> Remove-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalName 'PattiFuller@contoso.com' -PassThru
 
@@ -158,35 +158,35 @@ Network Rule Set                 :
 Tags                             :
 ```
 
-이 명령은 사용자가 PattiFuller@contoso.com Contoso03Vault 이라는 키 보관소에 대 한 모든 사용 권한을 제거 합니다.  -PassThru를 지정 하면 KeyVault 개체가 반환 됩니다.
+이 명령은 Contoso03Vault라는 키 자격 증명 모음에 대해 사용자가 가지는 모든 권한을 PattiFuller@contoso.com 제거합니다.  -PassThru를 지정하면 KeyVault 개체가 반환됩니다.
 
-### 예제 2: 응용 프로그램에 대 한 사용 권한 제거
+### 예제 2: 애플리케이션에 대한 권한 제거
 ```powershell
 PS C:\> Remove-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ServicePrincipalName 'http://payroll.contoso.com'
 ```
 
-이 명령은 Contoso03Vault 이라는 키 보관소에 대 한 응용 프로그램의 모든 사용 권한을 제거 합니다.
-이 예제에서는 Azure Active Directory에 등록 된 서비스 사용자 이름을 사용 하 여 응용 프로그램을 식별 http://payroll.contoso.com 합니다.
+이 명령은 Contoso03Vault라는 키 자격 증명 모음에 애플리케이션이 가지는 모든 권한을 제거합니다.
+이 예제에서는 Azure Active Directory에 등록된 서비스 주체 이름을 사용하여 애플리케이션을 `http://payroll.contoso.com` 식별합니다.
 
-### 예제 3: 해당 개체 ID를 사용 하 여 응용 프로그램에 대 한 사용 권한 제거
+### 예제 3: 개체 ID를 사용하여 애플리케이션에 대한 사용 권한 제거
 ```powershell
 PS C:\> Remove-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ObjectID 34595082-9346-41b6-8d6b-295a2808b8db
 ```
 
-이 명령은 Contoso03Vault 이라는 키 보관소에 대 한 응용 프로그램의 모든 사용 권한을 제거 합니다.
-이 예제에서는 서비스 주체의 개체 ID를 기준으로 응용 프로그램을 식별 합니다.
+이 명령은 Contoso03Vault라는 키 자격 증명 모음에 애플리케이션이 가지는 모든 권한을 제거합니다.
+이 예제에서는 서비스 주체의 개체 ID로 애플리케이션을 식별합니다.
 
-### 예제 4: Microsoft. Compute resource provider에 대 한 사용 권한을 제거 합니다.
+### 예제 4: Microsoft.Compute 리소스 공급자에 대한 권한 제거
 ```powershell
 PS C:\> Remove-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ResourceGroupName 'Group14' -EnabledForDeployment
 ```
 
-이 명령은 Contoso03Vault에서 비밀을 가져올 수 있도록 Microsoft. 리소스 공급자에 대 한 사용 권한을 제거 합니다.
+이 명령은 Contoso03Vault에서 비밀을 얻을 수 있는 Microsoft.Compute 리소스 공급자에 대한 권한을 제거합니다.
 
-## 변수
+## PARAMETERS
 
 ### -ApplicationId
-사용 권한을 제거할 응용 프로그램의 ID를 지정 합니다.
+사용 권한을 제거해야 하는 애플리케이션의 ID를 지정합니다.
 
 ```yaml
 Type: System.Nullable`1[System.Guid]
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddress
-액세스 권한을 제거 하려는 사용자의 사용자 전자 메일 주소를 지정 합니다.
+액세스 권한을 제거하려는 사용자의 사용자 전자 메일 주소를 지정합니다.
 
 ```yaml
 Type: System.String
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForDeployment
-지정 된 경우 리소스 생성 시 참조 되는 리소스 공급자에서이 키 보관소의 비밀을 검색 하지 않도록 설정 합니다.
+지정된 경우 리소스 생성 시 참조될 때 Microsoft.Compute 리소스 공급자가 이 키 자격 증명 모음에서 비밀 검색을 사용하지 않도록 설정합니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForDiskEncryption
-지정 된 경우 Azure 디스크 암호화를 통해이 키 보관소의 비밀 검색을 사용 하지 않도록 설정 합니다.
+지정된 경우 Azure Disk Encryption을 통해 이 키 자격 증명 모음에서 비밀 검색을 사용하지 않도록 설정합니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForTemplateDeployment
-지정 하면 템플릿에서 참조 되는 경우 Azure 리소스 관리자가이 키 보관소의 비밀을 검색할 수 없습니다.
+지정한 경우 템플릿에서 참조할 때 Azure Resource Manager가 이 키 자격 증명 모음에서 비밀 검색을 사용하지 않도록 설정합니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-키 자격 증명 모음 개체
+Key Vault 개체입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
@@ -291,7 +291,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-권한을 제거할 Azure Active Directory에서 사용자 또는 서비스 주체의 개체 ID를 지정 합니다.
+권한을 제거할 Azure Active Directory에서 사용자 또는 서비스 주체의 개체 ID를 지정합니다.
 
 ```yaml
 Type: System.String
@@ -306,8 +306,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-작업 중인 항목을 나타내는 개체를 반환 합니다.
-기본적으로이 cmdlet은 출력을 생성 하지 않습니다.
+작업하는 항목을 나타내는 개체를 반환합니다.
+기본적으로 이 cmdlet은 출력을 생성하지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -322,8 +322,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-액세스 정책이 수정 되 고 있는 키 자격 증명 모음과 연결 된 리소스 그룹의 이름을 지정 합니다.
-지정 하지 않으면이 cmdlet은 현재 구독의 키 자격 증명 모음을 검색 합니다.
+액세스 정책을 수정하는 키 자격 증명 모음과 연결된 리소스 그룹의 이름을 지정합니다.
+지정하지 않으면 이 cmdlet은 현재 구독에서 키 자격 증명 모음을 검색합니다.
 
 ```yaml
 Type: System.String
@@ -338,7 +338,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-KeyVault 리소스 Id입니다.
+KeyVault 리소스 ID입니다.
 
 ```yaml
 Type: System.String
@@ -353,8 +353,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalName
-해당 사용 권한을 제거 하려는 응용 프로그램의 서비스 사용자 이름을 지정 합니다.
-Azure Active Directory의 응용 프로그램에 대해 등록 된 응용 프로그램 ID (클라이언트 ID 라고도 함)를 지정 합니다.
+사용 권한을 제거하려는 애플리케이션의 서비스 주체 이름을 지정합니다.
+Azure Active Directory에서 애플리케이션에 등록된 클라이언트 ID라고도 하는 애플리케이션 ID를 지정합니다.
 
 ```yaml
 Type: System.String
@@ -369,7 +369,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-액세스 권한을 제거 하려는 사용자의 upn (사용자 이름)을 지정 합니다.
+액세스 권한을 제거하려는 사용자의 사용자 계정 이름을 지정합니다.
 
 ```yaml
 Type: System.String
@@ -384,8 +384,8 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-키 보관소의 이름을 지정 합니다.
-이 cmdlet은이 매개 변수에서 지정 하는 키 자격 증명에 대 한 사용 권한을 제거 합니다.
+키 자격 증명 모음의 이름을 지정합니다.
+이 cmdlet은 이 매개 변수가 지정하는 키 자격 증명 모음에 대한 권한을 제거합니다.
 
 ```yaml
 Type: System.String
@@ -399,8 +399,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -확인
-Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.
+### -Confirm
+cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -415,8 +415,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Cmdlet이 실행 되는 경우의 동작을 보여 줍니다.
-Cmdlet이 실행 되지 않습니다.
+cmdlet이 실행되는 경우의 결과 표시
+cmdlet이 실행되지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -431,19 +431,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
-### Microsoft. KeyVault. 모델. PSKeyVault
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
 
-### System. 문자열
+### System.String
 
 ## 출력
 
-### Microsoft. KeyVault. 모델. PSKeyVault
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 

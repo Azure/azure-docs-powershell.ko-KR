@@ -6,32 +6,32 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-az
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlServerAdvancedThreatProtectionSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlServerAdvancedThreatProtectionSetting.md
-ms.openlocfilehash: 94963c8c5d61c91e2d53cdf7b12cc333acc566a3
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: a9d2d82ae9b35b79701d071fa7598cf40b185cd5
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94204818"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100409820"
 ---
 # Get-AzSqlServerAdvancedThreatProtectionSetting
 
 ## SYNOPSIS
-서버에 대 한 고급 위협 방지 설정을 가져옵니다.
+서버에 대한 고급 위협 보호 설정을 얻습니다.
 
-## 구문과
+## 구문
 
 ```
 Get-AzSqlServerAdvancedThreatProtectionSetting -ServerName <String> [-ResourceGroupName] <String>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## 설명은
-**AzSqlServerAdvancedThreatProtectionSetting** Cmdlet은 Azure SQL server의 고급 위협 방지 설정을 가져옵니다.
-이 cmdlet을 사용 하려면 *ResourceGroupName* 및 *ServerName* 매개 변수를 지정 하 여이 cmdlet에 설정 된 설정을 가져오는 서버를 식별 합니다.
+## 설명
+**Get-AzSqlServerAdvancedThreatProtectionSetting** cmdlet은 Azure SQL 서버의 고급 위협 보호 설정을 얻습니다.
+이 cmdlet을 사용하려면 *ResourceGroupName* 및 *ServerName* 매개 변수를 지정하여 이 cmdlet에서 설정을 얻을 서버를 식별합니다.
 
-## 예제의
+## 예제
 
-### 예제 1: 서버에 대 한 고급 위협 방지 설정 가져오기
+### 예제 1: 서버에 대한 고급 위협 보호 설정 사용
 ```
 PS C:\>Get-AzSqlServerAdvancedThreatProtectionSetting -ResourceGroupName "ResourceGroup11" -ServerName "Server01"
 ResourceGroupName            : ResourceGroup11
@@ -44,13 +44,13 @@ ExcludedDetectionTypes       : {}
 RetentionInDays              : 0
 ```
 
-이 명령은 Server01 이라는 서버에 대 한 고급 위협 보호 설정을 가져옵니다.
-서버가 리소스 그룹 ResourceGroup11에 할당 됩니다.
+이 명령은 Server01이라는 서버에 대한 고급 위협 보호 설정을 얻습니다.
+서버가 리소스 그룹 ResourceGroup11에 할당됩니다.
 
-## 변수
+## PARAMETERS
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-서버가 속한 리소스 그룹의 이름을 지정 합니다.
+서버가 속한 리소스 그룹의 이름을 지정합니다.
 
 ```yaml
 Type: System.String
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-서버의 이름을 지정 합니다.
+서버의 이름을 지정합니다.
 
 ```yaml
 Type: System.String
@@ -94,8 +94,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -확인
-Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.
+### -Confirm
+cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -110,8 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Cmdlet이 실행 되는 경우의 동작을 보여 줍니다.
-Cmdlet이 실행 되지 않습니다.
+cmdlet이 실행되는 경우의 결과 표시
+cmdlet이 실행되지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -126,21 +126,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
-### System. 문자열
+### System.String
 
 ## 출력
 
-### ThreatDetection. ServerAdvancedThreatProtectionSettingsModel에 대 한
+### Microsoft.Azure.Commands.Sql.ThreatDetection.Model.ServerAdvancedThreatProtectionSettingsModel
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
-[제거-AzSqlDatabaseAdvancedThreatProtectionSetting](./Remove-AzSqlDatabaseAdvancedThreatProtectionSetting.md)
 
 [SQL 데이터베이스 설명서](https://docs.microsoft.com/azure/sql-database/)
 
