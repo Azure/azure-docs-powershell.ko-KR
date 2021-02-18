@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/a
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Add-AzKeyVaultKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Add-AzKeyVaultKey.md
-ms.openlocfilehash: da6460bf0a1126a11345336e4d55c300728bbd66
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: 61125ae7d9fa78ec9f121cc9b60610258ad2c67c
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100203841"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100405400"
 ---
 # Add-AzKeyVaultKey
 
@@ -257,7 +257,7 @@ Tags           : Name        Value
 ```
 
 첫 번째 명령은 **ConvertTo-SecureString** cmdlet을 사용하여 문자열을 보안 문자열로 변환한 다음 해당 문자열을 $Password 변수에 저장합니다.
-두 번째 명령은 **Get-Date** cmdlet을 사용하여 **DateTime** 개체를 만든 다음, 해당 개체를 $Expires 변수에 저장합니다.
+두 번째 명령은 **Get-Date** cmdlet을 사용하여 **DateTime** 개체를 만든 다음 해당 개체를 $Expires 변수에 저장합니다.
 세 번째 명령은 심각도 $tags 및 IT에 대한 태그를 설정하는 $tags 변수를 만듭니다.
 마지막 명령은 지정된 위치에서 키를 HSM 키로 가져오습니다. 이 명령은 $Expires 저장된 만료 시간 및 $Password 저장한 태그를 $tags.
 
@@ -307,7 +307,7 @@ Key Vault 서비스에서 소프트웨어 보호 키 또는 HSM 보호 키로 �
 유효한 값은 HSM 및 Software입니다.
 참고: HSM을 대상으로 사용하려면 HSM을 지원하는 키 자격 증명 모음이 있어야 합니다. Azure Key Vault의 서비스 계층 및 기능에 대한 자세한 내용은 Azure Key Vault 가격 책정 웹 사이트를 [참조하세요.](http://go.microsoft.com/fwlink/?linkid=512521)
 이 매개 변수는 새 키를 만들 때 필요합니다. *KeyFilePath* 매개 변수를 사용하여 키를 가져오는 경우 이 매개 변수는 선택 사항입니다.
-- 이 매개 변수를 지정하지 않으면 이 cmdlet에서 .byok 파일 이름 확장명을 사용하는 키를 가져오면 해당 키를 HSM 보호 키로 가져오게 됩니다. cmdlet은 소프트웨어 보호 키로 이 키를 가져올 수 없습니다.
+- 이 매개 변수를 지정하지 않으면 이 cmdlet은 .byok 파일 이름 확장명을 사용하는 키를 가져오면 해당 키를 HSM 보호 키로 가져오게 됩니다. cmdlet은 소프트웨어 보호 키로 이 키를 가져올 수 없습니다.
 - 이 매개 변수를 지정하지 않으면 이 cmdlet은 .pfx 파일 이름 확장명을 사용하는 키를 가져오면 소프트웨어 보호 키로 키를 가져오게 됩니다.
 
 ```yaml
@@ -337,7 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### -Disable
-추가하는 키가 초기 비활성화 상태로 설정되어 있습니다. 키를 사용하려고 하면 실패합니다. 나중에 사용하도록 설정하려는 키를 미리 로드하는 경우 이 매개 변수를 사용합니다.
+추가하는 키가 초기 비활성화 상태로 설정되어 있습니다. 키를 사용하려는 시도는 실패합니다. 나중에 사용하도록 설정하려는 키를 미리 로드하는 경우 이 매개 변수를 사용합니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -352,7 +352,7 @@ Accept wildcard characters: False
 ```
 
 ### -Expires
-이 cmdlet이 추가하는 키에 대한 만료 시간을 **DateTime** 개체로 지정합니다. 이 매개 변수는 협정 세계시(UTC)를 사용합니다. **DateTime 개체를** 얻습니다. **Get-Date** cmdlet을 사용합니다. 자세한 내용은 `Get-Help Get-Date` .를 입력합니다. 이 매개 변수를 지정하지 않으면 키가 만료되지 않습니다.
+이 cmdlet에서 추가하는 키에 대한 만료 시간을 **DateTime** 개체로 지정합니다. 이 매개 변수는 UTC(협정 세계시)를 사용합니다. **DateTime 개체를** 얻습니다. **Get-Date** cmdlet을 사용합니다. 자세한 내용은 `Get-Help Get-Date` .를 입력합니다. 이 매개 변수를 지정하지 않으면 키가 만료되지 않습니다.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -655,4 +655,3 @@ Accept wildcard characters: False
 
 [Remove-AzKeyVaultKey](./Remove-AzKeyVaultKey.md)
 
-[Set-AzKeyVaultKeyAttribute](./Set-AzKeyVaultKeyAttribute.md)
