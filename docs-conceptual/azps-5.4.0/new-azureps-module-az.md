@@ -1,17 +1,17 @@
 ---
 title: Azure Az PowerShell 모듈 소개
 description: Azure와 상호 작용하는 데 권장되는 모듈이자 AzureRM PowerShell 모듈을 대체하는 Az PowerShell 모듈을 소개합니다.
-ms.date: 12/1/2020
+ms.date: 02/12/2021
 ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: 9021a1d8fdc73aedb87b17631f8e67cb8ef79166
-ms.sourcegitcommit: 12bb1a6d1f89789bf2a78992f9b8ca848691a4d7
+ms.openlocfilehash: b52b6995fb50a6ce502d42e7df588ca72340a1e7
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98573662"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100411265"
 ---
 # <a name="introducing-the-azure-az-powershell-module"></a>Azure Az PowerShell 모듈 소개
 
@@ -78,7 +78,9 @@ PowerShell의 최신 Azure 기능을 계속 유지하려면 Az 모듈로 마이�
 
 Az는 가장 최신 버전의 Azure용 PowerShell 모듈입니다. 문제 또는 기능 요청은 [GitHub 리포지토리](https://github.com/Azure/azure-powershell)에서 직접 기록할 수 있습니다. 또는 지원 계약을 맺은 경우에는 Microsoft 지원을 통해 기록할 수 있습니다. 기능 요청은 최신 버전의 Az에서 구현됩니다. 중요한 문제는 Az의 마지막 두 개 버전에서 구현됩니다.
 
-AzureRM은 더 이상 새 cmdlet 또는 기능을 받지 않습니다. 그러나 AzureRM 모듈은 여전히 공식적으로 유지 관리되며 2021년 2월까지 중요한 수정이 이루어집니다.
+이제 Az PowerShell 모듈에는 AzureRM PowerShell 모듈 등의 모든 기능이 포함되어 있으므로 2024년 2월 29일에 AzureRM PowerShell 모듈은 사용 중지됩니다.
+
+서비스 중단을 방지하려면 2024년 2월 29일까지 Az PowerShell 모듈을 사용하기 위해 AzureRM PowerShell 모듈을 사용하는 [스크립트를 업데이트하세요](https://aka.ms/azpsmigrate). 스크립트를 자동으로 업데이트하려면 [빠른 시작 가이드](/powershell/azure/quickstart-migrate-azurerm-to-az-automatically)를 따르세요.
 
 ## <a name="data-collection"></a>데이터 수집
 
