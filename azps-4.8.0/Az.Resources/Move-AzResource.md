@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Move-AzResource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Move-AzResource.md
-ms.openlocfilehash: 4f21ce7a14873d201fa18f45c96d508dcd38cb8e
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 561b19f7eb09d9addfda2b7f3c66c66f2d9f759d
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94214677"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100415600"
 ---
 # Move-AzResource
 
 ## SYNOPSIS
-리소스를 다른 리소스 그룹 또는 구독으로 이동 합니다.
+다른 리소스 그룹 또는 구독으로 리소스를 이동합니다.
 
-## 구문과
+## 구문
 
 ```
 Move-AzResource -DestinationResourceGroupName <String> [-DestinationSubscriptionId <Guid>]
@@ -26,11 +26,11 @@ Move-AzResource -DestinationResourceGroupName <String> [-DestinationSubscription
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## 설명은
-**AzResource** cmdlet은 기존 리소스를 다른 리소스 그룹으로 이동 합니다.
-해당 리소스 그룹은 다른 구독에 있을 수 있습니다.
+## 설명
+**Move-AzResource** cmdlet은 기존 리소스를 다른 리소스 그룹으로 이동합니다.
+이 리소스 그룹은 다른 구독에 있을 수 있습니다.
 
-## 예제의
+## 예제
 
 ### 예제 1: 리소스 그룹으로 리소스 이동
 ```
@@ -38,15 +38,15 @@ PS C:\>$Resource = Get-AzResource -ResourceType "Microsoft.ClassicCompute/storag
 PS C:\> Move-AzResource -ResourceId $Resource.ResourceId -DestinationResourceGroupName "ResourceGroup14"
 ```
 
-첫 번째 명령은 Get-AzResource cmdlet을 사용 하 여 ContosoStorageAccount 이라는 리소스를 가져온 다음 해당 리소스를 $Resource 변수에 저장 합니다.
-두 번째 명령은 해당 리소스를 ResourceGroup14 이라는 리소스 그룹으로 이동 합니다.
-명령은 $Resource의 **ResourceId** 속성을 사용 하 여 이동할 리소스를 식별 합니다.
+첫 번째 명령은 Get-AzResource cmdlet을 사용하여 ContosoStorageAccount라는 리소스를 $Resource 변수에 저장합니다.
+두 번째 명령은 리소스 그룹을 ResourceGroup14로 이동합니다.
+이 명령은 리소스의 **ResourceId** 속성을 사용하여 이동할 리소스를 $Resource.
 
-## 변수
+## PARAMETERS
 
 ### -ApiVersion
-사용할 리소스 공급자 API의 버전을 지정 합니다.
-버전을 지정 하지 않으면이 cmdlet은 사용 가능한 최신 버전을 사용 합니다.
+사용할 리소스 공급자 API의 버전을 지정합니다.
+버전을 지정하지 않으면 이 cmdlet은 사용 가능한 최신 버전을 사용하게 됩니다.
 
 ```yaml
 Type: System.String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationResourceGroupName
-이 cmdlet이 리소스를 이동할 리소스 그룹의 이름을 지정 합니다.
+이 cmdlet이 리소스를 이동하는 리소스 그룹의 이름을 지정합니다.
 
 ```yaml
 Type: System.String
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationSubscriptionId
-이 cmdlet이 리소스를 이동할 구독의 ID를 지정 합니다.
+이 cmdlet이 리소스를 이동하는 구독의 ID를 지정합니다.
 
 ```yaml
 Type: System.Nullable`1[System.Guid]
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-사용자 확인을 요청 하지 않고 명령을 강제로 실행 합니다.
+사용자 확인을 요청하지 않고 명령을 강제로 실행합니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-이 cmdlet이 사용할 버전을 자동으로 결정 하는 경우 시험판 API 버전을 고려 함을 나타냅니다.
+이 cmdlet은 사용할 버전을 자동으로 결정할 때 릴리스 전 API 버전을 고려합니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-이 cmdlet이 이동 하는 리소스의 Id 배열을 지정 합니다.
+이 cmdlet이 이동하는 리소스의 ID 배열을 지정합니다.
 
 ```yaml
 Type: System.String[]
@@ -150,8 +150,8 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -확인
-Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.
+### -Confirm
+cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -166,8 +166,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Cmdlet이 실행 되는 경우의 동작을 보여 줍니다.
-Cmdlet이 실행 되지 않습니다.
+cmdlet이 실행되는 경우의 결과 표시
+cmdlet이 실행되지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -182,29 +182,28 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
-### 시스템 Null 허용 ' 1 [[4.0.0.0, System.webserver, CoreLib, Version =, Culture = 중립, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.Guid, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### System.webserver []
+### System.String[]
 
 ## 출력
 
-### 시스템 부울
+### System.Boolean
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
-[찾기-AzResource](./Find-AzResource.md)
 
 [Get-AzResource](./Get-AzResource.md)
 
-[새로운 AzResource](./New-AzResource.md)
+[New-AzResource](./New-AzResource.md)
 
-[제거-AzResource](./Remove-AzResource.md)
+[Remove-AzResource](./Remove-AzResource.md)
 
 [Set-AzResource](./Set-AzResource.md)
 

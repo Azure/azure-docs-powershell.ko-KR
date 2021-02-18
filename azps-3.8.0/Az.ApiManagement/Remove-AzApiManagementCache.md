@@ -5,21 +5,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementCache.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementCache.md
-ms.openlocfilehash: b43aba64f30c4a1987f2bcd8dec3edb7834f2082
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 26704dd0ff44bf8a9e96dde15ebd52b57fa17ae2
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94042228"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100414563"
 ---
 # Remove-AzApiManagementCache
 
 ## SYNOPSIS
-캐시 엔터티를 제거 합니다.
+캐시 엔터티를 제거합니다.
 
-## 구문과
+## 구문
 
-### ContextParameterSetName (기본값)
+### ContextParameterSetName(기본값)
 ```
 Remove-AzApiManagementCache -Context <PsApiManagementContext> -CacheId <String> [-PassThru]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -37,10 +37,10 @@ Remove-AzApiManagementCache -ResourceId <String> [-PassThru] [-DefaultProfile <I
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## 설명은
-Cmdlet **AzApiManagementCache** 는 캐시 엔터티를 제거 합니다.
+## 설명
+**Remove-AzApiManagementCache** cmdlet은 캐시 엔터티를 제거합니다.
 
-## 예제의
+## 예제
 
 ### 예제 1: 캐시 엔터티 제거
 ```powershell
@@ -48,9 +48,9 @@ PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default
 PS C:\>Remove-AzApiManagementCache -Context $apimContext -CacheId "centralus"
 ```
 
-이 cmdlet은 `centralus` Api Management 서비스에서 캐시를 제거 합니다.
+이 cmdlet은 `centralus` Api Management 서비스에서 캐시를 제거합니다.
 
-## 변수
+## PARAMETERS
 
 ### -CacheId
 기존 cacheId의 식별자입니다.
@@ -68,7 +68,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -컨텍스트
+### -Context
 PsApiManagementContext의 인스턴스입니다.
 이 매개 변수는 필수입니다.
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-지정 된 경우 대/소문자 구분 작업이 성공한 경우 true를 씁니다.
+지정된 경우 작업이 성공하는 경우 true를 기록합니다.
 이 매개 변수는 선택 사항입니다.
 기본값은 false입니다.
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-캐시의 팔 ResourceId입니다. 이 매개 변수는 필수입니다.
+캐시의 Arm ResourceId입니다. 이 매개 변수는 필수입니다.
 
 ```yaml
 Type: System.String
@@ -146,8 +146,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -확인
-Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.
+### -Confirm
+cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -162,8 +162,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Cmdlet이 실행 되는 경우의 동작을 보여 줍니다.
-Cmdlet이 실행 되지 않습니다.
+cmdlet이 실행되는 경우의 결과 표시
+cmdlet이 실행되지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -178,26 +178,26 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
-### ApiManagement. ServiceManagement. \ PsApiManagementContext
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 
-### System. 문자열
+### System.String
 
-### System.webserver 매개 변수
+### System.Management.Automation.SwitchParameter
 
 ## 출력
 
-### 시스템 부울
+### System.Boolean
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
-[새로운 AzApiManagementCache](./New-AzApiManagementCache)
-
-[Set-AzApiManagementCache](./Set-AzApiManagementCache.md)
-
 [Get-AzApiManagementCache](./Get-AzApiManagementCache.md)
+
+[New-AzApiManagementCache](./New-AzApiManagementCache.md)
+
+[Update-AzApiManagementCache](./Update-AzApiManagementCache.md)
