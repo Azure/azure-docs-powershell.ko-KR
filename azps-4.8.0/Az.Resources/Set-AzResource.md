@@ -6,21 +6,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Set-AzResource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Set-AzResource.md
-ms.openlocfilehash: 7a4929ffff531bb11b19b44ca9c0914c71662c8d
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 82e06a4736a613111efac452eb1fced2713dc470
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94047646"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100415753"
 ---
 # Set-AzResource
 
 ## SYNOPSIS
-리소스를 수정 합니다.
+리소스를 수정합니다.
 
-## 구문과
+## 구문
 
-### ByResourceId (기본값)
+### ByResourceId(기본값)
 ```
 Set-AzResource [-Kind <String>] [-Properties <PSObject>] [-Plan <Hashtable>] [-Sku <Hashtable>]
  [-Tag <Hashtable>] [-UsePatchSemantics] [-AsJob] -ResourceId <String> [-ODataQuery <String>] [-Force]
@@ -54,11 +54,11 @@ Set-AzResource [-Kind <String>] [-Properties <PSObject>] [-Plan <Hashtable>] [-S
  [<CommonParameters>]
 ```
 
-## 설명은
-**Set-AzResource** cmdlet은 기존 Azure 리소스를 수정 합니다.
-이름 및 형식 또는 ID를 기준으로 수정할 리소스를 지정 합니다.
+## 설명
+**Set-AzResource** cmdlet은 기존 Azure 리소스를 수정합니다.
+이름 및 형식 또는 ID별로 수정할 리소스를 지정합니다.
 
-## 예제의
+## 예제
 
 ### 예제 1: 리소스 수정
 ```
@@ -67,11 +67,11 @@ PS C:\> $Resource.Properties.Enabled = "False"
 PS C:\> $Resource | Set-AzResource -Force
 ```
 
-첫 번째 명령은 Get-AzResource cmdlet을 사용 하 여 ContosoSite 이라는 리소스를 가져온 다음 $Resource 변수에 저장 합니다.
-두 번째 명령은 $Resource의 속성을 수정 합니다.
-마지막 명령은 $Resource 일치 하도록 리소스를 업데이트 합니다.
+첫 번째 명령은 Get-AzResource cmdlet을 사용하여 ContosoSite라는 리소스를 $Resource 변수에 저장합니다.
+두 번째 명령은 $Resource.
+마지막 명령은 리소스가 리소스와 일치하게 $Resource.
 
-### 예제 2: 지정 된 리소스 그룹의 모든 리소스 수정
+### 예제 2: 주어진 리소스 그룹의 모든 리소스 수정
 ```
 PS C:\> $Resource = Get-AzResource -ResourceGroupName testrg
 PS C:\> $Resource | ForEach-Object { $_.Tags.Add("testkey", "testval") }
@@ -99,17 +99,17 @@ Properties        : @{key=value}
 Sku               : @{name=A0}
 ```
 
-첫 번째 명령은 testrg 리소스 그룹의 리소스를 가져온 다음이를 $Resource 변수에 저장 합니다.
+첫 번째 명령은 testrg 리소스 그룹의 리소스를 확보한 다음, 리소스 $Resource 저장합니다.
 
-두 번째 명령은 리소스 그룹의 각 리소스에 대해 반복 하 고 새 태그를 추가 합니다.
+두 번째 명령은 리소스 그룹의 이러한 각 리소스에 대해 이들을 통해 이들을 위해 새 태그를 추가합니다.
 
-마지막 명령은 이러한 각 리소스를 업데이트 합니다.
+마지막 명령은 이러한 각 리소스를 업데이트합니다.
 
-## 변수
+## PARAMETERS
 
 ### -ApiVersion
-사용할 리소스 공급자 API의 버전을 지정 합니다.
-버전을 지정 하지 않으면이 cmdlet은 사용 가능한 최신 버전을 사용 합니다.
+사용할 리소스 공급자 API의 버전을 지정합니다.
+버전을 지정하지 않으면 이 cmdlet에서 사용 가능한 최신 버전을 사용하게 됩니다.
 
 ```yaml
 Type: System.String
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -154,8 +154,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionResourceName
-리소스에 대 한 확장 리소스의 이름을 지정 합니다.
-예를 들어 데이터베이스를 지정 하려면 다음 형식을 사용 합니다. 서버 이름 `/` 데이터베이스 이름
+리소스에 대한 확장 리소스의 이름을 지정합니다.
+예를 들어 데이터베이스를 지정하려면 다음 형식을 사용합니다. 서버 이름 `/` 데이터베이스 이름
 
 ```yaml
 Type: System.String
@@ -170,8 +170,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionResourceType
-확장 리소스의 리소스 종류를 지정 합니다.
-예를 들어 확장 리소스가 데이터베이스인 경우 다음을 지정 합니다. `Microsoft.Sql/Servers/Databases`
+확장 리소스에 대한 리소스 종류를 지정합니다.
+예를 들어 확장 리소스가 데이터베이스인 경우 다음을 지정합니다. `Microsoft.Sql/Servers/Databases`
 
 ```yaml
 Type: System.String
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-사용자 확인을 요청 하지 않고 명령을 강제로 실행 합니다.
+사용자 확인을 요청하지 않고 명령을 강제로 실행합니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -215,8 +215,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -종류
-자원의 자원 종류를 지정 합니다.
+### -Kind
+리소스에 대한 리소스 종류를 지정합니다.
 
 ```yaml
 Type: System.String
@@ -231,8 +231,8 @@ Accept wildcard characters: False
 ```
 
 ### -ODataQuery
-OData (Open Data Protocol) 스타일 필터를 지정 합니다.
-이 cmdlet은이 값을 다른 모든 필터 외에도 요청에 추가 합니다.
+OData(Open Data Protocol) 스타일 필터를 지정합니다.
+이 cmdlet은 다른 필터 외에도 요청에 이 값을 추가합니다.
 
 ```yaml
 Type: System.String
@@ -246,8 +246,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -계획
-리소스에 대 한 리소스 계획 속성을 해시 테이블로 지정 합니다.
+### -Plan
+리소스에 대한 리소스 계획 속성을 해시 테이블로 지정합니다.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-이 cmdlet이 사용할 버전을 자동으로 결정 하는 경우 시험판 API 버전을 고려 함을 나타냅니다.
+이 cmdlet은 사용할 버전을 자동으로 결정할 때 릴리스 전 API 버전을 고려합니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -276,8 +276,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -속성
-리소스에 대 한 리소스 속성을 지정 합니다.
+### -Properties
+리소스에 대한 리소스 속성을 지정합니다.
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -292,7 +292,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-이 cmdlet이 리소스를 수정할 리소스 그룹의 이름을 지정 합니다.
+이 cmdlet이 리소스를 수정하는 리소스 그룹의 이름을 지정합니다.
 
 ```yaml
 Type: System.String
@@ -307,7 +307,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-구독을 포함 하 여 정규화 된 리소스 ID를 다음 예제와 같이 지정 합니다. `/subscriptions/` 구독 ID`/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
+다음 예제와 같이 구독을 포함하여 정식 리소스 `/subscriptions/` ID를 지정합니다.`/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
 
 ```yaml
 Type: System.String
@@ -321,9 +321,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Context.resourcename
-리소스의 이름을 지정 합니다.
-예를 들어 데이터베이스를 지정 하려면 다음 형식을 사용 합니다. `ContosoServer/ContosoDatabase`
+### -ResourceName
+리소스의 이름을 지정합니다.
+예를 들어 데이터베이스를 지정하려면 다음 형식을 사용합니다. `ContosoServer/ContosoDatabase`
 
 ```yaml
 Type: System.String
@@ -338,7 +338,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
-리소스의 종류를 지정 합니다.
+리소스의 유형을 지정합니다.
 예를 들어 데이터베이스의 경우 리소스 종류는 다음과 같습니다. `Microsoft.Sql/Servers/Databases`
 
 ```yaml
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-리소스의 SKU 개체를 해시 테이블로 지정 합니다.
+리소스의 SKU 개체를 해시 테이블로 지정합니다.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -368,8 +368,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### 태그
-해시 테이블 형태의 키-값 쌍입니다. 예: @ {key0 = "value0"; key1 = $null; key2 = "value2"}
+### -Tag
+해시 테이블 형식의 키-값 쌍입니다. 예: @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -384,7 +384,7 @@ Accept wildcard characters: False
 ```
 
 ### -TenantLevel
-이 cmdlet이 테 넌 트 수준에서 작동 함을 나타냅니다.
+이 cmdlet이 테넌트 수준에서 작동하고 있습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -399,7 +399,7 @@ Accept wildcard characters: False
 ```
 
 ### -UsePatchSemantics
-HTTP를 사용 하지 않고이 cmdlet이 HTTP 패치를 사용 하 여 개체를 업데이트 함을 나타냅니다.
+이 cmdlet은 HTTP PATCH를 사용하여 HTTP PUT 대신 개체를 업데이트합니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -413,8 +413,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -확인
-Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.
+### -Confirm
+cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -429,8 +429,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Cmdlet이 실행 되는 경우의 동작을 보여 줍니다.
-Cmdlet이 실행 되지 않습니다.
+cmdlet이 실행되는 경우의 결과 표시
+cmdlet이 실행되지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -445,32 +445,31 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
-### SdkModels 리소스에 대 한 Microsoft.
+### Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSResource
 
-### System. 문자열
+### System.String
 
-### System.webserver. 자동. PSObject
+### System.Management.Automation.PSObject
 
-### System.webserver. 컬렉션 테이블
+### System.Collections.Hashtable
 
 ## 출력
 
-### System.webserver. 자동. PSObject
+### System.Management.Automation.PSObject
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
-[찾기-AzResource](./Find-AzResource.md)
 
 [Get-AzResource](./Get-AzResource.md)
 
-[이동-AzResource](./Move-AzResource.md)
+[Move-AzResource](./Move-AzResource.md)
 
-[새로운 AzResource](./New-AzResource.md)
+[New-AzResource](./New-AzResource.md)
 
-[제거-AzResource](./Remove-AzResource.md)
+[Remove-AzResource](./Remove-AzResource.md)
