@@ -6,21 +6,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/s
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Set-AzKeyVaultAccessPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Set-AzKeyVaultAccessPolicy.md
-ms.openlocfilehash: 4ef8c131e0094928808e6479b2c5ffe40090c5d0
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 5f47237088808fe8966d239f9a0de7c892301db0
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94211709"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100410721"
 ---
 # Set-AzKeyVaultAccessPolicy
 
 ## SYNOPSIS
-키 자격 증명 모음을 사용 하 여 작업을 수행 하기 위해 사용자, 응용 프로그램 또는 보안 그룹에 대 한 기존 사용 권한을 부여 하거나 수정 합니다.
+키 자격 증명 모음을 사용하여 작업을 수행하도록 사용자, 애플리케이션 또는 보안 그룹에 대한 기존 권한을 부여하거나 수정합니다.
 
-## 구문과
+## 구문
 
-### ByUserPrincipalName (기본값)
+### ByUserPrincipalName(기본값)
 ```
 Set-AzKeyVaultAccessPolicy [-VaultName] <String> [[-ResourceGroupName] <String>] -UserPrincipalName <String>
  [-PermissionsToKeys <String[]>] [-PermissionsToSecrets <String[]>] [-PermissionsToCertificates <String[]>]
@@ -135,26 +135,26 @@ Set-AzKeyVaultAccessPolicy [-ResourceId] <String> [-EnabledForDeployment] [-Enab
  [<CommonParameters>]
 ```
 
-## 설명은
-**AzKeyVaultAccessPolicy** cmdlet은 사용자, 응용 프로그램 또는 보안 그룹의 기존 사용 권한을 부여 하거나 수정 하 여 키 자격 증명 모음으로 지정 된 작업을 수행 합니다. 다른 사용자, 앱 또는 보안 그룹의 키 자격 증명에 대 한 사용 권한은 수정 되지 않습니다.
-보안 그룹에 대 한 사용 권한을 설정 하는 경우이 작업은 해당 보안 그룹의 사용자 에게만 적용 됩니다.
-다음 디렉터리는 모두 동일한 Azure 디렉터리 여야 합니다. 
-- 키 보관소가 있는 Azure 구독의 기본 디렉터리입니다.
-- 권한을 부여 하는 사용자 또는 응용 프로그램 그룹이 포함 된 Azure 디렉터리입니다.
-이러한 조건이 충족 되지 않고이 cmdlet이 작동 하지 않을 경우 시나리오의 예: 
-- 다른 조직에서 사용자의 키 자격 증명을 관리 하도록 권한을 부여 합니다.
-각 조직에는 고유한 디렉터리가 있습니다. 
-- Azure 계정에 디렉터리가 여러 개 있습니다.
-기본 디렉터리가 아닌 디렉터리에 응용 프로그램을 등록 하는 경우 해당 응용 프로그램에 키 자격 증명 모음을 사용 하도록 허가할 수 없습니다.
-응용 프로그램이 기본 디렉터리에 있어야 합니다.
-이 cmdlet에 대해 리소스 그룹을 지정 하는 것은 선택 사항 이지만 성능 향상을 위해 이러한 작업을 수행 해야 한다는 점에 유의 하세요.
+## 설명
+**Set-AzKeyVaultAccessPolicy** cmdlet은 사용자, 애플리케이션 또는 보안 그룹에 대한 기존 권한을 부여하거나 수정하여 키 자격 증명 모음으로 지정된 작업을 수행할 수 있습니다. 다른 사용자, 애플리케이션 또는 보안 그룹이 키 자격 증명 모음에 있는 사용 권한을 수정하지 않습니다.
+보안 그룹에 대한 사용 권한을 설정하는 경우 이 작업은 해당 보안 그룹의 사용자에만 영향을 미치게 됩니다.
+다음 디렉터리는 모두 동일한 Azure 디렉터리에 있어야 합니다.
+- 키 자격 증명 모음이 있는 Azure 구독의 기본 디렉터리입니다.
+- 권한을 부여하는 사용자 또는 애플리케이션 그룹을 포함하는 Azure 디렉터리입니다.
+이러한 조건이 충족되지 않을 때 이 cmdlet이 작동하지 않는 시나리오의 예는 다음과 같습니다.
+- 다른 조직의 사용자에게 키 자격 증명 모음을 관리할 수 있는 권한을 제공합니다.
+각 조직에는 자체 디렉터리가 있습니다.
+- Azure 계정에는 여러 개의 감독이 있습니다.
+기본 디렉터리가 다른 디렉터리에 애플리케이션을 등록하는 경우 해당 애플리케이션에 키 자격 증명 모음을 사용할 수 있는 권한을 승인할 수 없습니다.
+애플리케이션은 기본 디렉터리에 있어야 합니다.
+이 cmdlet에 대해 리소스 그룹을 지정하는 것은 선택 사항이지만 성능을 향상하기 위해 이 작업을 해야 합니다.
 
 > [!NOTE]
-> 서비스 사용자를 사용 하 여 액세스 정책 권한을 부여 하는 경우 매개 변수를 사용 해야 합니다 `-BypassObjectIdValidation` .
+> 서비스 주체에 액세스 정책 권한을 부여하는 경우 매개 변수를 사용해야 `-BypassObjectIdValidation` 합니다.
 
-## 예제의
+## 예제
 
-### 예제 1: 키 자격 증명 모음에 대 한 사용 권한을 사용자에 게 부여 하 고 사용 권한을 수정 합니다.
+### 예제 1: 키 자격 증명 모음에 대한 사용자에게 권한 부여 및 사용 권한 수정
 ```powershell
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalName 'PattiFuller@contoso.com' -PermissionsToKeys create,import,delete,list -PermissionsToSecrets set,delete -PassThru
 
@@ -235,63 +235,64 @@ Access Policies                  :
 Tags                             :
 ```
 
-첫 번째 명령은 Azure Active Directory의 사용자에 대 한 사용 권한을 부여 PattiFuller@contoso.com 하 고, Contoso03Vault 이라는 키 보관소를 사용 하 여 키 및 비밀에 대 한 작업을 수행 합니다. *PassThru* 매개 변수는 cmdlet에서 반환 되는 업데이트 된 개체를 생성 합니다.
-두 번째 명령은 첫 번째 명령에 부여 된 사용 권한을 수정 하 여 PattiFuller@contoso.com , 이제 암호를 설정 하 고 삭제 하는 것 외에도 비밀을 받을 수 있도록 합니다. 이 명령 후에는 키 작업에 대 한 사용 권한이 변경 되지 않고 그대로 유지 됩니다.
-마지막 명령은 PattiFuller@contoso.com 키 작업에 대 한 모든 사용 권한을 제거 하는 기존 권한을 추가로 수정 합니다. 이 명령 후에는 비밀 작업에 대 한 사용 권한이 변경 되지 않고 그대로 유지 됩니다. 
+첫 번째 명령은 Contoso03Vault라는 키 자격 증명 모음을 사용하여 키 및 비밀에 대한 작업을 수행하는 Azure Active Directory의 사용자에 대한 권한을 PattiFuller@contoso.com 부여합니다. *PassThru* 매개 변수는 cmdlet에서 업데이트된 개체를 반환합니다.
+두 번째 명령은 첫 번째 명령에서 부여된 권한을 수정하여 이제 비밀을 설정하고 삭제하는 것 외에도 비밀을 사용할 PattiFuller@contoso.com 수 있도록 합니다. 이 명령 후에도 키 작업에 대한 사용 권한은 변경되지 않습니다.
+마지막 명령은 키 작업에 대한 모든 권한을 제거하기 위해 기존 권한을 PattiFuller@contoso.com 추가로 수정합니다. 이 명령 후에도 비밀 작업에 대한 사용 권한은 변경되지 않습니다.
 
-### 예제 2: 비밀 정보를 읽고 쓸 수 있도록 응용 프로그램 서비스 사용자에 게 권한 부여
+### 예제 2: 애플리케이션 서비스 주체가 비밀을 읽고 쓸 수 있는 권한 부여
 ```powershell
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ServicePrincipalName 'http://payroll.contoso.com' -PermissionsToSecrets Get,Set
 ```
 
-이 명령은 Contoso03Vault 이라는 키 보관소에 대 한 응용 프로그램에 대 한 사용 권한을 부여 합니다. *ServicePrincipalName* 매개 변수는 응용 프로그램을 지정 합니다. Azure Active Directory에 응용 프로그램을 등록 해야 합니다. *ServicePrincipalName* 매개 변수 값은 응용 프로그램의 서비스 사용자 이름 또는 응용 프로그램 ID GUID 여야 합니다.
-이 예제에서는 서비스 사용자 이름을 지정 하 http://payroll.contoso.com 고, 명령은 비밀 정보를 읽고 쓸 수 있도록 응용 프로그램 사용 권한을 부여 합니다.
+이 명령은 Contoso03Vault라는 키 자격 증명 모음에 대한 애플리케이션에 대한 권한을 부여합니다.
+*ServicePrincipalName* 매개 변수는 애플리케이션을 지정합니다. 애플리케이션을 Azure Active Directory에 등록해야 합니다. *ServicePrincipalName* 매개 변수의 값은 애플리케이션의 서비스 주체 이름 또는 애플리케이션 ID GUID가 되어야 합니다.
+이 예제에서는 서비스 주체 이름을 지정하고 이 명령은 비밀을 읽고 쓸 수 있는 애플리케이션 권한을 `http://payroll.contoso.com` 부여합니다.
 
-### 예제 3: 해당 개체 ID를 사용 하 여 응용 프로그램에 대 한 사용 권한 부여
+### 예제 3: 개체 ID를 사용하여 애플리케이션에 대한 권한 부여
 ```powershell
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ObjectId 34595082-9346-41b6-8d6b-295a2808b8db -PermissionsToSecrets Get,Set
 ```
 
-이 명령은 비밀 정보를 읽고 쓸 수 있도록 응용 프로그램 사용 권한을 부여 합니다.
-이 예제에서는 응용 프로그램의 서비스 사용자에 대 한 개체 ID를 사용 하 여 응용 프로그램을 지정 합니다.
+이 명령은 비밀을 읽고 쓸 수 있는 권한을 애플리케이션에 부여합니다.
+이 예제에서는 애플리케이션의 서비스 주체의 개체 ID를 사용하여 애플리케이션을 지정합니다.
 
-### 예제 4: 사용자 계정 이름에 대 한 사용 권한 부여
+### 예제 4: 사용자 계정 이름에 대한 권한 부여
 ```powershell
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalName 'PattiFuller@contoso.com' -PermissionsToSecrets Get,List,Set
 ```
 
-이 명령은 비밀에 대 한 액세스에 대 한 지정 된 upn (사용자 이름)의 get, list, set 권한을 부여 합니다.
+이 명령은 비밀에 액세스하기 위해 지정된 사용자 계정 이름에 대한 권한을 얻게, 나열하고, 설정할 수 있습니다.
 
-### 예제 5: Microsoft에서 키 자격 증명 모음 으로부터 비밀을 검색 하도록 설정 합니다. 계산 리소스 공급자
+### 예제 5: Microsoft.Compute 리소스 공급자가 키 자격 증명 모음에서 비밀을 검색할 수 있도록 설정
 ```powershell
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ResourceGroupName 'Group14' -EnabledForDeployment
 ```
 
-이 명령은 Contoso03Vault 키 자격 증명 모음에서 Microsoft. a 리소스 공급자가 검색할 수 있는 비밀 정보에 대 한 사용 권한을 부여 합니다.
+이 명령은 Microsoft.Compute 리소스 공급자가 Contoso03Vault 키 자격 증명 모음에서 검색할 비밀에 대한 권한을 부여합니다.
 
-### 예제 6: 보안 그룹에 대 한 사용 권한 부여
+### 예제 6: 보안 그룹에 사용 권한 부여
 ```powershell
 PS C:\> Get-AzADGroup
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'myownvault' -ObjectId (Get-AzADGroup -SearchString 'group2')[0].Id -PermissionsToKeys get, set -PermissionsToSecrets get, set
 ```
 
-첫 번째 명령은 Get-AzADGroup cmdlet을 사용 하 여 모든 Active Directory 그룹을 가져옵니다. 출력에서 이름이 **group1** , **group2** 및 **group3** 인 3 개의 그룹이 반환 됨을 볼 수 있습니다. 여러 그룹의 이름은 동일 하지만 항상 고유한 ObjectId를 가질 수 있습니다. 동일한 이름을 가진 그룹이 두 개 이상 반환 되는 경우 출력에 ObjectId를 사용 하 여 사용할 항목을 식별 합니다.
-그런 다음이 명령의 출력을 Set-AzKeyVaultAccessPolicy와 함께 사용 하 여 **myownvault** 이라는 키 보관소의 group2에 대 한 사용 권한을 부여할 수 있습니다. 이 예제에서는 동일한 명령줄에서 ' group2 ' 이라는 그룹을 열거 합니다.
-반환 된 목록에 이름이 ' group2 ' 인 여러 그룹이 있을 수 있습니다.
-이 예제에서는 반환 된 목록의 인덱스 0으로 표시 되는 첫 번째 항목을 선택 \[ \] 합니다.
+첫 번째 명령은 Get-AzADGroup cmdlet을 사용하여 모든 Active Directory 그룹을 얻습니다. 출력에서 그룹 **1,** **group2** 및 **group3이라는 3개 그룹이 반환됩니다.** 여러 그룹에는 이름이 같을 수 있지만 항상 고유한 ObjectId가 있습니다. 이름이 같은 그룹이 두 개 이상 반환되는 경우 출력의 ObjectId를 사용하여 사용하려는 그룹을 식별합니다.
+그런 다음, 이 명령의 출력을 Set-AzKeyVaultAccessPolicy **myownvault라는** 키 자격 증명 모음에 대한 group2에 권한을 부여합니다. 이 예제에서는 동일한 명령줄에서 'group2'라는 그룹을 인라인으로 열고 있습니다.
+반환된 목록에 'group2'라는 그룹이 여러 개 있을 수 있습니다.
+이 예제에서는 반환된 목록의 인덱스 0으로 표시된 첫 번째 \[ \] 예제를 선택합니다.
 
-### 예제 7: 고객 관리 테 넌 트 키 (BYOK)에 대 한 Azure Information Protection 액세스 권한 부여
+### 예제 7: 고객 관리 테넌트 키(BYOK)에 대한 Azure Information Protection 액세스 권한 부여
 ```powershell
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'Contoso04Vault' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
 ```
 
-이 명령은 사용자가 관리 하는 키 (자체 키 가져오기 또는 "BYOK" 시나리오)를 Azure Information Protection 테 넌 트 키로 사용 하도록 Azure Information Protection에 권한을 부여 합니다.
-이 명령을 실행할 때 고유한 키 보관소 이름을 지정 하면 *ServicePrincipalName* 매개 변수를 GUID **00000012-0000-0000-c 000-000000000000** 에 지정 하 고 예제에서 사용 권한을 지정 해야 합니다.
+이 명령은 Azure Information Protection 테넌트 키로 고객 관리 키(사용자 키 가져오기 또는 "BYOK" 시나리오)를 사용할 수 있도록 Azure Information Protection에 권한을 줍니다.
+이 명령을 실행할 때 사용자 자신의 키 자격 증명 모음 이름을 지정하지만 GUID **00000012-0000-0000-c000-00000000000000으로** *ServicePrincipalName* 매개 변수를 지정하고 예제에서 사용 권한을 지정해야 합니다.
 
-## 변수
+## PARAMETERS
 
 ### -ApplicationId
-나중에 사용 합니다.
+향후 사용을 위해
 
 ```yaml
 Type: System.Nullable`1[System.Guid]
@@ -306,8 +307,8 @@ Accept wildcard characters: False
 ```
 
 ### -BypassObjectIdValidation
-Azure Active Directory에 개체가 있는지 확인 하지 않고 개체 ID를 지정할 수 있도록 합니다.
-다른 Azure 테 넌 트에서 위임 된 보안 그룹을 참조 하는 개체 ID에 키 자격 증명 모음에 대 한 액세스 권한을 부여 하려는 경우에만이 매개 변수를 사용 합니다.
+Azure Active Directory에 개체가 존재하는지 확인하지 않고 개체 ID를 지정할 수 있습니다.
+다른 Azure 테넌트에서 위임된 보안 그룹을 참조하는 개체 ID에 대한 키 자격 증명 모음에 대한 액세스 권한을 부여하려는 경우 이 매개 변수를 사용합니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -322,7 +323,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -337,8 +338,8 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddress
-권한을 부여할 사용자의 사용자 전자 메일 주소를 지정 합니다.
-이 전자 메일 주소는 현재 구독과 연결 된 디렉터리에 있어야 하 고 고유 해야 합니다.
+권한을 부여할 사용자의 사용자 전자 메일 주소를 지정합니다.
+이 전자 메일 주소는 현재 구독과 연결된 디렉터리에 있어야하며 고유해야 합니다.
 
 ```yaml
 Type: System.String
@@ -353,7 +354,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForDeployment
-이 키 자격 증명 모음이 리소스 만들기에서 참조 되는 경우 (예: 가상 컴퓨터를 만들 때)이 키 보관소에서 비밀을 검색 하도록 Microsoft. a 리소스 공급자를 설정 합니다.
+예를 들어 가상 머신을 만들 때 이 키 자격 증명 모음이 리소스 생성에서 참조될 때 Microsoft.Compute 리소스 공급자가 이 키 자격 증명 모음에서 비밀을 검색할 수 있습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -368,7 +369,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForDiskEncryption
-Azure 디스크 암호화 서비스에서이 키 자격 증명 모음의 비밀 및 래핑 키를 가져올 수 있도록 합니다.
+Azure 디스크 암호화 서비스를 사용하면 이 키 자격 증명 모음에서 비밀을 얻을 수 있으며 키 래프를 래프할 수 있습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -383,7 +384,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForTemplateDeployment
-이 키 자격 증명 모음이 서식 파일 배포에서 참조 되는 경우 Azure 리소스 관리자가이 키 보관소에서 비밀을 가져올 수 있도록 합니다.
+이 키 자격 증명 모음이 템플릿 배포에서 참조될 때 Azure Resource Manager가 이 키 자격 증명 모음에서 비밀을 얻을 수 있습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -398,7 +399,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-키 자격 증명 모음 개체
+Key Vault 개체
 
 ```yaml
 Type: Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultIdentityItem
@@ -413,7 +414,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-사용 권한을 부여할 Azure Active Directory의 사용자 또는 서비스 사용자의 개체 ID를 지정 합니다.
+권한을 부여할 Azure Active Directory에서 사용자 또는 서비스 주체의 개체 ID를 지정합니다.
 
 ```yaml
 Type: System.String
@@ -428,8 +429,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-작업 중인 항목을 나타내는 개체를 반환 합니다.
-기본적으로이 cmdlet은 출력을 생성 하지 않습니다.
+작업하는 항목을 나타내는 개체를 반환합니다.
+기본적으로 이 cmdlet은 출력을 생성하지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -444,24 +445,24 @@ Accept wildcard characters: False
 ```
 
 ### -PermissionsToCertificates
-사용자 또는 서비스 사용자에 게 부여할 인증서 권한 배열을 지정 합니다.
-이 매개 변수에 허용 되는 값은 다음과 같습니다.
+사용자 또는 서비스 주체에 부여할 인증서 권한의 배열을 지정합니다.
+이 매개 변수에 허용되는 값은
 - 가져오기
 - 목록
 - 삭제
-- 만드는
-- Import
-- Update
+- 만들기
+- 가져오기
+- 업데이트
 - Managecontacts
 - Getissuers
 - Listissuers
 - Setissuers
 - Deleteissuers
 - Manageissuers
-- 절약할
-- 백업할
-- 복원한
-- 지우시겠습니까
+- 복구
+- Backup
+- 복원
+- 제거
 
 ```yaml
 Type: System.String[]
@@ -476,25 +477,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -기능 하는 Sto키
-사용자 또는 서비스 사용자에 게 부여할 키 작업 사용 권한의 배열을 지정 합니다.
-이 매개 변수에 허용 되는 값은 다음과 같습니다.
-- 해독은
-- 해독할
+### -PermissionsToKeys
+사용자 또는 서비스 주체에 부여할 키 작업 권한의 배열을 지정합니다.
+이 매개 변수에 허용되는 값은
+- 암호 해독
+- 암호화
 - UnwrapKey
 - WrapKey
-- 나타나는지
-- 등록할
+- 확인
+- 서명
 - 가져오기
 - 목록
-- Update
-- 만드는
-- Import
+- 업데이트
+- 만들기
+- 가져오기
 - 삭제
-- 백업할
-- 복원한
-- 절약할
-- 지우시겠습니까
+- Backup
+- 복원
+- 복구
+- 제거
 
 ```yaml
 Type: System.String[]
@@ -509,17 +510,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -기능 방법 비밀
-사용자 또는 서비스 사용자에 게 부여할 비밀 작업 권한 배열을 지정 합니다.
-이 매개 변수에 허용 되는 값은 다음과 같습니다.
+### -PermissionsToSecrets
+사용자 또는 서비스 주체에 부여할 비밀 작업 권한의 배열을 지정합니다.
+이 매개 변수에 허용되는 값은
 - 가져오기
 - 목록
-- 설치할
+- 설정
 - 삭제
-- 백업할
-- 복원한
-- 절약할
-- 지우시겠습니까
+- Backup
+- 복원
+- 복구
+- 제거
 
 ```yaml
 Type: System.String[]
@@ -534,8 +535,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -기능 저장 저장소
-사용자 또는 서비스 사용자에 게 부여할 관리 되는 저장소 계정 및 SaS 정의 작업 사용 권한을 지정 합니다.
+### -PermissionsToStorage
+사용자 또는 서비스 주체에 부여할 관리되는 저장소 계정 및 SaS 정의 작업 권한을 지정합니다.
 
 ```yaml
 Type: System.String[]
@@ -551,7 +552,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-리소스 그룹의 이름을 지정 합니다.
+리소스 그룹의 이름을 지정합니다.
 
 ```yaml
 Type: System.String
@@ -566,7 +567,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-키 자격 증명 모음 리소스 Id
+Key Vault 리소스 ID
 
 ```yaml
 Type: System.String
@@ -581,8 +582,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalName
-권한을 부여할 응용 프로그램의 서비스 사용자 이름을 지정 합니다.
-클라이언트 ID 라고도 하는 응용 프로그램 ID를 AzureActive Directory의 응용 프로그램에 등록 하 여 지정 합니다. 이 매개 변수에서 지정 하는 서비스 사용자 이름을 사용 하는 응용 프로그램은 현재 구독을 포함 하는 Azure 디렉터리에 등록 되어 있어야 합니다.
+권한을 부여할 애플리케이션의 서비스 주체 이름을 지정합니다.
+AzureActive 디렉터리에서 애플리케이션에 등록된 클라이언트 ID라고도 하는 애플리케이션 ID를 지정합니다. 이 매개 변수가 지정하는 서비스 주체 이름이 있는 애플리케이션은 현재 구독을 포함하는 Azure 디렉터리에 등록되어야 합니다.
 
 ```yaml
 Type: System.String
@@ -597,8 +598,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-권한을 부여할 사용자의 upn (사용자 이름)을 지정 합니다.
-이 사용자 사용자 이름은 현재 구독과 연결 된 디렉터리에 있어야 합니다.
+권한을 부여할 사용자의 사용자 계정 이름을 지정합니다.
+이 사용자 계정 이름은 현재 구독과 연결된 디렉터리에 있어야 합니다.
 
 ```yaml
 Type: System.String
@@ -613,8 +614,8 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-키 보관소의 이름을 지정 합니다.
-이 cmdlet은이 매개 변수에서 지정 하는 키 보관소에 대 한 액세스 정책을 수정 합니다.
+키 자격 증명 모음의 이름을 지정합니다.
+이 cmdlet은 이 매개 변수가 지정하는 키 자격 증명 모음에 대한 액세스 정책을 수정합니다.
 
 ```yaml
 Type: System.String
@@ -628,8 +629,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -확인
-Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.
+### -Confirm
+cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -644,7 +645,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Cmdlet이 실행 되는 경우의 동작을 보여 줍니다. Cmdlet이 실행 되지 않습니다.
+cmdlet이 실행되는 경우의 결과 표시 cmdlet이 실행되지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -659,23 +660,23 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
-### Microsoft. KeyVault. PSKeyVaultIdentityItem
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultIdentityItem
 
-### System. 문자열
+### System.String
 
 ## 출력
 
-### Microsoft. KeyVault. 모델. PSKeyVault
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
 [Get-AzKeyVault](./Get-AzKeyVault.md)
 
-[제거-AzKeyVaultAccessPolicy](./Remove-AzKeyVaultAccessPolicy.md)
+[Remove-AzKeyVaultAccessPolicy](./Remove-AzKeyVaultAccessPolicy.md)
 
