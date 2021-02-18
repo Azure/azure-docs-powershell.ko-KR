@@ -1,20 +1,17 @@
 ---
 title: Azure Deployment Manager PowerShell 개요 | Microsoft Docs
 description: 설치 및 구성에 대한 링크를 포함한 Azure Deployment Manager PowerShell 개요입니다.
-author: deveshguha
-ms.author: deoletim
-manager: sriramry
-ms.manager: srirama
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: ''
 ms.date: 09/26/2018
-ms.openlocfilehash: 6023ff16593f89bd4f5a382f1d3e6815ff54a2e4
-ms.sourcegitcommit: 071b8c40c837ed4b2d65ce778339110d9e0899ab
+ms.service: deployment-manager
+ms.openlocfilehash: a93ea9871a661c6fde3428289b3470eb6d254fb3
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96427856"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100409497"
 ---
 # <a name="overview-of-azure-deployment-manager"></a>Azure Deployment Manager 개요
 

@@ -5,12 +5,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/06/2017
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 2860d5c7642b137c1cb14a38fa13d59ec2a4123c
-ms.sourcegitcommit: 038cb42a3bd8c009bc57c8c1c252e66fa170c84b
+ms.openlocfilehash: 23ea4bcbd182cf1b063f2ae90921217de74a7044
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523209"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100401524"
 ---
 # <a name="installing-the-azure-powershell-service-management-module"></a>Azure PowerShell Service Management 모듈 설치
 
@@ -34,7 +34,7 @@ PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1
 
 PowerShellGet을 설치하지 않은 경우 [PowerShellGet을 가져오는 방법](#how-to-get-powershellget)을 참조하세요.
 
-## <a name="step-2-install-azure-powershell"></a>2단계: Azure PowerShell 설치
+## <a name="step-2-install-azure-powershell"></a>2단계: Azure Powershell 설치
 
 관리자 권한으로 실행하는 Windows PowerShell 콘솔에서 다음 명령을 실행합니다.
 
@@ -70,7 +70,7 @@ Azure PowerShell에서는 Azure에 로그인한 후에 지정된 세션에 대�
 
 Azure PowerShell 모듈은 자주 업데이트됩니다. 모듈에 있지 않은 cmdlet 또는 매개 변수가 온라인 cmdlet 도움말에 포함되는 경우 최신 버전의 모듈을 다운로드하고 설치합니다. 모듈의 버전을 찾으려면 `(Get-InstalledModule Azure).Version`을 입력합니다.
 
-Azure에서 일반적인 일부 작업을 자동화할 수 있는 샘플 스크립트는 [Windows Azure 스크립트 센터](http://www.windowsazure.com/documentation/scripts/)를 참조하세요.
+Azure에서 일반적인 일부 작업을 자동화할 수 있는 샘플 스크립트는 [Windows Azure 스크립트 센터](https://www.windowsazure.com/documentation/scripts/)를 참조하세요.
 
 Windows PowerShell을 설치, 학습, 사용 및 사용자 지정하는 방법에 대한 일반적인 정보는 [Windows PowerShell을 사용하여 스크립팅](/powershell/scripting/learn/ps101/00-introduction)을 참조하세요.
 
