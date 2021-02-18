@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzActivityLogAlert.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzActivityLogAlert.md
-ms.openlocfilehash: 030564f700f399b1880d36e4dac628a9fc3efa35
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 6f171edc1bc9b3d5f4d1f2a5d3ec568fac42929f
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94214445"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100409667"
 ---
 # Get-AzActivityLogAlert
 
 ## SYNOPSIS
-하나 이상의 활동 로그 알림 리소스를 가져옵니다.
+하나 이상의 활동 로그 경고 리소스를 얻습니다.
 
-## 구문과
+## 구문
 
 ### GetByNameAndResourceGroup
 ```
@@ -32,36 +32,36 @@ Get-AzActivityLogAlert [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureC
  [<CommonParameters>]
 ```
 
-## 설명은
-**Get-AzActivityLogAlert** cmdlet은 하나 이상의 활동 로그 알림 리소스를 가져옵니다.
+## 설명
+**Get-AzActivityLogAlert** cmdlet은 하나 이상의 활동 로그 경고 리소스를 얻습니다.
 
-## 예제의
+## 예제
 
-### 예제 1: 구독 ID로 활동 로그 알림 가져오기
+### 예제 1: 구독 ID로 활동 로그 경고를 얻습니다.
 ```
 PS C:\>Get-AzActivityLogAlert
 ```
 
-이 명령은 현재 구독에 대 한 모든 활동 로그 알림을 나열 합니다.
+이 명령은 현재 구독에 대한 모든 활동 로그 경고를 나열합니다.
 
-### 예제 2: 지정 된 리소스 그룹에 대 한 활동 로그 알림 가져오기
+### 예제 2: 주어진 리소스 그룹에 대한 활동 로그 경고를 얻습니다.
 ```
 PS C:\>Get-AzActivityLogAlert -ResourceGroupName "Default-activityLogAlerts"
 ```
 
-이 명령은 지정 된 리소스 그룹에 대 한 활동 로그 알림을 나열 합니다.
+이 명령은 주어진 리소스 그룹에 대한 활동 로그 경고를 나열합니다.
 
-### 예제 3: 활동 로그 알림 가져오기
+### 예제 3: 활동 로그 경고를 얻습니다.
 ```
 PS C:\>Get-AzActivityLogAlert -ResourceGroupName "Default-activityLogAlerts" -Name "alert1"
 ```
 
-이 명령은 하나 (단일 요소가 있는 목록) 활동 로그 알림을 나열 합니다.
+이 명령은 하나의(단일 요소가 있는 목록) 활동 로그 경고를 나열합니다.
 
-## 변수
+## PARAMETERS
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독
+Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -75,8 +75,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -이름
-활동 로그 알림의 이름입니다.
+### -Name
+활동 로그 경고의 이름입니다.
 
 ```yaml
 Type: System.String
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 
 ### -ResourceGroupName
 경고 리소스가 있는 리소스 그룹의 이름입니다.
-Name이 null이 아니거나 비어 있지 않은 경우이 매개 변수는 string을 포함 하 고 비어 있어야 합니다.
+Name이 null이 아니거나 비어 있지 않은 경우 이 매개 변수는 비어 있지 않은 문자열을 포함해야 합니다.
 
 ```yaml
 Type: System.String
@@ -119,26 +119,25 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)을 참조 하세요.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
 
 ## 입력
 
-### System. 문자열
+### System.String
 
 ## 출력
 
-### Microsoft Azure. OutputClasses. PSActivityLogAlertResource
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
 [Set-AzActivityLogAlert](./Set-AzActivityLogAlert.md)
 
-[업데이트-AzActivityLogAlert](./Update-AzActivityLogAlert.md)
 
-[제거-AzActivityLogAlert](./Remove-AzActivityLogAlert.md)
+[Remove-AzActivityLogAlert](./Remove-AzActivityLogAlert.md)
 
-[새로운 AzActionGroup](./New-AzActionGroup.md)
+[New-AzActionGroup](./New-AzActionGroup.md)
 
-[새로운 AzActivityLogAlertCondition](./New-AzActivityLogAlertCondition.md)
+[New-AzActivityLogAlertCondition](./New-AzActivityLogAlertCondition.md)
