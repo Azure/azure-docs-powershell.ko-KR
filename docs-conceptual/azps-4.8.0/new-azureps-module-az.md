@@ -1,17 +1,17 @@
 ---
 title: Azure PowerShell Az 모듈 소개
 description: AzureRM 모듈을 대체하는 새로운 Azure PowerShell 모듈 Az을 소개합니다.
-ms.date: 05/20/2020
+ms.date: 02/12/2021
 ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: 4bf05058f576e7a4844f693384b4fa4aea08a042
-ms.sourcegitcommit: 071b8c40c837ed4b2d65ce778339110d9e0899ab
+ms.openlocfilehash: ffcc4d1e872d1a39e55b139c3ce712bed14fa0e9
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96427041"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100410959"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>새로운 Azure PowerShell Az 모듈 소개
 
@@ -66,6 +66,8 @@ Az 모듈에는 새 구문으로 업데이트하는 동안 기존 스크립트�
 > [!IMPORTANT]
 > cmdlet 이름이 별칭으로 지정되어 있더라도 여전히 Az cmdlet에 대한 새(또는 이름이 바뀐) 매개 변수가 있거나 반환 값이 변경되었을 수 있습니다. 별칭을 사용하도록 설정하여 마이그레이션을 처리할 것으로 기대하지 마세요! 업데이트가 필요할 수 있는 스크립트의 위치를 찾으려면 [호환성이 손상되는 변경 전체 목록](migrate-az-1.0.0.md)을 참조하세요.
 
-## <a name="continued-support-for-azurerm"></a>지속적인 AzureRM 지원
+## <a name="support-for-azurerm"></a>AzureRM 지원
 
-AzureRM은 더 이상 새 cmdlet 또는 기능을 받지 않습니다. 그러나 AzureRM 모듈은 여전히 공식적으로 유지되며 2020년 12월까지 버그 수정도 이루어집니다.
+이제 Az PowerShell 모듈에는 AzureRM PowerShell 모듈 등의 모든 기능이 포함되어 있으므로 2024년 2월 29일에 AzureRM PowerShell 모듈은 사용 중지됩니다.
+
+서비스 중단을 방지하려면 2024년 2월 29일까지 Az PowerShell 모듈을 사용하기 위해 AzureRM PowerShell 모듈을 사용하는 [스크립트를 업데이트하세요](https://aka.ms/azpsmigrate). 스크립트를 자동으로 업데이트하려면 [빠른 시작 가이드](/powershell/azure/quickstart-migrate-azurerm-to-az-automatically)를 따르세요.
