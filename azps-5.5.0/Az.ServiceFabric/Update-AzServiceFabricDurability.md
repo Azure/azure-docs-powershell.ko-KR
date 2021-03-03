@@ -5,17 +5,17 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.servicefab
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ServiceFabric/ServiceFabric/help/Update-AzServiceFabricDurability.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ServiceFabric/ServiceFabric/help/Update-AzServiceFabricDurability.md
-ms.openlocfilehash: 1a406ad937a545c9b2599966909809c7552ad7db
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: 1a0da9869ccfdc6b8344240a8367a4c8dfcd2350
+ms.sourcegitcommit: 608289d079b819df2b8d1a2f7935cc500367a312
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100189065"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101684895"
 ---
 # Update-AzServiceFabricDurability
 
 ## SYNOPSIS
-클러스터에서 노드 유형의 내구성 계층 또는 VmSku를 업데이트합니다.
+클러스터의 노드 형식의 내구성 계층 또는 VmSku를 업데이트합니다. 또한 연결된 Virtual Machine Scale Set의 Service Fabric VM 확장의 내구성 계층도 업데이트됩니다.
 
 ## 구문
 
@@ -37,10 +37,10 @@ PS c:> Update-AzServiceFabricDurability -ResourceGroupName 'Group1' -Name 'Conto
 
 이 명령은 NodeType 'nt1'의 내구성 계층을 실버로 변경합니다.
 
-## PARAMETERS
+## 매개 변수
 
 ### -DefaultProfile
-Azure와의 통신에 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
+Azure와 통신하는 데 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-노드 유형의 SKU를 지정합니다.
+노드 형식의 SKU를 지정합니다.
 
 ```yaml
 Type: System.String
@@ -130,8 +130,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Confirm
-cmdlet을 실행하기 전에 확인 메시지가 표시됩니다.
+### -확인
+cmdlet을 실행하기 전에 확인을 묻는 메시지가 표시됩니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-cmdlet이 실행되는 경우의 결과 표시 cmdlet이 실행되지 않습니다.
+cmdlet이 실행되는 경우 어떻게 될지 보여줍니다. cmdlet이 실행되지 않습니다.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 [다음](http://go.microsoft.com/fwlink/?LinkID=113216)about_CommonParameters.
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 를 [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
 ## 입력
 

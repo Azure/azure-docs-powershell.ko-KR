@@ -5,21 +5,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.servi
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Update-AzureRmServiceFabricDurability.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Update-AzureRmServiceFabricDurability.md
-ms.openlocfilehash: 9c82f0aab38fb5479f5344166a409b9b32f7447c
-ms.sourcegitcommit: f599b50d5e980197d1fca769378df90a842b42a1
+ms.openlocfilehash: aa53d34fcacca6515832eba9a6b302a4e56c7ccf
+ms.sourcegitcommit: 608289d079b819df2b8d1a2f7935cc500367a312
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "93532623"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685016"
 ---
 # Update-AzureRmServiceFabricDurability
 
 ## SYNOPSIS
-클러스터의 노드 형식에 대 한 내구성 계층 또는 VmSku를 업데이트 합니다.
+클러스터의 노드 형식의 내구성 계층 또는 VmSku를 업데이트합니다. 또한 연결된 Virtual Machine Scale Set의 Service Fabric VM 확장의 내구성 계층도 업데이트됩니다.
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
-## 구문과
+## 구문
 
 ```
 Update-AzureRmServiceFabricDurability [-ResourceGroupName] <String> [-Name] <String> -NodeType <String>
@@ -27,22 +27,22 @@ Update-AzureRmServiceFabricDurability [-ResourceGroupName] <String> [-Name] <Str
  [-Confirm] [<CommonParameters>]
 ```
 
-## 설명은
-**업데이트-AzureRmServiceFabricDurability** 를 사용 하 여 클러스터의 영속성 또는 SKU를 업데이트 합니다.
+## 설명
+**Update-AzureRmServiceFabricDurability를** 사용하여 클러스터의 내구성 또는 SKU를 업데이트합니다.
 
-## 예제의
+## 예제
 
 ### 예제 1
 ```
 PS c:> Update-AzureRmServiceFabricDurability -ResourceGroupName 'Group1' -Name 'Contoso01SFCluster' -DurabilityLevel Silver -NodeType nt1
 ```
 
-이 명령은 NodeType ' nt1 '의 영속성 계층을 은색으로 변경 합니다.
+이 명령은 NodeType 'nt1'의 내구성 계층을 실버로 변경합니다.
 
-## 변수
+## 매개 변수
 
 ### -DefaultProfile
-Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.
+Azure와 통신하는 데 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
 
 ```yaml
 Type: IAzureContextContainer
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -DurabilityLevel
-내구성 수준을 지정 합니다.
+내구성 수준을 지정합니다.
 
 ```yaml
 Type: DurabilityLevel
@@ -72,8 +72,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -이름
-클러스터의 이름을 지정 합니다.
+### -Name
+클러스터의 이름을 지정합니다.
 
 ```yaml
 Type: String
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -NodeType
-서비스 패브릭 노드 형식 이름을 지정 합니다.
+Service Fabric 노드 형식 이름을 지정합니다.
 
 ```yaml
 Type: String
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-리소스 그룹의 이름을 지정 합니다.
+리소스 그룹의 이름을 지정합니다.
 
 ```yaml
 Type: String
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-노드 형식의 SKU를 지정 합니다.
+노드 형식의 SKU를 지정합니다.
 
 ```yaml
 Type: String
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -확인
-Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.
+cmdlet을 실행하기 전에 확인을 묻는 메시지가 표시됩니다.
 
 ```yaml
 Type: SwitchParameter
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Cmdlet이 실행 되는 경우의 동작을 보여 줍니다. Cmdlet이 실행 되지 않습니다.
+cmdlet이 실행되는 경우 어떻게 될지 보여줍니다. cmdlet이 실행되지 않습니다.
 
 ```yaml
 Type: SwitchParameter
@@ -163,18 +163,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다. 자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 about_CommonParameters https://go.microsoft.com/fwlink/?LinkID=113216) 를 참조하세요.
 
 ## 입력
 
-### ServiceFabric. DurabilityLevel/.
-System. 문자열
+### Microsoft.Azure.Commands.ServiceFabric.Models.DurabilityLevel
+System.String
 
 ## 출력
 
-### ServiceFabric 클러스터의 모든.
+### Microsoft.Azure.Commands.ServiceFabric.Models.psCluster
 
-## 상속자
+## 참고 사항
 
 ## 관련 링크
 
