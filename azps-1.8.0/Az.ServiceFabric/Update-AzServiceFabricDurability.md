@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.servicefab
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ServiceFabric/ServiceFabric/help/Update-AzServiceFabricDurability.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ServiceFabric/ServiceFabric/help/Update-AzServiceFabricDurability.md
-ms.openlocfilehash: 283ca228ba44d2ec87cd926d23e0217eb67434eb
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 8aec0babd295e6208cd0b1b055880fcd71164592
+ms.sourcegitcommit: 608289d079b819df2b8d1a2f7935cc500367a312
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93699100"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101684860"
 ---
-# <span data-ttu-id="6a274-101">Update-AzServiceFabricDurability</span><span class="sxs-lookup"><span data-stu-id="6a274-101">Update-AzServiceFabricDurability</span></span>
+# <span data-ttu-id="09837-101">Update-AzServiceFabricDurability</span><span class="sxs-lookup"><span data-stu-id="09837-101">Update-AzServiceFabricDurability</span></span>
 
-## <span data-ttu-id="6a274-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="6a274-102">SYNOPSIS</span></span>
-<span data-ttu-id="6a274-103">클러스터의 노드 형식에 대 한 내구성 계층 또는 VmSku를 업데이트 합니다.</span><span class="sxs-lookup"><span data-stu-id="6a274-103">Update the durability tier or VmSku of a node type in the cluster.</span></span>
+## <span data-ttu-id="09837-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="09837-102">SYNOPSIS</span></span>
+<span data-ttu-id="09837-103">클러스터의 노드 형식의 내구성 계층 또는 VmSku를 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="09837-103">Update the durability tier or VmSku of a node type in the cluster.</span></span> <span data-ttu-id="09837-104">또한 연결된 Virtual Machine Scale Set의 Service Fabric VM 확장의 내구성 계층도 업데이트됩니다.</span><span class="sxs-lookup"><span data-stu-id="09837-104">It will also update the durability tier in the Service Fabric VM extension on the associated Virtual Machine Scale Set.</span></span>
 
-## <span data-ttu-id="6a274-104">구문과</span><span class="sxs-lookup"><span data-stu-id="6a274-104">SYNTAX</span></span>
+## <span data-ttu-id="09837-105">구문</span><span class="sxs-lookup"><span data-stu-id="09837-105">SYNTAX</span></span>
 
 ```
 Update-AzServiceFabricDurability [-ResourceGroupName] <String> [-Name] <String> -NodeType <String>
@@ -25,22 +25,22 @@ Update-AzServiceFabricDurability [-ResourceGroupName] <String> [-Name] <String> 
  [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="6a274-105">설명은</span><span class="sxs-lookup"><span data-stu-id="6a274-105">DESCRIPTION</span></span>
-<span data-ttu-id="6a274-106">**업데이트-AzServiceFabricDurability** 를 사용 하 여 클러스터의 영속성 또는 SKU를 업데이트 합니다.</span><span class="sxs-lookup"><span data-stu-id="6a274-106">Use **Update-AzServiceFabricDurability** to update durability or SKU of the cluster.</span></span>
+## <span data-ttu-id="09837-106">설명</span><span class="sxs-lookup"><span data-stu-id="09837-106">DESCRIPTION</span></span>
+<span data-ttu-id="09837-107">**Update-AzServiceFabricDurability를** 사용하여 클러스터의 내구성 또는 SKU를 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="09837-107">Use **Update-AzServiceFabricDurability** to update durability or SKU of the cluster.</span></span>
 
-## <span data-ttu-id="6a274-107">예제의</span><span class="sxs-lookup"><span data-stu-id="6a274-107">EXAMPLES</span></span>
+## <span data-ttu-id="09837-108">예제</span><span class="sxs-lookup"><span data-stu-id="09837-108">EXAMPLES</span></span>
 
-### <span data-ttu-id="6a274-108">예제 1</span><span class="sxs-lookup"><span data-stu-id="6a274-108">Example 1</span></span>
+### <span data-ttu-id="09837-109">예제 1</span><span class="sxs-lookup"><span data-stu-id="09837-109">Example 1</span></span>
 ```
 PS c:> Update-AzServiceFabricDurability -ResourceGroupName 'Group1' -Name 'Contoso01SFCluster' -DurabilityLevel Silver -NodeType nt1
 ```
 
-<span data-ttu-id="6a274-109">이 명령은 NodeType ' nt1 '의 영속성 계층을 은색으로 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="6a274-109">This command changes durability tier of the NodeType 'nt1' to silver.</span></span>
+<span data-ttu-id="09837-110">이 명령은 NodeType 'nt1'의 내구성 계층을 실버로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="09837-110">This command changes durability tier of the NodeType 'nt1' to silver.</span></span>
 
-## <span data-ttu-id="6a274-110">변수</span><span class="sxs-lookup"><span data-stu-id="6a274-110">PARAMETERS</span></span>
+## <span data-ttu-id="09837-111">매개 변수</span><span class="sxs-lookup"><span data-stu-id="09837-111">PARAMETERS</span></span>
 
-### <span data-ttu-id="6a274-111">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="6a274-111">-DefaultProfile</span></span>
-<span data-ttu-id="6a274-112">Azure와 통신 하는 데 사용 되는 자격 증명, 계정, 테 넌 트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="6a274-112">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+### <span data-ttu-id="09837-112">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="09837-112">-DefaultProfile</span></span>
+<span data-ttu-id="09837-113">Azure와 통신하는 데 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="09837-113">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -54,8 +54,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="6a274-113">-DurabilityLevel</span><span class="sxs-lookup"><span data-stu-id="6a274-113">-DurabilityLevel</span></span>
-<span data-ttu-id="6a274-114">내구성 수준을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6a274-114">Specify durability level.</span></span>
+### <span data-ttu-id="09837-114">-DurabilityLevel</span><span class="sxs-lookup"><span data-stu-id="09837-114">-DurabilityLevel</span></span>
+<span data-ttu-id="09837-115">내구성 수준을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="09837-115">Specify durability level.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.ServiceFabric.Models.DurabilityLevel
@@ -70,8 +70,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="6a274-115">-이름</span><span class="sxs-lookup"><span data-stu-id="6a274-115">-Name</span></span>
-<span data-ttu-id="6a274-116">클러스터의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6a274-116">Specify the name of the cluster.</span></span>
+### <span data-ttu-id="09837-116">-Name</span><span class="sxs-lookup"><span data-stu-id="09837-116">-Name</span></span>
+<span data-ttu-id="09837-117">클러스터의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="09837-117">Specify the name of the cluster.</span></span>
 
 ```yaml
 Type: System.String
@@ -85,8 +85,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="6a274-117">-NodeType</span><span class="sxs-lookup"><span data-stu-id="6a274-117">-NodeType</span></span>
-<span data-ttu-id="6a274-118">서비스 패브릭 노드 형식 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6a274-118">Specify Service Fabric node type name.</span></span>
+### <span data-ttu-id="09837-118">-NodeType</span><span class="sxs-lookup"><span data-stu-id="09837-118">-NodeType</span></span>
+<span data-ttu-id="09837-119">Service Fabric 노드 형식 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="09837-119">Specify Service Fabric node type name.</span></span>
 
 ```yaml
 Type: System.String
@@ -100,8 +100,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="6a274-119">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="6a274-119">-ResourceGroupName</span></span>
-<span data-ttu-id="6a274-120">리소스 그룹의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6a274-120">Specifies the name of the resource group.</span></span>
+### <span data-ttu-id="09837-120">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="09837-120">-ResourceGroupName</span></span>
+<span data-ttu-id="09837-121">리소스 그룹의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="09837-121">Specifies the name of the resource group.</span></span>
 
 ```yaml
 Type: System.String
@@ -115,8 +115,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="6a274-121">-Sku</span><span class="sxs-lookup"><span data-stu-id="6a274-121">-Sku</span></span>
-<span data-ttu-id="6a274-122">노드 형식의 SKU를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6a274-122">Specify the SKU of the node type.</span></span>
+### <span data-ttu-id="09837-122">-Sku</span><span class="sxs-lookup"><span data-stu-id="09837-122">-Sku</span></span>
+<span data-ttu-id="09837-123">노드 형식의 SKU를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="09837-123">Specify the SKU of the node type.</span></span>
 
 ```yaml
 Type: System.String
@@ -130,8 +130,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="6a274-123">-확인</span><span class="sxs-lookup"><span data-stu-id="6a274-123">-Confirm</span></span>
-<span data-ttu-id="6a274-124">Cmdlet을 실행 하기 전에 확인 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="6a274-124">Prompts you for confirmation before running the cmdlet.</span></span>
+### <span data-ttu-id="09837-124">-확인</span><span class="sxs-lookup"><span data-stu-id="09837-124">-Confirm</span></span>
+<span data-ttu-id="09837-125">cmdlet을 실행하기 전에 확인을 묻는 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="09837-125">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -145,8 +145,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="6a274-125">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="6a274-125">-WhatIf</span></span>
-<span data-ttu-id="6a274-126">Cmdlet이 실행 되는 경우의 동작을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6a274-126">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="6a274-127">Cmdlet이 실행 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6a274-127">The cmdlet is not run.</span></span>
+### <span data-ttu-id="09837-126">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="09837-126">-WhatIf</span></span>
+<span data-ttu-id="09837-127">cmdlet이 실행되는 경우 어떻게 될지 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="09837-127">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="09837-128">cmdlet이 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="09837-128">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -160,19 +160,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="6a274-128">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="6a274-128">CommonParameters</span></span>
-<span data-ttu-id="6a274-129">이 cmdlet은-Debug,-ErrorAction,-Erroraction,-InformationAction,-Informationaction,-OutVariable,-OutBuffer,-PipelineVariable,-Verbose,-WarningAction,-WarningVariable 등의 공통 매개 변수를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="6a274-129">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="6a274-130">자세한 내용은 about_CommonParameters (을 참조 하세요 https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="6a274-130">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="09837-129">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="09837-129">CommonParameters</span></span>
+<span data-ttu-id="09837-130">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="09837-130">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="09837-131">자세한 내용은 about_CommonParameters https://go.microsoft.com/fwlink/?LinkID=113216) 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="09837-131">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="6a274-131">입력</span><span class="sxs-lookup"><span data-stu-id="6a274-131">INPUTS</span></span>
+## <span data-ttu-id="09837-132">입력</span><span class="sxs-lookup"><span data-stu-id="09837-132">INPUTS</span></span>
 
-### <span data-ttu-id="6a274-132">System. 문자열</span><span class="sxs-lookup"><span data-stu-id="6a274-132">System.String</span></span>
+### <span data-ttu-id="09837-133">System.String</span><span class="sxs-lookup"><span data-stu-id="09837-133">System.String</span></span>
 
-### <span data-ttu-id="6a274-133">ServiceFabric. DurabilityLevel/.</span><span class="sxs-lookup"><span data-stu-id="6a274-133">Microsoft.Azure.Commands.ServiceFabric.Models.DurabilityLevel</span></span>
+### <span data-ttu-id="09837-134">Microsoft.Azure.Commands.ServiceFabric.Models.DurabilityLevel</span><span class="sxs-lookup"><span data-stu-id="09837-134">Microsoft.Azure.Commands.ServiceFabric.Models.DurabilityLevel</span></span>
 
-## <span data-ttu-id="6a274-134">출력</span><span class="sxs-lookup"><span data-stu-id="6a274-134">OUTPUTS</span></span>
+## <span data-ttu-id="09837-135">출력</span><span class="sxs-lookup"><span data-stu-id="09837-135">OUTPUTS</span></span>
 
-### <span data-ttu-id="6a274-135">ServiceFabric 클러스터의 모든.</span><span class="sxs-lookup"><span data-stu-id="6a274-135">Microsoft.Azure.Commands.ServiceFabric.Models.PSCluster</span></span>
+### <span data-ttu-id="09837-136">Microsoft.Azure.Commands.ServiceFabric.Models.PSCluster</span><span class="sxs-lookup"><span data-stu-id="09837-136">Microsoft.Azure.Commands.ServiceFabric.Models.PSCluster</span></span>
 
-## <span data-ttu-id="6a274-136">상속자</span><span class="sxs-lookup"><span data-stu-id="6a274-136">NOTES</span></span>
+## <span data-ttu-id="09837-137">참고 사항</span><span class="sxs-lookup"><span data-stu-id="09837-137">NOTES</span></span>
 
-## <span data-ttu-id="6a274-137">관련 링크</span><span class="sxs-lookup"><span data-stu-id="6a274-137">RELATED LINKS</span></span>
+## <span data-ttu-id="09837-138">관련 링크</span><span class="sxs-lookup"><span data-stu-id="09837-138">RELATED LINKS</span></span>
