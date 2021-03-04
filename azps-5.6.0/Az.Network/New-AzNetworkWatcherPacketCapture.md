@@ -1,0 +1,402 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+Module Name: Az.Network
+online version: https://docs.microsoft.com/powershell/module/az.network/new-aznetworkwatcherpacketcapture
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkWatcherPacketCapture.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkWatcherPacketCapture.md
+ms.openlocfilehash: 6a318d99717eebb51d5a24ebc7757b57b05f396e
+ms.sourcegitcommit: 4dfb0cc533b83f77afdcfbe2618c1e6c8d221330
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101958379"
+---
+# <span data-ttu-id="72138-101">New-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="72138-101">New-AzNetworkWatcherPacketCapture</span></span>
+
+## <span data-ttu-id="72138-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="72138-102">SYNOPSIS</span></span>
+<span data-ttu-id="72138-103">새 패킷 캡처 리소스를 만들고 VM에서 패킷 캡처 세션을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="72138-103">Creates a new packet capture resource and starts a packet capture session on a VM.</span></span>
+
+## <span data-ttu-id="72138-104">구문</span><span class="sxs-lookup"><span data-stu-id="72138-104">SYNTAX</span></span>
+
+### <span data-ttu-id="72138-105">SetByResource(기본값)</span><span class="sxs-lookup"><span data-stu-id="72138-105">SetByResource (Default)</span></span>
+```
+New-AzNetworkWatcherPacketCapture -NetworkWatcher <PSNetworkWatcher> -PacketCaptureName <String>
+ -TargetVirtualMachineId <String> [-StorageAccountId <String>] [-StoragePath <String>]
+ [-LocalFilePath <String>] [-BytesToCapturePerPacket <Int32>] [-TotalBytesPerSession <Int32>]
+ [-TimeLimitInSeconds <Int32>] [-Filter <PSPacketCaptureFilter[]>] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="72138-106">SetByName</span><span class="sxs-lookup"><span data-stu-id="72138-106">SetByName</span></span>
+```
+New-AzNetworkWatcherPacketCapture -NetworkWatcherName <String> -ResourceGroupName <String>
+ -PacketCaptureName <String> -TargetVirtualMachineId <String> [-StorageAccountId <String>]
+ [-StoragePath <String>] [-LocalFilePath <String>] [-BytesToCapturePerPacket <Int32>]
+ [-TotalBytesPerSession <Int32>] [-TimeLimitInSeconds <Int32>] [-Filter <PSPacketCaptureFilter[]>] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="72138-107">SetByLocation</span><span class="sxs-lookup"><span data-stu-id="72138-107">SetByLocation</span></span>
+```
+New-AzNetworkWatcherPacketCapture -Location <String> -PacketCaptureName <String>
+ -TargetVirtualMachineId <String> [-StorageAccountId <String>] [-StoragePath <String>]
+ [-LocalFilePath <String>] [-BytesToCapturePerPacket <Int32>] [-TotalBytesPerSession <Int32>]
+ [-TimeLimitInSeconds <Int32>] [-Filter <PSPacketCaptureFilter[]>] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="72138-108">설명</span><span class="sxs-lookup"><span data-stu-id="72138-108">DESCRIPTION</span></span>
+<span data-ttu-id="72138-109">New-AzNetworkWatcherPacketCapture cmdlet은 새 패킷 캡처 리소스를 만들고 VM에서 패킷 캡처 세션을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="72138-109">The New-AzNetworkWatcherPacketCapture cmdlet creates a new packet capture resource and starts a packet capture session on a VM.</span></span>
+<span data-ttu-id="72138-110">패킷 캡처 세션의 길이는 시간 제약 조건 또는 크기 제약 조건을 통해 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="72138-110">The length of the Packet Capture sessions can be configured via a time constraint or a size constraint.</span></span> <span data-ttu-id="72138-111">각 패킷에 대해 캡처된 데이터 양도 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="72138-111">The amount of data captured for each packet can also be configured.</span></span>
+<span data-ttu-id="72138-112">필터는 특정 패킷 캡처 세션에 적용할 수 있어 캡처된 패킷 유형을 사용자 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="72138-112">Filters can be applied to a given packet capture session, allowing you to customize the type of packets captured.</span></span> <span data-ttu-id="72138-113">필터는 주소 범위, 로컬 및 & 및 원격 포트 범위, 캡처할 세션 수준 & 로컬 및 원격 IP 주소의 패킷을 제한할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="72138-113">Filters can restrict packets on local and remote IP addresses & address ranges, local and remote ports & port ranges, and the session level protocol to be captured.</span></span> <span data-ttu-id="72138-114">필터는 작성 가능하고 여러 필터를 적용하여 캡처의 세분성을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="72138-114">Filters are composable, and multiple filters can be applied to provide you with granularity of capture.</span></span>
+
+## <span data-ttu-id="72138-115">예제</span><span class="sxs-lookup"><span data-stu-id="72138-115">EXAMPLES</span></span>
+
+### <span data-ttu-id="72138-116">예제 1: 여러 필터를 사용하여 패킷 캡처 만들기</span><span class="sxs-lookup"><span data-stu-id="72138-116">Example 1: Create a Packet Capture with multiple filters</span></span>
+```
+$nw = Get-AzResource | Where {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" } 
+$networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName 
+
+$storageAccount = Get-AzStorageAccount -ResourceGroupName contosoResourceGroup -Name contosostorage123
+
+$filter1 = New-AzPacketCaptureFilterConfig -Protocol TCP -RemoteIPAddress "1.1.1.1-255.255.255" -LocalIPAddress "10.0.0.3" -LocalPort "1-65535" -RemotePort "20;80;443"
+$filter2 = New-AzPacketCaptureFilterConfig -Protocol UDP 
+New-AzNetworkWatcherPacketCapture -NetworkWatcher $networkWatcher -TargetVirtualMachineId $vm.Id -PacketCaptureName "PacketCaptureTest" -StorageAccountId $storageAccount.id -TimeLimitInSeconds 60 -Filter $filter1, $filter2
+```
+
+<span data-ttu-id="72138-117">이 예제에서는 여러 필터와 시간 제한이 있는 "PacketCaptureTest"라는 패킷 캡처를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="72138-117">In this example we create a packet capture named "PacketCaptureTest" with multiple filters and a time limit.</span></span> <span data-ttu-id="72138-118">세션이 완료되면 지정된 저장소 계정에 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="72138-118">Once the session is complete, it will be saved to the specified storage account.</span></span> <span data-ttu-id="72138-119">참고: 패킷 캡처를 만들기 위해 Azure Network Watcher 확장을 대상 가상 머신에 설치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="72138-119">Note: The Azure Network Watcher extension must be installed on the target virtual machine to create packet captures.</span></span>
+
+## <span data-ttu-id="72138-120">매개 변수</span><span class="sxs-lookup"><span data-stu-id="72138-120">PARAMETERS</span></span>
+
+### <span data-ttu-id="72138-121">-AsJob</span><span class="sxs-lookup"><span data-stu-id="72138-121">-AsJob</span></span>
+<span data-ttu-id="72138-122">백그라운드에서 cmdlet 실행</span><span class="sxs-lookup"><span data-stu-id="72138-122">Run cmdlet in the background</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="72138-123">-BytesToCapturePerPacket</span><span class="sxs-lookup"><span data-stu-id="72138-123">-BytesToCapturePerPacket</span></span>
+<span data-ttu-id="72138-124">패킷당 캡처하는 bytes입니다.</span><span class="sxs-lookup"><span data-stu-id="72138-124">Bytes to capture per packet.</span></span>
+
+```yaml
+Type: System.Nullable`1[System.Int32]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="72138-125">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="72138-125">-DefaultProfile</span></span>
+<span data-ttu-id="72138-126">Azure와 통신하는 데 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="72138-126">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="72138-127">-Filter</span><span class="sxs-lookup"><span data-stu-id="72138-127">-Filter</span></span>
+<span data-ttu-id="72138-128">패킷 캡처 세션에 대한 필터입니다.</span><span class="sxs-lookup"><span data-stu-id="72138-128">Filters for packet capture session.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Network.Models.PSPacketCaptureFilter[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="72138-129">-LocalFilePath</span><span class="sxs-lookup"><span data-stu-id="72138-129">-LocalFilePath</span></span>
+<span data-ttu-id="72138-130">로컬 파일 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="72138-130">Local file path.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="72138-131">-Location</span><span class="sxs-lookup"><span data-stu-id="72138-131">-Location</span></span>
+<span data-ttu-id="72138-132">네트워크 감시자 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="72138-132">Location of the network watcher.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: SetByLocation
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="72138-133">-NetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="72138-133">-NetworkWatcher</span></span>
+<span data-ttu-id="72138-134">네트워크 감시자 리소스입니다.</span><span class="sxs-lookup"><span data-stu-id="72138-134">The network watcher resource.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
+Parameter Sets: SetByResource
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="72138-135">-NetworkWatcherName</span><span class="sxs-lookup"><span data-stu-id="72138-135">-NetworkWatcherName</span></span>
+<span data-ttu-id="72138-136">네트워크 감시자 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="72138-136">The name of network watcher.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: SetByName
+Aliases: Name
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="72138-137">-PacketCaptureName</span><span class="sxs-lookup"><span data-stu-id="72138-137">-PacketCaptureName</span></span>
+<span data-ttu-id="72138-138">패킷 캡처 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="72138-138">The packet capture name.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="72138-139">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="72138-139">-ResourceGroupName</span></span>
+<span data-ttu-id="72138-140">네트워크 감시자 리소스 그룹의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="72138-140">The name of the network watcher resource group.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: SetByName
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="72138-141">-StorageAccountId</span><span class="sxs-lookup"><span data-stu-id="72138-141">-StorageAccountId</span></span>
+<span data-ttu-id="72138-142">저장소 계정 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="72138-142">Storage account Id.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="72138-143">-StoragePath</span><span class="sxs-lookup"><span data-stu-id="72138-143">-StoragePath</span></span>
+<span data-ttu-id="72138-144">저장소 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="72138-144">Storage path.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="72138-145">-TargetVirtualMachineId</span><span class="sxs-lookup"><span data-stu-id="72138-145">-TargetVirtualMachineId</span></span>
+<span data-ttu-id="72138-146">대상 가상 머신 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="72138-146">The target virtual machine ID.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="72138-147">-TimeLimitInSeconds</span><span class="sxs-lookup"><span data-stu-id="72138-147">-TimeLimitInSeconds</span></span>
+<span data-ttu-id="72138-148">시간 제한(초)입니다.</span><span class="sxs-lookup"><span data-stu-id="72138-148">Time limit in seconds.</span></span>
+
+```yaml
+Type: System.Nullable`1[System.Int32]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="72138-149">-TotalBytesPerSession</span><span class="sxs-lookup"><span data-stu-id="72138-149">-TotalBytesPerSession</span></span>
+<span data-ttu-id="72138-150">세션당 총 bytes입니다.</span><span class="sxs-lookup"><span data-stu-id="72138-150">Total bytes per session.</span></span>
+
+```yaml
+Type: System.Nullable`1[System.Int32]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="72138-151">-확인</span><span class="sxs-lookup"><span data-stu-id="72138-151">-Confirm</span></span>
+<span data-ttu-id="72138-152">cmdlet을 실행하기 전에 확인을 묻는 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="72138-152">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="72138-153">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="72138-153">-WhatIf</span></span>
+<span data-ttu-id="72138-154">cmdlet이 실행되는 경우 어떻게 될지 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="72138-154">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="72138-155">cmdlet이 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="72138-155">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="72138-156">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="72138-156">CommonParameters</span></span>
+<span data-ttu-id="72138-157">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="72138-157">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="72138-158">자세한 내용은 about_CommonParameters http://go.microsoft.com/fwlink/?LinkID=113216) 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="72138-158">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="72138-159">입력</span><span class="sxs-lookup"><span data-stu-id="72138-159">INPUTS</span></span>
+
+### <span data-ttu-id="72138-160">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="72138-160">Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher</span></span>
+
+### <span data-ttu-id="72138-161">System.String</span><span class="sxs-lookup"><span data-stu-id="72138-161">System.String</span></span>
+
+### <span data-ttu-id="72138-162">System.Nullable'1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span><span class="sxs-lookup"><span data-stu-id="72138-162">System.Nullable\`1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</span></span>
+
+## <span data-ttu-id="72138-163">출력</span><span class="sxs-lookup"><span data-stu-id="72138-163">OUTPUTS</span></span>
+
+### <span data-ttu-id="72138-164">Microsoft.Azure.Commands.Network.Models.PSPacketCaptureResult</span><span class="sxs-lookup"><span data-stu-id="72138-164">Microsoft.Azure.Commands.Network.Models.PSPacketCaptureResult</span></span>
+
+## <span data-ttu-id="72138-165">참고 사항</span><span class="sxs-lookup"><span data-stu-id="72138-165">NOTES</span></span>
+<span data-ttu-id="72138-166">키워드: azure, azurerm, arm, 리소스, 관리, 관리자, 네트워크, 네트워킹, 네트워크 감시자, 패킷, 캡처, 트래픽</span><span class="sxs-lookup"><span data-stu-id="72138-166">Keywords: azure, azurerm, arm, resource, management, manager, network, networking, network watcher, packet, capture, traffic</span></span> 
+
+## <span data-ttu-id="72138-167">관련 링크</span><span class="sxs-lookup"><span data-stu-id="72138-167">RELATED LINKS</span></span>
+
+[<span data-ttu-id="72138-168">New-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="72138-168">New-AzNetworkWatcher</span></span>](./New-AzNetworkWatcher.md)
+
+[<span data-ttu-id="72138-169">Get-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="72138-169">Get-AzNetworkWatcher</span></span>](./Get-AzNetworkWatcher.md)
+
+[<span data-ttu-id="72138-170">Remove-AzNetworkWatcher</span><span class="sxs-lookup"><span data-stu-id="72138-170">Remove-AzNetworkWatcher</span></span>](./Remove-AzNetworkWatcher.md)
+
+[<span data-ttu-id="72138-171">Get-AzNetworkWatcherNextHop</span><span class="sxs-lookup"><span data-stu-id="72138-171">Get-AzNetworkWatcherNextHop</span></span>](./Get-AzNetworkWatcherNextHop.md)
+
+[<span data-ttu-id="72138-172">Get-AzNetworkWatcherSecurityGroupView</span><span class="sxs-lookup"><span data-stu-id="72138-172">Get-AzNetworkWatcherSecurityGroupView</span></span>](./Get-AzNetworkWatcherSecurityGroupView.md)
+
+[<span data-ttu-id="72138-173">Get-AzNetworkWatcherTopology</span><span class="sxs-lookup"><span data-stu-id="72138-173">Get-AzNetworkWatcherTopology</span></span>](./Get-AzNetworkWatcherTopology.md)
+
+[<span data-ttu-id="72138-174">Start-AzNetworkWatcherResourceTroubleshooting</span><span class="sxs-lookup"><span data-stu-id="72138-174">Start-AzNetworkWatcherResourceTroubleshooting</span></span>](./Start-AzNetworkWatcherResourceTroubleshooting.md)
+
+[<span data-ttu-id="72138-175">New-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="72138-175">New-AzNetworkWatcherPacketCapture</span></span>](./New-AzNetworkWatcherPacketCapture.md)
+
+[<span data-ttu-id="72138-176">New-AzPacketCaptureFilterConfig</span><span class="sxs-lookup"><span data-stu-id="72138-176">New-AzPacketCaptureFilterConfig</span></span>](./New-AzPacketCaptureFilterConfig.md)
+
+[<span data-ttu-id="72138-177">Get-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="72138-177">Get-AzNetworkWatcherPacketCapture</span></span>](./Get-AzNetworkWatcherPacketCapture.md)
+
+[<span data-ttu-id="72138-178">Remove-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="72138-178">Remove-AzNetworkWatcherPacketCapture</span></span>](./Remove-AzNetworkWatcherPacketCapture.md)
+
+[<span data-ttu-id="72138-179">Stop-AzNetworkWatcherPacketCapture</span><span class="sxs-lookup"><span data-stu-id="72138-179">Stop-AzNetworkWatcherPacketCapture</span></span>](./Stop-AzNetworkWatcherPacketCapture.md)
+
+[<span data-ttu-id="72138-180">New-AzNetworkWatcherProtocolConfiguration</span><span class="sxs-lookup"><span data-stu-id="72138-180">New-AzNetworkWatcherProtocolConfiguration</span></span>](./New-AzNetworkWatcherProtocolConfiguration.md)
+
+[<span data-ttu-id="72138-181">Test-AzNetworkWatcherIPFlow</span><span class="sxs-lookup"><span data-stu-id="72138-181">Test-AzNetworkWatcherIPFlow</span></span>](./Test-AzNetworkWatcherIPFlow.md)
+
+[<span data-ttu-id="72138-182">Test-AzNetworkWatcherConnectivity</span><span class="sxs-lookup"><span data-stu-id="72138-182">Test-AzNetworkWatcherConnectivity</span></span>](./Test-AzNetworkWatcherConnectivity.md)
+
+[<span data-ttu-id="72138-183">Stop-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="72138-183">Stop-AzNetworkWatcherConnectionMonitor</span></span>](./Stop-AzNetworkWatcherConnectionMonitor.md)
+
+[<span data-ttu-id="72138-184">Start-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="72138-184">Start-AzNetworkWatcherConnectionMonitor</span></span>](./Start-AzNetworkWatcherConnectionMonitor.md)
+
+[<span data-ttu-id="72138-185">Set-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="72138-185">Set-AzNetworkWatcherConnectionMonitor</span></span>](./Set-AzNetworkWatcherConnectionMonitor.md)
+
+[<span data-ttu-id="72138-186">Set-AzNetworkWatcherConfigFlowLog</span><span class="sxs-lookup"><span data-stu-id="72138-186">Set-AzNetworkWatcherConfigFlowLog</span></span>](./Set-AzNetworkWatcherConfigFlowLog.md)
+
+[<span data-ttu-id="72138-187">Remove-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="72138-187">Remove-AzNetworkWatcherConnectionMonitor</span></span>](./Remove-AzNetworkWatcherConnectionMonitor.md)
+
+[<span data-ttu-id="72138-188">New-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="72138-188">New-AzNetworkWatcherConnectionMonitor</span></span>](./New-AzNetworkWatcherConnectionMonitor.md)
+
+[<span data-ttu-id="72138-189">Get-AzNetworkWatcherTroubleshootingResult</span><span class="sxs-lookup"><span data-stu-id="72138-189">Get-AzNetworkWatcherTroubleshootingResult</span></span>](./Get-AzNetworkWatcherTroubleshootingResult.md)
+
+[<span data-ttu-id="72138-190">Get-AzNetworkWatcherReachabilityReport</span><span class="sxs-lookup"><span data-stu-id="72138-190">Get-AzNetworkWatcherReachabilityReport</span></span>](./Get-AzNetworkWatcherReachabilityReport.md)
+
+[<span data-ttu-id="72138-191">Get-AzNetworkWatcherReachabilityProvidersList</span><span class="sxs-lookup"><span data-stu-id="72138-191">Get-AzNetworkWatcherReachabilityProvidersList</span></span>](./Get-AzNetworkWatcherReachabilityProvidersList.md)
+
+[<span data-ttu-id="72138-192">Get-AzNetworkWatcherFlowLogStatus</span><span class="sxs-lookup"><span data-stu-id="72138-192">Get-AzNetworkWatcherFlowLogStatus</span></span>](./Get-AzNetworkWatcherFlowLogStatus.md)
+
+[<span data-ttu-id="72138-193">Get-AzNetworkWatcherConnectionMonitorReport</span><span class="sxs-lookup"><span data-stu-id="72138-193">Get-AzNetworkWatcherConnectionMonitorReport</span></span>](./Get-AzNetworkWatcherConnectionMonitorReport.md)
+
+[<span data-ttu-id="72138-194">Get-AzNetworkWatcherConnectionMonitor</span><span class="sxs-lookup"><span data-stu-id="72138-194">Get-AzNetworkWatcherConnectionMonitor</span></span>](./Get-AzNetworkWatcherConnectionMonitor)
+
+
