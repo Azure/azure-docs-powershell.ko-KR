@@ -1,0 +1,130 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.dll-Help.xml
+Module Name: Az.SecurityInsights
+online version: https://docs.microsoft.com/powershell/module/az.securityinsights/new-azsentinelincidentowner
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/SecurityInsights/SecurityInsights/help/New-AzSentinelIncidentOwner.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/SecurityInsights/SecurityInsights/help/New-AzSentinelIncidentOwner.md
+ms.openlocfilehash: b8981d40f3412dd77ca120cd80d29fb160915e8c
+ms.sourcegitcommit: 4dfb0cc533b83f77afdcfbe2618c1e6c8d221330
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101950960"
+---
+# <span data-ttu-id="34a21-101">New-AzSentinelIncidentOwner</span><span class="sxs-lookup"><span data-stu-id="34a21-101">New-AzSentinelIncidentOwner</span></span>
+
+## <span data-ttu-id="34a21-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="34a21-102">SYNOPSIS</span></span>
+<span data-ttu-id="34a21-103">인시던트 소유자 개체를 만들어 인시던트 소유자를 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="34a21-103">Create Incident Owner object to update an incident owner.</span></span>
+
+## <span data-ttu-id="34a21-104">구문</span><span class="sxs-lookup"><span data-stu-id="34a21-104">SYNTAX</span></span>
+
+```
+New-AzSentinelIncidentOwner -AssignedTo <String> -Email <String> -ObjectId <String> -UserPrincipalName <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="34a21-105">설명</span><span class="sxs-lookup"><span data-stu-id="34a21-105">DESCRIPTION</span></span>
+<span data-ttu-id="34a21-106">**New-AzSentinelIncidentOwner** cmdlet은 인시던트 업데이트를 위해 메모리에 인시던트 소유자 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="34a21-106">The **New-AzSentinelIncidentOwner** cmdlet creates a Incident Owner object in memory to update an incident.</span></span>
+
+## <span data-ttu-id="34a21-107">예제</span><span class="sxs-lookup"><span data-stu-id="34a21-107">EXAMPLES</span></span>
+
+### <span data-ttu-id="34a21-108">예제 1</span><span class="sxs-lookup"><span data-stu-id="34a21-108">Example 1</span></span>
+```powershell
+PS C:\> $Incident = Get-AzSentinelIncident -ResourceGroupName "MyResourceGroup" -WorkspaceName "MyWorkspaceName" -IncidentId "MyIncidentId"
+PS C:\> $owner = New-AzSentinelIncidentOwner -AssignedTo "First Last" -Email "user@domain.com" -Objectid "userobjectId" -UserPrincipalName "user@domain.com"
+PS C:\> $Incident.Owner = $owner
+PS C:\> $Incident | Set-AzSentinelIncident
+```
+
+<span data-ttu-id="34a21-109">이 예제에서는 **IncidentOwner를 만들고** 인시던트를 새 소유자에게 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="34a21-109">This example creates an **IncidentOwner** and updates an Incident to the new owner.</span></span>
+
+## <span data-ttu-id="34a21-110">매개 변수</span><span class="sxs-lookup"><span data-stu-id="34a21-110">PARAMETERS</span></span>
+
+### <span data-ttu-id="34a21-111">-AssignedTo</span><span class="sxs-lookup"><span data-stu-id="34a21-111">-AssignedTo</span></span>
+<span data-ttu-id="34a21-112">인시던트 소유자 - 할당</span><span class="sxs-lookup"><span data-stu-id="34a21-112">Incident Owner - Assigned To</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="34a21-113">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="34a21-113">-DefaultProfile</span></span>
+<span data-ttu-id="34a21-114">Azure와 통신하는 데 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="34a21-114">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="34a21-115">-email</span><span class="sxs-lookup"><span data-stu-id="34a21-115">-Email</span></span>
+<span data-ttu-id="34a21-116">인시던트 소유자 - 전자 메일</span><span class="sxs-lookup"><span data-stu-id="34a21-116">Incident Owner - Email</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="34a21-117">-ObjectId</span><span class="sxs-lookup"><span data-stu-id="34a21-117">-ObjectId</span></span>
+<span data-ttu-id="34a21-118">인시던트 소유자 - ObjectId</span><span class="sxs-lookup"><span data-stu-id="34a21-118">Incident Owner - ObjectId</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="34a21-119">-UserPrincipalName</span><span class="sxs-lookup"><span data-stu-id="34a21-119">-UserPrincipalName</span></span>
+<span data-ttu-id="34a21-120">인시던트 소유자 - 사용자 주체 이름</span><span class="sxs-lookup"><span data-stu-id="34a21-120">Incident Owner - User Principal Name</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="34a21-121">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="34a21-121">CommonParameters</span></span>
+<span data-ttu-id="34a21-122">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="34a21-122">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="34a21-123">자세한 내용은 를 [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)</span><span class="sxs-lookup"><span data-stu-id="34a21-123">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="34a21-124">입력</span><span class="sxs-lookup"><span data-stu-id="34a21-124">INPUTS</span></span>
+
+### <span data-ttu-id="34a21-125">없음</span><span class="sxs-lookup"><span data-stu-id="34a21-125">None</span></span>
+## <span data-ttu-id="34a21-126">출력</span><span class="sxs-lookup"><span data-stu-id="34a21-126">OUTPUTS</span></span>
+
+### <span data-ttu-id="34a21-127">Microsoft.Azure.Commands.SecurityInsights.Models.Incidents.PSSentinelIncident</span><span class="sxs-lookup"><span data-stu-id="34a21-127">Microsoft.Azure.Commands.SecurityInsights.Models.Incidents.PSSentinelIncident</span></span>
+## <span data-ttu-id="34a21-128">참고 사항</span><span class="sxs-lookup"><span data-stu-id="34a21-128">NOTES</span></span>
+
+## <span data-ttu-id="34a21-129">관련 링크</span><span class="sxs-lookup"><span data-stu-id="34a21-129">RELATED LINKS</span></span>
