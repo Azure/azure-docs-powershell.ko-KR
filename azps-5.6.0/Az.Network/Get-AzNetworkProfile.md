@@ -1,0 +1,232 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+Module Name: Az.Network
+online version: https://docs.microsoft.com/powershell/module/az.network/get-aznetworkprofile
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNetworkProfile.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNetworkProfile.md
+ms.openlocfilehash: f2f18ac77f923247f2bef0e78802a2f05cf302d6
+ms.sourcegitcommit: 4dfb0cc533b83f77afdcfbe2618c1e6c8d221330
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101954539"
+---
+# <span data-ttu-id="757e0-101">Get-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="757e0-101">Get-AzNetworkProfile</span></span>
+
+## <span data-ttu-id="757e0-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="757e0-102">SYNOPSIS</span></span>
+<span data-ttu-id="757e0-103">기존 네트워크 프로필 최상위 리소스 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="757e0-103">Gets an existing network profile top level resource</span></span>
+
+## <span data-ttu-id="757e0-104">구문</span><span class="sxs-lookup"><span data-stu-id="757e0-104">SYNTAX</span></span>
+
+### <span data-ttu-id="757e0-105">GetByResourceNameNoExpandParameterSet(기본값)</span><span class="sxs-lookup"><span data-stu-id="757e0-105">GetByResourceNameNoExpandParameterSet (Default)</span></span>
+```
+Get-AzNetworkProfile [-ResourceGroupName <String>] [-Name <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
+```
+
+### <span data-ttu-id="757e0-106">GetByResourceNameExpandParameterSet</span><span class="sxs-lookup"><span data-stu-id="757e0-106">GetByResourceNameExpandParameterSet</span></span>
+```
+Get-AzNetworkProfile -ResourceGroupName <String> -Name <String> -ExpandResource <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="757e0-107">GetByResourceIdExpandParameterSet</span><span class="sxs-lookup"><span data-stu-id="757e0-107">GetByResourceIdExpandParameterSet</span></span>
+```
+Get-AzNetworkProfile -ResourceId <String> -ExpandResource <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
+```
+
+### <span data-ttu-id="757e0-108">GetByResourceIdNoExpandParameterSet</span><span class="sxs-lookup"><span data-stu-id="757e0-108">GetByResourceIdNoExpandParameterSet</span></span>
+```
+Get-AzNetworkProfile -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="757e0-109">설명</span><span class="sxs-lookup"><span data-stu-id="757e0-109">DESCRIPTION</span></span>
+<span data-ttu-id="757e0-110">**Get-AzNetworkProfile** cmdlet은 기존 네트워크 프로필 최상위 리소스를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="757e0-110">The **Get-AzNetworkProfile** cmdlet retrieves an existing network profile top level resource</span></span>
+
+## <span data-ttu-id="757e0-111">예제</span><span class="sxs-lookup"><span data-stu-id="757e0-111">EXAMPLES</span></span>
+
+### <span data-ttu-id="757e0-112">예제 1</span><span class="sxs-lookup"><span data-stu-id="757e0-112">Example 1</span></span>
+```powershell
+$networkProfile = Get-AzNetworkProfile -Name np1 -ResourceGroupName rg1
+
+ProvisioningState                           : Succeeded
+ContainerNetworkInterfaces                  : {}
+ContainerNetworkInterfaceConfigurations     : {}
+ContainerNetworkInterfacesText              : []
+ContainerNetworkInterfaceConfigurationsText : []
+ResourceGroupName                           : rg1
+Location                                    : westus
+ResourceGuid                                : 00000000-0000-0000-0000-000000000000
+Type                                        : Microsoft.Network/networkProfiles
+Tag                                         :
+TagsTable                                   :
+Name                                        : np1
+Etag                                        : W/"00000000-0000-0000-0000-000000000000"
+Id                                          : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1
+                                              /providers/Microsoft.Network/networkProfiles/np1
+```
+
+<span data-ttu-id="757e0-113">리소스 그룹 rg1에서 네트워크 프로필 np1을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="757e0-113">This retrieves the network profile np1 in resource group rg1</span></span>
+
+### <span data-ttu-id="757e0-114">예제 2</span><span class="sxs-lookup"><span data-stu-id="757e0-114">Example 2</span></span>
+```powershell
+$networkProfile = Get-AzNetworkProfile -Name np*
+
+ProvisioningState                           : Succeeded
+ContainerNetworkInterfaces                  : {}
+ContainerNetworkInterfaceConfigurations     : {}
+ContainerNetworkInterfacesText              : []
+ContainerNetworkInterfaceConfigurationsText : []
+ResourceGroupName                           : rg1
+Location                                    : westus
+ResourceGuid                                : 00000000-0000-0000-0000-000000000000
+Type                                        : Microsoft.Network/networkProfiles
+Tag                                         :
+TagsTable                                   :
+Name                                        : np1
+Etag                                        : W/"00000000-0000-0000-0000-000000000000"
+Id                                          : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1
+                                              /providers/Microsoft.Network/networkProfiles/np1
+
+ProvisioningState                           : Succeeded
+ContainerNetworkInterfaces                  : {}
+ContainerNetworkInterfaceConfigurations     : {}
+ContainerNetworkInterfacesText              : []
+ContainerNetworkInterfaceConfigurationsText : []
+ResourceGroupName                           : rg1
+Location                                    : westus
+ResourceGuid                                : 00000000-0000-0000-0000-000000000000
+Type                                        : Microsoft.Network/networkProfiles
+Tag                                         :
+TagsTable                                   :
+Name                                        : np2
+Etag                                        : W/"00000000-0000-0000-0000-000000000000"
+Id                                          : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1
+                                              /providers/Microsoft.Network/networkProfiles/np2
+```
+
+<span data-ttu-id="757e0-115">이렇게 하여 "np"로 시작하는 네트워크 프로필을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="757e0-115">This retrieves the network profiles that start with "np"</span></span>
+
+## <span data-ttu-id="757e0-116">매개 변수</span><span class="sxs-lookup"><span data-stu-id="757e0-116">PARAMETERS</span></span>
+
+### <span data-ttu-id="757e0-117">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="757e0-117">-DefaultProfile</span></span>
+<span data-ttu-id="757e0-118">Azure와 통신하는 데 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="757e0-118">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="757e0-119">-ExpandResource</span><span class="sxs-lookup"><span data-stu-id="757e0-119">-ExpandResource</span></span>
+<span data-ttu-id="757e0-120">확장할 리소스 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="757e0-120">The resource reference to be expanded.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: GetByResourceNameExpandParameterSet, GetByResourceIdExpandParameterSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="757e0-121">-Name</span><span class="sxs-lookup"><span data-stu-id="757e0-121">-Name</span></span>
+<span data-ttu-id="757e0-122">네트워크 프로필의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="757e0-122">The name of the network profile.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: GetByResourceNameNoExpandParameterSet
+Aliases: ResourceName
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: True
+```
+
+```yaml
+Type: System.String
+Parameter Sets: GetByResourceNameExpandParameterSet
+Aliases: ResourceName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: True
+```
+
+### <span data-ttu-id="757e0-123">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="757e0-123">-ResourceGroupName</span></span>
+<span data-ttu-id="757e0-124">네트워크 프로필의 리소스 그룹 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="757e0-124">The resource group name of the network profile.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: GetByResourceNameNoExpandParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: True
+```
+
+```yaml
+Type: System.String
+Parameter Sets: GetByResourceNameExpandParameterSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: True
+```
+
+### <span data-ttu-id="757e0-125">-ResourceId</span><span class="sxs-lookup"><span data-stu-id="757e0-125">-ResourceId</span></span>
+<span data-ttu-id="757e0-126">네트워크 프로필의 Azure 리소스 관리자 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="757e0-126">The Azure resource manager id of the network profile.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: GetByResourceIdExpandParameterSet, GetByResourceIdNoExpandParameterSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="757e0-127">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="757e0-127">CommonParameters</span></span>
+<span data-ttu-id="757e0-128">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="757e0-128">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="757e0-129">자세한 내용은 를 [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)</span><span class="sxs-lookup"><span data-stu-id="757e0-129">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="757e0-130">입력</span><span class="sxs-lookup"><span data-stu-id="757e0-130">INPUTS</span></span>
+
+### <span data-ttu-id="757e0-131">System.String</span><span class="sxs-lookup"><span data-stu-id="757e0-131">System.String</span></span>
+
+## <span data-ttu-id="757e0-132">출력</span><span class="sxs-lookup"><span data-stu-id="757e0-132">OUTPUTS</span></span>
+
+### <span data-ttu-id="757e0-133">Microsoft.Azure.Commands.Network.Models.PSNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="757e0-133">Microsoft.Azure.Commands.Network.Models.PSNetworkProfile</span></span>
+
+## <span data-ttu-id="757e0-134">참고 사항</span><span class="sxs-lookup"><span data-stu-id="757e0-134">NOTES</span></span>
+
+## <span data-ttu-id="757e0-135">관련 링크</span><span class="sxs-lookup"><span data-stu-id="757e0-135">RELATED LINKS</span></span>
+
+[<span data-ttu-id="757e0-136">New-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="757e0-136">New-AzNetworkProfile</span></span>](./New-AzNetworkProfile.md)
+
+[<span data-ttu-id="757e0-137">Remove-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="757e0-137">Remove-AzNetworkProfile</span></span>](./Remove-AzNetworkProfile.md)
+
+[<span data-ttu-id="757e0-138">Set-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="757e0-138">Set-AzNetworkProfile</span></span>](./Set-AzNetworkProfile.md)
