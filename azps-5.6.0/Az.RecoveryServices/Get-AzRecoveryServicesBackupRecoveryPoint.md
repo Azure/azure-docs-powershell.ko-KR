@@ -1,0 +1,201 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
+Module Name: Az.RecoveryServices
+ms.assetid: 838026E4-F001-434C-86F0-B2A838E93A9C
+online version: https://docs.microsoft.com/powershell/module/az.recoveryservices/get-azrecoveryservicesbackuprecoverypoint
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupRecoveryPoint.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupRecoveryPoint.md
+ms.openlocfilehash: 9e9aab3a71e976d9c41694702dae7a8087da9a36
+ms.sourcegitcommit: 4dfb0cc533b83f77afdcfbe2618c1e6c8d221330
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101970379"
+---
+# <span data-ttu-id="fd90e-101">Get-AzRecoveryServicesBackupRecoveryPoint</span><span class="sxs-lookup"><span data-stu-id="fd90e-101">Get-AzRecoveryServicesBackupRecoveryPoint</span></span>
+
+## <span data-ttu-id="fd90e-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="fd90e-102">SYNOPSIS</span></span>
+
+<span data-ttu-id="fd90e-103">백업된 항목에 대한 복구 지점을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="fd90e-103">Gets the recovery points for a backed up item.</span></span>
+
+## <span data-ttu-id="fd90e-104">구문</span><span class="sxs-lookup"><span data-stu-id="fd90e-104">SYNTAX</span></span>
+
+### <span data-ttu-id="fd90e-105">NoFilterParameterSet(기본값)</span><span class="sxs-lookup"><span data-stu-id="fd90e-105">NoFilterParameterSet (Default)</span></span>
+```
+Get-AzRecoveryServicesBackupRecoveryPoint [-Item] <ItemBase> [-UseSecondaryRegion] [-VaultId <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="fd90e-106">DateTimeFilter</span><span class="sxs-lookup"><span data-stu-id="fd90e-106">DateTimeFilter</span></span>
+```
+Get-AzRecoveryServicesBackupRecoveryPoint [[-StartDate] <DateTime>] [[-EndDate] <DateTime>] [-Item] <ItemBase>
+ [-UseSecondaryRegion] [-VaultId <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### <span data-ttu-id="fd90e-107">RecoveryPointId</span><span class="sxs-lookup"><span data-stu-id="fd90e-107">RecoveryPointId</span></span>
+```
+Get-AzRecoveryServicesBackupRecoveryPoint [-Item] <ItemBase> [-RecoveryPointId] <String>
+ [[-KeyFileDownloadLocation] <String>] [-UseSecondaryRegion] [-VaultId <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
+```
+
+## <span data-ttu-id="fd90e-108">설명</span><span class="sxs-lookup"><span data-stu-id="fd90e-108">DESCRIPTION</span></span>
+
+<span data-ttu-id="fd90e-109">**Get-AzRecoveryServicesBackupRecoveryPoint** cmdlet은 백업된 Azure Backup 항목에 대한 복구 지점을 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="fd90e-109">The **Get-AzRecoveryServicesBackupRecoveryPoint** cmdlet gets the recovery points for a backed up Azure Backup item.</span></span>
+<span data-ttu-id="fd90e-110">항목이 백업된 후 **AzureRmRecoveryServicesBackupRecoveryPoint** 개체에는 하나 이상의 복구 지점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd90e-110">After an item has been backed up, an **AzureRmRecoveryServicesBackupRecoveryPoint** object has one or more recovery points.</span></span>
+<span data-ttu-id="fd90e-111">-VaultId 매개 변수를 사용하여 자격 증명 모음 컨텍스트를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="fd90e-111">Set the vault context by using the -VaultId parameter.</span></span>
+
+## <span data-ttu-id="fd90e-112">예제</span><span class="sxs-lookup"><span data-stu-id="fd90e-112">EXAMPLES</span></span>
+
+### <span data-ttu-id="fd90e-113">예제 1: 항목의 지난 주에서 복구 지점을 얻게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="fd90e-113">Example 1: Get recovery points from the last week for an item</span></span>
+
+```powershell
+PS C:\> $vault = Get-AzRecoveryServicesVault -ResourceGroupName "resourceGroup" -Name "vaultName"
+PS C:\> $StartDate = (Get-Date).AddDays(-7)
+PS C:\> $EndDate = Get-Date
+PS C:\> $Container = Get-AzRecoveryServicesBackupContainer -ContainerType AzureVM -Status Registered -Name "V2VM" -VaultId $vault.ID
+PS C:\> $BackupItem = Get-AzRecoveryServicesBackupItem -ContainerType AzureVM -WorkloadType AzureVM -VaultId $vault.ID
+PS C:\> $RP = Get-AzRecoveryServicesBackupRecoveryPoint -Item $BackupItem -StartDate $Startdate.ToUniversalTime() -EndDate $Enddate.ToUniversalTime() -VaultId $vault.ID
+```
+
+<span data-ttu-id="fd90e-114">첫 번째 명령은 VaultName을 기반으로 자격 증명 모음 개체를 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="fd90e-114">The first command gets vault object based on vaultName.</span></span> <span data-ttu-id="fd90e-115">두 번째 명령은 7일 전의 날짜를 얻은 다음, 해당 날짜를 $StartDate 변수에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="fd90e-115">The second command gets the date from seven days ago, and then stores it in the $StartDate variable.</span></span>
+<span data-ttu-id="fd90e-116">세 번째 명령은 오늘 날짜를 얻은 다음, $EndDate 변수에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="fd90e-116">The third command gets today's date, and then stores it in the $EndDate variable.</span></span>
+<span data-ttu-id="fd90e-117">네 번째 명령은 AzureVM 백업 컨테이너를 얻게 하여 해당 컨테이너를 $Container 변수에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="fd90e-117">The fourth command gets AzureVM backup containers, and stores them in the $Container variable.</span></span> <span data-ttu-id="fd90e-118">다섯 번째 명령은 workloadType, vaultId를 기반으로 백업 항목을 한 다음, $BackupItem 변수에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="fd90e-118">The fifth command gets the backup item based on workloadType, vaultId and then stores it in the $BackupItem variable.</span></span>
+<span data-ttu-id="fd90e-119">마지막 명령은 에 있는 항목의 복구 지점 배열을 $BackupItem 다음, $RP 변수에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="fd90e-119">The last command gets an array of recovery points for the item in $BackupItem, and then stores them in the $RP variable.</span></span>
+
+## <span data-ttu-id="fd90e-120">매개 변수</span><span class="sxs-lookup"><span data-stu-id="fd90e-120">PARAMETERS</span></span>
+
+### <span data-ttu-id="fd90e-121">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="fd90e-121">-DefaultProfile</span></span>
+
+<span data-ttu-id="fd90e-122">Azure와 통신하는 데 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="fd90e-122">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="fd90e-123">-EndDate</span><span class="sxs-lookup"><span data-stu-id="fd90e-123">-EndDate</span></span>
+
+<span data-ttu-id="fd90e-124">날짜 범위의 끝을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="fd90e-124">Specifies the end of the date range.</span></span>
+
+```yaml
+Type: System.Nullable`1[System.DateTime]
+Parameter Sets: DateTimeFilter
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="fd90e-125">-항목</span><span class="sxs-lookup"><span data-stu-id="fd90e-125">-Item</span></span>
+
+<span data-ttu-id="fd90e-126">이 cmdlet이 복구 지점을 얻을 항목을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="fd90e-126">Specifies the item for which this cmdlet gets recovery points.</span></span>
+<span data-ttu-id="fd90e-127">**AzureRmRecoveryServicesBackupItem** 개체를 얻은 경우 **Get-AzRecoveryServicesBackupItem** cmdlet을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="fd90e-127">To obtain an **AzureRmRecoveryServicesBackupItem** object, use the **Get-AzRecoveryServicesBackupItem** cmdlet.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemBase
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="fd90e-128">-KeyFileDownloadLocation</span><span class="sxs-lookup"><span data-stu-id="fd90e-128">-KeyFileDownloadLocation</span></span>
+
+<span data-ttu-id="fd90e-129">암호화된 가상 머신의 KeyVault 키를 복원하기 위해 입력 파일을 다운로드할 위치를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="fd90e-129">Specifies the location to download the input file to restore the KeyVault key for an encrypted virtual machine.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: RecoveryPointId
+Aliases:
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="fd90e-130">-RecoveryPointId</span><span class="sxs-lookup"><span data-stu-id="fd90e-130">-RecoveryPointId</span></span>
+
+<span data-ttu-id="fd90e-131">복구 지점 ID를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="fd90e-131">Specifies the recovery point ID.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: RecoveryPointId
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="fd90e-132">-StartDate</span><span class="sxs-lookup"><span data-stu-id="fd90e-132">-StartDate</span></span>
+
+<span data-ttu-id="fd90e-133">날짜 범위의 시작을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="fd90e-133">Specifies the start of the date range.</span></span>
+
+```yaml
+Type: System.Nullable`1[System.DateTime]
+Parameter Sets: DateTimeFilter
+Aliases:
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="fd90e-134">-VaultId</span><span class="sxs-lookup"><span data-stu-id="fd90e-134">-VaultId</span></span>
+
+<span data-ttu-id="fd90e-135">ARM 자격 증명 모음의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="fd90e-135">ARM ID of the Recovery Services Vault.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="fd90e-136">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="fd90e-136">CommonParameters</span></span>
+<span data-ttu-id="fd90e-137">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="fd90e-137">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="fd90e-138">자세한 내용은 를 [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)</span><span class="sxs-lookup"><span data-stu-id="fd90e-138">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="fd90e-139">입력</span><span class="sxs-lookup"><span data-stu-id="fd90e-139">INPUTS</span></span>
+
+### <span data-ttu-id="fd90e-140">Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemBase</span><span class="sxs-lookup"><span data-stu-id="fd90e-140">Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemBase</span></span>
+
+### <span data-ttu-id="fd90e-141">System.String</span><span class="sxs-lookup"><span data-stu-id="fd90e-141">System.String</span></span>
+
+## <span data-ttu-id="fd90e-142">출력</span><span class="sxs-lookup"><span data-stu-id="fd90e-142">OUTPUTS</span></span>
+
+### <span data-ttu-id="fd90e-143">Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.RecoveryPointBase</span><span class="sxs-lookup"><span data-stu-id="fd90e-143">Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.RecoveryPointBase</span></span>
+
+## <span data-ttu-id="fd90e-144">참고 사항</span><span class="sxs-lookup"><span data-stu-id="fd90e-144">NOTES</span></span>
+
+## <span data-ttu-id="fd90e-145">관련 링크</span><span class="sxs-lookup"><span data-stu-id="fd90e-145">RELATED LINKS</span></span>
+
+[<span data-ttu-id="fd90e-146">Get-AzRecoveryServicesBackupContainer</span><span class="sxs-lookup"><span data-stu-id="fd90e-146">Get-AzRecoveryServicesBackupContainer</span></span>](./Get-AzRecoveryServicesBackupContainer.md)
+
+[<span data-ttu-id="fd90e-147">Get-AzRecoveryServicesBackupItem</span><span class="sxs-lookup"><span data-stu-id="fd90e-147">Get-AzRecoveryServicesBackupItem</span></span>](./Get-AzRecoveryServicesBackupItem.md)
