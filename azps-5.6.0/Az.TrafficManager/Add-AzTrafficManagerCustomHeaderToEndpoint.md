@@ -1,0 +1,165 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.TrafficManager.dll-Help.xml
+Module Name: Az.TrafficManager
+ms.assetid: 25E3F297-1D91-4102-B4D3-1E7195A5D33E
+online version: https://docs.microsoft.com/powershell/module/az.trafficmanager/add-aztrafficmanagercustomheadertoendpoint
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/TrafficManager/TrafficManager/help/Add-AzTrafficManagerCustomHeaderToEndpoint.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/TrafficManager/TrafficManager/help/Add-AzTrafficManagerCustomHeaderToEndpoint.md
+ms.openlocfilehash: 4a24953dd763c54cba7454bf9e46bb9373b0f450
+ms.sourcegitcommit: 4dfb0cc533b83f77afdcfbe2618c1e6c8d221330
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101987406"
+---
+# <span data-ttu-id="9b114-101">Add-AzTrafficManagerCustomHeaderToEndpoint</span><span class="sxs-lookup"><span data-stu-id="9b114-101">Add-AzTrafficManagerCustomHeaderToEndpoint</span></span>
+
+## <span data-ttu-id="9b114-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="9b114-102">SYNOPSIS</span></span>
+<span data-ttu-id="9b114-103">로컬 Traffic Manager 엔드포인트 개체에 사용자 지정 헤더 정보를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="9b114-103">Adds custom header information to a local Traffic Manager endpoint object.</span></span>
+
+## <span data-ttu-id="9b114-104">구문</span><span class="sxs-lookup"><span data-stu-id="9b114-104">SYNTAX</span></span>
+
+```
+Add-AzTrafficManagerCustomHeaderToEndpoint -Name <String> -Value <String>
+ -TrafficManagerEndpoint <TrafficManagerEndpoint> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="9b114-105">설명</span><span class="sxs-lookup"><span data-stu-id="9b114-105">DESCRIPTION</span></span>
+<span data-ttu-id="9b114-106">**Add-AzTrafficManagerCustomHeaderToEndpoint** cmdlet은 로컬 Azure Traffic Manager 엔드포인트 개체에 사용자 지정 헤더 정보를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="9b114-106">The **Add-AzTrafficManagerCustomHeaderToEndpoint** cmdlet adds custom header information to a local Azure Traffic Manager endpoint object.</span></span>
+<span data-ttu-id="9b114-107">New-AzTrafficManagerEndpoint cmdlet을 사용하여 엔드포인트를 Get-AzTrafficManagerEndpoint 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b114-107">You can get an endpoint by using the New-AzTrafficManagerEndpoint or Get-AzTrafficManagerEndpoint cmdlets.</span></span>
+
+<span data-ttu-id="9b114-108">이 cmdlet은 로컬 엔드포인트 개체에서 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="9b114-108">This cmdlet operates on the local endpoint object.</span></span>
+<span data-ttu-id="9b114-109">cmdlet을 사용하여 Traffic Manager의 엔드포인트에 Set-AzTrafficManagerEndpoint 커밋합니다.</span><span class="sxs-lookup"><span data-stu-id="9b114-109">Commit your changes to the endpoint for Traffic Manager by using the Set-AzTrafficManagerEndpoint cmdlet.</span></span>
+
+## <span data-ttu-id="9b114-110">예제</span><span class="sxs-lookup"><span data-stu-id="9b114-110">EXAMPLES</span></span>
+
+### <span data-ttu-id="9b114-111">예제 1: 엔드포인트에 사용자 지정 헤더 정보 추가</span><span class="sxs-lookup"><span data-stu-id="9b114-111">Example 1: Add custom header information to an endpoint</span></span>
+```
+PS C:\> $TrafficManagerEndpoint = New-AzTrafficManagerEndpoint -EndpointStatus Enabled -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" -Type AzureEndpoints -Priority 1 -TargetResourceId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Default-Web-CentralUS/providers/Microsoft.Web/sites/contoso-web-app" -Weight 10
+PS C:\> Add-AzTrafficManagerCustomHeaderToEndpoint -TrafficManagerEndpoint $TrafficManagerEndpoint -Name "host" -Value "www.contoso.com"
+PS C:\> Set-AzTrafficManagerEndpoint -TrafficManagerEndpoint $TrafficManagerEndpoint
+```
+
+<span data-ttu-id="9b114-112">첫 번째 명령은 **New-AzTrafficManagerEndpoint** cmdlet을 사용하여 Azure Traffic Manager 엔드포인트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9b114-112">The first command creates an Azure Traffic Manager endpoint by using the **New-AzTrafficManagerEndpoint** cmdlet.</span></span>
+<span data-ttu-id="9b114-113">명령은 로컬 엔드포인트를 $TrafficManagerEndpoint 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="9b114-113">The command stores the local endpoint in the $TrafficManagerEndpoint variable.</span></span>
+<span data-ttu-id="9b114-114">두 번째 명령은 사용자 지정 헤더 정보를 에 저장된 엔드포인트에 $TrafficManagerEndpoint.</span><span class="sxs-lookup"><span data-stu-id="9b114-114">The second command adds custom header information to the endpoint stored in $TrafficManagerEndpoint.</span></span>
+<span data-ttu-id="9b114-115">마지막 명령은 Traffic Manager의 엔드포인트를 업데이트하여 로컬 값과 $TrafficManagerEndpoint.</span><span class="sxs-lookup"><span data-stu-id="9b114-115">The final command updates the endpoint in Traffic Manager to match the local value in $TrafficManagerEndpoint.</span></span>
+
+## <span data-ttu-id="9b114-116">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9b114-116">PARAMETERS</span></span>
+
+### <span data-ttu-id="9b114-117">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="9b114-117">-DefaultProfile</span></span>
+<span data-ttu-id="9b114-118">Azure와 통신하는 데 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="9b114-118">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="9b114-119">-Name</span><span class="sxs-lookup"><span data-stu-id="9b114-119">-Name</span></span>
+<span data-ttu-id="9b114-120">추가할 사용자 지정 헤더 정보의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="9b114-120">Specifies the name of the custom header information to be added.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="9b114-121">-TrafficManagerEndpoint</span><span class="sxs-lookup"><span data-stu-id="9b114-121">-TrafficManagerEndpoint</span></span>
+<span data-ttu-id="9b114-122">로컬 **TrafficManagerEndpoint 개체를 지정합니다.**</span><span class="sxs-lookup"><span data-stu-id="9b114-122">Specifies a local **TrafficManagerEndpoint** object.</span></span>
+<span data-ttu-id="9b114-123">이 cmdlet은 이 로컬 개체를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="9b114-123">This cmdlet modifies this local object.</span></span>
+<span data-ttu-id="9b114-124">**TrafficManagerEndpoint** 개체를 얻은 경우 Get-AzTrafficManagerEndpoint cmdlet을 New-AzTrafficManagerEndpoint 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="9b114-124">To obtain a **TrafficManagerEndpoint** object, use the Get-AzTrafficManagerEndpoint or New-AzTrafficManagerEndpoint cmdlet.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerEndpoint
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="9b114-125">-Value</span><span class="sxs-lookup"><span data-stu-id="9b114-125">-Value</span></span>
+<span data-ttu-id="9b114-126">추가할 사용자 지정 헤더 정보의 값을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="9b114-126">Specifies the value of the custom header information to be added.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="9b114-127">-확인</span><span class="sxs-lookup"><span data-stu-id="9b114-127">-Confirm</span></span>
+<span data-ttu-id="9b114-128">cmdlet을 실행하기 전에 확인을 묻는 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="9b114-128">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="9b114-129">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="9b114-129">-WhatIf</span></span>
+<span data-ttu-id="9b114-130">cmdlet이 실행되는 경우 어떻게 될지 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="9b114-130">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="9b114-131">cmdlet이 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9b114-131">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="9b114-132">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="9b114-132">CommonParameters</span></span>
+<span data-ttu-id="9b114-133">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="9b114-133">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="9b114-134">자세한 내용은 about_CommonParameters http://go.microsoft.com/fwlink/?LinkID=113216) 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9b114-134">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="9b114-135">입력</span><span class="sxs-lookup"><span data-stu-id="9b114-135">INPUTS</span></span>
+
+### <span data-ttu-id="9b114-136">Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerEndpoint</span><span class="sxs-lookup"><span data-stu-id="9b114-136">Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerEndpoint</span></span>
+
+## <span data-ttu-id="9b114-137">출력</span><span class="sxs-lookup"><span data-stu-id="9b114-137">OUTPUTS</span></span>
+
+### <span data-ttu-id="9b114-138">Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerEndpoint</span><span class="sxs-lookup"><span data-stu-id="9b114-138">Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerEndpoint</span></span>
+
+## <span data-ttu-id="9b114-139">참고 사항</span><span class="sxs-lookup"><span data-stu-id="9b114-139">NOTES</span></span>
+
+## <span data-ttu-id="9b114-140">관련 링크</span><span class="sxs-lookup"><span data-stu-id="9b114-140">RELATED LINKS</span></span>
+
+[<span data-ttu-id="9b114-141">Remove-AzTrafficManagerCustomHeaderFromEndpoint</span><span class="sxs-lookup"><span data-stu-id="9b114-141">Remove-AzTrafficManagerCustomHeaderFromEndpoint</span></span>](./Remove-AzTrafficManagerCustomHeaderFromEndpoint.md)
+
+[<span data-ttu-id="9b114-142">New-AzTrafficManagerEndpoint</span><span class="sxs-lookup"><span data-stu-id="9b114-142">New-AzTrafficManagerEndpoint</span></span>](./New-AzTrafficManagerEndpoint.md)
+
+[<span data-ttu-id="9b114-143">Get-AzTrafficManagerProfile</span><span class="sxs-lookup"><span data-stu-id="9b114-143">Get-AzTrafficManagerProfile</span></span>](./Get-AzTrafficManagerEndpoint.md)
+
+[<span data-ttu-id="9b114-144">Set-AzTrafficManagerEndpoint</span><span class="sxs-lookup"><span data-stu-id="9b114-144">Set-AzTrafficManagerEndpoint</span></span>](./Set-AzTrafficManagerEndpoint.md)
