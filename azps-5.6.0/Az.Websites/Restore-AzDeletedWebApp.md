@@ -1,0 +1,345 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
+Module Name: Az.Websites
+online version: https://docs.microsoft.com/powershell/module/az.websites/restore-azdeletedwebapp
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/Restore-AzDeletedWebApp.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/Restore-AzDeletedWebApp.md
+ms.openlocfilehash: 81807c92b336bd171d0890f5b3e948ec11313023
+ms.sourcegitcommit: 4dfb0cc533b83f77afdcfbe2618c1e6c8d221330
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102002064"
+---
+# <span data-ttu-id="db37d-101">Restore-AzDeletedWebApp</span><span class="sxs-lookup"><span data-stu-id="db37d-101">Restore-AzDeletedWebApp</span></span>
+
+## <span data-ttu-id="db37d-102">SYNOPSIS</span><span class="sxs-lookup"><span data-stu-id="db37d-102">SYNOPSIS</span></span>
+<span data-ttu-id="db37d-103">삭제된 웹앱을 새 웹앱 또는 기존 웹앱으로 복원합니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-103">Restores a deleted web app to a new or existing web app.</span></span>
+
+## <span data-ttu-id="db37d-104">구문</span><span class="sxs-lookup"><span data-stu-id="db37d-104">SYNTAX</span></span>
+
+### <span data-ttu-id="db37d-105">FromDeletedResourceName(기본값)</span><span class="sxs-lookup"><span data-stu-id="db37d-105">FromDeletedResourceName (Default)</span></span>
+```
+Restore-AzDeletedWebApp [-ResourceGroupName] <String> [-Name] <String> [[-Slot] <String>] [-Location <String>]
+ [-DeletedId <String>] [-TargetResourceGroupName <String>] [-TargetName <String>] [-TargetSlot <String>]
+ [-TargetAppServicePlanName <String>] [-RestoreContentOnly] [-UseDisasterRecovery] [-Force] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="db37d-106">FromDeletedApp</span><span class="sxs-lookup"><span data-stu-id="db37d-106">FromDeletedApp</span></span>
+```
+Restore-AzDeletedWebApp [-TargetResourceGroupName <String>] [-DeletedId <String>] [-TargetName <String>] 
+ [-TargetSlot <String>] [-TargetAppServicePlanName <String>] [-RestoreContentOnly] [-UseDisasterRecovery] 
+ [-Force] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-InputObject] <PSAzureDeletedWebApp> 
+ [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+## <span data-ttu-id="db37d-107">설명</span><span class="sxs-lookup"><span data-stu-id="db37d-107">DESCRIPTION</span></span>
+<span data-ttu-id="db37d-108">**Restore-AzDeletedWebApp** cmdlet은 삭제된 웹앱을 복원합니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-108">The **Restore-AzDeletedWebApp** cmdlet restores a deleted web app.</span></span> <span data-ttu-id="db37d-109">TargetResourceGroupName, TargetName 및 TargetSlot에서 지정한 웹앱은 삭제된 웹앱의 내용 및 설정으로 덮어질 것입니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-109">The web app specified by TargetResourceGroupName, TargetName, and TargetSlot will be overwritten with the contents and settings of the deleted web app.</span></span> <span data-ttu-id="db37d-110">대상 매개 변수를 지정하지 않으면 삭제된 웹앱의 리소스 그룹, 이름 및 슬롯이 자동으로 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-110">If the target parameters are not specified, they will automatically be filled with the deleted web app's resource group, name, and slot.</span></span> <span data-ttu-id="db37d-111">대상 웹앱이 없는 경우 TargetAppServicePlanName에서 지정한 앱 서비스 계획에 자동으로 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-111">If the target web app does not exist, it will automatically be created in the app service plan specified by TargetAppServicePlanName.</span></span> <span data-ttu-id="db37d-112">RestoreContentOnly 스위치 매개 변수를 사용하여 앱 설정 없이 삭제된 앱의 파일만 복원할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-112">The RestoreContentOnly switch parameter can be used to restore only the deleted app's files without the app settings.</span></span>
+
+## <span data-ttu-id="db37d-113">예제</span><span class="sxs-lookup"><span data-stu-id="db37d-113">EXAMPLES</span></span>
+
+### <span data-ttu-id="db37d-114">예제 1</span><span class="sxs-lookup"><span data-stu-id="db37d-114">Example 1</span></span>
+```powershell
+PS C:\> Restore-AzDeletedWebApp -ResourceGroupName Default-Web-WestUS -Name ContosoApp -TargetAppServicePlanName ContosoPlan
+```
+
+<span data-ttu-id="db37d-115">리소스 그룹 Default-Web-WestUS에 속하는 ContosoApp이라는 삭제된 앱을 복원합니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-115">Restores a deleted app named ContosoApp belonging to the resource group Default-Web-WestUS.</span></span> <span data-ttu-id="db37d-116">이름과 리소스 그룹이 같은 새 앱이 ContosoPlan이라는 App Service 계획에 생성되고 삭제된 앱의 파일 및 설정이 복원됩니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-116">A new app with the same name and resource group will be created in the App Service Plan named ContosoPlan, and the deleted app's files and settings will be restored to it.</span></span>
+
+### <span data-ttu-id="db37d-117">예제 2</span><span class="sxs-lookup"><span data-stu-id="db37d-117">Example 2</span></span>
+```powershell
+PS C:\> Restore-AzDeletedWebApp -ResourceGroupName Default-Web-WestUS -Name ContosoApp -Slot Staging -TargetResourceGroupName Default-Web-EastUS -TargetName ContosoRestore -RestoreContentOnly
+```
+
+<span data-ttu-id="db37d-118">리소스 그룹 Default-Web-WestUS에 속하는 ContosoApp이라는 삭제된 앱의 스테이징 슬롯을 복원합니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-118">Restores the Staging slot of a deleted app named ContosoApp belonging to the resource group Default-Web-WestUS.</span></span> <span data-ttu-id="db37d-119">리소스 그룹에 속하는 ContosoRestore라는 웹앱이 Default-Web-EastUS에 속해 있습니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-119">The web app named ContosoRestore belonging to the resource group Default-Web-EastUS will be overwritten.</span></span> <span data-ttu-id="db37d-120">삭제된 웹앱 설정은 복원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-120">The deleted web app settings will not be restored.</span></span>
+
+###<span data-ttu-id="db37d-121">예제 3</span><span class="sxs-lookup"><span data-stu-id="db37d-121">Example 3</span></span>
+```powershell
+PS C:\> Restore-AzDeletedWebApp -ResourceGroupName Default-Web-WestUS -Name ContosoApp -DeletedId /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Web/locations/location/deletedSites/1234 -TargetAppServicePlanName ContosoPlan
+```
+
+<span data-ttu-id="db37d-122">동일한 이름의 삭제된 앱 2개(ContosoApp)가 있는 경우 두 사이트의 세부 정보를 확인한 다음 Id를 사용하여 복원을 호출하여 선택한 앱으로 ContosoRestore라는 앱을 복원합니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-122">In case there are 2 deleted apps with same name(ContosoApp), then we get details of both the sites and restore the app named ContosoRestore with the app of our choice by calling restore with Id.</span></span>
+
+###<span data-ttu-id="db37d-123">예제 4</span><span class="sxs-lookup"><span data-stu-id="db37d-123">Example 4</span></span>
+```powershell
+PS C:\> $deletedSite = Get-AzDeletedWebApp -ResourceGroupName Default-Web-WestUS -Name ContosoApp
+PS C:\> Restore-AzDeletedWebApp -TargetResourceGroupName Default-Web-EastUS -TargetName ContosoRestore -TargetAppServicePlanName ContosoPlan -InputObject $deletedSite[0]
+```
+
+<span data-ttu-id="db37d-124">동일한 이름의 삭제된 앱 2개(ContosoApp)가 있는 경우, 두 사이트의 세부 정보를 얻을 수 있으며, InputObject(Deletedsite) 세부 정보로 복원을 호출하여 선택한 앱으로 ContosoRestore라는 앱을 복원합니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-124">In case there are 2 deleted apps with same name(ContosoApp), then we get details of both the sites and restore the app named ContosoRestore with the app of our choice by calling restore with InputObject(Deletedsite) details</span></span> 
+
+## <span data-ttu-id="db37d-125">매개 변수</span><span class="sxs-lookup"><span data-stu-id="db37d-125">PARAMETERS</span></span>
+
+### <span data-ttu-id="db37d-126">-AsJob</span><span class="sxs-lookup"><span data-stu-id="db37d-126">-AsJob</span></span>
+<span data-ttu-id="db37d-127">백그라운드에서 cmdlet 실행</span><span class="sxs-lookup"><span data-stu-id="db37d-127">Run cmdlet in the background</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="db37d-128">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="db37d-128">-DefaultProfile</span></span>
+<span data-ttu-id="db37d-129">Azure와 통신하는 데 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-129">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="db37d-130">-DeletedId</span><span class="sxs-lookup"><span data-stu-id="db37d-130">-DeletedId</span></span>
+<span data-ttu-id="db37d-131">삭제된 Azure Web App의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-131">The Id of the deleted Azure Web App.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: FromDeletedResourceName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="db37d-132">-Force</span><span class="sxs-lookup"><span data-stu-id="db37d-132">-Force</span></span>
+<span data-ttu-id="db37d-133">확인을 요청하지 않고 복원을 합니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-133">Do the restore without prompting for confirmation.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="db37d-134">-InputObject</span><span class="sxs-lookup"><span data-stu-id="db37d-134">-InputObject</span></span>
+<span data-ttu-id="db37d-135">삭제된 Azure Web App입니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-135">The deleted Azure Web App.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.WebApps.Cmdlets.WebApps.PSAzureDeletedWebApp
+Parameter Sets: FromDeletedApp
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="db37d-136">-Location</span><span class="sxs-lookup"><span data-stu-id="db37d-136">-Location</span></span>
+<span data-ttu-id="db37d-137">삭제된 Azure Web App의 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-137">The location of the deleted Azure Web App.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: FromDeletedResourceName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="db37d-138">-Name</span><span class="sxs-lookup"><span data-stu-id="db37d-138">-Name</span></span>
+<span data-ttu-id="db37d-139">삭제된 Azure Web App의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-139">The name of the deleted Azure Web App.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: FromDeletedResourceName
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="db37d-140">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="db37d-140">-ResourceGroupName</span></span>
+<span data-ttu-id="db37d-141">삭제된 Azure Web App의 리소스 그룹입니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-141">The resource group of the deleted Azure Web App.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: FromDeletedResourceName
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="db37d-142">-RestoreContentOnly</span><span class="sxs-lookup"><span data-stu-id="db37d-142">-RestoreContentOnly</span></span>
+<span data-ttu-id="db37d-143">웹앱의 파일을 복원하지만 설정을 복원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-143">Restore the web app's files, but do not restore the settings.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="db37d-144">-Slot</span><span class="sxs-lookup"><span data-stu-id="db37d-144">-Slot</span></span>
+<span data-ttu-id="db37d-145">삭제된 Azure Web App 슬롯입니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-145">The deleted Azure Web App slot.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: FromDeletedResourceName
+Aliases:
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="db37d-146">-TargetAppServicePlanName</span><span class="sxs-lookup"><span data-stu-id="db37d-146">-TargetAppServicePlanName</span></span>
+<span data-ttu-id="db37d-147">새 Azure Web App에 대한 App Service 계획입니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-147">The App Service Plan for the new Azure Web App.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="db37d-148">-TargetName</span><span class="sxs-lookup"><span data-stu-id="db37d-148">-TargetName</span></span>
+<span data-ttu-id="db37d-149">새 Azure Web App의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-149">The name of the new Azure Web App.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="db37d-150">-TargetResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="db37d-150">-TargetResourceGroupName</span></span>
+<span data-ttu-id="db37d-151">새 Azure Web App을 포함하는 리소스 그룹입니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-151">The resource group containing the new Azure Web App.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="db37d-152">-TargetSlot</span><span class="sxs-lookup"><span data-stu-id="db37d-152">-TargetSlot</span></span>
+<span data-ttu-id="db37d-153">새 Azure Web App 슬롯의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-153">The name of the new Azure Web App slot.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="db37d-154">-UseDisasterRecovery</span><span class="sxs-lookup"><span data-stu-id="db37d-154">-UseDisasterRecovery</span></span>
+<span data-ttu-id="db37d-155">오프라인인 확장 단위에서 삭제된 앱을 복구하는 데 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="db37d-155">Use to recover a deleted app from a scale unit that is offline.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="db37d-156">-확인</span><span class="sxs-lookup"><span data-stu-id="db37d-156">-Confirm</span></span>
+<span data-ttu-id="db37d-157">cmdlet을 실행하기 전에 확인을 묻는 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-157">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="db37d-158">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="db37d-158">-WhatIf</span></span>
+<span data-ttu-id="db37d-159">cmdlet이 실행되는 경우 어떻게 될지 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-159">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="db37d-160">cmdlet이 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-160">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="db37d-161">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="db37d-161">CommonParameters</span></span>
+<span data-ttu-id="db37d-162">이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="db37d-162">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="db37d-163">자세한 내용은 about_CommonParameters http://go.microsoft.com/fwlink/?LinkID=113216) 를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="db37d-163">For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="db37d-164">입력</span><span class="sxs-lookup"><span data-stu-id="db37d-164">INPUTS</span></span>
+
+### <span data-ttu-id="db37d-165">Microsoft.Azure.Commands.WebApps.Cmdlets.WebApps.PSAzureDeletedWebApp</span><span class="sxs-lookup"><span data-stu-id="db37d-165">Microsoft.Azure.Commands.WebApps.Cmdlets.WebApps.PSAzureDeletedWebApp</span></span>
+
+## <span data-ttu-id="db37d-166">출력</span><span class="sxs-lookup"><span data-stu-id="db37d-166">OUTPUTS</span></span>
+
+### <span data-ttu-id="db37d-167">Microsoft.Azure.Commands.WebApps.Models.PSSite</span><span class="sxs-lookup"><span data-stu-id="db37d-167">Microsoft.Azure.Commands.WebApps.Models.PSSite</span></span>
+
+## <span data-ttu-id="db37d-168">참고 사항</span><span class="sxs-lookup"><span data-stu-id="db37d-168">NOTES</span></span>
+
+## <span data-ttu-id="db37d-169">관련 링크</span><span class="sxs-lookup"><span data-stu-id="db37d-169">RELATED LINKS</span></span>
+
+[<span data-ttu-id="db37d-170">Get-AzDeletedWebApp</span><span class="sxs-lookup"><span data-stu-id="db37d-170">Get-AzDeletedWebApp</span></span>](./Get-AzDeletedWebApp.md)
