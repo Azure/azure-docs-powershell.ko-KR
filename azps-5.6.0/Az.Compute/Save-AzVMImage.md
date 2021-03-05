@@ -1,0 +1,223 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+Module Name: Az.Compute
+ms.assetid: D2B5BC27-6D51-45BC-AE6A-F7FED11B8651
+online version: https://docs.microsoft.com/powershell/module/az.compute/save-azvmimage
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Save-AzVMImage.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Save-AzVMImage.md
+ms.openlocfilehash: d979e89583b19270dfd13bae85a3afe1505ed55e
+ms.sourcegitcommit: 4dfb0cc533b83f77afdcfbe2618c1e6c8d221330
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101998209"
+---
+# Save-AzVMImage
+
+## SYNOPSIS
+가상 머신을 VMImage로 저장합니다.
+
+## 구문
+
+### ResourceGroupNameParameterSetName(기본값)
+```
+Save-AzVMImage [-Name] <String> [-DestinationContainerName] <String> [-VHDNamePrefix] <String> [-Overwrite]
+ [[-Path] <String>] [-ResourceGroupName] <String> [-AsJob] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
+```
+
+### IdParameterSetName
+```
+Save-AzVMImage [-DestinationContainerName] <String> [-VHDNamePrefix] <String> [-Overwrite] [[-Path] <String>]
+ [-Id] <String> [-AsJob] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## 설명
+**Save-AzVMImage** cmdlet은 가상 머신을 VMImage로 저장합니다.
+가상 머신 이미지를 만들기 전에 가상 머신을 sysprep한 다음, Set-AzVM cmdlet을 사용하여 일반화된 것으로 표시합니다.
+이 cmdlet의 출력은 JSON(JavaScript 개체 표시) 템플릿입니다.
+캡처된 이미지에서 가상 머신을 배포할 수 있습니다.
+
+## 예제
+
+### 예제 1: 가상 머신 캡처
+```
+PS C:\> Set-AzVM -ResourceGroupName "ResourceGroup11" -Name "VirtualMachine07" -Generalized 
+PS C:\> Save-AzVMImage -ResourceGroupName "ResourceGroup11" -VMName "VirtualMachine07" -DestinationContainerName "VMContainer01" -VHDNamePrefix "VM07"
+```
+
+첫 번째 명령은 VirtualMachine07이라는 가상 머신을 일반화된 것으로 표시합니다.
+두 번째 명령은 VMImage로 VirtualMachine07이라는 가상 머신을 캡처합니다.
+Output **속성은** JSON 템플릿을 반환합니다.
+
+## 매개 변수
+
+### -AsJob
+백그라운드에서 cmdlet을 실행하고 작업을 반환하여 진행률을 추적합니다.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+Azure와 통신하는 데 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DestinationContainerName
+이미지를 보관할 "시스템" 컨테이너 내부에 컨테이너의 이름을 지정합니다.
+컨테이너가 없는 경우 해당 컨테이너가 생성됩니다.
+VMImage를 구성하는 VHD(가상 하드 디스크)는 이 매개 변수가 지정하는 컨테이너에 상주합니다.
+VHD가 여러 저장소 계정에 분산된 경우 이 cmdlet은 각 저장소 계정에 이 이름이 있는 하나의 컨테이너를 만듭니다.
+저장된 이미지의 URL은 \<storageAccountName\> blob.core.windows.net/system/Microsoft.Compute/Images/ \<imagesContainer\> / \<vhdPrefix-osDisk\> .https:// .xxxx-xxxx-xx-x.vhd-https://.xx
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Id
+가상 머신의 리소스 ID를 지정합니다.
+
+```yaml
+Type: System.String
+Parameter Sets: IdParameterSetName
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+이름을 지정합니다.
+
+```yaml
+Type: System.String
+Parameter Sets: ResourceGroupNameParameterSetName
+Aliases: VMName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -덮어 덮어 덮어 덮어 덮어
+이 cmdlet은 대상 컨테이너에 동일한 도두가 있는 모든 VHD를 덮어 덮어 웁니다.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Path
+캡처된 이미지의 템플릿이 저장되는 파일 경로입니다.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 5
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+가상 머신의 리소스 그룹의 이름을 지정합니다.
+
+```yaml
+Type: System.String
+Parameter Sets: ResourceGroupNameParameterSetName
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VHDNamePrefix
+VMImage의 저장소 프로필을 구성하는 Blob의 이름으로 도두를 지정합니다.
+예를 들어 운영 체제 디스크에 대한 vhdPrefix는 이름 vhdPrefix-osdisk입니다. \<guid\> . vhd.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: VirtualHardDiskNamePrefix
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### CommonParameters
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 를 [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
+
+## 입력
+
+### System.String
+
+### System.Management.Automation.SwitchParameter
+
+## 출력
+
+### Microsoft.Azure.Commands.Compute.Models.PSComputeLongRunningOperation
+
+## 참고 사항
+
+## 관련 링크
+
+[Get-AzVMImage](./Get-AzVMImage.md)
+
+[Get-AzVMImageOffer](./Get-AzVMImageOffer.md)
+
+[Get-AzVMImagePublisher](./Get-AzVMImagePublisher.md)
+
+[Get-AzVMImageSku](./Get-AzVMImageSku.md)
+
+[Set-AzVM](./Set-AzVM.md)
+
+
