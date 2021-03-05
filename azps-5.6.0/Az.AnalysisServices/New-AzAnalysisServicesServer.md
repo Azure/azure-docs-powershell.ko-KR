@@ -1,0 +1,289 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.AnalysisServices.dll-Help.xml
+Module Name: Az.AnalysisServices
+online version: https://docs.microsoft.com/powershell/module/az.analysisservices/new-azanalysisservicesserver
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/AnalysisServices/AnalysisServices/help/New-AzAnalysisServicesServer.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/AnalysisServices/AnalysisServices/help/New-AzAnalysisServicesServer.md
+ms.openlocfilehash: 9b6d056212e86c656ae0adaccf27a4688c1b3609
+ms.sourcegitcommit: 4dfb0cc533b83f77afdcfbe2618c1e6c8d221330
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101975627"
+---
+# New-AzAnalysisServicesServer
+
+## SYNOPSIS
+새 Analysis Services 서버 생성
+
+## 구문
+
+```
+New-AzAnalysisServicesServer [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
+ [-Sku] <String> [[-Tag] <Hashtable>] [[-Administrator] <String>] [[-BackupBlobContainerUri] <String>]
+ [-ReadonlyReplicaCount <Int32>] [-DefaultConnectionMode <String>]
+ [-FirewallConfig <PsAzureAnalysisServicesFirewallConfig>] [-GatewayResourceId <String>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## 설명
+New-AzAnalysisServicesServer cmdlet에서 새 Analysis Services 서버를 만듭니다.
+
+## 예제
+
+### 예제 1
+```powershell
+PS C:\> New-AzAnalysisServicesServer -ResourceGroupName "testresourcegroup" -Name "testserver" -Location "West-US" -Sku "S1"
+```
+
+Azure 지역 서부 및 리소스 그룹 testresourcegroup에서 테스트 서버라는 서버를 만듭니다. 서버의 sku 수준은 S1입니다.
+
+### 예제 2
+
+새 Analysis Services 서버를 만듭니다. (자동 재생)
+
+<!-- Aladdin Generated Example -->
+```powershell
+New-AzAnalysisServicesServer -Administrator 'testuser1@contoso.com' -FirewallConfig <PsAzureAnalysisServicesFirewallConfig> -Location 'West-US' -Name 'testserver' -ResourceGroupName 'testresourcegroup' -Sku 'S1'
+```
+
+## 매개 변수
+
+### -Administrator
+서버에서 관리자로 설정할 사용자 또는 그룹의 콤마로 구분된 목록을 나타내는 문자열입니다. 사용자 또는 그룹은 UPN 형식(예: 또는 user@contoso.comgroups@contoso.com
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 5
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -BackupBlobContainerUri
+Analysis Services 서버를 백업하기 위한 Blob 컨테이너 Uri
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 6
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultConnectionMode
+Analysis 서비스 서버의 기본 연결 모드
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+Accepted values: All, Readonly
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+Azure와 통신하는 데 사용되는 자격 증명, 계정, 테넌트 및 구독입니다.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FirewallConfig
+분석 서버의 방화벽 구성
+
+```yaml
+Type: Microsoft.Azure.Commands.AnalysisServices.Models.PsAzureAnalysisServicesFirewallConfig
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -GatewayResourceId
+Analysis 서버에 연결하기 위한 게이트웨이 리소스 ID
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Location
+Analysis Services 서버가 호스트되는 Azure 지역
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Analysis Services 서버 이름
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ReadonlyReplicaCount
+Analysis 서비스 서버의 복제본 수만 읽습니다.
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+서버가 속한 Azure 리소스 그룹의 이름
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Sku
+서버의 Sku의 이름입니다.
+지원되는 값은 표준 계층의 'S0', 'S1', 'S2', 'S4', 'S8', 'S9', 'S8v2', 'S9v2'입니다. 'B1', 기본 계층의 'B2', 개발 계층의 'D1'입니다.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Tag
+서버의 태그로 설정된 해시 테이블의 형태로 키 값 쌍입니다.
+
+```yaml
+Type: System.Collections.Hashtable
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -확인
+사용자에게 작업을 수행할지 여부를 확인하라는 메시지를 표시합니다.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+현재 작업이 실제로 수행하지 않고 수행할 작업을 설명합니다.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable의 일반적인 매개 변수를 지원합니다. 자세한 내용은 about_CommonParameters http://go.microsoft.com/fwlink/?LinkID=113216) 를 참조하세요.
+
+## 입력
+
+### System.String
+
+### System.Collections.Hashtable
+
+### System.Int32
+
+### Microsoft.Azure.Commands.AnalysisServices.Models.PsAzureAnalysisServicesFirewallConfig
+
+## 출력
+
+### Microsoft.Azure.Commands.AnalysisServices.Models.AzureAnalysisServicesServer
+
+## 참고 사항
+별칭: New-AzAs
+
+## 관련 링크
+
+[Get-AzAnalysisServicesServer](./Get-AzAnalysisServicesServer.md)
+
+[Remove-AzAnalysisServicesServer](./Remove-AzAnalysisServicesServer.md)
